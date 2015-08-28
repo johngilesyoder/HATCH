@@ -1,18 +1,14 @@
 <?php
 /*
-  Plugin Name: Types - Complete Solution for Custom Fields and Types
+  Plugin Name: Types
   Plugin URI: http://wordpress.org/extend/plugins/types/
-  Description: Define custom post types, custom taxonomy and custom fields.
+  Description: Define custom post types, custom taxonomies and custom fields.
   Author: OnTheGoSystems
   Author URI: http://www.onthegosystems.com
-  Version: 1.6.6.2
+  Version: 1.8.2
  */
 /**
  *
- * $HeadURL: http://plugins.svn.wordpress.org/types/tags/1.6.6.2/wpcf.php $
- * $LastChangedDate: 2015-04-10 07:30:43 +0000 (Fri, 10 Apr 2015) $
- * $LastChangedRevision: 1131818 $
- * $LastChangedBy: iworks $
  *
  */
 // Added check because of activation hook and theme embedded code
@@ -20,7 +16,7 @@ if ( !defined( 'WPCF_VERSION' ) ) {
     /**
      * make sure that WPCF_VERSION in embedded/bootstrap.php is the same!
      */
-    define( 'WPCF_VERSION', '1.6.6.2' );
+    define( 'WPCF_VERSION', '1.8.2' );
 }
 
 define( 'WPCF_REPOSITORY', 'http://api.wp-types.com/' );
@@ -36,7 +32,7 @@ define( 'WPCF_RES_RELPATH', WPCF_RELPATH . '/resources' );
 $installer = dirname( __FILE__ ) . '/plus/installer/loader.php';
 if ( file_exists($installer) ) {
     include_once $installer;
-    if ( class_exists('WP_Installer_Setup') ) {
+    if ( function_exists('WP_Installer_Setup') ) {
         WP_Installer_Setup(
             $wp_installer_instance,
             array(
@@ -149,14 +145,18 @@ function wpcf_wp_init()
         //Add submenu Installer to Types
         function setup_installer()
         {
-            wpcf_admin_add_submenu_page(
-                array(
-                    'page_title' => __('Installer', 'wpcf'),
-                    'menu_title' => __('Installer', 'wpcf'),
-                    'menu_slug' => 'installer',
-                    'function' => 'installer_content'
-                )
-            );
+            if (
+                isset( $_GET['page'] ) 
+                && 'installer' == $_GET['page']
+            ) {
+                wpcf_admin_add_submenu_page(
+                    array(
+                        'menu_title' => __('Installer', 'wpcf'),
+                        'menu_slug' => 'installer',
+                        'function' => 'installer_content'
+                    )
+                );
+            }
         }
     }
 }
@@ -189,7 +189,7 @@ function wpcf_is_reserved_name($name, $context, $check_pages = true)
     }
 
     // Add custom types
-    $custom_types = (array) get_option( 'wpcf-custom-types', array() );
+    $custom_types = get_option(WPCF_OPTION_NAME_CUSTOM_TYPES, array() );
     $post_types = get_post_types();
     if ( !empty( $custom_types ) ) {
         $custom_types = array_keys( $custom_types );
@@ -202,7 +202,7 @@ function wpcf_is_reserved_name($name, $context, $check_pages = true)
     }
 
     // Add taxonomies
-    $custom_taxonomies = (array) get_option( 'wpcf-custom-taxonomies', array() );
+    $custom_taxonomies = (array) get_option( WPCF_OPTION_NAME_CUSTOM_TAXONOMIES, array() );
     $taxonomies = get_taxonomies();
     if ( !empty( $custom_taxonomies ) ) {
         $custom_taxonomies = array_keys( $custom_taxonomies );
@@ -249,12 +249,15 @@ function wpcf_reserved_names()
         'error',
         'exact',
         'feed',
+        'field',
+        'fields',
         'format',
         'hour',
         'link_category',
         'm',
         'minute',
         'monthnum',
+        'mode',
         'more',
         'name',
         'nav_menu',
@@ -264,9 +267,10 @@ function wpcf_reserved_names()
         'orderby',
         'p',
         'page',
-        'page_id',
         'paged',
+        'page_id',
         'pagename',
+        'parent',
         'pb',
         'perm',
         'post',

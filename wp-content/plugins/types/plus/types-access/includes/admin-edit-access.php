@@ -14,7 +14,7 @@ function wpcf_access_admin_edit_access($enabled = true) {
     $output .= '<form id="wpcf_access_admin_form" method="post" action="">';
 
     // Types
-    $types = get_option('wpcf-custom-types', array());
+    $types = get_option(WPCF_OPTION_NAME_CUSTOM_TYPES, array());
 
     // Merge with other types
     $settings_access = get_option('wpcf-access-types', array());
@@ -23,7 +23,7 @@ function wpcf_access_admin_edit_access($enabled = true) {
         if (isset($types[$type_slug])) {
             continue;
         }
-        if ($type_slug == 'view-template' || $type_slug == 'view' || $type_slug == 'cred-form') {
+        if ($type_slug == 'view-template' || $type_slug == 'view' || $type_slug == 'cred-form' || $type_slug == 'cred-user-form') {
                 // Don't list Views and View templates separately.
                 // Don't list CRED form post types.
                 continue;
@@ -44,7 +44,7 @@ function wpcf_access_admin_edit_access($enabled = true) {
     if (!empty($types)) {
         $output .= '<h3>' . __('Custom Types', 'wpcf') . '</h3>';
         foreach ($types as $type_slug => $type_data) {
-            if ($type_data['public'] === 'hidden') {
+            if (isset($tax_data['public']) && $tax_data['public'] === 'hidden') {
                 continue;
             }
 
@@ -75,8 +75,7 @@ function wpcf_access_admin_edit_access($enabled = true) {
                 if ($mode != 'not_managed') {
                     $output .= ' style="display:none;"';
                 }
-                $output .= '><p>' . __('This post type will inherit the same access rights as the standard WordPress Post when not Managed by Access.',
-                                'wpcf_access') . '</p></div>';
+                $output .= '><p>' . __('This post type will inherit the same access rights as the standard WordPress Post when not Managed by Access.', 'wpcf_access') . '</p></div>';
             }
 
             $permissions = !empty($type_data['_wpcf_access_capabilities']['permissions']) ? $type_data['_wpcf_access_capabilities']['permissions'] : array();
@@ -93,7 +92,7 @@ function wpcf_access_admin_edit_access($enabled = true) {
     }
 
     // Taxonomies
-    $taxonomies = get_option('wpcf-custom-taxonomies', array());
+    $taxonomies = get_option(WPCF_OPTION_NAME_CUSTOM_TAXONOMIES, array());
 
     // Merge with other taxonomies
     $settings_access = get_option('wpcf-access-taxonomies', array());
@@ -138,7 +137,7 @@ function wpcf_access_admin_edit_access($enabled = true) {
     if (!empty($taxonomies)) {
         $output .= '<br /><br /><h3>' . __('Custom Taxonomies', 'wpcf') . '</h3>';
         foreach ($taxonomies as $tax_slug => $tax_data) {
-            if ($tax_data['public'] === 'hidden') {
+            if (isset($tax_data['public']) && $tax_data['public'] === 'hidden') {
                 continue;
             }
             // Set data

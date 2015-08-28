@@ -2,10 +2,6 @@
 /*
  * Import/export data.
  *
- * $HeadURL: http://plugins.svn.wordpress.org/types/tags/1.6.6.2/embedded/includes/import-export.php $
- * $LastChangedDate: 2015-03-25 12:38:40 +0000 (Wed, 25 Mar 2015) $
- * $LastChangedRevision: 1120400 $
- * $LastChangedBy: iworks $
  *
  */
 
@@ -98,7 +94,7 @@ function wpcf_admin_import_data($data = '', $redirect = true, $context = 'types'
         foreach ( $groups as $group_id => $group ) {
             $post = array(
                 'post_status' => $group['post_status'],
-                'post_type' => 'wp-types-group',
+                'post_type' => TYPES_CUSTOM_FIELD_GROUP_CPT_NAME,
                 'post_title' => $group['post_title'],
                 'post_content' => !empty( $group['post_content'] ) ? $group['post_content'] : '',
             );
@@ -113,7 +109,7 @@ function wpcf_admin_import_data($data = '', $redirect = true, $context = 'types'
                     $wpdb->prepare(
                         "SELECT ID FROM $wpdb->posts WHERE post_title = %s AND post_type = %s",
                         $group['post_title'],
-                        'wp-types-group'
+                        TYPES_CUSTOM_FIELD_GROUP_CPT_NAME
                     )
                 );
                 // Update (may be forced by bulk action)
@@ -176,7 +172,7 @@ function wpcf_admin_import_data($data = '', $redirect = true, $context = 'types'
         if ( $delete_groups ) {
             $groups_to_delete = get_posts(
                 array(
-                    'post_type' => 'wp-types-group',
+                    'post_type' => TYPES_CUSTOM_FIELD_GROUP_CPT_NAME,
                     'post_status' => 'any',
                     'posts_per_page' => -1,
                 )
@@ -202,7 +198,7 @@ function wpcf_admin_import_data($data = '', $redirect = true, $context = 'types'
             if ( !empty( $_POST['groups-to-be-deleted'] ) ) {
                 foreach ( $_POST['groups-to-be-deleted'] as $group_to_delete ) {
                     $group_to_delete_post = get_post( $group_to_delete );
-                    if ( !empty( $group_to_delete_post ) && $group_to_delete_post->post_type == 'wp-types-group' ) {
+                    if ( !empty( $group_to_delete_post ) && $group_to_delete_post->post_type == TYPES_CUSTOM_FIELD_GROUP_CPT_NAME ) {
                         $deleted = wp_delete_post( $group_to_delete, true );
                         if ( !$deleted ) {
                             wpcf_admin_message_store( sprintf( __( 'Group "%s" delete failed',
@@ -339,7 +335,7 @@ function wpcf_admin_import_data($data = '', $redirect = true, $context = 'types'
         foreach ( $groups as $group_id => $group ) {
             $post = array(
                 'post_status' => $group['post_status'],
-                'post_type' => 'wp-types-user-group',
+                'post_type' => TYPES_USER_META_FIELD_GROUP_CPT_NAME,
                 'post_title' => $group['post_title'],
                 'post_content' => !empty( $group['post_content'] ) ? $group['post_content'] : '',
             );
@@ -348,7 +344,7 @@ function wpcf_admin_import_data($data = '', $redirect = true, $context = 'types'
                     $wpdb->prepare(
                         "SELECT ID FROM $wpdb->posts WHERE post_title = %s AND post_type = %s",
                         $group['post_title'],
-                        'wp-types-user-group'
+                        TYPES_USER_META_FIELD_GROUP_CPT_NAME
                     )
                 );
 
@@ -400,7 +396,7 @@ function wpcf_admin_import_data($data = '', $redirect = true, $context = 'types'
         if ( $delete_groups ) {
             $groups_to_delete = get_posts(
                 array(
-                    'post_type' => 'wp-types-user-group',
+                    'post_type' => TYPES_USER_META_FIELD_GROUP_CPT_NAME,
                     'post_status' => 'any',
                     'posts_per_page' => -1,
                 )
@@ -427,7 +423,7 @@ function wpcf_admin_import_data($data = '', $redirect = true, $context = 'types'
                 foreach ( $_POST['user-groups-to-be-deleted'] as
                             $group_to_delete ) {
                     $group_to_delete_post = get_post( $group_to_delete );
-                    if ( !empty( $group_to_delete_post ) && $group_to_delete_post->post_type == 'wp-types-user-group' ) {
+                    if ( !empty( $group_to_delete_post ) && $group_to_delete_post->post_type == TYPES_USER_META_FIELD_GROUP_CPT_NAME ) {
                         $deleted = wp_delete_post( $group_to_delete, true );
                         if ( !$deleted ) {
                             wpcf_admin_message_store( sprintf( __( 'User group "%s" delete failed',
@@ -533,7 +529,7 @@ function wpcf_admin_import_data($data = '', $redirect = true, $context = 'types'
 
     // Process types
 
-        $types_existing = get_option( 'wpcf-custom-types', array() );
+        $types_existing = get_option( WPCF_OPTION_NAME_CUSTOM_TYPES, array() );
         $types_check = array();
     if ( !empty($data->types) && isset($data->types->type) ) {
         $types = array();
@@ -590,11 +586,11 @@ function wpcf_admin_import_data($data = '', $redirect = true, $context = 'types'
                 }
             }
         }
-        update_option( 'wpcf-custom-types', $types_existing );
+        update_option( WPCF_OPTION_NAME_CUSTOM_TYPES, $types_existing );
 
     // Process taxonomies
 
-        $taxonomies_existing = get_option( 'wpcf-custom-taxonomies', array() );
+        $taxonomies_existing = get_option( WPCF_OPTION_NAME_CUSTOM_TAXONOMIES, array() );
         $taxonomies_check = array();
     if ( !empty( $data->taxonomies ) && isset($data->taxonomies->taxonomy)) {
         $taxonomies = array();
@@ -659,7 +655,7 @@ function wpcf_admin_import_data($data = '', $redirect = true, $context = 'types'
                 }
             }
         }
-        update_option( 'wpcf-custom-taxonomies', $taxonomies_existing );
+        update_option( WPCF_OPTION_NAME_CUSTOM_TAXONOMIES, $taxonomies_existing );
 
     // Add relationships
     if ( !empty( $data->post_relationships ) && !empty( $_POST['post_relationship'] ) ) {

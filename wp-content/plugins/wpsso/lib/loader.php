@@ -14,7 +14,7 @@ if ( ! class_exists( 'WpssoLoader' ) ) {
 
 		private $p;
 
-		public function __construct( &$plugin ) {
+		public function __construct( &$plugin, $activate = false ) {
 			$this->p =& $plugin;
 			if ( $this->p->debug->enabled )
 				$this->p->debug->mark( 'load modules' );
@@ -25,7 +25,9 @@ if ( ! class_exists( 'WpssoLoader' ) ) {
 
 		private function modules() {
 			foreach ( $this->p->cf['plugin'] as $lca => $info ) {
-				$type = $this->p->check->aop( $lca ) ? 'pro' : 'gpl';
+				$type = $this->p->is_avail['aop'] &&
+					$this->p->is_avail['util']['um'] &&
+					$this->p->check->aop( $lca ) ? 'pro' : 'gpl';
 				if ( ! isset( $info['lib'][$type] ) )
 					continue;
 				foreach ( $info['lib'][$type] as $sub => $lib ) {

@@ -442,7 +442,7 @@ function wpcf_fields_date_editor_callback( $field, $settings ) {
     );
     $date_formats = apply_filters( 'date_formats',
         array(
-            __( 'F j, Y' ),
+            __( 'F j, Y', 'wpcf' ),
             'Y/m/d',
             'm/d/Y',
             'd/m/Y',
@@ -471,8 +471,8 @@ function wpcf_fields_date_editor_callback( $field, $settings ) {
         'supports' => array('styling'),
         'tabs' => array(
             'display' => array(
-                'menu_title' => __( 'Display', 'wpcf' ),
-                'title' => __( 'Display', 'wpcf' ),
+                'menu_title' => __( 'Display options', 'wpcf' ),
+                'title' => __( 'Display options for this field:', 'wpcf' ),
                 'content' => WPCF_Loader::template( 'editor-modal-date', $data ),
             ),
         )

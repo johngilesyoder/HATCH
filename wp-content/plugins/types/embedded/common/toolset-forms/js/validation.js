@@ -7,10 +7,6 @@
  *
  * @see class WPToolset_Validation
  *
- * $HeadURL: http://plugins.svn.wordpress.org/types/tags/1.6.6.2/embedded/common/toolset-forms/js/validation.js $
- * $LastChangedDate: 2015-04-01 14:15:17 +0000 (Wed, 01 Apr 2015) $
- * $LastChangedRevision: 1125405 $
- * $LastChangedBy: iworks $
  *
  */
 //var wptValidationData = {};
@@ -71,6 +67,18 @@ var wptValidation = (function($) {
 //                            return this.getLength(value, element) > 0;
 //                        }
 
+                        //Fixing YT cred-104
+                        element = jQuery(element).siblings( 'input[type="hidden"]' );                                                
+                        if (element[0] &&
+                                !jQuery(element[0]).prop("disabled") &&
+                                (jQuery(element[0]).attr('data-wpt-type')=='file' || 
+                                jQuery(element[0]).attr('data-wpt-type')=='video' ||
+                                jQuery(element[0]).attr('data-wpt-type')=='image' 
+                                )) {
+                            var val = jQuery(element[0]).val();
+                            return val && $.trim(val).length > 0;
+                        }
+                    
                         if (jQuery(element).hasClass("hasDatepicker")) {
                             return false;
                         }

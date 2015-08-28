@@ -84,8 +84,15 @@ if ( ! class_exists( 'WpssoAdmin' ) ) {
 				}
 			}
 			// if we have at least one tid, make sure the update manager is installed
-			if ( $has_tid === true && ! $this->p->is_avail['util']['um'] )
-				$this->p->notice->nag( $this->p->msgs->get( 'pro-um-extension-required' ), true );
+			if ( $has_tid === true && ! $this->p->is_avail['util']['um'] ) {
+				if ( ! function_exists( 'get_plugins' ) )
+					require_once( ABSPATH.'wp-admin/includes/plugin.php' );
+				$installed_plugins = get_plugins();
+				if ( ! empty( $this->p->cf['plugin']['wpssoum']['base'] ) &&
+					is_array( $installed_plugins[$this->p->cf['plugin']['wpssoum']['base']] ) )
+						$this->p->notice->nag( $this->p->msgs->get( 'pro-um-activate-extension' ), true );
+				else $this->p->notice->nag( $this->p->msgs->get( 'pro-um-extension-required' ), true );
+			}
 		}
 
 		public function trunc_notices( $plugin = false, $sitewide = false ) {
@@ -105,7 +112,8 @@ if ( ! class_exists( 'WpssoAdmin' ) ) {
 		}
 
 		public function register_setting() {
-			register_setting( $this->p->cf['lca'].'_setting', WPSSO_OPTIONS_NAME, array( &$this, 'sanitize_options' ) );
+			register_setting( $this->p->cf['lca'].'_setting', 
+				WPSSO_OPTIONS_NAME, array( &$this, 'registered_setting_sanitation' ) );
 		} 
 
 		public function set_readme_info( $expire_secs = 86400 ) {
@@ -232,7 +240,8 @@ if ( ! class_exists( 'WpssoAdmin' ) ) {
 
 		// this method receives only a partial options array, so re-create a full one
 		// wordpress handles the actual saving of the options
-		public function sanitize_options( $opts ) {
+		public function registered_setting_sanitation( $opts ) {
+			$network = false;
 			if ( ! is_array( $opts ) ) {
 				add_settings_error( WPSSO_OPTIONS_NAME, 'notarray', '<b>'.$this->p->cf['uca'].' Error</b> : '.
 					__( 'Submitted settings are not an array.', WPSSO_TEXTDOM ), 'error' );
@@ -242,14 +251,20 @@ if ( ! class_exists( 'WpssoAdmin' ) ) {
 			$def_opts = $this->p->opt->get_defaults();
 			$opts = SucomUtil::restore_checkboxes( $opts );
 			$opts = array_merge( $this->p->options, $opts );
-			$this->p->notice->trunc();				// flush all messages before sanitation checks
-			$opts = $this->p->opt->sanitize( $opts, $def_opts );
-			$opts = apply_filters( $this->p->cf['lca'].'_save_options', $opts, WPSSO_OPTIONS_NAME );
-			$this->p->notice->inf( __( 'Plugin settings have been updated.', WPSSO_TEXTDOM ).' '.sprintf( __( 'Wait %d seconds for cache objects to expire (default) or use the \'Clear All Cache(s)\' button.', WPSSO_TEXTDOM ), $this->p->options['plugin_object_cache_exp'] ), true );
+			$this->p->notice->trunc();					// clear all messages before sanitation checks
+			$opts = $this->p->opt->sanitize( $opts, $def_opts, $network );
+			$opts = apply_filters( $this->p->cf['lca'].'_save_options', $opts, WPSSO_OPTIONS_NAME, $network );
+			$clear_cache_link = wp_nonce_url( $this->p->util->get_admin_url( '?action=clear_all_cache' ), $this->get_nonce(), WPSSO_NONCE );
+			$this->p->notice->inf( 
+				__( 'Plugin settings have been updated.', WPSSO_TEXTDOM ).' '.
+				sprintf( __( 'Wait %d seconds for cache objects to expire (default) or %s now.', WPSSO_TEXTDOM ),
+					$this->p->options['plugin_object_cache_exp'],
+					'<a href="'.$clear_cache_link.'">Clear All Cache(s)</a>' ), true );
 			return $opts;
 		}
 
 		public function save_site_options() {
+			$network = true;
 			$page = empty( $_POST['page'] ) ? 
 				key( $this->p->cf['*']['lib']['sitesubmenu'] ) : $_POST['page'];
 
@@ -272,9 +287,9 @@ if ( ! class_exists( 'WpssoAdmin' ) ) {
 			$opts = empty( $_POST[WPSSO_SITE_OPTIONS_NAME] ) ? $def_opts : 
 				SucomUtil::restore_checkboxes( $_POST[WPSSO_SITE_OPTIONS_NAME] );
 			$opts = array_merge( $this->p->site_options, $opts );
-			$this->p->notice->trunc();				// flush all messages before sanitation checks
-			$opts = $this->p->opt->sanitize( $opts, $def_opts );	// cleanup excess options and sanitize
-			$opts = apply_filters( $this->p->cf['lca'].'_save_site_options', $opts );
+			$this->p->notice->trunc();					// clear all messages before sanitation checks
+			$opts = $this->p->opt->sanitize( $opts, $def_opts, $network );
+			$opts = apply_filters( $this->p->cf['lca'].'_save_site_options', $opts, $def_opts, $network );
 			update_site_option( WPSSO_SITE_OPTIONS_NAME, $opts );
 			$this->p->notice->inf( __( 'Plugin settings have been updated.', WPSSO_TEXTDOM ), true );
 			wp_redirect( $this->p->util->get_admin_url( $page ).'&settings-updated=true' );
@@ -289,8 +304,6 @@ if ( ! class_exists( 'WpssoAdmin' ) ) {
 
 		public function load_form_page() {
 			wp_enqueue_script( 'postbox' );
-			$upload_dir = wp_upload_dir();		// returns assoc array with path info
-			$user_opts = $this->p->mods['util']['user']->get_options();
 
 			if ( ! empty( $_GET['action'] ) ) {
 				if ( empty( $_GET[ WPSSO_NONCE ] ) )
@@ -312,23 +325,7 @@ if ( ! class_exists( 'WpssoAdmin' ) ) {
 							break;
 
 						case 'clear_all_cache': 
-							wp_cache_flush();
-							$deleted_cache = $this->p->util->delete_expired_file_cache( true );
-							$deleted_transient = $this->p->util->delete_expired_transients( true );
-							$this->p->notice->inf( __( $this->p->cf['uca'].' cached files, transient cache, and the WordPress object cache have all been cleared.', WPSSO_TEXTDOM ) );
-
-							if ( function_exists( 'w3tc_pgcache_flush' ) ) {	// w3 total cache
-								w3tc_pgcache_flush();
-								$this->p->notice->inf( __( 'W3 Total Cache has been cleared as well.', WPSSO_TEXTDOM ) );
-							}
-							if ( function_exists( 'wp_cache_clear_cache' ) ) {	// wp super cache
-								wp_cache_clear_cache();
-								$this->p->notice->inf( __( 'WP Super Cache has been cleared as well.', WPSSO_TEXTDOM ) );
-							}
-							if ( isset( $GLOBALS['zencache'] ) ) {		// zencache
-								$GLOBALS['zencache']->wipe_cache();
-								$this->p->notice->inf( __( 'ZenCache has been cleared as well.', WPSSO_TEXTDOM ) );
-							}
+							$this->p->util->clear_all_cache();
 							break;
 
 						case 'clear_metabox_prefs': 
@@ -344,7 +341,7 @@ if ( ! class_exists( 'WpssoAdmin' ) ) {
 			}
 
 			// the plugin information metabox on all settings pages needs this
-			$this->p->admin->set_readme_info( $this->feed_cache_expire() );
+			$this->p->admin->set_readme_info( $this->p->cf['feed_cache_exp'] );
 
 			// add child metaboxes first, since they contain the default reset_metabox_prefs()
 			$this->p->admin->submenu[ $this->menu_id ]->add_meta_boxes();
@@ -475,27 +472,15 @@ if ( ! class_exists( 'WpssoAdmin' ) ) {
 			echo $this->form->get_hidden( 'options_version', $this->p->cf['opt']['version'] );
 			echo $this->form->get_hidden( 'plugin_version', $this->p->cf['plugin'][$this->p->cf['lca']]['version'] );
 
+			// wp_nonce_field( $action, $name, $referer, $echo
+			// $name = the hidden form field to be created (aka $_POST[$name]).
 			wp_nonce_field( $this->get_nonce(), WPSSO_NONCE );
 			wp_nonce_field( 'closedpostboxes', 'closedpostboxesnonce', false );
 			wp_nonce_field( 'meta-box-order', 'meta-box-order-nonce', false );
 
 			do_meta_boxes( $this->pagehook, 'normal', null ); 
 
-			if ( isset( $this->p->admin->submenu[ $this->menu_id ]->website ) ) {
-				foreach ( range( 1, ceil( count( $this->p->admin->submenu[ $this->menu_id ]->website ) / 2 ) ) as $row ) {
-					echo '<div class="website-row">', "\n";
-					foreach ( range( 1, 2 ) as $col ) {
-						$pos_id = 'website-row-'.$row.'-col-'.$col;
-						echo '<div class="website-col-', $col, '" id="', $pos_id, '" >';
-						do_meta_boxes( $this->pagehook, $pos_id, null ); 
-						echo '</div>', "\n";
-					}
-					echo '</div>', "\n";
-				}
-				echo '<div style="clear:both;"></div>';
-			}
-
-			//do_meta_boxes( $this->pagehook, 'bottom', null ); 
+			do_action( $this->p->cf['lca'].'_form_content_metaboxes_'.$this->menu_id, $this->pagehook );
 
 			switch ( $this->menu_id ) {
 				case 'readme':
@@ -508,11 +493,6 @@ if ( ! class_exists( 'WpssoAdmin' ) ) {
 					break;
 			}
 			echo '</form>', "\n";
-		}
-
-		public function feed_cache_expire( $seconds = 0 ) {
-			return empty( $this->p->cf['feed_cache_expire'] ) ? 
-				86400 : $this->p->cf['feed_cache_expire'] * 3600;
 		}
 
 		public function show_metabox_info() {
@@ -699,9 +679,9 @@ if ( ! class_exists( 'WpssoAdmin' ) ) {
 						$help_links .= ' and <a href="'.$info['url']['notes'].'" target="_blank">Notes</a>';
 					$help_links .= '</li>';
 				}
-				if ( ! empty( $info['url']['pro_ticket'] ) && $this->p->check->aop( $lca ) )
-					$help_links .= '<li><a href="'.$info['url']['pro_ticket'].'" 
-						target="_blank">Submit a Support Ticket</a></li>';
+				if ( ! empty( $info['url']['pro_support'] ) && $this->p->check->aop( $lca ) )
+					$help_links .= '<li><a href="'.$info['url']['pro_support'].'" 
+						target="_blank">Open a Support Ticket</a></li>';
 				elseif ( ! empty( $info['url']['wp_support'] ) )
 					$help_links .= '<li><a href="'.$info['url']['wp_support'].'" 
 						target="_blank">Post in Support Forum</a></li>';
@@ -827,7 +807,7 @@ if ( ! class_exists( 'WpssoAdmin' ) ) {
 				}
 
 				if ( ! empty( $info['img']['icon_small'] ) )
-					$img_icon = $info['img']['icon_small'];
+					$img_icon = $info['img']['icon_medium'];	// resized as small icon for retina displays
 				else $img_icon = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
 
 				// logo image
@@ -855,30 +835,42 @@ if ( ! class_exists( 'WpssoAdmin' ) ) {
 				if ( $network ) {
 					if ( ! empty( $info['url']['purchase'] ) || 
 						! empty( $this->p->options['plugin_'.$lca.'_tid'] ) ) {
-						if ( $this->p->cf['lca'] === $lca || $this->p->check->aop() ) {
-							echo '<tr>'.$this->p->util->th( 'Authentication ID', 'medium nowrap' ).'<td class="tid">'.
+
+						if ( $this->p->cf['lca'] === $lca || 
+							$this->p->check->aop() ) {
+
+							echo '<tr>'.$this->p->util->get_th( 'Authentication ID', 'medium nowrap' ).'<td class="tid">'.
 								$this->form->get_input( 'plugin_'.$lca.'_tid', 'tid mono' ).'</td>'.
-								$this->p->util->th( 'Site Use', 'site_use' ).'<td>'.
+								$this->p->util->get_th( 'Site Use', 'site_use' ).'<td>'.
 								$this->form->get_select( 'plugin_'.$lca.'_tid:use', 
 									$this->p->cf['form']['site_option_use'], 'site_use' ).'</td></tr>'."\n";
 						} else {
-							echo '<tr>'.$this->p->util->th( 'Authentication ID', 'medium nowrap' ).'<td class="blank">'.
-								$this->form->get_no_input( 'plugin_'.$lca.'_tid', 'tid mono' ).'</td><td>'.
-								$this->p->msgs->get( 'pro-option-msg' ).'</td>
+							echo '<tr>'.$this->p->util->get_th( 'Authentication ID', 'medium nowrap' ).'<td class="blank">'.
+								( empty( $this->p->options['plugin_'.$lca.'_tid'] ) ?
+									$this->form->get_no_input( 'plugin_'.$lca.'_tid', 'tid mono' ) :
+									$this->form->get_input( 'plugin_'.$lca.'_tid', 'tid mono' ) ).
+								'</td><td>'.$this->p->msgs->get( 'pro-option-msg' ).'</td>
 									<td>&nbsp;</td><td>&nbsp;</td></tr>'."\n";
 						}
 					} else echo '<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>'."\n";
 				} else {
 					if ( ! empty( $info['url']['purchase'] ) || 
 						! empty( $this->p->options['plugin_'.$lca.'_tid'] ) ) {
-						if ( $this->p->cf['lca'] === $lca || $this->p->check->aop() ) {
-							echo '<tr>'.$this->p->util->th( 'Authentication ID', 'medium nowrap' ).'<td class="tid">'.
+
+						if ( $this->p->cf['lca'] === $lca || 
+							$this->p->check->aop() ) {
+							$qty_used = class_exists( 'SucomUpdate' ) ?
+								SucomUpdate::get_option( $lca, 'qty_used' ) : false;
+
+							echo '<tr>'.$this->p->util->get_th( 'Authentication ID', 'medium nowrap' ).'<td class="tid">'.
 								$this->form->get_input( 'plugin_'.$lca.'_tid', 'tid mono' ).'</td><td><p>'.
 								( empty( $qty_used ) ? '' : $qty_used.' Licenses Assigned' ).'</p></td></tr>'."\n";
 						} else {
-							echo '<tr>'.$this->p->util->th( 'Authentication ID', 'medium nowrap' ).'<td class="blank">'.
-								$this->form->get_no_input( 'plugin_'.$lca.'_tid', 'tid mono' ).'</td><td>'.
-								$this->p->msgs->get( 'pro-option-msg' ).'</td></tr>'."\n";
+							echo '<tr>'.$this->p->util->get_th( 'Authentication ID', 'medium nowrap' ).'<td class="blank">'.
+								( empty( $this->p->options['plugin_'.$lca.'_tid'] ) ?
+									$this->form->get_no_input( 'plugin_'.$lca.'_tid', 'tid mono' ) :
+									$this->form->get_input( 'plugin_'.$lca.'_tid', 'tid mono' ) ).
+								'</td><td>'.$this->p->msgs->get( 'pro-option-msg' ).'</td></tr>'."\n";
 						}
 					} else echo '<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</tr>'."\n";
 				}

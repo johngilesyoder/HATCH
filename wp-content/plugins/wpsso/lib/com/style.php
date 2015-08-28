@@ -16,11 +16,10 @@ if ( ! class_exists( 'SucomStyle' ) ) {
 
 		public function __construct( &$plugin ) {
 			$this->p =& $plugin;
-			$this->p->debug->mark();
-
-			if ( is_admin() ) {
+			if ( $this->p->debug->enabled )
+				$this->p->debug->mark();
+			if ( is_admin() )
 				add_action( 'admin_enqueue_scripts', array( &$this, 'admin_enqueue_styles' ) );
-			}
 		}
 
 		public function admin_enqueue_styles( $hook ) {
@@ -38,25 +37,34 @@ if ( ! class_exists( 'SucomStyle' ) ) {
 				$url_path.'css/com/metabox-tabs.min.css', array(), $plugin_version );
 
 			switch ( $hook ) {
+				case 'edit-tags.php':
 				case 'user-edit.php':
 				case 'profile.php':
 				case 'post.php':
 				case 'post-new.php':
+					if ( $this->p->debug->enabled )
+						$this->p->debug->log( 'calling wp_enqueue_style() for editing page' );
 					wp_enqueue_style( 'jquery-qtip.js' );
 					wp_enqueue_style( 'sucom-table-setting' );
 					wp_enqueue_style( 'sucom-metabox-tabs' );
 					break;
 				case ( preg_match( '/_page_'.$lca.'-(site)?licenses/', $hook ) ? true : false ) :
+					if ( $this->p->debug->enabled )
+						$this->p->debug->log( 'calling wp_enqueue_style() for '.$lca.' licenses page' );
 					add_filter( 'admin_body_class', array( &$this, 'add_plugins_body_class' ) );
 					add_thickbox();		// required to view plugin details box
 					// no break
 				case ( preg_match( '/_page_'.$lca.'-/', $hook ) ? true : false ) :
+					if ( $this->p->debug->enabled )
+						$this->p->debug->log( 'calling wp_enqueue_style() for '.$lca.' settings page' );
 					wp_enqueue_style( 'jquery-qtip.js' );
 					wp_enqueue_style( 'sucom-setting-pages' );
 					wp_enqueue_style( 'sucom-table-setting' );
 					wp_enqueue_style( 'sucom-metabox-tabs' );
 					break;
 				case 'plugin-install.php':	// view plugin details thickbox
+					if ( $this->p->debug->enabled )
+						$this->p->debug->log( 'calling wp_enqueue_style() for plugin install page' );
 					$this->thickbox_inline_styles( $hook );
 					break;
 			}
@@ -85,15 +93,47 @@ if ( ! class_exists( 'SucomStyle' ) ) {
 		private function admin_inline_styles( $hook ) {
 			if ( isset( $this->p->cf['color'] ) ) {
 				$lca = $this->p->cf['lca'];
+				$uca = strtoupper( $lca );
 				$menu = $lca.'-'.key( $this->p->cf['*']['lib']['submenu'] );
 				$sitemenu = $lca.'-'.key( $this->p->cf['*']['lib']['sitesubmenu'] );
+				$icon_highlight = ( defined( $uca.'_MENU_ICON_HIGHLIGHT' )  &&
+					constant( $uca.'_MENU_ICON_HIGHLIGHT' ) === false ) ?
+						false : true;
 				echo '
-<style type="text/css">
-	li.menu-top.toplevel_page_'.$menu.' div.wp-menu-image:before,
-	li.menu-top.toplevel_page_'.$sitemenu.' div.wp-menu-image:before {
-		color:#'.$this->p->cf['color'].' !important;
+<style type="text/css">'.
+( $icon_highlight ? '
+	#adminmenu li.menu-top.toplevel_page_'.$menu.' div.wp-menu-image:before,
+	#adminmenu li.menu-top.toplevel_page_'.$sitemenu.' div.wp-menu-image:before {
+		color:#'.$this->p->cf['color'].';
+	}' : ''
+).'
+	.column-'.$lca.'_og_image { 
+		width:'.$this->p->cf['form']['og_image_col_width'].';
 	}
-</style>';
+	.column-'.$lca.'_og_image .preview_img { 
+		width:'.$this->p->cf['form']['og_image_col_width'].';
+		height:'.$this->p->cf['form']['og_image_col_height'].';
+		background-size:'.$this->p->cf['form']['og_image_col_width'].' auto;
+		background-position:center center;
+		background-repeat:no-repeat;
+		background-position:center middle;
+		overflow:hidden;
+		margin:0;
+		padding:0;
+	}
+	td.column-'.$lca.'_og_desc {
+		direction:ltr;
+		font-family:Helvetica;
+		text-alignleftword-wrap:break-word;
+	}
+	@media ( max-width:1295px ) {
+		th.column-'.$lca.'_og_desc,
+		td.column-'.$lca.'_og_desc {
+			display:none;
+		}
+	}
+</style>
+';
 			}
 		}
 	}

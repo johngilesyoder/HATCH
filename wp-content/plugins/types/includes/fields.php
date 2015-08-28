@@ -2,28 +2,9 @@
 /*
  * Fields and groups functions
  *
- * $HeadURL: http://plugins.svn.wordpress.org/types/tags/1.6.6.2/includes/fields.php $
- * $LastChangedDate: 2015-03-25 12:38:40 +0000 (Wed, 25 Mar 2015) $
- * $LastChangedRevision: 1120400 $
- * $LastChangedBy: iworks $
  *
  */
 require_once WPCF_EMBEDDED_INC_ABSPATH . '/fields.php';
-
-/**
- * Gets post_types supported by specific group.
- *
- * @param type $group_id
- * @return type
- */
-function wpcf_admin_get_post_types_by_group( $group_id ) {
-    $post_types = get_post_meta( $group_id, '_wp_types_group_post_types', true );
-    if ( $post_types == 'all' ) {
-        return array();
-    }
-    $post_types = explode( ',', trim( $post_types, ',' ) );
-    return $post_types;
-}
 
 /**
  * Gets taxonomies supported by specific group.
@@ -99,7 +80,7 @@ function wpcf_admin_get_templates_by_group( $group_id )
  * @param type $group_id
  * @return type
  */
-function wpcf_admin_fields_activate_group( $group_id, $post_type = 'wp-types-group' )
+function wpcf_admin_fields_activate_group( $group_id, $post_type = TYPES_CUSTOM_FIELD_GROUP_CPT_NAME )
 {
     global $wpdb;
     return $wpdb->update( $wpdb->posts, array('post_status' => 'publish'),
@@ -118,7 +99,7 @@ function wpcf_admin_fields_activate_group( $group_id, $post_type = 'wp-types-gro
  * @return type
  */
 function wpcf_admin_fields_deactivate_group( $group_id,
-        $post_type = 'wp-types-group' ) {
+        $post_type = TYPES_CUSTOM_FIELD_GROUP_CPT_NAME ) {
     global $wpdb;
     return $wpdb->update( $wpdb->posts, array('post_status' => 'draft'),
                     array('ID' => intval( $group_id ), 'post_type' => $post_type),
@@ -165,7 +146,7 @@ function wpcf_admin_fields_remove_field_from_group_bulk( $group_id, $fields ) {
  * @param type $field_id
  */
 function wpcf_admin_fields_delete_field( $field_id,
-        $post_type = 'wp-types-group', $meta_name = 'wpcf-fields' ) {
+        $post_type = TYPES_CUSTOM_FIELD_GROUP_CPT_NAME, $meta_name = 'wpcf-fields' ) {
     global $wpdb;
     $fields = get_option( $meta_name, array() );
     if ( isset( $fields[$field_id] ) ) {
@@ -202,7 +183,7 @@ function wpcf_admin_fields_delete_field( $field_id,
  * @return type
  */
 function wpcf_admin_fields_delete_group( $group_id,
-        $post_type = 'wp-types-group' ) {
+        $post_type = TYPES_CUSTOM_FIELD_GROUP_CPT_NAME ) {
     $group = get_post( $group_id );
     if ( empty( $group ) || $group->post_type != $post_type ) {
         return false;
@@ -217,7 +198,7 @@ function wpcf_admin_fields_delete_group( $group_id,
  * @param type $group
  * @return type
  */
-function wpcf_admin_fields_save_group( $group, $post_type = 'wp-types-group' ) {
+function wpcf_admin_fields_save_group( $group, $post_type = TYPES_CUSTOM_FIELD_GROUP_CPT_NAME ) {
     if ( !isset( $group['name'] ) ) {
         return false;
     }
@@ -225,9 +206,9 @@ function wpcf_admin_fields_save_group( $group, $post_type = 'wp-types-group' ) {
     $post = array(
         'post_status' => 'publish',
         'post_type' => $post_type,
-        'post_title' => $group['name'],
-        'post_name' => $group['name'],
-        'post_content' => !empty( $group['description'] ) ? $group['description'] : '',
+        'post_title' => wp_kses_post($group['name']),
+        'post_name' => wp_kses_post($group['name']),
+        'post_content' => empty( $group['description'] )? '':wp_kses_post($group['description']),
     );
 
     $update = false;
@@ -277,8 +258,7 @@ function wpcf_admin_fields_save_group( $group, $post_type = 'wp-types-group' ) {
  *
  * @param type $fields
  */
-function wpcf_admin_fields_save_fields( $fields, $forced = false,
-        $option_name = 'wpcf-fields' ) {
+function wpcf_admin_fields_save_fields( $fields, $forced = false, $option_name = 'wpcf-fields' ) {
     $original = get_option( $option_name, array() );
     if ( !$forced ) {
         $fields = array_merge( $original, $fields );
@@ -293,19 +273,17 @@ function wpcf_admin_fields_save_fields( $fields, $forced = false,
  * @param type $field
  * @return type
  */
-function wpcf_admin_fields_save_field( $field, $post_type = 'wp-types-group',
-        $meta_name = 'wpcf-fields' ) {
+function wpcf_admin_fields_save_field( $field, $post_type = TYPES_CUSTOM_FIELD_GROUP_CPT_NAME, $meta_name = 'wpcf-fields' )
+{
 
     if ( !isset( $field['name'] ) || !isset( $field['type'] ) ) {
-        return new WP_Error( 'wpcf_save_field_no_name_or_type', __( "Error saving field",
-                                'wpcf' ) );
+        return new WP_Error( 'wpcf_save_field_no_name_or_type', __( "Error saving field", 'wpcf' ) );
     }
 
     $field = wpcf_sanitize_field( $field );
 
     if ( empty( $field['name'] ) || empty( $field['slug'] ) ) {
-        return new WP_Error( 'wpcf_save_field_no_name', __( "Please set name for field",
-                                'wpcf' ) );
+        return new WP_Error( 'wpcf_save_field_no_name', __( "Please set name for field", 'wpcf' ) );
     }
 
     $field['id'] = $field['slug'];
@@ -491,6 +469,26 @@ function wpcf_admin_fields_save_field( $field, $post_type = 'wp-types-group',
         }
     }
 
+    /**
+     * WPML update translation status
+     */
+    if (
+        isset($save_data['data'])
+        && isset($save_data['data']['submit-key'])
+    ) {
+        if ( isset( $_POST[ 'wpml_cf_translation_preferences' ][ $save_data['data']['submit-key'] ] ) ) {
+            do_action(
+                'wpml_config',
+                array(
+                    'section'   => 'custom-fields',
+                    'key'       => wpcf_types_get_meta_prefix( wpcf_admin_fields_get_field( $save_data['slug']) ) . $save_data['slug'],
+                    'value'     => intval( $_POST[ 'wpml_cf_translation_preferences' ][ $save_data['data']['submit-key'] ] ),
+                    'read_only' => true
+                )
+            );
+        }
+    }
+
     return $field_id;
 }
 
@@ -502,7 +500,7 @@ function wpcf_admin_fields_save_field( $field, $post_type = 'wp-types-group',
  * @param type $type
  */
 function wpcf_admin_custom_fields_change_type( $fields, $type,
-        $post_type = 'wp-types-group', $meta_name = 'wpcf-fields' ) {
+        $post_type = TYPES_CUSTOM_FIELD_GROUP_CPT_NAME, $meta_name = 'wpcf-fields' ) {
     if ( !is_array( $fields ) ) {
         $fields = array(strval( $fields ));
     }
@@ -534,8 +532,7 @@ function wpcf_admin_custom_fields_change_type( $fields, $type,
         }
         $field = $all_fields[$field_id];
         if ( !in_array( $type, $allowed[$field['type']] ) ) {
-            wpcf_admin_message_store( sprintf( __( 'Field "%s" type was converted from %s to %s. You need to set some further settings in the group editor.',
-                                    'wpcf' ), $field['name'], $field['type'],
+            wpcf_admin_message_store( sprintf( __( 'Field "%s" type was converted from %s to %s. You need to set some further settings in the group editor.', 'wpcf' ), $field['name'], $field['type'],
                             $type ) );
             $all_fields[$field_id]['data']['disabled_by_type'] = 1;
         } else {
@@ -560,14 +557,12 @@ function wpcf_admin_custom_fields_change_type( $fields, $type,
  * @param type $group_id
  * @param type $fields
  */
-function wpcf_admin_fields_save_group_fields( $group_id, $fields, $add = false,
-        $post_type = 'wp-types-group' ) {
-    $meta_name = ($post_type == 'wp-types-group' ? 'wpcf-fields' : 'wpcf-usermeta');
-    $fields = wpcf_types_cf_under_control( 'add', array('fields' => $fields),
-            $post_type, $meta_name );
+function wpcf_admin_fields_save_group_fields( $group_id, $fields, $add = false, $post_type = TYPES_CUSTOM_FIELD_GROUP_CPT_NAME )
+{
+    $meta_name = ($post_type == TYPES_CUSTOM_FIELD_GROUP_CPT_NAME ? 'wpcf-fields' : 'wpcf-usermeta');
+    $fields = wpcf_types_cf_under_control( 'add', array('fields' => $fields), $post_type, $meta_name );
     if ( $add ) {
-        $existing_fields = wpcf_admin_fields_get_fields_by_group( $group_id,
-                'slug', false, true, false, $post_type, $meta_name );
+        $existing_fields = wpcf_admin_fields_get_fields_by_group( $group_id, 'slug', false, true, false, $post_type, $meta_name );
         $order = array();
         if ( !empty( $existing_fields ) ) {
             foreach ( $existing_fields as $field_id => $field ) {
@@ -939,6 +934,11 @@ function wpcf_admin_fields_get_posts_by_filter( $filter, $meta_query = '' ) {
     return $posts;
 }
 
+function wpcf_admin_fields_get_posts_by_filter_missing_meta_helper( $e )
+{
+    return '%s';
+}
+
 /**
  * Gets posts by filter with missing meta fetched
  * with wpcf_admin_fields_get_filter_by_field().
@@ -947,28 +947,37 @@ function wpcf_admin_fields_get_posts_by_filter( $filter, $meta_query = '' ) {
  * @param type $filter
  * @return type
  */
-function wpcf_admin_fields_get_posts_by_filter_missing_meta( $filter,
-        $meta_key = '' ) {
+function wpcf_admin_fields_get_posts_by_filter_missing_meta( $filter, $meta_key = '' )
+{
     global $wpdb, $wpcf;
-    $query = array();
-    $join = array();
+    $query = $join = array();
+    $args = array(
+        'post_types' => array(),
+        'templates' => array(),
+    );
+
+    /**
+     * post types
+     */
     if ( $filter['types'] != 'all' && !empty( $filter['types'] ) ) {
-        $post_types = array();
-        foreach( $filter['types'] as $post_type ) {
-            $post_types[] = esc_sql( $post_type );
-        }
-        $query[] = 'p.post_type IN (\'' . implode( '\',\'', $post_types ) . '\')';
+        $args['post_types'] = $filter['types'];
     } else {
-        $post_types = get_post_types( array('show_ui' => true), 'names' );
-        foreach ( $post_types as $post_type_slug => $post_type ) {
-            if ( in_array( $post_type_slug, $wpcf->excluded_post_types ) ) {
-                unset( $post_types[$post_type_slug] );
-            } else {
-                $post_types[$post_type_slug] = esc_sql( $post_type );
+        $post_types_all = array_keys(get_post_types( array('show_ui' => true), 'names' ));
+        foreach ( $post_types_all as $post_type ) {
+            if ( in_array( $post_type, $wpcf->excluded_post_types ) ) {
+                continue;
             }
+            $args['post_types'][$post_type] = $post_type;
         }
-        $query[] = 'p.post_type IN (\'' . implode( '\',\'', $post_types ) . '\')';
     }
+    $query[] = sprintf(
+        ' p.post_type IN ( %s ) ',
+        implode( ', ', array_map('wpcf_admin_fields_get_posts_by_filter_missing_meta_helper', $args['post_types'] ))
+    );
+
+    /**
+     * types
+     */
     if ( $filter['terms'] != 'all' && !empty( $filter['terms'] ) ) {
         $ttid = array();
         foreach ( $filter['terms'] as $term_id ) {
@@ -979,30 +988,43 @@ function wpcf_admin_fields_get_posts_by_filter_missing_meta( $filter,
                 )
             );
             if ( !empty( $term_taxonomy_id ) ) {
-                $ttid[] = esc_sql( $term_taxonomy_id );
+                $ttid[] = intval( $term_taxonomy_id );
             }
         }
         $query[] = 't.term_taxonomy_id IN (\'' . implode( '\',\'', $ttid ) . '\')';
         $join[] = "LEFT JOIN $wpdb->term_relationships t ON p.ID = t.object_id ";
     }
+
+    /**
+     * templates
+     */
     if ( $filter['templates'] != 'all' && !empty( $filter['templates'] ) ) {
-        $templates = array();
+        $args['templates'] = array();
         foreach( $filter['templates'] as $template ) {
-            $templates[] = esc_sql( $template );
+            $args['templates'][$template] = $template;
         }
-        $query[] = '(m.meta_key = \'_wp_page_template\' AND m.meta_value IN (\'' . implode( '\',\'',
-                $templates ) . '\'))';
+        $query[] = sprintf(
+            ' (m.meta_key = \'_wp_page_template\' AND m.meta_value IN (%s))',
+            implode( ', ', array_map('wpcf_admin_fields_get_posts_by_filter_missing_meta_helper', $args['templates'] ))
+        );
         $join[] = "LEFT JOIN $wpdb->postmeta m ON p.ID = m.post_id ";
     }
+
     $_query = "SELECT DISTINCT p.ID FROM $wpdb->posts p " . implode( '', $join );
-    $_query .= "WHERE NOT EXISTS (SELECT * FROM $wpdb->postmeta mm WHERE p.ID = mm.post_id AND mm.meta_key = '" . esc_sql( $meta_key ) . "')";
+    $_query .= "WHERE NOT EXISTS ( SELECT * FROM $wpdb->postmeta mm WHERE p.ID = mm.post_id AND mm.meta_key = %s )";
+
+    /**
+     * merge $args to one array
+     */
+    $args = array_values(array( $meta_key ) + $args['post_types'] + $args['templates']);
+
     if ( !empty( $query ) ) {
         $association = ( strtoupper( trim( $filter['association'] ) ) == 'OR' ) ? 'OR' : 'AND';
-        $_query .= "AND (" . implode( ' ' . $association . ' ', $query ) . ') ';
+        $_query .= " AND (" . implode( ' ' . $association . ' ', $query ) . ') ';
     }
     $_query .= "GROUP BY p.ID";
-    $posts = $wpdb->get_col( $_query );
-    return $posts;
+
+    return $wpdb->get_col( $wpdb->prepare($_query, $args));
 }
 
 /**
@@ -1280,52 +1302,75 @@ function wpcf_admin_metabox_custom_fields($ct)
 {
     $form = array();
     $options = array();
-    $groups = wpcf_admin_fields_get_groups('wp-types-group', true, true);
-    foreach( $groups as $group ) {
-        $post_types = wpcf_admin_get_post_types_by_group($group['id']);
-        if ( empty($post_types) || (isset( $ct['wpcf-post-type']) && in_array($ct['wpcf-post-type'], $post_types)) ) {
-            if ( !(empty($group['fields']) ) ) {
-                foreach($group['fields'] as $field => $data) {
-                    if ( isset($data['data']['repetitive']) && $data['data']['repetitive']) {
-                        continue;
-                    }
-                    switch( $data['type'] ) {
-                    case 'embed':
-                    case 'checkboxes':
-                    case 'audio':
-                    case 'file':
-                    case 'textarea':
-                    case 'video':
-                    case 'wysiwyg':
-                        continue;
-                    default:
-                        $options[$field] = array(
-                            '#name' => 'ct[custom_fields][]',
-                            '#title' => sprintf( '%s <small>(%s)</small>', $data['name'], $data['type']),
-                            '#value' => $data['meta_key'],
-                            '#inline' => true,
-                            '#before' => '<li>',
-                            '#after' => '</li>',
-                            '#default_value' => intval(isset($ct['custom_fields']) && in_array($data['meta_key'], $ct['custom_fields']))
-                        );
-                    }
-                }
+    $option_to_key = array();
+
+    $fields = wpcf_admin_fields_get_active_fields_by_post_type($ct['slug']);
+    foreach($fields as $field => $data) {
+        if ( isset($data['data']['repetitive']) && $data['data']['repetitive']) {
+            continue;
+        }
+        switch( $data['type'] ) {
+        case 'embed':
+        case 'checkboxes':
+        case 'audio':
+        case 'file':
+        case 'textarea':
+        case 'video':
+        case 'wysiwyg':
+            continue;
+        default:
+            $option_to_key[$data['meta_key']] = $field;
+            $options[$field] = array(
+                '#name' => sprintf('ct[custom_fields][%s]', esc_attr($data['meta_key'])),
+                '#title' => sprintf( '%s <small>(%s)</small>', $data['name'], $data['type']),
+                '#value' => 1,
+                '#inline' => true,
+                '#before' => '<li class="menu-item-handle">',
+                '#after' => '</li>',
+                '#default_value' => intval(isset($ct['custom_fields']) && isset($ct['custom_fields'][$data['meta_key']])),
+            );
+        }
+    }
+
+    /**
+     * get custom fields order
+     */
+    $options_to_add = array();
+    if ( isset($ct['custom_fields']) && is_array($ct['custom_fields']) && !empty($ct['custom_fields'])) {
+        foreach( $ct['custom_fields'] as $key ) {
+            if ( isset( $option_to_key[$key] ) && isset( $options[$option_to_key[$key]]) ) {
+                $options_to_add[$option_to_key[$key]]= $options[$option_to_key[$key]];
+                unset($options[$option_to_key[$key]]);
             }
         }
     }
-    unset($groups);
 
-    $form['table-custom_fields-open'] = wpcf_admin_metabox_begin(__( 'Custom Fields', 'wpcf' ), 'custom_fields', 'wpcf-types-form-visiblity-custom-fields-table', false);
+    $options_to_add += $options;
+
+    $form['table-custom_fields-open'] = wpcf_admin_metabox_begin(__( 'Custom Fields', 'wpcf' ), 'custom_fields', 'wpcf-types-form-visiblity-custom-fields-table', false, true, '_builtin');
 
     $form['table-custom_fields-description'] = array(
         '#type' => 'checkboxes',
-        '#options' => $options,
+        '#options' => $options_to_add + $options,
         '#name' => 'wpcf[group][supports]',
         '#inline' => true,
-        '#before' => wpautop(__('Check which fields should be shown on custom post list as a column.', 'wpcf')).'<ul>',
-        '#after' => '</ul>',
+        '_builtin' => true,
     );
+    if ( empty($options_to_add) ) {
+        $form['table-custom_fields-description'] += array(
+            '#before' => wpautop(__('There is no custom fields assign to this post type.', 'wpcf')).'<ul>',
+        );
+    } else {
+        $form['table-custom_fields-description'] += array(
+            '#before' => wpautop(__('Check which fields should be shown on custom post list as a column.', 'wpcf')).'<ul>',
+        );
+        if ( count($options_to_add) > 1 ) {
+            $form['table-custom_fields-description'] += array(
+                '#after' => '</ul>'.wpautop(__('Drag and drop ticked custom fields to reorder.', 'wpcf')),
+            );
+        }
+    }
 
-    $form['table-custom_fields-close'] = wpcf_admin_metabox_end();
+    $form['table-custom_fields-close'] = wpcf_admin_metabox_end(true, '_builtin');
     return $form;
 }

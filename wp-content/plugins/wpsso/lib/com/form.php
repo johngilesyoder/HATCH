@@ -66,7 +66,8 @@ if ( ! class_exists( 'SucomForm' ) ) {
 				( empty( $class ) ? '' : ' class="'.$class.'"' ).
 				( empty( $id ) ? '' : ' id="checkbox_'.$id.'"' ).
 				( $this->in_options( $name ) ? checked( $this->options[$name], $check[0], false ) : '' ).
-				' title="default is '.( $this->in_defaults( $name ) && $this->defaults[$name] == $check[0] ? 'checked' : 'unchecked' ).
+				' title="default is '.( $this->in_defaults( $name ) && 
+					$this->defaults[$name] == $check[0] ? 'checked' : 'unchecked' ).
 				( $disabled === true ? ' (option disabled)' : '' ).'" />';
 			return $html;
 		}
@@ -137,8 +138,7 @@ if ( ! class_exists( 'SucomForm' ) ) {
 			}
 			$html .= '<select name="'.$this->options_name.'['.$name.']"'.
 				( empty( $class ) ? '' : ' class="'.$class.'"' ).' id="'.$select_id.'"'.
-				( $disabled === true ?
-					' disabled="disabled"' : '' ).'>';
+				( $disabled === true ? ' disabled="disabled"' : '' ).'>';
 
 			foreach ( $values as $val => $desc ) {
 				// if the array is NOT associative (so regular numered array), 
@@ -276,8 +276,9 @@ if ( ! class_exists( 'SucomForm' ) ) {
 				( empty( $len ) ? '' : ' maxLength="'.$len.'"' ).
 				( empty( $placeholder ) ? '' : ' placeholder="'.$placeholder.'"'.
 					' onFocus="if ( this.value == \'\' ) this.value = \''.esc_js( $placeholder ).'\';"'.
-					' onBlur="if ( this.value == \''.esc_js( $placeholder ).'\' ) this.value = \'\';"' ).
-				' value="'.esc_attr( $value ).'" />'.
+					' onBlur="if ( this.value == \''.esc_js( $placeholder ).'\' ) this.value = \'\';"'.
+					' onMouseOut="if ( this.value == \''.esc_js( $placeholder ).'\' ) this.value = \'\';"'
+				).' value="'.esc_attr( $value ).'" />'.
 				( empty( $len ) ? '' : ' <div id="text_'.$id.'-lenMsg"></div>' );
 			return $html;
 		}
@@ -292,22 +293,27 @@ if ( ! class_exists( 'SucomForm' ) ) {
 			return $html;
 		}
 
-		public function get_textarea( $name, $class = '', $id = '', $len = 0, $placeholder = '' ) {
+		public function get_textarea( $name, $class = '', $id = '', $len = 0, $placeholder = '', $disabled = false ) {
 			if ( empty( $name ) ) return;	// just in case
+			if ( $this->in_options( $name.':is' ) && 
+				$this->options[$name.':is'] === 'disabled' )
+					$disabled = true;
 			$html = '';
 			$value = $this->in_options( $name ) ? $this->options[$name] : '';
 			if ( ! empty( $len ) && ! empty( $id ) )
 				$html .= $this->get_text_len_js( 'textarea_'.$id );
 			$html .= '<textarea name="'.$this->options_name.'['.$name.']"'.
+				( $disabled !== false ? ' disabled="disabled"' : '' ).
 				( empty( $class ) ? '' : ' class="'.$class.'"' ).
 				( empty( $id ) ? ' id="textarea_'.$name.'"' : ' id="textarea_'.$id.'"' ).
-				( empty( $len ) ? '' : ' maxLength="'.$len.'"' ).
-				( empty( $len ) && empty( $class ) ? '' : ' rows="'.( round( $len / 100 ) + 1 ).'"' ).
-				( empty( $placeholder ) ? '' : ' placeholder="'.$placeholder.'"'.
+				( empty( $len ) || $disabled !== false ? '' : ' maxLength="'.$len.'"' ).
+				( empty( $len ) ? '' : ' rows="'.( round( $len / 100 ) + 1 ).'"' ).
+				( empty( $placeholder ) || $disabled !== false ? '' : ' placeholder="'.$placeholder.'"'.
 					' onFocus="if ( this.value == \'\' ) this.value = \''.esc_js( $placeholder ).'\';"'.
-					' onBlur="if ( this.value == \''.esc_js( $placeholder ).'\' ) this.value = \'\';"' ).
+					' onBlur="if ( this.value == \''.esc_js( $placeholder ).'\' ) this.value = \'\';"'.
+					' onMouseOut="if ( this.value == \''.esc_js( $placeholder ).'\' ) this.value = \'\';"' ).
 				'>'.stripslashes( esc_attr( $value ) ).'</textarea>'.
-				( empty( $len ) ? '' : ' <div id="textarea_'.$id.'-lenMsg"></div>' );
+				( empty( $len ) || $disabled !== false ? '' : ' <div id="textarea_'.$id.'-lenMsg"></div>' );
 			return $html;
 		}
 
@@ -316,7 +322,7 @@ if ( ! class_exists( 'SucomForm' ) ) {
 				'window.open(\''.$url.'\', \'_blank\');' :
 				'location.href=\''.$url.'\';';
 			$html = '<input type="button" '.
-				( $disabled ? ' disabled="disabled"' : '' ).
+				( $disabled !== false ? ' disabled="disabled"' : '' ).
 				( empty( $class ) ? '' : ' class="'.$class.'"' ).
 				( empty( $id ) ? '' : ' id="button_'.$id.'"' ).
 				( empty( $url ) || $disabled ? '' : ' onClick="'.$js.'"' ).

@@ -3,10 +3,6 @@
  *
  * Custom Post Types embedded code.
  *
- * $HeadURL: http://plugins.svn.wordpress.org/types/tags/1.6.6.2/embedded/includes/custom-types.php $
- * $LastChangedDate: 2015-04-03 10:15:58 +0000 (Fri, 03 Apr 2015) $
- * $LastChangedRevision: 1126927 $
- * $LastChangedBy: iworks $
  *
  */
 add_action( 'wpcf_type', 'wpcf_filter_type', 10, 2 );
@@ -85,9 +81,18 @@ function wpcf_custom_types_default() {
  * Inits custom types.
  */
 function wpcf_custom_types_init() {
-    $custom_types = get_option( 'wpcf-custom-types', array() );
+    $custom_types = get_option( WPCF_OPTION_NAME_CUSTOM_TYPES, array() );
     if ( !empty( $custom_types ) ) {
         foreach ( $custom_types as $post_type => $data ) {
+            if ( empty($data) ) {
+                continue;
+            }
+            if (
+                ( isset($data['_builtin']) && $data['_builtin'] )
+                || wpcf_is_builtin_post_types($post_type)
+            ) {
+                continue;
+            }
             wpcf_custom_types_register( $post_type, $data );
         }
     }
@@ -217,6 +222,18 @@ function wpcf_custom_types_register( $post_type, $data ) {
     );
     $data['supports'] = array_merge_recursive( $data['supports'], $support_fields );
 
+    /**
+     * custom slug for has_archive
+     */
+    if (
+        isset($data['has_archive'])
+        && $data['has_archive']
+        && isset($data['has_archive_slug'])
+        && $data['has_archive_slug']
+    ) {
+        $data['has_archive'] = $data['has_archive_slug'];
+    }
+
     $args = register_post_type( $post_type, apply_filters( 'wpcf_type', $data, $post_type ) );
 
     do_action( 'wpcf_type_registered', $args );
@@ -277,7 +294,7 @@ function wpcf_filter_type( $data, $post_type ) {
  * @return type 
  */
 function wpcf_get_active_custom_types() {
-    $types = get_option('wpcf-custom-types', array());
+    $types = get_option(WPCF_OPTION_NAME_CUSTOM_TYPES, array());
     foreach ($types as $type => $data) {
         if (!empty($data['disabled'])) {
             unset($types[$type]);
@@ -287,7 +304,7 @@ function wpcf_get_active_custom_types() {
 }
 
 /** This action is documented in wp-admin/includes/dashboard.php */
-add_action('dashboard_glance_items', 'wpcf_dashboard_glance_items');
+add_filter('dashboard_glance_items', 'wpcf_dashboard_glance_items');
 
 /**
  * Add CPT info to "At a Glance"
@@ -298,65 +315,38 @@ add_action('dashboard_glance_items', 'wpcf_dashboard_glance_items');
  * @since 1.6.6
  *
  */
-function wpcf_dashboard_glance_items()
+function wpcf_dashboard_glance_items($elements)
 {
-    $custom_types = get_option( 'wpcf-custom-types', array() );
+    $custom_types = get_option( WPCF_OPTION_NAME_CUSTOM_TYPES, array() );
+    if ( empty( $custom_types ) ) {
+        return $elements;
+    }
     ksort($custom_types);
-    if ( !empty( $custom_types ) ) {
-        foreach ( $custom_types as $post_type => $data ) {
-            if ( !isset($data['dashboard_glance']) || !$data['dashboard_glance']) {
-                continue;
-            }
-            if ( isset($data['disabled']) && $data['disabled'] ) {
-                continue;
-            }
-            $num_posts = wp_count_posts($post_type);
-            $num = number_format_i18n($num_posts->publish);
-            $text = _n( $data['labels']['singular_name'], $data['labels']['name'], intval($num_posts->publish) );
-            printf(
-                '<li class="page-count %s-count"><a href="%s"%s>%d %s</a></li>',
-                $post_type,
+    foreach ( $custom_types as $post_type => $data ) {
+        if ( !isset($data['dashboard_glance']) || !$data['dashboard_glance']) {
+            continue;
+        }
+        if ( isset($data['disabled']) && $data['disabled'] ) {
+            continue;
+        }
+        $num_posts = wp_count_posts($post_type);
+        $num = number_format_i18n($num_posts->publish);
+        $text = _n( $data['labels']['singular_name'], $data['labels']['name'], intval($num_posts->publish) );
+        $elements[] = sprintf(
+            '<a href="%s"%s>%d %s</a>',
+            esc_url(
                 add_query_arg(
                     array(
                         'post_type' => $post_type,
                     ),
                     admin_url('edit.php')
-                ),
-                isset($data['icon'])? sprintf('class="dashicons-%s"', $data['icon']):'',
-                $num,
-                $text
-            );
-        }
+                )
+            ),
+            isset($data['icon'])? sprintf('class="dashicons-%s"', $data['icon']):'',
+            $num,
+            $text
+        );
     }
-}
-
-/**
- * Register build-in taxonomies for CPT
- *
- * Register build-in taxonomies for CPT in the proper time, after this 
- * taxonomies are avaiable to register, becouse register_post_type is called 
- * in Types before register_taxonomy is called for build-in taxonomies.
- *
- * @since 1.6.6.1
- *
- */
-function wpcf_init_bind_build_in_taxonomies()
-{
-    $custom_types = get_option( 'wpcf-custom-types', array() );
-    if ( empty($custom_types) ) {
-        return;
-    }
-    foreach( $custom_types as $custom_post_slug => $data ) {
-        if ( !isset($data['taxonomies']) || empty($data['taxonomies'])) {
-            continue;
-        }
-        $build_in_taxonomies = array_keys(get_taxonomies(array('_builtin'=>true)));
-        foreach(array_keys($data['taxonomies']) as $taxonomy_name) {
-            if ( !in_array($taxonomy_name, $build_in_taxonomies) ) {
-                continue;
-            }
-            register_taxonomy_for_object_type($taxonomy_name, $custom_post_slug);
-        }
-    }
+    return $elements;
 }
 

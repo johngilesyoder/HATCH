@@ -18,7 +18,8 @@ if ( ! class_exists( 'SucomWebpage' ) ) {
 
 		public function __construct( &$plugin ) {
 			$this->p =& $plugin;
-			$this->p->debug->mark();
+			if ( $this->p->debug->enabled )
+				$this->p->debug->mark();
 			$this->set_objects();
 		}
 
@@ -44,7 +45,7 @@ if ( ! class_exists( 'SucomWebpage' ) ) {
 
 		// $title is empty for home page, so don't save/restore empty titles
 		public function wp_title_save( $title, $separator, $location ) {
-			$this->saved_title = $title === '' ? false : $title;
+			$this->saved_title = trim( $title ) === '' ? false : $title;
 			return $title;
 		}
 
@@ -77,7 +78,7 @@ if ( ! class_exists( 'SucomWebpage' ) ) {
 
 		// called from Tumblr, Pinterest, and Twitter classes
 		public function get_caption( $type = 'title', $length = 200, $use_post = true, $use_cache = true,
-			$add_hashtags = true, $encode = true, $custom = 'og', $source_id = '' ) {
+			$add_hashtags = true, $encode = true, $custom_idx = 'og_title', $source_id = '' ) {
 
 			if ( $this->p->debug->enabled )
 				$this->p->debug->args( array( 
@@ -85,55 +86,38 @@ if ( ! class_exists( 'SucomWebpage' ) ) {
 					'length' => $length, 
 					'use_post' => $use_post, 
 					'use_cache' => $use_cache, 
-					'add_hashtags' => $add_hashtags,
+					'add_hashtags' => $add_hashtags,	// true/false/numeric
 					'encode' => $encode,
-					'custom' => $custom,
+					'custom_idx' => $custom_idx,
 					'source_id' => $source_id,
 				) );
 			$caption = false;
 			$separator = html_entity_decode( $this->p->options['og_title_sep'], ENT_QUOTES, get_bloginfo( 'charset' ) );
 
-			if ( ! empty( $custom ) ) {
-				
-				if ( is_singular() || $use_post !== false ) {
-
-					if ( ( $obj = $this->p->util->get_post_object( $use_post ) ) === false ) {
-						if ( $this->p->debug->enabled )
-							$this->p->debug->log( 'exiting early: invalid object type' );
-						return $caption;
-					}
-
-					$post_id = empty( $obj->ID ) || empty( $obj->post_type ) ? 0 : $obj->ID;
-	
-					if ( ! empty( $post_id ) && 
-						isset( $this->p->mods['util']['postmeta'] ) ) {
-	
-						$caption = $this->p->mods['util']['postmeta']->get_options( $post_id, $custom );
-						if ( ! empty( $caption ) ) {
-							if ( $this->p->debug->enabled )
-								$this->p->debug->log( 'custom postmeta '.$custom.' = "'.$caption.'"' );
-						}
-					}
-				} elseif ( is_author() || ( is_admin() && ( $screen = get_current_screen() ) && 
-					( $screen->id === 'user-edit' || $screen->id === 'profile' ) ) ) {
-
-					$author = $this->p->util->get_author_object();
-	
-					if ( ! empty( $author->ID ) &&
-						isset( $this->p->mods['util']['user'] ) ) {
-
-						$caption = $this->p->mods['util']['user']->get_options( $author->ID, $custom );
-
-						if ( ! empty( $caption ) ) {
-							if ( $this->p->debug->enabled )
-								$this->p->debug->log( 'custom user '.$custom.' = "'.$caption.'"' );
-						}
-					}
+			if ( is_singular() || $use_post !== false ) {
+				if ( ( $obj = $this->p->util->get_post_object( $use_post ) ) === false ) {
+					if ( $this->p->debug->enabled )
+						$this->p->debug->log( 'exiting early: invalid object type' );
+					return $caption;
 				}
+				$post_id = empty( $obj->ID ) || 
+					empty( $obj->post_type ) ? 0 : $obj->ID;
+				if ( ! empty( $post_id ) )
+					$caption = $this->p->util->get_mod_options( 'post', $post_id, $custom_idx );
+
+			} elseif ( SucomUtil::is_term_page() ) {
+				$term = $this->p->util->get_term_object();
+				if ( ! empty( $term->term_id ) )
+					$caption = $this->p->util->get_mod_options( 'taxonomy', $term->term_id, $custom_idx );
+
+			} elseif ( SucomUtil::is_author_page() ) {
+				$author = $this->p->util->get_author_object();
+				if ( ! empty( $author->ID ) )
+					$caption = $this->p->util->get_mod_options( 'user', $author->ID, $custom_idx );
 			}
 
 			if ( empty( $caption ) ) {
-				$custom_prefix = preg_replace( '/_(title|desc)$/', '', $custom );
+				$custom_prefix = preg_replace( '/_(title|desc|caption)$/', '', $custom_idx );
 
 				// request all values un-encoded, then encode once we have the complete caption text
 				switch ( strtolower( $type ) ) {
@@ -157,12 +141,16 @@ if ( ! class_exists( 'SucomWebpage' ) ) {
 
 			if ( $encode === true )
 				$caption = htmlentities( $caption, ENT_QUOTES, get_bloginfo( 'charset' ), false );	// double_encode = false
+			else {	// just in case
+				$charset = get_bloginfo( 'charset' );
+				$caption = html_entity_decode( SucomUtil::decode_utf8( $caption ), ENT_QUOTES, $charset );
+			}
 
-			return apply_filters( $this->p->cf['lca'].'_caption', $caption, $use_post, $add_hashtags, $custom, $source_id );
+			return apply_filters( $this->p->cf['lca'].'_caption', $caption, $use_post, $add_hashtags, $custom_idx, $source_id );
 		}
 
 		public function get_title( $textlen = 70, $trailing = '', $use_post = false, $use_cache = true,
-			$add_hashtags = false, $encode = true, $custom = 'og_title', $source_id = '' ) {
+			$add_hashtags = false, $encode = true, $custom_idx = 'og_title', $source_id = '' ) {
 
 			if ( $this->p->debug->enabled )
 				$this->p->debug->args( array( 
@@ -170,9 +158,9 @@ if ( ! class_exists( 'SucomWebpage' ) ) {
 					'trailing' => $trailing, 
 					'use_post' => $use_post, 
 					'use_cache' => $use_cache, 
-					'add_hashtags' => $add_hashtags,
+					'add_hashtags' => $add_hashtags,	// true/false/numeric
 					'encode' => $encode,
-					'custom' => $custom,
+					'custom_idx' => $custom_idx,
 					'source_id' => $source_id,
 				) );
 			$title = false;
@@ -188,52 +176,29 @@ if ( ! class_exists( 'SucomWebpage' ) ) {
 			}
 
 			if ( is_singular() || $use_post !== false ) {
-
 				if ( ( $obj = $this->p->util->get_post_object( $use_post ) ) === false ) {
 					if ( $this->p->debug->enabled )
 						$this->p->debug->log( 'exiting early: invalid object type' );
 					return $title;
 				}
-
 				$post_id = empty( $obj->ID ) || empty( $obj->post_type ) ? 0 : $obj->ID;
+				if ( ! empty( $post_id ) )
+					$title = $this->p->util->get_mod_options( 'post', $post_id, array( $custom_idx, 'og_title' ) );
 
-				if ( ! empty( $post_id ) && ! empty( $custom ) && 
-					isset( $this->p->mods['util']['postmeta'] ) ) {
+			} elseif ( SucomUtil::is_term_page() ) {
+				$term = $this->p->util->get_term_object();
+				if ( ! empty( $term->term_id ) )
+					$title = $this->p->util->get_mod_options( 'taxonomy', $term->term_id, $custom_idx );
 
-					// always fallback to the custom og_title
-					foreach ( array_unique( array( $custom, 'og_title' ) ) as $meta_key ) {
-						$title = $this->p->mods['util']['postmeta']->get_options( $post_id, $meta_key );
-						if ( ! empty( $title ) ) {
-							if ( $this->p->debug->enabled )
-								$this->p->debug->log( 'custom postmeta '.$meta_key.' = "'.$title.'"' );
-							break;
-						}
-					}
-				}
-			} elseif ( is_author() || ( is_admin() && ( $screen = get_current_screen() ) && 
-				( $screen->id === 'user-edit' || $screen->id === 'profile' ) ) ) {
-
+			} elseif ( SucomUtil::is_author_page() ) {
 				$author = $this->p->util->get_author_object();
-
-				if ( ! empty( $author->ID ) ) {
-					if ( ! empty( $custom ) && isset( $this->p->mods['util']['user'] ) ) {
-
-						$title = $this->p->mods['util']['user']->get_options( $author->ID, $custom );
-
-						if ( ! empty( $title ) ) {
-							if ( $this->p->debug->enabled )
-								$this->p->debug->log( 'custom user '.$custom.' = "'.$title.'"' );
-						}
-					}
-
-					if ( empty( $title ) && is_admin() )	// re-create default wp title on admin side
-						$title = apply_filters( 'wp_title', $author->display_name.' '.$separator.' ', $separator, 'right' );
-				}
+				if ( ! empty( $author->ID ) )
+					$title = $this->p->util->get_mod_options( 'user', $author->ID, $custom_idx );
 			}
 
 			// get seed if no custom meta title
 			if ( empty( $title ) ) {
-				$title = apply_filters( $this->p->cf['lca'].'_title_seed', '', $use_post, $add_hashtags, $custom, $source_id );
+				$title = apply_filters( $this->p->cf['lca'].'_title_seed', '', $use_post, $add_hashtags, $custom_idx, $source_id );
 				if ( ! empty( $title ) ) {
 					if ( $this->p->debug->enabled )
 						$this->p->debug->log( 'title seed = "'.$title.'"' );
@@ -245,15 +210,15 @@ if ( ! class_exists( 'SucomWebpage' ) ) {
 				$title = $match[1];
 				$hashtags = trim( $match[2] );
 			} elseif ( is_singular() || $use_post !== false ) {
-				if ( $add_hashtags && ! empty( $this->p->options['og_desc_hashtags'] ) )
-					$hashtags = $this->get_hashtags( $post_id );
+				if ( ! empty( $add_hashtags ) && 
+					! empty( $this->p->options['og_desc_hashtags'] ) )
+						$hashtags = $this->get_hashtags( $post_id, $add_hashtags );	// add_hashtags = true/false/numeric
 			}
 
 			// construct a title of our own
 			if ( empty( $title ) ) {
 				// $obj and $post_id are defined above, with the same test, so we should be good
 				if ( is_singular() || $use_post !== false ) {
-
 					if ( is_singular() ) {
 						$title = wp_title( $separator, false, 'right' );
 						if ( $this->p->debug->enabled )
@@ -272,24 +237,18 @@ if ( ! class_exists( 'SucomWebpage' ) ) {
 					if ( $this->p->debug->enabled )
 						$this->p->debug->log( 'seo wp_title() = "'.$title.'"' );
 	
-				// category title, with category parents
-				} elseif ( is_category() ) { 
+				} elseif ( SucomUtil::is_term_page() ) {
+					$term = $this->p->util->get_term_object();
+					$title = apply_filters( 'wp_title', $term->name.' '.$separator.' ', $separator, 'right' );
 
-					$term = get_queried_object();
-					$title = $term->name;
-					$cat_parents = get_category_parents( $term->term_id, false, ' '.$separator.' ', false );
-					if ( is_wp_error( $cat_parents ) ) {
-						if ( $this->p->debug->enabled )
-							$this->p->debug->log( 'get_category_parents error: '.$cat_parents->get_error_message() );
-					} else {
-						if ( $this->p->debug->enabled )
-							$this->p->debug->log( 'get_category_parents() = "'.$cat_parents.'"' );
-						if ( ! empty( $cat_parents ) ) {
-							$title = $cat_parents;
-							$title = preg_replace( '/\.\.\. '.preg_quote( $separator, '/' ).' /', '... ', $title );
-						}
-					}
-	
+				} elseif ( SucomUtil::is_author_page() ) {
+					$author = $this->p->util->get_author_object();
+					$title = apply_filters( 'wp_title', $author->display_name.' '.$separator.' ', $separator, 'right' );
+
+				// category title, with category parents
+				} elseif ( SucomUtil::is_category_page() ) {
+					$title = $this->get_category_title();	// includes parents in title string
+
 				} else {
 					/* The title text depends on the query:
 					 *	single post = the title of the post 
@@ -334,25 +293,28 @@ if ( ! class_exists( 'SucomWebpage' ) ) {
 						$textlen = $textlen - strlen( $paged_suffix ) - 1;
 					}
 				}
-				if ( $add_hashtags === true && ! empty( $hashtags ) ) 
-					$textlen = $textlen - strlen( $hashtags ) - 1;
+				if ( ! empty( $add_hashtags ) && 
+					! empty( $hashtags ) ) 
+						$textlen = $textlen - strlen( $hashtags ) - 1;
+
 				$title = $this->p->util->limit_text_length( $title, $textlen, $trailing, false );	// don't run cleanup_html_tags()
 			}
 
 			if ( ! empty( $paged_suffix ) ) 
 				$title .= ' '.$paged_suffix;
 
-			if ( $add_hashtags === true && ! empty( $hashtags ) ) 
-				$title .= ' '.$hashtags;
+			if ( ! empty( $add_hashtags ) && 
+				! empty( $hashtags ) ) 
+					$title .= ' '.$hashtags;
 
 			if ( $encode === true )
 				$title = htmlentities( $title, ENT_QUOTES, get_bloginfo( 'charset' ), false );	// double_encode = false
 
-			return apply_filters( $this->p->cf['lca'].'_title', $title, $use_post, $add_hashtags, $custom, $source_id );
+			return apply_filters( $this->p->cf['lca'].'_title', $title, $use_post, $add_hashtags, $custom_idx, $source_id );
 		}
 
 		public function get_description( $textlen = 156, $trailing = '...', $use_post = false, $use_cache = true,
-			$add_hashtags = true, $encode = true, $custom = 'og_desc', $source_id = '' ) {
+			$add_hashtags = true, $encode = true, $custom_idx = 'og_desc', $source_id = '' ) {
 
 			if ( $this->p->debug->enabled ) {
 				$this->p->debug->mark( 'render description' );
@@ -361,64 +323,41 @@ if ( ! class_exists( 'SucomWebpage' ) ) {
 					'trailing' => $trailing, 
 					'use_post' => $use_post, 
 					'use_cache' => $use_cache, 
-					'add_hashtags' => $add_hashtags, 
+					'add_hashtags' => $add_hashtags, 	// true/false/numeric
 					'encode' => $encode,
-					'custom' => $custom,
+					'custom_idx' => $custom_idx,
 					'source_id' => $source_id,
 				) );
 			}
 			$desc = false;
 			$hashtags = '';
 			$post_id = 0;
-			$screen = '';
 			$page = ''; 
 
 			if ( is_singular() || $use_post !== false ) {
-
 				if ( ( $obj = $this->p->util->get_post_object( $use_post ) ) === false ) {
 					if ( $this->p->debug->enabled )
 						$this->p->debug->log( 'exiting early: invalid object type' );
 					return $desc;
 				}
-
 				$post_id = empty( $obj->ID ) || empty( $obj->post_type ) ? 0 : $obj->ID;
+				if ( ! empty( $post_id ) )
+					$desc = $this->p->util->get_mod_options( 'post', $post_id, array( $custom_idx, 'og_desc' ) );
 
-				if ( ! empty( $post_id ) && ! empty( $custom ) && 
-					isset( $this->p->mods['util']['postmeta'] ) ) {
+			} elseif ( SucomUtil::is_term_page() ) {
+				$term = $this->p->util->get_term_object();
+				if ( ! empty( $term->term_id ) )
+					$desc = $this->p->util->get_mod_options( 'taxonomy', $term->term_id, $custom_idx );
 
-					// always fallback to the custom og_desc
-					foreach ( array_unique( array( $custom, 'og_desc' ) ) as $meta_key ) {
-						$desc = $this->p->mods['util']['postmeta']->get_options( $post_id, $meta_key );
-						if ( ! empty( $desc ) ) {
-							if ( $this->p->debug->enabled )
-								$this->p->debug->log( 'custom postmeta '.$meta_key.' = "'.$desc.'"' );
-							break;
-						}
-					}
-				}
-			} elseif ( is_author() || ( is_admin() && ( $screen = get_current_screen() ) && 
-				( $screen->id === 'user-edit' || $screen->id === 'profile' ) ) ) {
-
+			} elseif ( SucomUtil::is_author_page() ) {
 				$author = $this->p->util->get_author_object();
-
-				if ( ! empty( $author->ID ) ) {
-					if ( isset( $this->p->mods['util']['user'] ) )
-						$desc = $this->p->mods['util']['user']->get_options( $author->ID, $custom );
-
-					if ( ! empty( $desc ) ) {
-						if ( $this->p->debug->enabled )
-							$this->p->debug->log( 'custom user '.$custom.' = "'.$desc.'"' );
-
-					} elseif ( is_admin() )	// re-create default description on admin side
-						$desc = empty( $author->description ) ? 
-							sprintf( 'Authored by %s', $author->display_name ) : 
-							$author->description;
-				}
+				if ( ! empty( $author->ID ) )
+					$desc = $this->p->util->get_mod_options( 'user', $author->ID, $custom_idx );
 			}
 
 			// get seed if no custom meta description
 			if ( empty( $desc ) ) {
-				$desc = apply_filters( $this->p->cf['lca'].'_description_seed', '', $use_post, $add_hashtags, $custom, $source_id );
+				$desc = apply_filters( $this->p->cf['lca'].'_description_seed', '', $use_post, $add_hashtags, $custom_idx, $source_id );
 				if ( ! empty( $desc ) ) {
 					if ( $this->p->debug->enabled )
 						$this->p->debug->log( 'description seed = "'.$desc.'"' );
@@ -430,8 +369,9 @@ if ( ! class_exists( 'SucomWebpage' ) ) {
 				$desc = $match[1];
 				$hashtags = trim( $match[2] );
 			} elseif ( is_singular() || $use_post !== false ) {
-				if ( $add_hashtags && ! empty( $this->p->options['og_desc_hashtags'] ) )
-					$hashtags = $this->get_hashtags( $post_id );
+				if ( ! empty( $add_hashtags ) && 
+					! empty( $this->p->options['og_desc_hashtags'] ) )
+						$hashtags = $this->get_hashtags( $post_id, $add_hashtags );
 			}
 
 			// if there's no custom description, and no pre-seed, 
@@ -443,19 +383,21 @@ if ( ! class_exists( 'SucomWebpage' ) ) {
 					if ( has_excerpt( $post_id ) ) {
 						$desc = $obj->post_excerpt;
 						if ( ! empty( $this->p->options['plugin_filter_excerpt'] ) ) {
-							$filter_removed = apply_filters( $this->p->cf['lca'].'_pre_filter_remove', false, 'get_the_excerpt' );
+							$filter_removed = apply_filters( $this->p->cf['lca'].'_pre_filter_remove',
+								false, 'get_the_excerpt' );
 							if ( $this->p->debug->enabled )
 								$this->p->debug->log( 'calling apply_filters(\'get_the_excerpt\')' );
 							$desc = apply_filters( 'get_the_excerpt', $desc );
 							if ( $filter_removed )
-								$filter_added = apply_filters( $this->p->cf['lca'].'_post_filter_add', false, 'get_the_excerpt' );
+								$filter_added = apply_filters( $this->p->cf['lca'].'_post_filter_add',
+									false, 'get_the_excerpt' );
 						}
 					} elseif ( $this->p->debug->enabled )
 						$this->p->debug->log( 'no post_excerpt for post_id '.$post_id );
 
 					// if there's no excerpt, then fallback to the content
 					if ( empty( $desc ) )
-						$desc = $this->get_content( $post_id, $use_post, $use_cache, $custom, $source_id );
+						$desc = $this->get_content( $post_id, $use_post, $use_cache, $custom_idx, $source_id );
 			
 					// ignore everything until the first paragraph tag if $this->p->options['og_desc_strip'] is true
 					if ( $this->p->options['og_desc_strip'] ) {
@@ -464,27 +406,29 @@ if ( ! class_exists( 'SucomWebpage' ) ) {
 						$desc = preg_replace( '/^.*?<p>/i', '', $desc );	// question mark makes regex un-greedy
 					}
 		
-				} elseif ( is_author() ) { 
+				} elseif ( SucomUtil::is_term_page() ) {
+					if ( is_tag() ) {
+						$desc = tag_description();
+						if ( empty( $desc ) )
+							$desc = sprintf( 'Tagged with %s', single_tag_title( '', false ) );
+					} elseif ( is_category() ) { 
+						$desc = category_description();
+						if ( empty( $desc ) )
+							$desc = sprintf( '%s Category', single_cat_title( '', false ) ); 
+					} else { 	// other taxonomies
+						$term = $this->p->util->get_term_object();
+						if ( ! empty( $term->description ) )
+							$desc = $term->description;
+						elseif ( ! empty( $term->name ) )
+							$desc = $term->name.' Archives';
+					}
+				} elseif ( SucomUtil::is_author_page() ) { 
 					$author = $this->p->util->get_author_object();
-					$desc = empty( $author->description ) ?
-						sprintf( 'Authored by %s', $author->display_name ) :
-						$author->description;
+					if ( ! empty( $author->description ) )
+						$desc = $author->description;
+					elseif ( ! empty( $author->display_name ) )
+						$desc = sprintf( 'Authored by %s', $author->display_name );
 			
-				} elseif ( is_tag() ) {
-					$desc = tag_description();
-					if ( empty( $desc ) )
-						$desc = sprintf( 'Tagged with %s', single_tag_title( '', false ) );
-			
-				} elseif ( is_category() ) { 
-					$desc = category_description();
-					if ( empty( $desc ) )
-						$desc = sprintf( '%s Category', single_cat_title( '', false ) ); 
-				
-				} elseif ( is_tax() ) { 
-					$term = get_queried_object();
-					if ( ! empty( $term->description ) )
-						$desc = $term->description;
-
 				} elseif ( is_day() ) 
 					$desc = sprintf( 'Daily Archives for %s', get_the_date() );
 				elseif ( is_month() ) 
@@ -517,13 +461,15 @@ if ( ! class_exists( 'SucomWebpage' ) ) {
 			$desc = apply_filters( $this->p->cf['lca'].'_description_pre_limit', $desc );
 
 			if ( $textlen > 0 ) {
-				if ( $add_hashtags === true && ! empty( $hashtags ) ) 
-					$textlen = $textlen - strlen( $hashtags ) -1;
+				if ( ! empty( $add_hashtags ) && 
+					! empty( $hashtags ) ) 
+						$textlen = $textlen - strlen( $hashtags ) -1;
 				$desc = $this->p->util->limit_text_length( $desc, $textlen, $trailing, false );	// don't run cleanup_html_tags()
 			}
 
-			if ( $add_hashtags === true && ! empty( $hashtags ) ) 
-				$desc .= ' '.$hashtags;
+			if ( ! empty( $add_hashtags ) && 
+				! empty( $hashtags ) ) 
+					$desc .= ' '.$hashtags;
 
 			if ( $encode === true )
 				$desc = htmlentities( $desc, ENT_QUOTES, get_bloginfo( 'charset' ), false );	// double_encode = false
@@ -531,17 +477,17 @@ if ( ! class_exists( 'SucomWebpage' ) ) {
 			if ( $this->p->debug->enabled )
 				$this->p->debug->mark( 'render description' );
 
-			return apply_filters( $this->p->cf['lca'].'_description', $desc, $use_post, $add_hashtags, $custom, $source_id );
+			return apply_filters( $this->p->cf['lca'].'_description', $desc, $use_post, $add_hashtags, $custom_idx, $source_id );
 		}
 
-		public function get_content( $post_id = 0, $use_post = true, $use_cache = true, $custom = '', $source_id = '' ) {
+		public function get_content( $post_id = 0, $use_post = true, $use_cache = true, $custom_idx = '', $source_id = '' ) {
 
 			if ( $this->p->debug->enabled )
 				$this->p->debug->args( array( 
 					'post_id' => $post_id, 
 					'use_post' => $use_post, 
 					'use_cache' => $use_cache,
-					'custom' => $custom,
+					'custom_idx' => $custom_idx,
 					'source_id' => $source_id,
 				) );
 			$content = false;
@@ -579,11 +525,12 @@ if ( ! class_exists( 'SucomWebpage' ) ) {
 							return $content;
 						}
 					} elseif ( $this->p->debug->enabled )
-						$this->p->debug->log( 'use cache = false' );
+						$this->p->debug->log( 'use_cache = false' );
 				}
 			}
 
-			$content = apply_filters( $this->p->cf['lca'].'_content_seed', '', $post_id, $use_post, $custom, $source_id );
+			$content = apply_filters( $this->p->cf['lca'].'_content_seed',
+				'', $post_id, $use_post, $custom_idx, $source_id );
 			if ( ! empty( $content ) ) {
 				if ( $this->p->debug->enabled )
 					$this->p->debug->log( 'content seed = "'.$content.'"' );
@@ -606,7 +553,8 @@ if ( ! class_exists( 'SucomWebpage' ) ) {
 			}
 
 			if ( $filter_content == true ) {
-				$filter_removed = apply_filters( $this->p->cf['lca'].'_pre_filter_remove', false, 'the_content' );
+				$filter_removed = apply_filters( $this->p->cf['lca'].'_pre_filter_remove',
+					false, 'the_content' );
 
 				// remove all of our shortcodes
 				if ( isset( $this->p->cf['*']['lib']['shortcode'] ) && 
@@ -628,7 +576,8 @@ if ( ! class_exists( 'SucomWebpage' ) ) {
 				unset ( $GLOBALS['nggShowGallery'] );
 
 				if ( $filter_removed )
-					$filter_added = apply_filters( $this->p->cf['lca'].'_post_filter_add', false, 'the_content' );
+					$filter_added = apply_filters( $this->p->cf['lca'].'_post_filter_add',
+						false, 'the_content' );
 
 				// add our shortcodes back
 				if ( isset( $this->p->cf['*']['lib']['shortcode'] ) && 
@@ -639,9 +588,11 @@ if ( ! class_exists( 'SucomWebpage' ) ) {
 									$this->shortcode[$id]->add();
 			}
 
-			$content = preg_replace( '/[\r\n\t ]+/s', ' ', $content );	// put everything on one line
-			$content = preg_replace( '/^.*<!--'.$this->p->cf['lca'].'-content-->(.*)<!--\/'.$this->p->cf['lca'].'-content-->.*$/', '$1', $content );
+			$content = preg_replace( '/[\s\n\r]+/s', ' ', $content );		// put everything on one line
+			$content = preg_replace( '/^.*<!--'.$this->p->cf['lca'].'-content-->(.*)<!--\/'.
+				$this->p->cf['lca'].'-content-->.*$/', '$1', $content );
 			$content = preg_replace( '/<a +rel="author" +href="" +style="display:none;">Google\+<\/a>/', ' ', $content );
+			$content = preg_replace( '/<p class="wp-caption-text">/', '${0}Caption: ', $content );
 			$content = str_replace( ']]>', ']]&gt;', $content );
 
 			$content_strlen_after = strlen( $content );
@@ -649,14 +600,16 @@ if ( ! class_exists( 'SucomWebpage' ) ) {
 				$this->p->debug->log( 'content strlen before '.$content_strlen_before.', after '.$content_strlen_after );
 
 			// apply filters before caching
-			$content = apply_filters( $this->p->cf['lca'].'_content', $content, $post_id, $use_post, $custom, $source_id );
+			$content = apply_filters( $this->p->cf['lca'].'_content',
+				$content, $post_id, $use_post, $custom_idx, $source_id );
 
 			if ( $filter_content == true && ! empty( $cache_id ) ) {
 				// only some caching plugins implement this function
 				wp_cache_add_non_persistent_groups( array( __METHOD__ ) );
-				wp_cache_set( $cache_id, $content, __METHOD__, $this->p->cache->object_expire );
+				wp_cache_set( $cache_id, $content, __METHOD__, $this->p->options['plugin_object_cache_exp'] );
 				if ( $this->p->debug->enabled )
-					$this->p->debug->log( $cache_type.': '.$filter_name.' content saved to wp_cache '.$cache_id.' ('.$this->p->cache->object_expire.' seconds)');
+					$this->p->debug->log( $cache_type.': '.$filter_name.' content saved to wp_cache '.
+						$cache_id.' ('.$this->p->options['plugin_object_cache_exp'].' seconds)');
 			}
 			return $content;
 		}
@@ -664,8 +617,8 @@ if ( ! class_exists( 'SucomWebpage' ) ) {
 		public function get_section( $post_id ) {
 			$section = '';
 			if ( ( is_singular() || ! empty( $post_id ) ) && 
-				isset( $this->p->mods['util']['postmeta'] ) )
-					$section = $this->p->mods['util']['postmeta']->get_options( $post_id, 'og_art_section' );
+				isset( $this->p->mods['util']['post'] ) )
+					$section = $this->p->mods['util']['post']->get_options( $post_id, 'og_art_section' );
 
 			if ( ! empty( $section ) ) {
 				if ( $this->p->debug->enabled )
@@ -678,24 +631,30 @@ if ( ! class_exists( 'SucomWebpage' ) ) {
 			return apply_filters( $this->p->cf['lca'].'_section', $section );
 		}
 
-		public function get_hashtags( $post_id ) {
-			if ( empty( $this->p->options['og_desc_hashtags'] ) ) 
+		public function get_hashtags( $post_id, $add_hashtags = true ) {
+			if ( empty( $add_hashtags ) )	// check for false or 0
 				return;
+			elseif ( is_numeric( $add_hashtags ) )
+				$max_hashtags = $add_hashtags;
+			elseif ( ! empty( $this->p->options['og_desc_hashtags'] ) )
+				$max_hashtags = $this->p->options['og_desc_hashtags'];
+			else return;
 
-			$hashtags = apply_filters( $this->p->cf['lca'].'_hashtags_seed', '', $post_id );
+			$hashtags = apply_filters( $this->p->cf['lca'].'_hashtags_seed', '', $post_id, $add_hashtags );
 			if ( ! empty( $hashtags ) ) {
 				if ( $this->p->debug->enabled )
 					$this->p->debug->log( 'hashtags seed = "'.$hashtags.'"' );
 			} else {
-				$tags = array_slice( $this->get_tags( $post_id ), 0, $this->p->options['og_desc_hashtags'] );
+				$tags = array_slice( $this->get_tags( $post_id ), 0, $max_hashtags );
 				if ( ! empty( $tags ) ) {
 					// remove special character incompatible with Twitter
 					$hashtags = '#'.trim( implode( ' #', preg_replace( '/[ \[\]#!\$\?\\\\\/\*\+\.\-\^]/', '', $tags ) ) );
 					if ( $this->p->debug->enabled )
-						$this->p->debug->log( 'hashtags (max '.$this->p->options['og_desc_hashtags'].') = "'.$hashtags.'"' );
+						$this->p->debug->log( 'hashtags (max '.$max_hashtags.') = "'.$hashtags.'"' );
 				}
 			}
-			return apply_filters( $this->p->cf['lca'].'_hashtags', $hashtags, $post_id );
+
+			return apply_filters( $this->p->cf['lca'].'_hashtags', $hashtags, $post_id, $add_hashtags );
 		}
 
 		public function get_tags( $post_id ) {
@@ -723,7 +682,7 @@ if ( ! class_exists( 'SucomWebpage' ) ) {
 				if ( $this->p->debug->enabled )
 					$this->p->debug->log( 'raw tags = "'.implode( ', ', $tags ).'"' );
 
-				$tags = array_unique( array_map( array( &$this, 'sanitize_tag' ), $tags ) );
+				$tags = array_unique( array_map( array( 'SucomUtil', 'sanitize_tag' ), $tags ) );
 
 				if ( $this->p->debug->enabled )
 					$this->p->debug->log( 'sanitized tags = "'.implode( ', ', $tags ).'"' );
@@ -743,7 +702,7 @@ if ( ! class_exists( 'SucomWebpage' ) ) {
 					$post_ids = array_merge( $post_ids, get_post_ancestors( $post_id ) );
 				foreach ( $post_ids as $id ) {
 					if ( $this->p->options['og_page_title_tag'] && is_page( $id ) )
-						$tags[] = $this->sanitize_tag( get_the_title( $id ) );
+						$tags[] = SucomUtil::sanitize_tag( get_the_title( $id ) );
 					foreach ( wp_get_post_tags( $id, array( 'fields' => 'names') ) as $tag_name )
 						$tags[] = $tag_name;
 				}
@@ -751,10 +710,29 @@ if ( ! class_exists( 'SucomWebpage' ) ) {
 			return apply_filters( $this->p->cf['lca'].'_wp_tags', $tags, $post_id );
 		}
 
-		private function sanitize_tag( $tag ) {
-			$tag = sanitize_title_with_dashes( $tag, '', 'display' );
-			$tag = urldecode( $tag );
-			return $tag;
+		public function get_category_title( $term = false ) {
+			if ( ! is_object( $term ) )
+				$term = $this->p->util->get_term_object();
+
+			$separator = html_entity_decode( $this->p->options['og_title_sep'], ENT_QUOTES, get_bloginfo( 'charset' ) );
+			$title = $term->name.' Archives '.$separator.' ';	// default value
+
+			$cat = get_category( $term->term_id );
+			if ( ! empty( $cat->category_parent ) ) {
+				$cat_parents = get_category_parents( $term->term_id, false, ' '.$separator.' ', false );
+				if ( is_wp_error( $cat_parents ) ) {
+					if ( $this->p->debug->enabled )
+						$this->p->debug->log( 'get_category_parents error: '.$cat_parents->get_error_message() );
+				} else {
+					if ( $this->p->debug->enabled )
+						$this->p->debug->log( 'get_category_parents() = "'.$cat_parents.'"' );
+					if ( ! empty( $cat_parents ) ) {
+						$title = $cat_parents;
+						$title = preg_replace( '/\.\.\. '.preg_quote( $separator, '/' ).' /', '... ', $title );
+					}
+				}
+			}
+			return apply_filters( 'wp_title', $title, $separator, 'right' );
 		}
 	}
 }

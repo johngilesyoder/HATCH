@@ -41,12 +41,13 @@ if ( ! class_exists( 'WpssoCheck' ) ) {
 					add_filter( 'jetpack_disable_twitter_cards', '__return_true', 99 );
 				}
 	
-				// disable WordPress SEO opengraph, twitter, publisher, and author meta tags
+				// disable Yoast SEO opengraph, twitter, publisher, and author meta tags
 				if ( function_exists( 'wpseo_init' ) || isset( $this->active_plugins['wordpress-seo/wp-seo.php'] ) ) {
 					global $wpseo_og;
 					if ( is_object( $wpseo_og ) && 
-						( $prio = has_action( 'wpseo_head', array( $wpseo_og, 'opengraph' ) ) ) )
+						( $prio = has_action( 'wpseo_head', array( $wpseo_og, 'opengraph' ) ) ) ) {
 							$ret = remove_action( 'wpseo_head', array( $wpseo_og, 'opengraph' ), $prio );
+					}
 					if ( ! empty( $this->p->options['tc_enable'] ) && $this->aop() ) {
 						global $wpseo_twitter;
 						if ( is_object( $wpseo_twitter ) && 
@@ -65,6 +66,9 @@ if ( ! class_exists( 'WpssoCheck' ) ) {
 						if ( is_object( $wpseo_front ) && 
 							( $prio = has_action( 'wpseo_head', array( $wpseo_front, 'author' ) ) ) )
 								$ret = remove_action( 'wpseo_head', array( $wpseo_front, 'author' ), $prio );
+					}
+					if ( ! empty( $this->p->options['schema_website_json'] ) ) {
+						add_filter( 'wpseo_json_ld_output', '__return_empty_array', 99 );
 					}
 				}
 
@@ -197,30 +201,55 @@ if ( ! class_exists( 'WpssoCheck' ) ) {
 						case 'admin-general':
 						case 'admin-advanced':
 						case 'admin-image-dimensions':
-						case 'admin-postmeta':
+						case 'admin-post':
+						case 'admin-taxonomy':
 						case 'admin-user':
-						case 'util-postmeta':
+						case 'util-post':
+						case 'util-taxonomy':
 						case 'util-user':
 							$ret[$sub]['*'] = $ret[$sub][$id] = true;
 							break;
 						case 'util-language':
 							$chk['optval'] = 'plugin_filter_lang';
 							break;
+						case 'util-restapi':
+							$chk['plugin'] = 'rest-api/plugin.php';
+							break;
+						case 'util-shorten':
+							$chk['optval'] = 'plugin_shortener';
+							break;
 						case 'util-um':
 							$chk['class'] = 'WpssoUm';
 							$chk['plugin'] = 'wpsso-um/wpsso-um.php';
 							break;
 					}
-					if ( ( ! empty( $chk['function'] ) && function_exists( $chk['function'] ) ) || 
-						( ! empty( $chk['class'] ) && class_exists( $chk['class'] ) ) ||
-						( ! empty( $chk['plugin'] ) && isset( $this->active_plugins[$chk['plugin']] ) ) ||
-						( ! empty( $chk['optval'] ) && 
-							! empty( $this->p->options[$chk['optval']] ) && 
-							$this->p->options[$chk['optval']] !== 'none' ) )
+					if ( ! empty( $chk ) ) {
+						if ( isset( $chk['plugin'] ) || isset( $chk['class'] ) || isset( $chk['function'] ) ) {
+							if ( ( ! empty( $chk['plugin'] ) && isset( $this->active_plugins[$chk['plugin']] ) ) ||
+								( ! empty( $chk['class'] ) && class_exists( $chk['class'] ) ) ||
+								( ! empty( $chk['function'] ) && function_exists( $chk['function'] ) ) ) {
+
+								// check if an option value is also required
+								if ( isset( $chk['optval'] ) ) {
+									if ( $this->has_optval( $chk['optval'] ) )
+										$ret[$sub]['*'] = $ret[$sub][$id] = true;
+								} else $ret[$sub]['*'] = $ret[$sub][$id] = true;
+							}
+						} if ( isset( $chk['optval'] ) ) {
+							if ( $this->has_optval( $chk['optval'] ) )
 								$ret[$sub]['*'] = $ret[$sub][$id] = true;
+						}
+					}
 				}
 			}
 			return apply_filters( $this->p->cf['lca'].'_get_avail', $ret );
+		}
+
+		private function has_optval( $opt_name ) { 
+			if ( ! empty( $opt_name ) && 
+				! empty( $this->p->options[$opt_name] ) && 
+					$this->p->options[$opt_name] !== 'none' )
+						return true;
 		}
 
 		public function is_aop( $lca = '' ) { 
@@ -245,54 +274,53 @@ if ( ! class_exists( 'WpssoCheck' ) ) {
 				return;
 
 			$lca = $this->p->cf['lca'];
+			$base = $this->p->cf['plugin'][$lca]['base'];
 			$short = $this->p->cf['plugin'][$lca]['short'];
 			$short_pro = $short.' Pro';
 			$purchase_url = $this->p->cf['plugin'][$lca]['url']['purchase'];
 			$log_pre =  __( 'plugin conflict detected', WPSSO_TEXTDOM ) . ' - ';
 			$err_pre =  __( 'Plugin conflict detected', WPSSO_TEXTDOM ) . ' - ';
+			$user_id = get_current_user_id();
 
 			// PHP
 			if ( empty( $this->p->is_avail['curl'] ) ) {
-				if ( ! empty( $this->p->options['plugin_file_cache_hrs'] ) ) {
+				if ( ! empty( $this->p->options['plugin_shortener'] ) && 
+					$this->p->options['plugin_shortener'] !== 'none' ) {
+
+					$this->p->debug->log( 'url shortening is enabled but curl function is missing' );
+					$this->p->notice->err( sprintf( __( 'URL shortening has been enabled, but PHP\'s <a href="%s" target="_blank">Client URL Library</a> (cURL) is missing.', WPSSO_TEXTDOM ), 'http://ca3.php.net/curl' ).' '.__( 'Please contact your hosting provider to have the missing library installed.', WPSSO_TEXTDOM ) );
+				} elseif ( ! empty( $this->p->options['plugin_file_cache_exp'] ) ) {
 					$this->p->debug->log( 'file caching is enabled but curl function is missing' );
-					$this->p->notice->err( sprintf( __( 'File caching has been enabled, but PHP\'s <a href="%s" target="_blank">Client URL Library</a> (cURL) is missing.', WPSSO_TEXTDOM ), 'http://ca3.php.net/curl' ).' '.__( 'Please contact your hosting provider to have the missing library installed.', WPSSO_TEXTDOM ) );
+					$this->p->notice->err( sprintf( __( 'The file caching feature has been enabled but PHP\'s <a href="%s" target="_blank">Client URL Library</a> (cURL) is missing.', WPSSO_TEXTDOM ), 'http://ca3.php.net/curl' ).' '.__( 'Please contact your hosting provider to have the missing library installed.', WPSSO_TEXTDOM ) );
 				}
 			}
 
-			// WordPress SEO by Yoast
+			// Yoast SEO
 			if ( $this->p->is_avail['seo']['wpseo'] === true ) {
 				$opts = get_option( 'wpseo_social' );
 				if ( ! empty( $opts['opengraph'] ) ) {
 					$this->p->debug->log( $log_pre.'wpseo opengraph meta data option is enabled' );
-					$this->p->notice->err( $err_pre.sprintf( __( 'Please uncheck the \'<em>Add Open Graph meta data</em>\' Facebook option in the <a href="%s">WordPress SEO by Yoast: Social</a> settings.', WPSSO_TEXTDOM ), get_admin_url( null, 'admin.php?page=wpseo_social#top#facebook' ) ) );
+					$this->p->notice->err( $err_pre.sprintf( __( 'Please uncheck the \'<em>Add Open Graph meta data</em>\' Facebook option in the <a href="%s">Yoast SEO: Social</a> settings.', WPSSO_TEXTDOM ), get_admin_url( null, 'admin.php?page=wpseo_social#top#facebook' ) ) );
 				}
 				if ( ! empty( $this->p->options['tc_enable'] ) && $this->aop() && ! empty( $opts['twitter'] ) ) {
 					$this->p->debug->log( $log_pre.'wpseo twitter meta data option is enabled' );
-					$this->p->notice->err( $err_pre.sprintf( __( 'Please uncheck the \'<em>Add Twitter card meta data</em>\' Twitter option in the <a href="%s">WordPress SEO by Yoast: Social</a> settings.', WPSSO_TEXTDOM ), get_admin_url( null, 'admin.php?page=wpseo_social#top#twitterbox' ) ) );
+					$this->p->notice->err( $err_pre.sprintf( __( 'Please uncheck the \'<em>Add Twitter card meta data</em>\' Twitter option in the <a href="%s">Yoast SEO: Social</a> settings.', WPSSO_TEXTDOM ), get_admin_url( null, 'admin.php?page=wpseo_social#top#twitterbox' ) ) );
 				}
 				if ( ! empty( $opts['googleplus'] ) ) {
 					$this->p->debug->log( $log_pre.'wpseo googleplus meta data option is enabled' );
-					$this->p->notice->err( $err_pre.sprintf( __( 'Please uncheck the \'<em>Add Google+ specific post meta data</em>\' Google+ option in the <a href="%s">WordPress SEO by Yoast: Social</a> settings.', WPSSO_TEXTDOM ), get_admin_url( null, 'admin.php?page=wpseo_social#top#google' ) ) );
+					$this->p->notice->err( $err_pre.sprintf( __( 'Please uncheck the \'<em>Add Google+ specific post meta data</em>\' Google+ option in the <a href="%s">Yoast SEO: Social</a> settings.', WPSSO_TEXTDOM ), get_admin_url( null, 'admin.php?page=wpseo_social#top#google' ) ) );
 				}
 				if ( ! empty( $opts['plus-publisher'] ) ) {
 					$this->p->debug->log( $log_pre.'wpseo google plus publisher option is defined' );
-					$this->p->notice->err( $err_pre.sprintf( __( 'Please remove the \'<em>Google Publisher Page</em>\' value entered in the <a href="%s">WordPress SEO by Yoast: Social</a> settings.', WPSSO_TEXTDOM ), get_admin_url( null, 'admin.php?page=wpseo_social#top#google' ) ) );
+					$this->p->notice->err( $err_pre.sprintf( __( 'Please remove the \'<em>Google Publisher Page</em>\' value entered in the <a href="%s">Yoast SEO: Social</a> settings.', WPSSO_TEXTDOM ), get_admin_url( null, 'admin.php?page=wpseo_social#top#google' ) ) );
 				}
 
-				// remove false error messages from WordPress SEO notifications
-				if ( ( $wpseo_notif = get_transient( Yoast_Notification_Center::TRANSIENT_KEY ) ) !== false ) {
-					$lca = $this->p->cf['lca'];
-					$plugin_name = $this->p->cf['plugin'][$lca]['name'];
-					$wpseo_notif = json_decode( $wpseo_notif );
-					if ( ! empty( $wpseo_notif ) ) {
-						foreach ( $wpseo_notif as $num => $msgs ) {
-							if ( $msgs->type == 'error' && strpos( $msgs->message, $plugin_name ) !== false ) {
-								unset( $wpseo_notif[$num] );
-								set_transient( Yoast_Notification_Center::TRANSIENT_KEY,
-									json_encode( $wpseo_notif ) );
-							}
-						}
-					}
+				// disable incorrect error from Yoast SEO notifications
+				$dismissed = get_user_option( 'wpseo_dismissed_conflicts', $user_id );
+				if ( ! is_array( $dismissed['open_graph'] ) ||
+					! in_array( $base, $dismissed['open_graph'] ) ) {
+					$dismissed['open_graph'][] = $base;
+					update_user_option( $user_id, 'wpseo_dismissed_conflicts', $dismissed );
 				}
 			}
 
@@ -323,7 +351,7 @@ if ( ! class_exists( 'WpssoCheck' ) ) {
 			// JetPack Photon
 			if ( $this->p->is_avail['media']['photon'] === true && ! $this->aop() ) {
 				$this->p->debug->log( $log_pre.'jetpack photon is enabled' );
-				$this->p->notice->err( $err_pre.'<strong>'. __( 'JetPack Photon cripples the WordPress image size functions.', WPSSO_TEXTDOM ).'</strong> '.sprintf( __( 'Please <a href="%s">disable JetPack Photon</a> or disable the %s Free version plugin.', WPSSO_TEXTDOM ), get_admin_url( null, 'admin.php?page=jetpack' ), $short ).' '.sprintf( __( 'You may also upgrade to the <a href="%s">%s version</a>, which includes a <a href="%s">module for JetPack Photon</a>.', WPSSO_TEXTDOM ), $purchase_url, $short_pro, 'http://surniaulula.com/codex/plugins/wpsso/notes/modules/jetpack-photon/' ) );
+				$this->p->notice->err( $err_pre.__( '<strong>JetPack\'s Photon module cripples the WordPress image size functions on purpose</strong>.', WPSSO_TEXTDOM ).' '.sprintf( __( 'Please <a href="%s">deactivate the JetPack Photon module</a> or deactivate the %s Free plugin.', WPSSO_TEXTDOM ), get_admin_url( null, 'admin.php?page=jetpack' ), $short ).' '.sprintf( __( 'You may also upgrade to the <a href="%s">%s version</a> which includes an <a href="%s">integration module for JetPack Photon</a> to re-enable image size functions specifically for %s images.', WPSSO_TEXTDOM ), $purchase_url, $short_pro, 'http://wpsso.com/codex/plugins/wpsso/notes/modules/jetpack-photon/', $short ) );
 			}
 
 			/*
@@ -339,7 +367,7 @@ if ( ! class_exists( 'WpssoCheck' ) ) {
 			// WooCommerce
 			if ( class_exists( 'Woocommerce' ) && ! $this->aop() && ! empty( $this->p->options['plugin_filter_content'] ) ) {
 				$this->p->debug->log( $log_pre.'woocommerce shortcode support not available in the admin interface' );
-				$this->p->notice->err( $err_pre.'<strong>'.__( 'WooCommerce does not include shortcode support in the admin interface.', WPSSO_TEXTDOM ).'</strong> '.sprintf( __( 'Please uncheck the \'<em>Apply Content Filters</em>\' option on the <a href="%s">%s Advanced settings page</a>.', WPSSO_TEXTDOM ), $this->p->util->get_admin_url( 'advanced' ), $this->p->cf['menu'] ).' '.sprintf( __( 'You may also upgrade to the <a href="%s">%s version</a>, which includes a <a href="%s">module for WooCommerce</a>.', WPSSO_TEXTDOM ), $purchase_url, $short_pro, 'http://surniaulula.com/codex/plugins/wpsso/notes/modules/woocommerce/' ) );
+				$this->p->notice->err( $err_pre.__( '<strong>WooCommerce does not include shortcode support in the admin interface</strong> (required by WordPress for its content filters).', WPSSO_TEXTDOM ).' '.sprintf( __( 'Please uncheck the \'<em>Apply WordPress Content Filters</em>\' option on the <a href="%s">%s Advanced settings page</a>.', WPSSO_TEXTDOM ), $this->p->util->get_admin_url( 'advanced#sucom-tabset_plugin-tab_content' ), $this->p->cf['menu'] ).' '.sprintf( __( 'You may also upgrade to the <a href="%s">%s version</a> that includes an <a href="%s">integration module specifically for WooCommerce</a> (shortcodes, products, categories, tags, images, etc.).', WPSSO_TEXTDOM ), $purchase_url, $short_pro, 'http://wpsso.com/codex/plugins/wpsso/notes/modules/woocommerce/' ) );
 			}
 
 			// Facebook

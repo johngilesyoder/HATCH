@@ -12,74 +12,150 @@ if ( ! class_exists( 'WpssoUser' ) ) {
 
 	/*
 	 * This class is extended by gpl/util/user.php or pro/util/user.php
-	 * and the class object is created as $this->p->mods['util']['user']
+	 * and the class object is created as $this->p->mods['util']['user'].
 	 */
-	class WpssoUser {
+	class WpssoUser extends WpssoMeta {
 
-		protected $p;
-		protected $form;
-		protected $header_tags = array();
-		protected $post_info = array();
-
-		protected $opts = array();
-		protected $defs = array();
 		protected static $pref = array();
 
 		protected function add_actions() {
 			add_filter( 'user_contactmethods', array( &$this, 'add_contact_methods' ), 20, 2 );
 
 			if ( is_admin() ) {
+				/**
+				 * Hook a minimum number of admin actions to maximize performance.
+				 * The user_id argument is always present when we're editing a user,
+				 * but missing when viewing our own profile page.
+				 */
+
+				// common to the show profile and user editing pages
 				add_action( 'admin_init', array( &$this, 'add_metaboxes' ) );
-				add_action( 'admin_head', array( &$this, 'set_header_tags' ), 100 );
+				add_action( 'admin_head', array( &$this, 'set_head_meta_tags' ), 100 );
+				add_action( 'show_user_profile', array( &$this, 'show_metaboxes' ), 20 );	// your profile
 
-				add_action( 'show_user_profile', array( &$this, 'show_metaboxes' ), 20 );
+				add_filter( 'manage_users_columns', array( $this, 'add_column_headings' ), 10, 1 );
+				add_filter( 'manage_users_custom_column', array( $this, 'get_user_column_content',), 10, 3 );
+
+				$this->p->util->add_plugin_filters( $this, array( 
+					'og_image_user_column_content' => 3,
+					'og_desc_user_column_content' => 3,
+				) );
+
+				// exit here if not a user page, or showing the profile page
+				$user_id = SucomUtil::get_req_val( 'user_id' );
+				if ( empty( $user_id ) )
+					return;
+
+				// hooks for user and profile editing
 				add_action( 'edit_user_profile', array( &$this, 'show_metaboxes' ), 20 );
-
 				add_action( 'edit_user_profile_update', array( &$this, 'sanitize_contact_methods' ), 5 );
 				add_action( 'edit_user_profile_update', array( &$this, 'save_options' ), WPSSO_META_SAVE_PRIORITY );
-				add_action( 'edit_user_profile_update', array( &$this, 'flush_cache' ), WPSSO_META_CACHE_PRIORITY );
-
+				add_action( 'edit_user_profile_update', array( &$this, 'clear_cache' ), WPSSO_META_CACHE_PRIORITY );
 				add_action( 'personal_options_update', array( &$this, 'sanitize_contact_methods' ), 5 ); 
 				add_action( 'personal_options_update', array( &$this, 'save_options' ), WPSSO_META_SAVE_PRIORITY ); 
-				add_action( 'personal_options_update', array( &$this, 'flush_cache' ), WPSSO_META_CACHE_PRIORITY ); 
+				add_action( 'personal_options_update', array( &$this, 'clear_cache' ), WPSSO_META_CACHE_PRIORITY ); 
 			}
 		}
 
-		public function add_metaboxes() {
-			$add_metabox = empty( $this->p->options[ 'plugin_add_to_user' ] ) ? false : true;
+		public function get_user_column_content( $value, $column_name, $id ) {
+			return $this->get_mod_column_content( $value, $column_name, $id, 'user' );
+		}
 
-			if ( apply_filters( $this->p->cf['lca'].'_add_metabox_usermeta', $add_metabox ) === true )
-				add_meta_box( WPSSO_META_NAME, 'Social Settings', array( &$this, 'show_metabox_usermeta' ), 
-					'user', 'normal', 'high' );
+		public function filter_og_image_user_column_content( $value, $column_name, $id ) {
+			if ( ! empty( $value ) )
+				return $value;
+
+			// use the open graph image dimensions to reject images that are too small
+			$size_name = $this->p->cf['lca'].'-opengraph';
+			$check_dupes = false;	// using first image we find, so dupe checking is useless
+			$force_regen = false;
+			$meta_pre = 'og';
+
+			if ( ! empty( $this->p->options['og_def_img_on_author'] ) )
+				$og_image = $this->p->media->get_default_image( 1, $size_name,
+					$check_dupes, $force_regen );
+			else {
+				$og_image = $this->get_og_image( 1, $size_name, $id,
+					$check_dupes, $force_regen, $meta_pre );
+				if ( empty( $og_image ) )
+					$og_image = $this->p->media->get_default_image( 1, $size_name,
+						$check_dupes, $force_regen );
+			}
+
+			if ( ! empty( $og_image ) && is_array( $og_image ) ) {
+				$image = reset( $og_image );
+				if ( ! empty( $image['og:image'] ) )
+					$value = $this->get_og_image_column_html( $image );
+			}
+
+			return $value;
+		}
+
+		public function filter_og_desc_user_column_content( $value, $column_name, $id ) {
+			if ( ! empty( $value ) )
+				return $value;
+
+			$author = get_userdata( $id );
+			if ( empty( $author->ID ) )
+				return $value;
+
+			$value = $this->p->util->get_mod_options( 'user', $author->ID, 'og_desc' );
+
+			if ( empty( $value ) ) {
+				if ( ! empty( $author->description ) )
+					$value = $author->description;
+				elseif ( ! empty( $author->display_name ) )
+					$value = sprintf( 'Authored by %s', $author->display_name );
+			}
+
+			return $value;
 		}
 
 		// hooked into the admin_head action
-		public function set_header_tags() {
-			if ( ! empty( $this->header_tags ) )	// only set header tags once
+		public function set_head_meta_tags() {
+			if ( ! empty( $this->head_meta_tags ) )	// only set header tags once
 				return;
+
+			if ( $this->p->debug->enabled )
+				$this->p->debug->mark();
 
 			$screen = get_current_screen();
 			if ( $this->p->debug->enabled )
 				$this->p->debug->log( 'screen id = '.$screen->id );
+
 			switch ( $screen->id ) {
 				case 'user-edit':
 				case 'profile':
+					$user_id = $this->p->util->get_author_object( 'id' );
 					$add_metabox = empty( $this->p->options[ 'plugin_add_to_user' ] ) ? false : true;
-					if ( apply_filters( $this->p->cf['lca'].'_add_metabox_usermeta', $add_metabox, $screen->id ) === true ) {
+					if ( apply_filters( $this->p->cf['lca'].'_add_metabox_user', 
+						$add_metabox, $user_id, $screen->id ) === true ) {
 
-						$this->p->util->add_plugin_image_sizes();
-						do_action( $this->p->cf['lca'].'_admin_usermeta_header', $screen->id );
-						$this->header_tags = $this->p->head->get_header_array( false );
-						$this->post_info = $this->p->head->extract_post_info( $this->header_tags );
+						do_action( $this->p->cf['lca'].'_admin_user_header', $user_id, $screen->id );
 
-						if ( ! empty( $this->p->options['plugin_check_head'] ) &&
-							empty( $this->post_info['og_image']['og:image'] ) )
-								$this->p->notice->err( 'A Facebook / Open Graph image meta tag for this webpage could not be generated. Facebook and other social websites require at least one image meta tag to render their shared content correctly.', true );
+						// use_post is false since this isn't a post
+						// read_cache is false to generate notices etc.
+						$this->head_meta_tags = $this->p->head->get_header_array( false, false );
+						$this->head_info = $this->p->head->extract_head_info( $this->head_meta_tags );
+
+						if ( empty( $this->head_info['og:image'] ) )
+							$this->p->notice->err( 'An Open Graph image meta tag could not be generated for this webpage. Facebook and other social websites require at least one Open Graph image meta tag to render their shared content correctly.' );
 					}
-					if ( $this->p->debug->enabled )
-						$this->p->debug->show_html( null, 'debug log' );
 					break;
 			}
+		}
+
+		public function add_metaboxes() {
+			$user_id = $this->p->util->get_author_object( 'id' );
+			if ( ! current_user_can( 'edit_user', $user_id ) ) {
+				if ( $this->p->debug->enabled )
+					$this->p->debug->log( 'insufficient privileges to add metabox for user ID '.$user_id );
+				return;
+			}
+			$add_metabox = empty( $this->p->options[ 'plugin_add_to_user' ] ) ? false : true;
+			if ( apply_filters( $this->p->cf['lca'].'_add_metabox_user', $add_metabox ) === true )
+				add_meta_box( WPSSO_META_NAME, 'Social Settings', array( &$this, 'show_metabox_user' ), 
+					'user', 'normal', 'high' );
 		}
 
 		public function show_metaboxes( $user ) {
@@ -90,63 +166,25 @@ if ( ! class_exists( 'WpssoUser' ) ) {
 			echo '</div>';
 		}
 
-		public function show_metabox_usermeta( $user ) {
+		public function show_metabox_user( $user ) {
 			$opts = $this->get_options( $user->ID );
 			$def_opts = $this->get_defaults();
-			$screen = get_current_screen();
-			$this->post_info['ptn'] = ucfirst( $screen->id );
-			$this->post_info['id'] = false;
+			$this->head_info['post_id'] = false;
 
 			$this->form = new SucomForm( $this->p, WPSSO_META_NAME, $opts, $def_opts );
 			wp_nonce_field( $this->get_nonce(), WPSSO_NONCE );
 
 			$metabox = 'user';
-			$tabs = apply_filters( $this->p->cf['lca'].'_'.$metabox.'_tabs', 
-				array( 
-					'header' => 'Title / Descriptions', 
-					'media' => 'Priority Media', 
-					'preview' => 'Social Preview',
-					'tags' => 'Head Tags',
-					'validate' => 'Validate'
-				)
-			);
-
+			$tabs = apply_filters( $this->p->cf['lca'].'_'.$metabox.'_tabs', $this->default_tabs );
 			if ( empty( $this->p->is_avail['metatags'] ) )
 				unset( $tabs['tags'] );
 
 			$rows = array();
 			foreach ( $tabs as $key => $title )
-				$rows[$key] = array_merge( $this->get_rows( $metabox, $key, $this->post_info ), 
+				$rows[$key] = array_merge( $this->get_rows( $metabox, $key, $this->head_info ), 
 					apply_filters( $this->p->cf['lca'].'_'.$metabox.'_'.$key.'_rows', 
-						array(), $this->form, $this->post_info ) );
+						array(), $this->form, $this->head_info ) );
 			$this->p->util->do_tabs( $metabox, $tabs, $rows );
-		}
-
-		protected function get_rows( $metabox, $key, &$post_info ) {
-			$rows = array();
-			switch ( $metabox.'-'.$key ) {
-				case 'user-preview':
-					$rows = $this->p->mods['util']['postmeta']->get_rows_social_preview( $this->form, $post_info );
-					break;
-
-				case 'user-validate':
-					$rows = $this->p->mods['util']['postmeta']->get_rows_validation_links( $this->form, $post_info );
-					break; 
-
-				case 'user-tags':	
-					foreach ( $this->header_tags as $m ) {
-						if ( ! empty( $m[1] ) )
-							$rows[] = '<th class="xshort">'.$m[1].'</th>'.
-							'<th class="xshort">'.$m[2].'</th>'.
-							'<td class="short">'.( isset( $m[6] ) ? '<!-- '.$m[6].' -->' : '' ).$m[3].'</td>'.
-							'<th class="xshort">'.$m[4].'</th>'.
-							'<td class="wide">'.( strpos( $m[5], 'http' ) === 0 ? 
-								'<a href="'.$m[5].'">'.$m[5].'</a>' : $m[5] ).'</td>';
-					}
-					sort( $rows );
-					break; 
-			}
-			return $rows;
 		}
 
 		public function get_contact_fields( $fields = array() ) { 
@@ -206,12 +244,18 @@ if ( ! class_exists( 'WpssoUser' ) ) {
 
 			foreach ( $this->p->cf['opt']['pre'] as $id => $pre ) {
 				$cm_opt = 'plugin_cm_'.$pre.'_';
-				// not all social websites have a contact fields, so check
+				// not all social websites have contact fields, so check
 				if ( array_key_exists( $cm_opt.'name', $this->p->options ) ) {
+
 					$enabled = $this->p->options[$cm_opt.'enabled'];
 					$name = $this->p->options[$cm_opt.'name'];
 					$label = $this->p->options[$cm_opt.'label'];
-					if ( ! empty( $enabled ) && ! empty( $name ) && ! empty( $label ) ) {
+
+					if ( isset( $_POST[$name] ) && 
+						! empty( $enabled ) && 
+						! empty( $name ) && 
+						! empty( $label ) ) {
+
 						// sanitize values only for those enabled contact methods
 						$val = wp_filter_nohtml_kses( $_POST[$name] );
 						if ( ! empty( $val ) ) {
@@ -266,19 +310,19 @@ if ( ! class_exists( 'WpssoUser' ) ) {
 
 			$cm = self::get_user_id_contact_methods( $author_id );
 
-			$og_image = $this->p->mods['util']['postmeta']->get_og_image( 1, $size_name, $author_id, false );
-			if ( count( $og_image ) > 0 ) {
+			$og_image = $this->get_og_image( 1, $size_name, $author_id, false );
+			if ( ! empty( $og_image ) ) {
 				$image = reset( $og_image );
 				$image_url = $image['og:image'];
 			} else $image_url = '';
 
 			$json_script = '<script type="application/ld+json">{
-	"@context" : "http://schema.org",
-	"@type" : "Person",
-	"name" : "'.$this->get_author_name( $author_id, 'fullname' ).'",
-	"url" : "'.$website_url.'",
-	"image" : "'.$image_url.'",
-	"sameAs" : ['."\n";
+	"@context":"http://schema.org",
+	"@type":"Person",
+	"name":"'.$this->get_author_name( $author_id, 'fullname' ).'",
+	"url":"'.$website_url.'",
+	"image":"'.$image_url.'",
+	"sameAs":['."\n";
 			foreach ( $cm as $id => $label ) {
 				$sameAs = trim( get_the_author_meta( $id, $author_id ) );
 				if ( empty( $sameAs ) )
@@ -429,6 +473,8 @@ if ( ! class_exists( 'WpssoUser' ) ) {
 		}
 
 		static function delete_metabox_prefs( $user_id = false ) {
+			$user_id = $user_id === false ? 
+				get_current_user_id() : $user_id;
 			$cf = WpssoConfig::get_config( false, true );
 
 			$parent_slug = 'options-general.php';
@@ -455,45 +501,6 @@ if ( ! class_exists( 'WpssoUser' ) ) {
 			}
 		}
 
-		public function get_og_video( $num = 0, $user_id, $check_dupes = true, $meta_pre = 'og' ) {
-			if ( $this->p->debug->enabled )
-				$this->p->debug->log( __METHOD__.' not implemented in free version' );
-			return array();
-		}
-
-		public function get_og_image( $num = 0, $size_name = 'thumbnail', $user_id, $check_dupes = true, $force_regen = false, $meta_pre = 'og' ) {
-			if ( $this->p->debug->enabled )
-				$this->p->debug->log( __METHOD__.' not implemented in free version' );
-			return array();
-		}
-
-                public function reset_options( $user_id ) {
-			if ( $this->p->debug->enabled )
-				$this->p->debug->log( __METHOD__.' not implemented in free version' );
-		}
-
-		public function get_options( $user_id = false, $idx = false ) {
-			if ( $this->p->debug->enabled )
-				$this->p->debug->log( __METHOD__.' not implemented in free version' );
-			if ( $idx !== false ) 
-				return false;
-			else return array();
-		}
-
-		public function get_defaults( $idx = false ) {
-			if ( $this->p->debug->enabled )
-				$this->p->debug->log( __METHOD__.' not implemented in free version' );
-			if ( $idx !== false ) 
-				return false;
-			else return array();
-		}
-
-		public function save_options( $user_id = false ) {
-			if ( $this->p->debug->enabled )
-				$this->p->debug->log( __METHOD__.' not implemented in free version' );
-			return $user_id;
-		}
-
 		public static function save_pref( $prefs, $user_id = false ) {
 			$user_id = $user_id === false ? 
 				get_current_user_id() : $user_id;
@@ -512,15 +519,6 @@ if ( ! class_exists( 'WpssoUser' ) ) {
 				update_user_meta( $user_id, WPSSO_PREF_NAME, $new_prefs );
 				return true;
 			} else return false;
-		}
-
-		public static function show_opts( $test = false, $user_id = false ) {
-			$user_id = $user_id === false ? 
-				get_current_user_id() : $user_id;
-			$value = self::get_pref( 'show_opts' );
-			if ( $test !== false )
-				return $test === $value ? true : false;
-			else return $value;
 		}
 
 		public static function get_pref( $idx = false, $user_id = false ) {
@@ -544,29 +542,50 @@ if ( ! class_exists( 'WpssoUser' ) ) {
 					return self::$pref[$user_id][$idx];
 				else return false;
 			} else return self::$pref[$user_id];
-			return false;	// just in case
 		}
 
-		public function flush_cache( $user_id ) {
-			$lang = SucomUtil::get_locale();
+		public static function is_show_all( $user_id = false ) {
+			return $this->show_opts( 'all', $user_id );
+		}
+
+		public static function get_show_val( $user_id = false ) {
+			return $this->show_opts( false, $user_id );
+		}
+
+		// returns the value for show_opts, or return true/false if a value to compare is provided
+		public static function show_opts( $compare = false, $user_id = false ) {
+			$user_id = $user_id === false ? 
+				get_current_user_id() : $user_id;
+			$value = self::get_pref( 'show_opts' );
+			if ( $compare !== false )
+				return $compare === $value ? true : false;
+			else return $value;
+		}
+
+		public function clear_cache( $user_id, $rel_id = false ) {
 			$post_id = 0;
+			$lca = $this->p->cf['lca'];
+			$lang = SucomUtil::get_locale();
 			$sharing_url = $this->p->util->get_sharing_url( false );
 			$transients = array(
 				'WpssoHead::get_header_array' => array( 
 					'lang:'.$lang.'_post:'.$post_id.'_url:'.$sharing_url,
 					'lang:'.$lang.'_post:'.$post_id.'_url:'.$sharing_url.'_crawler:pinterest',
 				),
+				'WpssoMeta::get_mod_column_content' => array( 
+					'mod:user_lang:'.$lang.'_id:'.$user_id.'_column:'.$lca.'_og_image',
+					'mod:user_lang:'.$lang.'_id:'.$user_id.'_column:'.$lca.'_og_desc',
+				),
 			);
 			$transients = apply_filters( $this->p->cf['lca'].'_user_cache_transients', 
-				$transients, $post_id, $lang, $sharing_url );
-			$deleted = $this->p->util->flush_cache_objects( $transients );
+				$transients, $user_id, $lang, $sharing_url );
+
+			$deleted = $this->p->util->clear_cache_objects( $transients );
+
 			if ( ! empty( $this->p->options['plugin_cache_info'] ) && $deleted > 0 )
 				$this->p->notice->inf( $deleted.' items removed from the WordPress object and transient caches.', true );
-			return $user_id;
-		}
 
-		protected function get_nonce() {
-			return ( defined( 'NONCE_KEY' ) ? NONCE_KEY : '' ).plugin_basename( __FILE__ );
+			return $user_id;
 		}
 	}
 }

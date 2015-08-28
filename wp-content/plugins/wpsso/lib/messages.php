@@ -22,9 +22,9 @@ if ( ! class_exists( 'WpssoMessages' ) ) {
 		public function get( $idx = false, $atts = null, $class = '' ) {
 			$text = is_array( $atts ) || is_object( $atts ) ? '' : $atts;
 			$idx = sanitize_title_with_dashes( $idx );
+
 			$lca = isset( $atts['lca'] ) ?
 				$atts['lca'] : $this->p->cf['lca'];
-			$url = $this->p->cf['plugin'][$lca]['url'];
 
 			$short = isset( $atts['short'] ) ?
 				$atts['short'] :
@@ -35,6 +35,9 @@ if ( ! class_exists( 'WpssoMessages' ) ) {
 				$atts['name'] :
 				$this->p->cf['plugin'][$lca]['name'];
 			$name_pro = $name.' Pro';
+
+			$url = isset( $this->p->cf['plugin'][$lca]['url'] ) ?
+				$this->p->cf['plugin'][$lca]['url'] : array();
 
 			if ( strpos( $idx, 'tooltip-' ) !== false && empty( $class ) )
 				$class = $this->p->cf['form']['tooltip_class'];	// default tooltip class
@@ -90,6 +93,12 @@ if ( ! class_exists( 'WpssoMessages' ) ) {
 						case 'tooltip-side-youtube-video-playlist-api':
 							$text = 'If the embedded Youtube Videos and Playlists option in the '.$this->p->util->get_admin_url( 'advanced#sucom-tabset_plugin-tab_content', 'Advanced settings' ).' page is checked, '.$short_pro.' will load an integration module for YouTube to detect embedded YouTube videos and playlists, and retrieve video information using Youtube\'s XML and oEmbed APIs (media dimentions, preview image, etc).';
 							break;
+						case 'tooltip-side-url-shortening':
+							$text = 'When a Preferred URL Shortening Service has been selected on the '.$this->p->util->get_admin_url( 'advanced#sucom-tabset_plugin-tab_apikeys', 'Advanced settings' ).' page, '.$short_pro.' will load an integration module for various '.$short.' plugin filters and/or extensions that may need to shorten URLs.';
+							break;
+						case 'tooltip-side-wp-rest-api-routes':
+							$text = $short_pro.' loads a module to extend the WordPress REST API routes.';
+							break;
 						default:
 							$text = apply_filters( $lca.'_tooltip_side', $text, $idx );
 							break;
@@ -97,28 +106,45 @@ if ( ! class_exists( 'WpssoMessages' ) ) {
 					break;
 
 				/*
-				 * User Meta settings
+				 * Generic Meta settings
 				 */
-				case ( strpos( $idx, 'tooltip-user-' ) !== false ? true : false ):
-					$ptn = empty( $atts['ptn'] ) ? 'Post' : $atts['ptn'];
+				case ( strpos( $idx, 'tooltip-meta-' ) !== false ? true : false ):
 					switch ( $idx ) {
-						 case 'tooltip-user-og_title':
+						 case 'tooltip-meta-og_title':
 							$text = 'A custom title for the Facebook / Open Graph, Pinterest Rich Pin, Twitter Card meta tags (all Twitter Card formats), and possibly the Pinterest, Tumblr, and Twitter sharing captions / texts, depending on some option settings.';
 						 	break;
-						 case 'tooltip-user-og_desc':
+						 case 'tooltip-meta-og_desc':
 							$text = 'A custom description for the Facebook / Open Graph, Pinterest Rich Pin, and fallback description for other meta tags'.( empty( $this->p->is_avail['ssb'] ) ? '' : ', along with some social sharing buttons' ).'. '.'The default description value is based on the biographical info, if one is available. Update and save this description to change the default value of all other description fields.';
 						 	break;
-						 case 'tooltip-user-seo_desc':
+						 case 'tooltip-meta-seo_desc':
 							$text = 'A custom description for the Google Search / SEO description meta tag.';
 						 	break;
-						 case 'tooltip-user-schema_desc':
+						 case 'tooltip-meta-schema_desc':
 							$text = 'A custom description for the Google+ schema description meta tag.';
 						 	break;
-						 case 'tooltip-user-tc_desc':
+						 case 'tooltip-meta-tc_desc':
 							$text = 'A custom description for the Twitter Card description meta tag (all Twitter Card formats).';
 						 	break;
-						 case 'tooltip-user-sharing_url':
+						 case 'tooltip-meta-sharing_url':
 							$text = 'A custom sharing URL used in the Facebook / Open Graph, Pinterest Rich Pin meta tags and social sharing buttons. The default sharing URL may be influenced by settings from supported SEO plugins. Please make sure any custom URL you enter here is functional and redirects correctly.';
+						 	break;
+						 case 'tooltip-meta-og_img_id':
+							$text = 'A custom Image ID to include first in the Facebook / Open Graph, Pinterest Rich Pin, and \'Large Image Summary\' Twitter Card meta tags,'.( empty( $this->p->is_avail['ssb'] ) ? '' : ' along with the Pinterest and Tumblr social sharing buttons,' ).' before any featured, attached, or content images.';
+						 	break;
+						 case 'tooltip-meta-og_img_url':
+							$text = 'A custom image URL (instead of an Image ID) to include first in the Facebook / Open Graph, and \'Large Image Summary\' Twitter Card meta tags. Please make sure your custom image is large enough, or it may be ignored by the social website(s). Facebook recommends an image size of 1200x630 (for retina and high-PPI displays), 600x315 as a minimum, and will ignore any images less than 200x200 (1200x1200 is recommended). <em>This field is disabled if an Image ID has been specified</em>.';
+						 	break;
+						 case 'tooltip-meta-og_vid_embed':
+							$text = 'Custom Video Embed HTML to use for the first in the Facebook / Open Graph, Pinterest Rich Pin, and \'Player\' Twitter Card meta tags. If the URL is from Youtube, Vimeo or Wistia, an API connection will be made to retrieve the preferred sharing URL, video dimensions, and video preview image. The '.$this->p->util->get_admin_url( 'advanced#sucom-tabset_plugin-tab_social', 'Video Embed HTML Custom Field' ).' advanced option also allows a 3rd-party theme or plugin to provide custom Video Embed HTML for this option.';
+						 	break;
+						 case 'tooltip-meta-og_vid_url':
+							$text = 'A custom Video URL to include first in the Facebook / Open Graph, Pinterest Rich Pin, and \'Player\' Twitter Card meta tags. If the URL is from Youtube, Vimeo or Wistia, an API connection will be made to retrieve the preferred sharing URL, video dimensions, and video preview image. The '.$this->p->util->get_admin_url( 'advanced#sucom-tabset_plugin-tab_social', 'Video URL Custom Field' ).' advanced option allows a 3rd-party theme or plugin to provide a custom Video URL value for this option.';
+						 	break;
+						 case 'tooltip-meta-rp_img_id':
+							$text = 'A custom Image ID to include first when the Pinterest crawler is detected.';
+						 	break;
+						 case 'tooltip-meta-rp_img_url':
+							$text = 'A custom image URL (instead of an Image ID) to include first when the Pinterest crawler is detected. <em>This field is disabled if an Image ID has been specified</em>.';
 						 	break;
 						default:
 							$text = apply_filters( $lca.'_tooltip_user', $text, $idx, $atts );
@@ -129,59 +155,44 @@ if ( ! class_exists( 'WpssoMessages' ) ) {
 				/*
 				 * Post Meta settings
 				 */
-				case ( strpos( $idx, 'tooltip-postmeta-' ) !== false ? true : false ):
+				case ( strpos( $idx, 'tooltip-post-' ) !== false ? true : false ):
 					$ptn = empty( $atts['ptn'] ) ? 'Post' : $atts['ptn'];
 					switch ( $idx ) {
-						 case 'tooltip-postmeta-social-preview':
+						 case 'tooltip-post-social-preview':
 						 	$text = 'The Open Graph social preview shows an <em>example</em> of a typical share on a social website. Images are displayed using Facebooks suggested minimum image dimensions of 600x315px. Actual shares on Facebook and other social networks may look significantly different than this <em>example</em> (depending on the viewing platform resolution, orientation, etc.).';
 						 	break;
-						 case 'tooltip-postmeta-og_art_section':
+						 case 'tooltip-post-og_art_section':
 							$text = 'A custom topic, different from the default Article Topic selected in the General settings. The Facebook / Open Graph \'og:type\' meta tag must be an \'article\' to enable this option. The value will be used in the \'article:section\' Facebook / Open Graph and Pinterest Rich Pin meta tags. Select \'[none]\' if you prefer to exclude the \'article:section\' meta tag.';
 						 	break;
-						 case 'tooltip-postmeta-og_title':
+						 case 'tooltip-post-og_title':
 							$text = 'A custom title for the Facebook / Open Graph, Pinterest Rich Pin, Twitter Card meta tags (all Twitter Card formats), and possibly the Pinterest, Tumblr, and Twitter sharing caption / text, depending on some option settings. The default title value is refreshed when the (draft or published) '.$ptn.' is saved.';
 						 	break;
-						 case 'tooltip-postmeta-og_desc':
+						 case 'tooltip-post-og_desc':
 							$text = 'A custom description for the Facebook / Open Graph, Pinterest Rich Pin, and fallback description for other meta tags'.( empty( $this->p->is_avail['ssb'] ) ? '' : ', along with some social sharing buttons' ).'. The default description value is based on the content, or excerpt if one is available, and is refreshed when the (draft or published) '.$ptn.' is saved. Update and save this description to change the default value of all other description fields.';
 						 	break;
-						 case 'tooltip-postmeta-seo_desc':
+						 case 'tooltip-post-seo_desc':
 							$text = 'A custom description for the Google Search / SEO description meta tag. The default description value is refreshed when the '.$ptn.' is saved.';
 						 	break;
-						 case 'tooltip-postmeta-schema_desc':
+						 case 'tooltip-post-schema_desc':
 							$text = 'A custom description for the Google+ / Schema description meta tag. The default description value is refreshed when the '.$ptn.' is saved.';
 						 	break;
-						 case 'tooltip-postmeta-tc_desc':
+						 case 'tooltip-post-tc_desc':
 							$text = 'A custom description for the Twitter Card description meta tag (all Twitter Card formats). The default description value is refreshed when the '.$ptn.' is saved.';
 						 	break;
-						 case 'tooltip-postmeta-og_img_id':
-							$text = 'A custom Image ID to include first in the Facebook / Open Graph, Pinterest Rich Pin, and \'Large Image Summary\' Twitter Card meta tags, '.( empty( $this->p->is_avail['ssb'] ) ? '' : 'along with the Pinterest and Tumblr social sharing buttons, ' ).'before any featured, attached, or content images.';
-						 	break;
-						 case 'tooltip-postmeta-og_img_url':
-							$text = 'A custom image URL (instead of an Image ID) to include first in the Facebook / Open Graph, Pinterest Rich Pin, and \'Large Image Summary\' Twitter Card meta tags. Please make sure your custom image is large enough, or it may be ignored by the social website(s). Facebook recommends an image size of 1200x630, 600x315 as a minimum, and will ignore any images less than 200x200 (1200x1200 is recommended). <em>This field is disabled if an Image ID has been specified</em>.';
-						 	break;
-						 case 'tooltip-postmeta-og_img_max':
+						 case 'tooltip-post-og_img_max':
 							$text = 'The maximum number of images to include in the Facebook / Open Graph meta tags for this '.$ptn.'.';
 						 	break;
-						 case 'tooltip-postmeta-og_vid_url':
-							$text = 'A custom Video URL to include first in the Facebook / Open Graph, Pinterest Rich Pin, and \'Player\' Twitter Card meta tags. If the URL is from Youtube, Vimeo or Wistia, an API connection will be made to retrieve the preferred sharing URL, video dimensions, and video preview image. The '.$this->p->util->get_admin_url( 'advanced#sucom-tabset_plugin-tab_social', 'Video URL Custom Field' ).' Advanced option allows a 3rd-party theme or plugin to provide a custom Video URL value for this option.';
-						 	break;
-						 case 'tooltip-postmeta-og_vid_embed':
-							$text = 'Custom Video Embed HTML to use for the first in the Facebook / Open Graph, Pinterest Rich Pin, and \'Player\' Twitter Card meta tags. If the URL is from Youtube, Vimeo or Wistia, an API connection will be made to retrieve the preferred sharing URL, video dimensions, and video preview image. The '.$this->p->util->get_admin_url( 'advanced#sucom-tabset_plugin-tab_social', 'Video Embed HTML Custom Field' ).' Advanced option also allows a 3rd-party theme or plugin to provide custom Video Embed HTML for this option.';
-						 	break;
-						 case 'tooltip-postmeta-og_vid_max':
+						 case 'tooltip-post-og_vid_max':
 							$text = 'The maximum number of embedded videos to include in the Facebook / Open Graph meta tags for this '.$ptn.'.';
 						 	break;
-						 case 'tooltip-postmeta-sharing_url':
+						 case 'tooltip-post-og_vid_prev_img':
+							$text = 'When video preview images are enabled and available, they are included in webpage meta tags before any custom, featured, attached, etc. images.';
+						 	break;
+						 case 'tooltip-post-sharing_url':
 							$text = 'A custom sharing URL used in the Facebook / Open Graph, Pinterest Rich Pin meta tags and social sharing buttons. The default sharing URL may be influenced by settings from supported SEO plugins. Please make sure any custom URL you enter here is functional and redirects correctly.';
 						 	break;
-						 case 'tooltip-postmeta-rp_img_id':
-							$text = 'A custom Image ID to include first when the Pinterest crawler is detected.';
-						 	break;
-						 case 'tooltip-postmeta-rp_img_url':
-							$text = 'A custom image URL (instead of an Image ID) to include first when the Pinterest crawler is detected. <em>This field is disabled if an Image ID has been specified</em>.';
-						 	break;
 						default:
-							$text = apply_filters( $lca.'_tooltip_postmeta', $text, $idx, $atts );
+							$text = apply_filters( $lca.'_tooltip_post', $text, $idx, $atts );
 							break;
 					}
 					break;
@@ -195,7 +206,7 @@ if ( ! class_exists( 'WpssoMessages' ) ) {
 						 * 'Priority Media' settings
 						 */
 						case 'tooltip-og_img_dimensions':
-							$text = 'The image dimensions used in the Facebook / Open Graph meta tags (defaults is '.$this->p->opt->get_defaults( 'og_img_width' ).'x'.$this->p->opt->get_defaults( 'og_img_height' ).' '.( $this->p->opt->get_defaults( 'og_img_crop' ) == 0 ? 'un' : '' ).'cropped). Facebook recommends 1200x630 cropped, and 600x315 as a minimum. <strong>1200x1200 cropped provides the greatest compatibility with all social websites (Facebook, Google+, LinkedIn, etc.)</strong>. Note that original images in the WordPress Media Library and/or NextGEN Gallery must be larger than your chosen image dimensions.';
+							$text = 'The image dimensions used in the Facebook / Open Graph meta tags (defaults is '.$this->p->opt->get_defaults( 'og_img_width' ).'x'.$this->p->opt->get_defaults( 'og_img_height' ).' '.( $this->p->opt->get_defaults( 'og_img_crop' ) == 0 ? 'un' : '' ).'cropped). Facebook recommends 1200x630 cropped (for retina and high-PPI displays), and 600x315 as a minimum. <strong>1200x1200 cropped provides the greatest compatibility with all social websites (Facebook, Google+, LinkedIn, etc.)</strong>. Note that original images in the WordPress Media Library and/or NextGEN Gallery must be larger than your chosen image dimensions.';
 							break;
 						case 'tooltip-og_def_img_id':
 							$text = 'The ID number and media location of your default image (example: 123). The Default Image ID will be used as a <strong>fallback for Posts and Pages that do not have any images</strong> <em>featured</em>, <em>attached</em>, or suitable &lt;img/&gt; HTML tags in their content. The ID number for images in the WordPress Media Library can be found in the URL when editing an image (post=123 in the URL, for example). The NextGEN Gallery image IDs are easier to find -- it\'s the number in the first column when viewing a Gallery.';
@@ -231,13 +242,16 @@ if ( ! class_exists( 'WpssoMessages' ) ) {
 							$text = 'The maximum number of images to list in the Facebook / Open Graph and Pinterest Rich Pin meta tags -- this includes the <em>featured</em> or <em>attached</em> images, and any images found in the Post or Page content. If you select \'0\', then no images will be listed in the facebook / Open Graph and Pinterest Rich Pin meta tags (<strong>not recommended</strong>). If no images are listed in your meta tags, then social websites may choose an unsuitable image from your webpage (including headers, sidebars, etc.).';
 							break;
 						case 'tooltip-og_vid_max':
-							$text = 'The maximum number of videos, found in the Post or Page content, to include in the Facebook / Open Graph and Pinterest Rich Pin meta tags. If you select \'0\', then no videos will be listed in the facebook / Open Graph and Pinterest Rich Pin meta tags.';
-							break;
-						case 'tooltip-og_vid_prev_img':
-							$text = 'Include video preview images in the meta tags (default is checked).';
+							$text = 'The maximum number of videos, found in the Post or Page content, to include in the Facebook / Open Graph and Pinterest Rich Pin meta tags. If you select \'0\', then no videos will be listed in the Facebook / Open Graph and Pinterest Rich Pin meta tags.';
 							break;
 						case 'tooltip-og_vid_https':
 							$text = 'Use an HTTPS connection whenever possible to retrieve information about videos from YouTube, Vimeo, Wistia, etc. (default is checked).';
+							break;
+						case 'tooltip-og_vid_prev_img':
+							$text = 'Include video preview images in the webpage meta tags (default is unchecked). When video preview images are enabled and available, they are included before any custom, featured, attached, etc. images.';
+							break;
+						case 'tooltip-og_vid_html_type':
+							$text = 'Include additional Open Graph meta tags for the embed video URL as a text/html video type (default is checked).';
 							break;
 						/*
 						 * 'Title / Description' settings
@@ -341,16 +355,16 @@ if ( ! class_exists( 'WpssoMessages' ) ) {
 						 * 'Content and Filters' settings
 						 */
 						case 'tooltip-plugin_filter_title':
-							$text = 'By default, '.$short.' uses the title values provided by WordPress, which may include modifications by themes and/or SEO plugins (appending the blog name to all titles, for example, is fairly common practice). If you wish to use the original title value without these modifications, uncheck this option.';
+							$text = 'By default, '.$short.' uses the title values provided by WordPress, which may include modifications by themes and/or SEO plugins (appending the blog name to all titles, for example, is a fairly common practice). If you wish to use the original title value without these modifications, uncheck this option.';
+							break;
+						case 'tooltip-plugin_filter_content':
+							$text = 'Apply the standard WordPress \'the_content\' filter to render content text (default is unchecked). This renders all shortcodes, and allows '.$short.' to detect images and embedded videos that may be provided by these.';
 							break;
 						case 'tooltip-plugin_filter_excerpt':
 							$text = 'Apply the standard WordPress \'get_the_excerpt\' filter to render the excerpt text (default is unchecked). Check this option if you use shortcodes in your excerpt, for example.';
 							break;
-						case 'tooltip-plugin_filter_content':
-							$text = 'Apply the standard WordPress \'the_content\' filter to render the content text (default is checked). This renders all shortcodes, and allows '.$short.' to detect images and embedded videos that may be provided by these.';
-							break;
 						case 'tooltip-plugin_ignore_small_img':
-							$text = $short.' will retrieve image URLs from HTML tags in the <strong>content</strong>. The &amp;amp;lt;img/&amp;amp;gt; HTML tags must have a width and height attribute, and their size must be equal to (or larger) than the Image Dimensions you\'ve entered on the General settings page. Uncheck this option to include smaller images from the content. <em>Unchecking this option is not advised</em> - images that are too small for some social websites may be included in your meta tags.';
+							$text = 'Images that are detected by '.$short.' must be equal to (or larger) than the '.$this->p->util->get_admin_url( 'image-dimensions', 'Social Image Dimensions' ).' you\'ve chosen. Uncheck this option to disable the image dimension checks. <em>Unchecking this option is not advised</em> &mdash; If you uncheck this option, images that are too small for some social websites may be included in your meta tags.';
 							break;
 						case 'tooltip-plugin_page_excerpt':
 							$text = 'Enable the excerpt editing metabox for Pages. Excerpts are optional hand-crafted summaries of your content that '.$short.' can use as a default description value.';
@@ -380,13 +394,35 @@ if ( ! class_exists( 'WpssoMessages' ) ) {
 						 * 'File and Object Cache' settings
 						 */
 						case 'tooltip-plugin_object_cache_exp':
-							$text = $short.' saves filtered and rendered content to a non-persistant cache (aka <a href="https://codex.wordpress.org/Class_Reference/WP_Object_Cache" target="_blank">WP Object Cache</a>), and the meta tag HTMLs to a persistant (aka <a href="https://codex.wordpress.org/Transients_API" target="_blank">Transient</a>) cache. The default is '.$this->p->opt->get_defaults( 'plugin_object_cache_exp' ).' seconds ('.( $this->p->opt->get_defaults( 'plugin_object_cache_exp' ) / 60 / 60 ).' hrs), and the minimum value is 1 second (values bellow 3600 seconds are not recommended).<br/><br/>If you have database performance issues, or don’t use an object / transient cache (like APC, XCache, memcache, etc.), you may want to disable the transient caching feature completely by setting the WPSSO_TRANSIENT_CACHE_DISABLE constant to true.';
-							break;
-						case 'tooltip-plugin_file_cache_hrs':
-							$text = $short_pro.' can save social sharing JavaScript and images to a cache folder, providing URLs to these cached files instead of the originals. A value of 0 hours (the default) disables the file caching feature. If your hosting infrastructure performs reasonably well, this option can improve page load times significantly. All social sharing images and javascripts will be cached, except for the Facebook JavaScript SDK, which does not work correctly when cached.';
+							$exp_hrs = sprintf( '%0.2d', $this->p->opt->get_defaults( 'plugin_object_cache_exp' ) / 60 / 60 );
+							$text = $short.' saves filtered and rendered content to a non-persistant cache (aka <a href="https://codex.wordpress.org/Class_Reference/WP_Object_Cache" target="_blank">WP Object Cache</a>), and the meta tag HTMLs to a persistant (aka <a href="https://codex.wordpress.org/Transients_API" target="_blank">Transient</a>) cache. The default is '.$this->p->opt->get_defaults( 'plugin_object_cache_exp' ).' seconds ('.$exp_hrs.' hrs), and the minimum value is 1 second (values bellow 3600 seconds are not recommended).<br/><br/>If you have database performance issues, or don’t use an object / transient cache (like APC, XCache, memcache, etc.), you may want to disable the transient caching feature completely by setting the WPSSO_TRANSIENT_CACHE_DISABLE constant to true.';
 							break;
 						case 'tooltip-plugin_verify_certs':
 							$text = 'Enable verification of peer SSL certificates when fetching content to be cached using HTTPS. The PHP \'curl\' function will use the '.WPSSO_CURL_CAINFO.' certificate file by default. You can define a WPSSO_CURL_CAINFO constant in your wp-config.php file to use an alternate certificate file.';
+							break;
+						case 'tooltip-plugin_file_cache_exp':
+							$text = $short_pro.' can save most social sharing JavaScript and images to a cache folder, providing URLs to these cached files instead of the originals. A value of 0 hours (the default) disables the file caching feature. If your hosting infrastructure performs reasonably well, this option can improve page load times significantly. All social sharing images and javascripts will be cached, except for the Facebook JavaScript SDK, which does not work correctly when cached.';
+							break;
+						/*
+						 * 'Service API Keys' (URL Shortening) settings
+						 */
+						case 'tooltip-plugin_shortener':
+							$text = 'A preferred URL shortening service for various '.$short.' plugin filters and/or extensions that may need to shorten URLs. Don\'t forget to define the Service API Keys for the URL shortening service you select.';
+							break;
+						case 'tooltip-plugin_min_shorten':
+							$text = 'URLs / permalinks shorter than this length will not be shortened (the default suggested by Twitter is '.$this->p->opt->get_defaults( 'plugin_min_shorten' ).' characters).';
+							break;
+						case 'tooltip-plugin_bitly_login':
+							$text = 'The username for your Bit.ly API key (see <a href="https://bitly.com/a/your_api_key" target="_blank">Your Bit.ly API Key</a> for details).';
+							break;
+						case 'tooltip-plugin_bitly_api_key':
+							$text = 'Your Bit.ly API key for this website (see <a href="https://bitly.com/a/your_api_key" target="_blank">Your Bit.ly API Key</a> for details).';
+							break;
+						case 'tooltip-plugin_google_api_key':
+							$text = 'The Google BrowserKey for this website / project. If you don\'t already have one, visit <a href="https://cloud.google.com/console#/project" target="_blank">Google\'s Cloud Console</a> and create a new project for your website. Under the <em>API &amp; auth - Registered apps</em>, register a new \'Web Application\' (name it \'WPSSO\' for example) and enter it\'s BrowserKey here.';
+							break;
+						case 'tooltip-plugin_google_shorten':
+							$text = 'In order to use Google\'s URL Shortener for URLs, you must turn on the URL Shortener API from <a href="https://cloud.google.com/console#/project" target="_blank">Google\'s Cloud Console</a> under the <em>API &amp; auth - APIs</em> menu options. Confirm that you have enabled Google\'s URL Shortener by checking the \'Yes\' option here.';
 							break;
 						default:
 							$text = apply_filters( $lca.'_tooltip_plugin', $text, $idx );
@@ -449,11 +485,14 @@ if ( ! class_exists( 'WpssoMessages' ) ) {
 						case 'tooltip-google_def_author_on_search':
 							$text = 'Check this option if you would like to force the Default Author on search result webpages as well.';
 							break;
-						case 'tooltip-google_schema_author_json':
-							$text = 'Add author (Person) social profiles markup to webpage headers in schema.org JSON-LD format for Google Search. The author must have entered a valid URL in the Website field on their user profile page. All URLs within the various contact method fields will be listed in the social profile markup. The "Twitter @username" field will be used to include a URL for their Twitter profile.';
+						case 'tooltip-google_schema_website_json':
+							$text = 'Add schema Website markup to webpage headers for Google Search. The Website information includes the site name, URL, and search query URL.';
 							break;
 						case 'tooltip-google_schema_publisher_json':
-							$text = 'Add publisher (Organization) social profiles markup to webpage headers in schema.org JSON-LD format for Google Search. The Open Graph "Article Publisher Page URL" and "Publisher Link URL" will be listed in the social profile markup. The Open Graph Default Image ID / URL will be used as the Organization image.';
+							$text = 'Add publisher (Organization) social profiles markup to webpage headers for Google Search. All URLs entered on the '.$this->p->util->get_admin_url( 'social-accounts', 'Website / Business Social Accounts settings page' ).' will be included. The Open Graph Default Image ID / URL will be used as the Organization image, and the Schema Website / Business Logo URL will be used as the Organization\'s logo.';
+							break;
+						case 'tooltip-google_schema_author_json':
+							$text = 'Add author (Person) social profiles markup to webpage headers for Google Search. <strong>The author must have entered a valid URL in the Website field of their user profile page</strong>. All URLs within the various contact method fields will be listed in the social profile markup. The "Twitter @username" field will be used to include a URL for their Twitter profile.';
 							break;
 						default:
 							$text = apply_filters( $lca.'_tooltip_google', $text, $idx );
@@ -519,7 +558,7 @@ if ( ! class_exists( 'WpssoMessages' ) ) {
 							$text = 'If you have a <a href="https://business.pinterest.com/" target="_blank">Pinterest Business Page for your website / business</a>, you may enter its URL here. The Publisher Business Page URL will be used in the schema publisher (Organization) social JSON. Google Search may use this information to display additional publisher / business details in its search results.';
 							break;
 						case 'tooltip-rp_img_dimensions':
-							$text = 'The image dimensions specifically for Rich Pin meta tags when the Pinterest crawler is detected (defaults is '.$this->p->opt->get_defaults( 'rp_img_width' ).'x'.$this->p->opt->get_defaults( 'rp_img_height' ).' '.( $this->p->opt->get_defaults( 'rp_img_crop' ) == 0 ? 'un' : '' ).'cropped). Images in the Facebook / Open Graph meta tags are usually cropped, where-as images on Pinterest often look better in their original aspect ratio (aka uncropped). Note that original images in the WordPress Media Library and/or NextGEN Gallery must be larger than your chosen image dimensions.';
+							$text = 'The image dimensions specifically for Rich Pin meta tags when the Pinterest crawler is detected (defaults is '.$this->p->opt->get_defaults( 'rp_img_width' ).'x'.$this->p->opt->get_defaults( 'rp_img_height' ).' '.( $this->p->opt->get_defaults( 'rp_img_crop' ) == 0 ? 'un' : '' ).'cropped). Images in the Facebook / Open Graph meta tags are usually cropped square, where-as images on Pinterest often look better in their original aspect ratio (uncropped) and/or cropped using portrait photo dimensions. Note that original images in the WordPress Media Library and/or NextGEN Gallery must be larger than your chosen image dimensions.';
 							break;
 						case 'tooltip-rp_author_name':
 							$text = 'Pinterest ignores Facebook-style Author Profile URLs in the \'article:author\' Open Graph meta tags. An <em>additional</em> \'article:author\' meta tag may be included when the Pinterest crawler is detected. Select an Author Name Format, or \'[none]\' to disable this feature (the default and recommended value is \'Display Name\').';
@@ -598,7 +637,7 @@ if ( ! class_exists( 'WpssoMessages' ) ) {
 							break;
 						case 'info-plugin-tid-network':
 							$text = '<blockquote style="margin-top:0;margin-bottom:10px;">
-							<p>After purchasing Pro version license(s), an email is sent to you with a <strong>unique Authentication ID</strong> and installation / activation instructions. Enter the unique Authentication ID on this page to define default/forced a value for <em>all</em> sites within the network, or enter the Authentication ID(s) individually on each site\'s <em>Extension Plugins and Pro Licenses</em> settings page. <strong>Please note that the <em>default</em> site / blog must be licensed in order to update the plugin from the Network admin interface</strong>.</p>
+							<p>After purchasing Pro version license(s), an email is sent to you with a <strong>unique Authentication ID</strong> and installation / activation instructions. Enter the unique Authentication ID on this page to define default/forced a value for <em>all</em> sites within the network, or enter the Authentication ID(s) individually on each site\'s <em>Pro Licenses</em> settings page. <strong>Please note that the <em>default</em> site / blog must be licensed in order to update the plugin from the Network admin interface</strong>.</p>
 							</blockquote>';
 							break;
 						case 'info-review':
@@ -613,7 +652,7 @@ if ( ! class_exists( 'WpssoMessages' ) ) {
 							break;
 						case 'info-taglist':
 							$text = '<blockquote style="margin:0;">
-							<p>'.$short.' will add the following Google / SEO, Facebook, Open Graph, Rich Pin, Schema, and Twitter Card HTML tags to the <code>head</code> section of your webpages. If your theme or another plugin already generates one or more of these HTML tags, you can uncheck them here to prevent duplicates from being added (as an example, the "meta name description" HTML tag is automatically unchecked if a known SEO plugin is detected).</p>
+							<p>'.$short.' will add the following Google / SEO, Facebook, Open Graph, Rich Pin, Schema, and Twitter Card HTML tags to the <code>&lt;head&gt;</code> section of your webpages. If your theme or another plugin already generates one or more of these HTML tags, you can uncheck them here to prevent duplicates from being added. As an example, the "meta name description" HTML tag is automatically unchecked if a known SEO plugin is detected. The "meta name canonical" HTML tag is unchecked by default since themes often include it in their <code>header.php</code> template file.</p>
 							</blockquote>';
 							break;
 						case 'info-cm':
@@ -624,12 +663,12 @@ if ( ! class_exists( 'WpssoMessages' ) ) {
 							break;
 						case 'info-image-dimensions':
 							$text = '<blockquote style="margin-top:0;margin-bottom:0;">
-							<p>'.$short.' provides several image dimension options, depending on the intended use for the image (Open Graph meta tags, Twitter Card formats, etc.). The image dimensions should always be chosen for their intended use. For example, Open Graph meta tags are read by Facebook, Google+, LinkedIn, and others. Facebook has published a preference for images measuring 1200x630px, but horizontally cropped images may not show as well on all social sites. A good compromise for your Open Graph image dimensions is 1200x1200px cropped. If you use these dimensions, make sure your original images are at least 1200px in <em>both</em> width and height.</p>
+							<p>'.$short.' provides several image dimension options, depending on the intended use for the image (Open Graph meta tags, Twitter Card formats, etc.). The image dimensions should always be chosen for their intended use. For example, Open Graph meta tags are read by Facebook, Google+, LinkedIn, and others. Facebook has published a preference for images measuring 1200x630px (to support retina and high-PPI displays), but horizontally cropped images may not show as well on all social sites. A good compromise for your Open Graph image dimensions is 1200x1200px cropped. If you use these dimensions, make sure your original images are at least 1200px in <em>both</em> width and height.</p>
 							</blockquote>';
 							break;
 						case 'info-social-accounts':
 							$text = '<blockquote style="margin-top:0;margin-bottom:0;">
-							<p>The social account values are used for Google / SEO, Schema, Open Graph, and other meta tag standards, including the publisher (Organization) social profiles markup in schema.org JSON-LD format. These social accounts may be displayed by Google in search results for your website / business. See the '.$this->p->util->get_admin_url( 'general#sucom-tabset_pub-tab_google', 'Google specific settings' ).' to define a website / business logo, and/or enable / disable the addition of publisher (Organization) and author (Person) JSON-LD markup to your webpage headers.</p>
+							<p>The social account values are used for Google / SEO, Schema, Open Graph, and other meta tags, including the publisher (Organization) social profiles markup in schema.org JSON-LD format. These social accounts may also appear in Google Search results for your website / business. See the '.$this->p->util->get_admin_url( 'general#sucom-tabset_pub-tab_google', 'Google specific settings' ).' to define a website / business logo, and/or enable / disable the addition of publisher (Organization) and author (Person) JSON-LD markup to your webpage headers.</p>
 							</blockquote>';
 							break;
 						case 'info-sharing-include':
@@ -650,9 +689,9 @@ if ( ! class_exists( 'WpssoMessages' ) ) {
 						case 'pro-feature-msg':
 							if ( $this->p->check->aop( $lca, false ) )
 								$text = '<p class="pro-feature-msg"><a href="'.$url['purchase'].'" target="_blank">Purchase '.
-									$short_pro.' licence(s) to modify the following options and access Pro modules</a></p>';
+									$short_pro.' licence(s) to modify the following options and install / enable Pro modules</a></p>';
 							else $text = '<p class="pro-feature-msg"><a href="'.$url['purchase'].'" target="_blank">Purchase the '.
-								$short_pro.' plugin to modify the following options and get all Pro modules</a></p>';
+								$short_pro.' plugin to modify the following options and install / enable Pro modules</a></p>';
 							break;
 						case 'pro-option-msg':
 							$text = '<p class="pro-option-msg"><a href="'.$url['purchase'].'" target="_blank">'.
@@ -660,25 +699,39 @@ if ( ! class_exists( 'WpssoMessages' ) ) {
 							break;
 						case 'pro-activate-msg':
 							if ( ! is_multisite() ) {
-								$text = '<p><strong>The '.$name.' Authentication ID option is empty.</strong><br/>To enable Pro version features and allow the plugin to authenticate itself for updates, please enter the unique Authentication ID you received by email on the '.$this->p->util->get_admin_url( 'licenses', 'Extension Plugins and Pro Licenses settings page' ).'.</p>';
+								$text = '<p><strong>The '.$name.' Authentication ID option is empty.</strong><br/>
+								To enable Pro version features and allow the plugin to authenticate itself for 
+								updates, please enter the unique Authentication ID you received by email on the '.
+								$this->p->util->get_admin_url( 'licenses', 'Pro Licenses settings page' ).'.</p>';
 							}
 							break;
 						case 'pro-not-installed':
-							$text = 'An Authentication ID has been entered for '.$name.', but the Pro version is not yet installed &ndash; don\'t forget to update this plugin to install the latest Pro version.';
+							$text = 'An Authentication ID has been entered for '.$name.', but the Pro version is not yet 
+							installed &ndash; don\'t forget to update this plugin to install the latest Pro version.';
 							break;
 						case 'pro-um-extension-required':
+						case 'pro-um-activate-extension':
 							$um_lca = $lca.'um';
 							$um_name = $this->p->cf['plugin'][$um_lca]['name'];
 							$um_dl = $this->p->cf['plugin'][$um_lca]['url']['download'];
 							$um_latest = $this->p->cf['plugin'][$um_lca]['url']['latest_zip'];
 							$upload_url = get_admin_url( null, 'plugin-install.php?tab=upload' );
-							$text = '<p>At least one Authentication ID has been entered, but the <strong>'.$um_name.'</strong> extension plugin is not active. This <strong>free extension</strong> is required to update and enable the '.$name_pro.' plugin and its extensions.</p>
-							<ol>
-							<li><strong>Download the free <a href="'.$um_latest.'">'.$um_name.' plugin archive</a> (zip file).</strong>
-							<li><strong>Then <a href="'.$upload_url.'">upload and activate the plugin on this WordPress admin page</a></strong>.</li>
-							</ol>
-							<p>Once the plugin has been activated, one or more Pro version updates will be available for your licensed plugin(s). You can also <a href="'.$um_dl.'" target="_blank">read more about the '.$um_name.'</a> extension plugin.</p>
-							<ol>';
+							$text = '<p>At least one Authentication ID has been entered on the '.
+							$this->p->util->get_admin_url( 'licenses', 'Pro Licenses settings page' ).
+							', but the <strong>'.$um_name.'</strong> plugin is not active. ';
+							if ( $idx === 'pro-um-extension-required' ) {
+								$text .= 'This <strong>free extension</strong> is required to update 
+								and enable the '.$name_pro.' plugin and its extensions.</p>
+								<ol>
+								<li><strong>Download the free <a href="'.$um_latest.'">'.$um_name.' plugin archive</a>
+									(zip file).</strong>
+								<li><strong>Then <a href="'.$upload_url.'">upload and activate the plugin</a>
+									on the WordPress plugin upload page</strong>.</li>
+								</ol><p>';
+							}
+							$text .= 'Once this '.$short.' extension has been activated, one or more Pro version updates 
+							may be available for your licensed plugin(s). Read more <a href="'.$um_dl.'" 
+							target="_blank">about the '.$um_name.' extension plugin</a>.</p>';
 							break;
 					}
 					break;

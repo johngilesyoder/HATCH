@@ -1,5 +1,5 @@
 <?php
-/**
+/*
  * Plugin Name: WordPress Social Sharing Optimization (WPSSO)
  * Plugin URI: http://surniaulula.com/extend/plugins/wpsso/
  * Author: Jean-Sebastien Morisset
@@ -8,8 +8,8 @@
  * License URI: http://www.gnu.org/licenses/gpl.txt
  * Description: Make sure social websites present your content correctly, no matter how your webpage is shared - from buttons, browser add-ons, or pasted URLs.
  * Requires At Least: 3.0
- * Tested Up To: 4.2
- * Version: 3.0.5
+ * Tested Up To: 4.3
+ * Version: 3.7.3
  * 
  * Copyright 2012-2015 - Jean-Sebastien Morisset - http://surniaulula.com/
  */
@@ -63,14 +63,11 @@ if ( ! class_exists( 'Wpsso' ) ) {
 		public function __construct() {
 
 			require_once( dirname( __FILE__ ).'/lib/config.php' );
-			require_once( dirname( __FILE__ ).'/lib/register.php' );
-
-			$this->cf = WpssoConfig::get_config();			// unfiltered - $cf['*'] array is not available
+			$this->cf = WpssoConfig::get_config();			// unfiltered - $cf['*'] array is not available yet
 			WpssoConfig::set_constants( __FILE__ );
-			WpssoConfig::require_libs( __FILE__ );
+			WpssoConfig::require_libs( __FILE__ );			// includes the register.php class library
 
-			$classname = __CLASS__.'Register';
-			$this->reg = new $classname( $this );			// activate, deactivate, uninstall hooks
+			$this->reg = new WpssoRegister( $this );		// activate, deactivate, uninstall hooks
 
 			add_action( 'init', array( &$this, 'set_config' ), -1 );
 			add_action( 'init', array( &$this, 'init_plugin' ), WPSSO_INIT_PRIORITY );
@@ -143,6 +140,9 @@ if ( ! class_exists( 'Wpsso' ) ) {
 					$this->debug = new $classname( $this, array( 'html' => $html_debug, 'wp' => $wp_debug ) );
 			else $this->debug = new WpssoNoDebug();			// fallback to dummy debug class
 
+			if ( $this->debug->enabled && $activate === true )
+				$this->debug->log( 'method called for plugin activation' );
+
 			$this->notice = new SucomNotice( $this );
 			$this->util = new WpssoUtil( $this );
 			$this->opt = new WpssoOptions( $this );
@@ -160,41 +160,26 @@ if ( ! class_exists( 'Wpsso' ) ) {
 				$this->admin = new WpssoAdmin( $this );		// admin menus and page loader
 			}
 
-			$this->loader = new WpssoLoader( $this );
+			$this->loader = new WpssoLoader( $this, $activate );
 
-			do_action( 'wpsso_init_objects' );
+			do_action( 'wpsso_init_objects', $activate );
 
 			/*
 			 * check and create the default options array
-			 *
 			 * execute after all objects have been defines, so hooks into 'wpsso_get_defaults' are available
 			 */
 			if ( is_multisite() && ( ! is_array( $this->site_options ) || empty( $this->site_options ) ) )
 				$this->site_options = $this->opt->get_site_defaults();
 
+			/*
+			 * end here when called for plugin activation (the init_plugin() hook handles the rest)
+			 */
 			if ( $activate == true || ( 
 				! empty( $_GET['action'] ) && $_GET['action'] == 'activate-plugin' &&
 				! empty( $_GET['plugin'] ) && $_GET['plugin'] == WPSSO_PLUGINBASE ) ) {
-
 				if ( $this->debug->enabled )
-					$this->debug->log( 'plugin activation detected' );
-
-				if ( ! is_array( $this->options ) || empty( $this->options ) ||
-					( defined( 'WPSSO_RESET_ON_ACTIVATE' ) && WPSSO_RESET_ON_ACTIVATE ) ) {
-
-					$this->options = $this->opt->get_defaults();
-					delete_option( WPSSO_OPTIONS_NAME );
-					add_option( WPSSO_OPTIONS_NAME, $this->options, null, 'yes' );
-					if ( $this->debug->enabled )
-						$this->debug->log( 'default options have been added to the database' );
-
-					if ( defined( 'WPSSO_RESET_ON_ACTIVATE' ) && WPSSO_RESET_ON_ACTIVATE ) 
-						$this->notice->inf( 'WPSSO_RESET_ON_ACTIVATE constant is true &ndash; 
-							plugin options have been reset to their default values.', true );
-				}
-				if ( $this->debug->enabled )
-					$this->debug->log( 'exiting early: init_plugin() to follow' );
-				return;	// no need to continue, init_plugin() will handle the rest
+					$this->debug->log( 'exiting early: init_plugin() hook will follow' );
+				return;
 			}
 
 			/*
@@ -202,30 +187,32 @@ if ( ! class_exists( 'Wpsso' ) ) {
 			 */
 			$this->options = $this->opt->check_options( WPSSO_OPTIONS_NAME, $this->options );
 			if ( is_multisite() )
-				$this->site_options = $this->opt->check_options( WPSSO_SITE_OPTIONS_NAME, $this->site_options );
+				$this->site_options = $this->opt->check_options( WPSSO_SITE_OPTIONS_NAME, 
+					$this->site_options, true );
 
 			/*
 			 * configure class properties based on plugin settings
 			 */
-			$this->cache->object_expire = $this->options['plugin_object_cache_exp'];
-			if ( ! empty( $this->options['plugin_file_cache_hrs'] ) && $this->check->aop() ) {
-				if ( $this->debug->is_enabled( 'wp' ) === true ) 
-					$this->cache->file_expire = WPSSO_DEBUG_FILE_EXP;	// reduce to 300 seconds
-				else $this->cache->file_expire = $this->options['plugin_file_cache_hrs'] * 60 * 60;
-			} else $this->cache->file_expire = 0;	// just in case
-			$this->is_avail['cache']['file'] = $this->cache->file_expire > 0 ? true : false;
+			$this->cache->default_object_expire = $this->options['plugin_object_cache_exp'];
+			$this->cache->default_file_expire = ( $this->check->aop() ? 
+				( $this->debug->is_enabled( 'wp' ) ? 
+					WPSSO_DEBUG_FILE_EXP : $this->options['plugin_file_cache_exp'] ) : 0 );
+			$this->is_avail['cache']['file'] = $this->cache->default_file_expire > 0 ? true : false;
 
-			// disable the transient cache ONLY if the html debug mode is on
+			// disable the transient cache if html debug mode is on
 			if ( $this->debug->is_enabled( 'html' ) === true ) {
-				foreach ( array( 'transient' ) as $name ) {
-					$constant_name = 'WPSSO_'.strtoupper( $name ).'_CACHE_DISABLE';
-					$this->is_avail['cache'][$name] = ( defined( $constant_name ) && 
-						! constant( $constant_name ) ) ? true : false;
-				}
-				$cache_status = 'transient cache use '.( $this->is_avail['cache']['transient'] ? 'could not be' : 'is' ).' disabled';
+
+				$this->is_avail['cache']['transient'] = defined( 'WPSSO_TRANSIENT_CACHE_DISABLE' ) && 
+					! WPSSO_TRANSIENT_CACHE_DISABLE ? true : false;
+
+				$cache_status = 'transient cache use '.
+					( $this->is_avail['cache']['transient'] ?
+						'could not be' : 'is' ).' disabled';
+
 				if ( $this->debug->enabled )
 					$this->debug->log( 'html debug mode is active: '.$cache_status );
-				$this->notice->inf( 'HTML debug mode is active &ndash; '.$cache_status.' '.
+
+				$this->notice->inf( 'HTML debug mode is active &ndash; '.$cache_status.
 					' and informational messages are being added as hidden HTML comments.' );
 			}
 
@@ -240,8 +227,10 @@ if ( ! class_exists( 'Wpsso' ) ) {
 		}
 
 		public function filter_ua_plugin( $plugin ) {
-			if ( $this->check->aop() ) $plugin .= 'L';
-			elseif ( $this->is_avail['aop'] ) $plugin .= 'U';
+			if ( $this->check->aop( 'wpsso' ) )
+				$plugin .= 'L';
+			elseif ( $this->is_avail['aop'] )
+				$plugin .= 'U';
 			else $plugin .= 'G';
 			return $plugin;
 		}
@@ -254,6 +243,7 @@ if ( ! class_exists( 'Wpsso' ) ) {
 				if ( defined( 'WPSSO_OPTIONS_NAME_ALT' ) && WPSSO_OPTIONS_NAME_ALT ) {
 					$this->options = get_option( WPSSO_OPTIONS_NAME_ALT );
 					if ( is_array( $this->options ) ) {
+						// auto-creates options with autoload = yes
 						update_option( WPSSO_OPTIONS_NAME, $this->options );
 						delete_option( WPSSO_OPTIONS_NAME_ALT );
 					}

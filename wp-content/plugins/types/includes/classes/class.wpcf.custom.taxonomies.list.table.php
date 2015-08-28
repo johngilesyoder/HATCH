@@ -57,7 +57,7 @@ class WPCF_Custom_Taxonomies_List_Table extends WP_List_Table
             'ajax'      => true        //does this table support ajax?
         ) );
 
-        $this->custom_taxonomies = get_option('wpcf-custom-taxonomies', array());
+        $this->custom_taxonomies = get_option(WPCF_OPTION_NAME_CUSTOM_TAXONOMIES, array());
     }
 
     /** ************************************************************************
@@ -86,7 +86,7 @@ class WPCF_Custom_Taxonomies_List_Table extends WP_List_Table
         switch($column_name){
             case 'title':
             case 'description':
-                return $item[$column_name];
+                return stripslashes($item[$column_name]);
             case 'supports':
                 $rows = array();
                 if (!empty($item[$column_name])) {
@@ -120,36 +120,70 @@ class WPCF_Custom_Taxonomies_List_Table extends WP_List_Table
      **************************************************************************/
     function column_title($item)
     {
-        $edit_link = add_query_arg(
-            array(
-                'page' => 'wpcf-edit-tax',
-                'wpcf-tax' => $item['slug']
-            ),
-            admin_url('admin.php')
+        $edit_link = esc_url(
+            add_query_arg(
+                array(
+                    'page' => 'wpcf-edit-tax',
+                    'wpcf-tax' => $item['slug'],
+                ),
+                admin_url('admin.php')
+            )
         );
 
-        //Build row actions
-        $actions = array(
-            'edit'      => sprintf('<a href="%s">%s</a>', $edit_link, __('Edit', 'wpcf')),
-            'status' => 'active' == $item['status']? wpcf_admin_custom_taxonomies_get_ajax_deactivation_link($item['slug']):wpcf_admin_custom_taxonomies_get_ajax_activation_link($item['slug']),
-            'delete'     => sprintf(
-                '<a href="%s" class="submitdelete wpcf-ajax-link" id="wpcf-list-delete-%s"">%s</a>',
+        if ( WPCF_Roles::user_can_edit('custom-taxonomy', $item ) ) {
+            //Build row actions
+            $actions = array(
+                'edit'      => sprintf('<a href="%s">%s</a>', $edit_link, __('Edit', 'wpcf')),
+                'status' => 'active' == $item['status']? wpcf_admin_custom_taxonomies_get_ajax_deactivation_link($item['slug']):wpcf_admin_custom_taxonomies_get_ajax_activation_link($item['slug']),
+                'duplicate'     => sprintf(
+                    '<a href="%s" class="wpcf-ajax-link">%s</a>',
+                    esc_url(
+                        add_query_arg(
+                            array(
+                                'action' => 'wpcf_ajax',
+                                'wpcf_action' => 'taxonomy_duplicate',
+                                'wpcf-tax' => $item['slug'],
+                                'wpcf_ajax_update' => 'wpcf_list_ajax_response_'.$item['slug'],
+                                '_wpnonce' => wp_create_nonce('taxonomy_duplicate'),
+                            ),
+                            admin_url('admin-ajax.php')
+                        )
+                    ),
+                    __('Duplicate', 'wpcf')
+                ),
+                'delete'     => sprintf(
+                    '<a href="%s" class="submitdelete wpcf-ajax-link" id="wpcf-list-delete-%s">%s</a>',
+                    esc_url(
+                        add_query_arg(
+                            array(
+                                'action' => 'wpcf_ajax',
+                                'wpcf_action' => 'delete_taxonomy',
+                                'wpcf-tax' => $item['slug'],
+                                'wpcf_ajax_update' => 'wpcf_list_ajax_response_'.$item['slug'],
+                                '_wpnonce' => wp_create_nonce('delete_taxonomy'),
+                                'wpcf_warning' => urlencode(__('Are you sure?', 'wpcf')),
+                            ),
+                            admin_url('admin-ajax.php')
+                        )
+                    ),
+                    $item['slug'],
+                    __('Delete', 'wpcf')
+                ),
+            );
+        } else {
+            $edit_link = esc_url(
                 add_query_arg(
                     array(
-                        'action' => 'wpcf_ajax',
-                        'wpcf_action' => 'delete_taxonomy',
+                        'page' => 'wpcf-view-tax',
                         'wpcf-tax' => $item['slug'],
-                        'wpcf_ajax_update' => 'wpcf_list_ajax_response_'.$item['slug'],
-                        'wpcf_ajax_callback' => 'wpcfRefresh',
-                        '_wpnonce' => wp_create_nonce('delete_taxonomy'),
-                        'wpcf_warning' => urlencode(__('Are you sure?', 'wpcf')),
                     ),
-                    admin_url('admin-ajax.php')
-                ),
-                $item['slug'],
-                __('Delete', 'wpcf')
-            ),
-        );
+                    admin_url('admin.php')
+                )
+            );
+            $actions = array(
+                'view' => sprintf('<a href="%s">%s</a>', $edit_link, __('View', 'wpcf')),
+            );
+        }
 
         //Return the title contents
         return sprintf(
@@ -171,11 +205,14 @@ class WPCF_Custom_Taxonomies_List_Table extends WP_List_Table
      **************************************************************************/
     function column_cb($item)
     {
-        return sprintf(
-            '<input type="checkbox" name="%s[]" value="%s" />',
-            $this->bulk_action_field_name,
-            $item['slug']
-        );
+        if ( WPCF_Roles::user_can_edit('custom-taxonomy', $item ) ) {
+            return sprintf(
+                '<input type="checkbox" name="%s[]" value="%s" />',
+                $this->bulk_action_field_name,
+                $item['slug']
+            );
+        }
+        return '';
     }
 
     /** ************************************************************************
@@ -200,6 +237,9 @@ class WPCF_Custom_Taxonomies_List_Table extends WP_List_Table
             'status'      => __('Active', 'wpcf'),
             'supports'    => __('Post Types', 'wpcf'),
         );
+        if ( !WPCF_Roles::user_can_create('custom-taxonomy') ) {
+            unset($columns['cb']);
+        }
         return $columns;
     }
 
@@ -243,10 +283,14 @@ class WPCF_Custom_Taxonomies_List_Table extends WP_List_Table
      **************************************************************************/
     function get_bulk_actions()
     {
-        $actions = array(
-            'activate'   => __('Activate', 'wpcf'),
-            'deactivate' => __('Deactivate', 'wpcf'),
-        );
+        $actions = array();
+        if ( WPCF_Roles::user_can_create('custom-taxonomy') ) {
+            $actions = array(
+                'activate'   => __('Activate', 'wpcf'),
+                'deactivate' => __('Deactivate', 'wpcf'),
+                'delete' => __('Delete', 'wpcf'),
+            );
+        }
         return $actions;
     }
 
@@ -260,40 +304,81 @@ class WPCF_Custom_Taxonomies_List_Table extends WP_List_Table
     function process_bulk_action()
     {
         $action = $this->current_action();
-        //Detect when a bulk action is being triggered...
-        switch($action) {
-        case 'deactivate':
-            if (
-                !empty($this->custom_taxonomies)
-                && isset($_POST[$this->bulk_action_field_name])
-                && !empty($_POST[$this->bulk_action_field_name])
-            ) {
-                foreach( $_POST[$this->bulk_action_field_name] as $key ) {
-                    if ( !isset($this->custom_taxonomies[$key]) ) {
-                        continue;
-                    }
-                    $this->custom_taxonomies[$key]['disabled'] = 1;
-                }
-                update_option('wpcf-custom-taxonomies', $this->custom_taxonomies);
+
+        /**
+         * check nounce
+         */
+        if (!empty($action)) {
+            $nonce = '';
+            if ( isset($_REQUEST['_wpnonce'] ) ) {
+                $nonce = $_REQUEST['_wpnonce'];
             }
-            break;
-        case 'activate':
-            if (
-                !empty($this->custom_taxonomies)
-                && isset($_POST[$this->bulk_action_field_name])
-                && !empty($_POST[$this->bulk_action_field_name])
-            ) {
-                foreach( $_POST[$this->bulk_action_field_name] as $key ) {
-                    if ( !isset($this->custom_taxonomies[$key]) ) {
-                        continue;
-                    }
+            if ( !wp_verify_nonce($nonce, 'bulk-customtaxonomies')) {
+                die( 'Security check' );
+            }
+        }
+
+        //Detect when a bulk action is being triggered...
+        if (
+            !empty($this->custom_taxonomies)
+            && isset($_POST[$this->bulk_action_field_name])
+            && !empty($_POST[$this->bulk_action_field_name])
+        ) {
+            $slugs_to_delete = array();
+            foreach( $_POST[$this->bulk_action_field_name] as $key ) {
+                /**
+                 * do not process if there is no entry
+                 */
+                if ( !isset($this->custom_taxonomies[$key]) ) {
+                    continue;
+                }
+                /**
+                 * check capability
+                 */
+                if ( !WPCF_Roles::user_can_edit('custom-taxonomy', $this->custom_taxonomies[$key]) ){
+                    continue;
+                }
+                /**
+                 * do it!
+                 */
+                switch($action) {
+                case 'delete':
+                    unset($this->custom_taxonomies[$key]);
+                    $slugs_to_delete[] = $key;
+                    break;
+                case 'deactivate':
+                    $this->custom_taxonomies[$key]['disabled'] = 1;
+                    break;
+                case 'activate':
                     if ( isset($this->custom_taxonomies[$key]['disabled']) ) {
                         unset($this->custom_taxonomies[$key]['disabled']);
                     }
+                    break;
                 }
-                update_option('wpcf-custom-taxonomies', $this->custom_taxonomies);
             }
-            break;
+            /**
+             * update custom taxonomies
+             */
+            update_option(WPCF_OPTION_NAME_CUSTOM_TAXONOMIES, $this->custom_taxonomies);
+            /**
+             * update custom post types
+             */
+            if ( count($slugs_to_delete) ) {
+                $custom_types = get_option(WPCF_OPTION_NAME_CUSTOM_TYPES, array());
+                if ( !empty($custom_types) ) {
+                    foreach ( $slugs_to_delete as $slug ) {
+                        foreach ( $custom_types as $custom_key => $data ) {
+                            if ( !isset($data['taxonomies'] ) ) {
+                                continue;
+                            }
+                            if ( isset($data['taxonomies'][$slug]) ) {
+                                unset($custom_types[$custom_key]['taxonomies'][$slug]);
+                            }
+                        }
+                    }
+                    update_option(WPCF_OPTION_NAME_CUSTOM_TYPES, $custom_types);
+                }
+            }
         }
     }
 
@@ -359,11 +444,12 @@ class WPCF_Custom_Taxonomies_List_Table extends WP_List_Table
         if ( !empty($this->custom_taxonomies) ){
             foreach( array_values($this->custom_taxonomies) as $taxonomy ) {
                 $one = array(
-                    'description' => $taxonomy['description'],
+                    'description' => wp_kses_post($taxonomy['description']),
                     'supports' => isset($taxonomy['supports'])? $taxonomy['supports']:array(),
                     'slug' => $taxonomy['slug'],
                     'status' => (isset($taxonomy['disabled']) && $taxonomy['disabled'])? 'inactive':'active',
-                    'title' => $taxonomy['labels']['singular_name'],
+                    'title' => wp_kses_post(stripslashes($taxonomy['labels']['singular_name'])),
+                    WPCF_AUTHOR => isset($taxonomy[WPCF_AUTHOR])? $taxonomy[WPCF_AUTHOR]:0,
                 );
                 $add_one = true;
                 if ( $s ) {
@@ -453,11 +539,13 @@ class WPCF_Custom_Taxonomies_List_Table extends WP_List_Table
         wpcf_admin_ctt_list_header();
         printf(
             '<a class="button-primary" href="%s">%s</a>',
-            add_query_arg(
-                array(
-                    'page' => 'wpcf-edit-tax',
-                ),
-                admin_url('admin.php')
+            esc_url(
+                add_query_arg(
+                    array(
+                        'page' => 'wpcf-edit-tax',
+                    ),
+                    admin_url('admin.php')
+                )
             ),
             __('Add New Taxonomy', 'wpcf')
         );

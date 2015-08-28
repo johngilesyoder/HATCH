@@ -78,6 +78,9 @@ if ( ! class_exists( 'WpssoRegister' ) ) {
 
 		private function activate_plugin() {
 			$lca = $this->p->cf['lca'];
+			$uca = $this->p->cf['uca'];
+			$short = $this->p->cf['plugin'][$lca]['short'];
+
 			foreach ( array( 'wp', 'php' ) as $key ) {
 				switch ( $key ) {
 					case 'wp':
@@ -101,23 +104,46 @@ if ( ! class_exists( 'WpssoRegister' ) ) {
 						$short.' requires '.$label.' version '.$min_version.' or newer.</p>' );
 				}
 			}
+
 			set_transient( $lca.'_activation_redirect', true, 60 * 60 );
+
 			$this->p->set_config();
-			$this->p->set_objects( true );
+			$this->p->set_objects( true );	// $activate = true
+
+			if ( ! is_array( $this->p->options ) || empty( $this->p->options ) ||
+				( defined( $uca.'_RESET_ON_ACTIVATE' ) && constant( $uca.'_RESET_ON_ACTIVATE' ) ) ) {
+
+				$this->p->options = $this->p->opt->get_defaults();
+				delete_option( constant( $uca.'_OPTIONS_NAME' ) );
+				add_option( constant( $uca.'_OPTIONS_NAME' ), $this->p->options, null, 'yes' );	// autoload = yes
+
+				if ( $this->p->debug->enabled )
+					$this->p->debug->log( 'default options have been added to the database' );
+
+				if ( defined( $uca.'_RESET_ON_ACTIVATE' ) && constant( $uca.'_RESET_ON_ACTIVATE' ) )
+					$this->p->notice->inf( $uca.'_RESET_ON_ACTIVATE constant is true &ndash; 
+						plugin options have been reset to their default values.', true );
+			}
+
+			if ( empty( $this->p->options['plugin_filter_content'] ) )
+				$this->p->notice->inf( '<strong>The '.$this->p->util->get_admin_url( 'advanced#sucom-tabset_plugin-tab_content', 'Apply WordPress Content Filters' ).' advanced option is currently disabled</strong>. The use of WordPress content filters allows '.$short.' to fully render your content text for meta tag descriptions and detect additional images / embedded videos provided by shortcodes (for example).<br/><br/><strong>Some theme / plugins have badly coded content filters, so this option is disabled by default</strong>. '.$this->p->util->get_admin_url( 'advanced#sucom-tabset_plugin-tab_content', 'If you use any shortcodes in your content text, this option should be enabled' ).' &mdash; if you experience back-end / front-end display issues after enabling this option, determine which theme / plugin is at fault and report the problem to the appropriate theme / plugin author(s).', true );
+
+			if ( empty( $this->p->options['plugin_object_cache_exp'] ) ||
+				$this->p->options['plugin_object_cache_exp'] < $this->p->opt->get_defaults( 'plugin_object_cache_exp' ) ) {
+				$this->p->notice->inf( 'Please note that the '.$this->p->util->get_admin_url( 'advanced#sucom-tabset_plugin-tab_cache', 'Object Cache Expiry' ).' advanced option is currently set at '.$this->p->options['plugin_object_cache_exp'].' seconds &mdash; this is lower than the recommended default value of '.$this->p->opt->get_defaults( 'plugin_object_cache_exp' ).' seconds.', true );
+			}
+
+			$this->p->util->clear_all_cache();
 		}
 
 		private function deactivate_plugin() {
 			// clear all cached objects and transients
-			$deleted_cache = $this->p->util->delete_expired_file_cache( true );
-			$deleted_transient = $this->p->util->delete_expired_transients( true );
-
-			// disable the cron update check
-			$slug = $this->p->cf['plugin'][$this->p->cf['lca']]['slug'];
-			wp_clear_scheduled_hook( 'plugin_updates-'.$slug );
+			$this->p->util->delete_expired_db_transients( true );
+			$this->p->util->delete_expired_file_cache( true );
+			$this->p->notice->trunc();
 		}
 
 		private static function uninstall_plugin() {
-			global $wpdb;
 			$cf = WpssoConfig::get_config();
 
 			if ( ! defined( 'WPSSO_OPTIONS_NAME' ) )
@@ -135,28 +161,18 @@ if ( ! class_exists( 'WpssoRegister' ) ) {
 			if ( empty( $opts['plugin_preserve'] ) ) {
 				delete_option( WPSSO_OPTIONS_NAME );
 				delete_post_meta_by_key( WPSSO_META_NAME );
-				foreach ( array( WPSSO_META_NAME, WPSSO_PREF_NAME ) as $meta_key )
-					foreach ( get_users( array( 'meta_key' => $meta_key ) ) as $user )
+				foreach ( array( WPSSO_META_NAME, WPSSO_PREF_NAME ) as $meta_key ) {
+					foreach ( get_users( array( 'meta_key' => $meta_key ) ) as $user ) {
 						delete_user_option( $user->ID, $meta_key );
-				WpssoUser::delete_metabox_prefs();
-			}
-
-			// delete update options
-			foreach ( $cf['plugin'] as $lca => $info ) {
-				delete_option( $lca.'_umsg' );
-				delete_option( $lca.'_utime' );
-				delete_option( 'external_updates-'.$info['slug'] );
-			}
-
-			// delete stored notices
-			foreach ( array( 'nag', 'err', 'inf' ) as $type ) {
-				$msg_opt = $cf['lca'].'_notices_'.$type;
-				delete_option( $msg_opt );
-				foreach ( get_users( array( 'meta_key' => $msg_opt ) ) as $user )
-					delete_user_option( $user->ID, $msg_opt );
+						WpssoUser::delete_metabox_prefs( $user->ID );
+					}
+				}
+				foreach ( WpssoTaxonomy::get_public_terms() as $term_id )
+					WpssoTaxonomy::delete_term_meta( $term_id, WPSSO_META_NAME );
 			}
 
 			// delete transients
+			global $wpdb;
 			$dbquery = 'SELECT option_name FROM '.$wpdb->options.' WHERE option_name LIKE \'_transient_timeout_'.$cf['lca'].'_%\';';
 			$expired = $wpdb->get_col( $dbquery ); 
 			foreach( $expired as $transient ) { 

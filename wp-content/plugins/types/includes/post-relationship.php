@@ -11,9 +11,12 @@ add_action( 'wpcf_custom_types_save', 'wpcf_pr_custom_types_save_action' );
  */
 function wpcf_post_relationship_init() {
     add_thickbox();
-    wp_enqueue_script( 'wpcf-post-relationship',
-            WPCF_EMBEDDED_RELPATH . '/resources/js/post-relationship.js',
-            array('jquery'), WPCF_VERSION );
+    wp_enqueue_script(
+        'wpcf-post-relationship',
+        WPCF_EMBEDDED_RELPATH . '/resources/js/post-relationship.js',
+        array('jquery', 'select2'),
+        WPCF_VERSION
+    );
     add_filter('wpcf_meta_box_order_defaults', 'wpcf_post_relationship_add_metabox', 10, 2);
 }
 
@@ -88,11 +91,11 @@ function wpcf_pr_admin_edit_fields( $parent, $child ) {
     $post_type_parent = get_post_type_object( $parent );
     $post_type_child = get_post_type_object( $child );
     if ( empty( $post_type_parent ) || empty( $post_type_child ) ) {
-        die( __( 'Wrong post types' ) );
+        die( __( 'Wrong post types', 'wpcf' ) );
     }
     $relationships = get_option( 'wpcf_post_relationship', array() );
     if ( !isset( $relationships[$parent][$child] ) ) {
-        die( __( 'Relationship do not exist' ) );
+        die( __( 'Relationship do not exist', 'wpcf' ) );
     }
     $data = $relationships[$parent][$child];
     wp_enqueue_script( 'jquery' );
@@ -154,22 +157,55 @@ function wpcf_pr_admin_edit_fields( $parent, $child ) {
         '#options' => array(
             __( 'Title, all custom fields and parents', 'wpcf' ) => 'all_cf',
             __( 'Do not show management options for this post type', 'wpcf' ) => 'only_list',
-            __( 'All fields, including the standard post fields', 'wpcf' ) => 'all_cf_standardll_cf_standard',
+            __( 'All fields, including the standard post fields', 'wpcf' ) => 'all_cf_standard',
             __( 'Specific fields', 'wpcf' ) => 'specific',
         ),
         '#default_value' => empty( $data['fields_setting'] ) ? 'all_cf' : $data['fields_setting'],
     );
+    /**
+     * check default, to avoid missing configuration
+     */
+    if ( !in_array($form['select']['#default_value'], $form['select']['#options']) ) {
+        $form['select']['#default_value'] = 'all_cf';
+    }
+    /**
+     * build options for "Specific fields"
+     */
     $options = array();
-    $options['_wp_title'] = array(
-        '#title' => __( 'Post title', 'wpcf' ),
-        '#name' => 'fields[_wp_title]',
-        '#default_value' => isset( $data['fields']['_wp_title'] ) ? 1 : 0,
+    /**
+     * check and add build-in properites
+     */
+    $check_support = array(
+        'title' => array(
+            'name' => '_wp_title',
+            'title' => __( 'Post title', 'wpcf' )
+        ),
+        'editor' => array(
+            'name' => '_wp_body',
+            'title' => __( 'Post body', 'wpcf' )
+        ),
+        'excerpt' => array(
+            'name' => '_wp_excerpt',
+            'title' => __( 'Post excerpt', 'wpcf' )
+        ),
+        'thumbnail' => array(
+            'name' => '_wp_featured_image',
+            'title' => __( 'Post featured image', 'wpcf' )
+        ),
     );
-    $options['_wp_body'] = array(
-        '#title' => __( 'Post body', 'wpcf' ),
-        '#name' => 'fields[_wp_body]',
-        '#default_value' => isset( $data['fields']['_wp_body'] ) ? 1 : 0,
-    );
+    foreach ( $check_support as $child_field_key => $child_field_data ) {
+        if ( !post_type_supports( $child, $child_field_key ) ) {
+            continue;
+        }
+        $options[$child_field_data['name']] = array(
+            '#title' => $child_field_data['title'],
+            '#name' => sprintf('fields[%s]', $child_field_data['name']),
+            '#default_value' => isset( $data['fields'][$child_field_data['name']] ) ? 1 : 0,
+        );
+    }
+    /**
+     * add custom fields
+     */
     $options = $options + $options_cf;
     $temp_belongs = wpcf_pr_admin_get_belongs( $child );
     foreach ( $temp_belongs as $temp_parent => $temp_data ) {
@@ -182,12 +218,22 @@ function wpcf_pr_admin_edit_fields( $parent, $child ) {
         $options[$temp_parent]['#name'] = 'fields[_wpcf_pr_parents][' . $temp_parent . ']';
         $options[$temp_parent]['#default_value'] = isset( $data['fields']['_wpcf_pr_parents'][$temp_parent] ) ? 1 : 0;
     }
+    /**
+     * remove "Specific fields" if there is no fields
+     */
+    if ( empty($options) ) {
+        unset($form['select']['#options'][__('Specific fields', 'wpcf')]);
+        if ('specific' == $form['select']['#default_value']) {
+            $form['select']['#default_value'] = 'all_cf';
+        }
+    }
+
     // Taxonomies
     $taxonomies = get_object_taxonomies( $post_type_child->name, 'objects' );
     if ( !empty( $taxonomies ) ) {
         foreach ( $taxonomies as $tax_id => $taxonomy ) {
             $options[$tax_id] = array();
-            $options[$tax_id]['#title'] = sprintf( __('Taxonomy - %s', ''), $taxonomy->label );
+            $options[$tax_id]['#title'] = sprintf( __('Taxonomy - %s', 'wpcf'), $taxonomy->label );
             $options[$tax_id]['#name'] = 'fields[_wpcf_pr_taxonomies][' . $tax_id . ']';
             $options[$tax_id]['#default_value'] = isset( $data['fields']['_wpcf_pr_taxonomies'][$tax_id] ) ? 1 : 0;
         }
@@ -367,11 +413,10 @@ function wpcf_admin_metabox_relationship($post_type)
                         . '&KeepThis=true&TB_iframe=true' )
                 . '" class="thickbox" title="'
                 . __('Select child fields to be displayed', 'wpcf') . '">('
-                . __( 'Edit fields' ) . ')</a>&nbsp;&nbsp;' : ''
+                . __( 'Edit fields', 'wpcf' ) . ')</a>&nbsp;&nbsp;' : ''
                 . '<a href="javascript:void(0);" style="color:Gray;" title="'
-                . __( 'Please save the page first, before you can edit the child items',
-                        'wpcf' ) . '">('
-                . __( 'Edit fields' ) . ')</a>&nbsp;&nbsp;';
+                . __( 'Please save the page first, before you can edit the child items', 'wpcf' ) . '">('
+                . __( 'Edit fields', 'wpcf' ) . ')</a>&nbsp;&nbsp;';
         if ( is_rtl() ) {
             $options[$temp_post_type_slug]['#before'] = '<div style="float:right;margin-left:10px;">';
             $options[$temp_post_type_slug]['#after'] .= '</div>';
@@ -390,10 +435,8 @@ function wpcf_admin_metabox_relationship($post_type)
     $form['table-pr-explanation'] = array(
         '#type' => 'markup',
         '#markup' => '<p>'
-        . __( "You can choose which fields will show when editing parent pages.",
-                'wpcf' )
-        . '<br />' . __( "Click on the 'edit' button to select them for each parent.",
-                'wpcf' )
+        . __( "You can choose which fields will show when editing parent pages.", 'wpcf' )
+        . '<br />' . __( "Click on the 'edit' button to select them for each parent.", 'wpcf' )
         . '<br />'
         . sprintf( __( 'Learn about %sPost Type Relationships%s', 'wpcf' ),
                 '<a href="http://wp-types.com/documentation/user-guides/creating-post-type-relationships/" target="_blank">',

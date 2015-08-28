@@ -14,7 +14,20 @@ if ( ! class_exists( 'WpssoSchema' ) ) {
 
 		public function __construct( &$plugin ) {
 			$this->p =& $plugin;
-			add_filter( 'language_attributes', array( &$this, 'add_doctype' ), WPSSO_DOCTYPE_PRIORITY, 1 );
+			$this->p->util->add_plugin_filters( $this, array( 
+				'plugin_image_sizes' => 1,
+			) );
+			add_filter( 'language_attributes', 
+				array( &$this, 'add_doctype' ), WPSSO_DOCTYPE_PRIORITY, 1 );
+		}
+
+		public function filter_plugin_image_sizes( $sizes ) {
+			$sizes['schema_img'] = array(
+				'name' => 'schema',
+				'label' => 'Schema JSON-LD (same as Facebook / Open Graph)',
+				'prefix' => 'og_img'	// use opengraph dimensions
+			);
+			return $sizes;
 		}
 
 		public function add_doctype( $doctype ) {
@@ -46,12 +59,8 @@ if ( ! class_exists( 'WpssoSchema' ) ) {
 						$item_type = 'Article';
 						break;
 				}
-			} elseif ( ( ! is_search() && 
-				! empty( $this->p->options['og_def_author_on_index'] ) && 
-				! empty( $this->p->options['og_def_author_id'] ) ) || ( is_search() && 
-				! empty( $this->p->options['og_def_author_on_search'] ) && 
-				! empty( $this->p->options['og_def_author_id'] ) ) )
-					$item_type = 'Article';
+			} elseif ( $this->p->util->force_default_author() )
+				$item_type = 'Article';
 
 			$item_type = apply_filters( $this->p->cf['lca'].'_doctype_schema_type', $item_type, $post_id, $obj );
 
@@ -73,6 +82,21 @@ if ( ! class_exists( 'WpssoSchema' ) ) {
 
 		public function get_meta_array( $use_post, &$obj, &$meta_og = array() ) {
 			$meta_schema = array();
+
+			if ( ! empty( $this->p->options['add_meta_itemprop_name'] ) ) {
+				if ( ! empty( $meta_og['og:title'] ) )
+					$meta_schema['name'] = $meta_og['og:title'];
+			}
+
+			if ( ! empty( $this->p->options['add_meta_itemprop_headline'] ) ) {
+				if ( ! empty( $meta_og['og:title'] ) )
+					$meta_schema['headline'] = $meta_og['og:title'];
+			}
+
+			if ( ! empty( $this->p->options['add_meta_itemprop_datepublished'] ) ) {
+				if ( ! empty( $meta_og['article:published_time'] ) )
+					$meta_schema['datepublished'] = $meta_og['article:published_time'];
+			}
 
 			if ( ! empty( $this->p->options['add_meta_itemprop_description'] ) ) {
 				$meta_schema['description'] = $this->p->webpage->get_description( $this->p->options['og_desc_len'], 
@@ -96,52 +120,76 @@ if ( ! class_exists( 'WpssoSchema' ) ) {
 			return apply_filters( $this->p->cf['lca'].'_meta_schema', $meta_schema, $use_post, $obj );
 		}
 
-		public function get_json_array( $author_id = false ) {
+		public function get_json_array( $post_id = false, $author_id = false, $size_name = 'thumbnail' ) {
 			$json_array = array();
 
+			if ( ! empty( $this->p->options['schema_website_json'] ) &&
+				( $json_script = $this->get_website_json_script( $post_id ) ) !== false )
+					$json_array[] = $json_script;
+
 			if ( ! empty( $this->p->options['schema_author_json'] ) && ! empty( $author_id ) &&
-				( $json_script = $this->p->mods['util']['user']->get_person_json_script( $author_id, 
-					$this->p->cf['lca'].'-opengraph' ) ) !== false )
-						$json_array[] = $json_script;
+				( $json_script = $this->p->mods['util']['user']->get_person_json_script( $author_id, $size_name ) ) !== false )
+					$json_array[] = $json_script;
 
-			if ( ! empty( $this->p->options['schema_publisher_json'] ) ) {
-				$website_url = get_site_url();
-				$logo_url = $this->p->options['schema_logo_url'];
-				$og_image = $this->p->media->get_default_image( 1, 
-					$this->p->cf['lca'].'-opengraph', false );
-				if ( count( $og_image ) > 0 ) {
-					$image = reset( $og_image );
-					$image_url = $image['og:image'];
-				} else $image_url = '';
-
-				$json_script = '<script type="application/ld+json">{
-	"@context" : "http://schema.org",
-	"@type" : "Organization",
-	"url" : "'.$website_url.'",
-	"logo" : "'.$logo_url.'",
-	"image" : "'.$image_url.'",
-	"sameAs" : ['."\n";
-				foreach ( array(
-					'seo_publisher_url',
-					'fb_publisher_url',
-					'linkedin_publisher_url',
-					'tc_site',
-				) as $key ) {
-					$sameAs = isset( $this->p->options[$key] ) ?
-						trim( $this->p->options[$key] ) : '';
-					if ( empty( $sameAs ) )
-						continue;
-
-					if ( $key === 'tc_site' )
-						$sameAs = 'https://twitter.com/'.preg_replace( '/^@/', '', $sameAs );
-
-					if ( strpos( $sameAs, '://' ) !== false )
-						$json_script .= "\t\t\"".$sameAs."\",\n";
-				}
-				$json_array[] = rtrim( $json_script, ",\n" )."\n\t]\n}</script>\n";
-			}
+			if ( ! empty( $this->p->options['schema_publisher_json'] ) &&
+				( $json_script = $this->get_organization_json_script( $size_name ) ) !== false )
+					$json_array[] = $json_script;
 
 			return $json_array;	// must be an array
+		}
+
+		public function get_website_json_script( $post_id = false ) {
+			$home_url = get_bloginfo( 'url' );	// equivalent to get_home_url()
+			// pass options array to allow fallback if locale option does not exist
+			$site_name = $this->p->og->get_site_name( $post_id );
+			$json_script = '<script type="application/ld+json">{
+	"@context":"http://schema.org",
+	"@type":"WebSite",
+	"url":"'.$home_url.'",
+	"name":"'.$site_name.'",
+	"potentialAction":{
+		"@type":"SearchAction",
+		"target":"'.$home_url.'?s={search_term_string}",
+		"query-input":"required name=search_term_string"
+	}
+}</script>';
+			return $json_script;
+		}
+
+		public function get_organization_json_script( $size_name = 'thumbnail') {
+			$home_url = get_bloginfo( 'url' );	// equivalent to get_home_url()
+			$logo_url = $this->p->options['schema_logo_url'];
+			$og_image = $this->p->media->get_default_image( 1, $this->p->cf['lca'].'-schema', false );
+			if ( count( $og_image ) > 0 ) {
+				$image = reset( $og_image );
+				$image_url = $image['og:image'];
+			} else $image_url = '';
+
+			$json_script = '<script type="application/ld+json">{
+	"@context":"http://schema.org",
+	"@type":"Organization",
+	"url":"'.$home_url.'",
+	"logo":"'.$logo_url.'",
+	"image":"'.$image_url.'",
+	"sameAs":['."\n";
+			foreach ( array(
+				'seo_publisher_url',
+				'fb_publisher_url',
+				'linkedin_publisher_url',
+				'tc_site',
+			) as $key ) {
+				$sameAs = isset( $this->p->options[$key] ) ?
+					trim( $this->p->options[$key] ) : '';
+				if ( empty( $sameAs ) )
+					continue;
+
+				if ( $key === 'tc_site' )
+					$sameAs = 'https://twitter.com/'.preg_replace( '/^@/', '', $sameAs );
+
+				if ( strpos( $sameAs, '://' ) !== false )
+					$json_script .= "\t\t\"".$sameAs."\",\n";
+			}
+			return rtrim( $json_script, ",\n" )."\n\t]\n}</script>\n";
 		}
 	}
 }

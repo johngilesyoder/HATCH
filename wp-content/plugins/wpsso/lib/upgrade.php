@@ -25,6 +25,16 @@ if ( ! class_exists( 'WpssoOptionsUpgrade' ) && class_exists( 'WpssoOptions' ) )
 			'tc_prod_def_l2' => 'tc_prod_def_label2',
 			'tc_prod_def_d2' => 'tc_prod_def_data2',
 			'og_publisher_url' => 'fb_publisher_url',
+			'add_meta_property_og:video' => 'add_meta_property_og:video:url',
+			'twitter_shortener' => 'plugin_shortener',
+			'stumble_js_loc' => 'stumble_script_loc',	// wpsso ssb
+			'pin_js_loc' => 'pin_script_loc',		// wpsso ssb
+			'tumblr_js_loc' => 'tumblr_script_loc',		// wpsso ssb
+			'gp_js_loc' => 'gp_script_loc',			// wpsso ssb
+			'fb_js_loc' => 'fb_script_loc',			// wpsso ssb
+			'twitter_js_loc' => 'twitter_script_loc',	// wpsso ssb
+			'buffer_js_loc' => 'buffer_script_loc',		// wpsso ssb
+			'linkedin_js_loc' => 'linkedin_script_loc',	// wpsso ssb
 		);
 
 		protected $p;
@@ -36,12 +46,16 @@ if ( ! class_exists( 'WpssoOptionsUpgrade' ) && class_exists( 'WpssoOptions' ) )
 
 		// def_opts accepts output from functions, so don't force reference
 		public function options( $options_name, &$opts = array(), $def_opts = array() ) {
-			$opts = SucomUtil::rename_keys( $opts, $this->renamed_keys );
 
-			// custom value changes for regular options
-			if ( $options_name == constant( $this->p->cf['uca'].'_OPTIONS_NAME' ) ) {
+			// retrieve the first numeric string
+			$opts_version = empty( $opts['options_version'] ) ? 0 :
+				preg_replace( '/^[^0-9]*([0-9]*).*$/', '$1', $opts['options_version'] );
 
-				if ( version_compare( $opts['options_version'], 260, '<=' ) ) {
+			if ( $options_name === constant( 'WPSSO_OPTIONS_NAME' ) ) {
+
+				$opts = SucomUtil::rename_keys( $opts, $this->renamed_keys );
+
+				if ( version_compare( $opts_version, 260, '<=' ) ) {
 					if ( $opts['og_img_width'] == 1200 &&
 						$opts['og_img_height'] == 630 &&
 						! empty( $opts['og_img_crop'] ) ) {
@@ -58,7 +72,7 @@ if ( ! class_exists( 'WpssoOptionsUpgrade' ) && class_exists( 'WpssoOptions' ) )
 					}
 				}
 
-				if ( version_compare( $opts['options_version'], 270, '<=' ) ) {
+				if ( version_compare( $opts_version, 270, '<=' ) ) {
 					foreach ( $opts as $key => $val ) {
 						if ( strpos( $key, 'inc_' ) === 0 ) {
 							$new_key = '';
@@ -76,10 +90,18 @@ if ( ! class_exists( 'WpssoOptionsUpgrade' ) && class_exists( 'WpssoOptions' ) )
 						}
 					}
 				}
+
+			} elseif ( $options_name === constant( 'WPSSO_SITE_OPTIONS_NAME' ) )
+				$opts = SucomUtil::rename_keys( $opts, $this->renamed_site_keys );
+
+			if ( version_compare( $opts_version, 342, '<=' ) ) {
+				if ( isset( $opts['plugin_file_cache_hrs'] ) ) {
+					$opts['plugin_file_cache_exp'] = $opts['plugin_file_cache_hrs'] * 3600;
+					unset( $opts['plugin_file_cache_hrs'] );
+				}
 			}
 
-			$opts = $this->sanitize( $opts, $def_opts );	// cleanup excess options and sanitize
-			return $opts;
+			return $this->sanitize( $opts, $def_opts );	// cleanup options and sanitize
 		}
 	}
 }

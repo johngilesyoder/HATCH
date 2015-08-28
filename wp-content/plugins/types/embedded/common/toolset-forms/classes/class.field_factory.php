@@ -2,10 +2,6 @@
 
 /**
  *
- * $HeadURL: http://plugins.svn.wordpress.org/types/tags/1.6.6.2/embedded/common/toolset-forms/classes/class.field_factory.php $
- * $LastChangedDate: 2015-03-02 10:49:00 +0000 (Mon, 02 Mar 2015) $
- * $LastChangedRevision: 1103173 $
- * $LastChangedBy: iworks $
  *
  */
 
@@ -85,6 +81,12 @@ abstract class FieldFactory extends FieldAbstract
     {
         global $post;
         $value = $this->_value;
+        /**
+         * default value
+         */
+        if ( empty( $value ) && array_key_exists('user_default_value', $this->_data)) {
+            $value = stripcslashes($this->_data['user_default_value']);
+        }
         $value = apply_filters( 'wpcf_fields_value_get', $value, $post );
         if ( array_key_exists('slug', $this->_data ) ) {
             $value = apply_filters( 'wpcf_fields_slug_' . $this->_data['slug'] . '_value_get', $value, $post );
