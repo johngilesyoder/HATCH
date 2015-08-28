@@ -1115,7 +1115,7 @@ abstract class GFFeedAddOn extends GFAddOn {
 		return $total;
 	}
 
-	protected function has_feed( $form_id, $meets_conditional_logic = null ) {
+	public function has_feed( $form_id, $meets_conditional_logic = null ) {
 
 		$feeds = $this->get_feeds( $form_id );
 		if ( ! $feeds ) {

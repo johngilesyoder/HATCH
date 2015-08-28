@@ -516,6 +516,12 @@ class GFEntryDetail {
 								$update_button_id = $mode == 'view' ? 'gform_edit_button' : 'gform_update_button';
 								$button_click     = $mode == 'view' ? "jQuery('#screen_mode').val('edit');" : "jQuery('#action').val('update'); jQuery('#screen_mode').val('view');";
 								$update_button    = '<input id="' . $update_button_id . '" ' . $disabled . ' class="button button-large button-primary" type="submit" tabindex="4" value="' . esc_attr( $button_text ) . '" name="save" onclick="' . $button_click . '"/>';
+
+								/**
+								 * A filter to allow the modification of the button to update an entry detail
+								 *
+								 * @param string $update_button The HTML Rendered for the Entry Detail update button
+								 */
 								echo apply_filters( 'gform_entrydetail_update_button', $update_button );
 								if ( $mode == 'edit' ) {
 									echo '&nbsp;&nbsp;<input class="button button-large" type="submit" tabindex="5" value="' . esc_attr__( 'Cancel', 'gravityforms' ) . '" name="cancel" onclick="jQuery(\'#screen_mode\').val(\'view\');"/>';
@@ -739,6 +745,11 @@ class GFEntryDetail {
 				</select>
 				<?php
 				$apply_button = '<input type="submit" class="button" value="' . esc_attr__( 'Apply', 'gravityforms' ) . '" onclick="jQuery(\'#action\').val(\'bulk\');" style="width: 50px;" />';
+				/**
+				 * A filter to allow you to modify the note apply button
+				 *
+				 * @param string $apply_button The Apply Button HTML
+				 */
 				echo apply_filters( 'gform_notes_apply_button', $apply_button );
 				?>
 			</div>
@@ -803,6 +814,12 @@ class GFEntryDetail {
 						<textarea name="new_note" style="width:100%; height:50px; margin-bottom:4px;"></textarea>
 						<?php
 						$note_button = '<input type="submit" name="add_note" value="' . esc_attr__( 'Add Note', 'gravityforms' ) . '" class="button" style="width:auto;padding-bottom:2px;" onclick="jQuery(\'#action\').val(\'add_note\');"/>';
+
+						/**
+						 * Allows for modification of the "Add Note" button for Entry Notes
+						 *
+						 * @param string $note_button The HTML for the "Add Note" Button
+						 */
 						echo apply_filters( 'gform_addnote_button', $note_button );
 
 						if ( ! empty( $emails ) ) {
@@ -1049,6 +1066,7 @@ class GFEntryDetail {
 				<div id="submitcomment" class="submitbox">
 					<div id="minor-publishing" style="padding:10px;">
 						<?php
+
 						$payment_status = apply_filters( 'gform_payment_status', $lead['payment_status'], $form, $lead );
 						if ( ! empty( $payment_status ) ){
 							?>

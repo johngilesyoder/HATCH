@@ -1570,7 +1570,7 @@ class GFFormsModel {
 
 		}
 
-		return apply_filters( 'gform_save_field_value', $value, $lead, $field, $form, $input_id );
+		return gf_apply_filters( 'gform_save_field_value', array( $form['id'], $field->id ), $value, $lead, $field, $form, $input_id );
 	}
 
 	public static function refresh_product_cache( $form, $lead, $use_choice_text = false, $use_admin_label = false ) {
@@ -2906,7 +2906,7 @@ class GFFormsModel {
 
 		if ( ! rgblank( $value ) ) {
 
-			$value           = apply_filters( 'gform_save_field_value', $value, $lead, $field, $form, $input_id );
+			$value           = gf_apply_filters( 'gform_save_field_value', array( $form['id'], $field->id ), $value, $lead, $field, $form, $input_id );
 			$truncated_value = GFCommon::safe_substr( $value, 0, GFORMS_MAX_FIELD_LENGTH );
 
 			if ( $lead_detail_id > 0 ) {
@@ -3374,7 +3374,7 @@ class GFFormsModel {
 		if ( $apply_filter ) {
 			$field    = RGFormsModel::get_field( $form, $field_number );
 			$input_id = (string) $field_number == (string) $field->id ? '' : $field_number;
-			$val      = apply_filters( 'gform_get_input_value', $val, $lead, $field, $input_id );
+			$val      = gf_apply_filters( 'gform_get_input_value', array( $field->formId, $field->id, $input_id ), $val, $lead, $field, $input_id );
 		}
 
 		return $val;
@@ -3638,7 +3638,7 @@ class GFFormsModel {
 				// skip types html, page and section?
 				if ( is_array( $inputs ) ) {
 					foreach ( $inputs as $input ) {
-						$lead[ (string) $input['id'] ] = apply_filters( 'gform_get_input_value', rgar( $lead, (string) $input['id'] ), $lead, $field, $input['id'] );
+						$lead[ (string) $input['id'] ] = gf_apply_filters( 'gform_get_input_value', array( $form['id'], $field->id, $input['id'] ), rgar( $lead, (string) $input['id'] ), $lead, $field, $input['id'] );
 					}
 				} else {
 
@@ -3648,7 +3648,7 @@ class GFFormsModel {
 						$value = GFCommon::decrypt( $value );
 					}
 
-					$lead[ $field->id ] = apply_filters( 'gform_get_input_value', $value, $lead, $field, '' );
+					$lead[ $field->id ] = gf_apply_filters( 'gform_get_input_value', array( $form['id'], $field->id ), $value, $lead, $field, '' );
 
 				}
 			}
@@ -4616,7 +4616,7 @@ class GFFormsModel {
 	}
 
 	private static function get_lead_db_columns() {
-		return array( 'id', 'form_id', 'post_id', 'date_created', 'is_starred', 'is_read', 'ip', 'source_url', 'user_agent', 'currency', 'payment_status', 'payment_date', 'payment_amount', 'transaction_id', 'is_fulfilled', 'created_by', 'transaction_type', 'status' );
+		return array( 'id', 'form_id', 'post_id', 'date_created', 'is_starred', 'is_read', 'ip', 'source_url', 'user_agent', 'currency', 'payment_status', 'payment_date', 'payment_amount', 'transaction_id', 'is_fulfilled', 'created_by', 'transaction_type', 'status', 'payment_method' );
 	}
 
 	private static function get_info_search_where( $search_criteria ) {
@@ -5163,7 +5163,7 @@ function gform_get_meta_values_for_entries( $entry_ids, $meta_keys ) {
 /**
  * Add or update metadata associated with an entry
  *
- * Data will be serialized; no sanitation is necessary.
+ * Data will be serialized. Don't forget to sanitize user input.
  *
  * @param int $entry_id The ID of the entry to be updated
  * @param string $meta_key The key for the meta data to be stored
@@ -5202,7 +5202,7 @@ function gform_update_meta( $entry_id, $meta_key, $meta_value, $form_id = null )
 /**
  * Add metadata associated with an entry
  *
- * Data will be serialized; no sanitation is necessary.
+ * Data will be serialized; Don't forget to sanitize user input.
  *
  * @param int $entry_id The ID of the entry where metadata is to be added
  * @param string $meta_key The key for the meta data to be stored

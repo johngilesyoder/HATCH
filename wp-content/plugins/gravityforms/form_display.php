@@ -1286,6 +1286,8 @@ class GFFormDisplay {
 
 			//ignore validation if field is hidden or admin only
 			if ( RGFormsModel::is_field_hidden( $form, $field, $field_values ) || $field->adminOnly ) {
+				$field->is_field_hidden = true;
+
 				continue;
 			}
 
@@ -1344,9 +1346,10 @@ class GFFormDisplay {
 		$is_last_page = self::get_target_page( $form, $page_number, $field_values ) == '0';
 		if ( $is_valid && $is_last_page && self::is_form_empty( $form ) ) {
 			foreach ( $form['fields'] as &$field ) {
-				$field->failed_validation = true;
+				$field->failed_validation  = true;
 				$field->validation_message = esc_html__( 'At least one field must be filled out', 'gravityforms' );
-				$is_valid = false;
+				$is_valid                  = false;
+				unset( $field->is_field_hidden );
 			}
 		}
 
@@ -1361,10 +1364,11 @@ class GFFormDisplay {
 	public static function is_form_empty( $form ) {
 
 		foreach ( $form['fields'] as $field ) {
-			if ( ! self::is_empty( $field, $form['id'] ) ) {
+			if ( ! self::is_empty( $field, $form['id'] ) && ! $field->is_field_hidden ) {
 				return false;
 			}
 		}
+
 		return true;
 	}
 
@@ -1707,23 +1711,22 @@ class GFFormDisplay {
 
 			//-- Saving default values so that they can be restored when toggling conditional logic ---
 			$field_val  = '';
-			$input_type = RGFormsModel::get_input_type( $field );
-			$inputs = $field->get_entry_inputs();
+			$input_type = $field->get_input_type();
+			$inputs     = $field->get_entry_inputs();
 
 			//get parameter value if pre-populate is enabled
 			if ( $field->allowsPrepopulate ) {
-				if ( $input_type == 'checkbox' ){
+				if ( $input_type == 'checkbox' ) {
 					$field_val = RGFormsModel::get_parameter_value( $field->inputName, $field_values, $field );
-					if ( ! is_array( $field_val ) ){
+					if ( ! is_array( $field_val ) ) {
 						$field_val = explode( ',', $field_val );
 					}
-				}
-				else if ( is_array( $inputs ) ) {
+				} elseif ( is_array( $inputs ) ) {
 					$field_val = array();
 					foreach ( $inputs as $input ) {
-						$field_val[ "input_{$input['id']}" ] = RGFormsModel::get_parameter_value( rgar( $input, 'name' ), $field_values, $field );
+						$field_val["input_{$input['id']}"] = RGFormsModel::get_parameter_value( rgar( $input, 'name' ), $field_values, $field );
 					}
-				} else if ( $input_type == 'time' ) { // maintained for backwards compatibility. The Time field now has an inputs array.
+				} elseif ( $input_type == 'time' ) { // maintained for backwards compatibility. The Time field now has an inputs array.
 					$parameter_val = RGFormsModel::get_parameter_value( $field->inputName, $field_values, $field );
 					if ( ! empty( $parameter_val ) && preg_match( '/^(\d*):(\d*) ?(.*)$/', $parameter_val, $matches ) ) {
 						$field_val   = array();
@@ -1731,9 +1734,17 @@ class GFFormDisplay {
 						$field_val[] = esc_attr( $matches[2] ); //minute
 						$field_val[] = rgar( $matches, 3 );     //am or pm
 					}
-				} else if ( $input_type == 'list' ) {
+				} elseif ( $input_type == 'list' ) {
 					$parameter_val = RGFormsModel::get_parameter_value( $field->inputName, $field_values, $field );
 					$field_val     = is_array( $parameter_val ) ? $parameter_val : explode( ',', str_replace( '|', ',', $parameter_val ) );
+
+					if ( is_array( rgar( $field_val, 0 ) ) ) {
+						$list_values = array();
+						foreach ( $field_val as $row ) {
+							$list_values = array_merge( $list_values, array_values( $row ) );
+						}
+						$field_val = $list_values;
+					}
 				} else {
 					$field_val = RGFormsModel::get_parameter_value( $field->inputName, $field_values, $field );
 				}
@@ -1745,7 +1756,7 @@ class GFFormDisplay {
 			if ( is_array( $field->choices ) && $input_type != 'list' ) {
 
 				//radio buttons start at 0 and checkboxes start at 1
-				$choice_index = $input_type == 'radio' ? 0 : 1;
+				$choice_index     = $input_type == 'radio' ? 0 : 1;
 				$is_pricing_field = GFCommon::is_pricing_field( $field->type );
 
 				foreach ( $field->choices as $choice ) {
@@ -1754,14 +1765,14 @@ class GFFormDisplay {
 						$choice_index++;
 					}
 
-					$is_prepopulated = is_array( $field_val ) ? in_array( $choice['value'], $field_val ) : $choice['value'] == $field_val;
-					$is_choice_selected = rgar( $choice, 'isSelected' ) ||  $is_prepopulated;
+					$is_prepopulated    = is_array( $field_val ) ? in_array( $choice['value'], $field_val ) : $choice['value'] == $field_val;
+					$is_choice_selected = rgar( $choice, 'isSelected' ) || $is_prepopulated;
 
 					if ( $is_choice_selected && $input_type == 'select' ) {
 						$price = GFCommon::to_number( rgar( $choice, 'price' ) ) == false ? 0 : GFCommon::to_number( rgar( $choice, 'price' ) );
-						$val = $is_pricing_field && $field->type != 'quantity' ? $choice['value'] . '|' . $price: $choice['value'];
+						$val   = $is_pricing_field && $field->type != 'quantity' ? $choice['value'] . '|' . $price : $choice['value'];
 						$default_values[ $field->id ] = $val;
-					} else if ( $is_choice_selected ) {
+					} elseif ( $is_choice_selected ) {
 						if ( ! isset( $default_values[ $field->id ] ) ) {
 							$default_values[ $field->id ] = array();
 						}
@@ -1770,9 +1781,7 @@ class GFFormDisplay {
 					}
 					$choice_index ++;
 				}
-			} else if ( ! empty( $field_val ) ) {
-
-				$input_type = GFFormsModel::get_input_type( $field );
+			} elseif ( ! empty( $field_val ) ) {
 
 				switch ( $input_type ) {
 					case 'date':
@@ -1790,7 +1799,7 @@ class GFFormDisplay {
 						break;
 					case 'time':
 						if ( is_array( $field_val ) ) {
-							$ampm_key = key( array_slice( $field_val, - 1, 1, true ) );
+							$ampm_key               = key( array_slice( $field_val, - 1, 1, true ) );
 							$field_val[ $ampm_key ] = strtolower( $field_val[ $ampm_key ] );
 						}
 						break;

@@ -494,7 +494,7 @@ class GF_Field_List extends GF_Field {
 
 		$list_values = $column_values = unserialize( $value );
 
-		if ( ! empty( $column_num ) && $this->enableColumns ) {
+		if ( isset( $column_num ) && is_numeric( $column_num ) && $this->enableColumns ) {
 			$column        = rgars( $this->choices, "{$column_num}/text" );
 			$column_values = array();
 			foreach ( $list_values as $value ) {

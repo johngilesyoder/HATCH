@@ -1,4 +1,57 @@
 -------------------------------------------------------------------------------------------------------------------
+Version 1.9.13.11
+    - Fixed an issue with PHP7 list() function with the calculation field.
+    - Fixed a PHP notice which could occur if a required radio type Product field was submitted without a choice being selected.
+    - Fixed an issue with empty form validation not taking field conditional logic into account.
+    - API: Fixed a JS error on the API settings page.
+
+-------------------------------------------------------------------------------------------------------------------
+Version 1.9.13.10
+    - Fixed an issue with the list field values restored by conditional logic when the field is populated by gform_field_value using the new array format.
+    - API: Fixed an issue with the API settings page.
+
+-------------------------------------------------------------------------------------------------------------------
+Version 1.9.13.9
+    - Fixed an issue with GFNotification::is_valid_notification_email().
+
+-------------------------------------------------------------------------------------------------------------------
+Version 1.9.13.8
+    - Added a deactivation hook to flush the Gravity Forms Cache including persistent transients. This provides a workaround for a rare issue on WordPress 4.3 where Gravity Forms user locks are not released automatically on some systems.
+    - AF: Updated GFFeedAddon::has_feed() to be a public method.
+
+-------------------------------------------------------------------------------------------------------------------
+Version 1.9.13.7
+    - Fixed an issue with GF_Field_List::get_value_export retrieving the values for the first column when multiple columns enabled.
+
+-------------------------------------------------------------------------------------------------------------------
+Version 1.9.13.6
+    - Updated gform_save_field_value and gform_get_input_value hooks to trigger form and field specific versions
+
+-------------------------------------------------------------------------------------------------------------------
+Version 1.9.13.5
+	- API: Added debug statements for logging to the Web API
+	- API: Fixed issue where the data property of the error object was not being populated for the Web API
+	- API: Fixed notices
+	- Added payment_method to the lead database columns list
+
+-------------------------------------------------------------------------------------------------------------------
+Version 1.9.13.4
+    - Fixed issue where checkbox values containing ampersands were not correctly exported
+
+-------------------------------------------------------------------------------------------------------------------
+Version 1.9.13.3
+    - Updated change to Akismet setting in 1.9.13.2 to be probably sanitized
+    
+-------------------------------------------------------------------------------------------------------------------
+Version 1.9.13.2
+    - Fixed issue where form markup was still generated for custom shortcode actions
+    - Fixed issue where Akismet setting was showing as "on" when it was "off"
+
+-------------------------------------------------------------------------------------------------------------------
+Version 1.9.13.1
+    - Updated the Dutch translation.
+
+-------------------------------------------------------------------------------------------------------------------
 Version 1.9.13
 
     - Added security enhancements. Credits to Jonathan Desrosiers & Aaron Ware of Linchpin and Thomas Kräftner (http://kraftner.com).

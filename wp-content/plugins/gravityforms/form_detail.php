@@ -2366,7 +2366,11 @@ class GFFormDetail {
 					<?php
 					if ( GFCommon::current_user_can_any( 'gravityforms_delete_forms' ) ) {
 						$trash_link = '<a class="submitdelete" title="' . __( 'Move this form to the trash', 'gravityforms' ) . '" onclick="if(confirm(\'' . __( "Would you like to move this form to the trash? \'Cancel\' to stop. \'OK\' to continue", 'gravityforms' ) . '\')){ gf_vars.isFormTrash = true; jQuery(\'#form_trash\')[0].submit();} else{return false;}">' . __( 'Move to Trash', 'gravityforms' ) . '</a>';
-						$trash_link = apply_filters( 'gform_form_delete_link', $trash_link ); // deprecated
+
+						/**
+						 * @deprecated
+						 */
+						$trash_link = apply_filters( 'gform_form_delete_link', $trash_link );
 
 						/**
 						 * Allows for modification of the Form Trash Link

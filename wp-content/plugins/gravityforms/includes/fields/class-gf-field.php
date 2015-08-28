@@ -338,7 +338,7 @@ class GF_Field extends stdClass implements ArrayAccess {
 
 				return false;
 			} elseif ( $this->enablePrice ) {
-				list( $label, $price ) = explode( '|', $value );
+				list( $label, $price ) = rgexplode( '|', $value, 2 );
 				$is_empty = ( strlen( trim( $price ) ) <= 0 );
 
 				return $is_empty;

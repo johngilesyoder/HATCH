@@ -160,7 +160,7 @@ class GFSettings {
 			update_option( 'rg_gforms_enable_html5', (bool) rgpost( 'gforms_enable_html5' ) );
 			update_option( 'gform_enable_noconflict', (bool) rgpost( 'gform_enable_noconflict' ) );
 			update_option( 'gform_enable_background_updates', (bool) rgpost( 'gform_enable_background_updates' ) );
-			update_option( 'rg_gforms_enable_akismet', (bool) rgpost( 'gforms_enable_akismet' ) );
+			update_option( 'rg_gforms_enable_akismet', self::get_posted_akismet_setting() ); // do not cast to bool, option is enabled by default; need a "1" or a "0"
 			update_option( 'rg_gforms_captcha_public_key', sanitize_text_field( rgpost( 'gforms_captcha_public_key' ) ) );
 			update_option( 'rg_gforms_captcha_private_key', sanitize_text_field( rgpost( 'gforms_captcha_private_key' ) ) );
 
@@ -589,4 +589,20 @@ class GFSettings {
 
 		return $subview;
 	}
+
+	public static function get_posted_akismet_setting() {
+
+		$akismet_setting = rgpost( 'gforms_enable_akismet' );
+
+		if( $akismet_setting ) {
+			$akismet_setting = '1';
+		} elseif( $akismet_setting === false ) {
+			$akismet_setting = false;
+		} else {
+			$akismet_setting = '0';
+		}
+
+		return $akismet_setting;
+	}
+
 }
