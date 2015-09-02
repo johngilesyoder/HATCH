@@ -1,0 +1,72 @@
+// what-is-hatch.less
+// -----------------------------------------------------------------
+
+.what-is-hatch {
+  background: @gray-bg;
+  text-align: center;
+  padding: 60px 0;
+  .what-is-hatch-wrapper {
+    .make-md-column(10);
+    .make-md-column-offset(1);
+  }
+  h2 {
+    margin: 0 0 25px;
+    font-size: 32px;
+    font-weight: 400;
+    .hatch-logo {
+      font-size: 38px;
+    }
+  }
+  p {
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0 0 40px;
+  }
+  .btn-primary {
+    font-weight: 700;
+    padding: 0 30px;
+    height: 36px;
+    line-height: 36px;
+  }
+}
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .what-is-hatch {
+    padding: 40px 0;
+  }
+  
+}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .what-is-hatch {
+    padding: 30px 0;
+    p {
+      font-size: 16px;
+      line-height: 26px;
+      margin: 0 0 30px;
+    }
+    .btn-primary {
+      height: 40px;
+      line-height: 40px;
+      font-size: 18px;
+    }
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {}

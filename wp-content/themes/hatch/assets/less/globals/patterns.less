@@ -1,0 +1,149 @@
+// patterns.less
+// -----------------------------------------------------------------
+
+.hatch-logo {
+  color: @brand-secondary;
+  font-family: @font-family-klavika-bold;
+  text-transform: uppercase;
+}
+
+.vertical-center {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.vertical-center-parent {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.alert {
+  ul {
+    margin-top: 10px;
+  }
+  strong {
+    font-weight: normal;
+    
+  }
+}
+
+.gform_wrapper {
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="url"] {
+    .form-control();
+    height: 40px;
+    font-size: 14px !important;
+    padding: 6px 12px !important;
+  }
+  .gfield_radio,
+  .gfield_checkbox {
+    li {
+      padding-left: 10px !important;
+    }
+    label {
+      font-weight: normal;
+    }
+  }
+  textarea {
+    .form-control();
+    padding: 6px 12px !important;
+  }
+  &.gf_browser_chrome ul.gform_fields li.gfield input[type=radio] {
+    margin-left: .1em !important;
+  }
+  .gfield {
+    .form-group();
+  }
+  .gfield_description {
+    font-style: italic;
+  }
+  .top_label {
+    input.medium, 
+    select.medium {
+      width: 100% !important;
+    }
+  }
+  .gform_button {
+    .btn();
+    .btn-primary();
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0 65px;
+    margin-top: 30px;
+  }
+}
+
+.gform_confirmation_wrapper {
+  .gform_confirmation_message {
+    .alert();
+    .alert-success();
+    margin-bottom: 20px;
+  }
+}
+
+.ninja-forms-required-items {
+  display: none;
+}
+
+.ninja-forms-success-msg {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  p {
+    margin: 0;
+  }
+  p:first-child {
+    display: none;
+  }
+  p:last-child {
+    display: none;
+  }
+}
+
+.ninja-forms-field-error {
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #a94442 !Important;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  margin-top: 10px;
+  padding: 10px 15px
+}
+
+.ninja-forms-form-wrap {
+  .textarea-wrap textarea {
+    height: 100px;
+  }
+}
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// Up to tablet
+@media (max-width: 767px) {}
+
+// Up to landscape phone
+@media (max-width: 480px) {}

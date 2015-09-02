@@ -1,0 +1,631 @@
+// home.less
+// -----------------------------------------------------------------
+
+// Custom Fonts
+@import "../globals/fonts.less";
+
+// Bootstrap UI Framework
+@import "../bootstrap/bootstrap.less";
+
+// Wordpress Core Styles
+@import "../globals/wordpress-core.less";
+
+// Custom Variables
+@import "../globals/variables.less";
+
+// Z-index scale
+@import "../globals/z-index.less";
+
+// Colors
+@import "../globals/colors.less";
+
+// Buttons
+@import "../globals/buttons.less";
+
+// Site Header
+@import "../globals/site-header.less";
+
+// Site Footer
+@import "../globals/site-footer.less";
+
+// Patterns
+@import "../globals/patterns.less";
+
+// What is Hatch
+@import "../components/what-is-hatch.less";
+
+// Partners Block
+@import "../components/partners-block.less";
+
+// Flickity
+@import "../components/flickity.less";
+
+.site-header {
+  margin-bottom: 0;
+}
+
+.posts-hero {
+  margin-bottom: 60px;
+  .clearfix();
+  padding: 30px;
+  background: @gray-bg;
+  .tile-carousel {
+    height: 492px;
+    width: 100%;
+    .gallery-cell {
+      height: 100%;
+      width: 1140px;
+    }
+  }
+  .isotope {
+    height: 492px;
+    .clearfix();
+  }
+  .item {
+    float: left;
+    width: 255px;
+    height: 144px;
+    background: #ddd;
+    margin-right: 30px;
+    display: inline-block;
+    .article-wrapper {
+      background-size: cover;
+      background-position: 50% 50%;
+      height: 100%;
+      color: #fff;
+      display: block;
+    }
+    .gradient-wrapper {
+      height: 100%;
+      #gradient > .vertical(rgba(0,0,0,.0001), rgba(0,0,0,1), 40%, 100%);
+    }
+    hgroup {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+    }
+    .post-author {
+      font-family: @font-family-archer;
+      font-style: italic;
+      font-size: 16px;
+      margin: 0 0 4px;
+      font-weight: 600;
+      display: none;
+      color: @brand-secondary;
+    }
+    .post-title {
+      font-size: 16px;
+      font-family: @font-family-sans-serif;
+      line-height: 1.25em;
+      font-weight: 400;
+      margin: 0;
+      letter-spacing: -.02em;
+    }
+    &.size2,
+    &.size3 {
+      width: 540px;
+      .gradient-wrapper {
+        #gradient > .vertical(rgba(0,0,0,.0001), rgba(0,0,0,1), 60%, 100%);
+      }
+      hgroup {
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+      }
+      .post-author {
+        display: block;
+      }
+      .post-title {
+        font-size: 30px;
+        line-height: 1.125em;
+      }
+    }
+    &.size2 {
+      height: 318px;
+    }
+    &.size3 {
+      height: 492px;
+    }
+  }
+}
+
+.section-block {
+  margin-bottom: 70px;
+  .section-header {
+    margin-bottom: 30px;
+    .section-title {
+      font-family: @font-family-klavika-medium;
+      font-size: 28px;
+      color: @brand-secondary;
+      text-transform: uppercase;
+      margin: 0;
+      display: inline-block;
+    }
+    .section-header-links {
+      display: inline;
+    }
+    a {
+      margin-left: 20px;
+      img {
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+.section-conference {
+  .conference-photo {
+    .make-md-column(6);
+    .conference-photo-wrapper {
+      position: relative;
+    }
+    .conference-photo-title {
+      position: absolute;
+      bottom: 5px;
+      left: 15px;
+      color: #fff;
+      font-family: @font-family-tungsten;
+      font-size: 50px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: .01em;
+    }
+  }
+  .conference-info {
+    .make-md-column(6);
+    .conference-title {
+      font-size: 60px;
+      margin: 10px 0 0;
+      line-height: .9em;
+      span {
+        color: #666;
+      }
+    }
+    .conference-date {
+      font-family: @font-family-archer;
+      font-style: italic;
+      color: #000;
+      font-weight: 600;
+      font-size: 21px;
+      margin-bottom: 20px;
+      display: block;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+    .conference-actions {
+      margin-top: 30px;
+      .btn {
+        height: 56px;
+        line-height: 56px;
+      }
+      .btn-apply {
+        font-size: 21px;
+        font-weight: 500;
+        padding: 0 65px;
+      }
+      .btn-learn-more {
+        font-size: 18px;
+        padding: 0 50px;
+      }
+    }
+  }
+}
+
+.section-mentorship {
+  .mentorship-block {
+    .make-md-column(6);
+    .block-wrapper {
+      min-height: 300px;
+      background: @gray-bg;
+      padding: 15px;
+      p {
+        margin: 0;
+        line-height: 21px;
+      }
+      .mentorship-block-img {
+        margin: 0 0 15px;
+        height: 150px;
+        background-size: cover;
+        position: relative;
+        display: block;
+        .mentorship-block-title {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: 0;
+          //background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+          background: -moz-linear-gradient(top,  rgba(0,0,0,0) 40%, rgba(0,0,0,.8) 100%); /* FF3.6+ */
+          background: -webkit-gradient(linear, left top, left bottom, color-stop(40%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,.8))); /* Chrome,Safari4+ */
+          background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 40%,rgba(0,0,0,.8) 100%); /* Chrome10+,Safari5.1+ */
+          background: -o-linear-gradient(top,  rgba(0,0,0,0) 40%,rgba(0,0,0,.8) 100%); /* Opera 11.10+ */
+          background: -ms-linear-gradient(top,  rgba(0,0,0,0) 40%,rgba(0,0,0,.8) 100%); /* IE10+ */
+          background: linear-gradient(to bottom,  rgba(0,0,0,0) 40%,rgba(0,0,0,.8) 100%); /* W3C */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#0000000',GradientType=0 ); /* IE6-8 */
+        }
+        span {
+          position: absolute;
+          bottom: 10px;
+          left: 15px;
+          color: #fff;
+          font-family: @font-family-tungsten;
+          font-size: 50px;
+          font-weight: 500;
+          text-transform: uppercase;
+          letter-spacing: .01em;
+        }
+      }
+    }
+  }
+}
+
+.section-hatchings {
+  .hatching-block {
+    .make-sm-column(4);
+    display: block;
+    text-decoration: none;
+    color: @text-color;
+    position: relative;
+    top: 0;
+    transition: 150ms top;
+    &:hover {
+      top: -3px;
+      color: #000;
+      .block-wrapper {
+        background: @gray-bg-hover;
+      }
+    }
+    .block-wrapper {
+      background: @gray-bg;
+      padding: 10px;
+      transition: 150ms background;
+    }
+    .hatching-block-img {
+      height: 125px;
+      margin-bottom: 10px;
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+    .hatching-title {
+      font-size: 24px;
+      font-family: @font-family-tungsten;
+      letter-spacing: .01em;
+      margin: 0 0 5px; 
+    }
+    .hatching-date,
+    .hatching-location {
+      display: block;
+    }
+  }
+}
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .posts-hero {
+    .tile-carousel {
+      .gallery-cell {
+        width: 940px;
+      }
+    }
+    .isotope {
+      height: 393px;
+    }
+    .tile-carousel {
+      height: 393px;
+    }
+    .item {
+      width: 205px;
+      height: 111px;
+      &.size2 {
+        height: 252px;
+      }
+      &.size3 {
+        height: 393px;
+      }
+      &.size2,
+      &.size3 {
+        width: 440px;
+      }
+    }
+  }
+
+  .section-conference {
+    .conference-info {
+      .conference-actions {
+        .btn-apply {
+          font-size: 18px;
+          padding: 0 40px;
+        }
+        .btn-learn-more {
+          font-size: 16px;
+          padding: 0 30px;
+        }
+      }
+    }
+  }
+
+}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .posts-hero {
+    margin-bottom: 30px;
+    padding: 0;
+    border: 0;
+    .mobile-carousel {
+      height: 450px;
+      .gallery-cell {
+        width: 100%;
+        height: 100%;
+        article {
+          display: block;
+          width: auto;
+          height: 100%;
+          background: #ddd;
+          background-size: cover;
+          background-position: 50% 50%;
+          .article-wrapper {
+            background-size: cover;
+            background-position: 50% 50%;
+            height: 100%;
+            color: #fff;
+            display: block;
+          }
+          .gradient-wrapper {
+            height: 100%;
+            #gradient > .vertical(rgba(0,0,0,.0001), rgba(0,0,0,1), 40%, 100%);
+          }
+          hgroup {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            right: 30px;
+            h1,
+            h2 {
+              color: #fff;
+            }
+            .post-title {
+              font-size: 50px;
+            }
+          }
+          .post-author {
+            font-family: @font-family-archer;
+            font-style: italic;
+            font-size: 16px;
+            margin: 0 0 4px;
+            font-weight: 600;
+          }
+          .post-title {
+            font-size: 24px;
+            font-family: @font-family-tungsten;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .section-conference {
+    .conference-photo {
+      margin-bottom: 30px;
+      .conference-photo-title {
+        bottom: 10px;
+        font-size: 42px;
+        line-height: 1em;
+      }
+    }
+    .conference-info {
+      .conference-date {
+        font-size: 18px;
+      }
+      .conference-actions {
+        margin-top: 30px;
+        .btn {
+        }
+        .btn-apply {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .section-mentorship {
+    .mentorship-block {
+      margin-bottom: 30px;
+      .block-wrapper {
+        min-height: 0;
+        .mentorship-block-img {
+          span {
+            font-size: 42px;
+          }
+        }
+      }
+    }
+  }
+
+  .section-hatchings {
+    .hatching-block {
+      .block-wrapper {
+        min-height: 260px;
+      }
+    }
+  }
+
+}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .posts-hero {
+    margin-bottom: 30px;
+    padding: 0;
+    border: 0;
+    .mobile-carousel {
+      height: 450px;
+      .gallery-cell {
+        width: 100%;
+        height: 100%;
+        article {
+          display: block;
+          width: auto;
+          height: 100%;
+          background: #ddd;
+          background-size: cover;
+          background-position: 50% 50%;
+          .article-wrapper {
+            background-size: cover;
+            background-position: 50% 50%;
+            height: 100%;
+            color: #fff;
+            display: block;
+          }
+          .gradient-wrapper {
+            height: 100%;
+            #gradient > .vertical(rgba(0,0,0,.0001), rgba(0,0,0,1), 40%, 100%);
+          }
+          hgroup {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            right: 30px;
+            h1,
+            h2 {
+              color: #fff;
+            }
+            .post-title {
+              font-size: 24px;
+              line-height: 1.125em;
+              font-weight: 400;
+            }
+          }
+          .post-author {
+            font-family: @font-family-archer;
+            font-style: italic;
+            font-size: 16px;
+            margin: 0 0 4px;
+          }
+          .post-title {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+  .section-block {
+    margin-bottom: 50px;
+    .section-header {
+      margin-bottom: 20px;
+      .section-title {
+        font-family: @font-family-klavika-medium;
+        font-size: 28px;
+        color: @brand-secondary;
+        text-transform: uppercase;
+        margin: 0 0 10px;
+        display: inline-block;
+      }
+      .section-header-links {
+        display: block;
+      }
+      a {
+        margin-left: 0;
+        display: block;
+        margin-bottom: 10px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .section-conference {
+    .conference-photo {
+      margin-bottom: 30px;
+      .conference-photo-title {
+        bottom: 10px;
+        font-size: 42px;
+        line-height: 1em;
+      }
+    }
+    .conference-info {
+      .conference-date {
+        font-size: 18px;
+      }
+      .conference-actions {
+        margin-top: 30px;
+        .btn {
+          width: 100%;
+        }
+        .btn-apply {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .section-mentorship {
+    .mentorship-block {
+      margin-bottom: 15px;
+      .block-wrapper {
+        .mentorship-block-img {
+          span {
+            font-size: 42px;
+          }
+        }
+      }
+    }
+  }
+
+  .section-hatchings {
+    .hatching-block {
+      transition: none;
+      margin-bottom: 15px;
+      &:hover {
+        top: 0;
+        .block-wrapper {
+          background: @gray-bg-hover;
+        }
+      }
+      .block-wrapper {
+        transition: none;
+      }
+    }
+  }
+
+  .section-partners {
+    margin-bottom: 20px
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {
+
+  .posts-hero {
+    /* gallery height */
+    .mobile-carousel {
+      height: 350px;
+      .gallery-cell {
+        article {
+          hgroup {
+            bottom: 15px;
+            left: 15px;
+            right: 15px;
+          }
+        }
+      }
+    }
+  }
+
+}
