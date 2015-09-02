@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>Imported Layers</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="EXPERIENCE" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Experience" sketch:type="MSArtboardGroup" transform="translate(-492.000000, -6101.000000)" fill="#007DA3">
+            <g id="FOOTER" sketch:type="MSLayerGroup" transform="translate(0.000000, 5917.000000)">
+                <g id="Imported-Layers" transform="translate(492.000000, 184.000000)" sketch:type="MSShapeGroup">
+                    <path d="M4.42752,13.8058667 C4.42752,15.0176 3.45578667,16 2.25749333,16 C1.05834667,16 0.0866133333,15.0176 0.0866133333,13.8058667 C0.0866133333,12.5941333 1.05834667,11.6117333 2.25749333,11.6117333 C3.45578667,11.6117333 4.42752,12.5941333 4.42752,13.8058667" id="Fill-1"></path>
+                    <path d="M10.5774933,16 L7.50250667,16 C7.50250667,11.8592 4.1824,8.5024 0.0866133333,8.5024 L0.0866133333,5.39413333 C5.88074667,5.39413333 10.5774933,10.1425067 10.5774933,16 L10.5774933,16 Z" id="Fill-2"></path>
+                    <path d="M12.7483733,16 C12.7483733,8.93077333 7.08010667,3.2 0.0866133333,3.2 L0.0866133333,0 C8.82752,0 15.9133867,7.16330667 15.9133867,16 L12.7483733,16 Z" id="Fill-3"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
