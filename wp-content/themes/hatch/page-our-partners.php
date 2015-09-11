@@ -38,7 +38,7 @@
 						<div class="partners partners-platinum">
 				      <h3 class="partners-title">Platinum</h3>
 				      <div class="partner-logos">
-				        <?php $args = array( 'category_name' => 'platinum', 'post_type' => 'sponsor', 'posts_per_page' => 4 );
+				        <?php $args = array( 'category_name' => 'platinum', 'post_type' => 'sponsor', 'posts_per_page' => 10 );
 				        $loop = new WP_Query( $args );
 				        while ( $loop->have_posts() ) : $loop->the_post();
 				        $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
@@ -53,7 +53,7 @@
 				    <div class="partners partners-gold">
 				      <h3 class="partners-title">Gold</h3>
 				      <div class="partner-logos">
-				        <?php $args = array( 'category_name' => 'gold', 'post_type' => 'sponsor', 'posts_per_page' => 4 );
+				        <?php $args = array( 'category_name' => 'gold', 'post_type' => 'sponsor', 'posts_per_page' => 10 );
 				        $loop = new WP_Query( $args );
 				        while ( $loop->have_posts() ) : $loop->the_post();
 				        $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
@@ -68,7 +68,7 @@
 				    <div class="partners partners-silver">
 				      <h3 class="partners-title">Silver</h3>
 				      <div class="partner-logos">
-				        <?php $args = array( 'category_name' => 'silver', 'post_type' => 'sponsor', 'posts_per_page' => 4 );
+				        <?php $args = array( 'category_name' => 'silver', 'post_type' => 'sponsor', 'posts_per_page' => 10 );
 				        $loop = new WP_Query( $args );
 				        while ( $loop->have_posts() ) : $loop->the_post();
 				        $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
@@ -83,7 +83,7 @@
 				    <div class="partners partners-supporters">
 				      <h3 class="partners-title">Supporters</h3>
 				      <ul>
-				        <?php $args = array( 'category_name' => 'supporters', 'post_type' => 'sponsor', 'posts_per_page' => 4 );
+				        <?php $args = array( 'category_name' => 'supporters', 'post_type' => 'sponsor', 'posts_per_page' => 10 );
 				        $loop = new WP_Query( $args );
 				        while ( $loop->have_posts() ) : $loop->the_post(); ?>
 				        <li><?php the_title(); ?></li>
@@ -94,7 +94,7 @@
 				    <div class="partners partners-friends">
 				      <h3 class="partners-title">Friends of HATCH</h3>
 				      <ul>
-				        <?php $args = array( 'category_name' => 'friends', 'post_type' => 'sponsor', 'posts_per_page' => 4 );
+				        <?php $args = array( 'category_name' => 'friends', 'post_type' => 'sponsor', 'posts_per_page' => 10 );
 				        $loop = new WP_Query( $args );
 				        while ( $loop->have_posts() ) : $loop->the_post(); ?>
 				        <li><?php the_title(); ?></li>
