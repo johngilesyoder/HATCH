@@ -16,7 +16,7 @@
     <div class="partners-column partners-platinum">
       <h3 class="partners-column-title">Platinum</h3>
       <div class="partner-logos">
-        <?php $args = array( 'category_name' => 'platinum', 'post_type' => 'sponsor', 'posts_per_page' => 4 );
+        <?php $args = array( 'category_name' => 'platinum', 'post_type' => 'sponsor', 'posts_per_page' => 10 );
         $loop = new WP_Query( $args );
         while ( $loop->have_posts() ) : $loop->the_post();
         $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
@@ -29,7 +29,7 @@
     <div class="partners-column partners-gold">
       <h3 class="partners-column-title">Gold</h3>
       <div class="partner-logos">
-        <?php $args = array( 'category_name' => 'gold', 'post_type' => 'sponsor', 'posts_per_page' => 4 );
+        <?php $args = array( 'category_name' => 'gold', 'post_type' => 'sponsor', 'posts_per_page' => 10 );
         $loop = new WP_Query( $args );
         while ( $loop->have_posts() ) : $loop->the_post();
         $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
@@ -42,7 +42,7 @@
     <div class="partners-column partners-silver">
       <h3 class="partners-column-title">Silver</h3>
       <div class="partner-logos">
-        <?php $args = array( 'category_name' => 'silver', 'post_type' => 'sponsor', 'posts_per_page' => 4 );
+        <?php $args = array( 'category_name' => 'silver', 'post_type' => 'sponsor', 'posts_per_page' => 10 );
         $loop = new WP_Query( $args );
         while ( $loop->have_posts() ) : $loop->the_post();
         $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
