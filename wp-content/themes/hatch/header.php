@@ -46,7 +46,7 @@
 	<body <?php body_class(); ?>>
 
     <!-- Topbar -->
-    <?php //get_template_part( 'includes/topbar' ); ?>
+    <?php get_template_part( 'includes/topbar' ); ?>
 
       <nav class="site-header navbar navbar-default">
         <div class="container">

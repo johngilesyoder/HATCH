@@ -6616,7 +6616,8 @@ fieldset[disabled] .btn-secondary.active {
   float: left;
   line-height: 36px;
 }
-.topbar .btn-apply {
+.topbar .btn-apply,
+.topbar .btn-support {
   margin-top: 5px;
   float: right;
   height: 25px;
