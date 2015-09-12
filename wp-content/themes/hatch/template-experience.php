@@ -122,7 +122,7 @@
   				<div class="quote-statement">
   					<p>“Quite simply, HATCH makes us more dangerous.  The companies that send their best and brightest to HATCH dramatically benefit from them returning refueled, re-energized, on the forefront of what’s next, and full of new collaboration opportunities.  HATCH makes us more valuable to our work, ourselves, and the world.”</p>
   				</div>
-  				<cite>&mdash;&nbsp; <span class="cite-person">Jeff Lighter</span> <span class="cite-organization">FOUNDER, INSIGHT LABS / GREENHOUSE</span></cite>
+  				<cite>&mdash;&nbsp; <span class="cite-person">Jeff Leitner</span> <span class="cite-organization">FOUNDER, INSIGHT LABS / GREENHOUSE</span></cite>
   			</div>
   		</div>
   	</div>
