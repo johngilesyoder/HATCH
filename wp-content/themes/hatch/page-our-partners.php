@@ -25,7 +25,7 @@
 				      <h3 class="partners-title">Innovation Partner</h3>
 				      <div class="partner-logos">
 				        <div class="partner">
-				          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/partner-intel.png">
+				          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/partner-intel-2.png">
 				        </div>
 				      </div>
 				    </div>

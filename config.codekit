@@ -44518,6 +44518,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/wp-content\/themes\/hatch\/assets\/img\/banner-partners.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 74851,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/img\/banner-partners.jpg",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/img\/banner-partners.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/wp-content\/themes\/hatch\/assets\/img\/conference-photo.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -44716,6 +44727,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/wp-content\/themes\/hatch\/assets\/img\/partner-intel-2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 80554,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/img\/partner-intel-2.png",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/img\/partner-intel-2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/themes\/hatch\/assets\/img\/partner-intel.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 92294,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/img\/partner-intel.jpg",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/img\/partner-intel.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/wp-content\/themes\/hatch\/assets\/img\/partner-intel.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -44734,17 +44767,6 @@
 		"initialSize": 20552,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/img\/partner-moonlight-basin.png",
 		"outputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/img\/partner-moonlight-basin.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/wp-content\/themes\/hatch\/assets\/img\/SanRahiHatch10.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 62918,
-		"inputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/img\/SanRahiHatch10.jpg",
-		"outputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/img\/SanRahiHatch10.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
