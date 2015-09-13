@@ -8,6 +8,7 @@
 <div class="topbar topbar-support">
   <div class="container">
     <p><strong>Support HATCH:</strong> Students of today are our leaders of tomorrow. <span>It’s in the best interest of our future to invest in them.</span></p>
-    <a href="/apply" class="btn btn-secondary btn-support">Support Now</a> 
+    <a href="/partners/support-contribute/" class="btn btn-secondary btn-support">Support Now</a> 
+
   </div>
 </div>
