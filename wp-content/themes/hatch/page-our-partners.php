@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 	<main role="main">
-		<div class="page-banner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/banner-apply.jpg');background-position: 50% 50%;">
+		<div class="page-banner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/banner-partners.jpg');background-position: 50% 25%;">
 			<div class="page-title">
 				<div class="container">
 					<h1><?php the_title(); ?></h1>
@@ -16,9 +16,6 @@
 				<?php else: ?>
 				<div class="page-content page-full">
 				<?php endif; ?>
-					<div class="page-title">
-						<h1><?php the_title(); ?></h1>
-					</div>
 
 					<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 					<!-- article -->
@@ -87,20 +84,15 @@
 				        <?php wp_reset_query(); ?>
 				      </div>
 				    </div>
-				    <div class="partners partners-supporters">
-				      <h3 class="partners-title">Supporters</h3>
-				      <ul>
-				        <?php $args = array( 'category_name' => 'supporters', 'post_type' => 'sponsor', 'posts_per_page' => 10 );
-				        $loop = new WP_Query( $args );
-				        while ( $loop->have_posts() ) : $loop->the_post(); ?>
-				        <li><?php the_title(); ?></li>
-				        <?php endwhile; ?>
-				        <?php wp_reset_query(); ?>
-				      </ul>
-				    </div>
 				    <div class="partners partners-friends">
 				      <h3 class="partners-title">Friends of HATCH</h3>
 				      <ul>
+				      	<?php $args = array( 'category_name' => 'supporters', 'post_type' => 'sponsor', 'posts_per_page' => 10 );
+				      	$loop = new WP_Query( $args );
+				      	while ( $loop->have_posts() ) : $loop->the_post(); ?>
+				      	<li><?php the_title(); ?></li>
+				      	<?php endwhile; ?>
+				      	<?php wp_reset_query(); ?>
 				        <?php $args = array( 'category_name' => 'friends', 'post_type' => 'sponsor', 'posts_per_page' => 10 );
 				        $loop = new WP_Query( $args );
 				        while ( $loop->have_posts() ) : $loop->the_post(); ?>

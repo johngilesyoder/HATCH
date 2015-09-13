@@ -44738,6 +44738,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/wp-content\/themes\/hatch\/assets\/img\/SanRahiHatch10.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 62918,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/img\/SanRahiHatch10.jpg",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/img\/SanRahiHatch10.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/wp-content\/themes\/hatch\/assets\/js\/lib\/conditionizr-4.3.0.min.js": {
 		"fileType": 64,
 		"ignore": 0,

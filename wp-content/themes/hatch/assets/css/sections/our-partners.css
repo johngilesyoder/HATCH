@@ -7638,6 +7638,9 @@ article iframe {
     padding: 0 0 0 15px;
   }
 }
+.page-banner .page-title .container {
+  height: 400px;
+}
 .partners {
   margin-bottom: 30px;
 }
