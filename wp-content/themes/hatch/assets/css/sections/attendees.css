@@ -7438,70 +7438,85 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
 .ninja-forms-form-wrap .textarea-wrap textarea {
   height: 100px;
 }
-.hatch-2015-attendees .page-title {
+.hatch-2015-attendees .page-title,
+.hatch-labs-hasbro .page-title {
   font-weight: 300;
   margin: 0 0 30px;
   padding: 0 15px;
   font-family: klavika-medium, "Helvetica Neue", Arial, sans-serif;
   font-size: 36px;
 }
-.hatch-2015-attendees .page-title h1 {
+.hatch-2015-attendees .page-title h1,
+.hatch-labs-hasbro .page-title h1 {
   padding-bottom: 25px;
   border-bottom: 2px solid #e6e6e6;
 }
-.hatch-2015-attendees .featured-presenters-title {
+.hatch-2015-attendees .featured-presenters-title,
+.hatch-labs-hasbro .featured-presenters-title {
   display: none;
 }
-.hatch-2015-attendees .gv-list-view {
+.hatch-2015-attendees .gv-list-view,
+.hatch-labs-hasbro .gv-list-view {
   border: 0;
   border-bottom: 1px solid #e6e6e6;
   margin-bottom: 30px;
   padding-bottom: 30px;
 }
-.hatch-2015-attendees .gv-list-view-title {
+.hatch-2015-attendees .gv-list-view-title,
+.hatch-labs-hasbro .gv-list-view-title {
   padding: 0 15px;
   border: 0;
   margin-bottom: 25px;
 }
-.hatch-2015-attendees .gv-list-view-title h3 {
+.hatch-2015-attendees .gv-list-view-title h3,
+.hatch-labs-hasbro .gv-list-view-title h3 {
   color: #ffb100;
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 5px;
 }
-.hatch-2015-attendees .gv-list-view-subtitle h4 {
+.hatch-2015-attendees .gv-list-view-subtitle h4,
+.hatch-labs-hasbro .gv-list-view-subtitle h4 {
   font-size: 12px;
   text-transform: uppercase;
 }
-.hatch-2015-attendees .gv-field-label {
+.hatch-2015-attendees .gv-field-label,
+.hatch-labs-hasbro .gv-field-label {
   padding: 0;
 }
-.hatch-2015-attendees .gv-list-view-content {
+.hatch-2015-attendees .gv-list-view-content,
+.hatch-labs-hasbro .gv-list-view-content {
   padding: 0;
 }
-.hatch-2015-attendees .gv-container img {
+.hatch-2015-attendees .gv-container img,
+.hatch-labs-hasbro .gv-container img {
   width: 100%;
 }
-.hatch-2015-attendees .gv-grid-col-1-3 {
+.hatch-2015-attendees .gv-grid-col-1-3,
+.hatch-labs-hasbro .gv-grid-col-1-3 {
   width: 25%;
   padding: 0 15px !important;
   position: relative;
   min-height: 1px;
 }
-.hatch-2015-attendees .gv-list-view-content .gv-list-view-content-image {
+.hatch-2015-attendees .gv-list-view-content .gv-list-view-content-image,
+.hatch-labs-hasbro .gv-list-view-content .gv-list-view-content-image {
   padding: 0 15px !important;
 }
-.hatch-2015-attendees .gv-grid-col-2-3 {
+.hatch-2015-attendees .gv-grid-col-2-3,
+.hatch-labs-hasbro .gv-grid-col-2-3 {
   width: 75%;
   padding: 0 15px;
   position: relative;
   min-height: 1px;
 }
 @media (max-width: 767px) {
-  .hatch-2015-attendees .gv-grid-col-1-3 {
+  .hatch-2015-attendees .gv-grid-col-1-3,
+  .hatch-labs-hasbro .gv-grid-col-1-3 {
     width: 100%;
   }
-  .hatch-2015-attendees .gv-grid-col-2-3 {
+  .hatch-2015-attendees .gv-grid-col-2-3,
+  .hatch-labs-hasbro .gv-grid-col-2-3 {
     width: 100%;
   }
 }
