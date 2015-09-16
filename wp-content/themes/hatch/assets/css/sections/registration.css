@@ -6933,10 +6933,12 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
 .ninja-forms-form-wrap .textarea-wrap textarea {
   height: 100px;
 }
-.page-template-template-registration-success .form-wrapper {
+.page-template-template-registration-success .form-wrapper,
+.page-template-template-hasbro-registration-success .form-wrapper {
   padding: 0;
 }
-.page-template-template-registration-success .success-title {
+.page-template-template-registration-success .success-title,
+.page-template-template-hasbro-registration-success .success-title {
   background: #DFF0D8;
   border-bottom: 1px solid #D6E9C6;
   color: #3C763D;
@@ -6947,13 +6949,15 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   font-weight: normal;
   font-family: klavika-bold, "Helvetica Neue", Arial, sans-serif;
 }
-.page-template-template-registration-success .success-title img {
+.page-template-template-registration-success .success-title img,
+.page-template-template-hasbro-registration-success .success-title img {
   margin-right: 13px;
   vertical-align: middle;
   position: relative;
   top: -3px;
 }
-.page-template-template-registration-success .success-body {
+.page-template-template-registration-success .success-body,
+.page-template-template-hasbro-registration-success .success-body {
   padding: 25px 30px;
 }
 body {
