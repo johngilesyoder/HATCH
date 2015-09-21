@@ -25,7 +25,7 @@
           <p>A musician tackles a problem for an entrepreneur. A scientist cracks open an idea for music distribution. An ad-guy delivers insight to a health-care play. An inventor, architect, and educator sketching new models for learning…  Imagine that. Or just find yourself at HATCH.</p>
           <div class="conference-actions">
             <!-- <a href="/apply" class="btn btn-primary btn-apply">Apply for an invite</a> -->
-            <a href="/the-experience" class="btn btn-link btn-learn-more">Learn more</a>
+            <a href="/the-experience" class="">Learn more</a>
           </div>
         </div>
       </div>
