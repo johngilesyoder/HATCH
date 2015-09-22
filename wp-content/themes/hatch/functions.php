@@ -242,7 +242,7 @@ function html5blank_conditional_styles()
     } elseif ( is_page( 'the-experience') ) {
         wp_register_style('experience', get_template_directory_uri() . '/assets/css/sections/experience.css', array(), '1.0', 'all');
         wp_enqueue_style('experience'); // Enqueue it!
-    } elseif ( is_page( 'contribute-donate') ) {
+    } elseif ( is_page( 'support-contribute') ) {
         wp_register_style('donate', get_template_directory_uri() . '/assets/css/sections/donate.css', array(), '1.0', 'all');
         wp_enqueue_style('donate'); // Enqueue it!
     } elseif ( is_page( 'hatch-2015-attendees') ) {
