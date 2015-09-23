@@ -7927,6 +7927,7 @@ fieldset[disabled] .give-btn.active {
   float: right;
   margin-left: 15px;
   font-weight: 700;
+  width: 90px;
 }
 .matching-progress .progress-bar {
   border-radius: 4px;
