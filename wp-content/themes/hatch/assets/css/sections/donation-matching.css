@@ -7934,11 +7934,11 @@ fieldset[disabled] .give-btn.active {
   height: 30px;
   font-size: 24px;
 }
-.matching-progress .progress-2 .progress-bar {
-  background: #03A132;
-}
 .matching-progress .progress-bar {
   border-radius: 4px;
   font-size: 18px;
   line-height: 30px;
+}
+.progress-2 .progress-bar {
+  background: #03A132;
 }
