@@ -7885,15 +7885,15 @@ fieldset[disabled] .give-btn.active {
   background: #FF9D00;
 }
 .alert-matching {
-  background-color: #d9edf7;
-  border-color: #bce8f1;
-  color: #31708f;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #8a6d3b;
 }
 .alert-matching hr {
-  border-top-color: #a6e1ec;
+  border-top-color: #f7e1b5;
 }
 .alert-matching .alert-link {
-  color: #245269;
+  color: #66512c;
 }
 .alert-matching strong {
   font-weight: 700;
