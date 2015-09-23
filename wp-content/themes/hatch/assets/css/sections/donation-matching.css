@@ -7920,6 +7920,9 @@ fieldset[disabled] .give-btn.active {
   float: left;
   margin-right: 15px;
 }
+.matching-progress {
+  margin: 30px 0;
+}
 .matching-progress .matching-progress-final {
   float: right;
   margin-left: 15px;
