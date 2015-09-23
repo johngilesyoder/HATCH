@@ -7928,7 +7928,17 @@ fieldset[disabled] .give-btn.active {
   margin-left: 15px;
   font-weight: 700;
   width: 90px;
+  line-height: 30px;
+}
+.matching-progress .progress {
+  height: 30px;
+  font-size: 24px;
+}
+.matching-progress .progress-2 .progress-bar {
+  background: #03A132;
 }
 .matching-progress .progress-bar {
   border-radius: 4px;
+  font-size: 18px;
+  line-height: 30px;
 }
