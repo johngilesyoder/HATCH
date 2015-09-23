@@ -7948,3 +7948,6 @@ fieldset[disabled] .give-btn.active {
 .total-raised {
   font-size: 24px;
 }
+.total-raised span {
+  margin-right: 30px;
+}
