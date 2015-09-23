@@ -7898,3 +7898,8 @@ fieldset[disabled] .give-btn.active {
 .alert-matching strong {
   font-weight: 700;
 }
+.alert-matching img {
+  width: 100px;
+  float: left;
+  margin-right: 30px;
+}
