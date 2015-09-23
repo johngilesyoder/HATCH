@@ -7888,6 +7888,7 @@ fieldset[disabled] .give-btn.active {
   background-color: #fcf8e3;
   border-color: #faebcc;
   color: #8a6d3b;
+  margin: 30px 0 40px;
 }
 .alert-matching hr {
   border-top-color: #f7e1b5;
