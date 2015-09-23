@@ -44395,6 +44395,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/wp-content\/themes\/hatch\/assets\/css\/sections\/donation-matching.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/css\/sections\/donation-matching.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/wp-content\/themes\/hatch\/assets\/css\/sections\/experience.css": {
 		"fileType": 16,
 		"ignore": 1,

@@ -7884,3 +7884,17 @@ fieldset[disabled] .give-btn.active {
 .give-btn:hover {
   background: #FF9D00;
 }
+.alert-matching {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #31708f;
+}
+.alert-matching hr {
+  border-top-color: #a6e1ec;
+}
+.alert-matching .alert-link {
+  color: #245269;
+}
+.alert-matching strong {
+  font-weight: 700;
+}
