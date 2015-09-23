@@ -7939,6 +7939,12 @@ fieldset[disabled] .give-btn.active {
   font-size: 18px;
   line-height: 30px;
 }
+.progress-2 {
+  margin-bottom: 40px;
+}
 .progress-2 .progress-bar {
   background: #03A132;
+}
+.total-raised {
+  font-size: 24px;
 }
