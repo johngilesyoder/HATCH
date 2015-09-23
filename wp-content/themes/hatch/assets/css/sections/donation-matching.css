@@ -7895,6 +7895,22 @@ fieldset[disabled] .give-btn.active {
 .alert-matching .alert-link {
   color: #66512c;
 }
+.alert-matching:before,
+.alert-matching:after {
+  content: " ";
+  display: table;
+}
+.alert-matching:after {
+  clear: both;
+}
+.alert-matching:before,
+.alert-matching:after {
+  content: " ";
+  display: table;
+}
+.alert-matching:after {
+  clear: both;
+}
 .alert-matching strong {
   font-weight: 700;
 }
