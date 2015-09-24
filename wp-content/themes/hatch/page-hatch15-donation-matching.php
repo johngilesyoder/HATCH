@@ -52,14 +52,14 @@
 							</div>
 
 							<div class="total-raised">
-							  <span>Fundraising goal: <strong>$10,000</strong></span><span>Total raised: <strong>$6,974</strong></span>
+							  <span>Fundraising goal: <strong>$10,000</strong></span><span>Total raised: <strong>$7,580</strong></span>
 							</div>
 
 							<div class="matching-progress progress-1">
 							  <span class="matching-progress-final">Contributed</span>
 							  <div class="progress">
 							    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-							      $3,487
+							      $3,790
 							    </div>
 							  </div>
 							</div>
@@ -68,7 +68,7 @@
 							  <span class="matching-progress-final">Matched</span>
 							  <div class="progress">
 							    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-							      $3,487
+							      $3,790
 							    </div>
 							  </div>
 							</div>
