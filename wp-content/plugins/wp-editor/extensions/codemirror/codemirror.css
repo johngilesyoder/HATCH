@@ -69,6 +69,7 @@
 }
 .CodeMirror-lines {
   padding: .4em;
+  cursor:text;
 }
 
 .CodeMirror pre {

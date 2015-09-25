@@ -16,11 +16,22 @@ if ( ! class_exists( 'WpssoOpengraph' ) ) {
 
 		public function __construct( &$plugin ) {
 			$this->p =& $plugin;
+
 			$this->p->util->add_plugin_filters( $this, array( 
 				'plugin_image_sizes' => 1,
 			) );
-			add_filter( 'language_attributes', 
-				array( &$this, 'add_doctype' ), 100, 1 );
+
+			if ( ! empty( $this->p->options['plugin_html_attr_filter_name'] ) &&
+				$this->p->options['plugin_html_attr_filter_name'] !== 'none' ) {
+
+					$prio = empty( $this->p->options['plugin_html_attr_filter_prio'] ) ? 
+						100 : $this->p->options['plugin_html_attr_filter_prio'];
+
+					add_filter( $this->p->options['plugin_html_attr_filter_name'], 
+						array( &$this, 'add_html_attr' ), $prio, 1 );
+
+			} elseif ( $this->p->debug->enabled )
+				$this->p->debug->log( 'add_html_attr filter skipped: plugin_html_attr_filter_name is empty' );
 		}
 
 		public function filter_plugin_image_sizes( $sizes ) {
@@ -35,35 +46,40 @@ if ( ! class_exists( 'WpssoOpengraph' ) ) {
 			return $sizes;
 		}
 
-		public function add_doctype( $doctype ) {
-			/*
-			 * HTML5 Compliant
-			 */
-			$html_prefix = apply_filters( $this->p->cf['lca'].'_doctype_prefix_ns', array(
+		public function add_html_attr( $html_attr ) {
+
+			if ( $this->p->debug->enabled )
+				$this->p->debug->mark();
+			
+			$prefix_ns = apply_filters( $this->p->cf['lca'].'_og_prefix_ns', array(
 				'og' => 'http://ogp.me/ns#',
 				'fb' => 'http://ogp.me/ns/fb#',
 			) );
 	
 			// find and extract an existing prefix attribute value
-			if ( strpos( $doctype, ' prefix=' ) &&
-				preg_match( '/^(.*) prefix=["\']([^"\']*)["\'](.*)$/', $doctype, $match ) ) {
-					$doctype = $match[1].$match[3];
-					$attr_value = ' '.$match[2];
-			} else $attr_value = '';
+			if ( strpos( $html_attr, ' prefix=' ) &&
+				preg_match( '/^(.*) prefix=["\']([^"\']*)["\'](.*)$/', $html_attr, $match ) ) {
+					$html_attr = $match[1].$match[3];
+					$prefix_value = ' '.$match[2];
+			} else $prefix_value = '';
 
-			foreach ( $html_prefix as $ns => $url )
-				if ( strpos( $attr_value, ' '.$ns.': '.$url ) === false )
-					$attr_value .= ' '.$ns.': '.$url;
+			foreach ( $prefix_ns as $ns => $url )
+				if ( strpos( $prefix_value, ' '.$ns.': '.$url ) === false )
+					$prefix_value .= ' '.$ns.': '.$url;
 
-			$doctype .= ' prefix="'.trim( $attr_value ).'"';
+			$html_attr .= ' prefix="'.trim( $prefix_value ).'"';
 
-			return $doctype;
+			return trim( $html_attr );
 		}
 
-		public function get_array( &$og = array(), $use_post = false, $obj = false ) {
+		public function get_array( $use_post = false, $obj = false, &$og = array() ) {
+
+			if ( $this->p->debug->enabled )
+				$this->p->debug->mark();
 
 			if ( ! is_object( $obj ) )
 				$obj = $this->p->util->get_post_object( $use_post );
+
 			$post_id = empty( $obj->ID ) || empty( $obj->post_type ) || 
 				( ! is_singular() && $use_post === false ) ? 0 : $obj->ID;
 
@@ -78,8 +94,9 @@ if ( ! class_exists( 'WpssoOpengraph' ) ) {
 					$this->p->debug->log( $og );
 			}
 
-			if ( ! isset( $og['fb:admins'] ) )
-				$og['fb:admins'] = $this->p->options['fb_admins'];
+			if ( ! isset( $og['fb:admins'] ) && ! empty( $this->p->options['fb_admins'] ) )
+				foreach ( explode( ',', $this->p->options['fb_admins'] ) as $fb_admin )
+					$og['fb:admins'][] = trim( $fb_admin );
 
 			if ( ! isset( $og['fb:app_id'] ) )
 				$og['fb:app_id'] = $this->p->options['fb_app_id'];
@@ -94,32 +111,18 @@ if ( ! class_exists( 'WpssoOpengraph' ) ) {
 				// singular posts / pages are articles by default
 				// check the post_type for a match with a known open graph type
 				if ( is_singular() || $use_post !== false ) {
+
 					if ( ! empty( $obj->post_type ) )
 						$post_type = $obj->post_type;
-					switch ( $post_type ) {
-						case 'article':
-						case 'book':
-						case 'music.album':
-						case 'music.playlist':
-						case 'music.radio_station':
-						case 'music.song':
-						case 'place':			// supported by Facebook and Pinterest
-						case 'product':
-						case 'profile':
-						case 'video.episode':
-						case 'video.movie':
-						case 'video.other':
-						case 'video.tv_show':
-						case 'website':
-							$og['og:type'] = $post_type;
-							break;
-						default:
-							$og['og:type'] = 'article';
-							break;
-					}
+
+					if ( isset( $this->p->cf['head']['og_type_ns'][$post_type] ) )
+						$og['og:type'] = $post_type;
+					else $og['og:type'] = 'article';
 
 				// check for default author info on indexes and searches
-				} elseif ( $this->p->util->force_default_author( $use_post, 'og' ) ) {
+				} elseif ( $this->p->util->force_default_author( $use_post, 'og' ) &&
+					! empty( $this->p->options['og_def_author_id'] ) ) {
+
 					$og['og:type'] = 'article';
 					if ( ! isset( $og['article:author'] ) )
 						$og['article:author'] = $this->p->mods['util']['user']->get_article_author( $this->p->options['og_def_author_id'] );

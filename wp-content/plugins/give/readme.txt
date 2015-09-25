@@ -3,8 +3,8 @@ Contributors: wordimpress, dlocc, webdevmattcrom
 Donate link: http://givewp.com/
 Tags: donation, donations, donation plugin, wordpress donation plugin, wp donation, ecommerce, e-commerce, fundraising, fundraiser, crowdfunding, wordpress donations, commerce, wordpress ecommerce, giving, charity, donate, gifts, non-profit, paypal, stripe, churches, nonprofit, paypal donations, paypal donate, stripe donations, stripe donate, authorize.net, authorize.net donations
 Requires at least: 3.8
-Tested up to: 4.2.2
-Stable tag: 1.1
+Tested up to: 4.3
+Stable tag: 1.2.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -47,7 +47,7 @@ For new users, we suggest reviewing our [documentation](https://givewp.com/docum
 
 = Zero Commission Charges =
 
-We earn money by selling add-ons. The money you raise using Give is yours to go to support your cause. Period. Add-ons are premium features that enable you to extend the functionality of Give. For example, you use one of our add-ons to accept funds through your favorite payment gateway.
+We earn money by selling add-ons. The money you raise using Give is yours to go to support your cause. Period. Add-ons are premium features that enable you to extend the functionality of Give. For example, you can use one of our add-ons to accept funds through your favorite payment gateway or send new donor emails to MailChimp. [View all add-ons](https://givewp.com/addons "View all Give add-ons") to discover all the ways you can extend Give.
 
 = Easy to Customize and Enhance =
 
@@ -58,14 +58,15 @@ Give is built by [WordImpress](http://wordimpress.com "Visit the the developers 
 Stay in touch with us for important plugin news and updates:
 
 * **[Give Website](https://givewp.com "Visit the the Give website")**
-* **[Newsletter](http://eepurl.com/bggG99 "Subscribe via MailChimp")**
+* **[Give Add-ons](https://givewp.com/addons "View all Give add-ons")**
+* **[Newsletter](http://eepurl.com/bggG99 "Subscribe to Give via MailChimp")**
 * **[Facebook](http://facebook.com/wpgive "Visit the Give on Facebook")**
 * **[GitHub](https://github.com/WordImpress/Give "Visit the the developers of Give - WordImpress")**
 * **[WordImpress](http://wordimpress.com "Visit the the developers of Give - WordImpress")**
 
 = Contribute to Give =
 
-This plugin is open source and we're always looking for more contributors. Whether you know another language, can code like no ones business, or just have an idea, we would love your help and input. To contribute to Give please head over to our website or view/fork/watch the GitHub repository to learn more about what issues we're tackling and about the project.
+This plugin is open source and we're always looking for more contributors. Whether you know another language, can code like no ones business, or just have an idea, we would love your help and input. To contribute to Give please head over to [our website](https://givewp.com "Visit the the Give website") or view/fork/watch the [GitHub repository](github.com/WordImpress/Give "Visit the the Give GitHub Repo") to learn more about what issues we're tackling and the project is developing.
 
 = A Tribute to Open Source =
 
@@ -128,6 +129,30 @@ We also really like WooCommerce. It's hands-down the most robust eCommerce platf
 
 == Changelog ==
 
+= 1.2.1 =
+* Improved: Admin UX/UI - "View Donation Details" button now much easier to navigate into the single transaction view - https://github.com/WordImpress/Give/issues/216
+* Fix: Bug introduced preventing modal windows opening on click https://givewp.com/support/ticket/1-2-upgrade-issue-submit-buttons-no-longer-work/
+* Fix: Modal content displaying form content other than payment fields - https://github.com/WordImpress/Give/issues/217
+* Fix: Bug preventing viewing of single donation history pages https://github.com/WordImpress/Give/issues/226
+* Fix: Bug not accounting for new Credit Card masking spaces sending malformed content to PayPal
+* Fix: Added fallback redirect to homepage if success page isn't set in settings https://github.com/WordImpress/Give/issues/214
+
+= 1.2 =
+* New: API updated to include fname and lname of forms donor
+* New: API updated to support all field donation data (including custom fields)
+* New: Credit Card input masking now supported - thanks @pryley https://github.com/WordImpress/Give/issues/76
+* Improvement: Ditched maskMoney custom donation amount validator for a better script provided by @helgatheviking - thanks! https://github.com/WordImpress/Give/issues/110
+* Improvement: AJAX spinner is now font icon rather than .gif image @see: https://github.com/WordImpress/Give/issues/193
+* Fix: Form title and Level Label now displayed correctly on PayPal Standard https://github.com/WordImpress/Give/issues/190
+* Fix: Export donors fatal error https://wordpress.org/support/topic/export-donors-in-csv-error?replies=2
+* Fix: Addons PHP warning https://github.com/WordImpress/Give/issues/191
+* Fix: Goal amount not respecting thousands separator https://github.com/WordImpress/Give/issues/205
+* Fix: Added a WordPress filter to allow developers to modify the 'Select Payment Method' legend text. - thanks @cwackerman https://github.com/WordImpress/Give/pull/211
+* Fix: Modified existing WordPress filter controlling submit button text so that it passes $form_id to hooks. This allows developers to access form options when generating submit button text. For example, to output default donation amount within submit button text, e.g. "Donate $5.00 Now".  - thanks @cwackerman https://github.com/WordImpress/Give/pull/211
+* Fix: GIVE_SLUG define doesn't affect slug https://github.com/WordImpress/Give/issues/199
+* Fix: Widget tooltips now display appropriately https://github.com/WordImpress/Give/issues/195
+* Fix: https/ssl padlock font now displays correctly https://github.com/WordImpress/Give/issues/220
+
 = 1.1 =
 * New: A front-facing JSON/XML API that makes it possible to query donation data directly from your WordPress site; this corresponds with the Zapier Add-on for Give: http://givewp.com/addons/zapier/
 * New: Added warning to frontend donation forms when test mode is enabled
@@ -150,6 +175,8 @@ We also really like WooCommerce. It's hands-down the most robust eCommerce platf
 * Fix: Translation files need "give-" prepended to them to work properly @see: https://github.com/WordImpress/Give/issues/161
 * Fix: Fix PHP notice for Undefined index: _give_price. closes #159 @see: https://github.com/WordImpress/Give/issues/159 - Thanks @helgatheviking!
 * Fix: Shortcode now outputs Goals properly @see: https://wordpress.org/support/topic/goal-tracking
+* Improvement: All scripts are minified and concatenated into one script.
+* Improvement: All CSS styles are minified and concatenated into one stylesheet.
 * Improvement: Script loading now properly registers scripts and styles globally using wp_register_style & wp_register_script
 * Improvement: Removed numerous uses of the $give_options global - still more cleanup needed
 * Improvement: Modal window CSS fixes for login fields: https://github.com/WordImpress/Give/issues/60

@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @return void
  */
 function give_add_options_links() {
-	global $give_settings_page, $give_payments_page, $give_campaigns_page, $give_reports_page;
+	global $give_settings_page, $give_payments_page, $give_reports_page, $give_add_ons_page, $give_upgrades_screen, $give_donors_page;
 
 	//Campaigns
 	//	$give_campaigns      = get_post_type_object( 'give_campaigns' );
@@ -61,7 +61,7 @@ function give_add_options_links() {
 add_action( 'admin_menu', 'give_add_options_links', 10 );
 
 /**
- *  Determines whether the current admin page is an admin page.
+ *  Determines whether the current admin page is a Give admin page.
  *
  *  Only works after the `wp_loaded` hook, & most effective
  *  starting on `admin_menu` hook.
@@ -114,17 +114,17 @@ function give_is_admin_page( $passed_page = '', $passed_view = '' ) {
 			switch ( $passed_view ) {
 				case 'list-table':
 				case 'new':
-					if ( ( 'give_forms' == $typenow || 'give_forms' === $post_type ) && $pagenow == 'edit-tags.php' && 'edit' !== $action && 'download_category' === $taxonomy ) {
+					if ( ( 'give_forms' == $typenow || 'give_forms' === $post_type ) && $pagenow == 'edit-tags.php' && 'edit' !== $action && 'give_forms_category' === $taxonomy ) {
 						$found = true;
 					}
 					break;
 				case 'edit':
-					if ( ( 'give_forms' == $typenow || 'give_forms' === $post_type ) && $pagenow == 'edit-tags.php' && 'edit' === $action && 'download_category' === $taxonomy ) {
+					if ( ( 'give_forms' == $typenow || 'give_forms' === $post_type ) && $pagenow == 'edit-tags.php' && 'edit' === $action && 'give_forms_category' === $taxonomy ) {
 						$found = true;
 					}
 					break;
 				default:
-					if ( ( 'give_forms' == $typenow || 'give_forms' === $post_type ) && $pagenow == 'edit-tags.php' && 'download_category' === $taxonomy ) {
+					if ( ( 'give_forms' == $typenow || 'give_forms' === $post_type ) && $pagenow == 'edit-tags.php' && 'give_forms_category' === $taxonomy ) {
 						$found = true;
 					}
 					break;
@@ -134,17 +134,17 @@ function give_is_admin_page( $passed_page = '', $passed_view = '' ) {
 			switch ( $passed_view ) {
 				case 'list-table':
 				case 'new':
-					if ( ( 'give_forms' == $typenow || 'give_forms' === $post_type ) && $pagenow == 'edit-tags.php' && 'edit' !== $action && 'download_tax' === $taxonomy ) {
+					if ( ( 'give_forms' == $typenow || 'give_forms' === $post_type ) && $pagenow == 'edit-tags.php' && 'edit' !== $action && 'give_forms_tag' === $taxonomy ) {
 						$found = true;
 					}
 					break;
 				case 'edit':
-					if ( ( 'give_forms' == $typenow || 'give_forms' === $post_type ) && $pagenow == 'edit-tags.php' && 'edit' === $action && 'download_tax' === $taxonomy ) {
+					if ( ( 'give_forms' == $typenow || 'give_forms' === $post_type ) && $pagenow == 'edit-tags.php' && 'edit' === $action && 'give_forms_tag' === $taxonomy ) {
 						$found = true;
 					}
 					break;
 				default:
-					if ( ( 'give_forms' == $typenow || 'give_forms' === $post_type ) && $pagenow == 'edit-tags.php' && 'download_tax' === $taxonomy ) {
+					if ( ( 'give_forms' == $typenow || 'give_forms' === $post_type ) && $pagenow == 'edit-tags.php' && 'give_forms_tag' === $taxonomy ) {
 						$found = true;
 					}
 					break;
@@ -177,12 +177,7 @@ function give_is_admin_page( $passed_page = '', $passed_view = '' ) {
 						$found = true;
 					}
 					break;
-				case 'downloads':
-					if ( ( 'give_forms' == $typenow || 'give_forms' === $post_type ) && $pagenow == 'edit.php' && 'give-reports' === $page && 'downloads' === $view ) {
-						$found = true;
-					}
-					break;
-				case 'customers':
+				case 'donors':
 					if ( ( 'give_forms' == $typenow || 'give_forms' === $post_type ) && $pagenow == 'edit.php' && 'give-reports' === $page && 'customers' === $view ) {
 						$found = true;
 					}
@@ -192,18 +187,13 @@ function give_is_admin_page( $passed_page = '', $passed_view = '' ) {
 						$found = true;
 					}
 					break;
-				case 'taxes':
-					if ( ( 'give_forms' == $typenow || 'give_forms' === $post_type ) && $pagenow == 'edit.php' && 'give-reports' === $page && 'taxes' === $view ) {
-						$found = true;
-					}
-					break;
 				case 'export':
 					if ( ( 'give_forms' == $typenow || 'give_forms' === $post_type ) && $pagenow == 'edit.php' && 'give-reports' === $page && 'export' === $view ) {
 						$found = true;
 					}
 					break;
 				case 'logs':
-					if ( ( 'give_forms' == $typenow || 'give_forms' === $post_type ) && $pagenow == 'edit.php' && 'give-reports' === $page && 'logs' === $ivew ) {
+					if ( ( 'give_forms' == $typenow || 'give_forms' === $post_type ) && $pagenow == 'edit.php' && 'give-reports' === $page && 'logs' === $view ) {
 						$found = true;
 					}
 					break;
@@ -217,7 +207,7 @@ function give_is_admin_page( $passed_page = '', $passed_view = '' ) {
 		case 'settings':
 			switch ( $passed_view ) {
 				case 'general':
-					if ( ( 'give_forms' == $typenow || 'give_forms' === $post_type ) && $pagenow == 'edit.php' && 'give-settings' === $page && ( 'genera' === $tab || false === $tab ) ) {
+					if ( ( 'give_forms' == $typenow || 'give_forms' === $post_type ) && $pagenow == 'edit.php' && 'give-settings' === $page && ( 'general' === $tab || false === $tab ) ) {
 						$found = true;
 					}
 					break;
@@ -231,18 +221,8 @@ function give_is_admin_page( $passed_page = '', $passed_view = '' ) {
 						$found = true;
 					}
 					break;
-				case 'styles':
-					if ( ( 'give_forms' == $typenow || 'give_forms' === $post_type ) && $pagenow == 'edit.php' && 'give-settings' === $page && 'styles' === $tab ) {
-						$found = true;
-					}
-					break;
-				case 'taxes':
-					if ( ( 'give_forms' == $typenow || 'give_forms' === $post_type ) && $pagenow == 'edit.php' && 'give-settings' === $page && 'taxes' === $tab ) {
-						$found = true;
-					}
-					break;
-				case 'extensions':
-					if ( ( 'give_forms' == $typenow || 'give_forms' === $post_type ) && $pagenow == 'edit.php' && 'give-settings' === $page && 'extensions' === $tab ) {
+				case 'display':
+					if ( ( 'give_forms' == $typenow || 'give_forms' === $post_type ) && $pagenow == 'edit.php' && 'give-settings' === $page && 'display' === $tab ) {
 						$found = true;
 					}
 					break;
@@ -251,8 +231,18 @@ function give_is_admin_page( $passed_page = '', $passed_view = '' ) {
 						$found = true;
 					}
 					break;
-				case 'misc':
-					if ( ( 'give_forms' == $typenow || 'give_forms' === $post_type ) && $pagenow == 'edit.php' && 'give-settings' === $page && 'misc' === $tab ) {
+				case 'api':
+					if ( ( 'give_forms' == $typenow || 'give_forms' === $post_type ) && $pagenow == 'edit.php' && 'give-settings' === $page && 'api' === $tab ) {
+						$found = true;
+					}
+					break;
+				case 'advanced':
+					if ( ( 'give_forms' == $typenow || 'give_forms' === $post_type ) && $pagenow == 'edit.php' && 'give-settings' === $page && 'advanced' === $tab ) {
+						$found = true;
+					}
+					break;
+				case 'system_info':
+					if ( ( 'give_forms' == $typenow || 'give_forms' === $post_type ) && $pagenow == 'edit.php' && 'give-settings' === $page && 'system_info' === $tab ) {
 						$found = true;
 					}
 					break;
@@ -268,7 +258,7 @@ function give_is_admin_page( $passed_page = '', $passed_view = '' ) {
 				$found = true;
 			}
 			break;
-		case 'customers':
+		case 'donors':
 			switch ( $passed_view ) {
 				case 'list-table':
 					if ( ( 'give_forms' == $typenow || 'give_forms' === $post_type ) && $pagenow == 'edit.php' && 'give-donors' === $page && false === $view ) {
@@ -306,6 +296,7 @@ function give_is_admin_page( $passed_page = '', $passed_view = '' ) {
 				$give_reports_page,
 				$give_system_info_page,
 				$give_add_ons_page,
+				$give_upgrades_screen,
 				$give_settings_export,
 				$give_customers_page
 			) );

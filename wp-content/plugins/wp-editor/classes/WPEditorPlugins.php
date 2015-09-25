@@ -3,7 +3,7 @@ class WPEditorPlugins {
   
   public static function addPluginsPage() {
     if(!current_user_can('edit_plugins')) {
-      wp_die('<p>' . __('You do not have sufficient permissions to edit plugins for this site.', 'wpeditor') . '</p>');
+      wp_die('<p>' . __('You do not have sufficient permissions to edit plugins for this site.', 'wp-editor') . '</p>');
     }
     
     if(isset($_POST['create_plugin_new']) && wp_verify_nonce($_POST['create_plugin_new'], 'create_plugin_new')) {
@@ -21,7 +21,7 @@ class WPEditorPlugins {
     $plugins = get_plugins();
 
     if(empty($plugins)) {
-      wp_die('<p>' . __('There are no plugins installed on this site.', 'wpeditor') . '</p>');
+      wp_die('<p>' . __('There are no plugins installed on this site.', 'wp-editor') . '</p>');
     }
     
     if(isset($_REQUEST['plugin'])) {
@@ -148,10 +148,10 @@ class WPEditorPlugins {
       $screen->add_help_tab(array(
         'id' => 'overview',
         'title' => __('Overview'),
-        'content' => '<p>' . __('You can use the editor to make changes to any of your plugins&#8217; individual PHP files. Be aware that if you make changes, plugins updates will overwrite your customizations.', 'wpeditor') . '</p>' . '<p>' . __('Choose a plugin to edit from the menu in the upper right and click the Select button. Click once on any file name to load it in the editor, and make your changes. Don&#8217;t forget to save your changes (Update File) when you&#8217;re finished.', 'wpeditor') . '</p>' . '<p>' . __('The Documentation menu below the editor lists the PHP functions recognized in the plugin file. Clicking Lookup takes you to a web page about that particular function.', 'wpeditor') . '</p>' . '<p>' . __('If you want to make changes but don&#8217;t want them to be overwritten when the plugin is updated, you may be ready to think about writing your own plugin. For information on how to edit plugins, write your own from scratch, or just better understand their anatomy, check out the links below.', 'wpeditor') . '</p>' . (is_network_admin() ? '<p>' . __('Any edits to files from this screen will be reflected on all sites in the network.', 'wpeditor') . '</p>' : '' )
+        'content' => '<p>' . __('You can use the editor to make changes to any of your plugins&#8217; individual PHP files. Be aware that if you make changes, plugins updates will overwrite your customizations.', 'wp-editor') . '</p>' . '<p>' . __('Choose a plugin to edit from the menu in the upper right and click the Select button. Click once on any file name to load it in the editor, and make your changes. Don&#8217;t forget to save your changes (Update File) when you&#8217;re finished.', 'wp-editor') . '</p>' . '<p>' . __('The Documentation menu below the editor lists the PHP functions recognized in the plugin file. Clicking Lookup takes you to a web page about that particular function.', 'wp-editor') . '</p>' . '<p>' . __('If you want to make changes but don&#8217;t want them to be overwritten when the plugin is updated, you may be ready to think about writing your own plugin. For information on how to edit plugins, write your own from scratch, or just better understand their anatomy, check out the links below.', 'wp-editor') . '</p>' . (is_network_admin() ? '<p>' . __('Any edits to files from this screen will be reflected on all sites in the network.', 'wp-editor') . '</p>' : '' )
       ));
       $screen->set_help_sidebar(
-        '<p><strong>' . __('For more information:', 'wpeditor') . '</strong></p>' . '<p>' . __('<a href="http://codex.wordpress.org/Plugins_Editor_Screen" target="_blank">Documentation on Editing Plugins</a>', 'wpeditor') . '</p>' . '<p>' . __('<a href="http://codex.wordpress.org/Writing_a_Plugin" target="_blank">Documentation on Writing Plugins</a>', 'wpeditor') . '</p>' . '<p>' . __('<a href="http://wordpress.org/support/" target="_blank">Support Forums</a>', 'wpeditor') . '</p>'
+        '<p><strong>' . __('For more information:', 'wp-editor') . '</strong></p>' . '<p>' . __('<a href="http://codex.wordpress.org/Plugins_Editor_Screen" target="_blank">Documentation on Editing Plugins</a>', 'wp-editor') . '</p>' . '<p>' . __('<a href="http://codex.wordpress.org/Writing_a_Plugin" target="_blank">Documentation on Writing Plugins</a>', 'wp-editor') . '</p>' . '<p>' . __('<a href="http://wordpress.org/support/" target="_blank">Support Forums</a>', 'wp-editor') . '</p>'
       );
     }
     elseif(version_compare(get_bloginfo('version'), '3.3', '<')) {

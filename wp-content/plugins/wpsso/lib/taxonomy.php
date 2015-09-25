@@ -175,6 +175,7 @@ if ( ! class_exists( 'WpssoTaxonomy' ) ) {
 
 		// hooked into the admin_head action
 		public function set_head_meta_tags() {
+
 			if ( ! empty( $this->head_meta_tags ) )	// only set header tags once
 				return;
 
@@ -199,7 +200,7 @@ if ( ! class_exists( 'WpssoTaxonomy' ) ) {
 						$this->head_info = $this->p->head->extract_head_info( $this->head_meta_tags );
 
 						if ( empty( $this->head_info['og:image'] ) )
-							$this->p->notice->err( 'An Open Graph image meta tag could not be generated for this webpage. Facebook and other social websites require at least one Open Graph image meta tag to render their shared content correctly.' );
+							$this->p->notice->err( $this->p->msgs->get( 'info-missing-og-image' ) );
 					}
 					break;
 			}
@@ -235,7 +236,7 @@ if ( ! class_exists( 'WpssoTaxonomy' ) ) {
 
 			$metabox = 'taxonomy';
 			$tabs = apply_filters( $this->p->cf['lca'].'_'.$metabox.'_tabs', $this->default_tabs );
-			if ( empty( $this->p->is_avail['metatags'] ) )
+			if ( empty( $this->p->is_avail['mt'] ) )
 				unset( $tabs['tags'] );
 
 			$rows = array();

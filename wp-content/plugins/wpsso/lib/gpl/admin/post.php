@@ -17,7 +17,6 @@ if ( ! class_exists( 'WpssoGplAdminPost' ) ) {
 			$this->p->util->add_plugin_filters( $this, array( 
 				'post_header_rows' => 3,
 				'post_media_rows' => 3,
-				'check_head_meta_options' => 2,
 			) );
 		}
 
@@ -36,8 +35,8 @@ if ( ! class_exists( 'WpssoGplAdminPost' ) ) {
 					$head_info['ptn'].' to update and display this value.</em></td>';
 			else
 				$rows[] = $this->p->util->get_th( 'Default Title', 'medium', 'post-og_title', $head_info ). 
-				'<td class="blank">'.$this->p->webpage->get_title( $this->p->options['og_title_len'], '...', 
-					true ).'</td>';	// use_post = true
+				'<td class="blank">'.$this->p->webpage->get_title( $this->p->options['og_title_len'],
+					'...', true, true, false, true, null ).'</td>';	// $use_post = true, $custom_idx = null
 		
 			if ( $post_status == 'auto-draft' )
 				$rows[] = $this->p->util->get_th( 'Default (Facebook / Open Graph, LinkedIn, 
@@ -47,7 +46,8 @@ if ( ! class_exists( 'WpssoGplAdminPost' ) ) {
 			else
 				$rows[] = $this->p->util->get_th( 'Default (Facebook / Open Graph, LinkedIn, 
 					Pinterest Rich Pin) Description', 'medium', 'post-og_desc', $head_info ).
-				'<td class="blank">'.$this->p->webpage->get_description( $this->p->options['og_desc_len'], '...', true ).'</td>';
+				'<td class="blank">'.$this->p->webpage->get_description( $this->p->options['og_desc_len'],
+					'...', true, true, true, true, null ).'</td>';	// $use_post = true, $custom_idx = null
 	
 			if ( $post_status == 'auto-draft' )
 				$rows[] = '<tr class="hide_in_basic">'.
@@ -57,7 +57,8 @@ if ( ! class_exists( 'WpssoGplAdminPost' ) ) {
 			else
 				$rows[] = '<tr class="hide_in_basic">'.
 				$this->p->util->get_th( 'Google+ / Schema Description', 'medium', 'post-schema_desc', $head_info ).
-				'<td class="blank">'.$this->p->webpage->get_description( $this->p->options['schema_desc_len'], '...', true ).'</td>';
+				'<td class="blank">'.$this->p->webpage->get_description( $this->p->options['schema_desc_len'], 
+					'...', true ).'</td>';
 	
 			if ( $post_status == 'auto-draft' )
 				$rows[] = $this->p->util->get_th( 'Google Search / SEO Description', 'medium', 'post-seo_desc', $head_info ).
@@ -65,8 +66,8 @@ if ( ! class_exists( 'WpssoGplAdminPost' ) ) {
 					$head_info['ptn'].' to update and display this value.</em></td>';
 			else
 				$rows[] = $this->p->util->get_th( 'Google Search / SEO Description', 'medium', 'post-seo_desc', $head_info ).
-				'<td class="blank">'.$this->p->webpage->get_description( $this->p->options['seo_desc_len'], '...',
-					true, true, false ).'</td>';	// no hashtags
+				'<td class="blank">'.$this->p->webpage->get_description( $this->p->options['seo_desc_len'], 
+					'...', true, true, false ).'</td>';	// $add_hashtags = false
 
 			if ( $post_status == 'auto-draft' )
 				$rows[] = $this->p->util->get_th( 'Twitter Card Description', 'medium', 'post-tc_desc', $head_info ).
@@ -74,7 +75,8 @@ if ( ! class_exists( 'WpssoGplAdminPost' ) ) {
 					$head_info['ptn'].' to update and display this value.</em></td>';
 			else
 				$rows[] = $this->p->util->get_th( 'Twitter Card Description', 'medium', 'post-tc_desc', $head_info ).
-				'<td class="blank">'.$this->p->webpage->get_description( $this->p->options['tc_desc_len'], '...', true ).'</td>';
+				'<td class="blank">'.$this->p->webpage->get_description( $this->p->options['tc_desc_len'],
+					'...', true ).'</td>';
 
 			if ( $post_status == 'publish' || $post_type == 'attachment' )
 				$rows[] = '<tr class="hide_in_basic">'.
@@ -122,7 +124,7 @@ if ( ! class_exists( 'WpssoGplAdminPost' ) ) {
 			'<td class="blank">'.$this->p->options['og_vid_max'].'</td>';
 
 			$rows[] = $this->p->util->get_th( 'Include Preview Image(s)', 'medium', 'post-og_vid_prev_img', $head_info ).
-			'<td class="blank">&nbsp;</td>';
+			'<td class="blank">'.$form->get_no_checkbox( 'og_vid_prev_img' ).'</td>';
 
 			$rows[] = '<tr class="hide_in_basic">'.
 			'<td colspan="2" class="subsection"><h4>Pinterest (Rich Pin)</h4></td>';
@@ -140,13 +142,6 @@ if ( ! class_exists( 'WpssoGplAdminPost' ) ) {
 			'<td class="blank">&nbsp;</td>';
 
 			return $rows;
-		}
-
-		// twitter cards are not supported in the free version, so remove twitter card meta tags from the duplicate meta tag check
-		public function filter_check_head_meta_options( $check_opts, $post_id ) {
-			foreach ( SucomUtil::preg_grep_keys( '/^meta_name_twitter:/', $check_opts ) as $key => $val )
-				unset( $check_opts[$key] );
-			return $check_opts;
 		}
 	}
 }

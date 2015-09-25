@@ -233,8 +233,8 @@ class WPEditorBrowser {
     }
     if(isset($_FILES["file-0"]) && isset($_POST['current_theme_root'])) {
       $error = $_FILES["file-0"]["error"];
-      $error_message = __('No Errors', 'wpeditor');
-      $success = __('Unsuccessful', 'wpeditor');
+      $error_message = __('No Errors', 'wp-editor');
+      $success = __('Unsuccessful', 'wp-editor');
       $current_theme_root = $_POST['current_theme_root'];
       $directory = '';
       if(isset($_POST['directory'])) {
@@ -254,7 +254,7 @@ class WPEditorBrowser {
       }
       
       if($_FILES["file-0"]["error"] > 0) {
-        $error_message = __('Return Code', 'wpeditor') . ": " . $_FILES["file-0"]["error"];
+        $error_message = __('Return Code', 'wp-editor') . ": " . $_FILES["file-0"]["error"];
       }
       else {
         //$result = "Upload: " . $_FILES["file-0"]["name"] . "<br />";
@@ -264,7 +264,7 @@ class WPEditorBrowser {
 
         if(file_exists($complete_directory . $_FILES["file-0"]["name"])) {
           $error = -1;
-          $error_message = $_FILES["file-0"]["name"] . __(' already exists', 'wpeditor');
+          $error_message = $_FILES["file-0"]["name"] . __(' already exists', 'wp-editor');
         }
         else {
           move_uploaded_file($_FILES["file-0"]["tmp_name"], $current_theme_root . $directory . $_FILES["file-0"]["name"]);
@@ -274,8 +274,8 @@ class WPEditorBrowser {
     }
     else {
       $error = -2;
-      $error_message = __('No File Selected', 'wpeditor');
-      $success = __('Unsuccessful', 'wpeditor');
+      $error_message = __('No File Selected', 'wp-editor');
+      $success = __('Unsuccessful', 'wp-editor');
     }
     $result = array(
       'error' => array(
@@ -295,8 +295,8 @@ class WPEditorBrowser {
     }
     if(isset($_FILES["file-0"]) && isset($_POST['current_plugin_root'])) {
       $error = $_FILES["file-0"]["error"];
-      $error_message = __('No Errors', 'wpeditor');
-      $success = __('Unsuccessful', 'wpeditor');
+      $error_message = __('No Errors', 'wp-editor');
+      $success = __('Unsuccessful', 'wp-editor');
       $current_plugin_root = $_POST['current_plugin_root'];
       $directory = '';
       if(isset($_POST['directory'])) {
@@ -316,7 +316,7 @@ class WPEditorBrowser {
       }
       
       if($_FILES["file-0"]["error"] > 0) {
-        $error_message = __('Return Code', 'wpeditor') . ": " . $_FILES["file-0"]["error"];
+        $error_message = __('Return Code', 'wp-editor') . ": " . $_FILES["file-0"]["error"];
       }
       else {
         //$result = "Upload: " . $_FILES["file-0"]["name"] . "<br />";
@@ -326,7 +326,7 @@ class WPEditorBrowser {
 
         if(file_exists($complete_directory . $_FILES["file-0"]["name"])) {
           $error = -1;
-          $error_message = $_FILES["file-0"]["name"] . __(' already exists', 'wpeditor');
+          $error_message = $_FILES["file-0"]["name"] . __(' already exists', 'wp-editor');
         }
         else {
           move_uploaded_file($_FILES["file-0"]["tmp_name"], $complete_directory . $_FILES["file-0"]["name"]);
@@ -336,8 +336,8 @@ class WPEditorBrowser {
     }
     else {
       $error = -2;
-      $error_message = __('No File Selected', 'wpeditor');
-      $success = __('Unsuccessful', 'wpeditor');
+      $error_message = __('No File Selected', 'wp-editor');
+      $success = __('Unsuccessful', 'wp-editor');
     }
     $result = array(
       'error' => array(

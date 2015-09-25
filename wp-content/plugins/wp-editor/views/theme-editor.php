@@ -1,33 +1,33 @@
 <div id="save-result"></div>
 <div class="wrap">
   <?php screen_icon(); ?>
-  <h2><?php _e('Edit Themes', 'wpeditor'); ?></h2>
+  <h2><?php _e('Edit Themes', 'wp-editor'); ?></h2>
   <?php
   $theme = wp_get_theme();
   if(is_object($data['wp_theme']) && $data['wp_theme']->name == $theme->name) { ?>
     <div class="updated">
-      <p><?php _e('<strong>This theme is currently activated!<br />Warning:</strong> Making changes to active themes is not recommended.', 'wpeditor'); ?></p>
+      <p><?php _e('<strong>This theme is currently activated!<br />Warning:</strong> Making changes to active themes is not recommended.', 'wp-editor'); ?></p>
     </div>
   <?php } ?>
   <?php if(isset($_GET['create-theme']) && $_GET['create-theme'] == 'success'): ?>
     <div class="updated">
-      <p><?php _e('<strong>Your theme was successfully created!</strong>', 'wpeditor'); ?></p>
+      <p><?php _e('<strong>Your theme was successfully created!</strong>', 'wp-editor'); ?></p>
     </div>
   <?php endif; ?>
   <?php if(isset($_GET['error'])): ?>
     <div class="error">
       <?php if($_GET['error'] == 1): ?>
-        <p><strong><?php _e('You do not have sufficient permissions to download this plugin.', 'wpeditor'); ?></strong></p>
+        <p><strong><?php _e('You do not have sufficient permissions to download this plugin.', 'wp-editor'); ?></strong></p>
       <?php elseif($_GET['error'] == 2): ?>
-        <p><strong><?php _e('There was an error locating the file to download. Please try again later.', 'wpeditor'); ?></strong></p>
+        <p><strong><?php _e('There was an error locating the file to download. Please try again later.', 'wp-editor'); ?></strong></p>
       <?php elseif($_GET['error'] == 3): ?>
-        <p><strong><?php _e('There was an error compressing the plugin files. Please try again later.', 'wpeditor'); ?></strong></p>
+        <p><strong><?php _e('There was an error compressing the plugin files. Please try again later.', 'wp-editor'); ?></strong></p>
       <?php elseif($_GET['error'] == 4): ?>
-        <p><strong><?php _e('You do not have sufficient permissions to download this file.', 'wpeditor'); ?></strong></p>
+        <p><strong><?php _e('You do not have sufficient permissions to download this file.', 'wp-editor'); ?></strong></p>
       <?php elseif($_GET['error'] == 5): ?>
-        <p><strong><?php _e('Your theme details were invalid. Please try again.', 'wpeditor'); ?></strong></p>
+        <p><strong><?php _e('Your theme details were invalid. Please try again.', 'wp-editor'); ?></strong></p>
       <?php elseif($_GET['error'] == 6): ?>
-        <p><strong><?php _e('There was an error creating the theme. Please try again later.', 'wpeditor'); ?></strong></p>
+        <p><strong><?php _e('There was an error creating the theme. Please try again later.', 'wp-editor'); ?></strong></p>
       <?php endif; ?>
     </div>
   <?php endif; ?>
@@ -41,17 +41,17 @@
         <?php endif; ?>
         <?php
           if(is_writable($data['real_file'])) {
-            echo '<span class="writable_status">' . __('Editing', 'wpeditor') . '</span> <span class="current_file">' . $data['file'] . '</span>';
+            echo '<span class="writable_status">' . __('Editing', 'wp-editor') . '</span> <span class="current_file">' . $data['file'] . '</span>';
           }
           else {
-            echo '<span class="writable_status">' . __('Browsing', 'wpeditor') . '</span> <span class="current_file">' . $data['file'] . '</span>';
+            echo '<span class="writable_status">' . __('Browsing', 'wp-editor') . '</span> <span class="current_file">' . $data['file'] . '</span>';
           }
         ?>
       </h3>
     </div>
     <div class="alignright">
       <form action="themes.php?page=wpeditor_themes" method="post">
-        <strong><label for="plugin"><?php _e('Select theme to edit:', 'wpeditor'); ?></label></strong>
+        <strong><label for="plugin"><?php _e('Select theme to edit:', 'wp-editor'); ?></label></strong>
         <select name="theme" id="theme">
           <?php if(WP_34): ?>
             <?php
@@ -80,7 +80,7 @@
             ?>
           <?php endif; ?>
         </select>
-        <input type='submit' name='submit' class="button-secondary" value="<?php _e('Select', 'wpeditor'); ?>" />
+        <input type='submit' name='submit' class="button-secondary" value="<?php _e('Select', 'wp-editor'); ?>" />
       </form>
     </div>
     <br class="clear" />
@@ -88,21 +88,21 @@
   
   <div id="templateside">
     <?php if(WPEditorSetting::getValue('theme_file_upload')): ?>
-      <h3><?php _e('Upload Files', 'wpeditor'); ?></h3>
+      <h3><?php _e('Upload Files', 'wp-editor'); ?></h3>
       <div id="theme-upload-files">
         <?php if(is_writable($data['real_file'])): ?>
           <form enctype="multipart/form-data" id="theme_upload_form" method="POST">
               <!-- MAX_FILE_SIZE must precede the file input field -->
               <!--input type="hidden" name="MAX_FILE_SIZE" value="30000" /-->
               <p class="description">
-                <?php _e('To', 'wpeditor'); ?>: <?php echo basename(dirname($data['current_theme_root'])) . '/' . basename($data['current_theme_root']) . '/'; ?>
+                <?php _e('To', 'wp-editor'); ?>: <?php echo basename(dirname($data['current_theme_root'])) . '/' . basename($data['current_theme_root']) . '/'; ?>
               </p>
               <input type="hidden" name="current_theme_root" value="<?php echo $data['current_theme_root']; ?>" id="current_theme_root" />
-              <input type="text" name="directory" id="file_directory" style="width:190px" placeholder="<?php _e('Optional: Sub-Directory', 'wpeditor'); ?>" />
+              <input type="text" name="directory" id="file_directory" style="width:190px" placeholder="<?php _e('Optional: Sub-Directory', 'wp-editor'); ?>" />
               <!-- Name of input element determines name in $_FILES array -->
               <input name="file" type="file" id="upload_file" style="width:180px" />
               <div class="ajax-button-loader">
-                <?php submit_button(__('Upload File', 'wpeditor'), 'primary', 'submit', false); ?>
+                <?php submit_button(__('Upload File', 'wp-editor'), 'primary', 'submit', false); ?>
                 <div class="ajax-loader"></div>
               </div>
           </form>
@@ -115,7 +115,7 @@
       <div id="upload_message"></div>
     <?php endif; ?>
     
-    <h3><?php _e('Theme Files', 'wpeditor'); ?></h3>
+    <h3><?php _e('Theme Files', 'wp-editor'); ?></h3>
     <div id="theme-editor-files">
       <ul id="theme-folders" class="theme-folders"></ul>
     </div>
@@ -126,7 +126,7 @@
     <div>
       <textarea cols="70" rows="25" name="new-content" id="new-content" tabindex="1"><?php echo $data['content'] ?></textarea>
       <input type="hidden" name="action" value="save_files" />
-      <input type="hidden" name="_success" id="_success" value="<?php _e('The file has been updated successfully.', 'wpeditor'); ?>" />
+      <input type="hidden" name="_success" id="_success" value="<?php _e('The file has been updated successfully.', 'wp-editor'); ?>" />
       <input type="hidden" id="file" name="file" value="<?php echo esc_attr($data['file']); ?>" />
       <input type="hidden" id="theme-name" name="theme" value="<?php echo esc_attr($data['theme']); ?>" />
       <input type="hidden" id="path" name="path" value="<?php echo esc_attr($data['real_file']); ?>" />
@@ -140,15 +140,15 @@
     <p class="submit">
       <?php if(isset($_GET['phperror'])): ?>
         <input type="hidden" name="phperror" value="1" />
-        <input type="submit" name="submit" class="button-primary" value="<?php _e('Update File and Attempt to Reactivate', 'wpeditor'); ?>" />
+        <input type="submit" name="submit" class="button-primary" value="<?php _e('Update File and Attempt to Reactivate', 'wp-editor'); ?>" />
       <?php else: ?>
-        <input type="submit" name='submit' class="button-primary" value="<?php _e('Update File', 'wpeditor'); ?>" />
+        <input type="submit" name='submit' class="button-primary" value="<?php _e('Update File', 'wp-editor'); ?>" />
       <?php endif; ?>
       <?php if(WPEditorSetting::getValue('theme_create_new')): ?>
-        <input type="button" name="theme-create-new" class="button-primary theme-create-new" value="<?php _e('Create New Theme', 'wpeditor'); ?>" />
+        <input type="button" name="theme-create-new" class="button-primary theme-create-new" value="<?php _e('Create New Theme', 'wp-editor'); ?>" />
       <?php endif; ?>
-      <input type="button" class="button-secondary download-file" value="<?php _e('Download File', 'wpeditor'); ?>" />
-      <input type="button" class="button-secondary download-theme" value="<?php _e('Download Theme', 'wpeditor'); ?>" />
+      <input type="button" class="button-secondary download-file" value="<?php _e('Download File', 'wp-editor'); ?>" />
+      <input type="button" class="button-secondary download-theme" value="<?php _e('Download Theme', 'wp-editor'); ?>" />
     </p>
     <?php if(!is_writable($data['real_file'])): ?>
       <div class="error writable-error">
@@ -165,31 +165,31 @@
         <table class="form-table">
           <tbody>
             <tr valign="top">
-              <th scope="row"><?php _e('Theme Name', 'wpeditor'); ?></th>
+              <th scope="row"><?php _e('Theme Name', 'wp-editor'); ?></th>
               <td>
                 <input type="text" name="theme-name" />
-                <p class="description"><?php _e('Enter the name that you want to use for your new theme.', 'wpeditor'); ?></p>
+                <p class="description"><?php _e('Enter the name that you want to use for your new theme.', 'wp-editor'); ?></p>
               </td>
             </tr>
             <tr valign="top">
-              <th scope="row"><?php _e('Theme Folder', 'wpeditor'); ?></th>
+              <th scope="row"><?php _e('Theme Folder', 'wp-editor'); ?></th>
               <td>
                 <input type="text" name="theme-folder" />
-                <p class="description"><?php _e('Enter the folder name that you want to use to create your new theme. This will be the name of the new folder that is created and added to your themes directory.', 'wpeditor'); ?></p>
+                <p class="description"><?php _e('Enter the folder name that you want to use to create your new theme. This will be the name of the new folder that is created and added to your themes directory.', 'wp-editor'); ?></p>
               </td>
             </tr>
             <tr valign="top">
               <th scope="row"></th>
               <td>
-                <?php submit_button(__('Create Theme', 'wpeditor'), 'primary', 'submit', false); ?>
-                <input type="button" name="cancel-theme-create" class="cancel-theme-create button-primary" value="<?php _e('Cancel', 'wpeditor'); ?>" />
+                <?php submit_button(__('Create Theme', 'wp-editor'), 'primary', 'submit', false); ?>
+                <input type="button" name="cancel-theme-create" class="cancel-theme-create button-primary" value="<?php _e('Cancel', 'wp-editor'); ?>" />
               </td>
             </tr>
           </tbody>
         </table>
       <?php else: ?>
-        <p><?php _e('Your theme folder is not writable.  In order to add a new theme, this folder needs to be writable.', 'wpeditor'); ?></p>
-        <input type="button" name="cancel-theme-create" class="cancel-theme-create button-primary" value="<?php _e('Cancel', 'wpeditor'); ?>" />
+        <p><?php _e('Your theme folder is not writable.  In order to add a new theme, this folder needs to be writable.', 'wp-editor'); ?></p>
+        <input type="button" name="cancel-theme-create" class="cancel-theme-create button-primary" value="<?php _e('Cancel', 'wp-editor'); ?>" />
       <?php endif; ?>
     </div>
   </form>

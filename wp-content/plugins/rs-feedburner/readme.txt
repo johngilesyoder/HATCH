@@ -3,7 +3,7 @@ Contributors: RedSand
 Donate link: http://www.redsandmarketing.com/rs-feedburner-donate/
 Tags: feedburner, feedburner plugin, feedpress, feedpress plugin, feedblitz, feedblitz plugin, feed, feed plugin, feeds, feedsmith, redirect, redirects, redirection, rss, seo, subscribe, subscribers, subscription, feedburner alternative, comments
 Requires at least: 3.8
-Tested up to: 4.2
+Tested up to: 4.3
 Stable tag: trunk
 
 This plugin detects native WordPress feeds and redirects them to your FeedBurner, FeedPress, or FeedBlitz feed so you can track your subscribers.
@@ -107,6 +107,19 @@ Optional: If you have a FeedBurner, FeedPress, or FeedBlitz feed setup for your 
 Absolutely...go to my [WordPress Consulting](http://www.redsandmarketing.com/web-design/wordpress-consulting/ "WordPress Consulting") page for more information.
 
 == Changelog ==
+
+= 1.5.2 =
+*released 09/12/15*
+
+* Added some features to prevent certain feed issues.
+* Added appropriate ping URLs for FeedBurner and FeedPress to the "Update Services" setting under WordPress Settings -> Writing.
+* Added some troubleshooting steps to the plugin settings page.
+
+= 1.5.1 =
+*released 09/09/15*
+
+* Fixed a bug that some sites were experiencing after upgrading to WordPress 4.3.
+* Made various code improvements.
 
 = 1.5 =
 *released 07/15/15*
@@ -213,5 +226,5 @@ Absolutely...go to my [WordPress Consulting](http://www.redsandmarketing.com/web
 This plugin is a fork of the original FeedBurner Feedsmith plugin by Steve Smith. Since it was discontinued, I picked up where it left off so we all can have an actively updated plugin.
 
 == Upgrade Notice ==
-= 1.5 =
-Made various code improvements, tweaks, and minor fixes. Please see Changelog for details.
+= 1.5.2 =
+* Added some features to prevent certain feed issues, added appropriate ping URLs to the "Update Services" setting, and added troubleshooting steps to the plugin settings page. Please see Changelog for details.

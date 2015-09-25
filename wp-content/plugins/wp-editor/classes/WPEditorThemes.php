@@ -3,7 +3,7 @@ class WPEditorThemes {
   
   public static function addThemesPage() {
     if(!current_user_can('edit_themes')) {
-      wp_die('<p>' . __('You do not have sufficient permissions to edit templates for this site.', 'wpeditor') . '</p>');
+      wp_die('<p>' . __('You do not have sufficient permissions to edit templates for this site.', 'wp-editor') . '</p>');
     }
     
     if(isset($_POST['create_theme_new']) && wp_verify_nonce($_POST['create_theme_new'], 'create_theme_new')) {
@@ -26,7 +26,7 @@ class WPEditorThemes {
     }
     
     if(empty($themes)) {
-      wp_die('<p>' . __('There are no themes installed on this site.', 'wpeditor') . '</p>');
+      wp_die('<p>' . __('There are no themes installed on this site.', 'wp-editor') . '</p>');
     }
     
     if(isset($_REQUEST['theme'])) {
@@ -189,11 +189,11 @@ class WPEditorThemes {
     if(function_exists('add_help_tab') && function_exists('set_help_sidebar')) {
       $screen->add_help_tab(array(
         'id' => 'overview',
-        'title' => __('Overview', 'wpeditor'),
-        'content' => '<p>' . __('You can use the Theme Editor to edit the individual files which make up your theme.', 'wpeditor') . '</p>' . '<p>' . __('Begin by choosing a theme to edit from the dropdown menu and clicking Select. A list then appears of all the template files. Clicking once on any file name causes the file to appear in the large Editor box.', 'wpeditor') . '</p>' . '<p>' . __('After typing in your edits, click Update File.', 'wpeditor') . '</p>' . '<p>' . __('<strong>Advice:</strong> think very carefully about your site crashing if you are live-editing the theme currently in use.', 'wpeditor') . '</p>' . '<p>' . __('Upgrading to a newer version of the same theme will override changes made here. To avoid this, consider creating a <a href="http://codex.wordpress.org/Child_Themes" target="_blank">child theme</a> instead.', 'wpeditor') . '</p>' . (is_network_admin() ? '<p>' . __('Any edits to files from this screen will be reflected on all sites in the network.', 'wpeditor') . '</p>' : '')
+        'title' => __('Overview', 'wp-editor'),
+        'content' => '<p>' . __('You can use the Theme Editor to edit the individual files which make up your theme.', 'wp-editor') . '</p>' . '<p>' . __('Begin by choosing a theme to edit from the dropdown menu and clicking Select. A list then appears of all the template files. Clicking once on any file name causes the file to appear in the large Editor box.', 'wp-editor') . '</p>' . '<p>' . __('After typing in your edits, click Update File.', 'wp-editor') . '</p>' . '<p>' . __('<strong>Advice:</strong> think very carefully about your site crashing if you are live-editing the theme currently in use.', 'wp-editor') . '</p>' . '<p>' . __('Upgrading to a newer version of the same theme will override changes made here. To avoid this, consider creating a <a href="http://codex.wordpress.org/Child_Themes" target="_blank">child theme</a> instead.', 'wp-editor') . '</p>' . (is_network_admin() ? '<p>' . __('Any edits to files from this screen will be reflected on all sites in the network.', 'wp-editor') . '</p>' : '')
       ));
       $screen->set_help_sidebar(
-        '<p><strong>' . __('For more information:', 'wpeditor') . '</strong></p>' . '<p>' . __('<a href="http://codex.wordpress.org/Theme_Development" target="_blank">Documentation on Theme Development</a>', 'wpeditor') . '</p>' . '<p>' . __('<a href="http://codex.wordpress.org/Using_Themes" target="_blank">Documentation on Using Themes</a>', 'wpeditor') . '</p>' . '<p>' . __('<a href="http://codex.wordpress.org/Editing_Files" target="_blank">Documentation on Editing Files</a>', 'wpeditor') . '</p>' . '<p>' . __('<a href="http://codex.wordpress.org/Template_Tags" target="_blank">Documentation on Template Tags</a>', 'wpeditor') . '</p>' . '<p>' . __('<a href="http://wordpress.org/support/" target="_blank">Support Forums</a>', 'wpeditor') . '</p>'
+        '<p><strong>' . __('For more information:', 'wp-editor') . '</strong></p>' . '<p>' . __('<a href="http://codex.wordpress.org/Theme_Development" target="_blank">Documentation on Theme Development</a>', 'wp-editor') . '</p>' . '<p>' . __('<a href="http://codex.wordpress.org/Using_Themes" target="_blank">Documentation on Using Themes</a>', 'wp-editor') . '</p>' . '<p>' . __('<a href="http://codex.wordpress.org/Editing_Files" target="_blank">Documentation on Editing Files</a>', 'wp-editor') . '</p>' . '<p>' . __('<a href="http://codex.wordpress.org/Template_Tags" target="_blank">Documentation on Template Tags</a>', 'wp-editor') . '</p>' . '<p>' . __('<a href="http://wordpress.org/support/" target="_blank">Support Forums</a>', 'wp-editor') . '</p>'
       );
     }
     elseif(version_compare(get_bloginfo('version'), '3.3', '<')) {

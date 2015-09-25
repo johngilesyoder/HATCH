@@ -38,7 +38,7 @@ if ( ! class_exists( 'WpssoHead' ) ) {
 			if ( $this->p->debug->enabled )
 				$this->p->util->log_is_functions();
 
-			if ( $this->p->is_avail['metatags'] )
+			if ( $this->p->is_avail['mt'] )
 				echo $this->get_header_html( apply_filters( $lca.'_header_use_post', false ) );
 			else echo "\n<!-- ".$lca." meta tags disabled -->\n";
 
@@ -67,9 +67,8 @@ if ( ! class_exists( 'WpssoHead' ) ) {
 				$opts = $this->p->options;
 				foreach ( $opts as $key => $val ) {
 					switch ( true ) {
-						case ( strpos( $key, '_html' ) !== false ):
-						case ( strpos( $key, '_css_' ) !== false ):
 						case ( strpos( $key, '_js_' ) !== false ):
+						case ( strpos( $key, '_css_' ) !== false ):
 						case ( preg_match( '/_(key|tid)$/', $key ) ):
 							$opts[$key] = '********';
 					}
@@ -189,12 +188,14 @@ if ( ! class_exists( 'WpssoHead' ) ) {
 				$this->p->debug->log( 'author_id: '.$author_id );
 
 			/**
-			 * Open Graph, Twitter Card
-			 *
-			 * The Twitter Card meta tags are added by the 
-			 * WpssoHeadTwittercard class using an 'wpsso_og' filter hook.
+			 * Open Graph
 			 */
-			$meta_og = $this->p->og->get_array( $meta_og, $use_post, $obj );
+			$meta_og = $this->p->og->get_array( $use_post, $obj, $meta_og );
+
+			/**
+			 * Twitter Cards
+			 */
+			$meta_tc = $this->p->tc->get_array( $use_post, $obj, $meta_og );
 
 			/**
 			 * Name / SEO meta tags
@@ -251,10 +252,12 @@ if ( ! class_exists( 'WpssoHead' ) ) {
 			$header_array = array_merge(
 				$this->get_single_tag( 'meta', 'name', 'generator',
 					$short_aop.' '.$this->p->cf['plugin'][$lca]['version'].
-					( $this->p->check->aop() ? 'L' : ( $this->p->is_avail['aop'] ? 'U' : 'G' ) ).
+					( $this->p->check->aop( $this->p->cf['lca'], true, $this->p->is_avail['aop'] ) ?
+						'L' : ( $this->p->is_avail['aop'] ? 'U' : 'G' ) ).
 					( $this->p->is_avail['util']['um'] ? ' +' : ' -' ).'UM', '', $use_post ),
 				$this->get_tag_array( 'link', 'rel', $link_rel, $use_post ),
 				$this->get_tag_array( 'meta', 'property', $meta_og, $use_post ),
+				$this->get_tag_array( 'meta', 'name', $meta_tc, $use_post ),
 				$this->get_tag_array( 'meta', 'itemprop', $meta_schema, $use_post ),
 				$this->get_tag_array( 'meta', 'name', $meta_name, $use_post ),		// seo description is last
 				SucomUtil::a2aa( $this->p->schema->get_json_array( $post_id, $author_id,
@@ -344,38 +347,46 @@ if ( ! class_exists( 'WpssoHead' ) ) {
 			$value = htmlentities( $value, ENT_QUOTES, $charset, false );	// double_encode = false
 			if ( $this->p->debug->enabled )
 				$this->p->debug->log( $log_pre.' = "'.$value.'"' );
-			$html_prefix = empty( $comment ) ? '' : '<!-- '.$comment.' -->';
 
 			// add an additional secure_url meta tag for open graph images and videos
-			if ( $tag === 'meta' && 
-				$type === 'property' && 
+			if ( $tag === 'meta' && $type === 'property' && 
 				( $name === 'og:image' || $name === 'og:video:url' ) && 
-				strpos( $value, 'https:' ) === 0 ) {
+					strpos( $value, 'https:' ) === 0 ) {
 
-				$html_tag = '';
 				$secure_url = $value;
 				$value = preg_replace( '/^https:/', 'http:', $value );
-
-				if ( empty( $this->p->options['add_'.$tag.'_'.$type.'_'.$name.':secure_url'] ) ) {
-					if ( $this->p->debug->enabled )
-						$this->p->debug->log( $log_pre.':secure_url is disabled (skipped)' );
-				} else $html_tag = $html_prefix.'<'.$tag.' '.$type.'="'.$name.':secure_url" '.$attr.'="'.$secure_url.'"/>'."\n";
-
-				$ret[] = array( $html_tag, $tag, $type, $name.':secure_url', $attr, $secure_url, $comment );
+				$ret[] = array( '', $tag, $type, $name.':secure_url', $attr, $secure_url, $comment );
 			}
-			
-			$filter_name = $this->p->cf['lca'].'_'.$tag.'_'.$type.'_'.$name.'_'.$attr;
-			$value = apply_filters( $filter_name, $value, $use_post );
+			$ret[] = array( '', $tag, $type, $name, $attr, $value, $comment );
 
-			if ( ! empty( $this->p->options['add_'.$tag.'_'.$type.'_'.$name] ) ) {
-				$html_tag = $html_prefix.'<'.$tag.' '.$type.'="'.$name.'" '.$attr.'="'.$value.'"/>'."\n";
-			} else {
-				$html_tag = '';
-				if ( $this->p->debug->enabled )
+			// $parts = array( $html, $tag, $type, $name, $attr, $value, $comment );
+			foreach ( $ret as $num => $parts ) {
+				if ( defined( 'WPSSO_FILTER_SINGLE_TAGS' ) && WPSSO_FILTER_SINGLE_TAGS ) {
+					/*
+					 * Example: 'wpsso_link_rel_publisher_content'
+					 * apply_filters( 'wpsso_link_rel_'.$name.'_content', $value, $comment, $use_post );
+					 *
+					 * Example: 'wpsso_meta_itemprop_description_content'
+					 * apply_filters( 'wpsso_meta_itemprop_'.$name.'_content', $value, $comment, $use_post );
+					 *
+					 * Example: 'wpsso_meta_name_twitter:description_content'
+					 * apply_filters( 'wpsso_meta_name_'.$name.'_content', $value, $comment, $use_post );
+					 *
+					 * Example: 'wpsso_meta_property_og:description_content'
+					 * apply_filters( 'wpsso_meta_property_'.$name.'_content', $value, $comment, $use_post );
+					 */
+					$filter_name = $this->p->cf['lca'].'_'.$parts[1].'_'.$parts[2].'_'.$parts[3].'_'.$parts[4];
+					$parts[5] = apply_filters( $filter_name, $parts[5], $parts[6], $use_post );
+				}
+
+				if ( ! empty( $this->p->options['add_'.$parts[1].'_'.$parts[2].'_'.$parts[3]] ) )
+					$parts[0] = ( empty( $parts[6] ) ? '' : '<!-- '.$parts[6].' -->' ).
+						'<'.$parts[1].' '.$parts[2].'="'.$parts[3].'" '.$parts[4].'="'.$parts[5].'"/>'."\n";
+				elseif ( $this->p->debug->enabled )
 					$this->p->debug->log( $log_pre.' is disabled (skipped)' );
-			}
-			$ret[] = array( $html_tag, $tag, $type, $name, $attr, $value, $comment );
 
+				$ret[$num] = $parts;
+			}
 			return $ret;
 		}
 	}

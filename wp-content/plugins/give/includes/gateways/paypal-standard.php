@@ -33,6 +33,7 @@ add_action( 'give_paypal_cc_form', '__return_false' );
  * @return void
  */
 function give_process_paypal_purchase( $purchase_data ) {
+
 	if ( ! wp_verify_nonce( $purchase_data['gateway_nonce'], 'give-gateway' ) ) {
 		wp_die( __( 'Nonce verification has failed', 'give' ), __( 'Error', 'give' ), array( 'response' => 403 ) );
 	}
@@ -76,13 +77,13 @@ function give_process_paypal_purchase( $purchase_data ) {
 
 		//Item name - pass level name if variable priced
 		$item_name = $purchase_data['post_data']['give-form-title'];
-		if ( give_has_variable_prices( $purchase_data['post_data']['give-form-id'] ) && isset( $purchase_data['post_data']['give-price-id'] ) ) {
 
+		if ( give_has_variable_prices( $purchase_data['post_data']['give-form-id'] ) && isset( $purchase_data['post_data']['give-price-id'] ) ) {
 			$item_price_level_text = give_get_price_option_name( $purchase_data['post_data']['give-form-id'], $purchase_data['post_data']['give-price-id'] );
 
 			//Is there any donation level text?
-			if(!empty($item_price_level_text)) {
-				$item_name = ' - ' . $item_price_level_text;
+			if ( ! empty( $item_price_level_text ) ) {
+				$item_name .= ' - ' . $item_price_level_text;
 			}
 
 		}

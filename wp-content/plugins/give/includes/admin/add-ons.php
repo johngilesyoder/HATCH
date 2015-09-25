@@ -15,22 +15,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Add-ons Page Init
- *
- * Hooks check feed to the page load action.
- *
- * @since 1.0
- * @global $give_add_ons_page Give Add-ons Pages
- * @return void
- */
-function give_add_ons_init() {
-	global $give_add_ons_page;
-	add_action( 'load-' . $give_add_ons_page, 'give_add_ons_check_feed' );
-}
-
-add_action( 'admin_menu', 'give_add_ons_init' );
-
-/**
  * Add-ons Page
  *
  * Renders the add-ons page content.
@@ -42,7 +26,7 @@ function give_add_ons_page() {
 	ob_start(); ?>
 	<div class="wrap" id="give-add-ons">
 		<h2><?php _e( 'Give Add-ons', 'give' ); ?>
-			&nbsp;&mdash;&nbsp;<a href="http://givewp.com/addons/" class="button-primary give-view-addons-all" title="<?php _e( 'Browse All Extensions', 'give' ); ?>" target="_blank"><?php _e( 'View All Add-ons', 'give' ); ?>
+			&nbsp;&mdash;&nbsp;<a href="https://givewp.com/addons/" class="button-primary give-view-addons-all" title="<?php _e( 'Browse All Extensions', 'give' ); ?>" target="_blank"><?php _e( 'View All Add-ons', 'give' ); ?>
 				<span class="dashicons dashicons-external"></span></a>
 		</h2>
 

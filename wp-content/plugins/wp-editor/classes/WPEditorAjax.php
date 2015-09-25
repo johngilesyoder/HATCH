@@ -32,7 +32,7 @@ class WPEditorAjax {
     }
     else {
       $result[0] = 'WPEditorAjaxSuccess';
-      $result[1] = '<h3>' . __('Success', 'wpeditor') . '</h3><p>' . $_REQUEST['_success'] . '</p>'; 
+      $result[1] = '<h3>' . __('Success', 'wp-editor') . '</h3><p>' . $_REQUEST['_success'] . '</p>'; 
     }
     
     $out = json_encode($result);
@@ -71,15 +71,15 @@ class WPEditorAjax {
             }
           }
           else {
-            $error = __('This file is not writable', 'wpeditor');
+            $error = __('This file is not writable', 'wp-editor');
           }
         }
         else {
-          $error = __('This file does not exist', 'wpeditor');
+          $error = __('This file does not exist', 'wp-editor');
         }
       }
       else {
-        $error = __('Invalid Content', 'wpeditor');
+        $error = __('Invalid Content', 'wp-editor');
       }
     }
     catch(WPEditorException $e) {
@@ -93,7 +93,7 @@ class WPEditorAjax {
     }
     else {
       $result[0] = 'WPEditorAjaxSuccess';
-      $result[1] = '<h3>' . __('Success', 'wpeditor') . '</h3><p>' . $_REQUEST['_success'] . '</p>'; 
+      $result[1] = '<h3>' . __('Success', 'wp-editor') . '</h3><p>' . $_REQUEST['_success'] . '</p>'; 
     }
     
     if(isset($_POST['extension'])) {

@@ -139,7 +139,7 @@ if ( ! class_exists( 'WpssoUser' ) ) {
 						$this->head_info = $this->p->head->extract_head_info( $this->head_meta_tags );
 
 						if ( empty( $this->head_info['og:image'] ) )
-							$this->p->notice->err( 'An Open Graph image meta tag could not be generated for this webpage. Facebook and other social websites require at least one Open Graph image meta tag to render their shared content correctly.' );
+							$this->p->notice->err( $this->p->msgs->get( 'info-missing-og-image' ) );
 					}
 					break;
 			}
@@ -176,7 +176,7 @@ if ( ! class_exists( 'WpssoUser' ) ) {
 
 			$metabox = 'user';
 			$tabs = apply_filters( $this->p->cf['lca'].'_'.$metabox.'_tabs', $this->default_tabs );
-			if ( empty( $this->p->is_avail['metatags'] ) )
+			if ( empty( $this->p->is_avail['mt'] ) )
 				unset( $tabs['tags'] );
 
 			$rows = array();
@@ -472,7 +472,7 @@ if ( ! class_exists( 'WpssoUser' ) ) {
 			}
 		}
 
-		static function delete_metabox_prefs( $user_id = false ) {
+		public static function delete_metabox_prefs( $user_id = false ) {
 			$user_id = $user_id === false ? 
 				get_current_user_id() : $user_id;
 			$cf = WpssoConfig::get_config( false, true );
@@ -490,7 +490,7 @@ if ( ! class_exists( 'WpssoUser' ) ) {
 			}
 		}
 
-		static function delete_metabox_pagehook( $user_id, $menu_slug, $parent_slug ) {
+		private static function delete_metabox_pagehook( $user_id, $menu_slug, $parent_slug ) {
 			$pagehook = get_plugin_page_hookname( $menu_slug, $parent_slug);
 			foreach ( array( 'meta-box-order', 'metaboxhidden', 'closedpostboxes' ) as $state ) {
 				$meta_key = $state.'_'.$pagehook;

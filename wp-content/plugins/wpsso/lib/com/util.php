@@ -35,12 +35,12 @@ if ( ! class_exists( 'SucomUtil' ) ) {
 		}
 
 		// returns false or the admin screen id text string
-		public static function get_screen_id() {
-			if ( is_admin() && function_exists( 'get_current_screen' ) ) {
-				$screen = get_current_screen();
-				if ( ! empty( $screen->id ) )
-					return $screen->id;
-			}
+		public static function get_screen_id( $screen = false ) {
+			if ( $screen === false &&
+				function_exists( 'get_current_screen' ) )
+					$screen = get_current_screen();
+			if ( isset( $screen->id ) )
+				return $screen->id;
 			return false;
 		}
 
@@ -60,10 +60,12 @@ if ( ! class_exists( 'SucomUtil' ) ) {
 				if ( ( $obj = $this->get_post_object( $use_post ) ) === false ) {
 					if ( $this->p->debug->enabled )
 						$this->p->debug->log( 'exiting early: invalid object type' );
-					return $str;
+					return array();
 				}
 			}
-			$post_id = empty( $obj->ID ) || empty( $obj->post_type ) ? 0 : $obj->ID;
+			$post_id = empty( $obj->ID ) || 
+				empty( $obj->post_type ) ? 
+					0 : $obj->ID;
 
 			if ( isset( $atts['url'] ) )
 				$sharing_url = $atts['url'];
@@ -121,6 +123,41 @@ if ( ! class_exists( 'SucomUtil' ) ) {
 					return self::$plugins_idx[$idx];
 				else return false;
 			} else return self::$plugins_idx;
+		}
+
+		public static function add_site_option_key( $name, $key, $value ) {
+			return self::update_option_key( $name, $key, $value, true, true );
+		}
+
+		public static function update_site_option_key( $name, $key, $value, $protect = false ) {
+			return self::update_option_key( $name, $key, $value, $protect, true );
+		}
+
+		// only creates new keys - does not update existing keys
+		public static function add_option_key( $name, $key, $value ) {
+			return self::update_option_key( $name, $key, $value, true, false );	// $protect = true
+		}
+
+		public static function update_option_key( $name, $key, $value, $protect = false, $site = false ) {
+			if ( $site === true )
+				$opts = get_site_option( $name, array() );
+			else $opts = get_option( $name, array() );
+			if ( $protect === true && 
+				isset( $opts[$key] ) )
+					return false;
+			$opts[$key] = $value;
+			if ( $site === true )
+				return update_site_option( $name, $opts );
+			else return update_option( $name, $opts );
+		}
+
+		public static function get_option_key( $name, $key, $site = false ) {
+			if ( $site === true )
+				$opts = get_site_option( $name, array() );
+			else $opts = get_option( $name, array() );
+			if ( isset( $opts[$key] ) )
+				return $opts[$key];
+			else return false;
 		}
 
 		public static function a2aa( $a ) {
@@ -243,16 +280,16 @@ if ( ! class_exists( 'SucomUtil' ) ) {
 		}
 
 		public static function rename_keys( &$opts = array(), &$keys = array() ) {
-			// move old option values to new option names
-			foreach ( $keys as $old => $new )
-				// rename if the old array key exists, but not the new one (we don't want to overwrite current values)
-				if ( ! empty( $old ) && ! empty( $new ) && 
-					array_key_exists( $old, $opts ) && 
-					! array_key_exists( $new, $opts ) ) {
-
-					$opts[$new] = $opts[$old];
+			foreach ( $keys as $old => $new ) {
+				if ( empty( $old ) )
+					continue;
+				elseif ( isset( $opts[$old] ) ) {
+					if ( ! empty( $new ) && 
+						! isset( $opts[$new] ) )
+							$opts[$new] = $opts[$old];
 					unset( $opts[$old] );
 				}
+			}
 			return $opts;
 		}
 
@@ -697,6 +734,8 @@ if ( ! class_exists( 'SucomUtil' ) ) {
 
 		public function cleanup_html_tags( $text, $strip_tags = true, $use_alt = false ) {
 			$alt_text = '';
+			$alt_prefix = isset( $this->p->options['plugin_img_alt_prefix'] ) ?
+				$this->p->options['plugin_img_alt_prefix'] : 'Image:';
 			$text = strip_shortcodes( $text );						// remove any remaining shortcodes
 			$text = html_entity_decode( $text, ENT_QUOTES, get_bloginfo( 'charset' ) );
 			$text = preg_replace( '/[\s\n\r]+/s', ' ', $text );				// put everything on one line
@@ -705,9 +744,11 @@ if ( ! class_exists( 'SucomUtil' ) ) {
 			$text = preg_replace( '/<style\b[^>]*>(.*?)<\/style>/i', ' ', $text);		// remove inline stylesheets
 			$text = preg_replace( '/<!--'.$this->p->cf['lca'].'-ignore-->(.*?)<!--\/'.
 				$this->p->cf['lca'].'-ignore-->/i', ' ', $text);			// remove text between comment strings
+
 			if ( $strip_tags ) {
 				$text = preg_replace( '/<\/p>/i', ' ', $text);				// replace end of paragraph with a space
 				$text_stripped = trim( strip_tags( $text ) );				// remove remaining html tags
+
 				if ( $text_stripped === '' && $use_alt ) {				// possibly use img alt strings if no text
 					if ( strpos( $text, '<img ' ) !== false &&
 						preg_match_all( '/<img [^>]*alt=["\']([^"\'>]*)["\']/U', 
@@ -716,8 +757,10 @@ if ( ! class_exists( 'SucomUtil' ) ) {
 						foreach ( $matches[1] as $alt ) {
 							$alt = trim( $alt );
 							if ( ! empty( $alt ) ) {
-								$alt = 'Image: '.$alt;
-								// add a period after the image alt text, if necessary
+								$alt = empty( $alt_prefix ) ? 
+									$alt : $alt_prefix.' '.$alt;
+
+								// add a period after the image alt text if missing
 								$alt_text .= ( strpos( $alt, '.' ) + 1 ) === strlen( $alt ) ? 
 									$alt.' ' : $alt.'. ';
 							}
@@ -729,6 +772,7 @@ if ( ! class_exists( 'SucomUtil' ) ) {
 				} else $text = $text_stripped;
 			}
 			$text = preg_replace( '/(\xC2\xA0|\s)+/s', ' ', $text );	// convert space-like chars to a single space
+
 			return trim( $text );
 		}
 
@@ -966,21 +1010,17 @@ if ( ! class_exists( 'SucomUtil' ) ) {
 			return false;
 		}
 
-		// deprecated
-		public function th( $title = '', $class = '', $id = '', $atts = null ) {
-			return $this->get_th( $title, $class, $id, $atts );
-		}
-
 		// table header with optional tooltip text
-		public function get_th( $title = '', $class = '', $id = '', $atts = null ) {
-			if ( ! empty( $this->p->msgs ) ) {
+		public function get_th( $title = '', $class = '', $id = '', $atts = array() ) {
+
+			if ( isset( $this->p->msgs ) ) {
 				if ( empty( $id ) ) 
 					$tooltip_idx = 'tooltip-'.$title;
 				else $tooltip_idx = 'tooltip-'.$id;
 				$tooltip_text = $this->p->msgs->get( $tooltip_idx, $atts );	// text is esc_attr()
-			}
+			} else $tooltip_text = '';
 
-			if ( is_array( $atts ) && ! empty( $atts['is_locale'] ) )
+			if ( isset( $atts['is_locale'] ) )
 				$title .= ' <span style="font-weight:normal;">('.self::get_locale().')</span>';
 
 			return '<th'.

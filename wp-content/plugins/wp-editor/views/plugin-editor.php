@@ -1,31 +1,31 @@
 <div id="save-result"></div>
 <div class="wrap">
   <?php screen_icon(); ?>
-  <h2><?php _e('Edit Plugins', 'wpeditor'); ?></h2>
+  <h2><?php _e('Edit Plugins', 'wp-editor'); ?></h2>
   <?php if(in_array($data['file'], (array) get_option('active_plugins', array()))) { ?>
     <div class="updated">
-      <p><?php _e('<strong>This plugin is currently activated!<br />Warning:</strong> Making changes to active plugins is not recommended.  If your changes cause a fatal error, the plugin will be automatically deactivated.', 'wpeditor'); ?></p>
+      <p><?php _e('<strong>This plugin is currently activated!<br />Warning:</strong> Making changes to active plugins is not recommended.  If your changes cause a fatal error, the plugin will be automatically deactivated.', 'wp-editor'); ?></p>
     </div>
   <?php } ?>
   <?php if(isset($_GET['create-plugin']) && $_GET['create-plugin'] == 'success'): ?>
     <div class="updated">
-      <p><?php _e('<strong>Your plugin was successfully created!</strong>', 'wpeditor'); ?></p>
+      <p><?php _e('<strong>Your plugin was successfully created!</strong>', 'wp-editor'); ?></p>
     </div>
   <?php endif; ?>
   <?php if(isset($_GET['error'])): ?>
     <div class="error">
       <?php if($_GET['error'] == 1): ?>
-        <p><strong><?php _e('You do not have sufficient permissions to download this plugin.', 'wpeditor'); ?></strong></p>
+        <p><strong><?php _e('You do not have sufficient permissions to download this plugin.', 'wp-editor'); ?></strong></p>
       <?php elseif($_GET['error'] == 2): ?>
-        <p><strong><?php _e('There was an error locating the file to download. Please try again later.', 'wpeditor'); ?></strong></p>
+        <p><strong><?php _e('There was an error locating the file to download. Please try again later.', 'wp-editor'); ?></strong></p>
       <?php elseif($_GET['error'] == 3): ?>
-        <p><strong><?php _e('There was an error compressing the plugin files. Please try again later.', 'wpeditor'); ?></strong></p>
+        <p><strong><?php _e('There was an error compressing the plugin files. Please try again later.', 'wp-editor'); ?></strong></p>
       <?php elseif($_GET['error'] == 4): ?>
-        <p><strong><?php _e('You do not have sufficient permissions to download this file.', 'wpeditor'); ?></strong></p>
+        <p><strong><?php _e('You do not have sufficient permissions to download this file.', 'wp-editor'); ?></strong></p>
       <?php elseif($_GET['error'] == 5): ?>
-        <p><strong><?php _e('Your plugin details were invalid. Please try again.', 'wpeditor'); ?></strong></p>
+        <p><strong><?php _e('Your plugin details were invalid. Please try again.', 'wp-editor'); ?></strong></p>
       <?php elseif($_GET['error'] == 6): ?>
-        <p><strong><?php _e('There was an error creating the plugin. Please try again later.', 'wpeditor'); ?></strong></p>
+        <p><strong><?php _e('There was an error creating the plugin. Please try again later.', 'wp-editor'); ?></strong></p>
       <?php endif; ?>
     </div>
   <?php endif; ?>
@@ -35,17 +35,17 @@
         <?php
           if(is_plugin_active($data['plugin'])) {
             if(is_writable($data['real_file'])) {
-              echo __('Editing <span class="current_file">', 'wpeditor') . $data['file'] . __('</span> (active)', 'wpeditor');
+              echo __('Editing <span class="current_file">', 'wp-editor') . $data['file'] . __('</span> (active)', 'wp-editor');
             }
             else {
-              echo __('Browsing <span class="current_file">', 'wpeditor') . $data['file'] . __('</span> (active)', 'wpeditor');
+              echo __('Browsing <span class="current_file">', 'wp-editor') . $data['file'] . __('</span> (active)', 'wp-editor');
             }
           } else {
             if (is_writable($data['real_file'])) {
-              echo __('Editing <span class="current_file">', 'wpeditor') . $data['file'] . __('</span> (inactive)', 'wpeditor');
+              echo __('Editing <span class="current_file">', 'wp-editor') . $data['file'] . __('</span> (inactive)', 'wp-editor');
             }
             else {
-              echo __('Browsing <span class="current_file">', 'wpeditor') . $data['file'] . __('</span> (inactive)', 'wpeditor');
+              echo __('Browsing <span class="current_file">', 'wp-editor') . $data['file'] . __('</span> (inactive)', 'wp-editor');
             }
           }
         ?>
@@ -53,7 +53,7 @@
     </div>
     <div class="alignright">
       <form action="plugins.php?page=wpeditor_plugin" method="post">
-        <strong><label for="plugin"><?php _e('Select plugin to edit:', 'wpeditor'); ?></label></strong>
+        <strong><label for="plugin"><?php _e('Select plugin to edit:', 'wp-editor'); ?></label></strong>
         <select name="plugin" id="plugin">
           <?php
             foreach($data['plugins'] as $plugin_key => $a_plugin) {
@@ -71,7 +71,7 @@
             }
           ?>
         </select>
-        <input type='submit' name='submit' class="button-secondary" value="<?php _e('Select', 'wpeditor'); ?>" />
+        <input type='submit' name='submit' class="button-secondary" value="<?php _e('Select', 'wp-editor'); ?>" />
       </form>
     </div>
     <br class="clear" />
@@ -79,21 +79,21 @@
 
   <div id="templateside">
     <?php if(WPEditorSetting::getValue('plugin_file_upload')): ?>
-      <h3><?php _e('Upload Files', 'wpeditor'); ?></h3>
+      <h3><?php _e('Upload Files', 'wp-editor'); ?></h3>
       <div id="plugin-upload-files">
         <?php if(is_writable($data['real_file'])): ?>
           <form enctype="multipart/form-data" id="plugin_upload_form" method="POST">
               <!-- MAX_FILE_SIZE must precede the file input field -->
               <!--input type="hidden" name="MAX_FILE_SIZE" value="30000" /-->
               <p class="description">
-                <?php _e('To', 'wpeditor'); ?>: <?php echo basename(dirname($data['current_plugin_root'])) . '/' . basename($data['current_plugin_root']) . '/'; ?>
+                <?php _e('To', 'wp-editor'); ?>: <?php echo basename(dirname($data['current_plugin_root'])) . '/' . basename($data['current_plugin_root']) . '/'; ?>
               </p>
               <input type="hidden" name="current_plugin_root" value="<?php echo $data['current_plugin_root']; ?>" id="current_plugin_root" />
-              <input type="text" name="directory" id="file_directory" style="width:190px" placeholder="<?php _e('Optional: Sub-Directory', 'wpeditor'); ?>" />
+              <input type="text" name="directory" id="file_directory" style="width:190px" placeholder="<?php _e('Optional: Sub-Directory', 'wp-editor'); ?>" />
               <!-- Name of input element determines name in $_FILES array -->
               <input name="file" type="file" id="upload_file" style="width:180px" />
               <div class="ajax-button-loader">
-                <?php submit_button(__('Upload File', 'wpeditor'), 'primary', 'submit', false); ?>
+                <?php submit_button(__('Upload File', 'wp-editor'), 'primary', 'submit', false); ?>
                 <div class="ajax-loader"></div>
               </div>
           </form>
@@ -106,7 +106,7 @@
       <div id="upload_message"></div>
     <?php endif; ?>
     
-    <h3><?php _e('Plugin Files', 'wpeditor'); ?></h3>
+    <h3><?php _e('Plugin Files', 'wp-editor'); ?></h3>
     <div id="plugin-editor-files">
       <ul id="plugin-folders" class="plugin-folders"></ul>
     </div>
@@ -117,7 +117,7 @@
     <div>
       <textarea cols="70" rows="25" name="new-content" id="new-content" tabindex="1"><?php echo $data['content'] ?></textarea>
       <input type="hidden" name="action" value="save_files" />
-      <input type="hidden" name="_success" id="_success" value="<?php _e('The file has been updated successfully.', 'wpeditor'); ?>" />
+      <input type="hidden" name="_success" id="_success" value="<?php _e('The file has been updated successfully.', 'wp-editor'); ?>" />
       <input type="hidden" id="file" name="file" value="<?php echo esc_attr($data['file']); ?>" />
       <input type="hidden" id="plugin-dirname" name="plugin" value="<?php echo esc_attr($data['plugin']); ?>" />
       <input type="hidden" id="path" name="path" value="<?php echo esc_attr($data['real_file']); ?>" />
@@ -131,15 +131,15 @@
     <p class="submit">
       <?php if(isset($_GET['phperror'])): ?>
         <input type="hidden" name="phperror" value="1" />
-        <input type="submit" name="submit" class="button-primary" value="<?php _e('Update File and Attempt to Reactivate', 'wpeditor'); ?>" />
+        <input type="submit" name="submit" class="button-primary" value="<?php _e('Update File and Attempt to Reactivate', 'wp-editor'); ?>" />
       <?php else: ?>
-        <input type="submit" name='submit' class="button-primary" value="<?php _e('Update File', 'wpeditor'); ?>" />
+        <input type="submit" name='submit' class="button-primary" value="<?php _e('Update File', 'wp-editor'); ?>" />
       <?php endif; ?>
       <?php if(WPEditorSetting::getValue('plugin_create_new')): ?>
-        <input type="button" name="plugin-create-new" class="button-primary plugin-create-new" value="<?php _e('Create New Plugin', 'wpeditor'); ?>" />
+        <input type="button" name="plugin-create-new" class="button-primary plugin-create-new" value="<?php _e('Create New Plugin', 'wp-editor'); ?>" />
       <?php endif; ?>
-      <input type="button" class="button-secondary download-file" value="<?php _e('Download File', 'wpeditor'); ?>" />
-      <input type="button" class="button-secondary download-plugin" value="<?php _e('Download Plugin', 'wpeditor'); ?>" />
+      <input type="button" class="button-secondary download-file" value="<?php _e('Download File', 'wp-editor'); ?>" />
+      <input type="button" class="button-secondary download-plugin" value="<?php _e('Download Plugin', 'wp-editor'); ?>" />
     </p>
     <?php if(!is_writable($data['real_file'])): ?>
       <div class="error writable-error">
@@ -156,38 +156,38 @@
         <table class="form-table">
           <tbody>
             <tr valign="top">
-              <th scope="row"><?php _e('Plugin Name', 'wpeditor'); ?></th>
+              <th scope="row"><?php _e('Plugin Name', 'wp-editor'); ?></th>
               <td>
                 <input type="text" name="plugin-name" />
-                <p class="description"><?php _e('Enter the name that you want to use for your new plugin.', 'wpeditor'); ?></p>
+                <p class="description"><?php _e('Enter the name that you want to use for your new plugin.', 'wp-editor'); ?></p>
               </td>
             </tr>
             <tr valign="top">
-              <th scope="row"><?php _e('Plugin Folder', 'wpeditor'); ?></th>
+              <th scope="row"><?php _e('Plugin Folder', 'wp-editor'); ?></th>
               <td>
                 <input type="text" name="plugin-folder" />
-                <p class="description"><?php _e('Enter the folder name that you want to use to create your new plugin. This will be the name of the new folder that is created and added to your plugins directory.', 'wpeditor'); ?></p>
+                <p class="description"><?php _e('Enter the folder name that you want to use to create your new plugin. This will be the name of the new folder that is created and added to your plugins directory.', 'wp-editor'); ?></p>
               </td>
             </tr>
             <tr valign="top">
-              <th scope="row"><?php _e('Plugin Filename', 'wpeditor'); ?></th>
+              <th scope="row"><?php _e('Plugin Filename', 'wp-editor'); ?></th>
               <td>
                 <input type="text" name="plugin-filename" />
-                <p class="description"><?php _e('Enter the filename that you want to use to create your new plugin. This will be the name of the file that is created and added to the folder specified above.', 'wpeditor'); ?></p>
+                <p class="description"><?php _e('Enter the filename that you want to use to create your new plugin. This will be the name of the file that is created and added to the folder specified above.', 'wp-editor'); ?></p>
               </td>
             </tr>
             <tr valign="top">
               <th scope="row"></th>
               <td>
-                <?php submit_button(__('Create Plugin', 'wpeditor'), 'primary', 'submit', false); ?>
-                <input type="button" name="cancel-plugin-create" class="cancel-plugin-create button-primary" value="<?php _e('Cancel', 'wpeditor'); ?>" />
+                <?php submit_button(__('Create Plugin', 'wp-editor'), 'primary', 'submit', false); ?>
+                <input type="button" name="cancel-plugin-create" class="cancel-plugin-create button-primary" value="<?php _e('Cancel', 'wp-editor'); ?>" />
               </td>
             </tr>
           </tbody>
         </table>
       <?php else: ?>
-        <p><?php _e('Your plugin folder is not writable.  In order to add a new plugin, this folder needs to be writable.', 'wpeditor'); ?></p>
-        <input type="button" name="cancel-plugin-create" class="cancel-plugin-create button-primary" value="<?php _e('Cancel', 'wpeditor'); ?>" />
+        <p><?php _e('Your plugin folder is not writable.  In order to add a new plugin, this folder needs to be writable.', 'wp-editor'); ?></p>
+        <input type="button" name="cancel-plugin-create" class="cancel-plugin-create button-primary" value="<?php _e('Cancel', 'wp-editor'); ?>" />
       <?php endif; ?>
     </div>
   </form>

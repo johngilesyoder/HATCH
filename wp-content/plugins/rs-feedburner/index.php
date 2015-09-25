@@ -1,7 +1,9 @@
 <?php
 /*
-RS FeedBurner - index.php
-Version: 1.4.5
+index.php
+Version: 20150904.01
+Author: Red Sand
+http://www.redsandmarketing.com/plugins/
 
 This script keeps search engines, bots, and unwanted visitors from viewing your private plugin directory contents.
  
@@ -13,25 +15,33 @@ You can avoid the need for pages like this by adding a single line of code to th
 
 error_reporting(0);
 
-// We're going to redirect bots and human visitors to the website root.
-$new_url =  rsfb_get_site_url_alt();
+/* We're going to redirect bots and human visitors to the website root. */
+$new_url =  idx_get_site_url();
 header( 'Location: '.$new_url, true, 301 );
 
-function rsfb_get_site_url_alt() {
-	if ( !empty( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] != 'off' ) { $url = 'https://'; } else { $url = 'http://'; }
-	$url .= rsfb_get_server_name_alt();
+function idx_get_site_url() {
+	$url  = idx_is_ssl() ? 'https://' : 'http://';
+	$url .= idx_get_server_name();
 	return $url;
-	}
+}
 
-function rsfb_get_server_name_alt() {
-	$rsfb_site_dom_nw = $server_name = $_SERVER['SERVER_NAME'];
-	if ( substr( $rsfb_site_dom_nw, 0, 4 ) == 'www.' ) { $rsfb_site_dom_nw = substr( $rsfb_site_dom_nw, 4 ); }
-	$rsfb_env_http_host = getenv('HTTP_HOST'); $rsfb_env_srvr_name = getenv('SERVER_NAME');
-	if ( !empty( $_SERVER['HTTP_HOST'] ) && strpos( $_SERVER['HTTP_HOST'], $rsfb_site_dom_nw ) !== FALSE ) { $server_name = $_SERVER['HTTP_HOST']; }
-	elseif ( !empty( $rsfb_env_http_host ) && strpos( $rsfb_env_http_host, $rsfb_site_dom_nw ) !== FALSE ) { $server_name = $rsfb_env_http_host; }
-	elseif ( !empty( $_SERVER['SERVER_NAME'] ) ) { $server_name = $_SERVER['SERVER_NAME']; }
-	elseif ( !empty( $rsfb_env_srvr_name ) ) { $server_name = $rsfb_env_srvr_name; }
+function idx_is_ssl() {
+	if( !empty( $_SERVER['HTTPS'] ) && 'off' !== $_SERVER['HTTPS'] ) { return TRUE; }
+	if( !empty( $_SERVER['SERVER_PORT'] ) && ( '443' == $_SERVER['SERVER_PORT'] ) ) { return TRUE; }
+	if( !empty( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && 'https' === $_SERVER['HTTP_X_FORWARDED_PROTO'] ) { return TRUE; }
+	if( !empty( $_SERVER['HTTP_X_FORWARDED_SSL'] ) && 'off' !== $_SERVER['HTTP_X_FORWARDED_SSL'] ) { return TRUE; }
+	return FALSE;
+}
+
+function idx_get_server_name() {
+	$site_domain 	= $server_name = '';
+	$env_http_host	= getenv('HTTP_HOST');
+	$env_srvr_name	= getenv('SERVER_NAME');
+	if( !empty( $_SERVER['HTTP_HOST'] ) ) { $server_name = $_SERVER['HTTP_HOST']; }
+	elseif( !empty( $env_http_host ) ) { $server_name = $env_http_host; }
+	elseif( !empty( $_SERVER['SERVER_NAME'] ) ) { $server_name = $_SERVER['SERVER_NAME']; }
+	elseif( !empty( $env_srvr_name ) ) { $server_name = $env_srvr_name; }
 	return strtolower( $server_name );
-	}
+}
 
 ?>

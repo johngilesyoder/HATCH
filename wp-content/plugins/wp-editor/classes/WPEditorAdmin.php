@@ -5,13 +5,13 @@ class WPEditorAdmin {
     $page_roles = WPEditorSetting::getValue('admin_page_roles');
     $page_roles = unserialize($page_roles);
     if(WPEditorSetting::getValue('hide_wpeditor_menu')) {
-      $settings = add_submenu_page('options-general.php', __('WP Editor Settings', 'wpeditor'), __('WP Editor', 'wpeditor'), $page_roles['settings'], 'wpeditor_admin', array('WPEditorAdmin', 'addSettingsPage'));
+      $settings = add_submenu_page('options-general.php', __('WP Editor Settings', 'wp-editor'), __('WP Editor', 'wp-editor'), $page_roles['settings'], 'wpeditor_admin', array('WPEditorAdmin', 'addSettingsPage'));
     }
     else {
       $icon = WPEDITOR_URL . '/images/wpeditor_logo_16.png';
-      $settings = add_menu_page(__('WP Editor Settings', 'wpeditor'), __('WP Editor', 'wpeditor'), $page_roles['settings'], 'wpeditor_admin', array('WPEditorAdmin', 'addSettingsPage'), $icon);
+      $settings = add_menu_page(__('WP Editor Settings', 'wp-editor'), __('WP Editor', 'wp-editor'), $page_roles['settings'], 'wpeditor_admin', array('WPEditorAdmin', 'addSettingsPage'), $icon);
     }
-    //add_submenu_page('wpeditor_admin', __('Sub Menu', 'wpeditor'), __('Orders', 'wpeditor'), $page_roles['orders'], 'wpeditor_admin', array('WPEditorAdmin', 'subMenuPage'));
+    //add_submenu_page('wpeditor_admin', __('Sub Menu', 'wp-editor'), __('Orders', 'wp-editor'), $page_roles['orders'], 'wpeditor_admin', array('WPEditorAdmin', 'subMenuPage'));
     
     add_action('admin_print_styles-' . $settings, array('WPEditorAdmin', 'defaultStylesheetAndScript'));
   }
@@ -19,8 +19,8 @@ class WPEditorAdmin {
   public static function addPluginsPage() {
     global $wpeditor_plugin;
     
-    $page_title = __('Plugin Editor', 'wpeditor');
-    $menu_title = __('Plugin Editor', 'wpeditor');
+    $page_title = __('Plugin Editor', 'wp-editor');
+    $menu_title = __('Plugin Editor', 'wp-editor');
     $capability = 'edit_plugins';
     $menu_slug = 'wpeditor_plugin';
     $wpeditor_plugin = add_plugins_page($page_title, $menu_title, $capability, $menu_slug, array('WPEditorPlugins', 'addPluginsPage'));
@@ -33,8 +33,8 @@ class WPEditorAdmin {
   public static function addThemesPage() {
     global $wpeditor_themes;
     
-    $page_title = __('Theme Editor', 'wpeditor');
-    $menu_title = __('Theme Editor', 'wpeditor');
+    $page_title = __('Theme Editor', 'wp-editor');
+    $menu_title = __('Theme Editor', 'wp-editor');
     $capability = 'edit_themes';
     $menu_slug = 'wpeditor_themes';
     $wpeditor_themes = add_theme_page($page_title, $menu_title, $capability, $menu_slug, array('WPEditorThemes', 'addThemesPage'));

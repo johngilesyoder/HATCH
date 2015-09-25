@@ -16,6 +16,11 @@ if ( ! class_exists( 'WpssoUtil' ) && class_exists( 'SucomUtil' ) ) {
 			$this->p =& $plugin;
 			if ( $this->p->debug->enabled )
 				$this->p->debug->mark();
+			if ( ! empty( $this->p->options['plugin_'.$this->p->cf['lca'].'_tid'] ) )
+				$this->add_plugin_filters( $this, array( 
+					'installed_version' => 2, 
+					'ua_plugin' => 2,
+				), 10, 'sucom' );
 			$this->add_actions();
 		}
 
@@ -43,8 +48,25 @@ if ( ! class_exists( 'WpssoUtil' ) && class_exists( 'SucomUtil' ) ) {
 				$method = $type.'_'.str_replace( array( '/', '-' ), '_', $name );
 				call_user_func( 'add_'.$type, $hook, array( &$class, $method ), $prio, $num );
 				if ( $this->p->debug->enabled )
-					$this->p->debug->log( $type.' for '.$hook.' added', 2 );
+					$this->p->debug->log( $type.' for '.$hook.' added', 3 );
 			}
+		}
+
+		public function filter_installed_version( $version, $lca ) {
+			if ( ! empty( $this->p->cf['plugin'][$lca]['update_auth'] ) &&
+				! $this->p->check->aop( $lca, false ) )
+					return '0.'.$version;
+			else return $version;
+		}
+
+		public function filter_ua_plugin( $plugin, $lca ) {
+			if ( ! isset( $this->p->cf['plugin'][$lca] ) )
+				return $plugin;
+			elseif ( $this->p->check->aop( $lca ) )
+				return $plugin.'L';
+			elseif ( $this->p->check->aop( $lca, false ) )
+				return $plugin.'U';
+			else return $plugin.'G';
 		}
 
 		public function get_image_size_label( $size_name ) {	// wpsso-opengraph
@@ -326,7 +348,7 @@ if ( ! class_exists( 'WpssoUtil' ) && class_exists( 'SucomUtil' ) ) {
 			}
 			if ( ( $topics = file( WPSSO_TOPICS_LIST, 
 				FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES ) ) === false ) {
-				$this->p->notice->err( 'Error reading <u>'.WPSSO_TOPICS_LIST.'</u>.' );
+				$this->p->notice->err( 'Error reading the '.WPSSO_TOPICS_LIST.' topic list file.' );
 				return $topics;
 			}
 			$topics = apply_filters( $this->p->cf['lca'].'_topics', $topics );
@@ -350,23 +372,21 @@ if ( ! class_exists( 'WpssoUtil' ) && class_exists( 'SucomUtil' ) ) {
 		 * Example: get_mod_options( 'post', $post_id, array( 'rp_desc', 'og_desc' ) );
 		 */
 		public function get_mod_options( $mod, $id = false, $idx = false, $attr = array() ) {
-			if ( ! empty( $id ) ) {
-				if ( isset( $this->p->mods['util'][$mod] ) ) {
-					// use first matching index key
-					if ( ! is_array( $idx ) )
-						$idx = array( $idx );
-					foreach ( array_unique( $idx ) as $key ) {
-						$ret = $this->p->mods['util'][$mod]->get_options( $id, $key, $attr );
-						if ( ! empty( $ret ) )
-							break;
-					}
-					if ( ! empty( $ret ) ) {
-						if ( $this->p->debug->enabled )
-							$this->p->debug->log( 'custom '.$mod.' '.
-								( $key === false ? 'options' : $key ).' = '.
-								( is_array( $ret ) ? print_r( $ret, true ) : '"'.$ret.'"' ) );
-						return $ret;
-					}
+			if ( empty( $id ) || empty( $idx ) || 
+				! isset( $this->p->mods['util'][$mod] ) )
+					return false;
+			if ( ! is_array( $idx ) )
+				$idx = array( $idx );
+			foreach ( array_unique( $idx ) as $key ) {
+				if ( empty( $key ) )
+					return false;
+				$ret = $this->p->mods['util'][$mod]->get_options( $id, $key, $attr );
+				if ( ! empty( $ret ) ) {
+					if ( $this->p->debug->enabled )
+						$this->p->debug->log( 'custom '.$mod.' '.
+							( $key === false ? 'options' : $key ).' = '.
+							( is_array( $ret ) ? print_r( $ret, true ) : '"'.$ret.'"' ) );
+					return $ret;	// stop here
 				}
 			}
 			return false;
@@ -400,7 +420,7 @@ if ( ! class_exists( 'WpssoUtil' ) && class_exists( 'SucomUtil' ) ) {
 					if ( $val !== '' ) {
 						$val = $this->cleanup_html_tags( $val );
 						if ( strpos( $val, '//' ) === false ) {
-							$this->p->notice->err( 'The value of option \''.$key.'\' must be a URL'.' - '.$reset_msg, true );
+							$this->p->notice->err( 'The value of option \''.$key.'\' must be a URL - '.$reset_msg, true );
 							$val = $def_val;
 						}
 					}
@@ -435,10 +455,17 @@ if ( ! class_exists( 'WpssoUtil' ) && class_exists( 'SucomUtil' ) ) {
 						$val = $def_val;
 					}
 					break;
-				// must be numeric (blank or zero is ok)
+				// must be numeric
+				case 'blank_num':
+					$passed = ( $val !== '' && 
+						! is_numeric( $val ) ) ? false : true;
+					// no break;
 				case 'numeric':
-					if ( $val !== '' && ! is_numeric( $val ) ) {
-						$this->p->notice->err( 'The value of option \''.$key.'\' must be numeric'.' - '.$reset_msg, true );
+					$passed = ( ! isset( $passed ) && 
+						! is_numeric( $val ) ) ? false : true;
+
+					if ( $passed === false ) {
+						$this->p->notice->err( 'The value of option \''.$key.'\' must be numeric - '.$reset_msg, true );
 						$val = $def_val;
 					}
 					break;
@@ -446,7 +473,7 @@ if ( ! class_exists( 'WpssoUtil' ) && class_exists( 'SucomUtil' ) ) {
 				case 'auth_id':
 					$val = trim( $val );
 					if ( $val !== '' && preg_match( '/[^A-Z0-9\-]/', $val ) ) {
-						$this->p->notice->err( '\''.$val.'\' is not an acceptable value for option \''.$key.'\''.' - '.$reset_msg, true );
+						$this->p->notice->err( '\''.$val.'\' is not an acceptable value for option \''.$key.'\' - '.$reset_msg, true );
 						$val = $def_val;
 					}
 					break;
@@ -705,6 +732,45 @@ if ( ! class_exists( 'WpssoUtil' ) && class_exists( 'SucomUtil' ) ) {
 						$this->p->options['tc_site'] ) ) - 5;	// 5 for 'via' word and 2 spaces
 
 			return $max_len;
+		}
+
+		public static function save_all_times( $lca, $version ) {
+			self::save_time( $lca, $version, 'update', $version );	// $protect only if same version
+			self::save_time( $lca, $version, 'install', true );	// $protect = true
+			self::save_time( $lca, $version, 'activate' );		// always update timestamp
+		}
+
+		// $protect = true/false/version
+		public static function save_time( $lca, $version, $type, $protect = false ) {
+			if ( ! is_bool( $protect ) ) {
+				if ( ! empty( $protect ) ) {
+					if ( ( $ts_version = SucomUtil::get_option_key( WPSSO_TS_NAME, $lca.'_'.$type.'_version' ) ) !== false &&
+						version_compare( $ts_version, $protect, '==' ) )
+							$protect = true;
+					else $protect = false;
+				} else $protect = true;	// just in case
+			}
+			if ( ! empty( $version ) )
+				SucomUtil::update_option_key( WPSSO_TS_NAME, $lca.'_'.$type.'_version', $version, $protect );
+			SucomUtil::update_option_key( WPSSO_TS_NAME, $lca.'_'.$type.'_time', time(), $protect );
+		}
+
+		// get the timestamp array and perform a quick sanity check
+		public function get_all_times() {
+			$has_changed = false;
+			$ts = get_option( WPSSO_TS_NAME, array() );
+			foreach ( $this->p->cf['plugin'] as $lca => $info ) {
+				if ( empty( $info['version'] ) )
+					continue;
+				foreach ( array( 'update', 'install', 'activate' ) as $type ) {
+					if ( empty( $ts[$lca.'_'.$type.'_time'] ) ||
+						( $type === 'update' && ( empty( $ts[$lca.'_'.$type.'_version'] ) || 
+							version_compare( $ts[$lca.'_'.$type.'_version'], $info['version'], '!=' ) ) ) )
+								$has_changed = self::save_time( $lca, $info['version'], $type );
+				}
+			}
+			return $has_changed === false ?
+				$ts : get_option( WPSSO_TS_NAME, array() );
 		}
 	}
 }
