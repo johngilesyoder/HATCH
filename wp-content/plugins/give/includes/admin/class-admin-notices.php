@@ -42,7 +42,7 @@ class Give_Notices {
 	public function give_admin_bar_menu() {
 		global $wp_admin_bar;
 
-		if ( ! give_is_test_mode() && current_user_can( 'view_give_reports' ) ) {
+		if ( ! give_is_test_mode() || ! current_user_can( 'view_give_reports' ) ) {
 			return false;
 		}
 
@@ -90,6 +90,9 @@ class Give_Notices {
 						break;
 					case 'email_sent' :
 						$notices['updated']['give-payment-sent'] = __( 'The donation receipt has been resent.', 'give' );
+						break;
+					case 'refreshed-reports' :
+						$notices['updated']['give-refreshed-reports'] = __( 'The reports cache has been cleared.', 'give' );
 						break;
 					case 'payment-note-deleted' :
 						$notices['updated']['give-payment-note-deleted'] = __( 'The payment note has been deleted.', 'give' );

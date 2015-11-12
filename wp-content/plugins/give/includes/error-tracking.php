@@ -18,8 +18,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Print Errors
  *
- * Prints all stored errors. For use during checkout.
- * If errors exist, they are returned.
+ * Prints all stored errors. Ensures errors show up on the appropriate form;
+ * For use during donation process. If errors exist, they are returned.
  *
  * @since 1.0
  * @uses  give_get_errors()
@@ -32,11 +32,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 function give_print_errors( $form_id ) {
 
 	$errors = give_get_errors();
+	$request_form_id = isset( $_REQUEST['form-id'] ) ? intval( $_REQUEST['form-id'] ) : 0;
 
-	//Ensure errors show up on the appropriate form
-	if ( ! isset( $_POST['give_ajax'] ) && isset( $_POST['give-form-id'] ) && intval( $_POST['give-form-id'] ) !== $form_id ) {
-		return;
-	} elseif ( ! isset( $_POST['give_ajax'] ) && isset( $_REQUEST['form_id'] ) && intval( $_REQUEST['form_id'] ) !== $form_id ) {
+	//Sanity checks first: Ensure that gateway returned errors display on the appropriate form
+	if ( ! isset( $_POST['give_ajax'] ) && $request_form_id !== $form_id ) {
 		return;
 	}
 
@@ -148,4 +147,27 @@ function give_die( $message = '', $title = '', $status = 400 ) {
 	add_filter( 'wp_die_ajax_handler', '_give_die_handler', 10, 3 );
 	add_filter( 'wp_die_handler', '_give_die_handler', 10, 3 );
 	wp_die( $message, $title, array( 'response' => $status ) );
+}
+
+/**
+ * Give Output Error
+ *
+ * @description: Helper function to easily output an error message properly wrapped; used commonly with shortcodes
+ * @since      1.3
+ *
+ * @param $message
+ * @param $echo
+ * @param $error_id
+ *
+ * @return   string  $error
+ */
+function give_output_error( $message, $echo = true, $error_id = 'warning' ) {
+	$error = '<div class="give_errors" id="give_error_' . $error_id . '"><p class="give_error  give_' . $error_id . '">' . $message . '</p></div>';
+
+	if ( $echo ) {
+		echo $error;
+	} else {
+		return $error;
+	}
+
 }

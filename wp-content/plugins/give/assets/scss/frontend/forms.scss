@@ -18,6 +18,9 @@ Layout
 
   fieldset {
 	border: none;
+	padding: 0;
+	margin: 0;
+	border: 0;
   }
 
   .give-form-title {
@@ -42,6 +45,11 @@ Layout
   div.summary {
 	width: 58%;
 	float: right;
+
+	&.give-full-width {
+	  width: 100%;
+	  float: none;
+	}
   }
 
   .give_form select.give-select.required {
@@ -127,7 +135,7 @@ form[id*='give-form'], #give-recurring-form, form.give-form {
 
   }
 
-  legend {
+  legend, h3.give-section-break, h4.give-section-break {
 	font-weight: bold;
 	margin: 10px 0 15px;
 	padding: 0 0 10px;
@@ -139,6 +147,10 @@ form[id*='give-form'], #give-recurring-form, form.give-form {
 	  font-weight: normal;
 	}
 
+  }
+
+  div[id^='section-'] .give-section-break {
+	margin:0;
   }
 
   //Form Layout
@@ -160,7 +172,7 @@ form[id*='give-form'], #give-recurring-form, form.give-form {
 
 	}
 
-	select, textarea, input[type="text"], input[type="email"], input[type="password"] {
+	select, textarea, input[type="text"], input[type="tel"], input[type="email"], input[type="password"] {
 	  @include box-sizing(border-box);
 	  width: 100%;
 	  border-radius: 0;
@@ -444,14 +456,14 @@ CC Validation
 
 #give_secure_site_wrapper {
   padding: 4px 4px 15px 0;
-  font-size:16px;
-  line-height:20px;
+  font-size: 16px;
+  line-height: 20px;
   //Secure padlock (SSL/HTTPS)
   span.padlock {
 	@include iconstyle();
 	@extend .give-icon-locked;
-	font-size:16px;
-	line-height:20px;
+	font-size: 16px;
+	line-height: 20px;
 
 	:before {
 	  display: inline-block;
@@ -465,6 +477,11 @@ CC Validation
 	background-repeat: no-repeat;
 	background-position: 98% 50%;
 	background-size: 16px;
+	&.floatlabel-input {
+	  background-image: url('../assets/images/tick-alt.png');
+	  background-position: 100% 50%;
+	  background-size: 72px 16px;
+	}
   }
 
   span.card-type {
@@ -475,6 +492,14 @@ CC Validation
 	height: 26px;
 	background-size: 37px 26px !important;
   }
+
+  .floatlabel {
+	span.card-type {
+	  top: 11px;
+	  right: 11px;
+	}
+  }
+
   span.card-type.off {
 	display: none;
   }
@@ -584,7 +609,7 @@ form[id*='give-form'] {
 	background-size: 20px 20px;
 	background-repeat: no-repeat;
 	background-color: transparent;
-	@extend .icon-spinner2;
+	@extend .give-icon-spinner2;
 
 	&:before {
 	  @extend .fa-spin;

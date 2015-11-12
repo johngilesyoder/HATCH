@@ -39,9 +39,9 @@ add_shortcode( 'donation_history', 'give_donation_history' );
 /**
  * Donation Form Shortcode
  *
- * Show the Give donation form.
+ * @description Show the Give donation form.
  *
- * @since 1.0
+ * @since       1.0
  *
  * @param array  $atts Shortcode attributes
  * @param string $content
@@ -50,9 +50,37 @@ add_shortcode( 'donation_history', 'give_donation_history' );
  */
 function give_form_shortcode( $atts, $content = null ) {
 	$atts = shortcode_atts( array(
-		'id'         => '',
-		'show_title' => true,
+		'id'            => '',
+		'show_title'    => true,
+		'show_content'  => '',
+		'float_labels'  => '',
+		'display_style' => '',
 	), $atts, 'give_form' );
+
+	foreach ( $atts as $key => $value ) {
+		//convert shortcode_atts values to booleans
+		if ( $key == 'show_title' ) {
+			$atts[ $key ] = filter_var( $atts[ $key ], FILTER_VALIDATE_BOOLEAN );
+		}
+
+		//validate show_content value
+		if ( $key == 'show_content' ) {
+			if ( ! in_array( $value, array( 'none', 'above', 'below' ) ) ) {
+				$atts[ $key ] = '';
+			} else if ( $value == 'above' ) {
+				$atts[ $key ] = 'give_pre_form';
+			} else if ( $value == 'below' ) {
+				$atts[ $key ] = 'give_post_form';
+			}
+		}
+
+		//validate display_style and float_labels value
+		if ( ( $key == 'display_style' && ! in_array( $value, array( 'onpage', 'reveal', 'modal' ) ) )
+			|| ( $key == 'float_labels' && ! in_array( $value, array( 'enabled', 'disabled' ) ) ) ) {
+
+			$atts[ $key ] = '';
+		}
+	}
 
 	//get the Give Form
 	ob_start();
@@ -63,6 +91,50 @@ function give_form_shortcode( $atts, $content = null ) {
 }
 
 add_shortcode( 'give_form', 'give_form_shortcode' );
+
+/**
+ * Donation Form Goal Shortcode
+ *
+ * @description Show the Give donation form goals.
+ *
+ * @since       1.0
+ *
+ * @param array  $atts Shortcode attributes
+ * @param string $content
+ *
+ * @return string
+ */
+function give_goal_shortcode( $atts, $content = null ) {
+	$atts = shortcode_atts( array(
+		'id'        => '',
+		'show_text' => true,
+		'show_bar'  => true,
+	), $atts, 'give_goal' );
+
+
+	//get the Give Form
+	ob_start();
+
+	//Sanity check 1: ensure there is an ID Provided
+	if ( empty( $atts['id'] ) ) {
+		give_output_error( __( 'Error: No Donation form ID for the shortcode provided.', 'give' ), true );
+	}
+
+	//Sanity check 2: Check that this form even has Goals enabled
+	$goal_option = get_post_meta( $atts['id'], '_give_goal_option', true );
+	if ( empty( $goal_option ) || $goal_option !== 'yes' ) {
+		give_output_error( __( 'Error: This form does not have Goals enabled.', 'give' ), true );
+	} else {
+		//Passed all sanity checks: output Goal
+		give_show_goal_progress( $atts['id'], $atts );
+	}
+
+	$final_output = ob_get_clean();
+
+	return apply_filters( 'give_goal_shortcode_output', $final_output, $atts );
+}
+
+add_shortcode( 'give_goal', 'give_goal_shortcode' );
 
 
 /**
@@ -157,7 +229,7 @@ function give_receipt_shortcode( $atts, $content = null ) {
 
 	//Set our important payment information variables
 	$give_receipt_args['id'] = give_get_purchase_id_by_key( $payment_key );
-	$donor_id             = give_get_payment_user_id( $give_receipt_args['id'] );
+	$donor_id                = give_get_payment_user_id( $give_receipt_args['id'] );
 	$payment                 = get_post( $give_receipt_args['id'] );
 
 
@@ -165,7 +237,6 @@ function give_receipt_shortcode( $atts, $content = null ) {
 		'error'          => __( 'Sorry, it appears the viewing window for this donation receipt has expired or you do not have the permission to view this donation receipt.', 'give' ),
 		'price'          => true,
 		'date'           => true,
-		'notes'          => true,
 		'payment_key'    => false,
 		'payment_method' => true,
 		'payment_id'     => true
@@ -203,12 +274,12 @@ function give_receipt_shortcode( $atts, $content = null ) {
 
 	<?php }
 
-
 	give_get_template_part( 'shortcode', 'receipt' );
 
 	$display = ob_get_clean();
 
 	return $display;
+
 }
 
 add_shortcode( 'give_receipt', 'give_receipt_shortcode' );

@@ -3,8 +3,8 @@ Contributors: wordimpress, dlocc, webdevmattcrom
 Donate link: http://givewp.com/
 Tags: donation, donations, donation plugin, wordpress donation plugin, wp donation, ecommerce, e-commerce, fundraising, fundraiser, crowdfunding, wordpress donations, commerce, wordpress ecommerce, giving, charity, donate, gifts, non-profit, paypal, stripe, churches, nonprofit, paypal donations, paypal donate, stripe donations, stripe donate, authorize.net, authorize.net donations
 Requires at least: 3.8
-Tested up to: 4.3
-Stable tag: 1.2.1
+Tested up to: 4.3.2
+Stable tag: 1.3.1.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -128,6 +128,73 @@ We also really like WooCommerce. It's hands-down the most robust eCommerce platf
 4. Multi-level donations
 
 == Changelog ==
+
+= 1.3.1.1 =
+* Fix: Multi-level amounts were incorrectly re-saving to the default of 1.00 due to a bug within the recent update
+
+= 1.3.1 =
+* New: `give_form_classes` filter added for give form classes - https://github.com/WordImpress/Give/issues/306
+* New: `give_form_level_text` filter added for altering multilevel donation form level text - https://github.com/WordImpress/Give/issues/307
+* New: Add-on activation class added - https://github.com/WordImpress/Give/issues/316
+* New: Added form name and ID to Donation History export and also removed unnecessary columns - https://github.com/WordImpress/Give/issues/314
+* New: Added html5 required attributes to required donation fields like first name, email, and CC fields - https://github.com/WordImpress/Give/issues/346
+* Fix: Multiple billing fields being output when multiple forms on a single page - https://github.com/WordImpress/Give/issues/310
+* Fix: Assume multiple give dropdown buttons - https://github.com/WordImpress/Give/issues/310
+* Fix: Give admin dashicon no longer lights up annoyingly on page load in wp-admin - https://github.com/WordImpress/Give/issues/315
+* Fix: Prevent fatal error if user has CMB2 plugin installed - https://github.com/WordImpress/Give/issues/321
+* Fix: When you save the Give Global Settings there is now a notice that displays - https://github.com/WordImpress/Give/issues/312
+* Fix: PayPal transactions types field label updated to "PayPal Transaction Type" - https://github.com/WordImpress/Give/issues/293
+* Fix: Custom Jupiter theme wrapper start and end added to prevent single donation form views from being incorrectly formatted - https://github.com/WordImpress/Give/issues/170
+* Fix: [give_receipt] options now work as expected - https://github.com/WordImpress/Give/issues/267
+* Fix: give_send_back_to_checkout() now properly sends back to donation form with form ID added as query param - https://github.com/WordImpress/Give/issues/337
+* Fix: Server side validation errors now properly reopen a modal or slide down donation forms so the user clearly sees there's an error - https://github.com/WordImpress/Give/issues/264
+* Fix: Dynamically generated receipt pages now have no-cache headers - https://github.com/WordImpress/Give/issues/338
+
+= 1.3.0.4 =
+* New: Added new filter for default form amount - https://github.com/WordImpress/Give/issues/301
+* Fix: Account for recurring donations in the donation history shortcode
+* Fix: Removed anonymous function causing PHP errors for folks using PHP 5.3 and lower - https://github.com/WordImpress/Give/issues/291
+
+= 1.3.0.3 =
+* New: Form Content display option added to new shortcode builder https://github.com/WordImpress/Give/pull/298
+* Fix: Form Content not showing on Single Forms https://github.com/WordImpress/Give/issues/294
+
+= 1.3.0.2 =
+* Fix: Removed bracket array declarations usage that only works with PHP 5.4+ - https://github.com/WordImpress/Give/issues/290
+* Fix: PHP 5.2 Issue with anonymous function / Closure used in new shortcode generator - https://github.com/WordImpress/Give/issues/291
+* Fix: wp_mail function conflict with Mandrill and the new shortcode generator due to too early initialization https://github.com/WordImpress/Give/issues/289
+
+= 1.3.0.1 =
+* Fix: Provided fallback function for array_column function used that's only in PHP 5.5+ - https://github.com/WordImpress/Give/issues/288
+* Fix: Removed Bower folder from WordPress.org plugin repo as it shouldn't be there
+
+= 1.3 =
+* Special shout out to a rock star contributor @pryley https://github.com/pryley - v1.3 wouldn't be packed full with all these awesome enhancements without him!
+* New: Floating labels functionality! Enable floating labels to provide a cleaner donation interface for your users. Thanks @pryley - https://github.com/WordImpress/Give/pull/231
+* New: Shortcode generator for easily adding the various Give shortcodes to your pages and posts. Special thanks to @pryley for all his hard work on this! https://github.com/WordImpress/Give/pull/275
+* New: Goal shortcode added to Core so you can now show various donation form goals separately from donation forms - https://github.com/WordImpress/Give/issues/184
+* New: Global setting to disable single give forms sidebars added - https://github.com/WordImpress/Give/issues/192
+* New: 'give_forms_single_summary_classes' filter added for customizing form wrapper classes
+* New: Advanced global setting added for load scripts in the footer - https://github.com/WordImpress/Give/issues/209
+* New: Admin - Refresh Reports button added to ensure user can clear transients used to store reporting data - https://github.com/WordImpress/Give/issues/210 and https://github.com/WordImpress/Give/issues/85
+* New: Basic table styles for Give tables - https://github.com/WordImpress/Give/issues/232
+* New: Custom amount field displays numbers by default on mobile/tablet - https://github.com/WordImpress/Give/issues/233
+* New: Bower implemented to manage third-party JS scripts - Thanks @pryley https://github.com/WordImpress/Give/pull/236
+* New: Swedish translation files added - Thanks @mepmepmep https://github.com/WordImpress/Give/issues/238
+* New: Changed the ajax loader text from "Updating Price" to "Updating Amount" - https://github.com/WordImpress/Give/issues/269
+* Fix: Modal close button now displays properly - https://github.com/WordImpress/Give/issues/228
+* Fix: [give_login] shortcode now working as expected - also fixed up the logic to output the new [give_goal] shortcode see - https://github.com/WordImpress/Give/issues/279
+* Fix: Admin Give menu section called "Donation Forms" rather than just "Forms" thanks @pryley - https://github.com/WordImpress/Give/issues/196
+* Fix: Include CMB2CSS in the head to avoid FOUC https://github.com/WordImpress/Give/issues/243
+* Fix: Test Mode Active notification displays for editors when inactive https://github.com/WordImpress/Give/issues/242
+* Fix: Delete invalid licenses and when a valid license is entered the field is now a password type https://github.com/WordImpress/Give/issues/203
+* Fix: When Only a Payment Gateway without CC Fields is Active Fatal JS error https://github.com/WordImpress/Give/issues/253
+* Fix: Multiple Give Forms on Single Page Causes CC Validation to Fail https://github.com/WordImpress/Give/issues/254
+* Fix: Donation form income totals not properly updated when manually updating amounts or deleting transactions causing goals to not calculate correctly - https://github.com/WordImpress/Give/issues/188
+* Fix: Admin Column: If no goal is set for a donation form show "No Goal Set" rather than "0.00" - https://github.com/WordImpress/Give/issues/256
+* Fix: Norwegian Kroner currency symbol adjustments - https://github.com/WordImpress/Give/issues/256
+* Fix: Salient theme wrapper divs added - https://github.com/WordImpress/Give/issues/280
+* Fix: Broken welcome screen content columns - https://github.com/WordImpress/Give/issues/287
 
 = 1.2.1 =
 * Improved: Admin UX/UI - "View Donation Details" button now much easier to navigate into the single transaction view - https://github.com/WordImpress/Give/issues/216

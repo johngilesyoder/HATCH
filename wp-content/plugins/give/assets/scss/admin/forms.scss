@@ -11,7 +11,7 @@
 Forms CPT
 --------------------------------------*/
 /* Hide conditional fields */
-.cmb2-id--give-set-price, .cmb2-id--give-levels-header, .cmb2-id--give-levels-header + .cmb-repeat-group-wrap, .cmb2-id--give-display-style, .post-type-give_forms .tablenav #post-query-submit, .give-hidden, .cmb2-id--give-form-content, .cmb2-id--give-reveal-label, .give-single-period, .give-single-times, .cmb2-id--give-custom-amount-text, .cmb2-id--give-offline-checkout-notes {
+.cmb2-id--give-set-price, .cmb2-id--give-levels-header, .cmb2-id--give-levels-header + .cmb-repeat-group-wrap, .cmb2-id--give-display-style, .post-type-give_forms .tablenav #post-query-submit, .give-hidden, .cmb2-id--give-form-content, .cmb2-id--give-reveal-label, .cmb2-id--give-custom-amount-text, .cmb2-id--give-offline-checkout-notes {
   display: none;
 }
 
@@ -129,6 +129,10 @@ p.give-level-id {
   background: #FCFCFC;
   padding: 2px 7px;
   font-size: 11px;
+}
+
+.give-underline {
+  text-decoration: underline;
 }
 
 #poststuff .give-subfield {
@@ -422,4 +426,22 @@ ASIDE
 .cmb2-metabox-description {
   font-size: 13px;
   line-height: 1.5;
+}
+
+/*-------------------------------------
+Tooltips
+-------------------------------------*/
+.give-tooltip {
+  margin: 0 3px;
+  padding: 0;
+  font-size: 14px;
+  @include easing-transition();
+  color: transparentize($dark, 0.5);
+  position: relative;
+  top: 1px;
+
+  &:hover {
+	color: $dark;
+  }
+
 }

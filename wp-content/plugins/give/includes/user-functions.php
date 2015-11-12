@@ -92,7 +92,7 @@ function give_get_users_purchases( $user = 0, $number = 20, $pagination = false,
 /**
  * Get Users Donations
  *
- * Returns a list of unique forms purchased by a specific user
+ * Returns a list of unique donation forms given to by a specific user
  *
  * @since  1.0
  *
@@ -213,6 +213,7 @@ function give_get_purchase_stats_by_user( $user = '' ) {
 	}
 
 	$customer = Give()->customers->get_customer_by( $field, $user );
+
 	$customer = new Give_Customer( $customer->id );
 
 	$stats                = array();

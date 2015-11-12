@@ -20,13 +20,15 @@ if ( ! class_exists( 'WpssoConfig' ) ) {
 			'feed_cache_exp' => 86400,	// 24 hours
 			'plugin' => array(
 				'wpsso' => array(
-					'version' => '3.10.1',		// plugin version
+					'version' => '3.14.2',		// plugin version
 					'short' => 'WPSSO',		// short plugin name
 					'name' => 'WordPress Social Sharing Optimization (WPSSO)',
-					'desc' => 'Improve WordPress editing and publishing for better content on all social websites - no matter how your content is shared or re-shared!',
+					'desc' => 'Fast, light-weight, full-featured plugin for great looking shares on all social sites - no matter how your content is shared or re-shared!',
 					'slug' => 'wpsso',
 					'base' => 'wpsso/wpsso.php',
 					'update_auth' => 'tid',
+					'text_domain' => 'wpsso',
+					'domain_path' => '/languages',
 					'img' => array(
 						'icon_small' => 'images/icon-128x128.png',
 						'icon_medium' => 'images/icon-256x256.png',
@@ -50,47 +52,49 @@ if ( ! class_exists( 'WpssoConfig' ) ) {
 						'pro_support' => 'http://wpsso.support.wpsso.com/',
 					),
 					'lib' => array(			// libraries
-						'setting' => array (
+						'setting' => array (	// lib file descriptions will be translated
 							'wpsso-separator-0' => 'SSO',
 							'image-dimensions' => 'Social Image Dimensions',
 							'social-accounts' => 'Website / Business Social Accounts',
 							'contact-fields' => 'User Profile Contact Methods',
 							'wpsso-separator-1' => '',
 						),
-						'submenu' => array (
+						'submenu' => array (	// lib file descriptions will be translated
 							'general' => 'General',
 							'advanced' => 'Advanced',
 							'readme' => 'Read Me',
 							'setup' => 'Setup Guide',
-							'licenses' => 'Extension Plugins and Pro Licenses',
+							// the first 2 words will be highlighted in menu
+							'licenses' => '<span>Extension Plugins</span> and Pro Licenses',
 						),
-						'sitesubmenu' => array(
+						'sitesubmenu' => array(	// lib file descriptions will be translated
 							'siteadvanced' => 'Advanced',
 							'sitereadme' => 'Read Me',
 							'sitesetup' => 'Setup Guide',
-							'sitelicenses' => 'Extension Plugins and Pro Licenses',
+							// the first 2 words will be highlighted in menu
+							'sitelicenses' => '<span>Extension Plugins</span> and Pro Licenses',
 						),
 						'gpl' => array(
 							'admin' => array(
 								'general' => 'General Settings',
 								'advanced' => 'Advanced Settings',
-								'post' => 'Post Social Settings',
-								'taxonomy' => 'Taxonomy Social Settings',
-								'user' => 'User Social Settings',
+								'post' => 'Post Settings',
+								'taxonomy' => 'Taxonomy Settings',
+								'user' => 'User Settings',
 							),
 							'util' => array(
-								'post' => 'Post Social Settings',
-								'taxonomy' => 'Taxonomy Social Settings',
-								'user' => 'User Social Settings',
+								'post' => 'Post Settings',
+								'taxonomy' => 'Taxonomy Settings',
+								'user' => 'User Settings',
 							),
 						),
 						'pro' => array(
 							'admin' => array(
 								'general' => 'General Settings',
 								'advanced' => 'Advanced Settings',
-								'post' => 'Post Social Settings',
-								'taxonomy' => 'Taxonomy Social Settings',
-								'user' => 'User Social Settings',
+								'post' => 'Post Settings',
+								'taxonomy' => 'Taxonomy Settings',
+								'user' => 'User Settings',
 							),
 							'ecom' => array(
 								'edd' => 'Easy Digital Downloads',
@@ -124,10 +128,10 @@ if ( ! class_exists( 'WpssoConfig' ) ) {
 							'util' => array(
 								'language' => 'Publisher Language',
 								'shorten' => 'URL Shortening',
-								'post' => 'Post Social Settings',
+								'post' => 'Post Settings',
 								'restapi' => 'WP REST API v2',
-								'taxonomy' => 'Taxonomy Social Settings',
-								'user' => 'User Social Settings',
+								'taxonomy' => 'Taxonomy Settings',
+								'user' => 'User Settings',
 							),
 						),
 					),
@@ -219,7 +223,7 @@ if ( ! class_exists( 'WpssoConfig' ) ) {
 				'wpssossb' => array(
 					'short' => 'WPSSO SSB',		// short plugin name
 					'name' => 'WPSSO Social Sharing Buttons (WPSSO SSB)',
-					'desc' => 'WPSSO extension to provide fast and accurate Social Sharing Buttons, including support for hashtags, short URLs, bbPress, BuddyPress, and WooCommerce.',
+					'desc' => 'WPSSO extension to add traditional Social Sharing Buttons with support for hashtags, short URLs, bbPress, BuddyPress, WooCommerce, and much more.',
 					'slug' => 'wpsso-ssb',
 					'base' => 'wpsso-ssb/wpsso-ssb.php',
 					'update_auth' => 'tid',
@@ -247,7 +251,7 @@ if ( ! class_exists( 'WpssoConfig' ) ) {
 				'wpssoum' => array(
 					'short' => 'WPSSO UM',		// short plugin name
 					'name' => 'WPSSO Pro Update Manager (WPSSO UM)',
-					'desc' => 'WPSSO extension to provide updates for the WordPress Social Sharing Optimization (WPSSO) Pro plugin and its extensions.',
+					'desc' => 'WPSSO extension to provide updates for the WordPress Social Sharing Optimization (WPSSO) Pro plugin and its Pro extensions.',
 					'slug' => 'wpsso-um',
 					'base' => 'wpsso-um/wpsso-um.php',
 					'update_auth' => '',
@@ -274,7 +278,7 @@ if ( ! class_exists( 'WpssoConfig' ) ) {
 				),
 			),
 			'opt' => array(						// options
-				'version' => 'sso360',				// increment when changing default options
+				'version' => 'sso369',				// increment when changing default options
 				'defaults' => array(
 					'options_filtered' => false,
 					'schema_desc_len' => 250,		// meta itemprop="description" maximum text length
@@ -313,11 +317,9 @@ if ( ! class_exists( 'WpssoConfig' ) ) {
 					'og_def_img_id' => '',
 					'og_def_img_url' => '',
 					'og_def_img_on_index' => 1,
-					'og_def_img_on_author' => 0,
 					'og_def_img_on_search' => 0,
 					'og_def_vid_url' => '',
 					'og_def_vid_on_index' => 1,
-					'og_def_vid_on_author' => 0,
 					'og_def_vid_on_search' => 0,
 					'og_def_author_id' => 0,
 					'og_def_author_on_index' => 0,
@@ -356,8 +358,10 @@ if ( ! class_exists( 'WpssoConfig' ) ) {
 					// enable/disable header html tags
 					'add_link_rel_author' => 1,
 					'add_link_rel_publisher' => 1,
+					// facebook
 					'add_meta_property_fb:admins' => 1,
 					'add_meta_property_fb:app_id' => 1,
+					// open graph
 					'add_meta_property_og:locale' => 1,
 					'add_meta_property_og:site_name' => 1,
 					'add_meta_property_og:description' => 1,
@@ -373,20 +377,67 @@ if ( ! class_exists( 'WpssoConfig' ) ) {
 					'add_meta_property_og:video:width' => 1,
 					'add_meta_property_og:video:height' => 1,
 					'add_meta_property_og:video:type' => 1,
+					'add_meta_property_og:altitude' => 1,
+					'add_meta_property_og:latitude' => 1,
+					'add_meta_property_og:longitude' => 1,
+					// article
 					'add_meta_property_article:author' => 1,
 					'add_meta_property_article:publisher' => 1,
 					'add_meta_property_article:published_time' => 1,
 					'add_meta_property_article:modified_time' => 1,
 					'add_meta_property_article:section' => 1,
 					'add_meta_property_article:tag' => 1,
+					// book
+					'add_meta_property_book:author' => 1,
+					'add_meta_property_book:isbn' => 1,
+					'add_meta_property_book:release_date' => 1,
+					'add_meta_property_book:tag' => 1,
+					// music
+					'add_meta_property_music:album' => 1,
+					'add_meta_property_music:album:disc' => 1,
+					'add_meta_property_music:album:track' => 1,
+					'add_meta_property_music:creator' => 1,
+					'add_meta_property_music:duration' => 1,
+					'add_meta_property_music:musician' => 1,
+					'add_meta_property_music:release_date' => 1,
+					'add_meta_property_music:song' => 1,
+					'add_meta_property_music:song:disc' => 1,
+					'add_meta_property_music:song:track' => 1,
+					// place
+					'add_meta_property_place:location:altitude' => 1,
+					'add_meta_property_place:location:latitude' => 1,
+					'add_meta_property_place:location:longitude' => 1,
+					'add_meta_property_place:street_address' => 1,
+					'add_meta_property_place:locality' => 1,
+					'add_meta_property_place:region' => 1,
+					'add_meta_property_place:postal_code' => 1,
+					'add_meta_property_place:country_name' => 1,
+					// product
 					'add_meta_property_product:price:amount' => 1,
 					'add_meta_property_product:price:currency' => 1,
 					'add_meta_property_product:availability' => 1,
+					// profile
+					'add_meta_property_profile:first_name' => 1,
+					'add_meta_property_profile:last_name' => 1,
+					'add_meta_property_profile:username' => 1,
+					'add_meta_property_profile:gender' => 1,
+					// video
+					'add_meta_property_video:actor' => 1,
+					'add_meta_property_video:actor:role' => 1,
+					'add_meta_property_video:director' => 1,
+					'add_meta_property_video:writer' => 1,
+					'add_meta_property_video:duration' => 1,
+					'add_meta_property_video:release_date' => 1,
+					'add_meta_property_video:tag' => 1,
+					'add_meta_property_video:series' => 1,
+					// seo
 					'add_meta_name_author' => 1,
 					'add_meta_name_canonical' => 0,
 					'add_meta_name_description' => 1,
 					'add_meta_name_generator' => 1,
+					// pinterest
 					'add_meta_name_p:domain_verify' => 1,
+					// twitter cards
 					'add_meta_name_twitter:card' => 1,
 					'add_meta_name_twitter:creator' => 1,
 					'add_meta_name_twitter:domain' => 1,
@@ -399,12 +450,14 @@ if ( ! class_exists( 'WpssoConfig' ) ) {
 					'add_meta_name_twitter:player' => 1,
 					'add_meta_name_twitter:player:width' => 1,
 					'add_meta_name_twitter:player:height' => 1,
+					// schema
 					'add_meta_itemprop_name' => 1,
 					'add_meta_itemprop_headline' => 1,
 					'add_meta_itemprop_datepublished' => 1,
 					'add_meta_itemprop_description' => 1,
 					'add_meta_itemprop_url' => 1,
 					'add_meta_itemprop_image' => 1,
+					'add_meta_itemprop_address' => 1,
 					/*
 					 * Advanced Settings
 					 */
@@ -416,43 +469,52 @@ if ( ! class_exists( 'WpssoConfig' ) ) {
 					'plugin_filter_lang' => 1,			// Use WP Locale for Language
 					'plugin_auto_img_resize' => 1,			// Auto-Resize Media Images
 					'plugin_ignore_small_img' => 1,			// Check Image Dimensions
+					'plugin_shortcodes' => 1,			// Enable Plugin Shortcode(s)
+					'plugin_widgets' => 1,				// Enable Plugin Widget(s)
 					'plugin_page_excerpt' => 0,			// Enable WP Excerpt for Pages
 					'plugin_page_tags' => 0,			// Enable WP Tags for Pages
-					'plugin_check_head' => 1,
+					// Content and Filters Tab
 					'plugin_filter_title' => 1,
 					'plugin_filter_content' => 0,
 					'plugin_filter_excerpt' => 0,
 					'plugin_p_strip' => 0,
-					'plugin_p_cap_prefix' => 'Caption:',
 					'plugin_use_img_alt' => 1,
 					'plugin_img_alt_prefix' => 'Image:',
-					'plugin_shortcodes' => 1,
-					'plugin_widgets' => 1,
+					'plugin_p_cap_prefix' => 'Caption:',
 					'plugin_gravatar_api' => 1,
 					'plugin_slideshare_api' => 1,
 					'plugin_vimeo_api' => 1,
 					'plugin_wistia_api' => 1,
 					'plugin_youtube_api' => 1,
-					'plugin_cf_img_url' => '_format_image_url',
-					'plugin_cf_vid_url' => '_format_video_url',
-					'plugin_cf_vid_embed' => '_format_video_embed',
+					// Social Settings Tab
+					'plugin_columns_post' => 1,			// Show Social Columns for: Posts, Pages, and CPTs
+					'plugin_columns_taxonomy' => 1,			// Show Social Columns for: Taxonomies (Categories and Tags)
+					'plugin_columns_user' => 1,			// Show Social Columns for: Users
 					'plugin_add_to_post' => 1,
 					'plugin_add_to_page' => 1,
 					'plugin_add_to_taxonomy' => 1,
 					'plugin_add_to_user' => 1,
 					'plugin_add_to_attachment' => 1,
+					'plugin_cf_img_url' => '_format_image_url',
+					'plugin_cf_vid_url' => '_format_video_url',
+					'plugin_cf_vid_embed' => '_format_video_embed',
+					// Theme Integration Tab
+					'plugin_check_head' => 1,
 					'plugin_html_attr_filter_name' => 'language_attributes',
 					'plugin_html_attr_filter_prio' => 100,
 					'plugin_head_attr_filter_name' => 'language_attributes',
 					'plugin_head_attr_filter_prio' => 100,
 					// File and Object Cache Tab
 					'plugin_object_cache_exp' => 86400,		// Object Cache Expiry
-					'plugin_file_cache_exp' => 0,
+					'plugin_file_cache_exp' => 0,			// File Cache Expiry
 					'plugin_verify_certs' => 0,			// Verify SSL Certificates
+					// Service API Keys Tab
 					'plugin_shortener' => 'none',
+					'plugin_shortlink' => 1,
 					'plugin_min_shorten' => 22,
 					'plugin_bitly_login' => '',
 					'plugin_bitly_api_key' => '',
+					'plugin_owly_api_key' => '',
 					'plugin_google_api_key' => '',
 					'plugin_google_shorten' => 0,
 					// Contact Field Names and Labels
@@ -518,6 +580,10 @@ if ( ! class_exists( 'WpssoConfig' ) ) {
 					'plugin_auto_img_resize:use' => 'default',
 					'plugin_ignore_small_img' => 1,			// Check Image Dimensions
 					'plugin_ignore_small_img:use' => 'default',
+					'plugin_shortcodes' => 1,			// Enable Plugin Shortcode(s)
+					'plugin_shortcodes:use' => 'default',
+					'plugin_widgets' => 1,				// Enable Plugin Widget(s)
+					'plugin_widgets:use' => 'default',
 					'plugin_page_excerpt' => 0,			// Enable WP Excerpt for Pages
 					'plugin_page_excerpt:use' => 'default',
 					'plugin_page_tags' => 0,			// Enable WP Tags for Pages
@@ -525,7 +591,7 @@ if ( ! class_exists( 'WpssoConfig' ) ) {
 					// File and Object Cache Tab
 					'plugin_object_cache_exp' => 86400,		// Object Cache Expiry
 					'plugin_object_cache_exp:use' => 'default',
-					'plugin_file_cache_exp' => 0,
+					'plugin_file_cache_exp' => 0,			// File Cache Expiry
 					'plugin_file_cache_exp:use' => 'default',
 					'plugin_verify_certs' => 0,			// Verify SSL Certificates
 					'plugin_verify_certs:use' => 'default',
@@ -565,14 +631,16 @@ if ( ! class_exists( 'WpssoConfig' ) ) {
 				'min_version' => '4.1.0',	// minimum php version
 			),
 			'follow' => array(
-				'size' => 32,
+				'size' => 24,
 				'src' => array(
-					'facebook.png' => 'https://www.facebook.com/SurniaUlulaCom',
-					'gplus.png' => 'https://plus.google.com/+SurniaUlula/',
-					'linkedin.png' => 'https://www.linkedin.com/in/jsmoriss',
-					'twitter.png' => 'https://twitter.com/surniaululacom',
-					'youtube.png' => 'https://www.youtube.com/user/SurniaUlulaCom',
-					'feed.png' => 'http://feed.wpsso.com/category/application/wordpress/wp-plugins/wpsso/feed/',
+					'images/follow/Wordpress.png' => 'https://profiles.wordpress.org/jsmoriss/',
+					'images/follow/Github.png' => 'https://github.com/SurniaUlula',
+					'images/follow/Facebook.png' => 'https://www.facebook.com/SurniaUlulaCom',
+					'images/follow/GooglePlus.png' => 'https://plus.google.com/+SurniaUlula/',
+					'images/follow/Linkedin.png' => 'https://www.linkedin.com/company/surnia-ulula-ltd',
+					'images/follow/Twitter.png' => 'https://twitter.com/surniaululacom',
+					'images/follow/Youtube.png' => 'https://www.youtube.com/user/SurniaUlulaCom',
+					'images/follow/Rss.png' => 'http://wpsso.com/category/application/wordpress/wp-plugins/wpsso/feed/',
 				),
 			),
 			'form' => array(
@@ -603,6 +671,13 @@ if ( ! class_exists( 'WpssoConfig' ) ) {
 					172800 => 48,
 					259200 => 72,
 					604800 => 168,
+				),
+				'qualifiers' => array(
+					'default' => '(default)',
+					'no_images' => '(no images)',
+					'no_videos' => '(no videos)',
+					'settings' => '(settings value)',
+					'disabled' => '(option disabled)',
 				),
 				'script_locations' => array(
 					'none' => '[none]',
@@ -642,8 +717,10 @@ if ( ! class_exists( 'WpssoConfig' ) ) {
 				),
 				'shorteners' => array(
 					'none' => '[none]',
-					'bitly' => 'Bit.ly',
+					'bitly' => 'Bit.ly (suggested)',
 					'googl' => 'Goo.gl',
+					'owly' => 'Ow.ly',
+					'tinyurl' => 'TinyURL (slow)',
 				),
 			),
 			'head' => array(
@@ -665,6 +742,106 @@ if ( ! class_exists( 'WpssoConfig' ) ) {
 					'video.other' => 'http://ogp.me/ns/video#',
 					'video.tv_show' => 'http://ogp.me/ns/video#',
 					'website' => 'http://ogp.me/ns/website#',
+				),
+				'og_type_mt' => array(
+					'article' => array(
+						'article:author',
+						'article:section',
+						'article:tag',
+						'article:published_time',
+						'article:modified_time',
+						'article:expiration_time',
+					),
+					'book' => array(
+						'book:author',
+						'book:isbn',
+						'book:release_date',
+						'book:tag',
+					),
+					'music.album' => array(
+						'music:song',
+						'music:song:disc',
+						'music:song:track',
+						'music:musician',
+						'music:release_date',
+					),
+					'music.playlist' => array(
+						'music:creator',
+						'music:song',
+						'music:song:disc',
+						'music:song:track',
+					),
+					'music.radio_station' => array(
+						'music:creator',
+					),
+					'music.song' => array(
+						'music:album',
+						'music:album:disc',
+						'music:album:track',
+						'music:duration',
+						'music:musician',
+					),
+					'place' => array(
+						'og:altitude',
+						'og:latitude',
+						'og:longitude',
+						'place:location:latitude',
+						'place:location:longitude',
+						'place:location:altitude',
+						'place:street_address',
+						'place:locality',
+						'place:region',
+						'place:postal_code',
+						'place:country_name',
+					),
+					'product' => array(
+						'product:price:amount',
+						'product:price:currency',
+						'product:availability',
+					),
+					'profile' => array(
+						'profile:first_name',
+						'profile:last_name',
+						'profile:username',
+						'profile:gender',
+					),
+					'video.episode' => array(
+						'video:actor',
+						'video:actor:role',
+						'video:director',
+						'video:writer',
+						'video:duration',
+						'video:release_date',
+						'video:tag',
+						'video:series',
+					),
+					'video.movie' => array(
+						'video:actor',
+						'video:actor:role',
+						'video:director',
+						'video:writer',
+						'video:duration',
+						'video:release_date',
+						'video:tag',
+					),
+					'video.other' => array(
+						'video:actor',
+						'video:actor:role',
+						'video:director',
+						'video:writer',
+						'video:duration',
+						'video:release_date',
+						'video:tag',
+					),
+					'video.tv_show' => array(
+						'video:actor',
+						'video:actor:role',
+						'video:director',
+						'video:writer',
+						'video:duration',
+						'video:release_date',
+						'video:tag',
+					),
 				),
 				'schema_type' => array(
 					'article' => 'http://schema.org/Article',
@@ -738,7 +915,6 @@ if ( ! class_exists( 'WpssoConfig' ) ) {
 			define( 'WPSSO_FILEPATH', $plugin_filepath );						
 			define( 'WPSSO_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_filepath ) ) ) );
 			define( 'WPSSO_PLUGINBASE', self::$cf['plugin']['wpsso']['base'] );		// wpsso/wpsso.php
-			define( 'WPSSO_TEXTDOM', self::$cf['plugin']['wpsso']['slug'] );		// wpsso
 			define( 'WPSSO_URLPATH', trailingslashit( plugins_url( '', $plugin_filepath ) ) );
 			define( 'WPSSO_NONCE', md5( WPSSO_PLUGINDIR.'-'.self::$cf['plugin']['wpsso']['version'].
 				( defined( 'NONCE_SALT' ) ? NONCE_SALT : '' ) ) );
@@ -821,7 +997,6 @@ if ( ! class_exists( 'WpssoConfig' ) ) {
 			
 			require_once( WPSSO_PLUGINDIR.'lib/com/util.php' );
 			require_once( WPSSO_PLUGINDIR.'lib/com/cache.php' );
-			require_once( WPSSO_PLUGINDIR.'lib/com/notice.php' );
 			require_once( WPSSO_PLUGINDIR.'lib/com/script.php' );
 			require_once( WPSSO_PLUGINDIR.'lib/com/style.php' );
 			require_once( WPSSO_PLUGINDIR.'lib/com/webpage.php' );

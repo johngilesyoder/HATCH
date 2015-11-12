@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Sanitize Amount
  *
- * Returns a sanitized amount by stripping out thousands separators.
+ * @description: Returns a sanitized amount by stripping out thousands separators.
  *
  * @since 1.0
  *
@@ -121,8 +121,8 @@ function give_format_amount( $amount, $decimals = true ) {
  */
 function give_format_admin_multilevel_amount( $field_args, $field ) {
 
-	if ( ! isset( $field->value ) ) {
-		return;
+	if ( empty( $field->value ) ) {
+		return false;
 	}
 
 	$field->value = give_format_amount( $field->value );
@@ -169,6 +169,9 @@ function give_currency_filter( $price = '', $currency = '' ) {
 			case "SGD" :
 			case "JPY" :
 				$formatted = $symbol . $price;
+				break;
+			case "NOK" :
+				$formatted = $symbol . ' ' . $price;
 				break;
 			default :
 				$formatted = $currency . ' ' . $price;

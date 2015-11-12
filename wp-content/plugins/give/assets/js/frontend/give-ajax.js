@@ -163,8 +163,6 @@ function give_load_gateway( form_object, payment_mode ) {
 	// Show the ajax loader
 	loading_element.fadeIn();
 
-	//Update form action
-	//give_form.attr( 'action', '?payment-mode=' + payment_mode );
 
 	var form_data = jQuery( form_object ).data();
 
@@ -194,7 +192,7 @@ function give_load_gateway( form_object, payment_mode ) {
 			setup_give_tooltips();
 
 			// trigger an event on success for hooks
-			jQuery( document ).trigger( 'give_gateway_loaded', [response] );
+			jQuery( document ).trigger( 'give_gateway_loaded', [ response, jQuery( form_object ).attr( 'id' ) ] );
 		}
 	);
 

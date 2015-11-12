@@ -1,9 +1,9 @@
 # Copyright 2009-2015 Rocketgenius, Inc.
 msgid ""
 msgstr ""
-"Project-Id-Version: Gravity Forms Stripe Add-On 1.8.1\n"
+"Project-Id-Version: Gravity Forms Stripe Add-On 1.9\n"
 "Report-Msgid-Bugs-To: http://www.gravtiyhelp.com\n"
-"POT-Creation-Date: 2015-08-07 16:16:44+00:00\n"
+"POT-Creation-Date: 2015-10-09 16:09:18+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -146,98 +146,98 @@ msgstr ""
 msgid "Error validating this key. Please try again later."
 msgstr ""
 
-#: class-gf-stripe.php:650
+#: class-gf-stripe.php:631
 msgid "You may only have 20 custom keys."
 msgstr ""
 
-#: class-gf-stripe.php:658
+#: class-gf-stripe.php:639
 msgid ""
 "A field has been mapped to a custom key without a name. Please enter a name "
 "for the custom key, remove the metadata item, or return the corresponding "
 "drop down to 'Select a Field'."
 msgstr ""
 
-#: class-gf-stripe.php:973
+#: class-gf-stripe.php:938
 msgid ""
 "Test webhook succeeded. Your Stripe Account and Stripe Add-On are "
 "configured correctly to process webhooks."
 msgstr ""
 
-#: class-gf-stripe.php:980
+#: class-gf-stripe.php:945
 msgid "Webhook from test transaction. Bypassed."
 msgstr ""
 
-#: class-gf-stripe.php:987
+#: class-gf-stripe.php:952
 msgid "Invalid webhook data. Webhook could not be processed."
 msgstr ""
 
-#: class-gf-stripe.php:1000
+#: class-gf-stripe.php:965
 msgid "Entry for transaction id: %s was not found. Webhook cannot be processed."
 msgstr ""
 
-#: class-gf-stripe.php:1014 class-gf-stripe.php:1033 class-gf-stripe.php:1065
+#: class-gf-stripe.php:979 class-gf-stripe.php:998 class-gf-stripe.php:1030
 msgid "Entry for subscription id: %s was not found. Webhook cannot be processed."
 msgstr ""
 
-#: class-gf-stripe.php:1027 class-gf-stripe.php:1059
+#: class-gf-stripe.php:992 class-gf-stripe.php:1024
 msgid "Subscription line item not found in request"
 msgstr ""
 
-#: class-gf-stripe.php:1051
+#: class-gf-stripe.php:1016
 msgid "Subscription payment has been paid. Amount: %s. Subscriber Id: %s"
 msgstr ""
 
-#: class-gf-stripe.php:1091
+#: class-gf-stripe.php:1056
 msgid "Setup fee has been paid."
 msgstr ""
 
-#: class-gf-stripe.php:1093
+#: class-gf-stripe.php:1058
 msgid "Trial has been paid."
 msgstr ""
 
-#: class-gf-stripe.php:1186
+#: class-gf-stripe.php:1151
 msgid "Entry ID: %d"
 msgstr ""
 
-#: class-gf-stripe.php:1190
+#: class-gf-stripe.php:1155
 msgid "Product: %s"
 msgid_plural "Products: %s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: class-gf-stripe.php:1201
+#: class-gf-stripe.php:1166
 msgid ""
 "Gravity Forms requires the following URL to be added to your Stripe "
 "account's list of Webhooks."
 msgstr ""
 
-#: class-gf-stripe.php:1202
+#: class-gf-stripe.php:1167
 msgid "View Instructions"
 msgstr ""
 
-#: class-gf-stripe.php:1208
+#: class-gf-stripe.php:1173
 msgid ""
 "Click the following link and log in to access your Stripe Webhooks "
 "management page:"
 msgstr ""
 
-#: class-gf-stripe.php:1212
+#: class-gf-stripe.php:1177
 msgid "Click the \"Add Endpoint\" button above the list of Webhook URLs."
 msgstr ""
 
-#: class-gf-stripe.php:1214
+#: class-gf-stripe.php:1179
 msgid "Enter the following URL in the \"URL\" field:"
 msgstr ""
 
-#: class-gf-stripe.php:1217
+#: class-gf-stripe.php:1182
 msgid "Select \"Live\" from the \"Mode\" drop down."
 msgstr ""
 
-#: class-gf-stripe.php:1218
+#: class-gf-stripe.php:1183
 msgid "Click the \"Create Endpoint\" button."
 msgstr ""
 
-#: class-gf-stripe.php:1261
+#: class-gf-stripe.php:1226
 msgid ""
 "The selected field needs to be on the same page as the Credit Card field or "
 "a previous page."

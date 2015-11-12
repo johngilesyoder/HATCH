@@ -6,12 +6,76 @@
  * @subpackage  Includes/Forms
  * @copyright   Copyright (c) 2015, WordImpress
  * @license     http://opensource.org/licenses/gpl-2.0.php GNU Public License
- * @since       1.0
+ * @since       1.1
  */
 
 // Exit if accessed directly
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
+}
+
+/**
+ * Filter: Do not show the Give shortcut button on Give Forms or Campaign posts
+ *
+ * @return bool
+ */
+function give_shortcode_button_condition() {
+
+	global $typenow;
+
+	if ( $typenow != 'give_forms' && $typenow != 'give_campaigns' ) {
+		return true;
+	}
+
+	return false;
+}
+
+add_filter( 'give_shortcode_button_condition', 'give_shortcode_button_condition' );
+
+
+/**
+ * Get the form ID from the form $args
+ *
+ * @param $args
+ *
+ * @return int|false
+ */
+function get_form_id_from_args( $args ) {
+
+	if ( isset( $args['form_id'] ) && $args['form_id'] != 0 ) {
+
+		return intval( $args['form_id'] );
+	}
+
+	return false;
+}
+
+/**
+ * Checks whether floating labels is enabled for the form ID in $args
+ *
+ * @since 1.1
+ *
+ * @param array $args
+ *
+ * @return bool
+ */
+function give_is_float_labels_enabled( $args ) {
+
+	$float_labels = '';
+
+	if ( ! empty( $args['float_labels'] ) ) {
+		$float_labels = $args['float_labels'];
+	}
+
+	if ( empty( $float_labels ) ) {
+		$float_labels = get_post_meta( $args['form_id'], '_give_form_floating_labels', true );
+	}
+
+	if ( empty( $float_labels ) ) {
+		$float_labels = give_get_option( 'enable_floatlabels' ) ? 'enabled' : 'disabled';
+	}
+
+	return ( $float_labels == 'enabled' ) ? true : false;
 }
 
 /**
@@ -99,17 +163,20 @@ function give_send_to_success_page( $query_string = null ) {
 function give_send_back_to_checkout( $args = array() ) {
 
 	$redirect = ( isset( $_POST['give-current-url'] ) ) ? $_POST['give-current-url'] : '';
+	$form_id  = isset( $_POST['give-form-id'] ) ? $_POST['give-form-id'] : 0;
 
-	if ( ! empty( $args ) ) {
-		// Check for backward compatibility
-		if ( is_string( $args ) ) {
-			$args = str_replace( '?', '', $args );
-		}
+	$defaults = array(
+		'form-id' => (int) $form_id
+	);
 
-		$args = wp_parse_args( $args );
-
-		$redirect = esc_url( add_query_arg( $args, $redirect ) );
+	// Check for backward compatibility
+	if ( is_string( $args ) ) {
+		$args = str_replace( '?', '', $args );
 	}
+
+	$args = wp_parse_args( $args, $defaults );
+
+	$redirect = add_query_arg( $args, $redirect ) . '#give-form-' . $form_id . '-wrap';
 
 	wp_redirect( apply_filters( 'give_send_back_to_checkout', $redirect, $args ) );
 	give_die();
@@ -198,13 +265,15 @@ add_action( 'template_redirect', 'give_listen_for_failed_payments' );
  * Check if a field is required
  *
  * @param string $field
+ * @param int    $form_id
  *
  * @access      public
  * @since       1.0
  * @return      bool
  */
-function give_field_is_required( $field = '' ) {
-	$required_fields = give_purchase_form_required_fields();
+function give_field_is_required( $field = '', $form_id ) {
+
+	$required_fields = give_purchase_form_required_fields( $form_id );
 
 	return array_key_exists( $field, $required_fields );
 }
@@ -554,7 +623,7 @@ function give_get_price_option_name( $form_id = 0, $price_id = 0, $payment_id = 
 	foreach ( $prices as $price ) {
 
 		if ( $price['_give_id']['level_id'] === $price_id ) {
-			$price_name = $price['_give_text'];
+			$price_name = isset( $price['_give_text'] ) ? $price['_give_text'] : '';
 		}
 
 	}
@@ -708,7 +777,7 @@ function give_get_form_price( $form_id = 0 ) {
  * @param bool $echo     Whether to echo or return the results
  * @param int  $price_id Optional price id for variable pricing
  *
- * @return void
+ * @return int $formatted_price
  */
 function give_price( $form_id = 0, $echo = true, $price_id = false ) {
 
@@ -771,11 +840,12 @@ add_filter( 'give_form_price', 'give_currency_filter', 20 );
  */
 function give_get_price_option_amount( $form_id = 0, $price_id = 0 ) {
 	$prices = give_get_variable_prices( $form_id );
+
 	$amount = 0.00;
 
 	foreach ( $prices as $price ) {
 		if ( isset( $price['_give_id']['level_id'] ) && $price['_give_id']['level_id'] === $price_id ) {
-			$amount = $price['_give_amount'];
+			$amount = isset( $price['_give_amount'] ) ? $price['_give_amount'] : 0.00;
 		};
 	}
 
@@ -811,7 +881,7 @@ function give_get_form_goal( $form_id = 0 ) {
  * @param int  $form_id ID of the form price to show
  * @param bool $echo    Whether to echo or return the results
  *
- * @return void
+ * @return string $formatted_goal
  */
 function give_goal( $form_id = 0, $echo = true ) {
 

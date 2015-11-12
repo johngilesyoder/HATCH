@@ -1,6 +1,7 @@
 ---------------------------------------------------
-Version 1.8.1
+Version 1.9
 	- Updated feed list and edit pages to display configure settings message if the api keys for the selected mode are invalid.
+	- Fixed an issue with credit card field validation when the field is marked as required.
 
 ---------------------------------------------------
 Version 1.8

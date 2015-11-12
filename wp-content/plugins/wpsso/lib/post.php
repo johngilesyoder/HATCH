@@ -32,61 +32,66 @@ if ( ! class_exists( 'WpssoPost' ) ) {
 					add_action( 'edit_attachment', array( &$this, 'save_options' ), WPSSO_META_SAVE_PRIORITY );
 					add_action( 'edit_attachment', array( &$this, 'clear_cache' ), WPSSO_META_CACHE_PRIORITY );
 
-				} else {
+					if ( isset( $this->p->options['plugin_shortlink'] ) &&
+						$this->p->options['plugin_shortlink'] )
+							add_action( 'get_shortlink', array( &$this, 'get_shortlink' ), 9000, 4 );
+
+				} elseif ( $this->p->options['plugin_columns_post'] ) {
 
 					// only check registered front-end post types (to avoid menu items, product variations, etc.)
 					$post_types = $this->p->util->get_post_types( 'frontend', 'names' );
 
 					if ( is_array( $post_types ) ) {
 						foreach ( $post_types as $ptn ) {
-							add_filter( 'manage_'.$ptn.'_posts_columns', array( $this, 'add_column_headings' ), 10, 1 );
-							add_action( 'manage_'.$ptn.'_posts_custom_column', array( $this, 'show_post_column_content',), 10, 2 );
+							add_filter( 'manage_'.$ptn.'_posts_columns', 
+								array( $this, 'add_column_headings' ), 10, 1 );
+							add_action( 'manage_'.$ptn.'_posts_custom_column', 
+								array( $this, 'show_post_column_content',), 10, 2 );
 						}
 					}
 
 					$this->p->util->add_plugin_filters( $this, array( 
-						'og_image_post_column_content' => 3,
-						'og_desc_post_column_content' => 3,
+						'og_image_post_column_content' => 4,
+						'og_desc_post_column_content' => 4,
 					) );
 				}
 			}
+		}
+
+		public function get_shortlink( $shortlink, $id, $context, $allow_slugs ) {
+			if ( isset( $this->p->options['plugin_shortener'] ) &&
+				$this->p->options['plugin_shortener'] !== 'none' ) {
+					$long_url = $this->p->util->get_sharing_url( $id );
+					$short_url = apply_filters( $this->p->cf['lca'].'_shorten_url',
+						$long_url, $this->p->options['plugin_shortener'] );
+					if ( $long_url !== $short_url )
+						$shortlink = $short_url;
+			}
+			return $shortlink;
 		}
 
 		public function show_post_column_content( $column_name, $id ) {
 			echo $this->get_mod_column_content( '', $column_name, $id, 'post' );
 		}
 
-		public function filter_og_image_post_column_content( $value, $column_name, $id ) {
+		public function filter_og_image_post_column_content( $value, $column_name, $id, $mod ) {
 			if ( ! empty( $value ) )
 				return $value;
 
 			// use the open graph image dimensions to reject images that are too small
 			$size_name = $this->p->cf['lca'].'-opengraph';
-			$check_dupes = false;	// using first image we find, so dupe checking is useless
+			$check_dupes = false;	// use first image we find, so dupe checking is useless
 			$force_regen = false;
-			$meta_pre = 'og';
+			$md_pre = 'og';
 			$og_image = array();
 
-			// get video preview images if allowed
-			if ( ! empty( $this->p->options['og_vid_prev_img'] ) ) {
-				// assume the first video will have a preview image
-				$og_video = $this->p->og->get_all_videos( 1, $id, $check_dupes, $meta_pre );
-				if ( ! empty( $og_video ) && is_array( $og_video ) ) {
-					foreach ( $og_video as $video ) {
-						if ( ! empty( $video['og:image'] ) ) {
-							$og_image[] = $video;
-							break;
-						}
-					}
-				}
-			}
+			if ( empty( $og_image ) )
+				$og_image = $this->get_og_video_preview_image( $id, $mod, $check_dupes, $md_pre );
 
 			if ( empty( $og_image ) ) {
-				$og_image = $this->p->og->get_all_images( 1, $size_name, $id,
-					$check_dupes, $meta_pre );
+				$og_image = $this->p->og->get_all_images( 1, $size_name, $id, $check_dupes, $md_pre );
 				if ( empty( $og_image ) )
-					$og_image = $this->p->media->get_default_image( 1, $size_name,
-						$check_dupes, $force_regen );
+					$og_image = $this->p->media->get_default_image( 1, $size_name, $check_dupes, $force_regen );
 			}
 
 			if ( ! empty( $og_image ) && is_array( $og_image ) ) {
@@ -98,7 +103,7 @@ if ( ! class_exists( 'WpssoPost' ) ) {
 			return $value;
 		}
 
-		public function filter_og_desc_post_column_content( $value, $column_name, $id ) {
+		public function filter_og_desc_post_column_content( $value, $column_name, $id, $mod ) {
 			if ( ! empty( $value ) )
 				return $value;
 
@@ -145,7 +150,7 @@ if ( ! class_exists( 'WpssoPost' ) ) {
 
 					if ( $obj->post_status == 'publish' ) {
 						if ( empty( $this->head_info['og:image'] ) )
-							$this->p->notice->err( $this->p->msgs->get( 'info-missing-og-image' ) );
+							$this->p->notice->err( $this->p->msgs->get( 'notice-missing-og-image' ) );
 						// check for duplicates once the post has been published and we have a functioning permalink
 						if ( ! empty( $this->p->options['plugin_check_head'] ) )
 							$this->check_post_header( $post_id, $obj );
@@ -226,8 +231,8 @@ if ( ! class_exists( 'WpssoPost' ) ) {
 			}
 			$add_metabox = empty( $this->p->options[ 'plugin_add_to_'.$post_type->name ] ) ? false : true;
 			if ( apply_filters( $this->p->cf['lca'].'_add_metabox_post', $add_metabox, $post_id ) === true )
-				add_meta_box( WPSSO_META_NAME, 'Social Settings', array( &$this, 'show_metabox_post' ),
-					$post_type->name, 'advanced', 'high' );
+				add_meta_box( WPSSO_META_NAME, _x( 'Social Settings', 'metabox title', 'wpsso' ),
+					array( &$this, 'show_metabox_post' ), $post_type->name, 'normal', 'low' );
 		}
 
 		public function show_metabox_post( $post ) {
@@ -241,7 +246,8 @@ if ( ! class_exists( 'WpssoPost' ) ) {
 			wp_nonce_field( $this->get_nonce(), WPSSO_NONCE );
 
 			$metabox = 'post';
-			$tabs = apply_filters( $this->p->cf['lca'].'_'.$metabox.'_tabs', $this->default_tabs );
+			$tabs = apply_filters( $this->p->cf['lca'].'_'.$metabox.'_tabs',
+				$this->get_default_tabs() );
 			if ( empty( $this->p->is_avail['mt'] ) )
 				unset( $tabs['tags'] );
 
@@ -259,23 +265,20 @@ if ( ! class_exists( 'WpssoPost' ) ) {
 				case 'post-preview':
 					if ( get_post_status( $head_info['post_id'] ) !== 'auto-draft' )
 						$rows = $this->get_rows_social_preview( $this->form, $head_info );
-					else $rows[] = '<td><p class="centered">Save a draft version or publish the '.
-						$head_info['ptn'].' to display the open graph social preview.</p></td>';
+					else $rows[] = '<td><p class="centered">'.sprintf( __( 'Save a draft version or publish the %s to display the open graph social preview.', 'wpsso' ), $head_info['ptn'] ).'</p></td>';
 					break;
 
 				case 'post-tags':	
 					if ( get_post_status( $head_info['post_id'] ) !== 'auto-draft' ) {
 						$rows = $this->get_rows_head_tags( $this->head_meta_tags );
-					} else $rows[] = '<td><p class="centered">Save a draft version or publish the '.
-						$head_info['ptn'].' to display the header preview.</p></td>';
+					} else $rows[] = '<td><p class="centered">'.sprintf( __( 'Save a draft version or publish the %s to display the head tags preview.', 'wpsso' ), $head_info['ptn'] ).'</p></td>';
 					break; 
 
 				case 'post-validate':
 					if ( get_post_status( $head_info['post_id'] ) === 'publish' ||
 						get_post_type( $head_info['post_id'] ) === 'attachment' )
 							$rows = $this->get_rows_validate( $this->form, $head_info );
-					else $rows[] = '<td><p class="centered">The validation links will be available when the '.
-						$head_info['ptn'].' is published with public visibility.</p></td>';
+					else $rows[] = '<td><p class="centered">'.sprintf( __( 'The validation links will be available when the %s is published with public visibility.', 'wpsso' ), $head_info['ptn'] ).'</p></td>';
 					break; 
 			}
 			return $rows;

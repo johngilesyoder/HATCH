@@ -26,8 +26,9 @@ if ( ! class_exists( 'WpssoSitesubmenuSiteadvanced' ) && class_exists( 'WpssoAdm
 
 		protected function add_meta_boxes() {
 			// add_meta_box( $id, $title, $callback, $post_type, $context, $priority, $callback_args );
-			add_meta_box( $this->pagehook.'_plugin', 'Network Advanced Settings', 
-				array( &$this, 'show_metabox_plugin' ), $this->pagehook, 'normal' );
+			add_meta_box( $this->pagehook.'_plugin',
+				_x( 'Network Advanced Settings', 'metabox title', 'wpsso' ), 
+					array( &$this, 'show_metabox_plugin' ), $this->pagehook, 'normal' );
 
 			// add a class to set a minimum width for the network postboxes
 			add_filter( 'postbox_classes_'.$this->pagehook.'_'.$this->pagehook.'_plugin', 
@@ -42,8 +43,9 @@ if ( ! class_exists( 'WpssoSitesubmenuSiteadvanced' ) && class_exists( 'WpssoAdm
 		public function show_metabox_plugin() {
 			$metabox = 'plugin';
 			$tabs = apply_filters( $this->p->cf['lca'].'_network_'.$metabox.'_tabs', array( 
-				'settings' => 'Plugin Settings',
-				'cache' => 'File and Object Cache' ) );
+				'settings' => _x( 'Plugin Settings', 'metabox tab', 'wpsso' ),
+				'cache' => _x( 'File and Object Cache', 'metabox tab', 'wpsso' ),
+			) );
 			$rows = array();
 			foreach ( $tabs as $key => $title )
 				$rows[$key] = array_merge( $this->get_rows( $metabox, $key ),
@@ -57,15 +59,15 @@ if ( ! class_exists( 'WpssoSitesubmenuSiteadvanced' ) && class_exists( 'WpssoAdm
 			switch ( $metabox.'-'.$key ) {
 				case 'plugin-settings':
 
-					$rows['plugin_debug'] = $this->p->util->get_th( 'Add Hidden Debug Messages', null, 'plugin_debug' ).
+					$rows['plugin_debug'] = $this->p->util->get_th( _x( 'Add Hidden Debug Messages',
+						'option label', 'wpsso' ), null, 'plugin_debug' ).
 					'<td>'.$this->form->get_checkbox( 'plugin_debug' ).'</td>'.
-					$this->p->util->get_th( 'Site Use', 'site_use' ).
-					'<td>'.$this->form->get_select( 'plugin_debug:use', $this->p->cf['form']['site_option_use'], 'site_use' ).'</td>';
+					$this->p->admin->get_site_use( $this->form, true, 'plugin_debug' );
 
-					$rows['plugin_preserve'] = $this->p->util->get_th( 'Preserve Settings on Uninstall', 'highlight', 'plugin_preserve' ).
+					$rows['plugin_preserve'] = $this->p->util->get_th( _x( 'Preserve Settings on Uninstall',
+						'option label', 'wpsso' ), 'highlight', 'plugin_preserve' ).
 					'<td>'.$this->form->get_checkbox( 'plugin_preserve' ).'</td>'.
-					$this->p->util->get_th( 'Site Use', 'site_use' ).
-					'<td>'.$this->form->get_select( 'plugin_preserve:use', $this->p->cf['form']['site_option_use'], 'site_use' ).'</td>';
+					$this->p->admin->get_site_use( $this->form, true, 'plugin_preserve' );
 
 					break;
 			}

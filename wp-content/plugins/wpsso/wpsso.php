@@ -1,15 +1,18 @@
 <?php
 /*
  * Plugin Name: WordPress Social Sharing Optimization (WPSSO)
+ * Plugin Slug: wpsso
+ * Text Domain: wpsso
+ * Domain Path: /languages
  * Plugin URI: http://surniaulula.com/extend/plugins/wpsso/
  * Author: Jean-Sebastien Morisset
  * Author URI: http://surniaulula.com/
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl.txt
- * Description: Make sure social websites present your content correctly, no matter how your webpage is shared - from buttons, browser add-ons, or pasted URLs.
+ * Description: Fast, light-weight, full-featured plugin for great looking shares on all social sites - no matter how your content is shared or re-shared!
  * Requires At Least: 3.1
  * Tested Up To: 4.3.1
- * Version: 3.10.1
+ * Version: 3.14.2
  * 
  * Copyright 2012-2015 - Jean-Sebastien Morisset - http://surniaulula.com/
  */
@@ -31,7 +34,7 @@ if ( ! class_exists( 'Wpsso' ) ) {
 		public $loader;			// WpssoLoader
 		public $media;			// WpssoMedia (images, videos, etc.)
 		public $msgs;			// WpssoMessages (admin tooltip messages)
-		public $notice;			// SucomNotice
+		public $notice;			// SucomNotice or WpssoNoNotice
 		public $og;			// WpssoOpengraph
 		public $tc;			// WpssoTwittercard
 		public $opt;			// WpssoOptions
@@ -100,8 +103,6 @@ if ( ! class_exists( 'Wpsso' ) ) {
 			if ( ! empty( $_SERVER['WPSSO_DISABLE'] ) ) 
 				return;
 
-			load_plugin_textdomain( WPSSO_TEXTDOM, false, dirname( WPSSO_PLUGINBASE ).'/languages/' );
-
 			$this->set_objects();				// define the class object variables
 
 			if ( $this->debug->enabled ) {
@@ -135,15 +136,22 @@ if ( ! class_exists( 'Wpsso' ) ) {
 				( defined( 'WPSSO_HTML_DEBUG' ) && WPSSO_HTML_DEBUG ) ? true : false;
 			$wp_debug = defined( 'WPSSO_WP_DEBUG' ) && WPSSO_WP_DEBUG ? true : false;
 
+			// only load the debug class if one or more debug options are enabled
 			if ( ( $html_debug || $wp_debug ) && 
-				( $classname = WpssoConfig::load_lib( false, 'com/debug', 'SucomDebug' ) ) !== false )
+				( $classname = WpssoConfig::load_lib( false, 'com/debug', 'SucomDebug' ) ) )
 					$this->debug = new $classname( $this, array( 'html' => $html_debug, 'wp' => $wp_debug ) );
-			else $this->debug = new WpssoNoDebug();			// fallback to dummy debug class
+			else $this->debug = new WpssoNoDebug();
 
-			if ( $this->debug->enabled && $activate === true )
-				$this->debug->log( 'method called for plugin activation' );
+			if ( $activate === true &&
+				$this->debug->enabled )
+					$this->debug->log( 'method called for plugin activation' );
 
-			$this->notice = new SucomNotice( $this );
+			// only load the notification class in the admin interface
+			if ( is_admin() &&
+				( $classname = WpssoConfig::load_lib( false, 'com/notice', 'SucomNotice' ) ) )
+					$this->notice = new $classname( $this );
+			else $this->notice = new WpssoNoNotice();
+
 			$this->util = new WpssoUtil( $this );
 			$this->opt = new WpssoOptions( $this );
 			$this->cache = new SucomCache( $this );			// object and file caching
@@ -161,7 +169,7 @@ if ( ! class_exists( 'Wpsso' ) ) {
 				$this->admin = new WpssoAdmin( $this );		// admin menus and page loader
 			}
 
-			$this->loader = new WpssoLoader( $this, $activate );
+			$this->loader = new WpssoLoader( $this, $activate );	// module loader
 
 			do_action( 'wpsso_init_objects', $activate );
 
@@ -179,7 +187,7 @@ if ( ! class_exists( 'Wpsso' ) ) {
 				! empty( $_GET['action'] ) && $_GET['action'] == 'activate-plugin' &&
 				! empty( $_GET['plugin'] ) && $_GET['plugin'] == WPSSO_PLUGINBASE ) ) {
 				if ( $this->debug->enabled )
-					$this->debug->log( 'exiting early: init_plugin() hook will follow' );
+					$this->debug->log( 'exiting early: init_plugin hook will follow' );
 				return;
 			}
 
@@ -187,6 +195,7 @@ if ( ! class_exists( 'Wpsso' ) ) {
 			 * check and upgrade options if necessary
 			 */
 			$this->options = $this->opt->check_options( WPSSO_OPTIONS_NAME, $this->options );
+
 			if ( is_multisite() )
 				$this->site_options = $this->opt->check_options( WPSSO_SITE_OPTIONS_NAME, 
 					$this->site_options, true );
@@ -195,9 +204,12 @@ if ( ! class_exists( 'Wpsso' ) ) {
 			 * configure class properties based on plugin settings
 			 */
 			$this->cache->default_object_expire = $this->options['plugin_object_cache_exp'];
+
 			$this->cache->default_file_expire = ( $this->check->aop() ? 
 				( $this->debug->is_enabled( 'wp' ) ? 
-					WPSSO_DEBUG_FILE_EXP : $this->options['plugin_file_cache_exp'] ) : 0 );
+					WPSSO_DEBUG_FILE_EXP : 
+					$this->options['plugin_file_cache_exp'] ) : 0 );
+
 			$this->is_avail['cache']['file'] = $this->cache->default_file_expire > 0 ? true : false;
 
 			// disable the transient cache if html debug mode is on
@@ -206,15 +218,16 @@ if ( ! class_exists( 'Wpsso' ) ) {
 				$this->is_avail['cache']['transient'] = defined( 'WPSSO_TRANSIENT_CACHE_DISABLE' ) && 
 					! WPSSO_TRANSIENT_CACHE_DISABLE ? true : false;
 
-				$cache_status = 'transient cache use '.
-					( $this->is_avail['cache']['transient'] ?
-						'could not be' : 'is' ).' disabled';
-
 				if ( $this->debug->enabled )
-					$this->debug->log( 'html debug mode is active: '.$cache_status );
+					$this->debug->log( 'html debug mode is active: transient cache use '.
+						( $this->is_avail['cache']['transient'] ? 'could not be' : 'is' ).' disabled' );
 
-				$this->notice->inf( 'HTML debug mode is active &ndash; '.$cache_status.
-					' and informational messages are being added as hidden HTML comments.' );
+				if ( is_admin() )
+					// text_domain is already loaded by the NgfbAdmin class construct
+					$this->notice->inf( ( $this->is_avail['cache']['transient'] ?
+						__( 'HTML debug mode is active (transient cache could NOT be disabled).', 'nextgen-facebook' ) :
+						__( 'HTML debug mode is active (transient cache use is disabled).', 'nextgen-facebook' ) ).' '.
+						__( 'Informational debug messages are being added as hidden HTML comments.', 'wpsso' ) );
 			}
 		}
 
@@ -305,6 +318,16 @@ if ( ! class_exists( 'WpssoNoDebug' ) ) {
 		public function show_html() { return; }
 		public function get_html() { return; }
 		public function is_enabled() { return false; }
+	}
+}
+
+if ( ! class_exists( 'WpssoNoNotice' ) ) {
+	class WpssoNoNotice {
+		public function nag() { return; }
+		public function inf() { return; }
+		public function err() { return; }
+		public function log() { return; }
+		public function trunc() { return; }
 	}
 }
 

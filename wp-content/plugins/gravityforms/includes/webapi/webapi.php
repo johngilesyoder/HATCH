@@ -429,7 +429,19 @@ if ( class_exists( 'GFForms' ) ) {
 			$endpoint = empty( $collection2 ) ? strtolower( $method ) . '_' . $collection : strtolower( $method ) . '_' . $collection . '_' . $collection2;
 
 			// The POST forms/[ID]/submissions endpoint is public and does not require authentication.
-			if ( $endpoint !== 'post_forms_submissions' ) {
+			$authentication_required = $endpoint !== 'post_forms_submissions';
+
+			/**
+			 * Allows overriding of authentication for all the endpoints of the Web API.
+			 * gform_webapi_authentication_required_[end point]
+			 * e.g.
+			 * gform_webapi_authentication_required_post_form_submissions
+			 *
+			 * @param bool $authentication_required Whether authentication is required for this endpoint.
+			 */
+			$authentication_required = apply_filters( 'gform_webapi_authentication_required_' . $endpoint, $authentication_required );
+
+			if ( $authentication_required ) {
 				$this->authenticate();
 			}
 

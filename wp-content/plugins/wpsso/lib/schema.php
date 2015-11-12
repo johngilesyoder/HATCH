@@ -26,22 +26,23 @@ if ( ! class_exists( 'WpssoSchema' ) ) {
 						100 : $this->p->options['plugin_head_attr_filter_prio'];
 
 					add_filter( $this->p->options['plugin_head_attr_filter_name'], 
-						array( &$this, 'add_head_attr' ), $prio, 1 );
+						array( &$this, 'add_head_attributes' ), $prio, 1 );
 
 			} elseif ( $this->p->debug->enabled )
-				$this->p->debug->log( 'add_head_attr filter skipped: plugin_head_attr_filter_name is empty' );
+				$this->p->debug->log( 'add_head_attributes skipped: plugin_head_attr_filter_name option is empty' );
 		}
 
 		public function filter_plugin_image_sizes( $sizes ) {
 			$sizes['schema_img'] = array(
 				'name' => 'schema',
-				'label' => 'Schema JSON-LD (same as Facebook / Open Graph)',
+				'label' => _x( 'Schema JSON-LD (same as Facebook / Open Graph)',
+					'image size label', 'wpsso' ),
 				'prefix' => 'og_img'	// use opengraph dimensions
 			);
 			return $sizes;
 		}
 
-		public function add_head_attr( $head_attr ) {
+		public function add_head_attributes( $head_attr ) {
 
 			if ( $this->p->debug->enabled )
 				$this->p->debug->mark();
@@ -91,48 +92,51 @@ if ( ! class_exists( 'WpssoSchema' ) ) {
 		}
 
 		public function get_meta_array( $use_post, &$obj, &$meta_og = array() ) {
-			$meta_schema = array();
+			$mt_schema = array();
 
 			if ( ! empty( $this->p->options['add_meta_itemprop_name'] ) ) {
 				if ( ! empty( $meta_og['og:title'] ) )
-					$meta_schema['name'] = $meta_og['og:title'];
+					$mt_schema['name'] = $meta_og['og:title'];
 			}
 
 			if ( ! empty( $this->p->options['add_meta_itemprop_headline'] ) ) {
 				if ( ! empty( $meta_og['og:title'] ) &&
 					isset( $meta_og['og:type'] ) &&
 						$meta_og['og:type'] === 'article' )
-							$meta_schema['headline'] = $meta_og['og:title'];
+							$mt_schema['headline'] = $meta_og['og:title'];
 			}
 
 			if ( ! empty( $this->p->options['add_meta_itemprop_datepublished'] ) ) {
 				if ( ! empty( $meta_og['article:published_time'] ) )
-					$meta_schema['datepublished'] = $meta_og['article:published_time'];
+					$mt_schema['datepublished'] = $meta_og['article:published_time'];
 			}
 
 			if ( ! empty( $this->p->options['add_meta_itemprop_description'] ) ) {
-				$meta_schema['description'] = $this->p->webpage->get_description( $this->p->options['og_desc_len'], 
+				$mt_schema['description'] = $this->p->webpage->get_description( $this->p->options['og_desc_len'], 
 					'...', $use_post, true, true, true, 'schema_desc' );	// custom meta = schema_desc
 			}
 
 			if ( ! empty( $this->p->options['add_meta_itemprop_url'] ) ) {
 				if ( ! empty( $meta_og['og:url'] ) )
-					$meta_schema['url'] = $meta_og['og:url'];
+					$mt_schema['url'] = $meta_og['og:url'];
 			}
 
 			if ( ! empty( $this->p->options['add_meta_itemprop_image'] ) ) {
 				if ( ! empty( $meta_og['og:image'] ) ) {
 					if ( is_array( $meta_og['og:image'] ) )
 						foreach ( $meta_og['og:image'] as $image )
-							$meta_schema['image'][] = $image['og:image'];
-					else $meta_schema['image'] = $meta_og['og:image'];
+							$mt_schema['image'][] = $image['og:image'];
+					else $mt_schema['image'] = $meta_og['og:image'];
 				}
 			}
 
-			return apply_filters( $this->p->cf['lca'].'_meta_schema', $meta_schema, $use_post, $obj );
+			return apply_filters( $this->p->cf['lca'].'_meta_schema', $mt_schema, $use_post, $obj );
 		}
 
 		public function get_json_array( $post_id = false, $author_id = false, $size_name = 'thumbnail' ) {
+			if ( $this->p->debug->enabled )
+				$this->p->debug->mark();
+
 			$json_array = array();
 
 			if ( ! empty( $this->p->options['schema_website_json'] ) &&
@@ -151,6 +155,9 @@ if ( ! class_exists( 'WpssoSchema' ) ) {
 		}
 
 		public function get_website_json_script( $post_id = false ) {
+			if ( $this->p->debug->enabled )
+				$this->p->debug->mark();
+
 			$home_url = get_bloginfo( 'url' );	// equivalent to get_home_url()
 			// pass options array to allow fallback if locale option does not exist
 			$site_name = $this->p->og->get_site_name( $post_id );
@@ -169,6 +176,9 @@ if ( ! class_exists( 'WpssoSchema' ) ) {
 		}
 
 		public function get_organization_json_script( $size_name = 'thumbnail') {
+			if ( $this->p->debug->enabled )
+				$this->p->debug->mark();
+
 			$home_url = get_bloginfo( 'url' );	// equivalent to get_home_url()
 			$logo_url = $this->p->options['schema_logo_url'];
 			$og_image = $this->p->media->get_default_image( 1, $this->p->cf['lca'].'-schema', false );

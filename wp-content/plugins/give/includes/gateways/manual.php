@@ -9,6 +9,11 @@
  * @since       1.0
  */
 
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /**
  * Manual Gateway does not need a CC form, so remove it.
  *
@@ -16,18 +21,6 @@
  * @return void
  */
 add_action( 'give_manual_cc_form', '__return_false' );
-
-/**
- * Manual Gateway does not need a CC form validation, so remove it.
- *
- * @since 1.0
- * @return void
- */
-add_filter( 'give_require_billing_address', 'give_manual_no_cc_validation' );
-
-function give_manual_no_cc_validation() {
-	return false;
-}
 
 /**
  * Processes the purchase data and uses the Manual Payment gateway to record
@@ -67,7 +60,6 @@ function give_manual_payment( $purchase_data ) {
 
 	if ( $payment ) {
 		give_update_payment_status( $payment, 'publish' );
-		// Empty the shopping cart
 		give_send_to_success_page();
 	} else {
 		give_record_gateway_error( __( 'Payment Error', 'give' ), sprintf( __( 'Payment creation failed while processing a manual (free or test) purchase. Payment data: %s', 'give' ), json_encode( $payment_data ) ), $payment );

@@ -5,7 +5,7 @@
  * Description: The most robust, flexible, and intuitive way to accept donations on WordPress.
  * Author: WordImpress
  * Author URI: http://wordimpress.com
- * Version: 1.2.1
+ * Version: 1.3.1.1
  * Text Domain: give
  * Domain Path: /languages
  *
@@ -165,6 +165,7 @@ if ( ! class_exists( 'Give' ) ) : /**
 				self::$instance->email_tags         = new Give_Email_Template_Tags();
 				self::$instance->donators_gravatars = new Give_Donators_Gravatars();
 				self::$instance->customers          = new Give_DB_Customers();
+				self::$instance->template_loader    = new Give_Template_Loader();
 
 			}
 
@@ -209,7 +210,7 @@ if ( ! class_exists( 'Give' ) ) : /**
 
 			// Plugin version
 			if ( ! defined( 'GIVE_VERSION' ) ) {
-				define( 'GIVE_VERSION', '1.2.1' );
+				define( 'GIVE_VERSION', '1.3.1.1' );
 			}
 
 			// Plugin Folder Path
@@ -317,12 +318,21 @@ if ( ! class_exists( 'Give' ) ) : /**
 				require_once GIVE_PLUGIN_DIR . 'includes/admin/customers/customer-actions.php';
 				require_once GIVE_PLUGIN_DIR . 'includes/admin/forms/metabox.php';
 				require_once GIVE_PLUGIN_DIR . 'includes/admin/forms/dashboard-columns.php';
-				require_once GIVE_PLUGIN_DIR . 'includes/admin/forms/shortcode.php';
 
 				require_once GIVE_PLUGIN_DIR . 'includes/admin/reporting/reports.php';
 				require_once GIVE_PLUGIN_DIR . 'includes/admin/reporting/pdf-reports.php';
 				require_once GIVE_PLUGIN_DIR . 'includes/admin/reporting/class-give-graph.php';
 				require_once GIVE_PLUGIN_DIR . 'includes/admin/reporting/graphing.php';
+
+				require_once GIVE_PLUGIN_DIR . 'includes/admin/shortcodes/abstract-shortcode-generator.php';
+				require_once GIVE_PLUGIN_DIR . 'includes/admin/shortcodes/class-shortcode-button.php';
+				require_once GIVE_PLUGIN_DIR . 'includes/admin/shortcodes/shortcode-give-form.php';
+				require_once GIVE_PLUGIN_DIR . 'includes/admin/shortcodes/shortcode-give-goal.php';
+				require_once GIVE_PLUGIN_DIR . 'includes/admin/shortcodes/shortcode-give-login.php';
+				require_once GIVE_PLUGIN_DIR . 'includes/admin/shortcodes/shortcode-give-register.php';
+				require_once GIVE_PLUGIN_DIR . 'includes/admin/shortcodes/shortcode-give-profile-editor.php';
+				require_once GIVE_PLUGIN_DIR . 'includes/admin/shortcodes/shortcode-give-donation-history.php';
+				require_once GIVE_PLUGIN_DIR . 'includes/admin/shortcodes/shortcode-give-receipt.php';
 
 				require_once GIVE_PLUGIN_DIR . 'includes/admin/upgrades/upgrade-functions.php';
 				require_once GIVE_PLUGIN_DIR . 'includes/admin/upgrades/upgrades.php';

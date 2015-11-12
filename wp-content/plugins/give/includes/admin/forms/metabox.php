@@ -31,6 +31,11 @@ function give_single_forms_cmb2_metaboxes( array $meta_boxes ) {
 	$variable_pricing = give_has_variable_prices( $post_id );
 	$prices           = give_get_variable_prices( $post_id );
 
+	//No empty prices - min. 1.00 for new forms
+	if ( empty( $price ) ) {
+		$price = esc_attr( give_format_amount( '1.00' ) );
+	}
+
 	// Start with an underscore to hide fields from custom fields list
 	$prefix = '_give_';
 
@@ -65,8 +70,8 @@ function give_single_forms_cmb2_metaboxes( array $meta_boxes ) {
 					'before_field' => give_get_option( 'currency_position' ) == 'before' ? '<span class="give-money-symbol give-money-symbol-before">' . give_currency_symbol() . '</span>' : '',
 					'after_field'  => give_get_option( 'currency_position' ) == 'after' ? '<span class="give-money-symbol give-money-symbol-after">' . give_currency_symbol() . '</span>' : '',
 					'attributes'   => array(
-						'placeholder' => give_format_amount( '0.00' ),
-						'value'       => isset( $price ) ? esc_attr( give_format_amount( $price ) ) : '',
+						'placeholder' => give_format_amount( '1.00' ),
+						'value'       => $price,
 						'class'       => 'cmb-type-text-small give-money-field',
 					),
 				),
@@ -99,7 +104,7 @@ function give_single_forms_cmb2_metaboxes( array $meta_boxes ) {
 							'before_field' => give_get_option( 'currency_position' ) == 'before' ? '<span class="give-money-symbol  give-money-symbol-before">' . give_currency_symbol() . '</span>' : '',
 							'after_field'  => give_get_option( 'currency_position' ) == 'after' ? '<span class="give-money-symbol  give-money-symbol-after">' . give_currency_symbol() . '</span>' : '',
 							'attributes'   => array(
-								'placeholder' => give_format_amount( '0.00' ),
+								'placeholder' => give_format_amount( '1.00' ),
 								'class'       => 'cmb-type-text-small give-money-field',
 							),
 							'before'       => 'give_format_admin_multilevel_amount',
@@ -297,6 +302,18 @@ function give_single_forms_cmb2_metaboxes( array $meta_boxes ) {
 						),
 						'default' => 'none',
 					),
+					array(
+						'name'    => __( 'Floating Labels', 'give' ),
+						'desc'    => sprintf( __( 'Select the <a href="%s" target="_blank">floating labels</a> setting for this Give form.<br>Be aware that if you have the "Disable CSS" option enabled, you will need to style the floating labels yourself.', 'give' ), esc_url( "http://bradfrost.com/blog/post/float-label-pattern/" ) ),
+						'id'      => $prefix . 'form_floating_labels',
+						'type'    => 'select',
+						'options' => array(
+							''         => __( 'Use the global setting', 'give' ),
+							'enabled'  => __( 'Enabled', 'give' ),
+							'disabled' => __( 'Disabled', 'give' ),
+						),
+						'default' => 'none',
+					)
 				)
 			)
 		)

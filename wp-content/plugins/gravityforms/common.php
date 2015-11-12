@@ -929,10 +929,7 @@ class GFCommon {
 		$post_url = get_bloginfo( 'wpurl' ) . '/wp-admin/post.php?action=edit&post=' . rgar( $lead, 'post_id' );
 		$text     = str_replace( '{post_edit_url}', $url_encode ? urlencode( $post_url ) : $post_url, $text );
 
-		$text = self::replace_variables_prepopulate( $text, $url_encode, $lead, $esc_html );
-
-		// hook allows for custom merge tags
-		$text = apply_filters( 'gform_replace_merge_tags', $text, $form, $lead, $url_encode, $esc_html, $nl2br, $format );
+		$text = self::replace_variables_prepopulate( $text, $url_encode, $lead, $esc_html, $form, $nl2br, $format );
 
 		// TODO: Deprecate the 'gform_replace_merge_tags' and replace it with a call to the 'gform_merge_tag_filter'
 		//$text = apply_filters('gform_merge_tag_filter', $text, false, false, false );
@@ -990,7 +987,7 @@ class GFCommon {
 	}
 
 
-	public static function replace_variables_prepopulate( $text, $url_encode = false, $entry = false, $esc_html = false ) {
+	public static function replace_variables_prepopulate( $text, $url_encode = false, $entry = false, $esc_html = false, $form = false, $nl2br = false, $format = 'html' ) {
 
 		//embed url
 		$current_page_url = RGFormsModel::get_current_page_url();
@@ -1070,7 +1067,18 @@ class GFCommon {
 			$text = str_replace( $full_tag, $value, $text );
 		}
 
-		$text = apply_filters( 'gform_replace_merge_tags', $text, false, $entry, $url_encode, $esc_html, false, false );
+		/**
+		 * Allow the text to be filtered so custom merge tags can be replaced.
+		 *
+		 * @param string $text The text in which merge tags are being processed.
+		 * @param false|array $form The Form object if available or false.
+		 * @param false|array $entry The Entry object if available or false.
+		 * @param bool $url_encode Indicates if the urlencode function should be applied.
+		 * @param bool $esc_html Indicates if the esc_html function should be applied.
+		 * @param bool $nl2br Indicates if the nl2br function should be applied.
+		 * @param string $format The format requested for the location the merge is being used. Possible values: html, text or url.
+		 */
+		$text = apply_filters( 'gform_replace_merge_tags', $text, $form, $entry, $url_encode, $esc_html, $nl2br, $format );
 
 		return $text;
 	}
@@ -1838,7 +1846,8 @@ class GFCommon {
 	}
 
 	public static function is_product_field( $field_type ) {
-		return in_array( $field_type, array( 'option', 'quantity', 'product', 'total', 'shipping', 'calculation' ) );
+		$product_fields = apply_filters( 'gform_product_field_types', array( 'option', 'quantity', 'product', 'total', 'shipping', 'calculation' ) );
+		return in_array( $field_type, $product_fields );
 	}
 
 	public static function all_caps() {
@@ -2345,7 +2354,7 @@ class GFCommon {
 		return apply_filters( 'gform_field_type_title', $type, $type );
 	}
 
-	public static function get_select_choices( $field, $value = '' ) {
+	public static function get_select_choices( $field, $value = '', $support_placeholders = true ) {
 		$choices = '';
 
 		if ( RG_CURRENT_VIEW == 'entry' && empty( $value ) && empty( $field->placeholder ) ) {
@@ -2354,7 +2363,7 @@ class GFCommon {
 
 		if ( is_array( $field->choices ) ) {
 
-			if ( GFFormsModel::get_input_type( $field ) == 'select' && ! empty( $field->placeholder ) ) {
+			if ( $support_placeholders && ! empty( $field->placeholder ) ) {
 				$selected = empty( $value ) ? "selected='selected'" : '';
 				$choices .= sprintf( "<option value='' %s class='gf_placeholder'>%s</option>", $selected, esc_html( $field->placeholder ) );
 			}
@@ -4115,6 +4124,22 @@ class GFCommon {
 		}
 	}
 
+
+	/**
+	 * @param string $string
+	 *
+	 * @return string
+	 */
+	public static function safe_strtoupper( $string ) {
+
+		if ( function_exists( 'mb_strtoupper' ) ) {
+			return mb_strtoupper( $string );
+		} else {
+			return strtoupper( $string );
+		}
+
+	}
+
 	/**
 	 * Reliably compare floats.
 	 *
@@ -4330,7 +4355,7 @@ class GFCache {
 	private static $_transient_prefix = 'GFCache_';
 	private static $_cache = array();
 
-	public static function get( $key, &$found = null ) {
+	public static function get( $key, &$found = null, $is_persistent=true ) {
 		global $blog_id;
 		if ( is_multisite() ) {
 			$key = $blog_id . ':' . $key;
@@ -4341,6 +4366,12 @@ class GFCache {
 			$data  = rgar( self::$_cache[ $key ], 'data' );
 
 			return $data;
+		}
+
+		//If set to not persistent, do not check transient for performance reasons
+		if (! $is_persistent ){
+			$found = false;
+			return false;
 		}
 
 		$data = self::get_transient( $key );

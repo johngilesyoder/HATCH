@@ -33,13 +33,16 @@ if ( ! class_exists( 'WpssoUser' ) ) {
 				add_action( 'admin_head', array( &$this, 'set_head_meta_tags' ), 100 );
 				add_action( 'show_user_profile', array( &$this, 'show_metaboxes' ), 20 );	// your profile
 
-				add_filter( 'manage_users_columns', array( $this, 'add_column_headings' ), 10, 1 );
-				add_filter( 'manage_users_custom_column', array( $this, 'get_user_column_content',), 10, 3 );
+				if ( $this->p->options['plugin_columns_user'] ) {
 
-				$this->p->util->add_plugin_filters( $this, array( 
-					'og_image_user_column_content' => 3,
-					'og_desc_user_column_content' => 3,
-				) );
+					add_filter( 'manage_users_columns', array( $this, 'add_column_headings' ), 10, 1 );
+					add_filter( 'manage_users_custom_column', array( $this, 'get_user_column_content',), 10, 3 );
+	
+					$this->p->util->add_plugin_filters( $this, array( 
+						'og_image_user_column_content' => 4,
+						'og_desc_user_column_content' => 4,
+					) );
+				}
 
 				// exit here if not a user page, or showing the profile page
 				$user_id = SucomUtil::get_req_val( 'user_id' );
@@ -61,7 +64,7 @@ if ( ! class_exists( 'WpssoUser' ) ) {
 			return $this->get_mod_column_content( $value, $column_name, $id, 'user' );
 		}
 
-		public function filter_og_image_user_column_content( $value, $column_name, $id ) {
+		public function filter_og_image_user_column_content( $value, $column_name, $id, $mod ) {
 			if ( ! empty( $value ) )
 				return $value;
 
@@ -69,18 +72,17 @@ if ( ! class_exists( 'WpssoUser' ) ) {
 			$size_name = $this->p->cf['lca'].'-opengraph';
 			$check_dupes = false;	// using first image we find, so dupe checking is useless
 			$force_regen = false;
-			$meta_pre = 'og';
+			$md_pre = 'og';
+			$og_image = array();
 
-			if ( ! empty( $this->p->options['og_def_img_on_author'] ) )
-				$og_image = $this->p->media->get_default_image( 1, $size_name,
-					$check_dupes, $force_regen );
-			else {
-				$og_image = $this->get_og_image( 1, $size_name, $id,
-					$check_dupes, $force_regen, $meta_pre );
-				if ( empty( $og_image ) )
-					$og_image = $this->p->media->get_default_image( 1, $size_name,
-						$check_dupes, $force_regen );
-			}
+			if ( empty( $og_image ) )
+				$og_image = $this->get_og_video_preview_image( $id, $mod, $check_dupes, $md_pre );
+
+			if ( empty( $og_image ) )
+				$og_image = $this->get_og_image( 1, $size_name, $id, $check_dupes, $force_regen, $md_pre );
+
+			if ( empty( $og_image ) )
+				$og_image = $this->p->media->get_default_image( 1, $size_name, $check_dupes, $force_regen );
 
 			if ( ! empty( $og_image ) && is_array( $og_image ) ) {
 				$image = reset( $og_image );
@@ -91,7 +93,7 @@ if ( ! class_exists( 'WpssoUser' ) ) {
 			return $value;
 		}
 
-		public function filter_og_desc_user_column_content( $value, $column_name, $id ) {
+		public function filter_og_desc_user_column_content( $value, $column_name, $id, $mod ) {
 			if ( ! empty( $value ) )
 				return $value;
 
@@ -139,7 +141,7 @@ if ( ! class_exists( 'WpssoUser' ) ) {
 						$this->head_info = $this->p->head->extract_head_info( $this->head_meta_tags );
 
 						if ( empty( $this->head_info['og:image'] ) )
-							$this->p->notice->err( $this->p->msgs->get( 'info-missing-og-image' ) );
+							$this->p->notice->err( $this->p->msgs->get( 'notice-missing-og-image' ) );
 					}
 					break;
 			}
@@ -154,8 +156,8 @@ if ( ! class_exists( 'WpssoUser' ) ) {
 			}
 			$add_metabox = empty( $this->p->options[ 'plugin_add_to_user' ] ) ? false : true;
 			if ( apply_filters( $this->p->cf['lca'].'_add_metabox_user', $add_metabox ) === true )
-				add_meta_box( WPSSO_META_NAME, 'Social Settings', array( &$this, 'show_metabox_user' ), 
-					'user', 'normal', 'high' );
+				add_meta_box( WPSSO_META_NAME, _x( 'Social Settings', 'metabox title', 'wpsso' ),
+					array( &$this, 'show_metabox_user' ), 'user', 'normal', 'low' );
 		}
 
 		public function show_metaboxes( $user ) {
@@ -175,7 +177,8 @@ if ( ! class_exists( 'WpssoUser' ) ) {
 			wp_nonce_field( $this->get_nonce(), WPSSO_NONCE );
 
 			$metabox = 'user';
-			$tabs = apply_filters( $this->p->cf['lca'].'_'.$metabox.'_tabs', $this->default_tabs );
+			$tabs = apply_filters( $this->p->cf['lca'].'_'.$metabox.'_tabs',
+				$this->get_default_tabs() );
 			if ( empty( $this->p->is_avail['mt'] ) )
 				unset( $tabs['tags'] );
 
@@ -301,6 +304,14 @@ if ( ! class_exists( 'WpssoUser' ) ) {
 		}
 
 		public function get_person_json_script( $author_id, $size_name = 'thumbnail' ) {
+
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->args( array(
+					'author_id' => $author_id,
+					'size_name' => $size_name,
+				) );
+			}
+
 			if ( empty( $author_id ) )
 				return false;
 
@@ -573,8 +584,8 @@ if ( ! class_exists( 'WpssoUser' ) ) {
 					'lang:'.$lang.'_post:'.$post_id.'_url:'.$sharing_url.'_crawler:pinterest',
 				),
 				'WpssoMeta::get_mod_column_content' => array( 
-					'mod:user_lang:'.$lang.'_id:'.$user_id.'_column:'.$lca.'_og_image',
-					'mod:user_lang:'.$lang.'_id:'.$user_id.'_column:'.$lca.'_og_desc',
+					'lang:'.$lang.'_id:'.$user_id.'_mod:user_column:'.$lca.'_og_image',
+					'lang:'.$lang.'_id:'.$user_id.'_mod:user_column:'.$lca.'_og_desc',
 				),
 			);
 			$transients = apply_filters( $this->p->cf['lca'].'_user_cache_transients', 

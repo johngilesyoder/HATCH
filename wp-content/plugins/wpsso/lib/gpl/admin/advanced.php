@@ -32,53 +32,62 @@ if ( ! class_exists( 'WpssoGplAdminAdvanced' ) ) {
 			$rows[] = '<td colspan="'.( $network ? 4 : 2 ).'" align="center">'.
 				$this->p->msgs->get( 'pro-feature-msg', array( 'lca' => 'wpsso' ) ).'</td>';
 
-			$rows[] = $this->p->util->get_th( 'Options to Show by Default', null, 'plugin_show_opts' ).
+			$rows[] = $this->p->util->get_th( _x( 'Options to Show by Default',
+				'option label', 'wpsso' ), null, 'plugin_show_opts' ).
 			'<td class="blank">'.$this->p->cf['form']['show_options'][$this->p->options['plugin_show_opts']].'</td>'.
-			$this->get_site_use( $form, $network, 'plugin_object_cache_exp' );
+			$this->p->admin->get_site_use( $form, $network, 'plugin_object_cache_exp' );
 
 			$rows[] = '<tr class="hide_in_basic">'.
-			$this->p->util->get_th( 'Report Cache Purge Count', null, 'plugin_cache_info' ).
-			'<td class="blank">'.$form->get_no_checkbox( 'plugin_cache_info' ).'</td>'.
-			$this->get_site_use( $form, $network, 'plugin_cache_info' );
+			$this->p->util->get_th( _x( 'Report Cache Purge Count',
+				'option label', 'wpsso' ), null, 'plugin_cache_info' ).
+			$this->get_nocb_cell( 'plugin_cache_info' ).
+			$this->p->admin->get_site_use( $form, $network, 'plugin_cache_info' );
 
 			$rows[] = '<tr class="hide_in_basic">'.
-			$this->p->util->get_th( 'Use WP Locale for Language', null, 'plugin_filter_lang' ).
-			'<td class="blank">'.$form->get_no_checkbox( 'plugin_filter_lang' ).'</td>'.
-			$this->get_site_use( $form, $network, 'plugin_filter_lang' );
+			$this->p->util->get_th( _x( 'Use WP Locale for Language',
+				'option label', 'wpsso' ), null, 'plugin_filter_lang' ).
+			$this->get_nocb_cell( 'plugin_filter_lang' ).
+			$this->p->admin->get_site_use( $form, $network, 'plugin_filter_lang' );
 
 			$rows[] = '<tr class="hide_in_basic">'.
-			$this->p->util->get_th( 'Auto-Resize Media Images', null, 'plugin_auto_img_resize' ).
-			'<td class="blank">'.$form->get_no_checkbox( 'plugin_auto_img_resize' ).'</td>'.
-			$this->get_site_use( $form, $network, 'plugin_auto_img_resize' );
+			$this->p->util->get_th( _x( 'Auto-Resize Media Images',
+				'option label', 'wpsso' ), null, 'plugin_auto_img_resize' ).
+			$this->get_nocb_cell( 'plugin_auto_img_resize' ).
+			$this->p->admin->get_site_use( $form, $network, 'plugin_auto_img_resize' );
 
 			$rows[] = '<tr class="hide_in_basic">'.
-			$this->p->util->get_th( 'Check Image Dimensions', null, 'plugin_ignore_small_img' ).
-			'<td class="blank">'.$form->get_no_checkbox( 'plugin_ignore_small_img' ).'</td>'.
-			$this->get_site_use( $form, $network, 'plugin_ignore_small_img' );
+			$this->p->util->get_th( _x( 'Check Image Dimensions',
+				'option label', 'wpsso' ), null, 'plugin_ignore_small_img' ).
+			$this->get_nocb_cell( 'plugin_ignore_small_img' ).
+			$this->p->admin->get_site_use( $form, $network, 'plugin_ignore_small_img' );
 
 			if ( ! empty( $this->p->cf['*']['lib']['shortcode'] ) ) {
 				$rows[] = '<tr class="hide_in_basic">'.
-				$this->p->util->get_th( 'Enable Plugin Shortcode(s)', null, 'plugin_shortcodes' ).
-				'<td class="blank">'.$form->get_no_checkbox( 'plugin_shortcodes' ).'</td>'.
-				$this->get_site_use( $form, $network, 'plugin_shortcodes' );
+				$this->p->util->get_th( _x( 'Enable Plugin Shortcode(s)',
+					'option label', 'wpsso' ), null, 'plugin_shortcodes' ).
+				$this->get_nocb_cell( 'plugin_shortcodes' ).
+				$this->p->admin->get_site_use( $form, $network, 'plugin_shortcodes' );
 			}
 
 			if ( ! empty( $this->p->cf['*']['lib']['widget'] ) ) {
 				$rows[] = '<tr class="hide_in_basic">'.
-				$this->p->util->get_th( 'Enable Plugin Widget(s)', null, 'plugin_widgets' ).
-				'<td class="blank">'.$form->get_no_checkbox( 'plugin_widgets' ).'</td>'.
-				$this->get_site_use( $form, $network, 'plugin_widgets' );
+				$this->p->util->get_th( _x( 'Enable Plugin Widget(s)',
+					'option label', 'wpsso' ), null, 'plugin_widgets' ).
+				$this->get_nocb_cell( 'plugin_widgets' ).
+				$this->p->admin->get_site_use( $form, $network, 'plugin_widgets' );
 			}
 
 			$rows[] = '<tr class="hide_in_basic">'.
-			$this->p->util->get_th( 'Enable WP Excerpt for Pages', null, 'plugin_page_excerpt' ).
-			'<td class="blank">'.$form->get_no_checkbox( 'plugin_page_excerpt' ).'</td>'.
-			$this->get_site_use( $form, $network, 'plugin_page_excerpt' );
+			$this->p->util->get_th( _x( 'Enable WP Excerpt for Pages',
+				'option label', 'wpsso' ), null, 'plugin_page_excerpt' ).
+			$this->get_nocb_cell( 'plugin_page_excerpt' ).
+			$this->p->admin->get_site_use( $form, $network, 'plugin_page_excerpt' );
 
 			$rows[] = '<tr class="hide_in_basic">'.
-			$this->p->util->get_th( 'Enable WP Tags for Pages', null, 'plugin_page_tags' ).
-			'<td class="blank">'.$form->get_no_checkbox( 'plugin_page_tags' ).'</td>'.
-			$this->get_site_use( $form, $network, 'plugin_page_tags' );
+			$this->p->util->get_th( _x( 'Enable WP Tags for Pages',
+				'option label', 'wpsso' ), null, 'plugin_page_tags' ).
+			$this->get_nocb_cell( 'plugin_page_tags' ).
+			$this->p->admin->get_site_use( $form, $network, 'plugin_page_tags' );
 
 			return $rows;
 		}
@@ -88,70 +97,117 @@ if ( ! class_exists( 'WpssoGplAdminAdvanced' ) ) {
 			$rows[] = '<td colspan="2" align="center">'.
 				$this->p->msgs->get( 'pro-feature-msg' ).'</td>';
 
-			$rows[] = $this->p->util->get_th( 'Use Filtered (SEO) Titles', 'highlight', 'plugin_filter_title' ).
-			'<td class="blank">'.$form->get_no_checkbox( 'plugin_filter_title' ).'</td>';
+			$rows[] = $this->p->util->get_th( _x( 'Use Filtered (SEO) Title',
+				'option label', 'wpsso' ), 'highlight', 'plugin_filter_title' ).
+			$this->get_nocb_cell( 'plugin_filter_title' );
 			
-			$rows[] = $this->p->util->get_th( 'Apply WordPress Content Filters', 'highlight', 'plugin_filter_content' ).
-			'<td class="blank">'.$form->get_no_checkbox( 'plugin_filter_content' ).'</td>';
+			$rows[] = $this->p->util->get_th( _x( 'Apply WordPress Content Filters',
+				'option label', 'wpsso' ), 'highlight', 'plugin_filter_content' ).
+			$this->get_nocb_cell( 'plugin_filter_content' );
 
 			$rows[] = '<tr class="hide_in_basic">'.
-			$this->p->util->get_th( 'Apply WordPress Excerpt Filters', null, 'plugin_filter_excerpt' ).
-			'<td class="blank">'.$form->get_no_checkbox( 'plugin_filter_excerpt' ).'</td>';
+			$this->p->util->get_th( _x( 'Apply WordPress Excerpt Filters',
+				'option label', 'wpsso' ), null, 'plugin_filter_excerpt' ).
+			$this->get_nocb_cell( 'plugin_filter_excerpt' );
 
 			$rows[] = '<tr class="hide_in_basic">'.
-			$this->p->util->get_th( 'Content Starts at 1st Paragraph', null, 'plugin_p_strip' ).
-			'<td class="blank">'.$form->get_no_checkbox( 'plugin_p_strip' ).'</td>';
+			$this->p->util->get_th( _x( 'Content Starts at 1st Paragraph',
+				'option label', 'wpsso' ), null, 'plugin_p_strip' ).
+			$this->get_nocb_cell( 'plugin_p_strip' );
 
 			$rows[] = '<tr class="hide_in_basic">'.
-			$this->p->util->get_th( 'Use Image Alt if No Content', null, 'plugin_use_img_alt' ).
-			'<td class="blank">'.$form->get_no_checkbox( 'plugin_use_img_alt' ).'</td>';
+			$this->p->util->get_th( _x( 'Use Image Alt if No Content',
+				'option label', 'wpsso' ), null, 'plugin_use_img_alt' ).
+			$this->get_nocb_cell( 'plugin_use_img_alt' );
 
 			$rows[] = '<tr class="hide_in_basic">'.
-			$this->p->util->get_th( 'Image Alt Text Prefix', null, 'plugin_img_alt_prefix' ).
+			$this->p->util->get_th( _x( 'Image Alt Text Prefix',
+				'option label', 'wpsso' ), null, 'plugin_img_alt_prefix' ).
 			'<td class="blank">'.$form->options['plugin_img_alt_prefix'].'</td>';
 
 			$rows[] = '<tr class="hide_in_basic">'.
-			$this->p->util->get_th( 'WP Caption Paragraph Prefix', null, 'plugin_p_cap_prefix' ).
+			$this->p->util->get_th( _x( 'WP Caption Paragraph Prefix',
+				'option label', 'wpsso' ), null, 'plugin_p_cap_prefix' ).
 			'<td class="blank">'.$form->options['plugin_p_cap_prefix'].'</td>';
 
-			$rows[] = $this->p->util->get_th( 'Check for Embedded Media', null, 'plugin_embedded_media' ).
+			$rows[] = $this->p->util->get_th( _x( 'Check for Embedded Media',
+				'option label', 'wpsso' ), null, 'plugin_embedded_media' ).
 			'<td class="blank">'.
-			'<p>'.$form->get_no_checkbox( 'plugin_slideshare_api' ).' Slideshare Presentations</p>'.
-			'<p>'.$form->get_no_checkbox( 'plugin_vimeo_api' ).' Vimeo Videos</p>'.
-			'<p>'.$form->get_no_checkbox( 'plugin_wistia_api' ).' Wistia Videos</p>'.
-			'<p>'.$form->get_no_checkbox( 'plugin_youtube_api' ).' YouTube Videos and Playlists</p>'.
+			'<p>'.$this->get_nocb( 'plugin_slideshare_api' ).' Slideshare Presentations</p>'.
+			'<p>'.$this->get_nocb( 'plugin_vimeo_api' ).' Vimeo Videos</p>'.
+			'<p>'.$this->get_nocb( 'plugin_wistia_api' ).' Wistia Videos</p>'.
+			'<p>'.$this->get_nocb( 'plugin_youtube_api' ).' YouTube Videos and Playlists</p>'.
 			'</td>';
 
 			return $rows;
 		}
 
-		public function filter_plugin_social_rows( $rows, $form ) {
+		public function filter_plugin_social_rows( $rows, $form, $network = false ) {
 
 			$rows[] = '<td colspan="2" align="center">'.
 				$this->p->msgs->get( 'pro-feature-msg' ).'</td>';
 
+			if ( $network ) {
+				$rows[] = '<tr class="hide_in_basic">'.
+				$this->p->util->get_th( _x( 'Show Social Columns for',
+					'option label', 'wpsso' ), null, 'plugin_social_columns',
+						array( 'rowspan' => 3 ) ).
+				$this->get_nocb_cell( 'plugin_columns_post', 
+					__( 'Posts, Pages, and Custom Post Types', 'wpsso' ) ).
+				$this->p->admin->get_site_use( $form, $network, 'plugin_columns_post' );
+	
+				$rows[] = '<tr class="hide_in_basic">'.
+				$this->get_nocb_cell( 'plugin_columns_taxonomy', 
+					__( 'Taxonomy (Categories and Tags)', 'wpsso' ) ).
+				$this->p->admin->get_site_use( $form, $network, 'plugin_columns_taxonomy' );
+	
+				$rows[] = '<tr class="hide_in_basic">'.
+				$this->get_nocb_cell( 'plugin_columns_user', 
+					__( 'Users' ) ).
+				$this->p->admin->get_site_use( $form, $network, 'plugin_columns_user' );
+			} else {
+				$rows[] = '<tr class="hide_in_basic">'.
+				$this->p->util->get_th( _x( 'Show Social Columns for',
+					'option label', 'wpsso' ), null, 'plugin_social_columns' ).
+				'<td>'.
+				'<p>'.$this->get_nocb( 'plugin_columns_post', 
+					__( 'Posts, Pages, and Custom Post Types', 'wpsso' ) ).'</p>'.
+				'<p>'.$this->get_nocb( 'plugin_columns_taxonomy',
+					__( 'Taxonomy (Categories and Tags)', 'wpsso' ) ).'</p>'.
+				'<p>'.$this->get_nocb( 'plugin_columns_user',
+					__( 'Users' ) ).'</p>'.
+				'</td>';
+			}
+
 			$checkboxes = '';
 			foreach ( $this->p->util->get_post_types( 'backend' ) as $post_type )
-				$checkboxes .= '<p>'.$form->get_no_checkbox( 'plugin_add_to_'.$post_type->name ).' '.
-					$post_type->label.' '.( empty( $post_type->description ) ? '' : '('.$post_type->description.')' ).'</p>';
-			$checkboxes .= '<p>'.$form->get_no_checkbox( 'plugin_add_to_taxonomy' ).' Taxonomy (Categories and Tags)</p>';
-			$checkboxes .= '<p>'.$form->get_no_checkbox( 'plugin_add_to_user' ).' User Profile</p>';
+				$checkboxes .= '<p>'.$this->get_nocb( 'plugin_add_to_'.$post_type->name ).' '.
+					$post_type->label.' '.( empty( $post_type->description ) ?
+						'' : '('.$post_type->description.')' ).'</p>';
+			$checkboxes .= '<p>'.$this->get_nocb( 'plugin_add_to_taxonomy' ).
+				' '.__( 'Taxonomy (Categories and Tags)', 'wpsso' ).'</p>';
+			$checkboxes .= '<p>'.$this->get_nocb( 'plugin_add_to_user' ).
+				' '.__( 'User Profile', 'wpsso' ).'</p>';
 
-			$rows[] = $this->p->util->get_th( 'Show Social Settings Metabox on', null, 'plugin_add_to' ).
+			$rows[] = $this->p->util->get_th( _x( 'Show Social Settings Metabox on',
+				'option label', 'wpsso' ), null, 'plugin_add_to' ).
 			'<td class="blank">'.$checkboxes.'</td>';
 			
 			$rows[] = '<tr class="hide_in_basic">'.
-			$this->p->util->get_th( 'Image URL Custom Field', null, 'plugin_cf_img_url' ).
+			$this->p->util->get_th( _x( 'Image URL Custom Field',
+				'option label', 'wpsso' ), null, 'plugin_cf_img_url' ).
 			'<td class="blank">'.$form->get_hidden( 'plugin_cf_img_url' ).
 				$this->p->options['plugin_cf_img_url'].'</td>';
 
 			$rows[] = '<tr class="hide_in_basic">'.
-			$this->p->util->get_th( 'Video URL Custom Field', null, 'plugin_cf_vid_url' ).
+			$this->p->util->get_th( _x( 'Video URL Custom Field',
+				'option label', 'wpsso' ), null, 'plugin_cf_vid_url' ).
 			'<td class="blank">'.$form->get_hidden( 'plugin_cf_vid_url' ).
 				$this->p->options['plugin_cf_vid_url'].'</td>';
 
 			$rows[] = '<tr class="hide_in_basic">'.
-			$this->p->util->get_th( 'Video Embed HTML Custom Field', null, 'plugin_cf_vid_embed' ).
+			$this->p->util->get_th( _x( 'Video Embed HTML Custom Field',
+				'option label', 'wpsso' ), null, 'plugin_cf_vid_embed' ).
 			'<td class="blank">'.$form->get_hidden( 'plugin_cf_vid_embed' ).
 				$this->p->options['plugin_cf_vid_embed'].'</td>';
 			
@@ -160,19 +216,22 @@ if ( ! class_exists( 'WpssoGplAdminAdvanced' ) ) {
 
 		public function filter_plugin_integration_rows( $rows, $form ) {
 
-			$rows[] = '<td colspan="2" align="center">'.
+			$rows[] = '<td colspan="3" align="center">'.
 				$this->p->msgs->get( 'pro-feature-msg' ).'</td>';
 
-			$rows[] = $this->p->util->get_th( 'Check for Duplicate Meta Tags', 'highlight', 'plugin_check_head' ).
-			'<td class="blank">'.$form->get_no_checkbox( 'plugin_check_head' ).'</td>';
+			$rows[] = $this->p->util->get_th( _x( 'Check for Duplicate Meta Tags',
+				'option label', 'wpsso' ), 'highlight', 'plugin_check_head' ).
+			$this->get_nocb_cell( 'plugin_check_head' );
 
 			$rows[] = '<tr class="hide_in_basic">'.
-			$this->p->util->get_th( 'Header &lt;html&gt; Attribute Filter', null, 'plugin_html_attr_filter' ).
+			$this->p->util->get_th( _x( 'Header &lt;html&gt; Attribute Filter',
+				'option label', 'wpsso' ), null, 'plugin_html_attr_filter' ).
 			'<td class="blank">Name:&nbsp;'.$this->p->options['plugin_html_attr_filter_name'].'</td><td class="blank">'.
 				'Priority:&nbsp;'.$this->p->options['plugin_html_attr_filter_prio'].'</td>';
 			
 			$rows[] = '<tr class="hide_in_basic">'.
-			$this->p->util->get_th( 'Header &lt;head&gt; Attribute Filter', 'highlight', 'plugin_head_attr_filter' ).
+			$this->p->util->get_th( _x( 'Header &lt;head&gt; Attribute Filter',
+				'option label', 'wpsso' ), 'highlight', 'plugin_head_attr_filter' ).
 			'<td class="blank">Name:&nbsp;'.$this->p->options['plugin_head_attr_filter_name'].'</td><td class="blank">'.
 				'Priority:&nbsp;'.$this->p->options['plugin_head_attr_filter_prio'].'</td>';
 			
@@ -184,14 +243,16 @@ if ( ! class_exists( 'WpssoGplAdminAdvanced' ) ) {
 			$rows[] = '<td colspan="'.( $network ? 4 : 2 ).'" align="center">'.
 				$this->p->msgs->get( 'pro-feature-msg', array( 'lca' => 'wpsso' ) ).'</td>';
 
-			$rows['plugin_object_cache_exp'] = $this->p->util->get_th( 'Object Cache Expiry', 'highlight', 'plugin_object_cache_exp' ).
+			$rows['plugin_object_cache_exp'] = $this->p->util->get_th( _x( 'Object Cache Expiry',
+				'option label', 'wpsso' ), 'highlight', 'plugin_object_cache_exp' ).
 			'<td nowrap class="blank">'.$this->p->options['plugin_object_cache_exp'].' seconds</td>'.
-			$this->get_site_use( $form, $network, 'plugin_object_cache_exp' );
+			$this->p->admin->get_site_use( $form, $network, 'plugin_object_cache_exp' );
 
 			$rows['plugin_verify_certs'] = '<tr class="hide_in_basic">'.
-			$this->p->util->get_th( 'Verify SSL Certificates', null, 'plugin_verify_certs' ).
-			'<td class="blank">'.$form->get_no_checkbox( 'plugin_verify_certs' ).'</td>'.
-			$this->get_site_use( $form, $network, 'plugin_verify_certs' );
+			$this->p->util->get_th( _x( 'Verify SSL Certificates',
+				'option label', 'wpsso' ), null, 'plugin_verify_certs' ).
+			$this->get_nocb_cell( 'plugin_verify_certs' ).
+			$this->p->admin->get_site_use( $form, $network, 'plugin_verify_certs' );
 
 			return $rows;
 		}
@@ -201,25 +262,43 @@ if ( ! class_exists( 'WpssoGplAdminAdvanced' ) ) {
 			$rows[] = '<td colspan="'.( $network ? 4 : 2 ).'" align="center">'.
 				$this->p->msgs->get( 'pro-feature-msg', array( 'lca' => 'wpsso' ) ).'</td>';
 
-			$rows['plugin_shortener'] = $this->p->util->get_th( 'Preferred URL Shortening Service', null, 'plugin_shortener' ).
-			'<td class="blank">'.$form->get_hidden( 'plugin_shortener' ).
-			$this->p->cf['form']['shorteners'][$this->p->options['plugin_shortener']].'</td>';
+			$rows['plugin_shortener'] = $this->p->util->get_th( _x( 'Preferred URL Shortening Service',
+				'option label', 'wpsso' ), 'highlight', 'plugin_shortener' ).
+			'<td class="blank">[none]</td>';
+
+			$rows['plugin_shortlink'] = $this->p->util->get_th( _x( '<em>Get Shortlink</em> Button Gives Short URL',
+				'option label', 'wpsso' ), null, 'plugin_shortlink' ).
+			$this->get_nocb_cell( 'plugin_shortlink' );
 
 			$rows['plugin_min_shorten'] = '<tr class="hide_in_basic">'.
-			$this->p->util->get_th( 'Minimum URL Length to Shorten', null, 'plugin_min_shorten' ). 
-			'<td nowrap class="blank">'.$this->p->options['plugin_min_shorten'].' characters</td>';
+			$this->p->util->get_th( _x( 'Minimum URL Length to Shorten',
+				'option label', 'wpsso' ), null, 'plugin_min_shorten' ). 
+			'<td nowrap class="blank">'.$this->p->options['plugin_min_shorten'].' '.
+				_x( 'characters', 'option comment', 'wpsso' ).'</td>';
 
-			$rows['plugin_bitly_login'] = $this->p->util->get_th( 'Bit.ly Username', null, 'plugin_bitly_login' ).
+			$rows['plugin_bitly_login'] = $this->p->util->get_th( _x( 'Bit.ly Username',
+				'option label', 'wpsso' ), null, 'plugin_bitly_login' ).
 			'<td class="blank mono">'.$this->p->options['plugin_bitly_login'].'</td>';
 
-			$rows['plugin_bitly_api_key'] = $this->p->util->get_th( 'Bit.ly API Key', null, 'plugin_bitly_api_key' ).
+			$rows['plugin_bitly_api_key'] = $this->p->util->get_th( _x( 'Bit.ly API Key',
+				'option label', 'wpsso' ), null, 'plugin_bitly_api_key' ).
 			'<td class="blank mono">'.$this->p->options['plugin_bitly_api_key'].'</td>';
 
-			$rows['plugin_google_api_key'] = $this->p->util->get_th( 'Google Project App BrowserKey', null, 'plugin_google_api_key' ).
+			$rows['plugin_owly_api_key'] = '<tr class="hide_in_basic">'.
+			$this->p->util->get_th( _x( 'Ow.ly API Key',
+				'option label', 'wpsso' ), null, 'plugin_owly_api_key' ).
+			'<td class="blank mono">'.$this->p->options['plugin_owly_api_key'].'</td>';
+
+			$rows['plugin_google_api_key'] = '<tr class="hide_in_basic">'.
+			$this->p->util->get_th( _x( 'Google Project App BrowserKey',
+				'option label', 'wpsso' ), null, 'plugin_google_api_key' ).
 			'<td class="blank mono">'.$this->p->options['plugin_google_api_key'].'</td>';
 
-			$rows['plugin_google_shorten'] = $this->p->util->get_th( 'Google URL Shortener API is ON', null, 'plugin_google_shorten' ).
-			'<td class="blank">'.$this->p->cf['form']['yes_no'][$this->p->options['plugin_google_shorten']].'</td>';
+			$rows['plugin_google_shorten'] = '<tr class="hide_in_basic">'.
+			$this->p->util->get_th( _x( 'Google URL Shortener API is ON',
+				'option label', 'wpsso' ), null, 'plugin_google_shorten' ).
+			'<td class="blank">'._x( $this->p->cf['form']['yes_no'][$this->p->options['plugin_google_shorten']],
+				'option value', 'wpsso' ).'</td>';
 
 			return $rows;
 		}
@@ -230,9 +309,12 @@ if ( ! class_exists( 'WpssoGplAdminAdvanced' ) ) {
 				$this->p->msgs->get( 'pro-feature-msg' ).'</td>';
 
 			$rows[] = '<td></td>'.
-			$this->p->util->get_th( 'Show', 'left checkbox' ).
-			$this->p->util->get_th( 'Contact Field Name', 'left medium', 'custom-cm-field-name' ).
-			$this->p->util->get_th( 'Profile Contact Label', 'left wide' );
+			$this->p->util->get_th( _x( 'Show',
+				'column title', 'wpsso' ), 'left checkbox' ).
+			$this->p->util->get_th( _x( 'Contact Field Name',
+				'column title', 'wpsso' ), 'left medium', 'custom-cm-field-name' ).
+			$this->p->util->get_th( _x( 'Profile Contact Label',
+				'column title', 'wpsso' ), 'left wide' );
 
 			$sorted_opt_pre = $this->p->cf['opt']['pre'];
 			ksort( $sorted_opt_pre );
@@ -251,7 +333,7 @@ if ( ! class_exists( 'WpssoGplAdminAdvanced' ) ) {
 				// not all social websites have a contact method field
 				if ( isset( $this->p->options[$cm_enabled] ) ) {
 					$rows[] = $this->p->util->get_th( $name, 'medium' ).
-					'<td class="blank checkbox">'.$form->get_no_checkbox( $cm_enabled ).'</td>'.
+					'<td class="blank checkbox">'.$this->get_nocb( $cm_enabled ).'</td>'.
 					'<td class="blank">'.$form->get_no_input( $cm_name, 'medium' ).'</td>'.
 					'<td class="blank">'.$form->get_no_input( $cm_label ).'</td>';
 				}
@@ -266,9 +348,12 @@ if ( ! class_exists( 'WpssoGplAdminAdvanced' ) ) {
 				$this->p->msgs->get( 'pro-feature-msg' ).'</td>';
 
 			$rows[] = '<td></td>'.
-			$this->p->util->get_th( 'Show', 'left checkbox' ).
-			$this->p->util->get_th( 'Contact Field Name', 'left medium', 'custom-cm-field-name' ).
-			$this->p->util->get_th( 'Profile Contact Label', 'left wide' );
+			$this->p->util->get_th( _x( 'Show',
+				'column title', 'wpsso' ), 'left checkbox' ).
+			$this->p->util->get_th( _x( 'Contact Field Name',
+				'column title', 'wpsso' ), 'left medium', 'custom-cm-field-name' ).
+			$this->p->util->get_th( _x( 'Profile Contact Label',
+				'column title', 'wpsso' ), 'left wide' );
 
 			$sorted_wp_cm = $this->p->cf['wp']['cm'];
 			ksort( $sorted_wp_cm );
@@ -281,9 +366,7 @@ if ( ! class_exists( 'WpssoGplAdminAdvanced' ) ) {
 
 				if ( array_key_exists( $cm_enabled, $this->p->options ) ) {
 					$rows[] = $this->p->util->get_th( $name, 'medium' ).
-					'<td class="blank checkbox">'.
-						$form->get_hidden( $cm_enabled ).
-						$form->get_no_checkbox( $cm_enabled ).'</td>'.
+					'<td class="blank checkbox">'.$this->get_nocb( $cm_enabled ).'</td>'.
 					'<td>'.$form->get_no_input( $cm_name, 'medium' ).'</td>'.
 					'<td class="blank">'.$form->get_no_input( $cm_label ).'</td>';
 				}
@@ -296,16 +379,26 @@ if ( ! class_exists( 'WpssoGplAdminAdvanced' ) ) {
 			$og_cols = 2;
 			$cells = array();
 			foreach ( $this->p->opt->get_defaults() as $opt => $val ) {
-				if ( preg_match( '/^add_('.$tag.')_([^_]+)_(.+)$/', $opt, $match ) && 
-					$opt !== 'add_meta_name_generator' ) {
-					$highlight = $opt === 'add_meta_name_description' ? ' highlight' : '';
-					$cells[] = '<td class="checkbox blank">'.$form->get_no_checkbox( $opt ).'</td>'.
+				if ( strpos( $opt, 'add_' ) === 0 &&
+					preg_match( '/^add_('.$tag.')_([^_]+)_(.+)$/', $opt, $match ) ) {
+					switch ( $opt ) {
+						case 'add_meta_name_generator':
+							continue 2;
+						case 'add_meta_name_canonical':
+						case 'add_meta_name_description':
+							$highlight = ' highlight';
+							break;
+						default:
+							$highlight = '';
+							break;
+					}
+					$cells[] = '<!-- '.( implode( ' ', $match ) ).' -->'.	// required for sorting
+						'<td class="checkbox blank">'.$this->get_nocb( $opt ).'</td>'.
 						'<td class="xshort'.$highlight.'">'.$match[1].'</td>'.
 						'<td class="taglist'.$highlight.'">'.$match[2].'</td>'.
 						'<th class="taglist'.$highlight.'">'.$match[3].'</th>';
 				}
 			}
-
 			sort( $cells );
 			$col_rows = array();
 			$per_col = ceil( count( $cells ) / $og_cols );
@@ -314,14 +407,17 @@ if ( ! class_exists( 'WpssoGplAdminAdvanced' ) ) {
 					$col_rows[ $num % $per_col ] = '<tr class="hide_in_basic">';	// initialize the array
 				$col_rows[ $num % $per_col ] .= $cell;					// create the html for each row
 			}
-
 			return array_merge( $rows, $col_rows );
 		}
 
-		protected function get_site_use( &$form, &$network, $name ) {
-			return $network === false ? '' : $this->p->util->get_th( 'Site Use', 'site_use' ).
-				'<td class="site_use blank">'.$form->get_select( $name.':use', 
-					$this->p->cf['form']['site_option_use'], 'site_use', null, true, true ).'</td>';
+		private function get_nocb( $name, $text = '' ) {
+			return '<input type="checkbox" disabled="disabled" '.
+				checked( $this->p->options[$name], 1, false ).'/>'.
+					( empty( $text ) ? '' : ' '.$text );
+		}
+
+		private function get_nocb_cell( $name, $text = '' ) {
+			return '<td class="blank">'.$this->get_nocb( $name, $text ).'</td>';
 		}
 	}
 }

@@ -60,7 +60,7 @@
             </button>
             <a class="navbar-brand" href="<?php echo home_url(); ?>">
               <span class="site-logo">HATCH</span>
-              <span class="site-logo-date">Sep 16-20, 2015</span>
+              <span class="site-logo-date">Sep 14-18, 2016</span>
             </a>
           </div>
 

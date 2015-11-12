@@ -35,6 +35,12 @@ switch ( $template ) {
 	case 'x' :
 		echo '</div></div></div></div>';
 		break;
+	case 'salient' :
+		echo '</div></div></div>';
+		break;
+	case 'jupiter' :
+		echo '</div></div></div>';
+		break;
 	default :
 		echo apply_filters( 'give_default_wrapper_end', '</div></div>' );
 		break;

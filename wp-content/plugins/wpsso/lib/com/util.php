@@ -34,6 +34,12 @@ if ( ! class_exists( 'SucomUtil' ) ) {
 			$this->p->debug->mark();
 		}
 
+		public static function get_const( $const ) {
+			if ( defined( $const ) )
+				return constant( $const );
+			else return false;
+		}
+
 		// returns false or the admin screen id text string
 		public static function get_screen_id( $screen = false ) {
 			if ( $screen === false &&
@@ -70,8 +76,10 @@ if ( ! class_exists( 'SucomUtil' ) ) {
 			if ( isset( $atts['url'] ) )
 				$sharing_url = $atts['url'];
 			else $sharing_url = $this->get_sharing_url( $use_post, 
-				( isset( $atts['add_page'] ) ? $atts['add_page'] : true ),
-				( isset( $atts['source_id'] ) ? $atts['source_id'] : false ) );
+				( isset( $atts['add_page'] ) ?
+					$atts['add_page'] : true ),
+				( isset( $atts['source_id'] ) ?
+					$atts['source_id'] : false ) );
 
 			if ( is_admin() )
 				$request_url = $sharing_url;
@@ -220,13 +228,13 @@ if ( ! class_exists( 'SucomUtil' ) ) {
 		}
 
 		// pre-define the array key order for the list() construct (which assigns elements from right to left)
-		public static function meta_image_tags( $tag_prefix = 'og' ) {
+		public static function meta_image_tags( $mt_pre = 'og' ) {
 			return array(
-				$tag_prefix.':image' => '',
-				$tag_prefix.':image:width' => '',
-				$tag_prefix.':image:height' => '',
-				$tag_prefix.':image:cropped' => '',
-				$tag_prefix.':image:id' => '',
+				$mt_pre.':image' => '',
+				$mt_pre.':image:width' => '',
+				$mt_pre.':image:height' => '',
+				$mt_pre.':image:cropped' => '',
+				$mt_pre.':image:id' => '',
 			);
 		}
 
@@ -328,13 +336,12 @@ if ( ! class_exists( 'SucomUtil' ) ) {
 			}
 		}
 
-		public static function is_post_page( $use_post = false ) {
-			if ( isset( self::$is['post_page'] ) )
-				return self::$is['post_page'];
-
+		public static function is_post_page( $use_post = false, $cache = true ) {
+			if ( $cache &&
+				isset( self::$is['post_page'][$use_post] ) )
+					return self::$is['post_page'][$use_post];
 			$ret = false;
-
-			if ( is_singular() || $use_post !== false )
+			if ( is_singular() || $use_post )
 				$ret = true;
 			elseif ( is_admin() ) {
 				$screen_id = self::get_screen_id();
@@ -346,8 +353,13 @@ if ( ! class_exists( 'SucomUtil' ) ) {
 				elseif ( self::get_req_val( 'post_ID', 'POST' ) !== '' ||
 					self::get_req_val( 'post', 'GET' ) !== '' )
 						$ret = true;
+				elseif ( basename( $_SERVER['PHP_SELF'] ) === 'post-new.php' )
+					$ret = true;
 			}
-			return self::$is['post_page'] = apply_filters( 'sucom_is_post_page', $ret, $use_post );
+			$ret = apply_filters( 'sucom_is_post_page', $ret, $use_post );
+			if ( $cache )
+				self::$is['post_page'][$use_post] = $ret;
+			return $ret;
 		}
 
 		// on archives and taxonomies, this will return the first post object
@@ -386,12 +398,11 @@ if ( ! class_exists( 'SucomUtil' ) ) {
 			}
 		}
 
-		public static function is_term_page() {
-			if ( isset( self::$is['term_page'] ) )
-				return self::$is['term_page'];
-
+		public static function is_term_page( $cache = true ) {
+			if ( $cache &&
+				isset( self::$is['term_page'] ) )
+					return self::$is['term_page'];
 			$ret = false;
-
 			if ( is_tax() || is_category() || is_tag() )
 				$ret = true;
 			elseif ( is_admin() ) {
@@ -399,15 +410,16 @@ if ( ! class_exists( 'SucomUtil' ) ) {
 					self::get_req_val( 'tag_ID' ) !== '' )
 						$ret = true;
 			}
-			return self::$is['term_page'] = apply_filters( 'sucom_is_term_page', $ret );
+			$ret = apply_filters( 'sucom_is_term_page', $ret );
+			if ( $cache )
+				self::$is['term_page'] = $ret;
+			return $ret;
 		}
 
 		public static function is_category_page() {
 			if ( isset( self::$is['category_page'] ) )
 				return self::$is['category_page'];
-
 			$ret = false;
-
 			if ( is_category() )
 				$ret = true;
 			elseif ( is_admin() ) {
@@ -441,12 +453,11 @@ if ( ! class_exists( 'SucomUtil' ) ) {
 			}
 		}
 
-		public static function is_author_page() {
-			if ( isset( self::$is['author_page'] ) )
-				return self::$is['author_page'];
-
+		public static function is_author_page( $cache = true ) {
+			if ( $cache &&
+				isset( self::$is['author_page'] ) )
+					return self::$is['author_page'];
 			$ret = false;
-
 			if ( is_author() ) {
 				$ret = true;
 			} elseif ( is_admin() ) {
@@ -455,8 +466,13 @@ if ( ! class_exists( 'SucomUtil' ) ) {
 						$ret = true;
 				elseif ( self::get_req_val( 'user_id' ) !== '' )
 					$ret = true;
+				elseif ( basename( $_SERVER['PHP_SELF'] ) === 'profile.php' )
+					$ret = true;
 			}
-			return self::$is['author_page'] = apply_filters( 'sucom_is_author_page', $ret );
+			$ret = apply_filters( 'sucom_is_author_page', $ret );
+			if ( $cache )
+				self::$is['author_page'] = $ret;
+			return $ret;
 		}
 
 		public function get_author_object( $ret = 'object' ) {
@@ -486,9 +502,7 @@ if ( ! class_exists( 'SucomUtil' ) ) {
 		public static function is_product_page( $use_post = false, $obj = false ) {
 			if ( isset( self::$is['product_page'] ) )
 				return self::$is['product_page'];
-
 			$ret = false;
-
 			if ( function_exists( 'is_product' ) && 
 				is_product() )
 					$ret = true;
@@ -506,9 +520,7 @@ if ( ! class_exists( 'SucomUtil' ) ) {
 		public static function is_product_category() {
 			if ( isset( self::$is['product_category'] ) )
 				return self::$is['product_category'];
-
 			$ret = false;
-
 			if ( function_exists( 'is_product_category' ) && 
 				is_product_category() )
 					$ret = true;
@@ -523,9 +535,7 @@ if ( ! class_exists( 'SucomUtil' ) ) {
 		public static function is_product_tag() {
 			if ( isset( self::$is['product_tag'] ) )
 				return self::$is['product_tag'];
-
 			$ret = false;
-
 			if ( function_exists( 'is_product_tag' ) && 
 				is_product_tag() )
 					$ret = true;
@@ -555,7 +565,7 @@ if ( ! class_exists( 'SucomUtil' ) ) {
 
 		// "use_post = false" when used for open graph meta tags and buttons in widget,
 		// true when buttons are added to individual posts on an index webpage
-		public function get_sharing_url( $use_post = false, $add_page = true, $source_id = false ) {
+		public function get_sharing_url( $use_post = false, $add_page = true, $src_id = false ) {
 			$url = false;
 			if ( is_singular() || $use_post !== false ) {
 				if ( ( $obj = $this->get_post_object( $use_post ) ) === false )
@@ -580,7 +590,7 @@ if ( ! class_exists( 'SucomUtil' ) ) {
 						}
 					}
 				}
-				$url = apply_filters( $this->p->cf['lca'].'_post_url', $url, $post_id, $use_post, $add_page, $source_id );
+				$url = apply_filters( $this->p->cf['lca'].'_post_url', $url, $post_id, $use_post, $add_page, $src_id );
 			} else {
 				if ( is_search() ) {
 					$url = get_search_link();
@@ -588,7 +598,7 @@ if ( ! class_exists( 'SucomUtil' ) ) {
 				} elseif ( is_front_page() ) {
 					$url = apply_filters( $this->p->cf['lca'].'_home_url', home_url( '/' ) );
 
-				} elseif ( $this->is_posts_page() ) {
+				} elseif ( is_home() && 'page' === get_option( 'show_on_front' ) ) {
 					$url = get_permalink( get_option( 'page_for_posts' ) );
 
 				} elseif ( self::is_term_page() ) {
@@ -652,11 +662,7 @@ if ( ! class_exists( 'SucomUtil' ) ) {
 				$url = preg_replace( '/([\?&])(fb_action_ids|fb_action_types|fb_source|fb_aggregation_id|utm_source|utm_medium|utm_campaign|utm_term|gclid|pk_campaign|pk_kwd)=[^&]*&?/i', '$1', $url );
 			}
 
-			return apply_filters( $this->p->cf['lca'].'_sharing_url', $url, $use_post, $add_page, $source_id );
-		}
-
-		public function is_posts_page() {
-			return ( is_home() && 'page' == get_option( 'show_on_front' ) );
+			return apply_filters( $this->p->cf['lca'].'_sharing_url', $url, $use_post, $add_page, $src_id );
 		}
 
 		public function fix_relative_url( $url = '' ) {
@@ -1025,11 +1031,22 @@ if ( ! class_exists( 'SucomUtil' ) ) {
 
 			return '<th'.
 				( empty( $atts['colspan'] ) ? '' : ' colspan="'.$atts['colspan'].'"' ).
+				( empty( $atts['rowspan'] ) ? '' : ' rowspan="'.$atts['rowspan'].'"' ).
 				( empty( $class ) ? '' : ' class="'.$class.'"' ).
 				( empty( $id ) ? '' : ' id="th_'.$id.'"' ).'><p>'.$title.
 				( empty( $tooltip_text ) ? '' : $tooltip_text ).'</p></th>';
 		}
 
+		// tab titles in the array should already be translated:
+		//
+		// $tabs = array(
+		//		'header' => _x( 'Title / Descriptions', 'metabox tab', 'nextgen-facebook' ),
+		//		'media' => _x( 'Priority Media', 'metabox tab', 'nextgen-facebook' ),
+		//		'preview' => _x( 'Social Preview', 'metabox tab', 'nextgen-facebook' ),
+		//		'tags' => _x( 'Head Tags', 'metabox tab', 'nextgen-facebook' ),
+		//		'validate' => _x( 'Validate', 'metabox tab', 'nextgen-facebook' ),
+		// );
+		//
 		public function do_tabs( $metabox = '', $tabs = array(), $table_rows = array(), $args = array() ) {
 			$tab_keys = array_keys( $tabs );
 			$default_tab = '_'.reset( $tab_keys );		// must start with an underscore
@@ -1161,12 +1178,13 @@ if ( ! class_exists( 'SucomUtil' ) ) {
 
 		public function get_source_id( $src_name, &$atts = array() ) {
 			global $post;
-			$use_post = array_key_exists( 'use_post', $atts ) ? $atts['use_post'] : true;
-			$source_id = $src_name.( empty( $atts['css_id'] ) ? 
+			$use_post = isset( $atts['use_post'] ) ?
+				$atts['use_post'] : true;
+			$src_id = $src_name.( empty( $atts['css_id'] ) ? 
 				'' : '-'.preg_replace( '/^'.$this->p->cf['lca'].'-/','', $atts['css_id'] ) );
 			if ( $use_post == true && isset( $post->ID ) ) 
-				$source_id = $source_id.'-post-'.$post->ID;
-			return $source_id;
+				$src_id = $src_id.'-post-'.$post->ID;
+			return $src_id;
 		}
 
 		public static function array_merge_recursive_distinct( array &$array1, array &$array2 ) {

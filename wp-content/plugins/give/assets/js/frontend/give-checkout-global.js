@@ -9,13 +9,34 @@
  */
 var give_scripts, give_global_vars;
 
+
+//Get Query function used to grab URL params
+(function ( $ ) {
+	$.getQuery = function ( query ) {
+		query = query.replace( /[\[]/, "\\\[" ).replace( /[\]]/, "\\\]" );
+		var expr = "[\\?&]" + query + "=([^&#]*)";
+		var regex = new RegExp( expr );
+		var results = regex.exec( window.location.href );
+		if ( results !== null ) {
+			return results[1];
+			return decodeURIComponent( results[1].replace( /\+/g, " " ) );
+		} else {
+			return false;
+		}
+	};
+})( jQuery );
+
+
 jQuery( function ( $ ) {
+
 	var doc = $( document );
 
-	// Update state/province field on checkout page
-	doc.on( 'change', '#give_cc_address input.card_state, #give_cc_address select', function () {
+	/**
+	 * Update state/province fields per country selection
+	 */
+	function update_billing_state_field() {
 		var $this = $( this ),
-			$form = $this.parents( "form" );
+			$form = $this.parents( 'form' );
 		if ( 'card_state' != $this.attr( 'id' ) ) {
 
 			//Disable the State field until updated
@@ -29,7 +50,7 @@ jQuery( function ( $ ) {
 			};
 
 			$.ajax( {
-				type     : "POST",
+				type     : 'POST',
 				data     : postData,
 				url      : give_global_vars.ajaxurl,
 				xhrFields: {
@@ -37,12 +58,12 @@ jQuery( function ( $ ) {
 				},
 				success  : function ( response ) {
 					if ( 'nostates' == response ) {
-						var text_field = '<input type="text" name="card_state" class="cart-state give-input required" value=""/>';
+						var text_field = '<input type="text" id="card_state" name="card_state" class="cart-state give-input required" value=""/>';
 						$form.find( 'input[name="card_state"], select[name="card_state"]' ).replaceWith( text_field );
 					} else {
 						$form.find( 'input[name="card_state"], select[name="card_state"]' ).replaceWith( response );
 					}
-					doc.trigger( 'give_checkout_billing_address_updated', [response] );
+					doc.trigger( 'give_checkout_billing_address_updated', [response, $form.attr( 'id' )] );
 				}
 			} ).fail( function ( data ) {
 				if ( window.console && window.console.log ) {
@@ -52,24 +73,38 @@ jQuery( function ( $ ) {
 		}
 
 		return false;
-	} );
+	}
+
+	doc.on( 'change', '#give_cc_address input.card_state, #give_cc_address select', update_billing_state_field
+	);
+
+	sent_back_to_form();
 
 	/**
-	 * Credit card verification
+	 * Format CC Fields
+	 * @description Set variables and format cc fields
+	 * @since 1.2
 	 */
-	var card_number, card_cvc, card_month, card_year, give_form;
-
-	// Set variables and format cc fields
 	function format_cc_fields() {
-		card_number = $( '#card_number' );
-		card_cvc = $( '#card_cvc' );
-		card_month = $( '#card_exp_month' );
-		card_year = $( '#card_exp_year' );
 		give_form = $( 'form.give-form' );
 
-		card_number.payment( 'formatCardNumber' );
-		card_cvc.payment( 'formatCardCVC' );
-	};
+		//Loop through forms on page and set CC validation
+		give_form.each( function () {
+			var card_number = $( this ).find( '.card-number' );
+			var card_cvc = $( this ).find( '.card-cvc' );
+			var card_expiry = $( this ).find( '.card-expiry' );
+
+			//Only validate if there is a card field
+			if ( card_number.length === 0 ) {
+				return false;
+			}
+
+			card_number.payment( 'formatCardNumber' );
+			card_cvc.payment( 'formatCardCVC' );
+			card_expiry.payment( 'formatCardExpiry' );
+		} );
+
+	}
 
 	format_cc_fields();
 
@@ -86,19 +121,25 @@ jQuery( function ( $ ) {
 		return this;
 	};
 
-	// Validate cc fields on change
-	doc.on( 'keyup change', '#card_number, #card_cvc, #card_exp_month, #card_exp_year', function () {
-		var t = $( this ),
-			id = t.attr( 'id' ),
+	/**
+	 * Validate cc fields on change
+	 */
+	doc.on( 'keyup change', '.card-number, .card-cvc, .card-expiry', function () {
+		var el = $( this ),
+			give_form = el.parents( 'form.give-form' ),
+			id = el.attr( 'id' ),
+			card_number = give_form.find( '.card-number' ),
+			card_cvc = give_form.find( '.card-cvc' ),
+			card_expiry = give_form.find( '.card-expiry' ),
 			type = $.payment.cardType( card_number.val() );
 
-		if ( id === 'card_number' ) {
+		if ( id.indexOf( 'card_number' ) > -1 ) {
 
 			var card_type = give_form.find( '.card-type' );
 
 			if ( type === null ) {
 				card_type.removeClass().addClass( 'off card-type' );
-				t.removeClass( 'valid' ).addClass( 'error' );
+				el.removeClass( 'valid' ).addClass( 'error' );
 			}
 			else {
 				card_type.removeClass( 'off' ).addClass( type );
@@ -106,31 +147,43 @@ jQuery( function ( $ ) {
 
 			card_number.toggleError( !$.payment.validateCardNumber( card_number.val() ) );
 		}
-		if ( id === 'card_cvc' ) {
+		if ( id.indexOf( 'card_cvc' ) > -1 ) {
 
 			card_cvc.toggleError( !$.payment.validateCardCVC( card_cvc.val(), type ) );
 		}
-		if ( id === 'card_exp_month' || id === 'card_exp_year' ) {
+		if ( id.indexOf( 'card_expiry' ) > -1 ) {
 
-			var month = parseInt( card_month.val(), 10 ),
-				year = parseInt( card_year.val(), 10 );
+			card_expiry.toggleError( !$.payment.validateCardExpiry( card_expiry.payment( 'cardExpiryVal' ) ) );
 
-			card_month.toggleError( !$.payment.validateCardExpiry( month, year ) );
-			card_year.toggleError( !$.payment.validateCardExpiry( month, year ) );
+			var expiry = card_expiry.payment( 'cardExpiryVal' );
+
+			give_form.find( '.card-expiry-month' ).val( expiry.month );
+			give_form.find( '.card-expiry-year' ).val( expiry.year );
 		}
 	} );
 
-	// format the currency with accounting.js
-	function give_format_currency( price ){
-	    return accounting.formatMoney( price, {
-	    	symbol : "",
-	        decimal : give_global_vars.decimal_separator,
-		    thousand: give_global_vars.thousands_separator,
-		    precision : give_global_vars.number_decimals,
-	    }).trim();
+	/**
+	 * Format Currency
+	 *
+	 * @description format the currency with accounting.js
+	 * @param price
+	 * @returns {*|string}
+	 */
+	function give_format_currency( price ) {
+		return accounting.formatMoney( price, {
+			symbol   : '',
+			decimal  : give_global_vars.decimal_separator,
+			thousand : give_global_vars.thousands_separator,
+			precision: give_global_vars.number_decimals
+		} ).trim();
 	}
 
-	function give_unformat_currency( price ){
+	/**
+	 * Unformat Currency
+	 * @param price
+	 * @returns {number}
+	 */
+	function give_unformat_currency( price ) {
 		return Math.abs( parseFloat( accounting.unformat( price, give_global_vars.decimal_separator ) ) );
 	}
 
@@ -149,7 +202,9 @@ jQuery( function ( $ ) {
 		$( '#give-payment-mode-select input:checked' ).parent().addClass( 'give-gateway-option-selected' );
 	} );
 
-	//Custom Donation Amount - If user focuses on field & changes value then updates price
+	/**
+	 * Custom Donation Amount - If user focuses on field & changes value then updates price
+	 */
 	doc.on( 'focus', '.give-donation-amount .give-text-input', function ( e ) {
 
 		var parent_form = $( this ).parents( 'form' );
@@ -170,7 +225,9 @@ jQuery( function ( $ ) {
 		parent_form.find( '.give-select-level .give-donation-level-custom' ).prop( 'selected', true ); //Select
 	} );
 
-	//Custom Donation (fires on focus end aka "blur")
+	/**
+	 * Custom Donation (fires on focus end aka "blur")
+	 */
 	doc.on( 'blur', '.give-donation-amount .give-text-input', function ( e ) {
 
 		var pre_focus_amount = $( this ).data( 'amount' );
@@ -178,7 +235,7 @@ jQuery( function ( $ ) {
 		var value_now = give_unformat_currency( $( this ).val() );
 		var formatted_total = give_format_currency( value_now );
 
-		$(this).val( formatted_total );
+		$( this ).val( formatted_total );
 
 		//Does this number have a value?
 		if ( !$.isNumeric( value_now ) || value_now <= 0 ) {
@@ -215,7 +272,13 @@ jQuery( function ( $ ) {
 		update_multiselect_vals( $( this ) );
 	} );
 
-	//Helper function: Sets the multiselect amount values
+	/**
+	 * Update Multiselect Vals
+	 * @description Helper function: Sets the multiselect amount values
+	 *
+	 * @param selected_field
+	 * @returns {boolean}
+	 */
 	function update_multiselect_vals( selected_field ) {
 
 		var parent_form = selected_field.parents( 'form' );
@@ -258,5 +321,70 @@ jQuery( function ( $ ) {
 		}
 		parent_form.find( '.give-final-total-amount' ).data( 'total', this_amount ).text( formatted_total );
 	}
+
+	/**
+	 * Donor sent back to the form
+	 */
+	function sent_back_to_form() {
+
+		var form_id = $.getQuery( 'form-id' );
+		var payment_mode = $.getQuery( 'payment-mode' );
+
+		//Sanitch check - only proceed if query strings in place
+		if ( !form_id || !payment_mode ) {
+			return false;
+		}
+
+		var form_wrap = $( 'body' ).find( '#give-form-' + form_id + '-wrap' );
+		var form = form_wrap.find( 'form.give-form' );
+		var display_modal = form_wrap.hasClass( 'give-display-modal' );
+		var display_reveal = form_wrap.hasClass( 'give-display-reveal' );
+
+		//Update payment mode radio so it's correctly checked
+		form.find( '#give-gateway-radio-list label' ).removeClass( 'give-gateway-option-selected' );
+		form.find( 'input[name=payment-mode][value=' + payment_mode + ']' ).prop( 'checked', true ).parent().addClass( 'give-gateway-option-selected' );
+
+		//This form is modal display so show the modal
+		if ( display_modal ) {
+
+			//@TODO: Make this DRYer - repeated in give.js
+			$.magnificPopup.open( {
+				mainClass: 'give-modal',
+				items    : {
+					src : form,
+					type: 'inline'
+				},
+				callbacks: {
+					open : function () {
+						// Will fire when this exact popup is opened
+						// this - is Magnific Popup object
+						if ( $( '.mfp-content' ).outerWidth() >= 500 ) {
+							$( '.mfp-content' ).addClass( 'give-responsive-mfp-content' );
+						}
+						//Hide all form elements besides the ones required for payment
+						//form.children().not( '#give_purchase_form_wrap, #give-payment-mode-select, .mfp-close, .give_error' ).hide();
+
+					},
+					close: function () {
+						//Remove popup class
+						form.removeClass( 'mfp-hide' );
+						//Show all fields again
+						//form.children().not( '#give_purchase_form_wrap, #give-payment-mode-select, .mfp-close, .give_error' ).show();
+					}
+				}
+			} );
+		}
+		//This is a reveal form, show it
+		else if ( display_reveal ) {
+
+
+			form.find( '.give-btn-reveal' ).hide();
+			form.find( '#give-payment-mode-select, #give_purchase_form_wrap' ).slideDown();
+
+		}
+
+
+	}
+
 
 } );

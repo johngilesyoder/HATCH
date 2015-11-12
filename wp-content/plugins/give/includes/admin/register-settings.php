@@ -56,6 +56,10 @@ class Give_Plugin_Settings {
 		add_action( 'cmb2_render_system_info', 'give_system_info_callback', 10, 5 );
 		add_action( 'cmb2_render_api', 'give_api_callback', 10, 5 );
 		add_action( 'cmb2_render_license_key', 'give_license_key_callback', 10, 5 );
+		add_action( "cmb2_save_options-page_fields", array( $this, 'settings_notices' ), 10, 3 );
+
+		// Include CMB CSS in the head to avoid FOUC
+		add_action( "admin_print_styles-give_forms_page_give-settings", array( 'CMB2_hookup', 'enqueue_cmb_css' ) );
 
 	}
 
@@ -65,6 +69,7 @@ class Give_Plugin_Settings {
 	 */
 	public function init() {
 		register_setting( $this->key, $this->key );
+
 	}
 
 
@@ -308,7 +313,7 @@ class Give_Plugin_Settings {
 							'type' => 'text',
 						),
 						array(
-							'name'    => __( 'PayPal ', 'give' ),
+							'name'    => __( 'PayPal Transaction Type', 'give' ),
 							'desc'    => __( 'Nonprofits must verify their status to withdraw donations they receive via PayPal. PayPal users that are not verified nonprofits must demonstrate how their donations will be used, once they raise more than $10,000. By default, Give transactions are sent to PayPal as donations. You may change the transaction type using this option if you feel you may not meet PayPal\'s donation requirements.', 'give' ),
 							'id'      => 'paypal_button_type',
 							'type'    => 'radio_inline',
@@ -385,6 +390,12 @@ class Give_Plugin_Settings {
 							'type' => 'checkbox'
 						),
 						array(
+							'name' => __( 'Enable Floating Labels', 'give' ),
+							'desc' => sprintf( __( 'Enable this option if you would like to enable <a href="%s" target="_blank">floating labels</a> in Give\'s donation forms.<br>Be aware that if you have the "Disable CSS" option enabled, you will need to style the floating labels yourself.', 'give' ), esc_url( "http://bradfrost.com/blog/post/float-label-pattern/" ) ),
+							'id'   => 'enable_floatlabels',
+							'type' => 'checkbox'
+						),
+						array(
 							'name' => __( 'Disable Welcome Screen', 'give' ),
 							'desc' => sprintf( __( 'Enable this option if you would like to disable the Give Welcome screen every time Give is activated and/or updated. You can always access the Welcome Screen <a href="%s">here</a> if you want in the future.', 'give' ), esc_url( admin_url( 'index.php?page=give-about' ) ) ),
 							'id'   => 'disable_welcome',
@@ -418,6 +429,12 @@ class Give_Plugin_Settings {
 							'name' => __( 'Disable Form Featured Image', 'give' ),
 							'desc' => __( 'The Featured Image is an image that is chosen as the representative image for donation form. The display of this image is largely up to the theme. If you do not wish to use the featured image you can disable it using this option.', 'give' ),
 							'id'   => 'disable_form_featured_img',
+							'type' => 'checkbox'
+						),
+						array(
+							'name' => __( 'Disable Single Form Sidebar', 'give' ),
+							'desc' => __( 'The sidebar allows you to add additional widget to the Give single form view. If you don\'t plan on using the sidebar you may disable it with this option.', 'give' ),
+							'id'   => 'disable_form_sidebar',
 							'type' => 'checkbox'
 						),
 						array(
@@ -526,7 +543,7 @@ class Give_Plugin_Settings {
 						array(
 							'id'      => 'admin_notice_emails',
 							'name'    => __( 'Donation Notification Emails', 'give' ),
-							'desc'    => __( 'Enter the email address(es) that should receive a notification anytime a donation is made, one per line', 'give' ),
+							'desc'    => sprintf(__( 'Enter the email address(es) that should receive a notification anytime a donation is made, please only enter %1$sone email address per line%2$s and not separated by commas.', 'give' ), '<span class="give-underline">', '</span>'),
 							'type'    => 'textarea',
 							'default' => get_bloginfo( 'admin_email' )
 						),
@@ -603,6 +620,18 @@ class Give_Plugin_Settings {
 							'id'   => 'disable_the_content_filter',
 							'type' => 'checkbox'
 						),
+						array(
+							'name' => __( 'Script Loading', 'give' ),
+							'desc' => '<hr>',
+							'id'   => 'give_title_script_control',
+							'type' => 'give_title'
+						),
+						array(
+							'name' => __( 'Load Scripts in Footer?', 'give' ),
+							'desc' => __( 'Check this box if you would like Give to load all frontend JavaScript files in the footer.', 'give' ),
+							'id'   => 'scripts_footer',
+							'type' => 'checkbox'
+						)
 					)
 				)
 			),
@@ -645,6 +674,28 @@ class Give_Plugin_Settings {
 
 		// Add other tabs and settings fields as needed
 		return apply_filters( 'give_registered_settings', $give_settings[ $active_tab ] );
+
+	}
+
+	/**
+	 * Show Settings Notices
+	 *
+	 * @param $object_id
+	 * @param $updated
+	 * @param $cmb
+	 */
+	public function settings_notices( $object_id, $updated, $cmb ) {
+
+		//Sanity check
+		if ( $object_id !== $this->key ) {
+			return;
+		}
+
+		if ( did_action( 'cmb2_save_options-page_fields' ) === 1 ) {
+			settings_errors( 'give-notices' );
+		}
+
+		add_settings_error( 'give-notices', 'global-settings-updated', __( 'Settings updated.', 'give' ), 'updated' );
 
 	}
 
@@ -735,7 +786,6 @@ function give_update_option( $key = '', $value = false ) {
 	if ( $did_update ) {
 		global $give_options;
 		$give_options[ $key ] = $value;
-
 	}
 
 	return $did_update;
@@ -973,19 +1023,23 @@ if ( ! function_exists( 'give_license_key_callback' ) ) {
 		$field_description = $field_type_object->field->args['desc'];
 		$license_status    = get_option( $field_type_object->field->args['options']['is_valid_license_option'] );
 		$field_classes     = 'regular-text give-license-field';
+		$type              = empty( $escaped_value ) ? 'text' : 'password';
 
 		if ( $license_status === 'valid' ) {
 			$field_classes .= ' give-license-active';
 		}
 
-		$html = $field_type_object->input(
-			array(
-				'class' => $field_classes,
-				'type'  => 'text'
-			) );
+		$html = $field_type_object->input( array(
+			'class' => $field_classes,
+			'type'  => $type
+		) );
 
+		//License is active so show deactivate button
 		if ( $license_status === 'valid' ) {
 			$html .= '<input type="submit" class="button-secondary give-license-deactivate" name="' . $id . '_deactivate" value="' . __( 'Deactivate License', 'give' ) . '"/>';
+		} else {
+			//This license is not valid so delete it
+			give_delete_option( $id );
 		}
 
 		$html .= '<label for="give_settings[' . $id . ']"> ' . $field_description . '</label>';
@@ -1055,11 +1109,13 @@ function give_hook_callback( $args ) {
 /**
  * Get the CMB2 bootstrap!
  *
- * Super important!
+ * @description: Checks to see if CMB2 plugin is installed first the uses included CMB2; we can still use it even it it's not active. This prevents fatal error conflicts with other themes and users of the CMB2 WP.org plugin
+ *
  */
-if ( file_exists( GIVE_PLUGIN_DIR . '/includes/libraries/cmb2/init.php' ) ) {
+if ( file_exists( WP_PLUGIN_DIR . '/cmb2/init.php' ) ) {
+	require_once WP_PLUGIN_DIR . '/cmb2/init.php';
+} elseif ( file_exists( GIVE_PLUGIN_DIR . '/includes/libraries/cmb2/init.php' ) ) {
 	require_once GIVE_PLUGIN_DIR . '/includes/libraries/cmb2/init.php';
 } elseif ( file_exists( GIVE_PLUGIN_DIR . '/includes/libraries/CMB2/init.php' ) ) {
 	require_once GIVE_PLUGIN_DIR . '/includes/libraries/CMB2/init.php';
 }
-

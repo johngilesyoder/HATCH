@@ -512,12 +512,13 @@ class GFStripe extends GFPaymentAddOn {
 
 	# FRONTEND
 
-	public function init_frontend() {
+	public function init() {
 
 		add_filter( 'gform_register_init_scripts', array( $this, 'register_init_scripts' ), 10, 3 );
 		add_filter( 'gform_field_content', array( $this, 'add_stripe_inputs' ), 10, 5 );
+		add_filter( 'gform_pre_validation', array( $this, 'pre_validation' ), 20 );
 
-		parent::init_frontend();
+		parent::init();
 
 	}
 
@@ -588,49 +589,29 @@ class GFStripe extends GFPaymentAddOn {
 
 	# VALIDATION
 
-	public function validation( $validation_result ) {
-
-		if ( ! $this->has_feed( $validation_result['form']['id'], true ) ) {
-			return $validation_result;
+	/**
+	 * Make sure credit card field is not marked as required.
+	 * Stripe will erase some of the card field inputs; if the field is marked as required it would fail standard validation.
+	 *
+	 * @param array $form The Form Object currently being processed.
+	 *
+	 * @return array $form
+	 */
+	public function pre_validation( $form ) {
+		if ( ! $this->has_feed( $form['id'] ) ) {
+			return $form;
 		}
 
-		$current_page = GFFormDisplay::get_source_page( $validation_result['form']['id'] );
-
-		foreach ( $validation_result['form']['fields'] as &$field ) {
-
-			$field_on_current_page = $current_page > 0 && $field->pageNumber == $current_page;
-
-			if ( $field->get_input_type() != 'creditcard' || ! $field_on_current_page ) {
+		foreach ( $form['fields'] as &$field ) {
+			if ( $field->type != 'creditcard' ) {
 				continue;
 			}
 
-			if ( $this->get_stripe_js_error() && $this->has_payment( $validation_result ) ) {
-
-				$field->failed_validation  = true;
-				$field->validation_message = $this->get_stripe_js_error();
-
-			} else {
-
-				// override validation in case user has marked field as required allowing stripe to handle cc validation
-				$field->failed_validation = false;
-
-			}
-
-			// only one cc field per form, break once we've found it
+			$field->isRequired = false;
 			break;
 		}
 
-		// re-validate the validation result
-		$validation_result['is_valid'] = true;
-
-		foreach ( $validation_result['form']['fields'] as &$field ) {
-			if ( $field->failed_validation ) {
-				$validation_result['is_valid'] = false;
-				break;
-			}
-		}
-
-		return parent::validation( $validation_result );
+		return $form;
 	}
 
 	public function validate_custom_meta( $field ) {
@@ -662,22 +643,6 @@ class GFStripe extends GFPaymentAddOn {
 				break;
 			}
 		}
-	}
-
-	public function has_payment( $validation_result ) {
-
-		$form  = $validation_result['form'];
-		$entry = GFFormsModel::create_lead( $form );
-		$feed  = $this->get_payment_feed( $entry, $form );
-
-		if ( ! $feed ) {
-			return false;
-		}
-
-		$submission_data = $this->get_submission_data( $feed, $form, $entry );
-
-		//Do not process payment if payment amount is 0 or less
-		return floatval( $submission_data['payment_amount'] ) > 0;
 	}
 
 	public function authorize( $feed, $submission_data, $form, $entry ) {

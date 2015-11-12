@@ -51,7 +51,8 @@ function give_setup_post_types() {
 		'not_found'          => __( 'No %2$s found', 'give' ),
 		'not_found_in_trash' => __( 'No %2$s found in Trash', 'give' ),
 		'parent_item_colon'  => '',
-		'menu_name'          => apply_filters( 'give_menu_name', __( 'Donations', 'give' ) )
+		'menu_name'          => apply_filters( 'give_menu_name', __( 'Donations', 'give' ) ),
+		'name_admin_bar'     => apply_filters( 'give_name_admin_bar_name', __( 'Donation Form', 'give' ) )
 	) );
 
 	foreach ( $give_forms_labels as $key => $value ) {
@@ -89,7 +90,7 @@ function give_setup_post_types() {
 		'map_meta_cap'       => true,
 		'capability_type'    => 'give_forms',
 		'has_archive'        => $give_forms_archives,
-		'menu_icon'          => give_svg_icons( 'give_cpt_icon' ),
+		'menu_icon'          => 'dashicons-give',
 		'hierarchical'       => false,
 		'supports'           => apply_filters( 'give_forms_supports', $give_form_supports ),
 	);
@@ -508,7 +509,7 @@ function give_add_image_sizes() {
 function give_widgets_init() {
 
 	//Single Give Forms (disabled if single turned off in settings)
-	if ( give_get_option( 'disable_forms_singular' ) !== 'on' ) {
+	if ( give_get_option( 'disable_forms_singular' ) !== 'on' && give_get_option( 'disable_form_sidebar' ) !== 'on' ) {
 
 		register_sidebar( apply_filters( 'give_forms_single_sidebar', array(
 			'name'          => __( 'Give Single Form Sidebar', 'give' ),

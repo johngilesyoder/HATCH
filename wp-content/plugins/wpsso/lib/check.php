@@ -21,7 +21,7 @@ if ( ! class_exists( 'WpssoCheck' ) ) {
 				'seou' => 'SEO Ultimate',
 			),
 			'util' => array(
-				'um' => 'Update Manager',
+				'um' => 'Pro Update Manager',
 			),
 		);
 
@@ -36,43 +36,20 @@ if ( ! class_exists( 'WpssoCheck' ) ) {
 
 			if ( ! is_admin() ) {
 				// disable jetPack open graph meta tags
-				if ( class_exists( 'JetPack' ) || isset( $this->active_plugins['jetpack/jetpack.php'] ) ) {
+				if ( class_exists( 'JetPack' ) || 
+					isset( $this->active_plugins['jetpack/jetpack.php'] ) ) {
 					add_filter( 'jetpack_enable_opengraph', '__return_false', 99 );
 					add_filter( 'jetpack_enable_open_graph', '__return_false', 99 );
 					add_filter( 'jetpack_disable_twitter_cards', '__return_true', 99 );
 				}
 	
-				// disable Yoast SEO opengraph, twitter, publisher, and author meta tags
-				if ( function_exists( 'wpseo_init' ) || isset( $this->active_plugins['wordpress-seo/wp-seo.php'] ) ) {
-					global $wpseo_og;
-					if ( is_object( $wpseo_og ) && 
-						( $prio = has_action( 'wpseo_head', array( $wpseo_og, 'opengraph' ) ) ) ) {
-							$ret = remove_action( 'wpseo_head', array( $wpseo_og, 'opengraph' ), $prio );
-					}
-					global $wpseo_twitter;
-					if ( is_object( $wpseo_twitter ) && 
-						( $prio = has_action( 'wpseo_head', array( $wpseo_twitter, 'twitter' ) ) ) ) {
-							$ret = remove_action( 'wpseo_head', array( $wpseo_twitter, 'twitter' ), $prio );
-					}
-					if ( ! empty( $this->p->options['seo_publisher_url'] ) ) {
-						global $wpseo_front;
-						if ( is_object( $wpseo_front ) && 
-							( $prio = has_action( 'wpseo_head', array( $wpseo_front, 'publisher' ) ) ) )
-								$ret = remove_action( 'wpseo_head', array( $wpseo_front, 'publisher' ), $prio );
-					}
-					if ( ! empty( $this->p->options['seo_def_author_id'] ) &&
-						! empty( $this->p->options['seo_def_author_on_index'] ) ) {
-						global $wpseo_front;
-						if ( is_object( $wpseo_front ) && 
-							( $prio = has_action( 'wpseo_head', array( $wpseo_front, 'author' ) ) ) )
-								$ret = remove_action( 'wpseo_head', array( $wpseo_front, 'author' ), $prio );
-					}
-					if ( ! empty( $this->p->options['schema_website_json'] ) ) {
-						add_filter( 'wpseo_json_ld_output', '__return_empty_array', 99 );
-					}
-				}
+				// disable Yoast SEO social meta tags
+				if ( function_exists( 'wpseo_init' ) || 
+					isset( $this->active_plugins['wordpress-seo/wp-seo.php'] ) )
+						add_action( 'template_redirect', array( $this, 'cleanup_wpseo_filters' ), 9999 );
 
-				if ( class_exists( 'Ngfb' ) || isset( $this->active_plugins['nextgen-facebook/nextgen-facebook.php'] ) ) {
+				if ( class_exists( 'Ngfb' ) || 
+					isset( $this->active_plugins['nextgen-facebook/nextgen-facebook.php'] ) ) {
 					if ( ! defined( 'NGFB_META_TAGS_DISABLE' ) )
 						define( 'NGFB_META_TAGS_DISABLE', true );
 				}
@@ -80,31 +57,53 @@ if ( ! class_exists( 'WpssoCheck' ) ) {
 			do_action( $this->p->cf['lca'].'_init_check', $this->active_plugins );
 		}
 
+		public function cleanup_wpseo_filters() {
+
+			if ( isset( $GLOBALS['wpseo_og'] ) && is_object( $GLOBALS['wpseo_og'] ) && 
+				( $prio = has_action( 'wpseo_head', array( $GLOBALS['wpseo_og'], 'opengraph' ) ) ) !== false )
+					$ret = remove_action( 'wpseo_head', array( $GLOBALS['wpseo_og'], 'opengraph' ), $prio );
+
+			if ( class_exists( 'WPSEO_Twitter' ) &&
+				( $prio = has_action( 'wpseo_head', array( 'WPSEO_Twitter', 'get_instance' ) ) ) !== false )
+					$ret = remove_action( 'wpseo_head', array( 'WPSEO_Twitter', 'get_instance' ), $prio );
+
+			if ( class_exists( 'WPSEO_GooglePlus' ) && 
+				( $prio = has_action( 'wpseo_head', array( 'WPSEO_GooglePlus', 'get_instance' ) ) ) !== false )
+					$ret = remove_action( 'wpseo_head', array( 'WPSEO_GooglePlus', 'get_instance' ), $prio );
+
+			if ( ! empty( $this->p->options['seo_publisher_url'] ) && isset( WPSEO_Frontend::$instance ) &&
+				 ( $prio = has_action( 'wpseo_head', array( WPSEO_Frontend::$instance, 'publisher' ) ) ) )
+					$ret = remove_action( 'wpseo_head', array( WPSEO_Frontend::$instance, 'publisher' ), $prio );
+
+			if ( ! empty( $this->p->options['schema_website_json'] ) )
+				add_filter( 'wpseo_json_ld_output', '__return_empty_array', 99 );
+		}
+
 		private function get_avail_check( $key ) {
 			switch ( $key ) {
 				case 'aop':
-					return ( ! defined( 'WPSSO_PRO_MODULE_DISABLE' ) ||
-					( defined( 'WPSSO_PRO_MODULE_DISABLE' ) && ! WPSSO_PRO_MODULE_DISABLE ) ) &&
+					$ret = ! SucomUtil::get_const( 'WPSSO_PRO_MODULE_DISABLE' ) &&
 					is_dir( WPSSO_PLUGINDIR.'lib/pro/' ) ? true : false;
 					break;
 				case 'mt':
-				case 'metatags':
-					return ( ! defined( 'WPSSO_META_TAGS_DISABLE' ) || 
-					( defined( 'WPSSO_META_TAGS_DISABLE' ) && ! WPSSO_META_TAGS_DISABLE ) ) &&
+					$ret = ! SucomUtil::get_const( 'WPSSO_META_TAGS_DISABLE' ) &&
 					empty( $_SERVER['WPSSO_META_TAGS_DISABLE'] ) &&
 					empty( $_GET['WPSSO_META_TAGS_DISABLE'] ) ? true : false;	// allow meta tags to be disabled with query argument
 					break;
 				default:
-					return false;
+					$ret = false;
 					break;
 			}
+			return $ret;
 		}
 
 		public function get_avail() {
 			$ret = array();
+			$is_admin = is_admin();
 
 			$ret['curl'] = function_exists( 'curl_init' ) ? true : false;
 			$ret['postthumb'] = function_exists( 'has_post_thumbnail' ) ? true : false;
+
 			foreach ( array( 'aop', 'mt' ) as $key )
 				$ret[$key] = $this->get_avail_check( $key );
 
@@ -200,10 +199,19 @@ if ( ! class_exists( 'WpssoCheck' ) ) {
 							break;
 						case 'admin-general':
 						case 'admin-advanced':
-						case 'admin-image-dimensions':
+							// only load on the settings pages
+							if ( $is_admin ) {
+								$page = basename( $_SERVER['PHP_SELF'] );
+								if ( $page === 'admin.php' || $page === 'options-general.php' )
+									$ret[$sub]['*'] = $ret[$sub][$id] = true;
+							}
+							break;
 						case 'admin-post':
 						case 'admin-taxonomy':
 						case 'admin-user':
+							if ( $is_admin )
+								$ret[$sub]['*'] = $ret[$sub][$id] = true;
+							break;
 						case 'util-post':
 						case 'util-taxonomy':
 						case 'util-user':
@@ -256,17 +264,27 @@ if ( ! class_exists( 'WpssoCheck' ) ) {
 			return $this->aop( $lca, true, $this->get_avail_check( 'aop' ) );
 		}
 
-		public function aop( $lca = '', $li = true, $rv = true ) {
+		public function aop( $lca = '', $lic = true, $rv = true ) {
 			$lca = empty( $lca ) ? 
 				$this->p->cf['lca'] : $lca;
-			$kn = $lca.'-'.$li.'-'.$rv;
+			$kn = $lca.'-'.$lic.'-'.$rv;
 			if ( isset( self::$c[$kn] ) )
 				return self::$c[$kn];
-			$on = 'plugin_'.$lca.'_tid';
 			$uca = strtoupper( $lca );
-			$ins = ( defined( $uca.'_PLUGINDIR' ) &&
-				is_dir( constant( $uca.'_PLUGINDIR' ).'lib/pro/' ) ) ? $rv : false;
-			return self::$c[$kn] = $li === true ? 
+			if ( defined( $uca.'_PLUGINDIR' ) )
+				$pdir = constant( $uca.'_PLUGINDIR' );
+			elseif ( isset( $this->p->cf['plugin'][$lca]['slug'] ) ) {
+				$slug = $this->p->cf['plugin'][$lca]['slug'];
+				if ( ! defined ( 'WPMU_PLUGIN_DIR' ) || 
+					! is_dir( $pdir = WPMU_PLUGIN_DIR.'/'.$slug.'/' ) ) {
+					if ( ! defined ( 'WP_PLUGIN_DIR' ) || 
+						! is_dir( $pdir = WP_PLUGIN_DIR.'/'.$slug.'/' ) )
+							return self::$c[$kn] = false;
+				}
+			} else return self::$c[$kn] = false;
+			$on = 'plugin_'.$lca.'_tid';
+			$ins = is_dir( $pdir.'lib/pro/' ) ? $rv : false;
+			return self::$c[$kn] = $lic === true ? 
 				( ( ! empty( $this->p->options[$on] ) && 
 					$ins && class_exists( 'SucomUpdate' ) &&
 						( $um = SucomUpdate::get_umsg( $lca ) ? 

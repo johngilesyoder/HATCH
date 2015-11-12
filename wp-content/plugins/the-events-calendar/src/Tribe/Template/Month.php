@@ -620,7 +620,7 @@ if ( ! class_exists( 'Tribe__Events__Template__Month' ) ) {
 					'end_date'               => $end_of_day,
 					'update_post_term_cache' => false,
 					'update_post_meta_cache' => false,
-					'no_found_rows'          => true,
+					'no_found_rows'          => false,
 					'orderby'                => 'menu_order',
 				), $this->args
 			);
@@ -628,11 +628,7 @@ if ( ! class_exists( 'Tribe__Events__Template__Month' ) ) {
 			// we don't need this join since we already checked it
 			unset ( $args[ Tribe__Events__Main::TAXONOMY ] );
 
-			$result = tribe_get_events( $args, true );
-
-			$result->found_posts = count( $event_ids_on_date );
-
-			return $result;
+			return tribe_get_events( $args, true );
 		}
 
 		/**
@@ -866,12 +862,11 @@ if ( ! class_exists( 'Tribe__Events__Template__Month' ) ) {
 		}
 
 		/**
-		 * Generates and returns a set of classes for the current day
+		 * Generates and returns a set of classes for the current day.
 		 *
-		 * @return string Classes
+		 * @return string
 		 */
 		public static function day_classes() {
-
 			$calendar_day           = self::get_current_day();
 			$calendar_day_timestamp = strtotime( $calendar_day['date'] );
 			$today                  = strtotime( current_time( 'Y-m-d' ) );
@@ -886,7 +881,7 @@ if ( ! class_exists( 'Tribe__Events__Template__Month' ) ) {
 			// Check if the calendar day is in the past, present, or future
 			if ( $calendar_day_timestamp < $today ) {
 				$classes .= ' tribe-events-past';
-			} elseif ( $calendar_day_timestamp == $today ) {
+			} elseif ( $calendar_day_timestamp === $today ) {
 				$classes .= ' tribe-events-present';
 			} elseif ( $calendar_day_timestamp > $today ) {
 				$classes .= ' tribe-events-future';
@@ -898,7 +893,8 @@ if ( ! class_exists( 'Tribe__Events__Template__Month' ) ) {
 			}
 
 			// Needed for mobile js
-			$classes .= ' mobile-trigger tribe-event-day-' . date_i18n( 'd', $calendar_day_timestamp );
+			$day_num  = str_pad( $calendar_day['daynum'], 2, '0', STR_PAD_LEFT );
+			$classes .= ' mobile-trigger tribe-event-day-' . $day_num;
 
 			// Determine which column of the grid the day is in
 			$column = ( self::$current_day ) - ( self::$current_week * 7 );

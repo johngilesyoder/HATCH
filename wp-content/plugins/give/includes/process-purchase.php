@@ -25,6 +25,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function give_process_purchase_form() {
 
+	do_action( 'give_pre_process_purchase' );
+
 	// Validate the form $_POST data
 	$valid_data = give_purchase_form_validate_fields();
 
@@ -84,7 +86,7 @@ function give_process_purchase_form() {
 	// Allow themes and plugins to hook before the gateway
 	do_action( 'give_checkout_before_gateway', $_POST, $user_info, $valid_data );
 
-	// If the total amount in the cart is 0, send to the manual gateway. This emulates a free purchase
+
 	if ( ! $purchase_data['price'] ) {
 		// Revert to manual
 		$purchase_data['gateway'] = 'manual';
@@ -164,6 +166,9 @@ function give_purchase_form_validate_fields() {
 	if ( empty( $_POST ) ) {
 		return false;
 	}
+
+	$form_id = isset( $_POST['give-form-id'] ) ? $_POST['give-form-id'] : '';
+
 	// Start an array to collect valid data
 	$valid_data = array(
 		'gateway'          => give_purchase_form_validate_gateway(), // Gateway fallback
@@ -177,10 +182,13 @@ function give_purchase_form_validate_fields() {
 	);
 
 	// Validate agree to terms
-	$terms_option = get_post_meta( $_POST['give-form-id'], '_give_terms_option', true );
+	$terms_option = get_post_meta( $form_id, '_give_terms_option', true );
 	if ( isset( $terms_option ) && $terms_option === 'yes' ) {
 		give_purchase_form_validate_agree_to_terms();
 	}
+
+	//Validate amount is more than 0
+
 
 	if ( is_user_logged_in() ) {
 		// Collect logged in user data
@@ -221,11 +229,18 @@ function give_purchase_form_validate_gateway() {
 
 		$gateway = sanitize_text_field( $_REQUEST['give-gateway'] );
 
-		if ( '0.00' == $_REQUEST['give-amount'] ) {
+		//Is amount being donated in LIVE mode above 0.00?
+		if ( '0.00' == $_REQUEST['give-amount'] && ! give_is_test_mode() ) {
+
+			give_set_error( 'invalid_donation_amount', __( 'Please insert a valid donation amount.', 'give' ) );
+
+		} //Is this test mode zero donation? Let it through but set to manual gateway
+		elseif ( '0.00' == $_REQUEST['give-amount'] && give_is_test_mode() ) {
 
 			$gateway = 'manual';
 
-		} elseif ( ! give_is_gateway_active( $gateway ) ) {
+		} //Check if this gateway is active
+		elseif ( ! give_is_gateway_active( $gateway ) ) {
 
 			give_set_error( 'invalid_gateway', __( 'The selected payment gateway is not enabled', 'give' ) );
 
@@ -257,9 +272,15 @@ function give_purchase_form_validate_agree_to_terms() {
  *
  * @access      private
  * @since       1.0
+ *
+ * @param       $form_id
+ *
  * @return      array
  */
-function give_purchase_form_required_fields() {
+function give_purchase_form_required_fields( $form_id ) {
+
+	$payment_mode = give_get_chosen_gateway( $form_id );
+
 	$required_fields = array(
 		'give_email' => array(
 			'error_id'      => 'invalid_email',
@@ -271,10 +292,13 @@ function give_purchase_form_required_fields() {
 		)
 	);
 
-	// Let payment gateways and other extensions determine if address fields should be required
-	$require_address = apply_filters( 'give_require_billing_address', true );
+	$require_address = give_require_billing_address( $payment_mode );
 
 	if ( $require_address ) {
+		$required_fields['card_address']    = array(
+			'error_id'      => 'invalid_card_address',
+			'error_message' => __( 'Please enter your primary billing address', 'give' )
+		);
 		$required_fields['card_zip']        = array(
 			'error_id'      => 'invalid_zip_code',
 			'error_message' => __( 'Please enter your zip / postal code', 'give' )
@@ -293,7 +317,29 @@ function give_purchase_form_required_fields() {
 		);
 	}
 
-	return apply_filters( 'give_purchase_form_required_fields', $required_fields );
+	return apply_filters( 'give_purchase_form_required_fields', $required_fields, $form_id );
+
+}
+
+/**
+ * Check if the Billing Address is required
+ *
+ * @since  1.0.1
+ *
+ * @param $payment_mode
+ *
+ * @return mixed|void
+ */
+function give_require_billing_address( $payment_mode ) {
+
+	$return = false;
+
+	if ( isset( $_POST['billing_country'] ) || did_action( "give_{$payment_mode}_cc_form" ) || did_action( 'give_cc_form' ) ) {
+		$return = true;
+	}
+
+	// Let payment gateways and other extensions determine if address fields should be required
+	return apply_filters( 'give_require_billing_address', $return );
 
 }
 
@@ -307,6 +353,8 @@ function give_purchase_form_required_fields() {
 function give_purchase_form_validate_logged_in_user() {
 	global $user_ID;
 
+	$form_id = isset( $_POST['give-form-id'] ) ? $_POST['give-form-id'] : '';
+
 	// Start empty array to collect valid user data
 	$valid_user_data = array(
 		// Assume there will be errors
@@ -319,8 +367,8 @@ function give_purchase_form_validate_logged_in_user() {
 		$user_data = get_userdata( $user_ID );
 
 		// Loop through required fields and show error messages
-		foreach ( give_purchase_form_required_fields() as $field_name => $value ) {
-			if ( in_array( $value, give_purchase_form_required_fields() ) && empty( $_POST[ $field_name ] ) ) {
+		foreach ( give_purchase_form_required_fields( $form_id ) as $field_name => $value ) {
+			if ( in_array( $value, give_purchase_form_required_fields( $form_id ) ) && empty( $_POST[ $field_name ] ) ) {
 				give_set_error( $value['error_id'], $value['error_message'] );
 			}
 		}
@@ -359,25 +407,27 @@ function give_purchase_form_validate_logged_in_user() {
 function give_purchase_form_validate_new_user() {
 	$registering_new_user = false;
 
+	$form_id = isset( $_POST['give-form-id'] ) ? $_POST['give-form-id'] : '';
+
 	// Start an empty array to collect valid user data
 	$valid_user_data = array(
 		// Assume there will be errors
 		'user_id'    => - 1,
 		// Get first name
-		'user_first' => isset( $_POST["give_first"] ) ? sanitize_text_field( $_POST["give_first"] ) : '',
+		'user_first' => isset( $_POST['give_first'] ) ? sanitize_text_field( $_POST['give_first'] ) : '',
 		// Get last name
-		'user_last'  => isset( $_POST["give_last"] ) ? sanitize_text_field( $_POST["give_last"] ) : '',
+		'user_last'  => isset( $_POST['give_last'] ) ? sanitize_text_field( $_POST['give_last'] ) : '',
 	);
 
 	// Check the new user's credentials against existing ones
-	$user_login   = isset( $_POST["give_user_login"] ) ? trim( $_POST["give_user_login"] ) : false;
+	$user_login   = isset( $_POST['give_user_login'] ) ? trim( $_POST['give_user_login'] ) : false;
 	$user_email   = isset( $_POST['give_email'] ) ? trim( $_POST['give_email'] ) : false;
-	$user_pass    = isset( $_POST["give_user_pass"] ) ? trim( $_POST["give_user_pass"] ) : false;
-	$pass_confirm = isset( $_POST["give_user_pass_confirm"] ) ? trim( $_POST["give_user_pass_confirm"] ) : false;
+	$user_pass    = isset( $_POST['give_user_pass'] ) ? trim( $_POST['give_user_pass'] ) : false;
+	$pass_confirm = isset( $_POST['give_user_pass_confirm'] ) ? trim( $_POST['give_user_pass_confirm'] ) : false;
 
 	// Loop through required fields and show error messages
-	foreach ( give_purchase_form_required_fields() as $field_name => $value ) {
-		if ( in_array( $value, give_purchase_form_required_fields() ) && empty( $_POST[ $field_name ] ) ) {
+	foreach ( give_purchase_form_required_fields( $form_id ) as $field_name => $value ) {
+		if ( in_array( $value, give_purchase_form_required_fields( $form_id ) ) && empty( $_POST[ $field_name ] ) ) {
 			give_set_error( $value['error_id'], $value['error_message'] );
 		}
 	}
@@ -403,7 +453,7 @@ function give_purchase_form_validate_new_user() {
 			$valid_user_data['user_login'] = $user_login;
 		}
 	} else {
-		if ( give_no_guest_checkout( $_POST['give-form-id'] ) ) {
+		if ( give_no_guest_checkout( $form_id ) ) {
 			give_set_error( 'registration_required', __( 'You must register or login to complete your donation', 'give' ) );
 		}
 	}
@@ -477,7 +527,7 @@ function give_purchase_form_validate_user_login() {
 	// Check if user exists
 	if ( $user_data ) {
 		// Get password
-		$user_pass = isset( $_POST["give_user_pass"] ) ? $_POST["give_user_pass"] : false;
+		$user_pass = isset( $_POST['give_user_pass'] ) ? $_POST['give_user_pass'] : false;
 
 		// Check user_pass
 		if ( $user_pass ) {
@@ -524,6 +574,9 @@ function give_purchase_form_validate_user_login() {
  * @return  array
  */
 function give_purchase_form_validate_guest_user() {
+
+	$form_id = isset( $_POST['give-form-id'] ) ? $_POST['give-form-id'] : '';
+
 	// Start an array to collect valid user data
 	$valid_user_data = array(
 		// Set a default id for guests
@@ -554,8 +607,8 @@ function give_purchase_form_validate_guest_user() {
 	}
 
 	// Loop through required fields and show error messages
-	foreach ( give_purchase_form_required_fields() as $field_name => $value ) {
-		if ( in_array( $value, give_purchase_form_required_fields() ) && empty( $_POST[ $field_name ] ) ) {
+	foreach ( give_purchase_form_required_fields( $form_id ) as $field_name => $value ) {
+		if ( in_array( $value, give_purchase_form_required_fields( $form_id ) ) && empty( $_POST[ $field_name ] ) ) {
 			give_set_error( $value['error_id'], $value['error_message'] );
 		}
 	}

@@ -120,7 +120,6 @@ if ( ! class_exists( 'WpssoUtil' ) && class_exists( 'SucomUtil' ) ) {
 				elseif ( $mod === 'user' )
 					$id = empty( $obj->ID ) ?
 						$this->get_author_object( 'id' ): $obj->ID;
-
 			} elseif ( empty( $id ) ) {
 				if ( $mod === 'post' )
 					$id = $this->get_post_object( false, 'id' );
@@ -136,7 +135,7 @@ if ( ! class_exists( 'WpssoUtil' ) && class_exists( 'SucomUtil' ) ) {
 			} elseif ( empty( $id ) ) {
 				if ( $this->p->debug->enabled )
 					$this->p->debug->log( 'no object id defined' );
-			} else $meta_opts = $this->get_mod_options( $mod, $id );
+			} else $meta_opts = $this->get_mod_options( $mod, $id );			// get all metadata options
 
 			foreach( $sizes as $opt_prefix => $size_info ) {
 
@@ -147,22 +146,22 @@ if ( ! class_exists( 'WpssoUtil' ) && class_exists( 'SucomUtil' ) ) {
 						'name' => $save_name,
 						'label' => $save_name
 					);
-				} elseif ( ! empty( $size_info['prefix'] ) )					// allow for alternate option prefix
+				} elseif ( ! empty( $size_info['prefix'] ) )				// allow for alternate option prefix
 					$opt_prefix = $size_info['prefix'];
 
 				foreach ( array( 'width', 'height', 'crop', 'crop_x', 'crop_y' ) as $key ) {
-					if ( isset( $size_info[$key] ) )					// prefer existing info from filters
+					if ( isset( $size_info[$key] ) )				// prefer existing info from filters
 						continue;
-					elseif ( isset( $meta_opts[$opt_prefix.'_'.$key] ) )			// use post meta if available
+					elseif ( isset( $meta_opts[$opt_prefix.'_'.$key] ) )		// use post meta if available
 						$size_info[$key] = $meta_opts[$opt_prefix.'_'.$key];
-					elseif ( isset( $this->p->options[$opt_prefix.'_'.$key] ) )		// current plugin settings
+					elseif ( isset( $this->p->options[$opt_prefix.'_'.$key] ) )	// current plugin settings
 						$size_info[$key] = $this->p->options[$opt_prefix.'_'.$key];
 					else {
-						if ( ! isset( $def_opts ) )					// only read once if necessary
+						if ( ! isset( $def_opts ) )				// only read once if necessary
 							$def_opts = $this->p->opt->get_defaults();
-						$size_info[$key] = $def_opts[$opt_prefix.'_'.$key];		// fallback to default value
+						$size_info[$key] = $def_opts[$opt_prefix.'_'.$key];	// fallback to default value
 					}
-					if ( $key === 'crop' )							// make sure crop is true or false
+					if ( $key === 'crop' )						// make sure crop is true or false
 						$size_info[$key] = empty( $size_info[$key] ) ? false : true;
 				}
 
@@ -197,13 +196,15 @@ if ( ! class_exists( 'WpssoUtil' ) && class_exists( 'SucomUtil' ) ) {
 			}
 		}
 
-		public function push_add_to_options( &$opts = array(), $add_to_prefixes = array( 'plugin' => 'backend' ) ) {
+		public function push_add_to_options( &$opts = array(),
+			$add_to_prefixes = array( 'plugin' => 'backend' ), $default = 1 ) {
+
 			foreach ( $add_to_prefixes as $opt_prefix => $type ) {
 				foreach ( $this->get_post_types( $type ) as $post_type ) {
 					$option_name = $opt_prefix.'_add_to_'.$post_type->name;
 					$filter_name = $this->p->cf['lca'].'_add_to_options_'.$post_type->name;
 					if ( ! isset( $opts[$option_name] ) )
-						$opts[$option_name] = apply_filters( $filter_name, 1 );
+						$opts[$option_name] = apply_filters( $filter_name, $default );
 				}
 			}
 			return $opts;
@@ -228,23 +229,26 @@ if ( ! class_exists( 'WpssoUtil' ) && class_exists( 'SucomUtil' ) ) {
 
 			wp_cache_flush();					// clear non-database transients as well
 
+			$lca = $this->p->cf['lca'];
+			$short = $this->p->cf['plugin'][$lca]['short'];
 			$del_files = $this->p->util->delete_expired_file_cache( true );
 			$del_transients = $this->p->util->delete_expired_db_transients( true );
+			$other_cache_msg = __( '%s has been cleared as well.', 'wpsso' );
 
-			$this->p->notice->inf( $this->p->cf['uca'].' cached files, transient cache,'.
-				' and the WordPress object cache have been cleared.', true );
+			$this->p->notice->inf( sprintf( __( '%s cached files, transient cache, and the WordPress object cache have been cleared.',
+				'wpsso' ), $short ), true );
 
 			if ( function_exists( 'w3tc_pgcache_flush' ) ) {	// w3 total cache
 				w3tc_pgcache_flush();
-				$this->p->notice->inf( __( 'W3 Total Cache has been cleared as well.', WPSSO_TEXTDOM ), true );
+				$this->p->notice->inf( sprintf( $other_cache_msg, 'W3 Total Cache' ), true );
 			}
 			if ( function_exists( 'wp_cache_clear_cache' ) ) {	// wp super cache
 				wp_cache_clear_cache();
-				$this->p->notice->inf( __( 'WP Super Cache has been cleared as well.', WPSSO_TEXTDOM ), true );
+				$this->p->notice->inf( sprintf( $other_cache_msg, 'WP Super Cache' ), true );
 			}
 			if ( isset( $GLOBALS['zencache'] ) ) {			// zencache
 				$GLOBALS['zencache']->wipe_cache();
-				$this->p->notice->inf( __( 'ZenCache has been cleared as well.', WPSSO_TEXTDOM ), true );
+				$this->p->notice->inf( sprintf( $other_cache_msg, 'ZenCache' ), true );
 			}
 		}
 
@@ -270,7 +274,7 @@ if ( ! class_exists( 'WpssoUtil' ) && class_exists( 'SucomUtil' ) ) {
 							'lang:'.$lang.'_post:'.$post_id.'_url:'.$sharing_url.'_crawler:pinterest',
 						),
 						'WpssoMeta::get_mod_column_content' => array( 
-							'mod:post_lang:'.$lang.'_id:'.$post_id.'_column:'.$lca.'_og_image',
+							'lang:'.$lang.'_id:'.$post_id.'_mod:post_column:'.$lca.'_og_image',
 						),
 					);
 					$transients = apply_filters( $lca.'_post_cache_transients', 
@@ -348,7 +352,7 @@ if ( ! class_exists( 'WpssoUtil' ) && class_exists( 'SucomUtil' ) ) {
 			}
 			if ( ( $topics = file( WPSSO_TOPICS_LIST, 
 				FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES ) ) === false ) {
-				$this->p->notice->err( 'Error reading the '.WPSSO_TOPICS_LIST.' topic list file.' );
+				$this->p->notice->err( sprintf( 'Error reading the %s topic list file.', WPSSO_TOPICS_LIST ) );
 				return $topics;
 			}
 			$topics = apply_filters( $this->p->cf['lca'].'_topics', $topics );
@@ -372,22 +376,32 @@ if ( ! class_exists( 'WpssoUtil' ) && class_exists( 'SucomUtil' ) ) {
 		 * Example: get_mod_options( 'post', $post_id, array( 'rp_desc', 'og_desc' ) );
 		 */
 		public function get_mod_options( $mod, $id = false, $idx = false, $attr = array() ) {
-			if ( empty( $id ) || empty( $idx ) || 
+			if ( empty( $id ) || 
 				! isset( $this->p->mods['util'][$mod] ) )
 					return false;
-			if ( ! is_array( $idx ) )
-				$idx = array( $idx );
-			foreach ( array_unique( $idx ) as $key ) {
-				if ( empty( $key ) )
-					return false;
-				$ret = $this->p->mods['util'][$mod]->get_options( $id, $key, $attr );
-				if ( ! empty( $ret ) ) {
-					if ( $this->p->debug->enabled )
-						$this->p->debug->log( 'custom '.$mod.' '.
-							( $key === false ? 'options' : $key ).' = '.
-							( is_array( $ret ) ? print_r( $ret, true ) : '"'.$ret.'"' ) );
-					return $ret;	// stop here
+			// return the whole options array
+			if ( $idx === false ) {
+				$ret = $this->p->mods['util'][$mod]->get_options( $id, $idx, $attr );
+			} else {
+				if ( ! is_array( $idx ) )
+					$idx = array( $idx );
+				foreach ( array_unique( $idx ) as $key ) {
+					if ( $key === 'none' )		// special keyword
+						return false;		// stop here
+					if ( empty( $key ) )
+						continue;
+					$ret = $this->p->mods['util'][$mod]->get_options( $id, $key, $attr );
+					if ( ! empty( $ret ) )
+						break;
 				}
+			}
+			if ( ! empty( $ret ) ) {
+				if ( $this->p->debug->enabled )
+					$this->p->debug->log( 'custom '.$mod.' '.
+						( $idx === false ? 'options' : ( is_array( $idx ) ? 
+							implode( ', ', $idx ) : $idx ) ).' = '.
+						( is_array( $ret ) ? print_r( $ret, true ) : '"'.$ret.'"' ) );
+				return $ret;	// stop here
 			}
 			return false;
 		}
@@ -395,12 +409,12 @@ if ( ! class_exists( 'WpssoUtil' ) && class_exists( 'SucomUtil' ) ) {
 		public function sanitize_option_value( $key, $val, $def_val, $network = false, $mod = false ) {
 			// hooked by the sharing class
 			$option_type = apply_filters( $this->p->cf['lca'].'_option_type', false, $key, $network, $mod );
-			$reset_msg = __( 'resetting the option to its default value.', WPSSO_TEXTDOM );
 
 			// pre-filter most values to remove html
 			switch ( $option_type ) {
 				case 'html':	// leave html and css / javascript code blocks as-is
 				case 'code':
+					$val = stripslashes( $val );
 					break;
 				default:
 					$val = stripslashes( $val );
@@ -420,7 +434,7 @@ if ( ! class_exists( 'WpssoUtil' ) && class_exists( 'SucomUtil' ) ) {
 					if ( $val !== '' ) {
 						$val = $this->cleanup_html_tags( $val );
 						if ( strpos( $val, '//' ) === false ) {
-							$this->p->notice->err( 'The value of option \''.$key.'\' must be a URL - '.$reset_msg, true );
+							$this->p->notice->err( sprintf( 'The value of option \'%s\' must be a URL - resetting the option to its default value.', $key ), true );
 							$val = $def_val;
 						}
 					}
@@ -451,7 +465,7 @@ if ( ! class_exists( 'WpssoUtil' ) && class_exists( 'SucomUtil' ) ) {
 					if ( $val === '' && $mod !== false )
 						break;
 					elseif ( ! is_numeric( $val ) || $val < $min_int ) {
-						$this->p->notice->err( 'The value of option \''.$key.'\' must be greater or equal to '.$min_int.' - '.$reset_msg, true );
+						$this->p->notice->err( sprintf( 'The value of option \'%s\' must be greater or equal to %s - resetting the option to its default value.', $key, $min_int ), true );
 						$val = $def_val;
 					}
 					break;
@@ -465,7 +479,7 @@ if ( ! class_exists( 'WpssoUtil' ) && class_exists( 'SucomUtil' ) ) {
 						! is_numeric( $val ) ) ? false : true;
 
 					if ( $passed === false ) {
-						$this->p->notice->err( 'The value of option \''.$key.'\' must be numeric - '.$reset_msg, true );
+						$this->p->notice->err( sprintf( 'The value of option \'%s\' must be numeric - resetting the option to its default value.', $key ), true );
 						$val = $def_val;
 					}
 					break;
@@ -473,7 +487,7 @@ if ( ! class_exists( 'WpssoUtil' ) && class_exists( 'SucomUtil' ) ) {
 				case 'auth_id':
 					$val = trim( $val );
 					if ( $val !== '' && preg_match( '/[^A-Z0-9\-]/', $val ) ) {
-						$this->p->notice->err( '\''.$val.'\' is not an acceptable value for option \''.$key.'\' - '.$reset_msg, true );
+						$this->p->notice->err( sprintf( '\'%s\' is not an acceptable value for option \'%s\' - resetting the option to its default value.', $val, $key ), true );
 						$val = $def_val;
 					}
 					break;
@@ -481,7 +495,7 @@ if ( ! class_exists( 'WpssoUtil' ) && class_exists( 'SucomUtil' ) ) {
 				case 'api_key':
 					$val = trim( $val );
 					if ( $val !== '' && preg_match( '/[^a-zA-Z0-9_]/', $val ) ) {
-						$this->p->notice->err( 'The value of option \''.$key.'\' must be alpha-numeric - '.$reset_msg, true );
+						$this->p->notice->err( sprintf( 'The value of option \'%s\' must be alpha-numeric - resetting the option to its default value.', $key ), true );
 						$val = $def_val;
 					}
 					break;
@@ -494,7 +508,7 @@ if ( ! class_exists( 'WpssoUtil' ) && class_exists( 'SucomUtil' ) ) {
 					if ( $val !== '' ) {
 						$val = trim( $val );
 						if ( ! preg_match( '/<.*>/', $val ) ) {
-							$this->p->notice->err( 'The value of option \''.$key.'\' must be HTML code - '.$reset_msg, true );
+							$this->p->notice->err( sprintf( 'The value of option \'%s\' must be HTML code - resetting the option to its default value.', $key ), true );
 							$val = $def_val;
 						}
 					}
@@ -503,11 +517,11 @@ if ( ! class_exists( 'WpssoUtil' ) && class_exists( 'SucomUtil' ) ) {
 				case 'not_blank':
 				case 'code':
 					if ( $val === '' ) {
-						$this->p->notice->err( 'The value of option \''.$key.'\' cannot be empty - '.$reset_msg, true );
+						$this->p->notice->err( sprintf( 'The value of option \'%s\' cannot be empty - resetting the option to its default value.', $key ), true );
 						$val = $def_val;
 					}
 					break;
-				// everything else is a 1 of 0 checkbox option 
+				// everything else is a 1 or 0 checkbox option 
 				case 'checkbox':
 				default:
 					if ( $def_val === 0 || $def_val === 1 )	// make sure the default option is also a 1 or 0, just in case
@@ -548,7 +562,7 @@ if ( ! class_exists( 'WpssoUtil' ) && class_exists( 'SucomUtil' ) ) {
 				if ( $this->p->debug->enabled )
 					$this->p->debug->log( 'DOMDocument PHP class missing' );
 				if ( is_admin() )
-					$this->p->notice->err( 'DOMDocument PHP class missing - unable to read head meta from '.$url.'.', true );
+					$this->p->notice->err( sprintf( 'DOMDocument PHP class missing - unable to read head meta from %s. Please contact your hosting provider to install the missing DOMDocument PHP class.', $url ), true );
 			}
 			return $ret;
 		}
@@ -627,29 +641,26 @@ if ( ! class_exists( 'WpssoUtil' ) && class_exists( 'SucomUtil' ) ) {
 		public function force_default_media( $use_post = false, $opt_pre = 'og', $media = 'img' ) {
 			$ret = null;
 
-			// save some time
+			// make sure we have default media
 			if ( empty( $this->p->options[$opt_pre.'_def_'.$media.'_id'] ) &&
-				empty( $this->p->options[$opt_pre.'_def_'.$media.'_url'] ) )
+				empty( $this->p->options[$opt_pre.'_def_'.$media.'_url'] ) ) {
 					$ret = false;
-			else {
+			} else {
 				// check for singular pages first
-				if ( $ret === null && SucomUtil::is_post_page( $use_post ) )
+				if ( $ret === null && SucomUtil::is_post_page( $use_post ) ) {
 					$ret = false;
-	
-				if ( $ret === null && ! empty( $this->p->options[$opt_pre.'_def_'.$media.'_on_index'] ) )
+				}
+				if ( $ret === null && ! empty( $this->p->options[$opt_pre.'_def_'.$media.'_on_index'] ) ) {
 					if ( is_home() || ( is_archive() && ! is_admin() && ! SucomUtil::is_author_page() ) )
 						$ret = true;
-	
-				if ( $ret === null && ! empty( $this->p->options[$opt_pre.'_def_'.$media.'_on_author'] ) )
-					if ( SucomUtil::is_author_page() )
-						$ret = true;
-	
-				if ( $ret === null && ! empty( $this->p->options[$opt_pre.'_def_'.$media.'_on_search'] ) )
+				}	
+				if ( $ret === null && ! empty( $this->p->options[$opt_pre.'_def_'.$media.'_on_search'] ) ) {
 					if ( is_search() )
 						$ret = true;
-	
-				if ( $ret === null )
+				}
+				if ( $ret === null ) {
 					$ret = false;
+				}
 			}
 			$ret = apply_filters( $this->p->cf['lca'].'_force_default_'.$media, $ret );
 
@@ -669,20 +680,20 @@ if ( ! class_exists( 'WpssoUtil' ) && class_exists( 'SucomUtil' ) ) {
 				$this->p->cache->get( $url, 'url', 'file', $this->p->options['plugin_file_cache_exp'], false, $url_ext ) ) );
 		}
 
-		public function get_tweet_text( $atts = array(), $opt_prefix = 'twitter', $meta_prefix = 'twitter' ) {
+		public function get_tweet_text( $atts = array(), $opt_prefix = 'twitter', $md_pre = 'twitter' ) {
 
 			$prot = empty( $_SERVER['HTTPS'] ) ? 'http:' : 'https:';
 			$use_post = isset( $atts['use_post'] ) ? $atts['use_post'] : true;
 			$add_hashtags = isset( $atts['add_hashtags'] ) ? $atts['add_hashtags'] : true;
-			$source_id = $this->p->util->get_source_id( $opt_prefix, $atts );
+			$src_id = $this->p->util->get_source_id( $opt_prefix, $atts );
 
 			if ( ! isset( $atts['add_page'] ) )
 				$atts['add_page'] = true;	// required by get_sharing_url()
 
 			$long_url = empty( $atts['url'] ) ? 
-				$this->p->util->get_sharing_url( $use_post, $atts['add_page'], $source_id ) : 
+				$this->p->util->get_sharing_url( $use_post, $atts['add_page'], $src_id ) : 
 				apply_filters( $this->p->cf['lca'].'_sharing_url',
-					$atts['url'], $use_post, $atts['add_page'], $source_id );
+					$atts['url'], $use_post, $atts['add_page'], $src_id );
 
 			$short_url = empty( $atts['short_url'] ) ?
 				apply_filters( $this->p->cf['lca'].'_shorten_url',
@@ -702,8 +713,8 @@ if ( ! class_exists( 'WpssoUtil' ) && class_exists( 'SucomUtil' ) ) {
 					true,			// use_cache
 					$add_hashtags, 		// add_hashtags
 					false, 			// encode
-					$meta_prefix.'_desc',	// custom meta
-					$source_id		// 
+					$md_pre.'_desc',	// meta data
+					$src_id			// 
 				);
 			}
 
@@ -771,6 +782,37 @@ if ( ! class_exists( 'WpssoUtil' ) && class_exists( 'SucomUtil' ) ) {
 			}
 			return $has_changed === false ?
 				$ts : get_option( WPSSO_TS_NAME, array() );
+		}
+	
+		public function get_mod_obj( $id, $mod = 'post' ) {
+			$obj = false;
+			if ( empty( $id ) || empty( $mod ) ) {
+				if ( ! empty( $id ) )
+					$mod = 'post';		// default to post if no module name
+				elseif ( SucomUtil::is_post_page( false ) )
+					$mod = 'post';
+				elseif ( SucomUtil::is_term_page() )
+					$mod = 'taxonomy';
+				elseif ( SucomUtil::is_author_page() )
+					$mod = 'user';
+			}
+			if ( isset( $this->p->mods['util'][$mod] ) ) {
+				$obj =& $this->p->mods['util'][$mod];
+				if ( empty( $id ) ) {
+					switch ( $mod ) {
+						case 'post':
+							$id = $this->get_post_object( false, 'id' );
+							break;
+						case 'taxonomy':
+							$id = $this->get_term_object( 'id' );
+							break;
+						case 'author':
+							$id = $this->get_author_object( 'id' );
+							break;
+					}
+				}
+			}
+			return array( $id, $obj );
 		}
 	}
 }

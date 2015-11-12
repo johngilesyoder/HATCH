@@ -1406,7 +1406,7 @@ class GFFormDetail {
 			</div>
 
 			<?php $window_title = __( 'Bulk Add / Predefined Choices', 'gravityforms' ); ?>
-			<input type='button' value='<?php echo esc_attr( $window_title ) ?>' onclick="tb_show('<?php echo esc_js( $window_title ) ?>', '#TB_inline?height=500&amp;width=600&amp;inlineId=gfield_bulk_add', '');" class="button" />
+			<input type='button' value='<?php echo esc_attr( $window_title ) ?>' onclick="tb_show('<?php echo esc_js( $window_title ) ?>', '#TB_inline?height=400&amp;width=600&amp;inlineId=gfield_bulk_add', '');" class="button" />
 
 			<div id="gfield_bulk_add" style="display:none;">
 				<div>
@@ -1834,6 +1834,13 @@ class GFFormDetail {
 		<div id="gform_tab_3">
             <ul>
 				<?php
+
+				/**
+				 * An action that appears multiple times (labeled with an ID. Eg 0, 20, 50) before each of the setting sections of the appearance settings
+				 *
+				 * @param int # And ID for a certain part of the appearance settings
+				 * @param int $form_id The current form ID
+				 */
 				do_action( 'gform_field_appearance_settings', 0, $form_id );
 				?>
                 <li class="placeholder_setting field_setting">

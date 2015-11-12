@@ -2,11 +2,13 @@
 
 final class WP_Installer{
     protected static $_instance = null;
-    
+
+    public $settings = array();
+
     private $repositories = array();
     
     protected $api_debug = '';
-    
+
     private $config = array();
     
     protected $_plugins_renew_warnings = array();
@@ -17,6 +19,15 @@ final class WP_Installer{
 
     private $_using_icl     = false;
     private $_wpml_version  = false;
+
+    private $package_source = array();
+
+    const SITE_KEY_VALIDATION_SOURCE_OTHER              = 0;
+    const SITE_KEY_VALIDATION_SOURCE_DOWNLOAD_SPECIFIC  = 1;
+    const SITE_KEY_VALIDATION_SOURCE_DOWNLOAD_REPORT    = 2;
+    const SITE_KEY_VALIDATION_SOURCE_REGISTRATION       = 3;
+    const SITE_KEY_VALIDATION_SOURCE_REVALIDATION       = 4;
+    const SITE_KEY_VALIDATION_SOURCE_UPDATES_CHECK      = 5;
 
     public static function instance() {
         
@@ -52,14 +63,10 @@ final class WP_Installer{
         // register repositories
         $this->load_repositories_list();
 
-        if(empty($this->settings['last_repositories_update']) || time() - $this->settings['last_repositories_update'] > 86400){
+        if( empty($this->settings['last_repositories_update']) || time() - $this->settings['last_repositories_update'] > 86400
+            || ( isset($_GET['force-check']) && $_GET['force-check'] == 1 ) ){
             $this->refresh_repositories_data();
         }
-
-        // Hook to wp_update_plugins before the WP API request
-        // Using this in place of a missing hook in wp_update_plugins
-        // This is being triggered every time WP checks for plugin updates
-        add_filter('plugins_update_check_locales', array($this, 'update_plugins_information'));
 
         // default config
         $this->config['plugins_install_tab'] = false;    
@@ -86,9 +93,15 @@ final class WP_Installer{
     
     public function init(){
         global $pagenow;
-        
+
         if(empty($this->settings['_pre_1_0_clean_up'])) {
             $this->_pre_1_0_clean_up();
+        }
+
+        $this->settings = $this->_old_products_format_backwards_compatibility($this->settings);
+
+        if ( !function_exists( 'get_plugins' ) ) {
+            require_once ABSPATH . 'wp-admin/includes/plugin.php';
         }
 
         $this->_using_icl     = function_exists('wpml_site_uses_icl') && wpml_site_uses_icl();
@@ -145,6 +158,19 @@ final class WP_Installer{
         //Include theme support
         include_once $this->plugin_path() . '/includes/class-installer-theme.php';
 
+        // Extra information about the source of Installer
+        $package_source_file = $this->plugin_path() . '/installer-source.json';
+        if( file_exists( $package_source_file ) ){
+            $this->package_source = json_decode( file_get_contents( $package_source_file ) );
+        }
+    }
+
+    protected function log($message){
+        if( defined('WPML_INSTALLER_LOGGING') && WPML_INSTALLER_LOGGING ){
+            if($fh = @fopen( $this->plugin_path() . '/installer.log', 'a' )){
+                fwrite($fh, current_time( 'mysql' ) . "\t" . $message . "\n");
+            }
+        }
     }
 
     public function register_admin_message($text, $type = 'updated'){
@@ -245,19 +271,24 @@ final class WP_Installer{
     public function setup_plugins_action_links(){
         
         $plugins = get_plugins();
-              
+
+        $repositories_plugins = array();
+
         foreach($this->settings['repositories'] as $repository_id => $repository){
 
-        	$r_plugins = array();
-            
             foreach($repository['data']['packages'] as $package){
                 
                 foreach($package['products'] as $product){
                     
-                    foreach($product['downloads'] as $download){
+                    foreach($product['plugins'] as $plugin_slug){
 
-                        if(!isset($rep_plugins[$download['slug']])){
-                            $r_plugins[$download['slug']] = $download['slug'];
+                        $download = $this->settings['repositories'][$repository_id]['data']['downloads']['plugins'][$plugin_slug];
+
+                        if(!isset($repositories_plugins[$repository_id][$download['slug']])){
+                            $repositories_plugins[$repository_id][$download['slug']] = array(
+                                'name'          => $download['name'],
+                                'registered'    => $this->plugin_is_registered( $repository_id, $download['slug'] ) ? 1 : 0
+                            );
                         }
                         
                     }
@@ -265,43 +296,41 @@ final class WP_Installer{
                 }
                 
             }
-            
-            $site_key = $this->get_site_key($repository_id);
-            $repositories_plugins[$repository_id] = array( 'plugins' => $r_plugins, 'registered' => !empty($site_key));
 
-            foreach($plugins as $plugin_id => $plugin){
+            foreach($plugins as $plugin_id => $plugin) {
 
                 $wp_plugin_slug = dirname($plugin_id);
                 if(empty($wp_plugin_slug)){
                     $wp_plugin_slug = basename($plugin_id, '.php');
                 }
 
-                foreach($repositories_plugins as $repository_id => $r_plugins){
+                foreach($repositories_plugins as $repository_id => $r_plugins) {
 
-                    foreach($r_plugins['plugins'] as $slug => $name){
-                        
-                        if($wp_plugin_slug == $slug || $name == $plugin['Name']  || $name == $plugin['Title']){ //match order: slug, name, title
-                            
-                            if($r_plugins['registered']){
-                                add_filter( 'plugin_action_links_' . $plugin_id, array($this, 'plugins_action_links_registered'));                            
+                    foreach($r_plugins as $slug => $r_plugin){
+
+                        if($wp_plugin_slug == $slug || $r_plugin['name'] == $plugin['Name']  || $r_plugin['name'] == $plugin['Title']) { //match order: slug, name, title
+
+                            if($r_plugin['registered']){
+                                add_filter( 'plugin_action_links_' . $plugin_id, array($this, 'plugins_action_links_registered'));
                             }else{
-                                add_filter( 'plugin_action_links_' . $plugin_id, array($this, 'plugins_action_links_not_registered'));                        
+                                add_filter( 'plugin_action_links_' . $plugin_id, array($this, 'plugins_action_links_not_registered'));
                             }
-                            
+
                         }
-                        
+
                     }
-                        
+
                 }
-                
-            }            
-            
+
+
+            }
+
         }
         
     }
 
     public function plugins_action_links_registered($links){
-        $links[] = '<a href="' . $this->menu_url() . '">' . __('Registered', 'installer') . '</a>';        
+        $links[] = '<a href="' . $this->menu_url() . '">' . __('Registered', 'installer') . '</a>';
         return $links;
     }
     
@@ -309,7 +338,47 @@ final class WP_Installer{
         $links[] = '<a href="' . $this->menu_url() . '">' . __('Register', 'installer') . '</a>';        
         return $links;
     }
-    
+
+    public function plugin_is_registered($repository_id, $slug){
+
+        $registered = false;
+
+        if( $this->repository_has_valid_subscription($repository_id) ){
+
+            $subscription_type = $this->get_subscription_type_for_repository($repository_id);
+            $r_plugins = array();
+
+            foreach($this->settings['repositories'][$repository_id]['data']['packages'] as $package){
+
+                foreach($package['products'] as $product){
+
+                    if( $product['subscription_type'] == $subscription_type || $this->have_superior_subscription($subscription_type, $product) ) {
+
+                        foreach ($product['plugins'] as $plugin_slug) {
+
+                            $download = $this->settings['repositories'][$repository_id]['data']['downloads']['plugins'][$plugin_slug];
+
+                            if (!isset($rep_plugins[$download['slug']])) {
+                                $r_plugins[$download['slug']] = $download['slug'];
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            $registered = isset($r_plugins[$slug]);
+
+        }
+
+
+        return $registered;
+
+    }
+
     public function version(){
         return WP_INSTALLER_VERSION;        
     }
@@ -368,37 +437,44 @@ final class WP_Installer{
 
     }
 
-    public function get_settings(){
-        $_settings = get_option('wp_installer_settings');
+    public function get_settings($refresh = false){
+
+        if($refresh || empty($this->settings)){
+
+            $_settings = get_option('wp_installer_settings');
 
 
-        if (is_array($_settings) || empty($_settings)) { //backward compatibility 1.1
-            $settings = $_settings;
-            return $settings;
-        } else {
-            $_settings = base64_decode($_settings);
-            if ($this->_gz_on) {
-                $_settings = gzuncompress($_settings);
+            if (is_array($_settings) || empty($_settings)) { //backward compatibility 1.1
+                $this->settings = $_settings;
+
+            } else {
+                $_settings = base64_decode($_settings);
+                if ($this->_gz_on) {
+                    $_settings = gzuncompress($_settings);
+                }
+                $this->settings = unserialize($_settings);
             }
-            $settings = unserialize($_settings);
-        }
 
-        if (is_multisite() && isset($settings['repositories'])) {
-            $network_settings = maybe_unserialize(get_site_option('wp_installer_network'));
-            if ($network_settings) {
-                foreach ($settings['repositories'] as $rep_id => $repository) {
-                    if (isset($network_settings[$rep_id])) {
-                        $settings['repositories'][$rep_id]['subscription'] = $network_settings[$rep_id];
+            if (is_multisite() && isset($settings['repositories'])) {
+                $network_settings = maybe_unserialize(get_site_option('wp_installer_network'));
+                if ($network_settings) {
+                    foreach ($this->settings['repositories'] as $rep_id => $repository) {
+                        if (isset($network_settings[$rep_id])) {
+                            $this->settings['repositories'][$rep_id]['subscription'] = $network_settings[$rep_id];
+                        }
                     }
                 }
             }
+
+
+            $this->settings = $this->_pre_1_6_backwards_compatibility($this->settings);
+
+            $this->settings = $this->_old_products_format_backwards_compatibility($this->settings);
+
         }
 
 
-        $settings = $this->_pre_1_6_backwards_compatibility($settings);
-
-
-        return $settings;
+        return $this->settings;
     }
 
     //backward compatibility, will remove 'basename' in version 1.8
@@ -408,21 +484,72 @@ final class WP_Installer{
 
             foreach ($settings['repositories'] as $repository_id => $repository) {
 
+                foreach ($repository['data']['downloads']['plugins'] as $slug => $download) {
+
+                    $settings['repositories'][$repository_id]['data']['downloads']['plugins'][$slug]['slug'] = $download['basename'];
+
+                }
+            }
+
+        }
+
+        return $settings;
+
+    }
+
+    //backward compatibility - support old products list format (downloads under products instead of global downloads list)
+    private function _old_products_format_backwards_compatibility($settings){
+
+        if( version_compare($this->version(), '1.8', '<') && !empty($settings['repositories']) ) {
+
+            foreach ($settings['repositories'] as $repository_id => $repository) {
+
+                $populate_downloads = false;
+
                 foreach ($repository['data']['packages'] as $package_id => $package) {
 
                     foreach ($package['products'] as $product_id => $product) {
 
-                        foreach ($product['downloads'] as $download_id => $download) {
+                        if (!isset($product['plugins'])) {
 
-                            if (!isset($download['slug'])) {
-                                $settings['repositories'][$repository_id]['data']['packages'][$package_id]['products'][$product_id]['downloads'][$download_id]['slug'] = $download['basename'];
+                            $populate_downloads = true;
+
+                            foreach ($product['downloads'] as $download_id => $download) {
+
+                                $settings['repositories'][$repository_id]['data']['packages'][$package_id]['products'][$product_id]['plugins'][] = $download['slug'];
 
                             }
 
                         }
+
                     }
 
                 }
+
+                if ($populate_downloads) {
+
+                    // Add downloads branch
+                    foreach ($repository['data']['packages'] as $package_id => $package) {
+
+                        foreach ($package['products'] as $product_id => $product) {
+
+                            foreach ($product['downloads'] as $download_id => $download) {
+
+                                if (!isset($settings['repositories'][$repository_id]['data']['downloads']['plugins'][$download['slug']])) {
+                                    $settings['repositories'][$repository_id]['data']['downloads']['plugins'][$download['slug']] = $download;
+                                }
+
+                                $settings['repositories'][$repository_id]['data']['packages'][$package_id]['products'][$product_id]['plugins'][] = $download['slug'];
+                            }
+
+                            unset($settings['repositories'][$repository_id]['data']['packages'][$package_id]['products'][$product_id]['downloads']);
+
+                        }
+
+                    }
+
+                }
+
             }
 
         }
@@ -537,38 +664,48 @@ final class WP_Installer{
     }
     
     public function filter_repositories_list(){
-        
-        foreach($this->settings['repositories'] as $id => $repo_data){
-            
-            // excludes rule;
-            if(isset($this->config['repositories_exclude']) && in_array($id, $this->config['repositories_exclude'])){
-                unset($this->settings['repositories'][$id]);
+
+        if(!empty($this->settings['repositories'])) {
+            foreach ($this->settings['repositories'] as $id => $repo_data) {
+
+                // excludes rule;
+                if (isset($this->config['repositories_exclude']) && in_array($id, $this->config['repositories_exclude'])) {
+                    unset($this->settings['repositories'][$id]);
+                }
+
+                // includes rule;
+                if (isset($this->config['repositories_include']) && !in_array($id, $this->config['repositories_include'])) {
+                    unset($this->settings['repositories'][$id]);
+                }
+
+
             }
-            
-            // includes rule;
-            if(isset($this->config['repositories_include']) && !in_array($id, $this->config['repositories_include'])){
-                unset($this->settings['repositories'][$id]);
-            }
-            
-            
         }
         
         
     }
 
-    // Using this in place of a missing hook in wp_update_plugins
-    // This is being triggered every time WP checks for plugin updates
-    public function update_plugins_information($locale_data){
-
-        $this->refresh_repositories_data();
-
-        return $locale_data;
-    }
-
     public function refresh_repositories_data(){
         static $checked = false;
 
-        if(defined('OTGS_DISABLE_AUTO_UPDATES') && OTGS_DISABLE_AUTO_UPDATES && empty($_GET['force-check']) || $checked){
+        if( defined('OTGS_DISABLE_AUTO_UPDATES') && OTGS_DISABLE_AUTO_UPDATES && empty($_GET['force-check']) || $checked ){
+
+            if(empty($this->settings['repositories']) && $this->is_repositories_page()){
+
+                foreach($this->repositories as $id => $data) {
+                    $repository_names[] = $id;
+
+                }
+
+                $error = sprintf(__("Installer cannot display the products information because the automatic updating for %s was explicitly disabled with the configuration below (usually in wp-config.php):", 'installer'), strtoupper( join(', ', $repository_names) ));
+                $error .= '<br /><br /><code>define("OTGS_DISABLE_AUTO_UPDATES", true);</code><br /><br />';
+                $error .= sprintf(__("In order to see the products information, please run the %smanual updates check%s to initialize the products list or (temporarily) remove the above code.", 'installer'), '<a href="' . admin_url('update-core.php') . '">', '</a>');
+
+                $this->register_admin_message($error, 'error');
+
+
+            }
+
             return;
         }
 
@@ -598,7 +735,7 @@ final class WP_Installer{
                 $body = wp_remote_retrieve_body($response);     
                 if($body){
                     $products = json_decode($body, true);
-                    
+
                     if(is_array($products)){
                         $this->settings['repositories'][$id]['data'] = $products;
                         $this->settings = $this->_pre_1_6_backwards_compatibility($this->settings);
@@ -606,7 +743,10 @@ final class WP_Installer{
                 }       
                 
             }
-            
+
+            $this->log( sprintf("Checked for %s updates: %s", $id, $data['products']) );
+
+
         }
         
         // cleanup
@@ -644,7 +784,6 @@ final class WP_Installer{
 
             $this->localize_strings();
             $this->set_filtered_prices($args);
-            $this->filter_downloads_by_icl(); //downloads for ICL users
             $this->set_hierarchy_and_order();
 
             foreach($this->settings['repositories'] as $repository_id => $repository){
@@ -708,6 +847,11 @@ final class WP_Installer{
             $row = array('products' => array(), 'downloads' => array());
             foreach($package['products'] as $product){
 
+                // filter out free subscriptions from being displayed as buying options
+                if( empty($product['price']) && (empty($subscription_type) || $expired) ){
+                    continue;
+                }
+
                 // buy base
                 if(empty($subscription_type) || $expired) {
 
@@ -753,7 +897,12 @@ final class WP_Installer{
 
                 // downloads
                 if(isset($subscription_type) && !$expired && $product['subscription_type'] == $subscription_type){
-                    $row['downloads'] = $product['downloads'];
+                    foreach($product['plugins'] as $plugin_slug){
+
+                        $row['downloads'][] = $this->settings['repositories'][$repository_id]['data']['downloads']['plugins'][$plugin_slug];
+
+                    }
+
                 }
 
                 //subpackages
@@ -779,12 +928,46 @@ final class WP_Installer{
 
     }
 
+    public function get_extra_url_parameters(){
+
+        $parameters = array();
+
+        if(!empty($this->package_source)){
+            foreach($this->package_source as $key => $val){
+                $parameters[$key] = $val;
+            }
+        }
+
+        $parameters['installer_version']  = WP_INSTALLER_VERSION;
+        $parameters['theme']              = wp_get_theme()->get( 'Name' );
+        $parameters['site_name']          = get_bloginfo( 'name' );
+
+        return $parameters;
+    }
+
     public function append_parameters_to_buy_url($url, $repository_id, $args = array()){
 
         $url = add_query_arg( array('icl_site_url' => $this->get_installer_site_url() ), $url );
         
         $affiliate_id   = false;
         $affiliate_key  = false;
+
+        // Add extra parameters for custom Installer packages
+        if( !empty($this->package_source) ){
+            $extra = $this->get_extra_url_parameters();
+
+            if( !empty($extra['repository']) && $extra['repository'] == $repository_id ) {
+
+                if( !empty($extra['affiliate_key']) && !empty($extra['user_id']) ){
+                    $this->config['affiliate_id:' . $repository_id] = $extra['user_id'];
+                    $this->config['affiliate_key:' . $repository_id] = $extra['affiliate_key'];
+                    unset($extra['affiliate_key'], $extra['user_id'], $extra['repository']); // no need to include these ones
+                }
+
+                $url = add_query_arg($extra, $url);
+            }
+
+        }
 
         if(isset($this->config['affiliate_id:' . $repository_id]) && isset($this->config['affiliate_key:' . $repository_id])){
             
@@ -835,7 +1018,7 @@ final class WP_Installer{
         
         if($repository_id && $nonce && wp_create_nonce('save_site_key_' . $repository_id) == $nonce){
             
-            $subscription_data = $this->fetch_subscription_data($repository_id, $site_key);
+            $subscription_data = $this->fetch_subscription_data($repository_id, $site_key, self::SITE_KEY_VALIDATION_SOURCE_REGISTRATION);
             
             if(is_wp_error($subscription_data)){
                 $error = $subscription_data->get_error_message();
@@ -897,7 +1080,7 @@ final class WP_Installer{
 
             $site_key = $this->get_site_key($repository_id);
             if($site_key) {
-                $subscription_data = $this->fetch_subscription_data($repository_id, $site_key);
+                $subscription_data = $this->fetch_subscription_data( $repository_id, $site_key, self::SITE_KEY_VALIDATION_SOURCE_REVALIDATION);
                 if(empty($subscription_data)){
                     unset($this->settings['repositories'][$repository_id]['subscription']);
                     delete_site_transient('update_plugins');
@@ -922,7 +1105,7 @@ final class WP_Installer{
             $site_key = $this->get_site_key($_POST['repository_id']);
             
             if($site_key){
-                $subscription_data = $this->fetch_subscription_data($repository_id, $site_key);    
+                $subscription_data = $this->fetch_subscription_data( $repository_id, $site_key, self::SITE_KEY_VALIDATION_SOURCE_UPDATES_CHECK );
                 
                 if($subscription_data){
                     $this->settings['repositories'][$repository_id]['subscription'] = array('key' => $site_key, 'data' => $subscription_data);
@@ -960,14 +1143,15 @@ final class WP_Installer{
         
     }
     
-    public function fetch_subscription_data($repository_id, $site_key){
+    public function fetch_subscription_data( $repository_id, $site_key, $source = self::SITE_KEY_VALIDATION_SOURCE_OTHER ){
         
         $subscription_data = false;
 
         $args['body'] = array(
                 'action'    => 'site_key_validation',
                 'site_key'  => $site_key,
-                'site_url'  => $this->get_installer_site_url($repository_id)
+                'site_url'  => $this->get_installer_site_url($repository_id),
+                'source'    => $source
         );
 
         if($repository_id == 'wpml'){
@@ -975,13 +1159,32 @@ final class WP_Installer{
             $args['body']['wpml_version']   = $this->_wpml_version;
         }
 
+        $args['body']['installer_version']  = WP_INSTALLER_VERSION;
+        $args['body']['theme']              = wp_get_theme()->get( 'Name' );
+        $args['body']['site_name']          = get_bloginfo( 'name' );
+
+        $args['body']['versions']           = $this->get_local_product_versions( $repository_id );
+
         $args['timeout'] = 45;
+
+        // Add extra parameters for custom Installer packages
+        if( !empty($this->package_source) ){
+            $extra = $this->get_extra_url_parameters();
+            if( !empty($extra['repository']) && $extra['repository'] == $repository_id ) {
+                unset($extra['repository']);
+                foreach($extra as $key => $val){
+                    $args['body'][$key] = $val;
+                }
+            }
+        }
 
         $response = wp_remote_post($this->repositories[$repository_id]['api-url'], $args);
         
         $this->api_debug_log("POST {$this->repositories[$repository_id]['api-url']}");
         $this->api_debug_log($args);
-        
+
+        $this->log("POST {$this->repositories[$repository_id]['api-url']} - fetch subscription data");
+
         if(!is_wp_error($response)){
             $datas = wp_remote_retrieve_body($response);
             
@@ -991,10 +1194,13 @@ final class WP_Installer{
             }else{
                 $this->api_debug_log($datas);    
             }
-            
+
             if(!empty($data->subscription_data)){
                 $subscription_data =  $data->subscription_data;
             }
+
+            do_action( 'installer_fetched_subscription_data',  $data, $repository_id);
+
         }else{
             
             $this->api_debug_log($response);
@@ -1003,6 +1209,34 @@ final class WP_Installer{
 
         return $subscription_data;
         
+    }
+
+    function get_local_product_versions( $repository_id ){
+
+        $versions = array();
+
+        foreach( $this->settings['repositories'][$repository_id]['data']['packages'] as $package_id => $package ){
+
+            foreach( $package['products'] as $product_id => $product ){
+
+                foreach( $product['plugins'] as $plugin_slug ){
+
+                    $download = $this->settings['repositories'][$repository_id]['data']['downloads']['plugins'][$plugin_slug];
+
+                    if( empty( $versions[$download['slug']] ) ) {
+                        $v = $this->get_plugin_installed_version($download['name'], $download['slug']);
+                        if($v){
+                            $versions[$download['slug']] = $v;
+                        }
+                    }
+
+                }
+
+            }
+
+        }
+
+        return $versions;
     }
     
     public function get_repository_site_key($repository_id){
@@ -1162,7 +1396,9 @@ final class WP_Installer{
                         
                         foreach($package['products'] as $product){
                             
-                            foreach($product['downloads'] as $download){
+                            foreach($product['plugins'] as $plugin_slug){
+
+                                $download = $this->settings['repositories'][$repository_id]['data']['downloads']['plugins'][$plugin_slug];
 
                                 if($download['slug'] == $slug || $download['name'] == $plugin['Name'] || $download['name'] == $plugin['Title']){ //match order: slug, name, title
 
@@ -1329,15 +1565,30 @@ final class WP_Installer{
     }
     
     public function append_site_key_to_download_url($url, $key, $repository_id){
-        
-        $url = add_query_arg(array('site_key' => $key, 'site_url' => $this->get_installer_site_url($repository_id) ), $url);
+
+        $url_params['site_key'] = $key;
+        $url_params['site_url'] = $this->get_installer_site_url($repository_id);
+
+
+        // Add extra parameters for custom Installer packages
+        if( !empty($this->package_source) ){
+            $extra = $this->get_extra_url_parameters();
+            if( !empty($extra['repository']) && $extra['repository'] == $repository_id ) {
+                unset($extra['repository']);
+                foreach($extra as $key => $val){
+                    $url_params[$key] = $val;
+                }
+            }
+        }
+
+        $url = add_query_arg($url_params, $url);
 
         if($repository_id == 'wpml'){
             $url = add_query_arg(array('using_icl' => $this->_using_icl, 'wpml_version' => $this->_wpml_version), $url);
         }
 
         return $url;
-            
+
     }
     
     public function plugin_is_installed($name, $slug, $version = null){
@@ -1422,7 +1673,9 @@ final class WP_Installer{
             foreach($this->settings['repositories'][$repository_id]['data']['packages'] as $package){
                 foreach($package['products'] as $product) {
                     
-                    foreach($product['downloads'] as $download){
+                    foreach($product['plugins'] as $plugin_slug){
+
+                        $download = $this->settings['repositories'][$repository_id]['data']['downloads']['plugins'][$plugin_slug];
 
                         if($download['slug'] == $slug){
                             $version  = $download['version'];
@@ -1480,7 +1733,7 @@ final class WP_Installer{
 
         //validate subscription
         $site_key = $this->get_repository_site_key($data['repository_id']);
-        $subscription_data = $this->fetch_subscription_data($data['repository_id'], $site_key);
+        $subscription_data = $this->fetch_subscription_data( $data['repository_id'], $site_key , self::SITE_KEY_VALIDATION_SOURCE_DOWNLOAD_REPORT);
 
         if($subscription_data && !is_wp_error($subscription_data) && $this->repository_has_valid_subscription($data['repository_id'])){
 
@@ -1671,7 +1924,9 @@ final class WP_Installer{
                     
                     foreach($package['products'] as $product){
                         
-                        foreach($product['downloads'] as $download){
+                        foreach($product['plugins'] as $plugin_slug){
+
+                            $download = $this->settings['repositories'][$repository_id]['data']['downloads']['plugins'][$plugin_slug];
 
                             if($download['slug'] == $slug){
 
@@ -1718,8 +1973,6 @@ final class WP_Installer{
 
         if(!empty($this->settings['repositories'])){
 
-            $this->filter_downloads_by_icl(); //downloads for ICL users
-
             $plugins = get_plugins();
 
             foreach($plugins as $plugin_id => $plugin){
@@ -1744,7 +1997,9 @@ final class WP_Installer{
                         
                         foreach($package['products'] as $product){
                             
-                            foreach($product['downloads'] as $download){
+                            foreach($product['plugins'] as $plugin_slug){
+
+                                $download = $this->settings['repositories'][$repository_id]['data']['downloads']['plugins'][$plugin_slug];
 
                                 if(!empty($download['free-on-wporg'])) {
                                     continue;
@@ -1761,7 +2016,7 @@ final class WP_Installer{
                                     $response->url = $download['url'];
                                     if($site_key){
                                         $response->package = $this->append_site_key_to_download_url($download['url'], $site_key, $repository_id);
-                                    }                                
+                                    }
                                     $update_plugins->checked[$plugin_id]  = $version;
                                     $update_plugins->response[$plugin_id] = $response;
                                     
@@ -1806,7 +2061,9 @@ final class WP_Installer{
                     
                     foreach($package['products'] as $product){
                         
-                        foreach($product['downloads'] as $download){
+                        foreach($product['plugins'] as $plugin_slug){
+
+                            $download = $this->settings['repositories'][$repository_id]['data']['downloads']['plugins'][$plugin_slug];
 
                             if(!empty($download['free-on-wporg'])) {
                                 continue;
@@ -1814,7 +2071,7 @@ final class WP_Installer{
 
                             if( $download['slug'] == $slug || $download['name'] == $name ){
                                 
-                                if(!$site_key){
+                                if( !$site_key || !$this->plugin_is_registered($repository_id, $download['slug']) ){
                                     add_action( "after_plugin_row_" . $plugin_id, array($this, 'show_purchase_notice_under_plugin'), 10, 3 );
                                 }
                                 
@@ -2098,78 +2355,6 @@ final class WP_Installer{
         return $a['order'] > $b['order'];
     }
 
-    public function filter_downloads_by_icl(){
-        if(function_exists('wpml_site_uses_icl') && wpml_site_uses_icl()){
-
-            if(!empty($this->settings['repositories'])) {
-                foreach ($this->settings['repositories'] as $repository_id => $repository) {
-
-                    if (empty($repository['data']['packages'])) continue;
-
-                    foreach ($repository['data']['packages'] as $package_id => $package) {
-                        foreach($package['products'] as $product_id => $product){
-
-                            foreach($product['downloads'] as $download_id => $download){
-
-                                if(isset($download['version-for-icl']) && isset($download['url-for-icl'])){
-                                    $download['version'] = $download['version-for-icl'];
-                                    $download['url'] = $download['url-for-icl'];
-                                    unset($download['version-for-icl']);
-                                    unset($download['url-for-icl']);
-                                    $this->settings['repositories'][$repository_id]['data']['packages'][$package_id]['products'][$product_id]['downloads'][$download_id] = $download;
-
-                                }
-
-                            }
-                        }
-
-                    }
-
-                }
-            }
-
-        }
-
-        // Exception: WPML before 3.2 should not be able to upgrade to 3.2+ automatically
-        // Only when the exact folder name is used: sitepress-multilignaul-cms
-        $plugins = get_plugins();
-        foreach($plugins as $id => $plugin){
-            if( dirname($id) == 'sitepress-multilingual-cms' ){
-                $wpml_version = $plugin['Version'];
-
-            }
-        }
-
-        if(!empty($wpml_version) && version_compare( $wpml_version, '3.2', '<' )){
-            if(!empty($this->settings['repositories']['wpml'])) {
-
-                foreach ($this->settings['repositories']['wpml']['data']['packages'] as $package_id => $package) {
-                    foreach($package['products'] as $product_id => $product){
-
-                        foreach($product['downloads'] as $download_id => $download){
-
-                            $this->settings['repositories']['wpml']['data']['packages'][$package_id]['products'][$product_id]['downloads'][$download_id]['changelog'] = '';
-                            $this->settings['repositories']['wpml']['data']['packages'][$package_id]['products'][$product_id]['downloads'][$download_id]['description'] = '';
-
-                            if(isset($download['version-for-icl']) && isset($download['url-for-icl'])){
-                                $download['version'] = $download['version-for-icl'];
-                                $download['url'] = $download['url-for-icl'];
-                                unset($download['version-for-icl']);
-                                unset($download['url-for-icl']);
-                                $this->settings['repositories']['wpml']['data']['packages'][$package_id]['products'][$product_id]['downloads'][$download_id] = $download;
-
-                            }
-
-                        }
-                    }
-
-                }
-            }
-        }
-        // Exception pre-WPML 3.2 - END
-        
-    }
-
     public function get_support_tag_by_name( $name, $repository ){
 
         if( is_array($this->settings['repositories'][$repository]['data']['support_tags'] )){
@@ -2207,7 +2392,9 @@ final class WP_Installer{
 
                                 foreach ($package['products'] as $product) {
 
-                                    foreach ($product['downloads'] as $download) {
+                                    foreach ($product['plugins'] as $plugin_slug) {
+
+                                        $download = $this->settings['repositories'][$repository_id]['data']['downloads']['plugins'][$plugin_slug];
 
                                         if ($download['slug'] == $wp_plugin_slug) {
                                             $plugin_repository = $repository_id;
@@ -2233,7 +2420,7 @@ final class WP_Installer{
                             if(empty($sub_cache[$plugin_repository])){
                                 $site_key = $this->get_repository_site_key($plugin_repository);
                                 if ($site_key) {
-                                    $subscription_data = $this->fetch_subscription_data($plugin_repository, $site_key);
+                                    $subscription_data = $this->fetch_subscription_data( $plugin_repository, $site_key, self::SITE_KEY_VALIDATION_SOURCE_REVALIDATION );
                                 }
 
                                 $sub_cache[$plugin_repository]['site_key']             = $site_key;
@@ -2286,7 +2473,8 @@ final class WP_Installer{
 
                         foreach($package['products'] as $product){
 
-                            foreach($product['downloads'] as $download){
+                            foreach($product['plugins'] as $plugin_slug){
+                                $download = $this->settings['repositories'][$repository_id]['data']['downloads']['plugins'][$plugin_slug];
 
                                 //match by folder, will change to match by name and folder
                                 if($download['slug'] == $wp_plugin_slug) {
@@ -2310,7 +2498,7 @@ final class WP_Installer{
                     //validate subscription
                     $site_key = $this->get_repository_site_key($plugin_repository);
                     if ($site_key) {
-                        $subscription_data = $this->fetch_subscription_data($plugin_repository, $site_key);
+                        $subscription_data = $this->fetch_subscription_data( $plugin_repository, $site_key, self::SITE_KEY_VALIDATION_SOURCE_REVALIDATION );
                     }
 
                     if ( (empty($site_key) || empty($subscription_data)) && empty($free_on_wporg)) {
