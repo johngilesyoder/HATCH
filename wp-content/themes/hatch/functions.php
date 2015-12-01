@@ -778,7 +778,7 @@ function display_metaboxes() {
                     jQuery("#" + formats[selectedElt]).fadeIn();
             }
  
-            $(function() {
+            jQuery(function() {
                 // Show/hide metaboxes on page load
                 displayMetaboxes();
  
