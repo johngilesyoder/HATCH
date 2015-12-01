@@ -769,13 +769,13 @@ function display_metaboxes() {
 
             function displayMetaboxes() {
                 // Hide all post format metaboxes
-                $(ids).hide();
+                jQuery(ids).hide();
                 // Get current post format
-                var selectedElt = $("input[name='post_format']:checked").attr("id");
+                var selectedElt = jQuery("input[name='post_format']:checked").attr("id");
  
                 // If exists, fade in current post format metabox
                 if ( formats[selectedElt] )
-                    $("#" + formats[selectedElt]).fadeIn();
+                    jQuery("#" + formats[selectedElt]).fadeIn();
             }
  
             $(function() {
@@ -783,7 +783,7 @@ function display_metaboxes() {
                 displayMetaboxes();
  
                 // Show/hide metaboxes on change event
-                $("input[name='post_format']").change(function() {
+                jQuery("input[name='post_format']").change(function() {
                     displayMetaboxes();
                 });
             });

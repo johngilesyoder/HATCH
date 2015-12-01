@@ -35,7 +35,7 @@ if ( ! class_exists( 'WpssoTaxonomy' ) ) {
 				if ( ! $this->tax_obj->public )
 					return;
 
-				if ( $this->p->options['plugin_columns_taxonomy'] ) {
+				if ( ! empty( $this->p->options['plugin_columns_taxonomy'] ) ) {
 
 					add_filter( 'manage_edit-'.$this->tax_slug.'_columns', array( $this, 'add_column_headings' ), 10, 1 );
 					add_filter( 'manage_'.$this->tax_slug.'_custom_column', array( $this, 'get_taxonomy_column_content' ), 10, 3 );
@@ -238,7 +238,7 @@ if ( ! class_exists( 'WpssoTaxonomy' ) ) {
 			$this->head_info['post_id'] = false;
 
 			$this->form = new SucomForm( $this->p, WPSSO_META_NAME, $opts, $def_opts );
-			wp_nonce_field( $this->get_nonce(), WPSSO_NONCE );
+			wp_nonce_field( WpssoAdmin::get_nonce(), WPSSO_NONCE );
 
 			$metabox = 'taxonomy';
 			$tabs = apply_filters( $this->p->cf['lca'].'_'.$metabox.'_tabs',

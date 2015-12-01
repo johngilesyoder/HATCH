@@ -5,14 +5,14 @@
  * Text Domain: wpsso
  * Domain Path: /languages
  * Plugin URI: http://surniaulula.com/extend/plugins/wpsso/
- * Author: Jean-Sebastien Morisset
+ * Author: JS Morisset
  * Author URI: http://surniaulula.com/
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl.txt
  * Description: Fast, light-weight, full-featured plugin for great looking shares on all social sites - no matter how your content is shared or re-shared!
  * Requires At Least: 3.1
  * Tested Up To: 4.3.1
- * Version: 3.14.2
+ * Version: 3.16.0
  * 
  * Copyright 2012-2015 - Jean-Sebastien Morisset - http://surniaulula.com/
  */

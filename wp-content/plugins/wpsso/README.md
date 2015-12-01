@@ -3,13 +3,13 @@
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WordPress Social Sharing Optimization (WPSSO)</td></tr>
 <tr><th align="right" valign="top" nowrap>Summary</th><td>Fast, light-weight, full-featured plugin for great looking shares on all social sites - no matter how your content is shared or re-shared!</td></tr>
-<tr><th align="right" valign="top" nowrap>Stable Version</th><td>3.14.2</td></tr>
+<tr><th align="right" valign="top" nowrap>Stable Version</th><td>3.16.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires At Least</th><td>WordPress 3.1</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 4.3.1</td></tr>
 <tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>
 <tr><th align="right" valign="top" nowrap>Website URL</th><td><a href="https://wpsso.com/">https://wpsso.com/</a></td></tr>
 <tr><th align="right" valign="top" nowrap>License</th><td><a href="http://www.gnu.org/licenses/gpl.txt">GPLv3</a></td></tr>
-<tr><th align="right" valign="top" nowrap>Tags / Keywords</th><td>attached, bbPress, buddypress, e-commerce, easy digital downloads, edd, Facebook, featured, g+, gallery, google, google plus, hashtags, imagebrowser, jetpack, JSON-LD, knowledge graph, linkedin, marketpress, meta-tags, multilingual, multisite, nextgen gallery, nggalbum, nggallery, object cache, open graph, photon, pinterest, player card, polylang, rich pins, schema, seo, singlepic, slideshare, social, Summary Card, transient cache, twitter, twitter cards, vimeo, wistia, woocommerce, wpsso, wp_cache, youtube</td></tr>
+<tr><th align="right" valign="top" nowrap>Tags / Keywords</th><td>attached, bbPress, buddypress, e-commerce, easy digital downloads, edd, Facebook, featured, g+, gallery, google, google plus, hashtags, imagebrowser, jetpack, JSON-LD, knowledge graph, linkedin, marketpress, meta-tags, multilingual, multisite, nextgen gallery, nggalbum, nggallery, object cache, open graph, photon, pinterest, player card, polylang, rich pins, schema, seo, singlepic, slideshare, social, Summary Card, transient cache, twitter, twitter cards, vimeo, wistia, woocommerce, wpsso, wp_cache, youtube, yotpo</td></tr>
 </table>
 
 <h2>Description</h2>
@@ -149,9 +149,10 @@
 <li>MarketPress - WordPress eCommerce</li>
 <li>Polylang</li>
 <li><a href="https://wordpress.org/plugins/woocommerce/">WooCommerce v1 and v2</a></li>
-<li>Yoast SEO (aka WordPress SEO)</li>
 <li>WP e-Commerce</li>
 <li><a href="https://wordpress.org/plugins/rest-api/">WordPress REST API v2</a></li>
+<li>Yoast SEO (aka WordPress SEO)</li>
+<li>Yotpo Social Reviews for WooCommerce</li>
 </ul></li>
 <li><strong>Supported Service APIs</strong>
 

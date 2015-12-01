@@ -596,6 +596,8 @@ if ( ! class_exists( 'SucomUtil' ) ) {
 					$url = get_search_link();
 
 				} elseif ( is_front_page() ) {
+					if ( $this->p->debug->enabled )
+						$this->p->debug->log( 'home_url(/) = '.home_url( '/' ) );
 					$url = apply_filters( $this->p->cf['lca'].'_home_url', home_url( '/' ) );
 
 				} elseif ( is_home() && 'page' === get_option( 'show_on_front' ) ) {
@@ -646,6 +648,8 @@ if ( ! class_exists( 'SucomUtil' ) ) {
 					else {
 						if ( is_front_page() ) {
 							$base = $GLOBALS['wp_rewrite']->using_index_permalinks() ? 'index.php/' : '/';
+							if ( $this->p->debug->enabled )
+								$this->p->debug->log( 'home_url('.$base.') = '.home_url( $base ) );
 							$url = home_url( $base );
 						}
 						$url = user_trailingslashit( trailingslashit( $url ).
@@ -1392,6 +1396,28 @@ if ( ! class_exists( 'SucomUtil' ) ) {
 					break;
 			}
 			asort( $ret );
+			return $ret;
+		}
+
+		public static function get_stripped_php ( $file ) {
+			$ret = '';
+			if ( file_exists( $file ) ) {
+				$php = file_get_contents( $file );
+				$comments = array(T_COMMENT); 
+				if ( defined( 'T_DOC_COMMENT' ) )
+					$comments[] = T_DOC_COMMENT;	// php 5
+				if ( defined( 'T_ML_COMMENT' ) )
+				        $comments[] = T_ML_COMMENT;	// php 4
+				$tokens = token_get_all( $php );
+				foreach ( $tokens as $token ) {
+					if ( is_array( $token ) ) {
+						if ( in_array( $token[0], $comments ) )
+							continue; 
+						$token = $token[1];
+					}
+					$ret .= $token;
+				}
+			} else $ret = false;
 			return $ret;
 		}
 	}

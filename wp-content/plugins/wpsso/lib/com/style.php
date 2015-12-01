@@ -133,17 +133,47 @@ if ( ! class_exists( 'SucomStyle' ) ) {
 			display:none;
 		}
 	}
+	.'.$lca.'-notice.error,
+	.'.$lca.'-notice.updated {
+		padding:0;
+	}
+	.'.$lca.'-notice .notice-label {
+		display:table-cell;
+		vertical-align:top;
+		padding:10px;
+		margin:0;
+		white-space:nowrap;
+		font-weight:bold;
+		background:#fcfcfc;
+		border-right:1px solid #ddd;
+	}
+	.'.$lca.'-notice .notice-message {
+		display:table-cell;
+		vertical-align:top;
+		padding:10px 20px;
+		margin:0;
+		line-height:1.5em;
+	}
 	.'.$lca.'-notice ul {
 		margin:5px 0 5px 40px;
 		list-style:disc outside none;
 	}
+	.'.$lca.'-dismissible .notice-dismiss:before {
+		display:inline-block;
+		margin-right:2px;
+	}
 	.'.$lca.'-dismissible .notice-dismiss {
-		position:relative;
 		float:right;
-		margin:4px 0;
-		padding:0;
+		position:relative;
+		padding:10px;
+		margin:0;
 		top:0;
 		right:0;
+	}
+	.'.$lca.'-dismissible .notice-dismiss-text {
+		display:inline-block;
+		font-size:12px;
+		vertical-align:top;
 	}
 </style>';
 		}

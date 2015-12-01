@@ -59,7 +59,7 @@ if ( ! class_exists( 'WpssoMessages' ) ) {
 						 * Free version
 						 */
 						case 'tooltip-side-author-json-ld':
-							$text = __( 'Add author (Person) social profiles markup to webpage headers in schema.org JSON-LD format for Google Search.', 'wpsso' );
+							$text = __( 'Include author (Person) social profiles markup to webpage headers in schema.org JSON-LD format for Google Search.', 'wpsso' );
 							break;
 						case 'tooltip-side-debug-messages':
 							$text = sprintf( __( 'The debug library is loaded when the <em>Add Hidden Debug Messages</em> option is checked, or one of the debugging <a href="%s" target="_blank">constants</a> is defined.', 'wpsso' ), 'http://surniaulula.com/codex/plugins/wpsso/notes/constants/' );
@@ -71,7 +71,7 @@ if ( ! class_exists( 'WpssoMessages' ) ) {
 							$text = __( 'Facebook / Open Graph and Pinterest Rich Pin meta tags are added to the head section of all webpages. You must have a supported eCommerce plugin installed to add <em>Product</em> Rich Pins, including product prices and attributes.', 'wpsso' );
 							break;
 						case 'tooltip-side-publisher-json-ld':
-							$text = __( 'Add publisher (Organization) social profiles markup to webpage headers in schema.org JSON-LD format for Google Search.', 'wpsso' );
+							$text = __( 'Include publisher (Organization) social profiles markup to webpage headers in schema.org JSON-LD format for Google Search.', 'wpsso' );
 							break;
 						case 'tooltip-side-transient-cache':
 							$text = sprintf( __( 'The plugin saves Facebook / Open Graph, Pinterest Rich Pin, Twitter Card meta tags, and JSON-LD markup to a persistant (aka <a href="%1$s" target="_blank">Transient</a>) cache for %2$d seconds. You can adjust the Transient cache expiration value on the <a href="%3$s">%4$s</a> settings page, or disable it completely by using one of the available <a href="%5$s" target="_blank">constants</a>.', 'wpsso' ), 'https://codex.wordpress.org/Transients_API', $this->p->options['plugin_object_cache_exp'], $this->p->util->get_admin_url( 'advanced' ), _x( 'Advanced', 'lib file description', 'wpsso' ), 'http://surniaulula.com/codex/plugins/wpsso/notes/constants/' );
@@ -393,7 +393,8 @@ if ( ! class_exists( 'WpssoMessages' ) ) {
 							$text = $atts['short'].' hooks the "language_attributes" filter to add / modify required Open Graph namespace prefix values by default. The "language_attributes" filter and function are used by most themes &mdash; if the namespace prefix values are missing from your &amp;lt;html&amp;gt; element, make sure your header.php template uses the language_attributes() function. Leaving this option blank disables the addition of Open Graph namespace values. Example template code: <pre><code>&amp;lt;html &amp;lt;?php language_attributes(); ?&amp;gt;&amp;gt;</code></pre>';
 							break;
 						case 'tooltip-plugin_head_attr_filter':
-							$text = $atts['short'].' hooks the "language_attributes" filter to modify the &amp;lt;html&amp;gt; element for Schema itemscope / itemtype markup by default. The &amp;lt;head&amp;gt; element is actually the preferred location for this markup, but WordPress does not offer a standard filter for the &amp;lt;head&amp;gt; element attributes. If your theme has a filter for its &amp;lt;head&amp;gt; element attributes (that returns a complete attribute string), enter its name here. Alternatively, you can use the '.$atts['short'].' Schema attributes function instead (see example). Leaving this option blank disables the addition of Schema itemprop / itemtype markup. Example template code: <pre><code>&amp;lt;head&amp;lt;?php '.$atts['lca'].'_schema_attributes(); ?&amp;gt;&amp;gt;</code></pre>';
+							$text = $atts['short'].' hooks the "head_attributes" filter to add / modify the <code>&amp;lt;head&amp;gt;</code> element attributes for the Schema itemscope / itemtype markup. If your theme offers a filter for <code>&amp;lt;head&amp;gt;</code> element attributes, enter its name here. Alternatively, you can add the "head_attributes" filter code manually to your header.php template. Example code:
+<pre><code>&amp;lt;head &amp;lt;?php echo apply_filters( \'head_attributes\', \'\' ); ?&amp;gt;&amp;gt;</code></pre>';
 							break;
 						/*
 						 * 'File and Object Cache' settings
@@ -402,7 +403,7 @@ if ( ! class_exists( 'WpssoMessages' ) ) {
 							// use the original un-filtered value
 							$exp_sec = WpssoConfig::$cf['opt']['defaults']['plugin_object_cache_exp'];
 							$exp_hrs = sprintf( '%0.2d', $exp_sec / 60 / 60 );
-							$text = $atts['short'].' saves filtered and rendered content to a non-persistant cache (aka <a href="https://codex.wordpress.org/Class_Reference/WP_Object_Cache" target="_blank">WP Object Cache</a>), and the meta tag HTMLs to a persistant (aka <a href="https://codex.wordpress.org/Transients_API" target="_blank">Transient</a>) cache. The default is '.$exp_sec.' seconds ('.$exp_hrs.' hrs), and the minimum value is 1 second (values bellow 3600 seconds are not recommended).<br/><br/>If you have database performance issues, or don’t use an object / transient cache (like APC, XCache, memcache, etc.), you may want to disable the transient caching feature completely by setting the WPSSO_TRANSIENT_CACHE_DISABLE constant to true.';
+							$text = '<p>'.$atts['short'].' saves filtered and rendered content to a non-persistant cache (aka <a href="https://codex.wordpress.org/Class_Reference/WP_Object_Cache" target="_blank">WP Object Cache</a>), and the meta tag HTMLs to a persistant (aka <a href="https://codex.wordpress.org/Transients_API" target="_blank">Transient</a>) cache. The default is '.$exp_sec.' seconds ('.$exp_hrs.' hrs), and the minimum value is 1 second (values bellow 3600 seconds are not recommended).</p><p>If you have database performance issues, or don’t use an object / transient cache (like APC, XCache, memcache, etc.), you may want to disable the transient caching feature completely by setting the WPSSO_TRANSIENT_CACHE_DISABLE constant to true.</p>';
 							break;
 						case 'tooltip-plugin_verify_certs':
 							$text = 'Enable verification of peer SSL certificates when fetching content to be cached using HTTPS. The PHP \'curl\' function will use the '.WPSSO_CURL_CAINFO.' certificate file by default. You can define a WPSSO_CURL_CAINFO constant in your wp-config.php file to use an alternate certificate file.';
@@ -473,12 +474,6 @@ if ( ! class_exists( 'WpssoMessages' ) ) {
 						case 'tooltip-google_seo_desc_len':
 							$text = 'The maximum length of text used for the Google Search / SEO description meta tag. The length should be at least '.$this->p->cf['head']['min_desc_len'].' characters or more (the default is '.$this->p->opt->get_defaults( 'seo_desc_len' ).' characters).';
 							break;
-						case 'tooltip-google_schema_desc_len':
-							$text = 'The maximum length of text used for the Google+ / Schema description meta tag. The length should be at least '.$this->p->cf['head']['min_desc_len'].' characters or more (the default is '.$this->p->opt->get_defaults( 'schema_desc_len' ).' characters).';
-							break;
-						case 'tooltip-google_schema_logo_url':
-							$text = 'The URL to an image that Google should use as your organization\'s logo in search results and their <em>Knowledge Graph</em>.';
-							break;
 						case 'tooltip-google_author_name':
 							$text = sprintf( __( 'Select an \'%1$s\' to use for the \'%2$s\' meta tag, or \'[none]\' to disable this feature (the recommended value is \'Display Name\').', 'wpsso' ), _x( 'Author Name Format', 'option label', 'wpsso' ), 'author' ).' Facebook uses the "author" meta tag value to credit the author on timeline shares, but the <strong>Facebook Debugger will show a warning</strong> &mdash; thus it is disabled by default. Now that you know about the false warning from the Facebook Debugger, you should set this option to \'Display Name\'. ;-)';
 							break;
@@ -494,14 +489,23 @@ if ( ! class_exists( 'WpssoMessages' ) ) {
 						case 'tooltip-google_def_author_on_search':
 							$text = 'Check this option if you would like to force the Default Author on search result webpages as well.';
 							break;
-						case 'tooltip-google_schema_website_json':
-							$text = 'Add schema Website markup to webpage headers for Google Search. The Website information includes the site name, URL, and search query URL.';
+						case 'tooltip-google_schema_logo_url':
+							$text = 'The URL to an image that Google should use as your organization\'s logo in search results and their <em>Knowledge Graph</em>.';
 							break;
-						case 'tooltip-google_schema_publisher_json':
-							$text = 'Add publisher (Organization) social profiles markup to webpage headers for Google Search. All URLs entered on the '.$this->p->util->get_admin_url( 'social-accounts', 'Website / Business Social Accounts settings page' ).' will be included. The Open Graph Default Image ID / URL will be used as the Organization image, and the Schema Website / Business Logo URL will be used as the Organization\'s logo.';
+						case 'tooltip-google_schema_desc_len':
+							$text = 'The maximum length of text used for the Google+ / Schema description meta tag. The length should be at least '.$this->p->cf['head']['min_desc_len'].' characters or more (the default is '.$this->p->opt->get_defaults( 'schema_desc_len' ).' characters).';
 							break;
 						case 'tooltip-google_schema_author_json':
-							$text = 'Add author (Person) social profiles markup to webpage headers for Google Search. <strong>The author must have entered a valid URL in the Website field of their user profile page</strong>. All URLs within the various contact method fields will be listed in the social profile markup. The "Twitter @username" field will be used to include a URL for their Twitter profile.';
+							$text = 'Include author (Person) social profiles markup to webpage headers for Google Search. <strong>The author must have entered a valid URL in the Website field of their user profile page</strong>. All URLs within the various contact method fields will be listed in the social profile markup. The "Twitter @username" field will be used to include a URL for their Twitter profile.';
+							break;
+						case 'tooltip-google_schema_publisher_json':
+							$text = 'Include publisher (Organization) social profiles markup to webpage headers for Google Search. All URLs entered on the '.$this->p->util->get_admin_url( 'social-accounts', 'Website / Business Social Accounts settings page' ).' will be included. The Open Graph Default Image ID / URL will be used as the Organization image, and the Schema Website / Business Logo URL will be used as the Organization\'s logo.';
+							break;
+						case 'tooltip-google_schema_website_json':
+							$text = 'Include Website schema markup in webpage headers for Google Search. The Website information includes the site name, URL, and search query URL.';
+							break;
+						case 'tooltip-google_schema_add_noscript':
+							$text = 'When additional schema properties are available (product ratings, for example), one or more "noscript" containers can be included in webpage headers. The "noscript" container is read correctly by the Google Structured Data Testing Tool, but the W3C Validator will show errors for the included meta tags (these errors can be safely ignored).';
 							break;
 						default:
 							$text = apply_filters( $lca.'_messages_tooltip_google', $text, $idx, $atts );
@@ -627,7 +631,7 @@ if ( ! class_exists( 'WpssoMessages' ) ) {
 						$text = '<blockquote class="top-info"><p>'.__( 'After purchasing Pro version license(s), an email is sent to you with a unique Authentication ID and installation / activation instructions.', 'wpsso' ).' '.__( 'Enter the unique Authentication ID on this page to define a default / forced value for <em>all</em> sites within the network, or enter the Authentication ID(s) individually on each site\'s Pro Licenses settings page.', 'wpsso' ).' <strong>'.sprintf( __( 'Please note that the <em>default</em> site / blog must be licensed and the %1$s extension must be active in order to install %2$s Pro updates from the Network admin interface.', 'wpsso' ), $um_name, $atts['short'] ).'</strong></p></blockquote>';
 						break;
 					case 'info-review':
-						$text = '<blockquote class="top-info"><p>'.sprintf( __( 'If you appreciate the features, quality, and/or support of this plugin, please <a href="%1$s" target="_blank">take a moment to rate the %2$s plugin on WordPress.org</a>.', 'wpsso' ), $url['review'], $atts['short'] ).' '.sprintf( __( 'Your rating will help other WordPress users find higher quality and better supported plugins &mdash; and <strong>encourage us to keep improving %s</strong> as well!', 'wpsso' ), $atts['short'] ).' ;-)</p></blockquote>';
+						$text = '<blockquote class="top-info"><p>'.sprintf( __( 'If you appreciate the features, quality and support of this plugin, please <a href="%1$s" target="_blank">take a moment to rate the %2$s plugin on WordPress.org</a>.', 'wpsso' ), $url['review'], $atts['short'] ).' '.sprintf( __( 'Your rating will help other WordPress users find higher quality and well supported plugins &mdash; along with <strong>encouraging us to keep improving %s</strong> as well!', 'wpsso' ), $atts['short'] ).' ;-)</p></blockquote>';
 						break;
 					case 'info-pub-pinterest':
 						$text = '<blockquote class="top-info"><p>'.__( 'Pinterest uses the Open Graph standard meta tags for their Rich Pins.', 'wpsso' ).' '.__( 'These options allow you to manage and/or override some Pinterest-specific Open Graph settings.', 'wpsso' ).' '.__( 'Please note that if you use a caching plugin, or front-end caching service, it should detect the Pinterest crawler user-agent and bypass its cache (for example, look for a <em>User-Agent Exclusion Pattern</em> option and add "Pinterest/" to that list).', 'wpsso' ).' '.sprintf( __( 'This will allow %s to provide different / customized meta tags specifically for the Pinterest crawler.', 'wpsso' ), $atts['short'] ).'</p></blockquote>';
@@ -679,15 +683,20 @@ if ( ! class_exists( 'WpssoMessages' ) ) {
 					case 'notice-missing-og-image':
 						$text = __( 'An Open Graph image meta tag could not be created from this webpage content &mdash; Facebook and other social websites <em>require</em> at least one Open Graph image meta tag to render shared content correctly.', 'wpsso' ).' '.__( 'You may select an optional customized image, for Facebook and other social websites, in the Social Settings metabox under the Priority Media tab.', 'wpsso' );
 						break;
-					case 'notice-content-filters-disabled':
-						$text = '<b>'.sprintf( __( 'The <a href="%1$s">%2$s</a> advanced option is currently disabled.', 'wpsso' ), $this->p->util->get_admin_url( 'advanced#sucom-tabset_plugin-tab_content' ), _x( 'Apply WordPress Content Filters', 'option label', 'wpsso' ) ).'</b> '.sprintf( __( 'The use of WordPress content filters allows %s to fully render your content text for meta tag descriptions, and detect additional images / embedded videos provided by shortcodes.', 'wpsso' ), $atts['short'] ).'<br/><br/><b>'.__( 'Some theme / plugins have badly coded content filters, so this option is disabled by default.', 'wpsso' ).'</b> '.sprintf( __( '<a href="%s">If you use any shortcodes in your content text, this option should be enabled</a> &mdash; if you experience display issues after enabling this option, determine which theme / plugin content filter is at fault, and report the problem to its author(s).', 'wpsso' ), $this->p->util->get_admin_url( 'advanced#sucom-tabset_plugin-tab_content' ) );
-						break;
 					case 'notice-object-cache-exp':
 						$text = sprintf( __( 'Please note that the <a href="%1$s">%2$s</a> advanced option is currently set at %3$d seconds &mdash; this is lower than the recommended default value of %4$d seconds.', 'wpsso' ), $this->p->util->get_admin_url( 'advanced#sucom-tabset_plugin-tab_cache' ), _x( 'Object Cache Expiry', 'option label', 'wpsso' ), $this->p->options['plugin_object_cache_exp'], $this->p->opt->get_defaults( 'plugin_object_cache_exp' ) );
 						break;
+					case 'notice-content-filters-disabled':
+						$text = '<p><b>'.sprintf( __( 'The <a href="%1$s">%2$s</a> advanced option is currently disabled.', 'wpsso' ), $this->p->util->get_admin_url( 'advanced#sucom-tabset_plugin-tab_content' ), _x( 'Apply WordPress Content Filters', 'option label', 'wpsso' ) ).'</b> '.sprintf( __( 'The use of WordPress content filters allows %s to fully render your content text for meta tag descriptions, and detect additional images / embedded videos provided by shortcodes.', 'wpsso' ), $atts['short'] ).'</p><p><b>'.__( 'Some theme / plugins have badly coded content filters, so this option is disabled by default.', 'wpsso' ).'</b> '.sprintf( __( '<a href="%s">If you use any shortcodes in your content text, this option should be enabled</a> (Pro version required) &mdash; if you experience display issues after enabling this option, determine which theme / plugin content filter is at fault, and report the problem to its author(s).', 'wpsso' ), $this->p->util->get_admin_url( 'advanced#sucom-tabset_plugin-tab_content' ) ).'</p><p>'.sprintf( __( 'Note: This options sanity check is only performed when updating the %s plugin.', 'wpsso' ), $atts['short'] ).'</p>';
+						break;
+					case 'notice-header-tmpl-default-head':
+						$edit_url = get_admin_url( null, 'theme-editor.php?file=header.php&theme='.get_stylesheet() );
+						$update_url = wp_nonce_url( $this->p->util->get_admin_url( '?action=head_attr_filter_update' ), WpssoAdmin::get_nonce(), WPSSO_NONCE );
+						$text = '<p><b>'.__( 'Your header.php theme template does not support Schema markup of webpage headers.', 'wpsso' ).'</b> '.sprintf( __( 'The %s element in your header.php theme template should include a filter function call for its attributes.', 'wpsso' ), '<code>&lt;head&gt;</code>' ).' '.sprintf( __( '%1$s can update the header.php theme template automatically for you to change the default %2$s element to:', 'wpsso' ), $atts['short'], '<code>&lt;head&gt;</code>' ).'</p><pre><code>&lt;head &lt;?php echo apply_filters( \'head_attributes\', \'\' ); ?&gt;&gt;</code></pre><p>'.sprintf( __( '<b><a href="%1$s">Click here to update the header.php theme template automatically</a></b> &mdash; or <a href="%2$s">modify the template yourself using the WordPress editor</a>.', 'wpsso' ), $update_url, $edit_url ).'</p><p>'.sprintf( __( 'Note: This template sanity check is only performed when updating the %s plugin, updating a theme, or activating a new theme.', 'wpsso' ), $atts['short'] ).'</p>';
+						break;
 					case 'notice-pro-tid-missing':
 						if ( ! is_multisite() )
-							$text = '<b>'.sprintf( __( 'The %1$s plugin %2$s option is empty.', 'wpsso' ), $atts['name'], _x( 'Pro Authentication ID', 'option label', 'wpsso' ) ).'</b><br/>'.sprintf( __( 'To enable Pro version features and allow the plugin to authenticate itself for updates, please enter the unique Authentication ID you received by email on the <a href="%s">Pro Licenses settings page</a>.', 'wpsso' ), $this->p->util->get_admin_url( 'licenses' ) );
+							$text = '<b>'.sprintf( __( 'The %1$s plugin %2$s option is empty.', 'wpsso' ), $atts['name'], _x( 'Pro Authentication ID', 'option label', 'wpsso' ) ).'</b> '.sprintf( __( 'To enable Pro version features and allow the plugin to authenticate itself for updates, please enter the unique Authentication ID you received by email on the <a href="%s">Pro Licenses settings page</a>.', 'wpsso' ), $this->p->util->get_admin_url( 'licenses' ) );
 						break;
 					case 'notice-pro-not-installed':
 						$text = sprintf( __( 'An Authentication ID has been entered for %s, but the Pro version is not yet installed &ndash; don\'t forget to update this plugin to install the latest Pro version.', 'wpsso' ), $atts['name'] );

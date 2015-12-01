@@ -33,7 +33,7 @@ if ( ! class_exists( 'WpssoUser' ) ) {
 				add_action( 'admin_head', array( &$this, 'set_head_meta_tags' ), 100 );
 				add_action( 'show_user_profile', array( &$this, 'show_metaboxes' ), 20 );	// your profile
 
-				if ( $this->p->options['plugin_columns_user'] ) {
+				if ( ! empty( $this->p->options['plugin_columns_user'] ) ) {
 
 					add_filter( 'manage_users_columns', array( $this, 'add_column_headings' ), 10, 1 );
 					add_filter( 'manage_users_custom_column', array( $this, 'get_user_column_content',), 10, 3 );
@@ -174,7 +174,7 @@ if ( ! class_exists( 'WpssoUser' ) ) {
 			$this->head_info['post_id'] = false;
 
 			$this->form = new SucomForm( $this->p, WPSSO_META_NAME, $opts, $def_opts );
-			wp_nonce_field( $this->get_nonce(), WPSSO_NONCE );
+			wp_nonce_field( WpssoAdmin::get_nonce(), WPSSO_NONCE );
 
 			$metabox = 'user';
 			$tabs = apply_filters( $this->p->cf['lca'].'_'.$metabox.'_tabs',
@@ -392,6 +392,10 @@ if ( ! class_exists( 'WpssoUser' ) ) {
 					$name = get_the_author_meta( $field_id, $author_id );	// since wp 2.8.0 
 					break;
 			}
+
+			if ( $this->p->debug->enabled )
+				$this->p->debug->log( 'author_id '.$author_id.' '.$field_id.' name: '.$name );
+
 			return $name;
 		}
 
@@ -421,6 +425,10 @@ if ( ! class_exists( 'WpssoUser' ) ) {
 					}
 					break;
 			}
+
+			if ( $this->p->debug->enabled )
+				$this->p->debug->log( 'author_id '.$author_id.' '.$field_id.' url: '.$url );
+
 			return $url;
 		}
 

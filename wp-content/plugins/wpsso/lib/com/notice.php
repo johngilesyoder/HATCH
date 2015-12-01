@@ -23,8 +23,6 @@ if ( ! class_exists( 'SucomNotice' ) ) {
 			'inf' => array(),
 		);
 
-		public $can_dismiss = false;
-
 		public function __construct( &$plugin ) {
 			$this->p =& $plugin;
 
@@ -47,11 +45,14 @@ if ( ! class_exists( 'SucomNotice' ) ) {
 				add_action( 'wp_ajax_'.$this->lca.'_dismiss_notice', array( &$this, 'ajax_dismiss_notice' ) );
 				add_action( 'admin_footer', array( &$this, 'admin_footer_script' ) );
 				add_action( 'all_admin_notices', array( &$this, 'show_admin_notices' ), 5 );	// since wp 3.1
-
-				global $wp_version;
-				if ( version_compare( $wp_version, 4.2, '>=' ) )
-					$this->can_dismiss = true;
 			}
+		}
+
+		public function can_dismiss() {
+			global $wp_version;
+			if ( version_compare( $wp_version, 4.2, '>=' ) )
+				return true;
+			else return false;
 		}
 
 		public function nag( $msg_txt, $store = false, $user_id = true, $msg_id = false ) { 
@@ -66,7 +67,7 @@ if ( ! class_exists( 'SucomNotice' ) ) {
 			$this->log( 'inf', $msg_txt, $store, $user_id, $msg_id, $dismiss );
 		}
 
-		// $user_id can be true, false, or an ID number
+		// $user_id can be true, false, or an id number
 		// $dismiss can be true, false, or a number of seconds
 		public function log( $type, $msg_txt, $store = false, $user_id = true, $msg_id = false, $dismiss = false, 
 			$payload = array() ) {
@@ -81,7 +82,7 @@ if ( ! class_exists( 'SucomNotice' ) ) {
 
 			$payload['dismiss'] = ! empty( $dismiss ) && 
 				! empty( $msg_id ) && 
-					$this->can_dismiss === true ? 
+					$this->can_dismiss() === true ? 
 						$dismiss : false;
 			
 			// save message until it can be displayed
@@ -106,8 +107,12 @@ if ( ! class_exists( 'SucomNotice' ) ) {
 				$this->log[$type][$msg_txt] = $payload;
 		}
 
+		public function trunc_id( $msg_id ) {
+			return $this->trunc( '', '', true, true, $msg_id );
+		}
+
 		// truncates all notices by default
-		public function trunc( $type = '', $msg_txt = '', $store = true, $user_id = true ) {
+		public function trunc( $type = '', $msg_txt = '', $store = true, $user_id = true, $msg_id = false ) {
 			$types = empty( $type ) ? 
 				array_keys( $this->log ) : 
 				array( $type );
@@ -118,8 +123,16 @@ if ( ! class_exists( 'SucomNotice' ) ) {
 				$have_changes = false;
 				foreach ( $types as $type ) {
 					if ( isset( $all_opts[$name][$type] ) ) {
+						// clear msg for a specific msg id
+						if ( ! empty( $msg_id ) ) {
+							foreach ( $all_opts[$name][$type] as $msg_txt => $payload ) {
+								if ( $payload['msg_id'] === $type.'_'.$msg_id ) {
+									unset( $all_opts[$name][$type][$msg_txt] );
+									$have_changes = true;
+								}
+							}
 						// clear all msgs for that type
-						if ( empty( $msg_txt ) ) {
+						} elseif ( empty( $msg_txt ) ) {
 							if ( $name === 'log' )
 								$this->log[$type] = array();
 							else {
@@ -182,7 +195,6 @@ if ( ! class_exists( 'SucomNotice' ) ) {
 			foreach ( array( 'opt', 'usr', 'log' ) as $name ) {
 				foreach ( array_keys( $this->log ) as $type ) {
 					foreach ( $all_opts[$name][$type] as $msg_txt => $payload ) {
-
 						if ( empty( $msg_txt ) || 
 							isset( $all_msgs[$msg_txt] ) )
 								continue;
@@ -349,16 +361,15 @@ if ( ! class_exists( 'SucomNotice' ) ) {
 					$msg_class.'"'.$cssid_attr.$style_attr.$data_attr.'>';	// display block or none
 
 			if ( ! empty( $payload['dismiss'] ) )
-				$msg_html .= '<div class="notice-dismiss"></div>';		// floats right
+				$msg_html .= '<div class="notice-dismiss"><div class="notice-dismiss-text">Dismiss</div></div>';
 
 			if ( ! empty( $payload['label'] ) ) {
-				$msg_html .= '<div style="display:table-cell;">
-					<p style="white-space:nowrap;margin-right:10px;">
-						<b>'.$payload['label'].'</b>:</p></div>';
+				$msg_html .= '<div class="notice-label">'.
+					$payload['label'].'</div>';
 			}
 
-			$msg_html .= '<div style="display:table-cell;">
-				<p>'.$msg_txt.'</p></div>';
+			$msg_html .= '<div class="notice-message">'.
+				$msg_txt.'</div>';
 
 			$msg_html .= '</div>'."\n";
 

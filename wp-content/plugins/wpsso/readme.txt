@@ -5,12 +5,12 @@ Text Domain: wpsso
 Domain Path: /languages
 Contributors: jsmoriss
 Donate Link: https://wpsso.com/
-Tags: attached, bbPress, buddypress, e-commerce, easy digital downloads, edd, Facebook, featured, g+, gallery, google, google plus, hashtags, imagebrowser, jetpack, JSON-LD, knowledge graph, linkedin, marketpress, meta-tags, multilingual, multisite, nextgen gallery, nggalbum, nggallery, object cache, open graph, photon, pinterest, player card, polylang, rich pins, schema, seo, singlepic, slideshare, social, Summary Card, transient cache, twitter, twitter cards, vimeo, wistia, woocommerce, wpsso, wp_cache, youtube
+Tags: attached, bbPress, buddypress, e-commerce, easy digital downloads, edd, Facebook, featured, g+, gallery, google, google plus, hashtags, imagebrowser, jetpack, JSON-LD, knowledge graph, linkedin, marketpress, meta-tags, multilingual, multisite, nextgen gallery, nggalbum, nggallery, object cache, open graph, photon, pinterest, player card, polylang, rich pins, schema, seo, singlepic, slideshare, social, Summary Card, transient cache, twitter, twitter cards, vimeo, wistia, woocommerce, wpsso, wp_cache, youtube, yotpo
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.txt
 Requires At Least: 3.1
 Tested Up To: 4.3.1
-Stable Tag: 3.14.2
+Stable Tag: 3.16.0
 
 Fast, light-weight, full-featured plugin for great looking shares on all social sites - no matter how your content is shared or re-shared!
 
@@ -129,9 +129,10 @@ Fast, light-weight, full-featured plugin for great looking shares on all social 
 		* MarketPress - WordPress eCommerce
 		* Polylang
 		* <a href="https://wordpress.org/plugins/woocommerce/">WooCommerce v1 and v2</a>
-		* Yoast SEO (aka WordPress SEO)
 		* WP e-Commerce
 		* <a href="https://wordpress.org/plugins/rest-api/">WordPress REST API v2</a>
+		* Yoast SEO (aka WordPress SEO)
+		* Yotpo Social Reviews for WooCommerce
 	* **Supported Service APIs**
 		* Gravatar Images
 		* Slideshare Presentations
@@ -343,6 +344,36 @@ This release schedule keeps the code stable and reliable, at the cost of more fr
 * [GitHub](https://github.com/SurniaUlula/wpsso)
 * [WordPress.org](https://wordpress.org/plugins/wpsso/developers/)
 
+= Version 3.16.0 (2015/11/27) =
+
+Official announcement: http://surniaulula.com/2015/11/28/ngfb-wpsso-update-new-head_attributes-filter/
+
+* **New Features**
+	* *None*
+* **Improvements**
+	* The default "&lt;head&gt; Attributes Filter Hook" option value has been changed from "language_attributes" to "head_attributes".
+	* Added a check on theme activation / update for a standard &lt;head&gt; element (without an attribute filter) in the header.php theme template. If found, a warning will be displayed with a feature to modify the &lt;head&gt; element in order to include the new "head_attributes" filter.
+* **Bugfixes**
+	* *None*
+* **Developer Notes**
+	* *None*
+
+= Version 3.15.0 (2015/11/21) =
+
+Official announcement: http://surniaulula.com/2015/11/22/ngfb-wpsso-update-product-rating-schema/
+
+* **New Features**
+	* Added a new "Use Meta Property Container(s)" option in the Google / Schema settings tab to include additional schema properties in webpage headers (product ratings, for example).
+	* Added support for WooCommerce product ratings in the meta properties container.
+	* Added support for Yotpo Social Reviews for WooCommerce product ratings.
+* **Improvements**
+	* *None*
+* **Bugfixes**
+	* Fixed the disabling of canonical and description options when no SEO plugin is detected (the options should not be disabled).
+* **Developer Notes**
+	* Added a new `get_noscript_array()` method in the WpssoSchema class.
+	* Added a new 'wpsso_og_woocommerce_product_page' filter.
+
 = Version 3.14.2 (2015/11/10) =
 
 Official announcement: N/A
@@ -533,19 +564,11 @@ Official announcement: [NGFB / WPSSO Update — Twitter Card Updates](http://sur
 
 == Upgrade Notice ==
 
-= 3.14.2 =
+= 8.16.0 =
 
-2015/11/10 Added support for a new NGFB_RICH_PIN_DISABLE constant.
+2015/11/27 Added a check for a standard &lt;head&gt; element in the header.php theme template, and provide a method to add a new "head_attributes" filter.
 
-= 3.14.1 =
+= 3.15.0 =
 
-2015/11/05 Fixed the get_all_images() method to correctly detect and return post ID images, and index / archive page images.
-
-= 3.14.0 =
-
-2015/11/03 Added pre-defined Open Graph meta tags for custom post types (article, book, music.album, product, etc.). The pre-defined meta tags allow developers to easily hook single meta tag names to modify their values.
-
-= 3.13.1 =
-
-2015/10/27 Added a new option to enable/disable the use of shortened URLs in the "Get Shortlink" button, and added the Ow.ly and TinyURL shortening services (Pro version).
+2015/11/21 Added a new "Use Meta Property Container(s)" option in the Google / Schema settings tab, added support for WooCommerce product ratings, added support for Yotpo Social Reviews for WooCommerce product ratings.
 

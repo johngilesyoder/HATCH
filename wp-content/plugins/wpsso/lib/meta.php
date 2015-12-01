@@ -108,7 +108,7 @@ if ( ! class_exists( 'WpssoMeta' ) ) {
 		public function get_rows_head_tags( &$head_meta_tags ) {
 			$rows = array();
 			foreach ( $head_meta_tags as $m ) {
-				if ( empty( $m[1] ) || 
+				if ( empty( $m[5] ) || 
 					empty( $this->p->options['add_'.$m[1].'_'.$m[2].'_'.$m[3]] ) )
 						continue;
 
@@ -224,7 +224,7 @@ if ( ! class_exists( 'WpssoMeta' ) ) {
 				if ( $this->p->debug->enabled )
 					$this->p->debug->log( 'nonce token missing from submitted POST' );
 				return false;
-			} elseif ( ! wp_verify_nonce( $_POST[ WPSSO_NONCE ], $this->get_nonce() ) ) {
+			} elseif ( ! wp_verify_nonce( $_POST[ WPSSO_NONCE ], WpssoAdmin::get_nonce() ) ) {
 				if ( $this->p->debug->enabled )
 					$this->p->debug->log( 'nonce token validation failed' );
 				if ( is_admin() )
@@ -232,11 +232,6 @@ if ( ! class_exists( 'WpssoMeta' ) ) {
 						'wpsso' ), true );
 				return false;
 			} else return true;
-		}
-
-		protected function get_nonce() {
-			return ( defined( 'NONCE_KEY' ) ?
-				NONCE_KEY : '' ).md5( plugin_basename( __FILE__ ) );
 		}
 
 		protected function get_submit_opts( $id, $mod = false ) {
