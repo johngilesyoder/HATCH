@@ -1,4 +1,4 @@
-<?php /* Template Name: Panama Registration Page Template */ get_template_part( 'includes/panama-registration-header' ); ?>
+<?php /* Template Name: Panama Registration Page Template */ get_template_part( 'includes/registration-header-panama' ); ?>
   
   <div class="container">
     <div class="form-wrapper">
