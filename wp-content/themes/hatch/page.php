@@ -10,25 +10,25 @@
 				<?php else: ?>
 				<div class="page-content page-full">
 				<?php endif; ?>
-					<div class="page-title">
-						<h1><?php the_title(); ?></h1>
-					</div>
+				<div class="page-title">
+					<h1><?php the_title(); ?></h1>
+				</div>
 
-					<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+				<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 					<!-- article -->
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						<?php the_content(); ?>
 					</article>
-					<?php endwhile; ?>
-					<?php else: ?>
+				<?php endwhile; ?>
+				<?php else: ?>
 					<article>
 						<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
 					</article>
-					<?php endif; ?>
+				<?php endif; ?>
 
 				</div>
 
-				<?php
+					<?php
 				  if($post->post_parent) {
 				  $children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
 				  $titlenamer = get_the_title($post->post_parent);
