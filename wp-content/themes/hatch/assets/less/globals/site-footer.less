@@ -1,0 +1,221 @@
+// site-footer.less
+// -----------------------------------------------------------------
+
+#bitnami-banner {
+  display: none !important;
+}
+
+.site-footer {
+  .footer-main {
+    border-top: 4px solid @brand-secondary;
+    padding: 40px 0;
+    .footer-connect {
+      text-align: center;
+      .make-md-column(3);
+      .hatch-logo {
+        font-size: 32px;
+        margin-bottom: 25px;
+        display: block;
+      }
+      .rss-feed {
+        display: block;
+        margin-top: 10px;
+        img {
+          margin-right: 8px;
+        }
+      }
+      .footer-social-links {
+        margin-bottom: 15px;
+        a {
+          margin-right: 15px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+      .footer-email {
+        .short-email {
+          display: none;
+        }
+      }
+    }
+    .footer-links {
+      .make-md-column(9);
+      border-left: 1px solid @border-color;
+      .links-column {
+        width: 33%;
+        padding: 0 30px;
+        float: left;
+        .links-header {
+          font-size: 16px;
+          font-weight: 700;
+          margin: 0;
+          line-height: 24px;
+        }
+        ul {
+          padding: 0;
+          margin: 0;
+          list-style-type: none;
+          li {
+            a {
+              line-height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer-company {
+    background: @gray-bg;
+    color: #999999;
+    font-size: 13px;
+    padding: 20px 0;
+  }
+}
+
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .site-footer {
+    .footer-main {
+      .footer-connect {
+        .footer-email {
+          .short-email {
+            display: block;
+          }
+          .long-email {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .site-footer {
+    .footer-main {
+      padding: 30px 0 40px;
+      .footer-connect {
+        margin-bottom: 50px;
+        .footer-social-links {
+          margin-bottom: 15px;
+        }
+      }
+    }
+    .footer-company {
+      padding: 15px 0;
+      span {
+        display: block;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .site-footer {
+    .footer-main {
+      padding: 30px 0;
+      .footer-connect {
+        margin-bottom: 50px;
+        .footer-social-links {
+          margin-bottom: 15px;
+        }
+      }
+      .footer-links {
+        border-left: 0;
+        .links-column {
+          width: 33%;
+          padding: 0 10px;
+          &:first-child {
+            padding-left: 0;
+          }
+          &:last-child {
+            padding-right: 0;
+          }
+          .links-header {
+            margin: 0 0 5px;
+          }
+          ul {
+            li {
+              margin-bottom: 5px;
+              a {
+                line-height: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .footer-company {
+      padding: 15px 0;
+      span {
+        display: block;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {
+
+  .site-footer {
+    .footer-main {
+      padding: 30px 0 20px;
+      .footer-connect {
+        margin-bottom: 50px;
+        .footer-social-links {
+          margin-bottom: 15px;
+        }
+      }
+      .footer-links {
+        border-left: 0;
+        .links-column {
+          width: 50%;
+          padding: 0;
+          margin-bottom: 15px;
+          &:last-child {
+            float: none;
+            .clearfix();
+          }
+          .links-header {
+            margin: 0 0 5px;
+          }
+          ul {
+            li {
+              margin-bottom: 5px;
+              a {
+                line-height: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .footer-company {
+      padding: 15px 0;
+      span {
+        display: block;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+}

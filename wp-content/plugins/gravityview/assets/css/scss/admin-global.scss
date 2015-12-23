@@ -1,0 +1,69 @@
+/**
+ * Custom GravityView font
+ *
+ * @package   GravityView
+ * @license   GPL2+
+ * @author    Katz Web Services, Inc.
+ * @link      http://gravityview.co
+ * @copyright Copyright 2014, Katz Web Services, Inc.
+ *
+ * @since 1.0.0
+ */
+
+@import "font";
+
+/* add gravityview menu icon */
+#toplevel_page_gravityview_settings .wp-menu-image:before,
+#adminmenu .menu-icon-gravityview div.wp-menu-image:before,
+#available-widgets [class*=gv_recent_entries] .widget-title:before,
+#available-widgets [class*=gravityview_search] .widget-title:before{
+	@extend [class^="gv-icon-"]:before;
+	@extend .gv-icon-astronaut-head:before;
+}
+
+// Fix Make theme overriding button width
+.wp-editor-tools #add_gravityview {
+	width: auto;
+}
+
+// Form Toolbar for connected views
+#gf_form_toolbar .gv_connected_forms {
+
+	.gv-icon {
+		font-size: 19px;
+		margin-top: -.5em;
+		line-height: 0.5em;
+		display: inline-block;
+	}
+
+	.hidden {
+		display: none!important;
+	}
+
+	.gf_submenu {
+		min-width: 150px;
+		max-width: 100%;
+	}
+
+	li a {
+		// Important is necessary because we're dealing with overriding
+		// ul#gf_form_toolbar_links .gf_submenu ul li a
+		padding: .5em .75em!important;
+		display: block;
+		width: auto;
+	}
+}
+
+// On all Admin pages
+.post-type-gravityview {
+
+  .changelog ul {
+	list-style-type: square;
+
+	ul {
+	  list-style: circle;
+	  margin: .5em 0 .5em 1.3em;
+	}
+  }
+
+}

@@ -1,0 +1,294 @@
+// registration.less
+// -----------------------------------------------------------------
+
+// Custom Fonts
+@import "../globals/fonts.less";
+
+// Bootstrap UI Framework
+@import "../bootstrap/bootstrap.less";
+
+// Wordpress Core Styles
+@import "../globals/wordpress-core.less";
+
+// Custom Variables
+@import "../globals/variables.less";
+
+// Z-index scale
+@import "../globals/z-index.less";
+
+// Colors
+@import "../globals/colors.less";
+
+// Buttons
+@import "../globals/buttons.less";
+
+// Patterns
+@import "../globals/patterns.less";
+
+// Patterns
+@import "../components/registration-success.less";
+
+
+body {
+  background: #fafafa;
+}
+
+.form-header {
+  text-align: center;
+  margin: 30px 0;
+  .logo {
+    display: inline-block;
+    vertical-align: top;
+  }
+  .site-logo {
+    .hatch-logo();
+    font-size: 60px;
+    display: block;
+    line-height: .85em;
+    span {
+      color: #222;
+    }
+  }
+  .site-logo-date {
+    font-family: 'Archer SSm A', 'Archer SSm B';
+    font-weight: 400;
+    font-style: italic;
+    font-size: 16px;
+    color: #1a1a1a;
+  }
+  .form-name {
+    font-size: 50px;
+    display: inline-block;
+    font-weight: 300;
+    line-height: 1em;
+    vertical-align: top;
+    margin-top: 3px;
+    letter-spacing: -.5px;
+    margin-left: 10px;
+  }
+}
+
+.form-footer {
+  color: #999;
+  text-align: center;
+  font-size: 13px;
+  margin-bottom: 30px;
+}
+
+
+.form-wrapper {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  width: 615px;
+  padding: 25px 30px;
+  margin: 0 auto 60px;
+  .gform_wrapper {
+    margin: 0;
+    max-width: 100%;
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="url"],
+    input[type="number"] {
+      .form-control();
+      height: 40px;
+      font-size: 14px !important;
+      padding: 6px 12px !important;
+    }
+    .gfield_html {
+      max-width: 100%;
+    }
+    .ginput_price {
+      display: none;
+    }
+    select {
+      .form-control();
+      height: 40px;
+    }
+    .gf_progressbar_wrapper {
+      margin-bottom: 25px;
+    }
+    .gf_progressbar {
+      background-image: none;
+      line-height: 1em;
+      border: 0;
+      .progress();
+      .gf_progressbar_percentage {
+        background-image: none;
+        .progress-bar();
+        span {
+          display: none;
+        }
+      }
+    }
+    .validation_message {
+      color: @state-danger-text;
+    }
+    div.validation_error {
+      .alert();
+      .alert-danger();
+      font-weight: normal;
+      margin-top: 25px;
+    }
+    .top_label .gfield_error {
+      width: 100%;
+      border-bottom: 0;
+      textarea.textarea {
+        width: 100%;
+      }
+    }
+    li.gfield.gfield_error {
+      background-color: @state-danger-bg;
+      border-top-color: @state-danger-border;
+      .gfield_label {
+        color: @state-danger-text;
+      }
+      &.gfield_contains_required {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 0;
+        margin-bottom: 25px !important;
+        div.gfield_description {
+          font-family: @font-family-serif;
+          font-style: italic;
+          font-weight: normal;
+          color: @state-danger-text;
+        }
+      }
+    }
+    .ginput_card_security_code {
+      display: inline-block !important;
+    }
+    .gfield_time_hour,
+    .gfield_time_minute {
+      width: 6.5em;
+      position: relative;
+      i {
+        position: absolute;
+        top: 9px;
+        right: 0;
+        margin-top: 0;
+      }
+    }
+    .gfield_radio,
+    .gfield_checkbox {
+      li {
+        padding-left: 10px !important;
+      }
+      label {
+        font-weight: normal;
+      }
+    }
+    textarea {
+      .form-control();
+      padding: 6px 12px !important;
+    }
+    &.gf_browser_chrome ul.gform_fields li.gfield input[type=radio] {
+      margin-left: .1em !important;
+    }
+    .gfield {
+      .form-group();
+      margin-bottom: 25px;
+    }
+    li.gfield_error div.ginput_complex.ginput_container label {
+      color: @state-danger-text;
+    }
+    .gfield_error .ginput_complex {
+      .ginput_left {
+        width: 49%;
+      }
+      .ginput_right {
+        margin-left: 2%;
+        width: 49%;
+        input[type=text] {
+          width: 100%;
+        }
+      }
+    }
+    .gfield_description {
+      font-style: italic;
+    }
+    .top_label {
+      input.medium, 
+      select.medium {
+        width: 100% !important;
+      }
+    }
+    .ginput_complex {
+      label {
+        font-weight: normal;
+        text-transform: uppercase;
+        font-size: .7em;
+      }
+      input[type=text] {
+        width: 100%;
+      }
+      .ginput_full {
+        input[type=text] {
+          width: 100% !important;
+        }
+      }
+      .ginput-right {
+        margin-left: 2%;
+      }
+      &.ginput_container.has_first_name.no_middle_name.has_last_name  {
+        span.name_first {
+          margin-right: 2%;
+        }
+      }
+    }
+    .gfield_required {
+      color: @brand-danger;
+    }
+    .gfield_time_hour,
+    .gfield_time_minute {
+      label {
+        font-weight: normal;
+        text-transform: uppercase;
+        font-size: .7em;
+      }
+    }
+    textarea.medium {
+      width: 100%;
+    }
+    .gform_next_button,
+    .gform_previous_button {
+      .btn();
+      height: 50px;
+      line-height: 50px;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 0 65px;
+      margin-top: 30px;
+      color: @link-color;
+      border-color: @link-color;
+      background: #fff;
+      width: 100%;
+      &:hover {
+        background: @link-color;
+        color: #fff;
+      }
+    }
+    .gform_previous_button {
+      .btn();
+      .btn-link();
+      width: auto;
+      margin-bottom: 0 !important;
+      margin-top: 10px;
+      height: auto;
+      padding: 0;
+    }
+    .gform_button {
+      .btn();
+      .btn-secondary();
+      height: 50px;
+      line-height: 50px;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 0 65px;
+      margin-top: 30px;
+      width: 100%;
+    }
+  }
+}
