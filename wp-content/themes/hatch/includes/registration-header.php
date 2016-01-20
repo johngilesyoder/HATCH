@@ -48,7 +48,7 @@
   <header class="form-header">
     <div class="logo">
       <span class="site-logo">HATCH <span>2015</span></span>
-      <span class="site-logo-date">Sep 16-20, 2015 &bull; Bozeman, Montana</span>
+      <span class="site-logo-date">Sep 14-18, 2016 &bull; Bozeman, Montana</span>
     </div>
     <span class="form-name">Register</span>
   </header>

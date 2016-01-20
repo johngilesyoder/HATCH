@@ -257,6 +257,9 @@ function html5blank_conditional_styles()
     } elseif ( is_page( 'hatch-2015-registration') ) {
         wp_register_style('registration', get_template_directory_uri() . '/assets/css/sections/registration.css', array(), '1.0', 'all');
         wp_enqueue_style('registration'); // Enqueue it!
+    } elseif ( is_page( 'hatch-2016-registration') ) {
+        wp_register_style('registration', get_template_directory_uri() . '/assets/css/sections/registration.css', array(), '1.0', 'all');
+        wp_enqueue_style('registration'); // Enqueue it!
     } elseif ( is_page( 'hatch-panama-2016-registration') ) {
         wp_register_style('registration', get_template_directory_uri() . '/assets/css/sections/registration.css', array(), '1.0', 'all');
         wp_enqueue_style('registration'); // Enqueue it!
