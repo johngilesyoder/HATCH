@@ -20,7 +20,7 @@
 						
 						<div class="advisory-board-posts">
 							
-							<?php	query_posts( 'post_type=latin-board-member&posts_per_page=-1' ); ?>
+							<?php	query_posts( 'post_type=board-member-latin&posts_per_page=-1' ); ?>
 							<?php 
 								// featured image
 								$thumb_id = get_post_thumbnail_id();
