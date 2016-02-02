@@ -296,6 +296,9 @@ function html5blank_conditional_styles()
     } elseif ( is_page('advisory-board') ) {
         wp_register_style('advisory-board', get_template_directory_uri() . '/assets/css/sections/advisory-board.css', array(), '1.0', 'all');
         wp_enqueue_style('advisory-board'); // Enqueue it!
+    } elseif ( is_page('latin-america-advisory-board') ) {
+        wp_register_style('advisory-board', get_template_directory_uri() . '/assets/css/sections/advisory-board.css', array(), '1.0', 'all');
+        wp_enqueue_style('advisory-board'); // Enqueue it!
     } elseif ( is_page() ) {
         wp_register_style('page', get_template_directory_uri() . '/assets/css/sections/page.css', array(), '1.0', 'all');
         wp_enqueue_style('page'); // Enqueue it!
