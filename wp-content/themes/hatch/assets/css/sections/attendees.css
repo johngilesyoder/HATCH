@@ -7510,11 +7510,6 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
 .hatch-panama-2016-attendees .gv-list-view-content {
   padding: 0;
 }
-.hatch-2015-attendees .gv-container img,
-.hatch-labs-hasbro .gv-container img,
-.hatch-panama-2016-attendees .gv-container img {
-  width: 100%;
-}
 .hatch-2015-attendees .gv-grid-col-1-3,
 .hatch-labs-hasbro .gv-grid-col-1-3,
 .hatch-panama-2016-attendees .gv-grid-col-1-3 {
