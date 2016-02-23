@@ -5657,7 +5657,6 @@ button.close {
 }
 .modal.fade .modal-dialog {
   -webkit-transform: translate(0, -25%);
-  -ms-transform: translate(0, -25%);
   transform: translate(0, -25%);
   -webkit-transition: -webkit-transform 0.3s ease-out;
   transition: -webkit-transform 0.3s ease-out;
@@ -5666,7 +5665,6 @@ button.close {
 }
 .modal.in .modal-dialog {
   -webkit-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
   transform: translate(0, 0);
 }
 .modal-open .modal {
@@ -7133,8 +7131,7 @@ fieldset[disabled] .btn-secondary.active {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 .vertical-center-parent {
   -webkit-transform-style: preserve-3d;
@@ -7453,7 +7450,8 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
 }
 .hatch-2015-attendees .page-title,
 .hatch-labs-hasbro .page-title,
-.hatch-panama-2016-attendees .page-title {
+.hatch-panama-2016-attendees .page-title,
+.hatch-panama-2016-directory .page-title {
   font-weight: 300;
   margin: 0 0 30px;
   padding: 0 15px;
@@ -7462,18 +7460,21 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
 }
 .hatch-2015-attendees .page-title h1,
 .hatch-labs-hasbro .page-title h1,
-.hatch-panama-2016-attendees .page-title h1 {
+.hatch-panama-2016-attendees .page-title h1,
+.hatch-panama-2016-directory .page-title h1 {
   padding-bottom: 25px;
   border-bottom: 2px solid #e6e6e6;
 }
 .hatch-2015-attendees .featured-presenters-title,
 .hatch-labs-hasbro .featured-presenters-title,
-.hatch-panama-2016-attendees .featured-presenters-title {
+.hatch-panama-2016-attendees .featured-presenters-title,
+.hatch-panama-2016-directory .featured-presenters-title {
   display: none;
 }
 .hatch-2015-attendees .gv-list-view,
 .hatch-labs-hasbro .gv-list-view,
-.hatch-panama-2016-attendees .gv-list-view {
+.hatch-panama-2016-attendees .gv-list-view,
+.hatch-panama-2016-directory .gv-list-view {
   border: 0;
   border-bottom: 1px solid #e6e6e6;
   margin-bottom: 30px;
@@ -7481,14 +7482,16 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
 }
 .hatch-2015-attendees .gv-list-view-title,
 .hatch-labs-hasbro .gv-list-view-title,
-.hatch-panama-2016-attendees .gv-list-view-title {
+.hatch-panama-2016-attendees .gv-list-view-title,
+.hatch-panama-2016-directory .gv-list-view-title {
   padding: 0 15px;
   border: 0;
   margin-bottom: 25px;
 }
 .hatch-2015-attendees .gv-list-view-title h3,
 .hatch-labs-hasbro .gv-list-view-title h3,
-.hatch-panama-2016-attendees .gv-list-view-title h3 {
+.hatch-panama-2016-attendees .gv-list-view-title h3,
+.hatch-panama-2016-directory .gv-list-view-title h3 {
   color: #ffb100;
   font-size: 24px;
   font-weight: 500;
@@ -7496,23 +7499,27 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
 }
 .hatch-2015-attendees .gv-list-view-subtitle h4,
 .hatch-labs-hasbro .gv-list-view-subtitle h4,
-.hatch-panama-2016-attendees .gv-list-view-subtitle h4 {
+.hatch-panama-2016-attendees .gv-list-view-subtitle h4,
+.hatch-panama-2016-directory .gv-list-view-subtitle h4 {
   font-size: 12px;
   text-transform: uppercase;
 }
 .hatch-2015-attendees .gv-field-label,
 .hatch-labs-hasbro .gv-field-label,
-.hatch-panama-2016-attendees .gv-field-label {
+.hatch-panama-2016-attendees .gv-field-label,
+.hatch-panama-2016-directory .gv-field-label {
   padding: 0;
 }
 .hatch-2015-attendees .gv-list-view-content,
 .hatch-labs-hasbro .gv-list-view-content,
-.hatch-panama-2016-attendees .gv-list-view-content {
+.hatch-panama-2016-attendees .gv-list-view-content,
+.hatch-panama-2016-directory .gv-list-view-content {
   padding: 0;
 }
 .hatch-2015-attendees .gv-grid-col-1-3,
 .hatch-labs-hasbro .gv-grid-col-1-3,
-.hatch-panama-2016-attendees .gv-grid-col-1-3 {
+.hatch-panama-2016-attendees .gv-grid-col-1-3,
+.hatch-panama-2016-directory .gv-grid-col-1-3 {
   width: 25%;
   padding: 0 15px !important;
   position: relative;
@@ -7520,12 +7527,14 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
 }
 .hatch-2015-attendees .gv-list-view-content .gv-list-view-content-image,
 .hatch-labs-hasbro .gv-list-view-content .gv-list-view-content-image,
-.hatch-panama-2016-attendees .gv-list-view-content .gv-list-view-content-image {
+.hatch-panama-2016-attendees .gv-list-view-content .gv-list-view-content-image,
+.hatch-panama-2016-directory .gv-list-view-content .gv-list-view-content-image {
   padding: 0 15px !important;
 }
 .hatch-2015-attendees .gv-grid-col-2-3,
 .hatch-labs-hasbro .gv-grid-col-2-3,
-.hatch-panama-2016-attendees .gv-grid-col-2-3 {
+.hatch-panama-2016-attendees .gv-grid-col-2-3,
+.hatch-panama-2016-directory .gv-grid-col-2-3 {
   width: 75%;
   padding: 0 15px;
   position: relative;
@@ -7534,12 +7543,14 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
 @media (max-width: 767px) {
   .hatch-2015-attendees .gv-grid-col-1-3,
   .hatch-labs-hasbro .gv-grid-col-1-3,
-  .hatch-panama-2016-attendees .gv-grid-col-1-3 {
+  .hatch-panama-2016-attendees .gv-grid-col-1-3,
+  .hatch-panama-2016-directory .gv-grid-col-1-3 {
     width: 100%;
   }
   .hatch-2015-attendees .gv-grid-col-2-3,
   .hatch-labs-hasbro .gv-grid-col-2-3,
-  .hatch-panama-2016-attendees .gv-grid-col-2-3 {
+  .hatch-panama-2016-attendees .gv-grid-col-2-3,
+  .hatch-panama-2016-directory .gv-grid-col-2-3 {
     width: 100%;
   }
 }
