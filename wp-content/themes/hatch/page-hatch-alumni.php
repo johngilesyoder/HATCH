@@ -19,7 +19,7 @@
 						<?php the_content(); ?>
 						
 						<div class="alumni-posts">
-							<?php	query_posts( 'post_type=alumnus&posts_per_page=-1&orderby=random&order=ASC' ); ?>
+							<?php	query_posts( 'post_type=alumnus&posts_per_page=-1&orderby=rand' ); ?>
 							<?php 
 								// featured image
 								$thumb_id = get_post_thumbnail_id();
