@@ -64,7 +64,7 @@
     <!-- Upcoming Hatchings -->
     <section class="section-block section-hatchings">
       <div class="section-header">
-        <h2 class="section-title">Upcoming Hatchings</h2>
+        <h2 class="section-title">Upcoming (&amp; Past) Hatchings</h2>
         <div class="section-header-links">
           <a href="/events/">View Calendar<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-link-chevron.svg"></a>
         </div>
