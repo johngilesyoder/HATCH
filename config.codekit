@@ -4420,6 +4420,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/wp-content\/themes\/hatch\/assets\/img\/banner-c2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.09124e+06,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/img\/banner-c2.png",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/img\/banner-c2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/wp-content\/themes\/hatch\/assets\/img\/banner-matching.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
