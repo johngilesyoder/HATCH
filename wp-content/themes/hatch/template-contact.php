@@ -6,6 +6,11 @@
       <div class="row">
         <div class="contact-left">
           <div class="row">
+            <div class="support-link">
+              <h2>Support HATCH</h2>
+              <p>Students of today are our leaders of tomorrow. <em>It’s in the best interest of our future to invest in them.</em></p>
+              <a href="/partners/support-contribute/" class="btn btn-secondary btn-support">Support Now</a>
+            </div>
             <div class="general-inquiry">
               <h2>General Enquiry</h2>
               <?php if (have_posts()): while (have_posts()) : the_post(); ?>
