@@ -4462,6 +4462,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/wp-content\/themes\/hatch\/assets\/img\/banner-volunteer.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 157311,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/img\/banner-volunteer.jpg",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/img\/banner-volunteer.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/wp-content\/themes\/hatch\/assets\/img\/conference-photo.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
