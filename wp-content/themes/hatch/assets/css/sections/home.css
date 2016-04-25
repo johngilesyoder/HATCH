@@ -5657,14 +5657,14 @@ button.close {
 }
 .modal.fade .modal-dialog {
   -webkit-transform: translate(0, -25%);
-  -ms-transform: translate(0, -25%);
   transform: translate(0, -25%);
   -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
 .modal.in .modal-dialog {
   -webkit-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
   transform: translate(0, 0);
 }
 .modal-open .modal {
@@ -6001,7 +6001,9 @@ button.close {
 @media all and (transform-3d), (-webkit-transform-3d) {
   .carousel-inner > .item {
     -webkit-transition: -webkit-transform 0.6s ease-in-out;
+    transition: -webkit-transform 0.6s ease-in-out;
     transition: transform 0.6s ease-in-out;
+    transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     -webkit-perspective: 1000;
@@ -6616,6 +6618,9 @@ fieldset[disabled] .btn-secondary.active {
   float: left;
   line-height: 36px;
 }
+.topbar .btn {
+  margin-left: 5px;
+}
 .topbar .btn-apply {
   margin-top: 5px;
   float: right;
@@ -6638,7 +6643,6 @@ fieldset[disabled] .btn-secondary.active {
 }
 .topbar .btn-filmfreeway {
   margin-top: 5px;
-  margin-right: 5px;
   float: right;
   height: 25px;
   padding: 0 15px;
@@ -7129,8 +7133,7 @@ fieldset[disabled] .btn-secondary.active {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 .vertical-center-parent {
   -webkit-transform-style: preserve-3d;
@@ -7534,8 +7537,7 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 .section-partners .innovation-partner .innovation-partner-wrapper span {
   position: absolute;
@@ -7790,7 +7792,6 @@ http://flickity.metafizzy.co
   cursor: pointer;
   /* vertically center */
   -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 .flickity-prev-next-button:hover {
@@ -8168,7 +8169,7 @@ http://flickity.metafizzy.co
   position: relative;
   top: 0;
   -webkit-transition: 150ms top;
-          transition: 150ms top;
+  transition: 150ms top;
 }
 @media (min-width: 768px) {
   .section-hatchings .hatching-block {
@@ -8187,7 +8188,7 @@ http://flickity.metafizzy.co
   background: #F0F2F2;
   padding: 10px;
   -webkit-transition: 150ms background;
-          transition: 150ms background;
+  transition: 150ms background;
 }
 .section-hatchings .hatching-block .hatching-block-img {
   height: 125px;
@@ -8440,7 +8441,7 @@ http://flickity.metafizzy.co
   }
   .section-hatchings .hatching-block {
     -webkit-transition: none;
-            transition: none;
+    transition: none;
     margin-bottom: 15px;
   }
   .section-hatchings .hatching-block:hover {
@@ -8451,7 +8452,7 @@ http://flickity.metafizzy.co
   }
   .section-hatchings .hatching-block .block-wrapper {
     -webkit-transition: none;
-            transition: none;
+    transition: none;
   }
   .section-partners {
     margin-bottom: 20px;
