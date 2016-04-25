@@ -2,7 +2,7 @@
   <div class="container">
     <p><strong>Hatch 2016:</strong> Apply now to attend or volunteer.</p>
     <a href="/apply" class="btn btn-secondary btn-apply">Apply Now</a>
-    <a href="/volunteer" class="btn btn-secondary btn-apply">Volunteer</a>
+    <a href="/volunteer" class="btn btn-secondary btn-volunteer">Volunteer</a>
     <a href="https://filmfreeway.com/festival/HATCHExperience" class="btn btn-secondary btn-filmfreeway">Submit with <img src="<?php echo get_template_directory_uri(); ?>/assets/img/btn-filmfreeway.svg"></a>
   </div>
 </div>
