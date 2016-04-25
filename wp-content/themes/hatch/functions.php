@@ -296,6 +296,9 @@ function html5blank_conditional_styles()
     } elseif ( is_page('apply') ) {
         wp_register_style('apply', get_template_directory_uri() . '/assets/css/sections/apply.css', array(), '1.0', 'all');
         wp_enqueue_style('apply'); // Enqueue it!
+    } elseif ( is_page('volunteer') ) {
+        wp_register_style('volunteer', get_template_directory_uri() . '/assets/css/sections/volunteer.css', array(), '1.0', 'all');
+        wp_enqueue_style('volunteer'); // Enqueue it!
     } elseif ( is_page('2016-hatch-c2-montreal-registration') ) {
         wp_register_style('apply', get_template_directory_uri() . '/assets/css/sections/apply.css', array(), '1.0', 'all');
         wp_enqueue_style('apply'); // Enqueue it!
