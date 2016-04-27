@@ -7572,13 +7572,15 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   .hatch-2015-attendees .gv-grid-col-1-3,
   .hatch-labs-hasbro .gv-grid-col-1-3,
   .hatch-panama-2016-attendees .gv-grid-col-1-3,
-  .hatch-panama-2016-directory .gv-grid-col-1-3 {
+  .hatch-panama-2016-directory .gv-grid-col-1-3,
+  .page-id-1521 .gv-grid-col-1-3 {
     width: 100%;
   }
   .hatch-2015-attendees .gv-grid-col-2-3,
   .hatch-labs-hasbro .gv-grid-col-2-3,
   .hatch-panama-2016-attendees .gv-grid-col-2-3,
-  .hatch-panama-2016-directory .gv-grid-col-2-3 {
+  .hatch-panama-2016-directory .gv-grid-col-2-3,
+  .page-id-1521 .gv-grid-col-2-3 {
     width: 100%;
   }
 }
