@@ -3,7 +3,7 @@
 <div class="container container-blog">
   <div class="blog-roll-wrapper">
     <div class="category-title">
-      <strong>#BecauseOfHatch</strong> <?php echo category_description( $category_id ); ?> 
+      <strong>#BecauseOfHatch</strong> 
     </div>
     <main role="main">
 

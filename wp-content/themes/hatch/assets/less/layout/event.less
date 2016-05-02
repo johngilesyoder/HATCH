@@ -1,32 +1,11 @@
-// advisory-board.less
+// event.less
 // -----------------------------------------------------------------
 
-// Page
-@import "page.less";
-
-.advisory-board-posts {
-  margin-top: 30px;
-}
-
-.board-member {
-  margin-bottom: 30px;
-  background: #f2f2f2;
-  padding: 15px;
-  &:last-child {
-    margin-bottom: 0;
-  }
-  img {
-    .img-responsive();
-  }
-  .board-member-name {
-    font-size: 18px;
-  }
-  p {
-    margin-bottom: 0;
+.single-tribe_events {
+   main {
+    padding: 30px 0 50px;
   }
 }
-
-
 
 // Responsive: desktop to large desktop
 // --------------------------------------------------
@@ -44,27 +23,18 @@
 // --------------------------------------------------
 @media (max-width: 767px) {
 
-  .board-member {
-    img {
-      max-width: 200px;
+  .single-tribe_events {
+     main {
+      padding: 30px 0;
     }
   }
+
 
 }
 
 // Responsive: Up to landscape phone
 // --------------------------------------------------
-@media (max-width: 480px) {
-
-  .board-member {
-    img {
-      width: 100%;
-      max-width: 80%;
-      margin: 0 auto;
-    }
-  }
-
-}
+@media (max-width: 480px) {}
 
 // Responsive: Up to portrait phone
 // --------------------------------------------------

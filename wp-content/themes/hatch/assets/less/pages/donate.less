@@ -1,0 +1,75 @@
+// donate.less
+// -----------------------------------------------------------------
+
+.page-support-contribute {
+  .give-form-wrap {
+    margin-top: 30px;
+    input[type="text"],
+    input[type="email"],
+    select {
+      .form-control();
+    }
+    select {
+      display: inline-block;
+    }
+    input[type="text"] {
+      border-radius: 4px !important;
+    }
+  }
+
+  .give-form-title {
+    display: none;
+  }
+
+  #give-amount {
+    border-radius: 0 4px 4px 0 !important;
+  }
+
+  #give-donation-level-radio-list {
+    & > {
+      li {
+        margin: 0 0 5px;
+        border: 1px solid @link-color;
+        border-radius: 4px;
+        margin-right: 10px;
+        margin-bottom: 15px;
+        padding: 7px 8px 2px;
+        line-height: 1em;
+        display: inline-block;
+        label {
+          font-weight: normal;
+          color: @link-color;
+          margin-left: 3px;
+        }
+      }
+    }
+  }
+
+  .give-gateway-option {
+    font-weight: normal;
+  }
+
+  #give_secure_site_wrapper {
+    font-weight: normal;
+    margin: 15px 0 30px;
+    padding: 0;
+    span {
+      &:first-child {
+        display: none;
+      }
+      &:last-child {
+        .alert();
+        .alert-info();
+        font-weight: normal;
+        display: block;
+      }
+    }
+  }
+
+  .give-btn {
+    .btn();
+    .btn-secondary();
+    font-size: 21px;
+    font-weight: 500;
+  }
+}

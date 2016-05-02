@@ -1,0 +1,110 @@
+// single.less
+// -----------------------------------------------------------------
+
+.single {
+  .blog-roll-wrapper {
+    main {
+      padding-top: 28px;
+    }
+  }
+  .post.type-post {
+    border: 0;
+    padding-bottom: 0;
+  }
+
+  .view-all-posts {
+    margin-bottom: 25px;
+  }
+
+  .profile-intro-statement {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid @border-color;
+    font-size: 13px;
+    line-height: 20px;
+    font-style: italic;
+  }
+
+  .profile-closing-statement {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid @border-color;
+    font-size: 13px;
+    line-height: 20px;
+    font-style: italic;
+  }
+}
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .single {
+    .view-all-posts {
+      margin-bottom: 15px;
+    }
+  }
+  
+}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .single {
+    .blog-roll-wrapper {
+      main {
+        padding-top: 0;
+      }
+    }
+
+    .view-all-posts {
+      margin-bottom: 15px;
+    }
+
+    .profile-intro-statement {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+    }
+
+    .profile-closing-statement {
+      margin-top: 15px;
+      padding-top: 15px;
+    }
+  }
+
+}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .single {
+    .blog-roll-wrapper {
+      main {
+        padding-top: 0;
+      }
+    }
+
+    .view-all-posts {
+      margin-bottom: 15px;
+    }
+
+    .profile-intro-statement {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+    }
+
+    .profile-closing-statement {
+      margin-top: 15px;
+      padding-top: 15px;
+    }
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {}

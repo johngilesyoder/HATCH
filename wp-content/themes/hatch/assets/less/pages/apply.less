@@ -1,88 +1,7 @@
-// registration.less
+// apply.less
 // -----------------------------------------------------------------
 
-// Custom Fonts
-@import "../globals/fonts.less";
-
-// Bootstrap UI Framework
-@import "../bootstrap/bootstrap.less";
-
-// Wordpress Core Styles
-@import "../globals/wordpress-core.less";
-
-// Custom Variables
-@import "../globals/variables.less";
-
-// Z-index scale
-@import "../globals/z-index.less";
-
-// Colors
-@import "../globals/colors.less";
-
-// Buttons
-@import "../globals/buttons.less";
-
-// Patterns
-@import "../globals/patterns.less";
-
-// Patterns
-@import "../components/registration-success.less";
-
-
-body {
-  background: #fafafa;
-}
-
-.form-header {
-  text-align: center;
-  margin: 30px 0;
-  .logo {
-    display: inline-block;
-    vertical-align: top;
-  }
-  .site-logo {
-    .hatch-logo();
-    font-size: 60px;
-    display: block;
-    line-height: .85em;
-    span {
-      color: #222;
-    }
-  }
-  .site-logo-date {
-    font-family: 'Archer SSm A', 'Archer SSm B';
-    font-weight: 400;
-    font-style: italic;
-    font-size: 16px;
-    color: #1a1a1a;
-  }
-  .form-name {
-    font-size: 50px;
-    display: inline-block;
-    font-weight: 300;
-    line-height: 1em;
-    vertical-align: top;
-    margin-top: 3px;
-    letter-spacing: -.5px;
-    margin-left: 10px;
-  }
-}
-
-.form-footer {
-  color: #999;
-  text-align: center;
-  font-size: 13px;
-  margin-bottom: 30px;
-}
-
-
-.form-wrapper {
-  background: #fff;
-  border: 1px solid #e5e5e5;
-  border-radius: 6px;
-  width: 615px;
-  padding: 25px 30px;
-  margin: 0 auto 60px;
+.page-apply {
   .gform_wrapper {
     margin: 0;
     max-width: 100%;
@@ -234,7 +153,7 @@ body {
       }
       &.ginput_container.has_first_name.no_middle_name.has_last_name  {
         span.name_first {
-          margin-right: 2%;
+          //margin-right: 2%;
         }
       }
     }
@@ -252,33 +171,6 @@ body {
     textarea.medium {
       width: 100%;
     }
-    .gform_next_button,
-    .gform_previous_button {
-      .btn();
-      height: 50px;
-      line-height: 50px;
-      font-size: 18px;
-      font-weight: 500;
-      padding: 0 65px;
-      margin-top: 30px;
-      color: @link-color;
-      border-color: @link-color;
-      background: #fff;
-      width: 100%;
-      &:hover {
-        background: @link-color;
-        color: #fff;
-      }
-    }
-    .gform_previous_button {
-      .btn();
-      .btn-link();
-      width: auto;
-      margin-bottom: 0 !important;
-      margin-top: 10px;
-      height: auto;
-      padding: 0;
-    }
     .gform_button {
       .btn();
       .btn-secondary();
@@ -292,3 +184,30 @@ body {
     }
   }
 }
+
+
+
+
+// Responsive: desktop to large desktop
+// --------------------------------------------------
+@media (min-width: 1200px) and (max-width: 1499px) {}
+
+// Responsive: Tablet to desktop
+// --------------------------------------------------
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Responsive: Tablet to desktop
+// --------------------------------------------------
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// Responsive: Landscape phone to desktop/tablet
+// --------------------------------------------------
+@media (max-width: 767px) {}
+
+// Responsive: Up to landscape phone
+// --------------------------------------------------
+@media (max-width: 480px) {}
+
+// Responsive: Up to portrait phone
+// --------------------------------------------------
+@media (max-width: 400px) {}

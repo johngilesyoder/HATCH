@@ -1,23 +1,27 @@
-// hatch-alumni.less
+// advisory-board.less
 // -----------------------------------------------------------------
 
-// Page
-@import "page.less";
-
-.alumni-posts {
-  margin-top: 40px;
-}
-.alumnus {
-  border-bottom: 1px solid @border-color;
-  margin-bottom: 40px;
-  padding-bottom: 20px;
-  &:last-child {
-    border-bottom: 0;
-    margin-bottom: 0;
+.page-advisory-board {
+  .advisory-board-posts {
+    margin-top: 30px;
   }
-  img {
-    .img-responsive();
-    width: 350px;
+
+  .board-member {
+    margin-bottom: 30px;
+    background: #f2f2f2;
+    padding: 15px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    img {
+      .img-responsive();
+    }
+    .board-member-name {
+      font-size: 18px;
+    }
+    p {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -37,11 +41,33 @@
 
 // Responsive: Landscape phone to desktop/tablet
 // --------------------------------------------------
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+
+  .page-advisory-board {
+    .board-member {
+      img {
+        max-width: 200px;
+      }
+    }
+  }
+
+}
 
 // Responsive: Up to landscape phone
 // --------------------------------------------------
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+
+  .page-advisory-board {
+    .board-member {
+      img {
+        width: 100%;
+        max-width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+}
 
 // Responsive: Up to portrait phone
 // --------------------------------------------------

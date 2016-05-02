@@ -1,0 +1,126 @@
+// category.less
+// -----------------------------------------------------------------
+
+.blog-format {
+  .category,
+  .tag {
+    .category-title {
+      border-bottom: 1px solid #e6e6e6;
+      margin-bottom: 30px;
+      padding: 10px 15px;
+      width: auto;
+      padding-left: 1015px;
+      margin-left: -1000px;
+      background: #fafafa;
+      strong {
+        color: #F7862F;
+        font-family: @font-family-tungsten;
+        font-size: 30px;
+        font-style: normal;
+        margin-right: 15px;
+        letter-spacing: .02em;
+      }
+      p {
+        font-style: italic;
+        color: #555;
+        margin: 0;
+        display: inline-block;
+      }
+      h1 {
+        font-family: @font-family-tungsten;
+        font-size: 30px;
+        line-height: 1.5em;
+        font-style: normal;
+        letter-spacing: .02em;
+        margin: 0;
+        text-transform: uppercase;
+        img {
+          margin-right: 15px;
+          vertical-align: middle;
+          top: -3px;
+          position: relative;
+        }
+      }
+    }
+
+    .blog-roll-wrapper {
+      main {
+        padding-top: 110px;
+      }
+    }
+  }
+}
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .blog-format {
+    .category,
+    .tag {
+      .site-header {
+        margin-bottom: 0;
+      }
+      .category-title {
+        padding: 10px 30px;
+        width: 100%;
+        margin: 0 0 30px;
+        strong  {
+          font-size: 24px;
+        }
+        h1 {
+          font-size: 24px;
+        }
+      }
+
+      .blog-roll-wrapper {
+        main {
+          padding-top: 0;
+        }
+      }
+    }
+  }
+
+}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .blog-format {
+    .category,
+    .tag {
+      .site-header {
+        margin-bottom: 0;
+      }
+      .category-title {
+        padding: 10px 15px;
+        width: auto;
+        margin: 0 -15px 30px;
+        strong  {
+          font-size: 24px;
+        }
+        h1 {
+          font-size: 24px;
+        }
+      }
+
+      .blog-roll-wrapper {
+        main {
+          padding-top: 0;
+        }
+      }
+    }
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {}

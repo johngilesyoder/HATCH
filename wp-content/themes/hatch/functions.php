@@ -177,9 +177,6 @@ function html5blank_header_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
-        wp_register_script('conditionizr', get_template_directory_uri() . '/assets/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
-        wp_enqueue_script('conditionizr'); // Enqueue it!
-
         wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
         wp_enqueue_script('modernizr'); // Enqueue it!
 
@@ -206,8 +203,6 @@ function html5blank_conditional_scripts()
         wp_register_script('flickity', get_template_directory_uri() . '/assets/js/lib/flickity.pkgd.min.js', array(), '1.0.0' ); // Flickity
         wp_enqueue_script('flickity'); // Enqueue it!
 
-
-
         wp_register_script('home', get_template_directory_uri() . '/assets/js/sections/home.js', array(), null, true ); // Home scripts
         
         // Create array to pass to the localization script (below)
@@ -228,111 +223,15 @@ function html5blank_styles()
 {
     wp_register_style('cloud-typography', 'https://cloud.typography.com/7252954/638486/css/fonts.css', array(), null, false);
     wp_enqueue_style('cloud-typography'); // Enqueue it!
+
+    wp_register_style('styles', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0', 'all');
+    wp_enqueue_style('styles'); // Enqueue it!
 }
 
 // Load HTML5 Blank conditional styles
 function html5blank_conditional_styles()
 {
-    if ( is_front_page() ) {
-        wp_register_style('home', get_template_directory_uri() . '/assets/css/sections/home.css', array(), '1.0', 'all');
-        wp_enqueue_style('home'); // Enqueue it!
-    } elseif ( is_home() ) {
-        wp_register_style('blog-roll', get_template_directory_uri() . '/assets/css/sections/blog-roll.css', array(), '1.0', 'all');
-        wp_enqueue_style('blog-roll'); // Enqueue it!
-    } elseif ( is_page( 'the-experience') ) {
-        wp_register_style('experience', get_template_directory_uri() . '/assets/css/sections/experience.css', array(), '1.0', 'all');
-        wp_enqueue_style('experience'); // Enqueue it!
-    } elseif ( is_page( 'support-contribute') ) {
-        wp_register_style('donate', get_template_directory_uri() . '/assets/css/sections/donate.css', array(), '1.0', 'all');
-        wp_enqueue_style('donate'); // Enqueue it!
-    } elseif ( is_page( 'hatch-2015-attendees') ) {
-        wp_register_style('attendees', get_template_directory_uri() . '/assets/css/sections/attendees.css', array(), '1.0', 'all');
-        wp_enqueue_style('attendees'); // Enqueue it!
-    } elseif ( is_page( '2016-hatch-c2-attendees') ) {
-        wp_register_style('attendees', get_template_directory_uri() . '/assets/css/sections/attendees.css', array(), '1.0', 'all');
-        wp_enqueue_style('attendees'); // Enqueue it!
-    } elseif ( is_page( 'hatch-labs-hasbro') ) {
-        wp_register_style('attendees', get_template_directory_uri() . '/assets/css/sections/attendees.css', array(), '1.0', 'all');
-        wp_enqueue_style('attendees'); // Enqueue it!
-    } elseif ( is_page( 'hatch-panama-2016-attendees') ) {
-        wp_register_style('attendees', get_template_directory_uri() . '/assets/css/sections/attendees.css', array(), '1.0', 'all');
-        wp_enqueue_style('attendees'); // Enqueue it!
-    } elseif ( is_page( 'hatch-panama-2016-directory') ) {
-        wp_register_style('attendees', get_template_directory_uri() . '/assets/css/sections/attendees.css', array(), '1.0', 'all');
-        wp_enqueue_style('attendees'); // Enqueue it!
-    } elseif ( is_page( 'hatch-2015-registration') ) {
-        wp_register_style('registration', get_template_directory_uri() . '/assets/css/sections/registration.css', array(), '1.0', 'all');
-        wp_enqueue_style('registration'); // Enqueue it!
-    } elseif ( is_page( 'hatch-2016-registration') ) {
-        wp_register_style('registration', get_template_directory_uri() . '/assets/css/sections/registration.css', array(), '1.0', 'all');
-        wp_enqueue_style('registration'); // Enqueue it!
-    } elseif ( is_page( 'hatch-panama-2016-registration') ) {
-        wp_register_style('registration', get_template_directory_uri() . '/assets/css/sections/registration.css', array(), '1.0', 'all');
-        wp_enqueue_style('registration'); // Enqueue it!
-    } elseif ( is_page( 'hatchlabs-hasbro-registration') ) {
-        wp_register_style('registration', get_template_directory_uri() . '/assets/css/sections/registration.css', array(), '1.0', 'all');
-        wp_enqueue_style('registration'); // Enqueue it!
-    } elseif ( is_page( 'registration-success') ) {
-        wp_register_style('registration', get_template_directory_uri() . '/assets/css/sections/registration.css', array(), '1.0', 'all');
-        wp_enqueue_style('registration'); // Enqueue it!
-    } elseif ( is_page( 'hatchlabs-hasbro-registration-success') ) {
-        wp_register_style('registration', get_template_directory_uri() . '/assets/css/sections/registration.css', array(), '1.0', 'all');
-        wp_enqueue_style('registration'); // Enqueue it!
-    } elseif ( is_page( 'hatch-panama-2016-registration-success') ) {
-        wp_register_style('registration', get_template_directory_uri() . '/assets/css/sections/registration.css', array(), '1.0', 'all');
-        wp_enqueue_style('registration'); // Enqueue it!
-    } elseif ( is_page( 'hatch15-donation-matching') ) {
-        wp_register_style('donation-matching', get_template_directory_uri() . '/assets/css/sections/donation-matching.css', array(), '1.0', 'all');
-        wp_enqueue_style('donation-matching'); // Enqueue it!
-    } elseif ( is_page('contact') ) {
-        wp_register_style('contact', get_template_directory_uri() . '/assets/css/sections/contact.css', array(), '1.0', 'all');
-        wp_enqueue_style('contact'); // Enqueue it!
-    } elseif ( is_page('groundbreakers') ) {
-        wp_register_style('groundbreakers', get_template_directory_uri() . '/assets/css/sections/groundbreakers.css', array(), '1.0', 'all');
-        wp_enqueue_style('groundbreakers'); // Enqueue it!
-    } elseif ( is_page('our-partners') ) {
-        wp_register_style('our-partners', get_template_directory_uri() . '/assets/css/sections/our-partners.css', array(), '1.0', 'all');
-        wp_enqueue_style('our-partners'); // Enqueue it!
-    } elseif ( is_page('hatch-alumni') ) {
-        wp_register_style('hatch-alumni', get_template_directory_uri() . '/assets/css/sections/hatch-alumni.css', array(), '1.0', 'all');
-        wp_enqueue_style('hatch-alumni'); // Enqueue it!
-    } elseif ( is_page('apply') ) {
-        wp_register_style('apply', get_template_directory_uri() . '/assets/css/sections/apply.css', array(), '1.0', 'all');
-        wp_enqueue_style('apply'); // Enqueue it!
-    } elseif ( is_page('volunteer') ) {
-        wp_register_style('volunteer', get_template_directory_uri() . '/assets/css/sections/volunteer.css', array(), '1.0', 'all');
-        wp_enqueue_style('volunteer'); // Enqueue it!
-    } elseif ( is_page('2016-hatch-c2-montreal-registration') ) {
-        wp_register_style('apply', get_template_directory_uri() . '/assets/css/sections/apply.css', array(), '1.0', 'all');
-        wp_enqueue_style('apply'); // Enqueue it!
-    } elseif ( is_page('advisory-board') ) {
-        wp_register_style('advisory-board', get_template_directory_uri() . '/assets/css/sections/advisory-board.css', array(), '1.0', 'all');
-        wp_enqueue_style('advisory-board'); // Enqueue it!
-    } elseif ( is_page('latin-america-advisory-board') ) {
-        wp_register_style('advisory-board', get_template_directory_uri() . '/assets/css/sections/advisory-board.css', array(), '1.0', 'all');
-        wp_enqueue_style('advisory-board'); // Enqueue it!
-    } elseif ( is_page() ) {
-        wp_register_style('page', get_template_directory_uri() . '/assets/css/sections/page.css', array(), '1.0', 'all');
-        wp_enqueue_style('page'); // Enqueue it!
-    } elseif ( is_singular( 'post' ) ) {
-        wp_register_style('single', get_template_directory_uri() . '/assets/css/sections/single.css', array(), '1.0', 'all');
-        wp_enqueue_style('single'); // Enqueue it!
-    } elseif ( is_category() ) {
-        wp_register_style('category', get_template_directory_uri() . '/assets/css/sections/category.css', array(), '1.0', 'all');
-        wp_enqueue_style('category'); // Enqueue it!
-    } elseif ( is_tag() ) {
-        wp_register_style('category', get_template_directory_uri() . '/assets/css/sections/category.css', array(), '1.0', 'all');
-        wp_enqueue_style('category'); // Enqueue it!
-    } elseif ( is_search() ) {
-       wp_register_style('search', get_template_directory_uri() . '/assets/css/sections/search.css', array(), '1.0', 'all');
-       wp_enqueue_style('search'); // Enqueue it!
-    } elseif ( is_404() ) {
-       wp_register_style('404', get_template_directory_uri() . '/assets/css/sections/404.css', array(), '1.0', 'all');
-       wp_enqueue_style('404'); // Enqueue it!
-    } else {
-       wp_register_style('page', get_template_directory_uri() . '/assets/css/sections/page.css', array(), '1.0', 'all');
-       wp_enqueue_style('page'); // Enqueue it!
-    }
+
 }
 
 // Register HTML5 Blank Navigation
@@ -375,9 +274,9 @@ function add_slug_to_body_class($classes)
             unset($classes[$key]);
         }
     } elseif (is_page()) {
-        $classes[] = sanitize_html_class($post->post_name);
+        $classes[] = 'page-' . sanitize_html_class($post->post_name);
     } elseif (is_singular()) {
-        $classes[] = sanitize_html_class($post->post_name);
+        $classes[] = 'post-' . sanitize_html_class($post->post_name);
     }
 
     return $classes;
