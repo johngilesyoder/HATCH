@@ -1,4 +1,20 @@
 <div class="mobile-carousel">
+
+  <?php query_posts( 
+    array(
+      'post_type' => 'post', // if the post type is post 
+      'posts_per_page' => 8,
+      'tax_query' => array(
+      array(
+        'taxonomy' => 'post_format',
+        'field' => 'slug',
+        'terms' => array('post-format-aside', 'post-format-gallery', 'post-format-link', 'post-format-image', 'post-format-quote', 'post-format-status', 'post-format-audio', 'post-format-chat', 'post-format-video'),
+        'operator' => 'NOT IN'
+      ))
+    )
+  ); 
+  ?>
+
   <?php 
     if (have_posts()): while (have_posts()) : the_post(); 
     $thumb_id = get_post_thumbnail_id();
@@ -32,4 +48,5 @@
     <!-- /article -->
 
   <?php endif; ?>
+  <?php wp_reset_query(); ?>
 </div>
