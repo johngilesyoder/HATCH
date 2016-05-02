@@ -8806,35 +8806,43 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
     margin-bottom: 30px;
   }
 }
-.page-advisory-board .advisory-board-posts {
+.page-advisory-board .advisory-board-posts,
+.page-latin-america-advisory-board .advisory-board-posts {
   margin-top: 30px;
 }
-.page-advisory-board .board-member {
+.page-advisory-board .board-member,
+.page-latin-america-advisory-board .board-member {
   margin-bottom: 30px;
   background: #f2f2f2;
   padding: 15px;
 }
-.page-advisory-board .board-member:last-child {
+.page-advisory-board .board-member:last-child,
+.page-latin-america-advisory-board .board-member:last-child {
   margin-bottom: 0;
 }
-.page-advisory-board .board-member img {
+.page-advisory-board .board-member img,
+.page-latin-america-advisory-board .board-member img {
   display: block;
   max-width: 100%;
   height: auto;
 }
-.page-advisory-board .board-member .board-member-name {
+.page-advisory-board .board-member .board-member-name,
+.page-latin-america-advisory-board .board-member .board-member-name {
   font-size: 18px;
 }
-.page-advisory-board .board-member p {
+.page-advisory-board .board-member p,
+.page-latin-america-advisory-board .board-member p {
   margin-bottom: 0;
 }
 @media (max-width: 767px) {
-  .page-advisory-board .board-member img {
+  .page-advisory-board .board-member img,
+  .page-latin-america-advisory-board .board-member img {
     max-width: 200px;
   }
 }
 @media (max-width: 480px) {
-  .page-advisory-board .board-member img {
+  .page-advisory-board .board-member img,
+  .page-latin-america-advisory-board .board-member img {
     width: 100%;
     max-width: 80%;
     margin: 0 auto;
