@@ -11457,6 +11457,21 @@ textarea.page-template-template-hatchback .give-form-wrap select {
 .page-template-template-hatchback #give_secure_site_wrapper span:last-child .alert-link {
   color: #245269;
 }
+.page-template-template-hatchback form[id*=give-form] #give-final-total-wrap {
+  margin: 25px 0 10px;
+}
+.page-template-template-hatchback form[id*=give-form] #give-final-total-wrap .give-donation-total-label {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+.page-template-template-hatchback form[id*=give-form] #give-final-total-wrap .give-final-total-amount {
+  border: 0;
+  background: transparent;
+  font-weight: 500;
+  padding: 0;
+  margin-left: 15px;
+}
 .page-template-template-hatchback .give-btn {
   display: inline-block;
   margin-bottom: 0;
@@ -11480,8 +11495,12 @@ textarea.page-template-template-hatchback .give-form-wrap select {
   color: #fff;
   background-color: #FFB100;
   border-color: #e69f00;
-  font-size: 21px;
+  font-size: 24px;
   font-weight: 500;
+  height: 65px;
+  width: 100%;
+  background-color: #68BB6C;
+  border-color: #56B35B;
 }
 .page-template-template-hatchback .give-btn:focus,
 .page-template-template-hatchback .give-btn:active:focus,
@@ -11557,14 +11576,7 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
 .page-template-template-hatchback .give-btn:hover {
   background: #FF9D00;
 }
-.page-template-template-hatchback .give-btn-reveal {
-  width: 100%;
-  background-color: #68BB6C;
-  border-color: #56B35B;
-  font-size: 24px;
-  height: 65px;
-}
-.page-template-template-hatchback .give-btn-reveal:hover {
+.page-template-template-hatchback .give-btn:hover {
   background-color: #439447;
   border-color: #3a823e;
 }
