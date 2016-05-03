@@ -11373,6 +11373,8 @@ textarea.page-template-template-hatchback .give-form-wrap select {
   line-height: 65px;
   font-size: 24px;
   border-radius: 6px 0 0 6px;
+  text-align: center;
+  width: 12%;
 }
 .page-template-template-hatchback form[id*=give-form] .give-donation-amount #give-amount,
 .page-template-template-hatchback form[id*=give-form] .give-donation-amount #give-amount-text {
@@ -11382,11 +11384,15 @@ textarea.page-template-template-hatchback .give-form-wrap select {
   border-radius: 0;
   height: 65px;
   line-height: 65px;
-  padding: 0 12px;
+  padding: 0 30px;
   margin: 0;
   font-size: 24px;
   font-weight: 500;
-  width: 125px;
+  width: 88%;
+  text-align: right;
+}
+.page-template-template-hatchback .give-btn-reveal {
+  width: 100%;
 }
 .page-template-template-hatchback #give-donation-level-radio-list li {
   margin: 0 0 5px;
