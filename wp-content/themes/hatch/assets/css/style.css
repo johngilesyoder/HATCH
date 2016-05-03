@@ -11708,6 +11708,19 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
   .page-template-template-hatchback .other-ways .or {
     margin: 15px 0;
   }
+  .page-template-template-hatchback form[id*=give-form] .give-donation-amount .give-currency-symbol {
+    width: 20%;
+  }
+  .page-template-template-hatchback form[id*=give-form] .give-donation-amount #give-amount,
+  .page-template-template-hatchback form[id*=give-form] .give-donation-amount #give-amount-text {
+    width: 78%;
+  }
+  .page-template-template-hatchback .form-row {
+    width: 100% !important;
+    float: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
 }
 .page-template-template-home .site-header {
   margin-bottom: 0;
