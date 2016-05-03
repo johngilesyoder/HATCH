@@ -55494,6 +55494,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/wp-content\/themes\/hatch\/assets\/img\/hatchback\/hatchback-story-selina.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.0852e+06,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/img\/hatchback\/hatchback-story-selina.png",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/img\/hatchback\/hatchback-story-selina.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/wp-content\/themes\/hatch\/assets\/img\/hatchback\/logo-patreon.png": {
 		"fileType": 32768,
 		"ignore": 0,

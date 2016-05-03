@@ -32,12 +32,24 @@
     <div class="hatchback-stories-donation">
       <div class="stories">
         <h2 class="stories-title"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/hatchback/stories-title.svg" alt="Amazing things happen when HATCHers give back. Story time…"></h2>
-        <div class="story">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hatchback/story-1.png" alt="">
-          <p>
-            <strong>When Rafi heard Elias</strong> Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus. Vestibulum id ligula porta felis euismod semper.
-          </p>
-        </div>
+
+        <?php query_posts( 'post_type=hatchback-story&posts_per_page=-1' ); ?>
+        <?php 
+          // featured image
+          $thumb_id = get_post_thumbnail_id();
+          $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+          $thumb_url = $thumb_url_array[0];
+        ?>
+
+        <?php while ( have_posts() ) : the_post(); ?>
+          <div class="story">
+            <?php the_post_thumbnail(); ?>
+            <?php the_content(); ?>
+          </div>
+        <?php endwhile; ?>
+
+        <?php wp_reset_query(); ?>
+
         <div class="story">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hatchback/story-2.png" alt="">
           <p>
