@@ -11391,13 +11391,6 @@ textarea.page-template-template-hatchback .give-form-wrap select {
   width: 88%;
   text-align: right;
 }
-.page-template-template-hatchback .give-btn-reveal {
-  width: 100%;
-  background-color: #68BB6C;
-  border-color: #56B35B;
-  font-size: 24px;
-  height: 65px;
-}
 .page-template-template-hatchback #give-donation-level-radio-list li {
   margin: 0 0 5px;
   border: 1px solid #007DA3;
@@ -11560,6 +11553,13 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
 }
 .page-template-template-hatchback .give-btn:hover {
   background: #FF9D00;
+}
+.page-template-template-hatchback .give-btn-reveal {
+  width: 100%;
+  background-color: #68BB6C;
+  border-color: #56B35B;
+  font-size: 24px;
+  height: 65px;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .page-template-template-hatchback .hatchback-intro .intro-left .hero-img {
