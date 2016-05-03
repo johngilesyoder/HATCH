@@ -49,7 +49,7 @@
         <h2>HATCHBack Donation</h2>
         <p class="tax-deductible">HATCH is a 501c3 tax-deductible non-profit.</p>
         <div class="donation-wrapper">
-          <?php echo do_shortcode('[give_form id="1257"]'); ?>
+          <?php echo do_shortcode('[give_form id="1526"]'); ?>
         </div>
         <div class="other-ways">
           <h3>Other ways to give back...</h3>
