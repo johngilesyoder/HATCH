@@ -277,18 +277,21 @@
   }
 
   #give_secure_site_wrapper {
-    font-weight: normal;
+    .alert();
+    .alert-info();
+    font-weight: 400;
     margin: 15px 0 30px;
-    padding: 0;
-    span {
-      &:first-child {
+    .give-icon {
+      background: url('../img/hatchback/icon-secure.svg');
+      width: 12px;
+      height: 15px;
+      background-size: 12px;
+      display: inline-block;
+      &:before {
         display: none;
       }
-      &:last-child {
-        .alert();
-        .alert-info();
-        font-weight: normal;
-        display: block;
+      span:last-child {
+
       }
     }
   }
@@ -325,6 +328,13 @@
       border-color: darken(#56B35B, 15%);
     }
   }
+
+  #give-recurring-form .give-tooltip,
+  form.give-form .give-tooltip,
+  form[id*=give-form] .give-tooltip {
+    display: none;
+  }
+
 }
 
 // Media Queries

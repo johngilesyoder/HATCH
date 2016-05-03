@@ -11413,14 +11413,6 @@ textarea.page-template-template-hatchback .give-form-wrap select {
   font-weight: normal;
 }
 .page-template-template-hatchback #give_secure_site_wrapper {
-  font-weight: normal;
-  margin: 15px 0 30px;
-  padding: 0;
-}
-.page-template-template-hatchback #give_secure_site_wrapper span:first-child {
-  display: none;
-}
-.page-template-template-hatchback #give_secure_site_wrapper span:last-child {
   padding: 15px;
   margin-bottom: 21px;
   border: 1px solid transparent;
@@ -11428,34 +11420,44 @@ textarea.page-template-template-hatchback .give-form-wrap select {
   background-color: #d9edf7;
   border-color: #bce8f1;
   color: #31708f;
-  font-weight: normal;
-  display: block;
+  font-weight: 400;
+  margin: 15px 0 30px;
 }
-.page-template-template-hatchback #give_secure_site_wrapper span:last-child h4 {
+.page-template-template-hatchback #give_secure_site_wrapper h4 {
   margin-top: 0;
   color: inherit;
 }
-.page-template-template-hatchback #give_secure_site_wrapper span:last-child .alert-link {
+.page-template-template-hatchback #give_secure_site_wrapper .alert-link {
   font-weight: bold;
 }
-.page-template-template-hatchback #give_secure_site_wrapper span:last-child > p,
-.page-template-template-hatchback #give_secure_site_wrapper span:last-child > ul {
+.page-template-template-hatchback #give_secure_site_wrapper > p,
+.page-template-template-hatchback #give_secure_site_wrapper > ul {
   margin-bottom: 0;
 }
-.page-template-template-hatchback #give_secure_site_wrapper span:last-child > p + p {
+.page-template-template-hatchback #give_secure_site_wrapper > p + p {
   margin-top: 5px;
 }
-.page-template-template-hatchback #give_secure_site_wrapper span:last-child ul {
+.page-template-template-hatchback #give_secure_site_wrapper ul {
   margin-top: 10px;
 }
-.page-template-template-hatchback #give_secure_site_wrapper span:last-child strong {
+.page-template-template-hatchback #give_secure_site_wrapper strong {
   font-weight: normal;
 }
-.page-template-template-hatchback #give_secure_site_wrapper span:last-child hr {
+.page-template-template-hatchback #give_secure_site_wrapper hr {
   border-top-color: #a6e1ec;
 }
-.page-template-template-hatchback #give_secure_site_wrapper span:last-child .alert-link {
+.page-template-template-hatchback #give_secure_site_wrapper .alert-link {
   color: #245269;
+}
+.page-template-template-hatchback #give_secure_site_wrapper .give-icon {
+  background: url('../img/hatchback/icon-secure.svg');
+  width: 12px;
+  height: 15px;
+  background-size: 12px;
+  display: inline-block;
+}
+.page-template-template-hatchback #give_secure_site_wrapper .give-icon:before {
+  display: none;
 }
 .page-template-template-hatchback form[id*=give-form] #give-final-total-wrap {
   margin: 25px 0 10px;
@@ -11579,6 +11581,11 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
 .page-template-template-hatchback .give-btn:hover {
   background-color: #439447;
   border-color: #3a823e;
+}
+.page-template-template-hatchback #give-recurring-form .give-tooltip,
+.page-template-template-hatchback form.give-form .give-tooltip,
+.page-template-template-hatchback form[id*=give-form] .give-tooltip {
+  display: none;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .page-template-template-hatchback .hatchback-intro .intro-left .hero-img {
