@@ -11393,6 +11393,10 @@ textarea.page-template-template-hatchback .give-form-wrap select {
 }
 .page-template-template-hatchback .give-btn-reveal {
   width: 100%;
+  background-color: #68BB6C;
+  border-color: #56B35B;
+  font-size: 24px;
+  height: 65px;
 }
 .page-template-template-hatchback #give-donation-level-radio-list li {
   margin: 0 0 5px;
