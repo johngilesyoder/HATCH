@@ -11422,6 +11422,10 @@ textarea.page-template-template-hatchback .give-form-wrap select {
   color: #31708f;
   font-weight: 400;
   margin: 15px 0 30px;
+  background-color: #d8d8d8;
+  border: 0;
+  color: #666;
+  text-align: center;
 }
 .page-template-template-hatchback #give_secure_site_wrapper h4 {
   margin-top: 0;
@@ -11455,6 +11459,7 @@ textarea.page-template-template-hatchback .give-form-wrap select {
   height: 15px;
   background-size: 12px;
   display: inline-block;
+  margin-right: 10px;
 }
 .page-template-template-hatchback #give_secure_site_wrapper .give-icon:before {
   display: none;
