@@ -1,15 +1,12 @@
 /*!
  * HATCH
  *
- * Copyright 2015 HATCH
+ * Copyright 2016 HATCH
  * Licensed under the Apache License v2.0
  * http://www.apache.org/licenses/LICENSE-2.0
  *
  * Designed and built with all the aloha in the world by @johngilesyoder.
  */
-* {
-  -webkit-font-smoothing: antialiased;
-}
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -11014,6 +11011,373 @@ fieldset[disabled] .page-hatch15-donation-matching .give-btn.active {
   max-width: 100%;
   height: auto;
   width: 350px;
+}
+.page-template-template-hatchback .hatchback-banner {
+  background-color: #222;
+  background-image: url('../img/hatchback/banner-bg.png');
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  color: #fff;
+  padding: 40px 0;
+  margin-top: -50px;
+}
+.page-template-template-hatchback .hatchback-banner:before,
+.page-template-template-hatchback .hatchback-banner:after {
+  content: " ";
+  display: table;
+}
+.page-template-template-hatchback .hatchback-banner:after {
+  clear: both;
+}
+.page-template-template-hatchback .hatchback-banner:before,
+.page-template-template-hatchback .hatchback-banner:after {
+  content: " ";
+  display: table;
+}
+.page-template-template-hatchback .hatchback-banner:after {
+  clear: both;
+}
+.page-template-template-hatchback .hatchback-banner .banner-left {
+  float: left;
+  width: 75%;
+}
+.page-template-template-hatchback .hatchback-banner .banner-left h1 {
+  background: rgba(255, 255, 255, 0.11);
+  padding: 2px 10px 6px;
+  display: inline-block;
+  margin: 0 27px 0 0;
+  line-height: 1em;
+  vertical-align: middle;
+}
+.page-template-template-hatchback .hatchback-banner .banner-left h1 img {
+  vertical-align: middle;
+}
+.page-template-template-hatchback .hatchback-banner .banner-left .hashtag {
+  font-size: 18px;
+  font-weight: 500;
+  vertical-align: middle;
+}
+.page-template-template-hatchback .hatchback-banner .banner-right {
+  float: left;
+  width: 25%;
+  position: relative;
+}
+.page-template-template-hatchback .hatchback-banner .banner-right .hatchback-badge {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -61px;
+}
+.page-template-template-hatchback .hatchback-intro:before,
+.page-template-template-hatchback .hatchback-intro:after {
+  content: " ";
+  display: table;
+}
+.page-template-template-hatchback .hatchback-intro:after {
+  clear: both;
+}
+.page-template-template-hatchback .hatchback-intro:before,
+.page-template-template-hatchback .hatchback-intro:after {
+  content: " ";
+  display: table;
+}
+.page-template-template-hatchback .hatchback-intro:after {
+  clear: both;
+}
+.page-template-template-hatchback .hatchback-intro .intro-left {
+  float: left;
+  width: 50%;
+}
+.page-template-template-hatchback .hatchback-intro .intro-left .hero-img {
+  width: 100%;
+  height: 431px;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.page-template-template-hatchback .hatchback-intro .intro-right {
+  float: left;
+  width: 50%;
+  padding: 50px;
+}
+.page-template-template-hatchback .hatchback-intro .intro-right h2 {
+  font-size: 30px;
+  line-height: 1.25em;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+.page-template-template-hatchback .hatchback-intro .intro-right p {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+.page-template-template-hatchback .hatchback-intro .intro-right p:last-child {
+  margin: 0;
+}
+.page-template-template-hatchback .hatchback-stories-donation:before,
+.page-template-template-hatchback .hatchback-stories-donation:after {
+  content: " ";
+  display: table;
+}
+.page-template-template-hatchback .hatchback-stories-donation:after {
+  clear: both;
+}
+.page-template-template-hatchback .hatchback-stories-donation:before,
+.page-template-template-hatchback .hatchback-stories-donation:after {
+  content: " ";
+  display: table;
+}
+.page-template-template-hatchback .hatchback-stories-donation:after {
+  clear: both;
+}
+.page-template-template-hatchback .hatchback-stories-donation .stories {
+  float: left;
+  width: 50%;
+  padding: 50px;
+}
+.page-template-template-hatchback .hatchback-stories-donation .stories .stories-title {
+  text-align: center;
+  margin: 0 0 30px;
+}
+.page-template-template-hatchback .hatchback-stories-donation .stories .stories-title img {
+  width: 100%;
+}
+.page-template-template-hatchback .hatchback-stories-donation .stories .story img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.page-template-template-hatchback .hatchback-stories-donation .stories .story p {
+  font-size: 16px;
+}
+.page-template-template-hatchback .hatchback-stories-donation .stories .story:after {
+  content: '';
+  width: 75%;
+  margin: 30px auto;
+  height: 2px;
+  background: #E6E6E6;
+  display: block;
+}
+.page-template-template-hatchback .hatchback-stories-donation .stories .story:last-child:after {
+  display: none;
+}
+.page-template-template-hatchback .hatchback-stories-donation .donation {
+  float: left;
+  width: 50%;
+  background-color: #F0F2F2;
+  padding: 50px;
+}
+.page-template-template-hatchback .hatchback-stories-donation .donation h2 {
+  margin: 0 0 15px;
+}
+.page-template-template-hatchback .hatchback-stories-donation .donation .tax-deductible {
+  font-size: 16px;
+  margin: 0 0 30px;
+}
+.page-template-template-hatchback .other-ways {
+  text-align: center;
+}
+.page-template-template-hatchback .other-ways:before {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 75%;
+  margin: 60px auto;
+  background: #e6e6e6;
+}
+.page-template-template-hatchback .other-ways h3 {
+  font-size: 18px;
+  margin: 0 0 30px;
+}
+.page-template-template-hatchback .other-ways p {
+  margin-top: 30px;
+  font-size: 16px;
+}
+.page-template-template-hatchback .other-ways .or {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 30px 0;
+}
+.page-template-template-hatchback .other-ways .btn {
+  color: #fff;
+  font-weight: 500;
+}
+.page-template-template-hatchback .other-ways .btn-donation {
+  color: #fff;
+  background-color: #007DA3;
+  border-color: #00698a;
+}
+.page-template-template-hatchback .other-ways .btn-donation:hover,
+.page-template-template-hatchback .other-ways .btn-donation:focus,
+.page-template-template-hatchback .other-ways .btn-donation.focus,
+.page-template-template-hatchback .other-ways .btn-donation:active,
+.page-template-template-hatchback .other-ways .btn-donation.active,
+.open > .dropdown-toggle.page-template-template-hatchback .other-ways .btn-donation {
+  color: #fff;
+  background-color: #005670;
+  border-color: #003b4c;
+}
+.page-template-template-hatchback .other-ways .btn-donation:active,
+.page-template-template-hatchback .other-ways .btn-donation.active,
+.open > .dropdown-toggle.page-template-template-hatchback .other-ways .btn-donation {
+  background-image: none;
+}
+.page-template-template-hatchback .other-ways .btn-donation.disabled,
+.page-template-template-hatchback .other-ways .btn-donation[disabled],
+fieldset[disabled] .page-template-template-hatchback .other-ways .btn-donation,
+.page-template-template-hatchback .other-ways .btn-donation.disabled:hover,
+.page-template-template-hatchback .other-ways .btn-donation[disabled]:hover,
+fieldset[disabled] .page-template-template-hatchback .other-ways .btn-donation:hover,
+.page-template-template-hatchback .other-ways .btn-donation.disabled:focus,
+.page-template-template-hatchback .other-ways .btn-donation[disabled]:focus,
+fieldset[disabled] .page-template-template-hatchback .other-ways .btn-donation:focus,
+.page-template-template-hatchback .other-ways .btn-donation.disabled.focus,
+.page-template-template-hatchback .other-ways .btn-donation[disabled].focus,
+fieldset[disabled] .page-template-template-hatchback .other-ways .btn-donation.focus,
+.page-template-template-hatchback .other-ways .btn-donation.disabled:active,
+.page-template-template-hatchback .other-ways .btn-donation[disabled]:active,
+fieldset[disabled] .page-template-template-hatchback .other-ways .btn-donation:active,
+.page-template-template-hatchback .other-ways .btn-donation.disabled.active,
+.page-template-template-hatchback .other-ways .btn-donation[disabled].active,
+fieldset[disabled] .page-template-template-hatchback .other-ways .btn-donation.active {
+  background-color: #007DA3;
+  border-color: #00698a;
+}
+.page-template-template-hatchback .other-ways .btn-donation .badge {
+  color: #007DA3;
+  background-color: #fff;
+}
+.page-template-template-hatchback .other-ways .btn-patreon {
+  background: #E6461A;
+  border-color: #CF3F17;
+}
+.page-template-template-hatchback .other-ways .btn-patreon img {
+  height: 25px;
+  margin-right: 10px;
+  vertical-align: middle;
+  margin-top: -3px;
+  margin-bottom: -3px;
+}
+.page-template-template-hatchback .other-ways .btn-patreon:hover {
+  background: #a23112;
+  border-color: #8a2a0f;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .page-template-template-hatchback .hatchback-intro .intro-left .hero-img {
+    height: 516px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .page-template-template-hatchback .hatchback-intro .intro-left,
+  .page-template-template-hatchback .hatchback-intro .intro-right {
+    float: none;
+    width: auto;
+  }
+  .page-template-template-hatchback .hatchback-intro .intro-left {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .page-template-template-hatchback .hatchback-intro .intro-left .hero-img {
+    height: 300px;
+  }
+  .page-template-template-hatchback .hatchback-intro .intro-right {
+    padding: 30px 15px;
+  }
+  .page-template-template-hatchback .hatchback-stories-donation .stories,
+  .page-template-template-hatchback .hatchback-stories-donation .donation {
+    float: none;
+    width: auto;
+    padding: 30px 15px;
+  }
+  .page-template-template-hatchback .hatchback-stories-donation .donation {
+    padding: 30px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .page-template-template-hatchback .hatchback-stories-donation .stories .story {
+    margin: 50px auto;
+  }
+}
+@media (max-width: 767px) {
+  .page-template-template-hatchback .hatchback-banner {
+    margin-top: -30px;
+    padding: 30px 0;
+  }
+  .page-template-template-hatchback .hatchback-banner .banner-right .hatchback-badge {
+    height: 125px;
+    margin-top: -35px;
+  }
+  .page-template-template-hatchback .hatchback-intro .intro-left,
+  .page-template-template-hatchback .hatchback-intro .intro-right {
+    float: none;
+    width: auto;
+  }
+  .page-template-template-hatchback .hatchback-intro .intro-left {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .page-template-template-hatchback .hatchback-intro .intro-left .hero-img {
+    height: 300px;
+  }
+  .page-template-template-hatchback .hatchback-intro .intro-right {
+    padding: 30px 15px;
+  }
+  .page-template-template-hatchback .hatchback-stories-donation .stories,
+  .page-template-template-hatchback .hatchback-stories-donation .donation {
+    float: none;
+    width: auto;
+    padding: 30px 15px;
+  }
+  .page-template-template-hatchback .hatchback-stories-donation .donation {
+    padding: 30px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .page-template-template-hatchback .hatchback-stories-donation .stories .story:after {
+    margin: 50px auto;
+  }
+}
+@media (max-width: 480px) {
+  .page-template-template-hatchback .hatchback-banner .banner-left .hashtag {
+    margin-left: 0;
+  }
+  .page-template-template-hatchback .hatchback-banner .banner-right .hatchback-badge {
+    left: auto;
+    right: 0;
+    top: 100%;
+    width: 80px;
+    height: 80px;
+    margin-top: 0;
+    margin-left: -40px;
+  }
+  .page-template-template-hatchback .hatchback-intro .intro-right {
+    padding: 15px 0;
+  }
+  .page-template-template-hatchback .hatchback-intro .intro-right h2 {
+    font-size: 21px;
+  }
+  .page-template-template-hatchback .hatchback-stories-donation .stories,
+  .page-template-template-hatchback .hatchback-stories-donation .donation {
+    padding: 15px 0;
+  }
+  .page-template-template-hatchback .hatchback-stories-donation .stories .stories-title {
+    margin-bottom: 15px;
+  }
+  .page-template-template-hatchback .hatchback-stories-donation .stories .story:after {
+    margin: 30px auto;
+  }
+  .page-template-template-hatchback .hatchback-stories-donation .donation {
+    padding: 15px;
+  }
+  .page-template-template-hatchback .hatchback-stories-donation .donation h2 {
+    font-size: 21px;
+  }
+  .page-template-template-hatchback .other-ways:before {
+    margin: 30px auto;
+  }
+  .page-template-template-hatchback .other-ways .or {
+    margin: 15px 0;
+  }
 }
 .page-template-template-home .site-header {
   margin-bottom: 0;

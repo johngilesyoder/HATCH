@@ -55472,6 +55472,61 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/wp-content\/themes\/hatch\/assets\/img\/hatchback\/banner-bg.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 286496,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/img\/hatchback\/banner-bg.png",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/img\/hatchback\/banner-bg.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/themes\/hatch\/assets\/img\/hatchback\/hatchback-feature-img.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 582553,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/img\/hatchback\/hatchback-feature-img.png",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/img\/hatchback\/hatchback-feature-img.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/themes\/hatch\/assets\/img\/hatchback\/logo-patreon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1510,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/img\/hatchback\/logo-patreon.png",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/img\/hatchback\/logo-patreon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/themes\/hatch\/assets\/img\/hatchback\/story-1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 292775,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/img\/hatchback\/story-1.png",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/img\/hatchback\/story-1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/themes\/hatch\/assets\/img\/hatchback\/story-2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 165322,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/img\/hatchback\/story-2.png",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/img\/hatchback\/story-2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/wp-content\/themes\/hatch\/assets\/img\/mentorship-1.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -57546,6 +57601,26 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
+	"\/wp-content\/themes\/hatch\/assets\/less\/pages\/hatchback.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/less\/pages\/hatchback.less",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/css\/pages\/hatchback.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
 	"\/wp-content\/themes\/hatch\/assets\/less\/pages\/home.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
@@ -58310,6 +58385,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/hatch\/template-hasbro-registration.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/wp-content\/themes\/hatch\/template-hatchback.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/hatch\/template-hatchback.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
