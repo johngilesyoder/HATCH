@@ -11333,6 +11333,14 @@ textarea.page-template-template-hatchback .give-form-wrap select {
 .page-template-template-hatchback .give-form-wrap fieldset {
   margin: 0 0 30px;
 }
+.page-template-template-hatchback .give-form-wrap legend {
+  border-color: #DDD;
+}
+.page-template-template-hatchback #give-recurring-form .form-row label,
+.page-template-template-hatchback form.give-form .form-row label,
+.page-template-template-hatchback form[id*=give-form] .form-row label {
+  font-weight: 400;
+}
 .page-template-template-hatchback .give-form-title {
   display: none;
 }
@@ -11350,7 +11358,7 @@ textarea.page-template-template-hatchback .give-form-wrap select {
   display: inline-block;
 }
 .page-template-template-hatchback #give-donation-level-radio-list li label {
-  font-weight: normal;
+  font-weight: 500;
   color: #007DA3;
   margin-left: 3px;
 }
