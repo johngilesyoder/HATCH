@@ -7850,11 +7850,13 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   color: #2b542c;
 }
 .blog-format .post,
-.blog-format .type-tribe_events {
+.blog-format .type-tribe_events,
+.blog-format .hatchback-story {
   position: relative;
 }
 .blog-format .post .post-format,
-.blog-format .type-tribe_events .post-format {
+.blog-format .type-tribe_events .post-format,
+.blog-format .hatchback-story .post-format {
   position: absolute;
   top: 0;
   left: -77px;
@@ -7867,7 +7869,8 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   transform-style: preserve-3d;
 }
 .blog-format .post .post-format .format-icon,
-.blog-format .type-tribe_events .post-format .format-icon {
+.blog-format .type-tribe_events .post-format .format-icon,
+.blog-format .hatchback-story .post-format .format-icon {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -7875,18 +7878,21 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   display: inline-block;
 }
 .blog-format .post.category-becauseofhatch .post-format,
-.blog-format .type-tribe_events.category-becauseofhatch .post-format {
+.blog-format .type-tribe_events.category-becauseofhatch .post-format,
+.blog-format .hatchback-story.category-becauseofhatch .post-format {
   background: #FFF8F2;
   border: 2px solid #F2AE79;
 }
 .blog-format .post.category-becauseofhatch .post-format .format-icon,
-.blog-format .type-tribe_events.category-becauseofhatch .post-format .format-icon {
+.blog-format .type-tribe_events.category-becauseofhatch .post-format .format-icon,
+.blog-format .hatchback-story.category-becauseofhatch .post-format .format-icon {
   background-image: url('../img/post-format-because-of-hatch.svg');
   height: 30px;
   width: 23px;
 }
 .blog-format .post .size-full,
-.blog-format .type-tribe_events .size-full {
+.blog-format .type-tribe_events .size-full,
+.blog-format .hatchback-story .size-full {
   display: block;
   max-width: 100%;
   height: auto;
@@ -7981,12 +7987,14 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   vertical-align: top;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-  .blog-format .post .post-format {
+  .blog-format .post .post-format,
+  .blog-format .hatchback-story .post-format {
     display: none;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  .blog-format .post .post-format {
+  .blog-format .post .post-format,
+  .blog-format .hatchback-story .post-format {
     display: none;
   }
   .blog-format .post.type-post {
@@ -8029,7 +8037,8 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   }
 }
 @media (max-width: 767px) {
-  .blog-format .post .post-format {
+  .blog-format .post .post-format,
+  .blog-format .hatchback-story .post-format {
     display: none;
   }
   .blog-format .post.type-post {
