@@ -1,5 +1,5 @@
 <!doctype html>
-<?php if (is_home() || is_singular( 'post' ) || is_category() || is_tag() || is_search() ) :?>
+<?php if (is_home() || is_singular( 'post' ) || is_singular( 'hatchback-story') || is_category() || is_tag() || is_search() ) :?>
   <html <?php language_attributes(); ?> class="blog-format no-js">
 <?php else: ?>
   <html <?php language_attributes(); ?> class="no-js">
