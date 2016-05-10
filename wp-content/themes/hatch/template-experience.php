@@ -64,7 +64,7 @@
   		</div>
   		<div class="because-of-hatch">
   			<h2 class="because-of-hatch-title">#BecauseOfHATCH</h2>
-  			<div id="carousel-because-of-hatch" class="carousel carousel-fade slide" data-ride="carousel">
+  			<div id="carousel-because-of-hatch" class="carousel slide" data-ride="carousel">
   			  <!-- Wrapper for slides -->
   			  <div class="carousel-inner" role="listbox">
   			    <div class="item active">

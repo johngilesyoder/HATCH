@@ -221,6 +221,7 @@
     background-image: url('../img/experience/section-bg-why.jpg');
     background-repeat: no-repeat;
     background-position: 50% 0;
+    background-size: cover;
     .why-blocks {
       margin-bottom: 80px;
       .clearfix();
@@ -272,6 +273,9 @@
           background-image: url('../img/experience/caret-because-of-hatch.svg');
           background-size: cover;
         }
+      }
+      .item {
+        height: 36px;
       }
       .item p {
         font-size: 24px;
@@ -420,54 +424,6 @@
       }
     }
   }
-
-  // Bootstrap 3.3+ Carousel Fade
-  // --------------------------------------
-  .carousel-fade .carousel-inner .item {
-    opacity: 0;
-    transition-property: opacity;
-  }
-  .carousel-fade .carousel-inner .active {
-    opacity: 1;
-  }
-  .carousel-fade .carousel-inner .active.left,
-  .carousel-fade .carousel-inner .active.right {
-    left: 0;
-    opacity: 0;
-    z-index: 1;
-  }
-  .carousel-fade .carousel-inner .next.left,
-  .carousel-fade .carousel-inner .prev.right {
-    opacity: 1;
-  }
-  .carousel-fade .carousel-control {
-    z-index: 2;
-  }
-
-  // WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
-  // now override the 3.3 new styles for modern browsers & apply opacity
-  @media all and (transform-3d), (-webkit-transform-3d) {
-    .carousel-fade .carousel-inner > .item.next,
-    .carousel-fade .carousel-inner > .item.active.right {
-      opacity: 0;
-      -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0);
-    }
-    .carousel-fade .carousel-inner > .item.prev,
-    .carousel-fade .carousel-inner > .item.active.left {
-      opacity: 0;
-      -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0);
-    }
-    .carousel-fade .carousel-inner > .item.next.left,
-    .carousel-fade .carousel-inner > .item.prev.right,
-    .carousel-fade .carousel-inner > .item.active {
-      opacity: 1;
-      -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0);
-    }
-  }
-
 }
 
 
@@ -481,6 +437,13 @@
 @media (min-width: 992px) and (max-width: 1199px) {
 
   .page-template-template-experience {
+    .section-why {
+      .because-of-hatch {
+        .item {
+          height: 72px;
+        }
+      }
+    }
     .section-where {
       .bubble {
         display: none;
@@ -559,6 +522,13 @@
         }
         iframe {
           float: left;
+        }
+      }
+    }
+    .section-why {
+      .because-of-hatch {
+        .item {
+          height: 72px;
         }
       }
     }
@@ -706,7 +676,6 @@
         }
       }
     }
-
     .section-why {
       .why-blocks {
         margin-bottom: 50px;
@@ -729,6 +698,9 @@
           font-size: 24px;
           padding: 10px 40px 10px;
           margin: 0 0 40px;
+        }
+        .item {
+          height: 54px;
         }
         .item p {
           font-size: 18px;
@@ -821,6 +793,11 @@
     .conference-apply {
       .hero-title {
         width: 100%;
+      }
+    }
+    .because-of-hatch {
+      .item {
+        height: 81px;
       }
     }
   }

@@ -10487,6 +10487,7 @@ fieldset[disabled] .page-hatch15-donation-matching .give-btn.active {
   background-image: url('../img/experience/section-bg-why.jpg');
   background-repeat: no-repeat;
   background-position: 50% 0;
+  background-size: cover;
 }
 .page-template-template-experience .section-why .why-blocks {
   margin-bottom: 80px;
@@ -10694,49 +10695,10 @@ fieldset[disabled] .page-hatch15-donation-matching .give-btn.active {
 .page-template-template-experience .section-bottom .section-partners .partners-column .partner-logo {
   background: rgba(255, 255, 255, 0.7);
 }
-.page-template-template-experience .carousel-fade .carousel-inner .item {
-  opacity: 0;
-  -webkit-transition-property: opacity;
-  transition-property: opacity;
-}
-.page-template-template-experience .carousel-fade .carousel-inner .active {
-  opacity: 1;
-}
-.page-template-template-experience .carousel-fade .carousel-inner .active.left,
-.page-template-template-experience .carousel-fade .carousel-inner .active.right {
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-}
-.page-template-template-experience .carousel-fade .carousel-inner .next.left,
-.page-template-template-experience .carousel-fade .carousel-inner .prev.right {
-  opacity: 1;
-}
-.page-template-template-experience .carousel-fade .carousel-control {
-  z-index: 2;
-}
-@media all and (transform-3d), (-webkit-transform-3d) {
-  .page-template-template-experience .carousel-fade .carousel-inner > .item.next,
-  .page-template-template-experience .carousel-fade .carousel-inner > .item.active.right {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  .page-template-template-experience .carousel-fade .carousel-inner > .item.prev,
-  .page-template-template-experience .carousel-fade .carousel-inner > .item.active.left {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  .page-template-template-experience .carousel-fade .carousel-inner > .item.next.left,
-  .page-template-template-experience .carousel-fade .carousel-inner > .item.prev.right,
-  .page-template-template-experience .carousel-fade .carousel-inner > .item.active {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
 @media (min-width: 992px) and (max-width: 1199px) {
+  .page-template-template-experience .section-why .because-of-hatch .item {
+    height: 72px;
+  }
   .page-template-template-experience .section-where .bubble {
     display: none;
   }
@@ -10795,6 +10757,9 @@ fieldset[disabled] .page-hatch15-donation-matching .give-btn.active {
   }
   .page-template-template-experience .section-what .what-video iframe {
     float: left;
+  }
+  .page-template-template-experience .section-why .because-of-hatch .item {
+    height: 72px;
   }
   .page-template-template-experience .section-where .where-summary {
     font-size: 18px;
@@ -10928,6 +10893,9 @@ fieldset[disabled] .page-hatch15-donation-matching .give-btn.active {
     padding: 10px 40px 10px;
     margin: 0 0 40px;
   }
+  .page-template-template-experience .section-why .because-of-hatch .item {
+    height: 54px;
+  }
   .page-template-template-experience .section-why .because-of-hatch .item p {
     font-size: 18px;
   }
@@ -10999,6 +10967,9 @@ fieldset[disabled] .page-hatch15-donation-matching .give-btn.active {
 @media (max-width: 480px) {
   .page-template-template-experience .conference-apply .hero-title {
     width: 100%;
+  }
+  .page-template-template-experience .because-of-hatch .item {
+    height: 81px;
   }
 }
 .page-groundbreakers .groundbreakers-posts {
