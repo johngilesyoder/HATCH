@@ -8627,11 +8627,11 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .site-header .navbar-collapse .nav > li.dropdown a {
-    padding: 9px 7px;
+    padding: 9px 9px;
   }
   .site-header .navbar-collapse .nav > li > a {
-    padding-left: 7px;
-    padding-right: 7px;
+    padding-left: 9px;
+    padding-right: 9px;
     font-size: 21px;
   }
 }
