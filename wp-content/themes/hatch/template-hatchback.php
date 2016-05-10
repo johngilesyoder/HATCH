@@ -50,12 +50,6 @@
 
         <?php wp_reset_query(); ?>
 
-        <div class="story">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hatchback/story-2.png" alt="">
-          <p>
-            <strong>When Rafi heard Elias</strong> Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus. Vestibulum id ligula porta felis euismod semper.
-          </p>
-        </div>
       </div>
       <div class="donation">
         <h2>HATCHBack Donation</h2>
