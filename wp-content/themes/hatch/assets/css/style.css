@@ -7898,13 +7898,15 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   height: auto;
 }
 .blog-format .post.type-post,
-.blog-format .type-tribe_events {
+.blog-format .type-tribe_events,
+.blog-format .hatchback-story {
   margin-bottom: 50px;
   border-bottom: 1px solid #E6E6E6;
   padding-bottom: 50px;
 }
 .blog-format .post.type-post .post-title,
-.blog-format .type-tribe_events .post-title {
+.blog-format .type-tribe_events .post-title,
+.blog-format .hatchback-story .post-title {
   margin: 0 0 12px;
   font-size: 32px;
   line-height: 1.25em;
@@ -7912,15 +7914,18 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   letter-spacing: -0.02em;
 }
 .blog-format .post.type-post .post-title a,
-.blog-format .type-tribe_events .post-title a {
+.blog-format .type-tribe_events .post-title a,
+.blog-format .hatchback-story .post-title a {
   color: #252C33;
 }
 .blog-format .post.type-post .post-title .icon-external-link,
-.blog-format .type-tribe_events .post-title .icon-external-link {
+.blog-format .type-tribe_events .post-title .icon-external-link,
+.blog-format .hatchback-story .post-title .icon-external-link {
   margin-left: 10px;
 }
 .blog-format .post.type-post .post-meta,
-.blog-format .type-tribe_events .post-meta {
+.blog-format .type-tribe_events .post-meta,
+.blog-format .hatchback-story .post-meta {
   font-family: 'Archer SSm A', 'Archer SSm B';
   font-weight: 600;
   font-style: italic;
@@ -7928,32 +7933,37 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   margin-bottom: 20px;
 }
 .blog-format .post.type-post .wp-post-image,
-.blog-format .type-tribe_events .wp-post-image {
+.blog-format .type-tribe_events .wp-post-image,
+.blog-format .hatchback-story .wp-post-image {
   display: block;
   max-width: 100%;
   height: auto;
   margin-bottom: 30px;
 }
 .blog-format .post.type-post .post-excerpt,
-.blog-format .type-tribe_events .post-excerpt {
+.blog-format .type-tribe_events .post-excerpt,
+.blog-format .hatchback-story .post-excerpt {
   color: #555;
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 30px;
 }
 .blog-format .post.type-post .post-content,
-.blog-format .type-tribe_events .post-content {
+.blog-format .type-tribe_events .post-content,
+.blog-format .hatchback-story .post-content {
   margin-bottom: 50px;
   color: #555;
   font-size: 16px;
   line-height: 24px;
 }
 .blog-format .post.type-post .post-content iframe,
-.blog-format .type-tribe_events .post-content iframe {
+.blog-format .type-tribe_events .post-content iframe,
+.blog-format .hatchback-story .post-content iframe {
   width: 100%;
 }
 .blog-format .post.type-post .btn-continue,
-.blog-format .type-tribe_events .btn-continue {
+.blog-format .type-tribe_events .btn-continue,
+.blog-format .hatchback-story .btn-continue {
   color: #007DA3;
   border-radius: 36px;
   line-height: 36px;
@@ -7962,17 +7972,20 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   border-color: #d9d9d9;
 }
 .blog-format .post.type-post .btn-continue:hover,
-.blog-format .type-tribe_events .btn-continue:hover {
+.blog-format .type-tribe_events .btn-continue:hover,
+.blog-format .hatchback-story .btn-continue:hover {
   background: #007DA3;
   border-color: #007DA3;
   color: #fff;
 }
 .blog-format .post.type-post .share-post,
-.blog-format .type-tribe_events .share-post {
+.blog-format .type-tribe_events .share-post,
+.blog-format .hatchback-story .share-post {
   margin-bottom: 20px;
 }
 .blog-format .post.type-post .share-post .like-button,
-.blog-format .type-tribe_events .share-post .like-button {
+.blog-format .type-tribe_events .share-post .like-button,
+.blog-format .hatchback-story .share-post .like-button {
   display: inline-block;
   margin-right: 15px;
   vertical-align: top;
@@ -7981,7 +7994,8 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   margin-top: 3px;
 }
 .blog-format .post.type-post .share-post .tweet-button,
-.blog-format .type-tribe_events .share-post .tweet-button {
+.blog-format .type-tribe_events .share-post .tweet-button,
+.blog-format .hatchback-story .share-post .tweet-button {
   display: inline-block;
   margin-right: 15px;
   vertical-align: top;
