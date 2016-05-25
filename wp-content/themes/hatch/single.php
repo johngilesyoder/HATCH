@@ -72,7 +72,7 @@
 					  <?php endif; ?>
 					</div>
 
-					<?php comments_template( '', true ); ?>
+					<div id="disqus_thread"></div>
 
 				</article>
 				<!-- /article -->
