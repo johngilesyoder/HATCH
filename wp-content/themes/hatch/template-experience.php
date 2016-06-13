@@ -4,8 +4,8 @@
   	<div class="hero-content-wrapper">
   		<div class="conference-apply">
 	  		<div class="hero-title">
-		  		<h1 class="hatch-logo hero-logo">HATCH<sup>16</sup></h1>
-          <span class="hero-date-location">Sep 14-18, 2016 &nbsp;//&nbsp; Big Sky, Montana</span>
+		  		<h1 class="hatch-logo hero-logo">HATCH</h1>
+          <span class="hero-date-location">Sep 14-18, 2017 &nbsp;//&nbsp; Big Sky, Montana</span>
           <span class="hero-date-location">Feb 8-11, 2016 &nbsp;//&nbsp; Panama City, Panama</span>
 		  	</div>
 		  	<div>
