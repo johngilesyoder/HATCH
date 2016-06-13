@@ -47,7 +47,7 @@
 
   <header class="form-header">
     <div class="logo">
-      <span class="site-logo">HATCH <span>2016</span></span>
+      <span class="site-logo">HATCH <span>2017</span></span>
       <span class="site-logo-date">Feb 8-11, 2017 &bull; Panama City, Panama</span>
     </div>
     <span class="form-name">Register</span>
