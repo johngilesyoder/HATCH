@@ -8538,7 +8538,7 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   border-right: 0;
 }
 .site-header .navbar-header .navbar-brand {
-  padding: 20px 15px 0;
+  padding: 29px 15px 0;
 }
 .site-header .navbar-header .navbar-brand .site-logo {
   color: #FFB100;
@@ -8718,7 +8718,7 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
     margin-bottom: 20.5px;
   }
   .site-header .navbar-header .navbar-brand {
-    padding: 15px 15px 0;
+    padding: 22px 15px 0;
     height: 75px;
   }
   .site-header .navbar-header .navbar-brand .site-logo {
@@ -10556,6 +10556,9 @@ fieldset[disabled] .page-hatch15-donation-matching .give-btn.active {
   height: 20px;
   background-image: url('../img/experience/caret-because-of-hatch.svg');
   background-size: cover;
+}
+.page-template-template-experience .section-why .because-of-hatch .item {
+  height: 36px;
 }
 .page-template-template-experience .section-why .because-of-hatch .item p {
   font-size: 24px;
