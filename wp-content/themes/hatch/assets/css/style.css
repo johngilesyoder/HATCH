@@ -8414,7 +8414,7 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
 }
 .site-footer .built-by a {
   display: inline-block;
-  opacity: .5;
+  opacity: .4;
   -webkit-transition: opacity 150ms;
   transition: opacity 150ms;
   margin-top: 5px;
@@ -8423,7 +8423,7 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   opacity: .8;
 }
 .site-footer .built-by a img {
-  height: 22px;
+  height: 18px;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .site-footer .footer-main .footer-connect .footer-email .short-email {
