@@ -8330,9 +8330,6 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
     left: auto;
   }
 }
-#bitnami-banner {
-  display: none !important;
-}
 .site-footer .footer-main {
   border-top: 4px solid #FFB100;
   padding: 40px 0;
@@ -8406,11 +8403,27 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
 .site-footer .footer-main .footer-links .links-column ul li a {
   line-height: 24px;
 }
-.site-footer .footer-company {
+.site-footer .footer-bottom {
   background: #F0F2F2;
   color: #999999;
   font-size: 13px;
   padding: 20px 0;
+}
+.site-footer .built-by {
+  text-align: right;
+}
+.site-footer .built-by a {
+  display: inline-block;
+  opacity: .5;
+  -webkit-transition: opacity 150ms;
+  transition: opacity 150ms;
+  margin-top: 5px;
+}
+.site-footer .built-by a:hover {
+  opacity: .8;
+}
+.site-footer .built-by a img {
+  height: 22px;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .site-footer .footer-main .footer-connect .footer-email .short-email {
@@ -8430,12 +8443,19 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   .site-footer .footer-main .footer-connect .footer-social-links {
     margin-bottom: 15px;
   }
-  .site-footer .footer-company {
+  .site-footer .footer-bottom {
     padding: 15px 0;
   }
-  .site-footer .footer-company span {
+  .site-footer .footer-bottom span {
     display: block;
     margin-bottom: 15px;
+  }
+  .site-footer .footer-bottom .built-by {
+    text-align: left;
+    margin: 30px 0;
+  }
+  .site-footer .footer-bottom .built-by a {
+    margin: 0;
   }
 }
 @media (max-width: 767px) {
@@ -8470,12 +8490,19 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   .site-footer .footer-main .footer-links .links-column ul li a {
     line-height: 18px;
   }
-  .site-footer .footer-company {
+  .site-footer .footer-bottom {
     padding: 15px 0;
   }
-  .site-footer .footer-company span {
+  .site-footer .footer-bottom span {
     display: block;
     margin-bottom: 15px;
+  }
+  .site-footer .footer-bottom .built-by {
+    text-align: left;
+    margin: 30px 0;
+  }
+  .site-footer .footer-bottom .built-by a {
+    margin: 0;
   }
 }
 @media (max-width: 480px) {

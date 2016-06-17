@@ -26,9 +26,20 @@
 		      	</div>
 	      	</div>
 	      </div>
-        <div class="footer-company">
+        <div class="footer-bottom">
         	<div class="container">
-          	<span>© HATCHfest 2004-<?php echo date('Y'); ?>. </span>“HATCH” is a registered trademark. All rights reserved. All logos, except for HATCH logos, are trademarks of their respective companies.
+          	<div class="row">
+          		<div class="col-md-8">
+          			<div class="footer-company">
+          				<span>© HATCHfest 2004-<?php echo date('Y'); ?>. </span>“HATCH” is a registered trademark. All rights reserved. All logos, except for HATCH logos, are trademarks of their respective companies.
+          			</div>
+          		</div>
+          		<div class="col-md-4">
+          			<div class="built-by">
+          			  <a target="_blank" href="https://hx.ai"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/built-by.svg"></a>
+          			</div>
+          		</div>
+          	</div>
         	</div>
 	      </div>
 	    </footer>
