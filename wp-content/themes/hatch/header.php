@@ -39,6 +39,9 @@
 
   <body <?php body_class(); ?>>
 
+    <!-- Google Analytics -->
+    <?php get_template_part( 'includes/analytics' ); ?>
+
     <!-- Topbar -->
     <?php get_template_part( 'includes/topbar' ); ?>
 
