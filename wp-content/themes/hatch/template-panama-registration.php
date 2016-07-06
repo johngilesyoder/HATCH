@@ -15,7 +15,7 @@
       <?php endwhile; ?>
 
       <?php endif; ?>
-      TEST
+
       <?php gravity_form(17, false, false, false, '', true); ?>
     </div>
   </div>
