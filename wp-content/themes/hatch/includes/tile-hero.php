@@ -29,7 +29,7 @@
         $permalink = get_permalink();
         // featured image
         $thumb_id = get_post_thumbnail_id();
-        $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'full', true);
+        $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'medium-thumb', true);
         $thumb_url = $thumb_url_array[0];
         
         switch ($count%4) {
