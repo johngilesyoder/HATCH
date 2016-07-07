@@ -77,7 +77,7 @@ if (function_exists('add_theme_support'))
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
     add_image_size('large', 700, '', true); // Large Thumbnail
-    add_image_size('medium', 250, '', true); // Medium Thumbnail
+    add_image_size('medium', 500, '', true); // Medium Thumbnail
     add_image_size('small', 120, '', true); // Small Thumbnail
     add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
 
@@ -698,7 +698,7 @@ add_filter('pre_get_posts','SearchFilter');
  *
  * @return string
  */
-function hatch_tribe_event_featured_image( $post_id = null, $size = 'full', $link = true ) {
+function hatch_tribe_event_featured_image( $post_id = null, $size = 'large', $link = true ) {
     if ( is_null( $post_id ) ) {
         $post_id = get_the_ID();
     }

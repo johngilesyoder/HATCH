@@ -54,7 +54,7 @@ $event_id = get_the_ID();
 			<div class="row">
 				<div class="col-md-6">
 					<!-- Event featured image, but exclude link -->
-					<?php echo tribe_event_featured_image( $event_id, 'full', false ); ?>
+					<?php echo tribe_event_featured_image( $event_id, 'large', false ); ?>
 				</div>
 				<div class="col-md-6">
 					<!-- Event content -->
