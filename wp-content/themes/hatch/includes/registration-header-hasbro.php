@@ -21,14 +21,6 @@
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
 		<?php wp_head(); ?>
-		<script>
-      // conditionizr.com
-      // configure environment tests
-      conditionizr.config({
-          assets: '<?php echo get_template_directory_uri(); ?>',
-          tests: {}
-      });
-    </script>
 
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
