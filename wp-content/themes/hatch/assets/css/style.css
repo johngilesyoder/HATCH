@@ -12903,46 +12903,6 @@ textarea.page-template-template-panama-registration-success .form-wrapper .gform
 .page-template-template-panama-registration-success .form-wrapper .gform_wrapper .gf_progressbar_wrapper {
   margin-bottom: 25px;
 }
-.page-template-template-registration .form-wrapper .gform_wrapper .gf_progressbar,
-.page-template-template-panama-registration .form-wrapper .gform_wrapper .gf_progressbar,
-.page-template-template-registration-success .form-wrapper .gform_wrapper .gf_progressbar,
-.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper .gf_progressbar,
-.page-template-template-panama-registration-success .form-wrapper .gform_wrapper .gf_progressbar {
-  background-image: none;
-  line-height: 1em;
-  border: 0;
-  overflow: hidden;
-  height: 21px;
-  margin-bottom: 21px;
-  background-color: #f5f5f5;
-  border-radius: 4px;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-.page-template-template-registration .form-wrapper .gform_wrapper .gf_progressbar .gf_progressbar_percentage,
-.page-template-template-panama-registration .form-wrapper .gform_wrapper .gf_progressbar .gf_progressbar_percentage,
-.page-template-template-registration-success .form-wrapper .gform_wrapper .gf_progressbar .gf_progressbar_percentage,
-.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper .gf_progressbar .gf_progressbar_percentage,
-.page-template-template-panama-registration-success .form-wrapper .gform_wrapper .gf_progressbar .gf_progressbar_percentage {
-  background-image: none;
-  float: left;
-  width: 0%;
-  height: 100%;
-  font-size: 12px;
-  line-height: 21px;
-  color: #fff;
-  text-align: center;
-  background-color: #007DA3;
-  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-  -webkit-transition: width 0.6s ease;
-  transition: width 0.6s ease;
-}
-.page-template-template-registration .form-wrapper .gform_wrapper .gf_progressbar .gf_progressbar_percentage span,
-.page-template-template-panama-registration .form-wrapper .gform_wrapper .gf_progressbar .gf_progressbar_percentage span,
-.page-template-template-registration-success .form-wrapper .gform_wrapper .gf_progressbar .gf_progressbar_percentage span,
-.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper .gf_progressbar .gf_progressbar_percentage span,
-.page-template-template-panama-registration-success .form-wrapper .gform_wrapper .gf_progressbar .gf_progressbar_percentage span {
-  display: none;
-}
 .page-template-template-registration .form-wrapper .gform_wrapper .validation_message,
 .page-template-template-panama-registration .form-wrapper .gform_wrapper .validation_message,
 .page-template-template-registration-success .form-wrapper .gform_wrapper .validation_message,
