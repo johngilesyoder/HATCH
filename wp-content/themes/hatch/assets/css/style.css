@@ -13156,6 +13156,8 @@ textarea.page-template-template-panama-registration-success .form-wrapper .gform
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   padding: 6px 12px !important;
+  height: 100px;
+  resize: auto;
 }
 .page-template-template-registration .form-wrapper .gform_wrapper textarea:focus,
 .page-template-template-panama-registration .form-wrapper .gform_wrapper textarea:focus,
