@@ -13343,6 +13343,8 @@ textarea.page-template-template-panama-registration-success .form-wrapper .gform
 .page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper textarea.medium,
 .page-template-template-panama-registration-success .form-wrapper .gform_wrapper textarea.medium {
   width: 100%;
+  height: 100px;
+  resize: auto;
 }
 .page-template-template-registration .form-wrapper .gform_wrapper .gform_next_button,
 .page-template-template-panama-registration .form-wrapper .gform_wrapper .gform_next_button,
