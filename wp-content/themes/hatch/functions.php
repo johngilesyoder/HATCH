@@ -140,7 +140,7 @@ function primary_nav()
 }
 
 
-function get_menu_by_location( $location ) 
+function get_menu_by_location( $location )
 {
     if( empty($location) ) return false;
     $locations = get_nav_menu_locations();
@@ -153,21 +153,21 @@ function footer_links_1() {
     $location = 'footer-links-1';
     get_menu_by_location( $location );
     $menu_obj = get_menu_by_location( $location );
-    wp_nav_menu( array('theme_location' => $location, 'items_wrap'=> '<h3 class="links-header">'.esc_html($menu_obj->name).'</h3><ul id=\"%1$s\" class=\"%2$s\">%3$s</ul>') ); 
+    wp_nav_menu( array('theme_location' => $location, 'items_wrap'=> '<h3 class="links-header">'.esc_html($menu_obj->name).'</h3><ul id=\"%1$s\" class=\"%2$s\">%3$s</ul>') );
 }
 
 function footer_links_2() {
     $location = 'footer-links-2';
     get_menu_by_location( $location );
     $menu_obj = get_menu_by_location( $location );
-    wp_nav_menu( array('theme_location' => $location, 'items_wrap'=> '<h3 class="links-header">'.esc_html($menu_obj->name).'</h3><ul id=\"%1$s\" class=\"%2$s\">%3$s</ul>') ); 
+    wp_nav_menu( array('theme_location' => $location, 'items_wrap'=> '<h3 class="links-header">'.esc_html($menu_obj->name).'</h3><ul id=\"%1$s\" class=\"%2$s\">%3$s</ul>') );
 }
 
 function footer_links_3() {
     $location = 'footer-links-3';
     get_menu_by_location( $location );
     $menu_obj = get_menu_by_location( $location );
-    wp_nav_menu( array('theme_location' => $location, 'items_wrap'=> '<h3 class="links-header">'.esc_html($menu_obj->name).'</h3><ul id=\"%1$s\" class=\"%2$s\">%3$s</ul>') ); 
+    wp_nav_menu( array('theme_location' => $location, 'items_wrap'=> '<h3 class="links-header">'.esc_html($menu_obj->name).'</h3><ul id=\"%1$s\" class=\"%2$s\">%3$s</ul>') );
 }
 
 
@@ -193,7 +193,7 @@ function html5blank_header_scripts()
 function html5blank_conditional_scripts()
 {
     if ( is_front_page() ) {
-        
+
         wp_register_script('isotope', get_template_directory_uri() . '/assets/js/lib/isotope.pkgd.min.js', array(), '2.1.1'); // Masonry
         wp_enqueue_script('isotope'); // Enqueue it!
 
@@ -204,17 +204,17 @@ function html5blank_conditional_scripts()
         wp_enqueue_script('flickity'); // Enqueue it!
 
         wp_register_script('home', get_template_directory_uri() . '/assets/js/sections/home.js', array(), null, true ); // Home scripts
-        
+
         // Create array to pass to the localization script (below)
         $translation_array = array(
             'tile' => hatch_get_tiles(),
             'carousel' => hatch_get_carousel()
         );
-        
+
         // Make template markup available to JavaScript as an object
         wp_localize_script( 'home', 'template', $translation_array );
         wp_enqueue_script('home'); // Enqueue it!
-    
+
     }
 }
 
@@ -419,7 +419,7 @@ add_action('wp_print_scripts', 'html5blank_conditional_scripts'); // Add Conditi
 add_action('wp_enqueue_scripts', 'html5blank_styles'); // Add Theme Stylesheet
 add_action('wp_enqueue_scripts', 'html5blank_conditional_styles'); // Add Conditional Theme Stylesheets
 add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
-add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
+//add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
 //add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
 
@@ -548,10 +548,10 @@ $metaboxes = array(
 
 
 add_action( 'admin_init', 'add_post_format_metabox' );
- 
+
 function add_post_format_metabox() {
     global $metaboxes;
- 
+
     if ( ! empty( $metaboxes ) ) {
         foreach ( $metaboxes as $id => $metabox ) {
             add_meta_box( $id, $metabox['title'], 'show_metaboxes', $metabox['applicableto'], $metabox['location'], $metabox['priority'], $id );
@@ -563,44 +563,44 @@ function add_post_format_metabox() {
 
 function show_metaboxes( $post, $args ) {
     global $metaboxes;
- 
+
     $custom = get_post_custom( $post->ID );
     $fields = $tabs = $metaboxes[$args['id']]['fields'];
- 
+
     /** Nonce **/
     $output = '<input type="hidden" name="post_format_meta_box_nonce" value="' . wp_create_nonce( basename( __FILE__ ) ) . '" />';
- 
+
     if ( sizeof( $fields ) ) {
         foreach ( $fields as $id => $field ) {
             switch ( $field['type'] ) {
                 default:
                 case "text":
- 
+
                     $output .= '<label for="' . $id . '">' . $field['title'] . '</label><input id="' . $id . '" type="text" name="' . $id . '" value="' . $custom[$id][0] . '" size="' . $field['size'] . '" />';
- 
+
                     break;
             }
         }
     }
- 
+
     echo $output;
 }
 
 
 
 add_action( 'save_post', 'save_metaboxes' );
- 
+
 function save_metaboxes( $post_id ) {
     global $metaboxes;
- 
+
     // verify nonce
     if ( ! wp_verify_nonce( $_POST['post_format_meta_box_nonce'], basename( __FILE__ ) ) )
         return $post_id;
- 
+
     // check autosave
     if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
         return $post_id;
- 
+
     // check permissions
     if ( 'page' == $_POST['post_type'] ) {
         if ( ! current_user_can( 'edit_page', $post_id ) )
@@ -608,19 +608,19 @@ function save_metaboxes( $post_id ) {
     } elseif ( ! current_user_can( 'edit_post', $post_id ) ) {
         return $post_id;
     }
- 
+
     $post_type = get_post_type();
- 
+
     // loop through fields and save the data
     foreach ( $metaboxes as $id => $metabox ) {
         // check if metabox is applicable for current post type
         if ( $metabox['applicableto'] == $post_type ) {
             $fields = $metaboxes[$id]['fields'];
- 
+
             foreach ( $fields as $id => $field ) {
                 $old = get_post_meta( $post_id, $id, true );
                 $new = $_POST[$id];
- 
+
                 if ( $new && $new != $old ) {
                     update_post_meta( $post_id, $id, $new );
                 }
@@ -640,7 +640,7 @@ function display_metaboxes() {
         ?>
         <script type="text/javascript">// <![CDATA[
             $ = jQuery;
- 
+
             <?php
             $formats = $ids = array();
             foreach ( $metaboxes as $id => $metabox ) {
@@ -648,7 +648,7 @@ function display_metaboxes() {
                 array_push( $ids, "#" . $id );
             }
             ?>
- 
+
             var formats = { <?php echo implode( ',', $formats );?> };
             var ids = "<?php echo implode( ',', $ids ); ?>";
 
@@ -657,22 +657,22 @@ function display_metaboxes() {
                 jQuery(ids).hide();
                 // Get current post format
                 var selectedElt = jQuery("input[name='post_format']:checked").attr("id");
- 
+
                 // If exists, fade in current post format metabox
                 if ( formats[selectedElt] )
                     jQuery("#" + formats[selectedElt]).fadeIn();
             }
- 
+
             jQuery(function() {
                 // Show/hide metaboxes on page load
                 displayMetaboxes();
- 
+
                 // Show/hide metaboxes on change event
                 jQuery("input[name='post_format']").change(function() {
                     displayMetaboxes();
                 });
             });
- 
+
         // ]]></script>
         <?php
     endif;
@@ -685,7 +685,7 @@ function SearchFilter($query) {
     }
     return $query;
 }
- 
+
 add_filter('pre_get_posts','SearchFilter');
 
 
