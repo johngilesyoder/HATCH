@@ -8585,8 +8585,8 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
 .site-header .navbar-collapse {
   padding-top: 30px;
 }
-.site-header .navbar-collapse .nav > li:nth-child(6) > a,
-.site-header .navbar-collapse .nav > li:nth-child(1) > a {
+.site-header .navbar-collapse .nav > li:nth-child(2) > a,
+.site-header .navbar-collapse .nav > li:nth-child(3) > a {
   text-transform: none;
 }
 .site-header .navbar-collapse .nav > li.dropdown a {
