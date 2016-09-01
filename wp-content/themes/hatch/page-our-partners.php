@@ -27,9 +27,6 @@
 				        <div class="partner partner-intel">
 				          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/partner-intel-2.png">
 				        </div>
-								<div class="partner partner-soundtrap">
-				          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-soundtrap.png">
-				        </div>
 				      </div>
 				    </div>
 				    <div class="partners partners-founding">
