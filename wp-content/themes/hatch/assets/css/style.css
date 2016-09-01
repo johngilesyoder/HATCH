@@ -12399,8 +12399,12 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
     right: 15px;
   }
 }
+.page-our-partners .page-banner .page-title {
+  background-image: none;
+  background-color: transparent;
+}
 .page-our-partners .page-banner .page-title .container {
-  height: 400px;
+  height: 350px;
 }
 .page-our-partners .partners {
   margin-bottom: 30px;

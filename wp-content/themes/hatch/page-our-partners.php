@@ -21,15 +21,9 @@
 					<!-- article -->
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-						<div class="partners partners-innovation">
-				      <h3 class="partners-title">Innovation Partners</h3>
-				      <div class="partner-logos">
-				        <div class="partner partner-intel">
-				          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/partner-intel-2.png">
-				        </div>
-				      </div>
-				    </div>
-				    <div class="partners partners-founding">
+						<?php the_content(); ?>
+						
+						<div class="partners partners-founding">
 				      <h3 class="partners-title">Founding/Hosting Partner</h3>
 				      <div class="partner-logos">
 				        <div class="partner">
@@ -37,6 +31,14 @@
 				        </div>
 				        <br>
 				        <a href="/partners/founding-partner-moonlight-basin/">Learn more</a> about our Founding Partner, Moonlight Basin
+				      </div>
+				    </div>
+						<div class="partners partners-innovation">
+				      <h3 class="partners-title">Innovation Partners</h3>
+				      <div class="partner-logos">
+				        <a href="/partners/innovation-partner/" class="partner partner-intel">
+				          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/partner-intel-2.png">
+				        </a>
 				      </div>
 				    </div>
 						<div class="partners partners-platinum">
@@ -101,8 +103,6 @@
 				        <?php wp_reset_query(); ?>
 				      </div>
 				    </div>
-
-				    <?php the_content(); ?>
 
 					</article>
 					<?php endwhile; ?>
