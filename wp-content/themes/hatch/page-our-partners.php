@@ -22,7 +22,7 @@
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 						<?php the_content(); ?>
-						
+
 						<div class="partners partners-founding">
 				      <h3 class="partners-title">Founding/Hosting Partner</h3>
 				      <div class="partner-logos">
@@ -103,6 +103,62 @@
 				        <?php wp_reset_query(); ?>
 				      </div>
 				    </div>
+
+						<div class="row">
+							<div class="col-md-6">
+								<div class="partners partners-friends">
+						      <h3 class="partners-title">Friends of HATCH / Individual Contributors</h3>
+						      <ul>
+										<li>Alicia &amp; Mike Alford</li>
+										<li>Andre Angel</li>
+										<li>George Bradt</li>
+										<li>Ania Bulis</li>
+										<li>Elias Cattan (#becauseofHATCH 1% supporter)</li>
+										<li>Tim Christensen</li>
+										<li>Charles Cumbaa </li>
+										<li>Paul Decker, Music Villa</li>
+										<li>Kathy &amp; Martin Dudley</li>
+										<li>Per Emanuelsson, CEO of Soundtrap.com</li>
+										<li>Stephanie &amp; Greg Guyette</li>
+										<li>William “Whurley” Hurley</li>
+										<li>Kirsten &amp; Mike King</li>
+										<li>Brad &amp; Melissa Levine</li>
+										<li>Mark &amp; Jenny Mummert</li>
+										<li>Lee &amp; Lathie Poole</li>
+										<li>Phil &amp; Jennifer Satre</li>
+										<li>Tim &amp; Robin Sheehan</li>
+										<li>Jeremiah Slovarp, Jereco Studios and Montana State University</li>
+										<li>Madeline Valgenti</li>
+										<li>John Yoder</li>
+										<li>John Zirkle, Music Educator</li>
+						      </ul>
+						    </div>
+							</div>
+							<div class="col-md-6">
+								<div class="partners partners-friends">
+						      <h3 class="partners-title">Patreon Supporters (<a href="https://www.patreon.com/HATCH">Become a patron</a>)</h3>
+						      <ul>
+						        <li>Mark Brand</li>
+										<li>Elias Cattan</li>
+										<li>Fred Dent</li>
+										<li>Steven Duong</li>
+										<li>Elysa Fenenbock</li>
+										<li>Elke Govertsen</li>
+										<li>Shannon Hughes</li>
+										<li>Eric James</li>
+										<li>Holly Janssen</li>
+										<li>Amber Jean</li>
+										<li>Rory O-Connor</li>
+										<li>Beno Oppenheimer</li>
+										<li>Mary Anne Richman</li>
+										<li>Marilu Salvador</li>
+										<li>Jennifer Sparks</li>
+										<li>Pete Strom</li>
+										<li>Raquel Villarreal</li>
+						      </ul>
+						    </div>
+							</div>
+						</div>
 
 					</article>
 					<?php endwhile; ?>
