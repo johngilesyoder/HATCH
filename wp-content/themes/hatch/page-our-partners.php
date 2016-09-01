@@ -86,6 +86,21 @@
 				        <?php wp_reset_query(); ?>
 				      </div>
 				    </div>
+						<div class="partners partners-bronze">
+				      <h3 class="partners-title">Bronze</h3>
+				      <div class="partner-logos">
+				        <?php $args = array( 'category_name' => 'bronze', 'post_type' => 'sponsor', 'posts_per_page' => 10 );
+				        $loop = new WP_Query( $args );
+				        while ( $loop->have_posts() ) : $loop->the_post();
+				        $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+				        <div class="partner">
+				          <img src="<?php echo $image[0]; ?>">
+				          <span class="partner-title"><?php the_title(); ?></span>
+				        </div>
+				        <?php endwhile; ?>
+				        <?php wp_reset_query(); ?>
+				      </div>
+				    </div>
 				    <div class="partners partners-friends">
 				      <h3 class="partners-title">Friends of HATCH</h3>
 				      <ul>
