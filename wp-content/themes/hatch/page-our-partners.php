@@ -20,7 +20,7 @@
 					<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 					<!-- article -->
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						
+
 						<div class="partners partners-innovation">
 				      <h3 class="partners-title">Innovation Partner</h3>
 				      <div class="partner-logos">
@@ -30,7 +30,7 @@
 				      </div>
 				    </div>
 				    <div class="partners partners-founding">
-				      <h3 class="partners-title">Founding Partner</h3>
+				      <h3 class="partners-title">Founding/Hosting Partner</h3>
 				      <div class="partner-logos">
 				        <div class="partner">
 				          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/partner-moonlight-basin.png">
@@ -135,7 +135,7 @@
 					</div>
 
 					<?php else: ?>
-					
+
 					<?php endif; ?>
 				</div>
 			</div>

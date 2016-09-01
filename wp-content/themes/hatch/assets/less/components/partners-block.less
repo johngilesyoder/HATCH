@@ -2,24 +2,36 @@
 // -----------------------------------------------------------------
 
 .section-partners {
-  .innovation-partner {
+  .special-partner {
+    margin: 0 0 50px;
     display: block;
-    .make-md-column(3);
-    .innovation-partner-wrapper {
-      background: #F0F8FF;
-      text-align: center;
-      height: 254px;
-      position: relative;
-      .vertical-center-parent();
-      img {
-        width: 184px;
-        .vertical-center();
+    text-decoration: none;
+    .make-md-column(6);
+    .special-partner-wrapper {
+      padding: 15px 30px;
+      .clearfix();
+      .partner-logo {
+        margin-right: 30px;
+        height: 75px;
       }
-      span {
-        position: absolute;
-        top: 10px;
-        left: 10px;
+      .partner-title {
+        font-size: 21px;
+      }
+    }
+  }
+  .innovation-partner {
+    .special-partner-wrapper {
+      background: #F0F8FF;
+      .partner-title {
         color: #0860A8;
+      }
+    }
+  }
+  .founding-partner {
+    .special-partner-wrapper {
+      background: rgba(197,168,22,.2);
+      .partner-title {
+        color: rgba(197,168,22,.9);
       }
     }
   }
@@ -28,7 +40,7 @@
     .partners-column-title {
       font-size: 14px;
       margin: 3px 0 15px;
-      font-weight: 400;
+      font-weight: 500;
     }
     .partner-logos {
       margin-bottom: -30px;
@@ -63,6 +75,17 @@
 @media (min-width: 992px) and (max-width: 1199px) {
 
   .section-partners {
+    .special-partner {
+      .special-partner-wrapper {
+        .partner-logo {
+          margin-right: 30px;
+          height: 75px;
+        }
+        .partner-title {
+          font-size: 18px;
+        }
+      }
+    }
     .partners-column {
       .partners-column-title {
         font-size: 14px;
@@ -186,4 +209,23 @@
 }
 
 // Up to landscape phone
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+
+  .section-partners {
+    .special-partner {
+      text-align: center;
+      margin: 0 0 30px;
+      .special-partner-wrapper {
+        .partner-logo {
+          margin-right: 0;
+          margin-bottom: 15px;
+        }
+        .partner-title {
+          font-size: 18px;
+          display: block;
+        }
+      }
+    }
+  }
+
+}

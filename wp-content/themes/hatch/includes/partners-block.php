@@ -7,12 +7,20 @@
     </div>
   </div>
   <div class="row">
-    <a href="#" class="innovation-partner">
-      <div class="innovation-partner-wrapper">
-        <span>Innovation Partner</span>
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/partner-intel.png">
+    <div class="special-partner founding-partner">
+      <div class="special-partner-wrapper">
+        <img class="partner-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-moonlight.png">
+        <span class="partner-title">Founding Partner</span>
+      </div>
+    </div>
+    <a href="partners/innovation-partner/" class="special-partner innovation-partner">
+      <div class="special-partner-wrapper">
+        <img class="partner-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/partner-intel.png">
+        <span class="partner-title">Innovation Partner</span>
       </div>
     </a>
+  </div>
+  <div class="row">
     <div class="partners-column partners-platinum">
       <h3 class="partners-column-title">Platinum</h3>
       <div class="partner-logos">
@@ -43,6 +51,19 @@
       <h3 class="partners-column-title">Silver</h3>
       <div class="partner-logos">
         <?php $args = array( 'category_name' => 'silver', 'post_type' => 'sponsor', 'posts_per_page' => 10 );
+        $loop = new WP_Query( $args );
+        while ( $loop->have_posts() ) : $loop->the_post();
+        $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+        <div class="partner-logo">
+          <img src="<?php echo $image[0]; ?>">
+        </div>
+        <?php endwhile; ?>
+      </div>
+    </div>
+    <div class="partners-column partners-bronze">
+      <h3 class="partners-column-title">Bronze</h3>
+      <div class="partner-logos">
+        <?php $args = array( 'category_name' => 'bronze', 'post_type' => 'sponsor', 'posts_per_page' => 10 );
         $loop = new WP_Query( $args );
         while ( $loop->have_posts() ) : $loop->the_post();
         $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
