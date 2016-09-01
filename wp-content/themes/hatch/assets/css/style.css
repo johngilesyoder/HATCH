@@ -12470,7 +12470,12 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
 }
 .page-our-partners .partners-innovation .partner {
   padding: 15px 20px 15px;
+}
+.page-our-partners .partners-innovation .partner-intel {
   background: #F0F8FF;
+}
+.page-our-partners .partners-innovation .partner-soundtrap img {
+  margin: 40px 0 0;
 }
 .page-our-partners .partners-innovation .partners-title {
   font-weight: 500;

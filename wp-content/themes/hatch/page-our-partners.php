@@ -22,10 +22,13 @@
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 						<div class="partners partners-innovation">
-				      <h3 class="partners-title">Innovation Partner</h3>
+				      <h3 class="partners-title">Innovation Partners</h3>
 				      <div class="partner-logos">
-				        <div class="partner">
+				        <div class="partner partner-intel">
 				          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/partner-intel-2.png">
+				        </div>
+								<div class="partner partner-soundtrap">
+				          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-soundtrap.png">
 				        </div>
 				      </div>
 				    </div>
@@ -100,23 +103,6 @@
 				        <?php endwhile; ?>
 				        <?php wp_reset_query(); ?>
 				      </div>
-				    </div>
-				    <div class="partners partners-friends">
-				      <h3 class="partners-title">Friends of HATCH</h3>
-				      <ul>
-				      	<?php $args = array( 'category_name' => 'supporters', 'post_type' => 'sponsor', 'posts_per_page' => 10 );
-				      	$loop = new WP_Query( $args );
-				      	while ( $loop->have_posts() ) : $loop->the_post(); ?>
-				      	<li><?php the_title(); ?></li>
-				      	<?php endwhile; ?>
-				      	<?php wp_reset_query(); ?>
-				        <?php $args = array( 'category_name' => 'friends', 'post_type' => 'sponsor', 'posts_per_page' => 10 );
-				        $loop = new WP_Query( $args );
-				        while ( $loop->have_posts() ) : $loop->the_post(); ?>
-				        <li><?php the_title(); ?></li>
-				        <?php endwhile; ?>
-				        <?php wp_reset_query(); ?>
-				      </ul>
 				    </div>
 
 				    <?php the_content(); ?>
