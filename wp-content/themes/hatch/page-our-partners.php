@@ -106,7 +106,7 @@
 
 						<div class="row">
 							<div class="col-md-6">
-								<div class="partners partners-friends">
+								<div id="friends" class="partners partners-friends">
 						      <h3 class="partners-title">Friends of HATCH / Individual Contributors</h3>
 						      <ul>
 										<li>Alicia &amp; Mike Alford</li>
