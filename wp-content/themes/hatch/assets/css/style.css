@@ -7689,6 +7689,47 @@ textarea.gform_wrapper input[type="email"],
 textarea.gform_wrapper input[type="url"] {
   height: auto;
 }
+.gform_wrapper select {
+  display: block;
+  width: 100%;
+  height: 35px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.gform_wrapper select:focus {
+  border-color: #66afe9;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.gform_wrapper select::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.gform_wrapper select:-ms-input-placeholder {
+  color: #999;
+}
+.gform_wrapper select::-webkit-input-placeholder {
+  color: #999;
+}
+.gform_wrapper select[disabled],
+.gform_wrapper select[readonly],
+fieldset[disabled] .gform_wrapper select {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+  opacity: 1;
+}
+textarea.gform_wrapper select {
+  height: auto;
+}
 .gform_wrapper .gfield_radio li,
 .gform_wrapper .gfield_checkbox li {
   padding-left: 10px !important;
