@@ -55241,6 +55241,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/wp-content\/themes\/hatch\/assets\/img\/banner-adventures.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 141089,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/img\/banner-adventures.jpg",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/img\/banner-adventures.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/wp-content\/themes\/hatch\/assets\/img\/banner-apply.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
