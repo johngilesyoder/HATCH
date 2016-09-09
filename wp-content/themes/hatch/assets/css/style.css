@@ -7894,6 +7894,9 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   color: #007DA3;
   background-color: #fff;
 }
+.gform_wrapper .ginput_card_security_code {
+  display: inline-block;
+}
 .gform_confirmation_wrapper .gform_confirmation_message {
   padding: 15px;
   margin-bottom: 21px;
