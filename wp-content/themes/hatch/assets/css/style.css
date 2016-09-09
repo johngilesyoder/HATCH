@@ -7192,6 +7192,141 @@ a img.aligncenter {
     font-size: 18px;
   }
 }
+.single-hatch-adventure main {
+  padding: 30px 0 50px;
+}
+.single-hatch-adventure .page-banner {
+  background-size: cover;
+  width: 100%;
+  margin-bottom: 30px;
+  margin-top: -51px;
+  background-repeat: no-repeat;
+}
+.single-hatch-adventure .page-banner .page-title {
+  margin: 0;
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.0001) 40%, #000000 100%);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0001) 40%, #000000 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#ff000000', GradientType=0);
+}
+.single-hatch-adventure .page-banner .page-title .container {
+  position: relative;
+  height: 200px;
+}
+.single-hatch-adventure .page-banner .page-title h1 {
+  color: #fff;
+  position: absolute;
+  bottom: 30px;
+  left: 15px;
+  margin: 0;
+  font-size: 52px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+.single-hatch-adventure .page-content {
+  border-left: 1px solid #E6E6E6;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-left: 30px;
+}
+@media (min-width: 992px) {
+  .single-hatch-adventure .page-content {
+    float: left;
+    width: 75%;
+  }
+}
+@media (min-width: 992px) {
+  .single-hatch-adventure .page-content {
+    left: 25%;
+  }
+}
+.single-hatch-adventure .page-content.page-full {
+  border-left: 0;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  .single-hatch-adventure .page-content.page-full {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .single-hatch-adventure .page-content.page-full {
+    left: 0%;
+  }
+}
+.single-hatch-adventure article {
+  color: #555;
+}
+.single-hatch-adventure article p {
+  line-height: 1.6em;
+  margin-bottom: 15px;
+}
+.single-hatch-adventure article img {
+  max-width: 100%;
+}
+.single-hatch-adventure article iframe {
+  width: 100%;
+}
+.single-hatch-adventure .page-title {
+  margin-bottom: 30px;
+}
+.single-hatch-adventure .page-title h1 {
+  font-weight: 300;
+  margin: 0;
+  font-family: klavika-medium, "Helvetica Neue", Arial, sans-serif;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .page .page-content {
+    border-left: 0;
+    padding-left: 15px;
+  }
+  .page .page-content.page-full {
+    border-left: 0;
+    padding-left: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .page main {
+    padding: 30px 0;
+  }
+  .page .page-banner {
+    margin-top: -30px;
+    background-repeat: no-repeat;
+  }
+  .page .page-banner .page-title {
+    margin: 0;
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.0001) 40%, #000000 100%);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0001) 40%, #000000 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#ff000000', GradientType=0);
+  }
+  .page .page-banner .page-title .container {
+    position: relative;
+    height: 200px;
+  }
+  .page .page-banner .page-title h1 {
+    color: #fff;
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    margin: 0;
+    font-size: 36px;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  }
+  .page .page-content {
+    border-left: 0;
+    padding-left: 15px;
+  }
+  .page .page-content.page-full {
+    border-left: 0;
+    padding-left: 15px;
+  }
+}
 .blog-format,
 .blog-format body {
   height: 100%;

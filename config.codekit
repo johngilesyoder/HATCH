@@ -57234,6 +57234,26 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
+	"\/wp-content\/themes\/hatch\/assets\/less\/layout\/adventure.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/less\/layout\/adventure.less",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/hatch\/assets\/css\/layout\/adventure.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
 	"\/wp-content\/themes\/hatch\/assets\/less\/layout\/blog.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,

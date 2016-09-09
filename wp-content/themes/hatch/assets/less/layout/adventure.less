@@ -1,0 +1,142 @@
+// adventure.less
+// -----------------------------------------------------------------
+
+.single-hatch-adventure {
+  main {
+    padding: 30px 0 50px;
+  }
+
+  .page-banner {
+    background-size: cover;
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: -51px;
+    background-repeat: no-repeat;
+    .page-title {
+      margin: 0;
+      #gradient > .vertical(rgba(0,0,0,.0001), rgba(0,0,0,1), 40%, 100%);
+      .container {
+        position: relative;
+        height: 200px;
+      }
+      h1 {
+        color: #fff;
+        position: absolute;
+        bottom: 30px;
+        left: 15px;
+        margin: 0;
+        font-size: 52px;
+        text-shadow: 0 1px 4px rgba(0,0,0,.5);
+      }
+    }
+  }
+
+  .page-content {
+    border-left: 1px solid @border-color;
+    .make-md-column(9);
+    .make-md-column-push(3);
+    padding-left: 30px;
+    &.page-full {
+      border-left: 0;
+      padding-left: 15px;
+      .make-md-column(12);
+      .make-md-column-push(0);
+    }
+  }
+
+  article {
+    color: #555;
+    p {
+      line-height: 1.6em;
+      margin-bottom: 15px;
+    }
+    img {
+      max-width: 100%;
+    }
+    iframe {
+      width: 100%;
+    }
+  }
+
+  .page-title {
+    margin-bottom: 30px;
+    h1 {
+      font-weight: 300;
+      margin: 0;
+      font-family: @font-family-klavika-medium;
+    }
+  }
+
+}
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .page {
+    .page-content {
+      border-left: 0;
+      padding-left: 15px;
+      &.page-full {
+        border-left: 0;
+        padding-left: 15px;
+      }
+    }
+
+  }
+
+}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .page {
+    main {
+      padding: 30px 0;
+    }
+
+    .page-banner {
+      margin-top: -30px;
+      background-repeat: no-repeat;
+      .page-title {
+        margin: 0;
+        #gradient > .vertical(rgba(0,0,0,.0001), rgba(0,0,0,1), 40%, 100%);
+        .container {
+          position: relative;
+          height: 200px;
+        }
+        h1 {
+          color: #fff;
+          position: absolute;
+          bottom: 20px;
+          left: 15px;
+          margin: 0;
+          font-size: 36px;
+          text-shadow: 0 1px 4px rgba(0,0,0,.5);
+        }
+      }
+    }
+
+    .page-content {
+      border-left: 0;
+      padding-left: 15px;
+      &.page-full {
+        border-left: 0;
+        padding-left: 15px;
+      }
+    }
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {}
