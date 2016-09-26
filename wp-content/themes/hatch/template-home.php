@@ -19,7 +19,7 @@
           </div>
         </div>
         <div class="conference-info">
-          <h3 class="hatch-logo conference-title">HATCH<span>2016</span></h3>
+          <h3 class="hatch-logo conference-title">HATCH<span>2017</span></h3>
           <span class="conference-date date-panama">Feb 8-11, 2017 &nbsp;·&nbsp; Panama City, Panama</span>
           <span class="conference-date">Sep 14-18, 2017 &nbsp;·&nbsp; Big Sky, Montana</span>
           <p>Imagine gathering up a hundred innovators, artists, makers, creators, educators, risk-takers, influencers, and mavericks… people who want to shake the world by its ankles. And are. Imagine them in a room together, teased out of their cocoons, grids off, brains on, glass flying everywhere:</p>
