@@ -4,15 +4,15 @@
   <section id="posts-hero" class="posts-hero">
     <div id="hero-loading" class="isLoaded"></div>
   </section>
-  
+
   <div class="container">
     <!-- Conference -->
   	<section class="section-block section-conference">
       <div class="section-header">
-        <h2 class="section-title">HATCH 16</h2>
+        <h2 class="section-title">HATCH 2016</h2>
       </div>
       <div class="row">
-        <div class="conference-photo"> 
+        <div class="conference-photo">
           <div class="conference-photo-wrapper">
             <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/assets/img/conference-photo.jpg">
             <span class="conference-photo-title">OFF THE GRID // ON THE GRID</span>
@@ -45,7 +45,7 @@
                 <span>Groundbreakers</span>
               </h3>
             </a>
-            <p>Central to hatch is cultivating the next generation of creative leaders. Each year, HATCH selects up to 10 “Groundbreakers” who have shown exceptional talent and dedication to their work. So far, HATCH has sponsored more than 100 Groundbreakers and has impacted over 5,000 students directly. <a href="#">See Groundbreakers Alumni</a></p> 
+            <p>Central to hatch is cultivating the next generation of creative leaders. Each year, HATCH selects up to 10 “Groundbreakers” who have shown exceptional talent and dedication to their work. So far, HATCH has sponsored more than 100 Groundbreakers and has impacted over 5,000 students directly. <a href="#">See Groundbreakers Alumni</a></p>
           </div>
         </div>
         <div class="mentorship-block">
@@ -55,7 +55,7 @@
                 <span>360&deg; Mentorship</span>
               </h3>
             </a>
-            <p>Mentoring is a Hatch cornerstone. What began as top-down mentorship has evolved into a ‘360’ mentorship approach; bottom-up and peer to peer. We encourage — if not expect — all HATCH community members to mentor, share, and challenge one another. <a href="#">Learn more about 360° Mentorships</a></p> 
+            <p>Mentoring is a Hatch cornerstone. What began as top-down mentorship has evolved into a ‘360’ mentorship approach; bottom-up and peer to peer. We encourage — if not expect — all HATCH community members to mentor, share, and challenge one another. <a href="#">Learn more about 360° Mentorships</a></p>
           </div>
         </div>
       </div>
@@ -73,7 +73,7 @@
         <?php
         // Ensure the global $post variable is in scope
         global $post;
-         
+
         // Retrieve the next 5 upcoming events
         $events = tribe_get_events( array(
             'posts_per_page' => 3
@@ -85,7 +85,7 @@
         foreach ( $events as $post ) {
           setup_postdata( $post );
       ?>
-      
+
       <a href="<?php the_permalink(); ?>" class="hatching-block">
         <div class="block-wrapper">
           <div class="hatching-block-img" style="background-image:url('<?php echo hatch_tribe_event_featured_image(); ?>');"></div>

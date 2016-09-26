@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php /* Template Name: Apply */ get_header(); ?>
 	<main role="main">
 		<div class="page-banner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/banner-apply.jpg');background-position: 50% 50%;">
 			<div class="page-title">
@@ -9,7 +9,7 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				
+
 				<?php
 				  if($post->post_parent) {
 				  $children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
@@ -32,12 +32,12 @@
 					 	<span class="parent-page"><?php echo get_the_title($post->post_parent);?><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-parent-chevron.svg"></span>
 
 					<?php else: ?>
-						
+
 						<div class="page-content page-full">
-				
+
 				<?php endif; ?>
 
-					
+
 					<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 						<!-- article -->
