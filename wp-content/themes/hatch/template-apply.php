@@ -50,8 +50,8 @@
 									<!-- <div class="alert alert-warning">
 										The application window for HATCH 2015 has now closed. Check back here next year for HATCH 2016.
 									</div> -->
-									<?php $form_id = echo(types_render_field( 'field-slug', array() )); ?>
-									<?php gravity_form($form_id, false, false, false, '', true); ?>
+									<?php $form_id = types_render_field( 'application-form-id', array() ); ?>
+									<?php gravity_form(echo $form_id, false, false, false, '', true); ?>
 								</div>
 							</div>
 
