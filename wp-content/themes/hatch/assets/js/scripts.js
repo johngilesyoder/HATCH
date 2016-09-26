@@ -8,7 +8,7 @@
 		window.setInterval(function() {
 
 	  var current = new Date();
-	  var expiry = new Date("February 7, 2016 23:59:59");
+	  var expiry = new Date("February 7, 2017 23:59:59");
 
 	  if (current.getTime() > expiry.getTime()) {
 	    $('.topbar-panama').hide();
