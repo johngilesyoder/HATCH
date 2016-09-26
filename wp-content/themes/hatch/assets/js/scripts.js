@@ -8,13 +8,13 @@
 		window.setInterval(function() {
 
 	  var current = new Date();
-	  var expiry = new Date("September 13, 2016 23:59:59")
+	  var expiry = new Date("February 7, 2016 23:59:59");
 
 	  if (current.getTime() > expiry.getTime()) {
-	    $('.topbar-bigsky').hide();
+	    $('.topbar-panama').hide();
 
 	  } else if (current.getTime() < expiry.getTime()) {
-	    $('.topbar-bigsky').show();
+	    $('.topbar-panama').show();
 	  }
 
 	}, 0);

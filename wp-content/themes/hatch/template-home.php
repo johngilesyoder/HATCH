@@ -9,7 +9,7 @@
     <!-- Conference -->
   	<section class="section-block section-conference">
       <div class="section-header">
-        <h2 class="section-title">HATCH 2016</h2>
+        <h2 class="section-title">HATCH 2017</h2>
       </div>
       <div class="row">
         <div class="conference-photo">
@@ -21,7 +21,7 @@
         <div class="conference-info">
           <h3 class="hatch-logo conference-title">HATCH<span>2016</span></h3>
           <span class="conference-date date-panama">Feb 8-11, 2017 &nbsp;·&nbsp; Panama City, Panama</span>
-          <span class="conference-date">Sep 14-18, 2016 &nbsp;·&nbsp; Big Sky, Montana</span>
+          <span class="conference-date">Sep 14-18, 2017 &nbsp;·&nbsp; Big Sky, Montana</span>
           <p>Imagine gathering up a hundred innovators, artists, makers, creators, educators, risk-takers, influencers, and mavericks… people who want to shake the world by its ankles. And are. Imagine them in a room together, teased out of their cocoons, grids off, brains on, glass flying everywhere:</p>
           <p>A musician tackles a problem for an entrepreneur. A scientist cracks open an idea for music distribution. An ad-guy delivers insight to a health-care play. An inventor, architect, and educator sketching new models for learning…  Imagine that. Or just find yourself at HATCH.</p>
           <div class="conference-actions">
