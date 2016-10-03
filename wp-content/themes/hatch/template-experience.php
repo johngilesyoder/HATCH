@@ -1,12 +1,12 @@
 <?php /* Template Name: Experience Template */ get_header(); ?>
-  
+
   <section class="section-block section-hero">
   	<div class="hero-content-wrapper">
   		<div class="conference-apply">
 	  		<div class="hero-title">
 		  		<h1 class="hatch-logo hero-logo">HATCH</h1>
-          <span class="hero-date-location">Sep 14-18, 2016 &nbsp;//&nbsp; Big Sky, Montana</span>
           <span class="hero-date-location">Feb 8-11, 2017 &nbsp;//&nbsp; Panama City, Panama</span>
+          <span class="hero-date-location">Sep 19-23, 2017 &nbsp;//&nbsp; Big Sky, Montana</span>
 		  	</div>
 		  	<div>
 	  			<a href="/apply" class="btn btn-apply">Invite Only – <strong>Apply Now</strong></a>
@@ -146,7 +146,7 @@
                 Moonlight Basin is the original Founding sponsor of HATCH.  Twelve years later, it’s come full circle, as the magic of Moonlight will be host to HATCH 2015.</p>
               </p>
               <p>
-                The Moonlight Basin mission is to nurture a multi-generational, sustainable and authentic community, centered around outdoor activities of continual discovery and adventure within the Montana wilderness.      
+                The Moonlight Basin mission is to nurture a multi-generational, sustainable and authentic community, centered around outdoor activities of continual discovery and adventure within the Montana wilderness.
               </p>
 			  		</div>
 		  		</div>
@@ -161,8 +161,8 @@
   		<div class="conference-apply">
 	  		<div class="hero-title">
 		  		<h1 class="hatch-logo hero-logo">HATCH<sup>16</sup></h1>
-          <span class="hero-date-location">Sep 14-18, 2016 &nbsp;//&nbsp; Big Sky, Montana</span>
           <span class="hero-date-location">Feb 8-11, 2017 &nbsp;//&nbsp; Panama City, Panama</span>
+          <span class="hero-date-location">Sep 19-23, 2017 &nbsp;//&nbsp; Big Sky, Montana</span>
 		  	</div>
 		  	<div>
 	  			<a href="/apply" class="btn btn-apply">Invite Only – <strong>Apply Now</strong></a>
