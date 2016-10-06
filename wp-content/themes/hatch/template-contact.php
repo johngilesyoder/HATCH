@@ -27,7 +27,7 @@
 
             <?php endif; ?>
               <address class="contact-address">
-                627 E Peach St.<br>
+                2358 Whitetail Rd<br>
                 Bozeman, MT 59715
               </address>
               <!--<span class="contact-phone">(406) 209-9809</span>-->
@@ -55,6 +55,3 @@
   </main>
 
 <?php get_footer(); ?>
-
-
-
