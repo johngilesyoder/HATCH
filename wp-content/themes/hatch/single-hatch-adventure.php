@@ -3,7 +3,7 @@
     <div class="page-banner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/banner-adventures.jpg');background-position: 50% 50%;">
 			<div class="page-title">
 				<div class="container">
-					<h1>HATCH Adventures</h1>
+					<h1>#becauseOfHATCH Adventures</h1>
 				</div>
 			</div>
 		</div>
