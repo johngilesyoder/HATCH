@@ -1,5 +1,5 @@
 <?php /* Template Name: Registration Page Template */ get_template_part( 'includes/registration-header' ); ?>
-  
+
   <div class="container">
     <div class="form-wrapper">
       <?php if (have_posts()): while (have_posts()) : the_post(); ?>
@@ -15,13 +15,10 @@
       <?php endwhile; ?>
 
       <?php endif; ?>
-      
-      <?php gravity_form(13, false, false, false, '', true); ?>
+
+      <?php gravity_form(21, false, false, false, '', true); ?>
     </div>
   </div>
 
 
 <?php get_template_part( 'includes/registration-footer' ); ?>
-
-
-
