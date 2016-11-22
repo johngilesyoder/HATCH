@@ -8,8 +8,8 @@
 </div> -->
 <div class="topbar topbar-apply topbar-panama" style="display: none;">
   <div class="container">
-    <p><strong>Hatch Panama 2017:</strong> Apply now to attend or volunteer.</p>
-    <a href="/apply-panama" class="btn btn-secondary btn-apply">Apply Now</a>
+    <p><strong>Hatch 2017:</strong> Apply now to attend or volunteer.</p>
+    <a href="/apply-2017" class="btn btn-secondary btn-apply">Apply Now</a>
   </div>
 </div>
 <!-- <div class="topbar topbar-support">
