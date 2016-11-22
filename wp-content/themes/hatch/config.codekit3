@@ -241,6 +241,12 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"\/assets\/css\/style.css.map": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/assets\/css\/style.css.map",
+		"oF": 0
+		},
 	"\/assets\/fonts\/klavika-bold.eot": {
 		"ft": 8192,
 		"oA": 2,
@@ -2711,7 +2717,7 @@
 		"iI": 0,
 		"ma": 1,
 		"oA": 0,
-		"oAP": "\/style.css",
+		"oAP": "\/assets\/css\/style.css",
 		"oF": 2,
 		"oS": 0,
 		"rU": 0,
@@ -4731,7 +4737,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http:\/\/kindkudos.dev",
+	"externalServerAddress": "http:\/\/hatch.dev",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",

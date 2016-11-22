@@ -13043,6 +13043,281 @@ textarea.page-template-template-hasbro-registration-success .form-wrapper .gform
 textarea.page-template-template-panama-registration-success .form-wrapper .gform_wrapper input[type="number"] {
   height: auto;
 }
+.page-template-template-registration .form-wrapper .gform_wrapper .gf_coupon_code,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper .gf_coupon_code,
+.page-template-template-registration-success .form-wrapper .gform_wrapper .gf_coupon_code,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper .gf_coupon_code,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper .gf_coupon_code {
+  width: 50%;
+  display: inline-block;
+}
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button:focus,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button:focus,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:focus,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:focus,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:focus,
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button:active:focus,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button:active:focus,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:active:focus,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:active:focus,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:active:focus,
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button.active:focus,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button.active:focus,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.active:focus,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.active:focus,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.active:focus,
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button.focus,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button.focus,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.focus,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.focus,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.focus,
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button:active.focus,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button:active.focus,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:active.focus,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:active.focus,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:active.focus,
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button.active.focus,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button.active.focus,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.active.focus,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.active.focus,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button:hover,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button:hover,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:hover,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:hover,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:hover,
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button:focus,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button:focus,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:focus,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:focus,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:focus,
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button.focus,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button.focus,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.focus,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.focus,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.focus {
+  color: #333;
+  text-decoration: none;
+}
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button:active,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button:active,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:active,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:active,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:active,
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button.active,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button.active,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.active,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.active,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.active {
+  outline: 0;
+  background-image: none;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button.disabled,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button.disabled,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.disabled,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.disabled,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.disabled,
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button[disabled],
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button[disabled],
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button[disabled],
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button[disabled],
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button[disabled],
+fieldset[disabled] .page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button,
+fieldset[disabled] .page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button,
+fieldset[disabled] .page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button,
+fieldset[disabled] .page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button,
+fieldset[disabled] .page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  box-shadow: none;
+}
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button:hover,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button:hover,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:hover,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:hover,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:hover,
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button:focus,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button:focus,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:focus,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:focus,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:focus,
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button.focus,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button.focus,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.focus,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.focus,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.focus,
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button:active,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button:active,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:active,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:active,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:active,
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button.active,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button.active,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.active,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.active,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.active,
+.open > .dropdown-toggle.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button,
+.open > .dropdown-toggle.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button,
+.open > .dropdown-toggle.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button,
+.open > .dropdown-toggle.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button,
+.open > .dropdown-toggle.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button:active,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button:active,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:active,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:active,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:active,
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button.active,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button.active,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.active,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.active,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.active,
+.open > .dropdown-toggle.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button,
+.open > .dropdown-toggle.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button,
+.open > .dropdown-toggle.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button,
+.open > .dropdown-toggle.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button,
+.open > .dropdown-toggle.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button {
+  background-image: none;
+}
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button.disabled,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button.disabled,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.disabled,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.disabled,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.disabled,
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button[disabled],
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button[disabled],
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button[disabled],
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button[disabled],
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button[disabled],
+fieldset[disabled] .page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button,
+fieldset[disabled] .page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button,
+fieldset[disabled] .page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button,
+fieldset[disabled] .page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button,
+fieldset[disabled] .page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button,
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button.disabled:hover,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button.disabled:hover,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.disabled:hover,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.disabled:hover,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.disabled:hover,
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button[disabled]:hover,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button[disabled]:hover,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button[disabled]:hover,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button[disabled]:hover,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button[disabled]:hover,
+fieldset[disabled] .page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button:hover,
+fieldset[disabled] .page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button:hover,
+fieldset[disabled] .page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:hover,
+fieldset[disabled] .page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:hover,
+fieldset[disabled] .page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:hover,
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button.disabled:focus,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button.disabled:focus,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.disabled:focus,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.disabled:focus,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.disabled:focus,
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button[disabled]:focus,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button[disabled]:focus,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button[disabled]:focus,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button[disabled]:focus,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button[disabled]:focus,
+fieldset[disabled] .page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button:focus,
+fieldset[disabled] .page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button:focus,
+fieldset[disabled] .page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:focus,
+fieldset[disabled] .page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:focus,
+fieldset[disabled] .page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:focus,
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button.disabled.focus,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button.disabled.focus,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.disabled.focus,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.disabled.focus,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.disabled.focus,
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button[disabled].focus,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button[disabled].focus,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button[disabled].focus,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button[disabled].focus,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button[disabled].focus,
+fieldset[disabled] .page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button.focus,
+fieldset[disabled] .page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button.focus,
+fieldset[disabled] .page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.focus,
+fieldset[disabled] .page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.focus,
+fieldset[disabled] .page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.focus,
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button.disabled:active,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button.disabled:active,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.disabled:active,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.disabled:active,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.disabled:active,
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button[disabled]:active,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button[disabled]:active,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button[disabled]:active,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button[disabled]:active,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button[disabled]:active,
+fieldset[disabled] .page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button:active,
+fieldset[disabled] .page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button:active,
+fieldset[disabled] .page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:active,
+fieldset[disabled] .page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:active,
+fieldset[disabled] .page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button:active,
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button.disabled.active,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button.disabled.active,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.disabled.active,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.disabled.active,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.disabled.active,
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button[disabled].active,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button[disabled].active,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button[disabled].active,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button[disabled].active,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button[disabled].active,
+fieldset[disabled] .page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button.active,
+fieldset[disabled] .page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button.active,
+fieldset[disabled] .page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.active,
+fieldset[disabled] .page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.active,
+fieldset[disabled] .page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button.active {
+  background-color: #fff;
+  border-color: #ccc;
+}
+.page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button .badge,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button .badge,
+.page-template-template-registration-success .form-wrapper .gform_wrapper #gf_coupon_button .badge,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper #gf_coupon_button .badge,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper #gf_coupon_button .badge {
+  color: #fff;
+  background-color: #333;
+}
 .page-template-template-registration .form-wrapper .gform_wrapper .gfield_html,
 .page-template-template-panama-registration .form-wrapper .gform_wrapper .gfield_html,
 .page-template-template-registration-success .form-wrapper .gform_wrapper .gfield_html,
@@ -13465,6 +13740,7 @@ textarea.page-template-template-panama-registration-success .form-wrapper .gform
 .page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper .gfield_description,
 .page-template-template-panama-registration-success .form-wrapper .gform_wrapper .gfield_description {
   font-style: italic;
+  font-size: 13px;
 }
 .page-template-template-registration .form-wrapper .gform_wrapper .top_label input.medium,
 .page-template-template-panama-registration .form-wrapper .gform_wrapper .top_label input.medium,
@@ -13485,7 +13761,7 @@ textarea.page-template-template-panama-registration-success .form-wrapper .gform
 .page-template-template-panama-registration-success .form-wrapper .gform_wrapper .ginput_complex label {
   font-weight: normal;
   text-transform: uppercase;
-  font-size: .7em;
+  font-size: 10px !important;
 }
 .page-template-template-registration .form-wrapper .gform_wrapper .ginput_complex input[type=text],
 .page-template-template-panama-registration .form-wrapper .gform_wrapper .ginput_complex input[type=text],
@@ -14821,3 +15097,4 @@ fieldset[disabled] .page-volunteer .gform_wrapper .gform_button.active {
 .page-volunteer .gform_wrapper .gform_button:hover {
   background: #FF9D00;
 }
+/*# sourceMappingURL=style.css.map */
