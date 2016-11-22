@@ -9438,6 +9438,7 @@ textarea.page-apply .gform_wrapper textarea {
 }
 .page-apply .gform_wrapper .gfield_description {
   font-style: italic;
+  font-size: 13px;
 }
 .page-apply .gform_wrapper .top_label input.medium,
 .page-apply .gform_wrapper .top_label select.medium {
@@ -9446,7 +9447,7 @@ textarea.page-apply .gform_wrapper textarea {
 .page-apply .gform_wrapper .ginput_complex label {
   font-weight: normal;
   text-transform: uppercase;
-  font-size: .7em;
+  font-size: 10px !important;
 }
 .page-apply .gform_wrapper .ginput_complex input[type=text] {
   width: 100%;
