@@ -14248,8 +14248,8 @@ fieldset[disabled] .page-template-template-panama-registration-success .form-wra
 .page-template-template-registration-success .form-wrapper .gform_wrapper .gf_coupon_code,
 .page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper .gf_coupon_code,
 .page-template-template-panama-registration-success .form-wrapper .gform_wrapper .gf_coupon_code {
-  width: 50%;
-  display: inline-block;
+  width: 50% !important;
+  display: inline-block !important;
 }
 .page-template-template-registration .form-wrapper .gform_wrapper #gf_coupon_button,
 .page-template-template-panama-registration .form-wrapper .gform_wrapper #gf_coupon_button,
