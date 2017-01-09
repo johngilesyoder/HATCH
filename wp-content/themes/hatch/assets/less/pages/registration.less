@@ -222,11 +222,20 @@
       }
       .gfield_time_hour,
       .gfield_time_minute {
+        width: 75px !important;
+        max-width: 100px !important;
+        input[type="number"] {
+          width: 100% !important;
+        }
         label {
           font-weight: normal;
           text-transform: uppercase;
           font-size: .7em;
         }
+      }
+      .ui-datepicker-month,
+      .ui-datepicker-year {
+        color: #333 !important;
       }
       textarea.medium {
         width: 100%;

@@ -13536,6 +13536,31 @@ textarea.page-template-template-panama-registration-success .form-wrapper .gform
 .page-template-template-panama-registration-success .form-wrapper .gform_wrapper .gfield_required {
   color: #d9534f;
 }
+.page-template-template-registration .form-wrapper .gform_wrapper .gfield_time_hour,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper .gfield_time_hour,
+.page-template-template-registration-success .form-wrapper .gform_wrapper .gfield_time_hour,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper .gfield_time_hour,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper .gfield_time_hour,
+.page-template-template-registration .form-wrapper .gform_wrapper .gfield_time_minute,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper .gfield_time_minute,
+.page-template-template-registration-success .form-wrapper .gform_wrapper .gfield_time_minute,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper .gfield_time_minute,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper .gfield_time_minute {
+  width: 75px !important;
+  max-width: 100px !important;
+}
+.page-template-template-registration .form-wrapper .gform_wrapper .gfield_time_hour input[type="number"],
+.page-template-template-panama-registration .form-wrapper .gform_wrapper .gfield_time_hour input[type="number"],
+.page-template-template-registration-success .form-wrapper .gform_wrapper .gfield_time_hour input[type="number"],
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper .gfield_time_hour input[type="number"],
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper .gfield_time_hour input[type="number"],
+.page-template-template-registration .form-wrapper .gform_wrapper .gfield_time_minute input[type="number"],
+.page-template-template-panama-registration .form-wrapper .gform_wrapper .gfield_time_minute input[type="number"],
+.page-template-template-registration-success .form-wrapper .gform_wrapper .gfield_time_minute input[type="number"],
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper .gfield_time_minute input[type="number"],
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper .gfield_time_minute input[type="number"] {
+  width: 100% !important;
+}
 .page-template-template-registration .form-wrapper .gform_wrapper .gfield_time_hour label,
 .page-template-template-panama-registration .form-wrapper .gform_wrapper .gfield_time_hour label,
 .page-template-template-registration-success .form-wrapper .gform_wrapper .gfield_time_hour label,
@@ -13549,6 +13574,18 @@ textarea.page-template-template-panama-registration-success .form-wrapper .gform
   font-weight: normal;
   text-transform: uppercase;
   font-size: .7em;
+}
+.page-template-template-registration .form-wrapper .gform_wrapper .ui-datepicker-month,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper .ui-datepicker-month,
+.page-template-template-registration-success .form-wrapper .gform_wrapper .ui-datepicker-month,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper .ui-datepicker-month,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper .ui-datepicker-month,
+.page-template-template-registration .form-wrapper .gform_wrapper .ui-datepicker-year,
+.page-template-template-panama-registration .form-wrapper .gform_wrapper .ui-datepicker-year,
+.page-template-template-registration-success .form-wrapper .gform_wrapper .ui-datepicker-year,
+.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper .ui-datepicker-year,
+.page-template-template-panama-registration-success .form-wrapper .gform_wrapper .ui-datepicker-year {
+  color: #333 !important;
 }
 .page-template-template-registration .form-wrapper .gform_wrapper textarea.medium,
 .page-template-template-panama-registration .form-wrapper .gform_wrapper textarea.medium,
