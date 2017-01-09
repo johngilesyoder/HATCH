@@ -12706,6 +12706,18 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
 .page-template-template-panama-registration-success {
   background: #fafafa;
 }
+.page-template-template-registration .ui-datepicker-month,
+.page-template-template-panama-registration .ui-datepicker-month,
+.page-template-template-registration-success .ui-datepicker-month,
+.page-template-template-hasbro-registration-success .ui-datepicker-month,
+.page-template-template-panama-registration-success .ui-datepicker-month,
+.page-template-template-registration .ui-datepicker-year,
+.page-template-template-panama-registration .ui-datepicker-year,
+.page-template-template-registration-success .ui-datepicker-year,
+.page-template-template-hasbro-registration-success .ui-datepicker-year,
+.page-template-template-panama-registration-success .ui-datepicker-year {
+  color: #333 !important;
+}
 .page-template-template-registration .form-header,
 .page-template-template-panama-registration .form-header,
 .page-template-template-registration-success .form-header,
@@ -13055,18 +13067,6 @@ textarea.page-template-template-registration-success .form-wrapper .gform_wrappe
 textarea.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper input[type="number"],
 textarea.page-template-template-panama-registration-success .form-wrapper .gform_wrapper input[type="number"] {
   height: auto;
-}
-.page-template-template-registration .form-wrapper .gform_wrapper .ui-datepicker-month,
-.page-template-template-panama-registration .form-wrapper .gform_wrapper .ui-datepicker-month,
-.page-template-template-registration-success .form-wrapper .gform_wrapper .ui-datepicker-month,
-.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper .ui-datepicker-month,
-.page-template-template-panama-registration-success .form-wrapper .gform_wrapper .ui-datepicker-month,
-.page-template-template-registration .form-wrapper .gform_wrapper .ui-datepicker-year,
-.page-template-template-panama-registration .form-wrapper .gform_wrapper .ui-datepicker-year,
-.page-template-template-registration-success .form-wrapper .gform_wrapper .ui-datepicker-year,
-.page-template-template-hasbro-registration-success .form-wrapper .gform_wrapper .ui-datepicker-year,
-.page-template-template-panama-registration-success .form-wrapper .gform_wrapper .ui-datepicker-year {
-  color: #333 !important;
 }
 .page-template-template-registration .form-wrapper .gform_wrapper .gfield_html,
 .page-template-template-panama-registration .form-wrapper .gform_wrapper .gfield_html,
