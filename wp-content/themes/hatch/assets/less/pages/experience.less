@@ -98,7 +98,7 @@
       margin-bottom: 40px;
       text-shadow: 0 1px 20px #000;
       display: block;
-      width: 533px;
+      width: 633px;
       margin-left: auto;
       margin-right: auto;
       padding: 20px 15px 30px;
@@ -121,6 +121,17 @@
       font-family: @font-family-archer;
       font-style: italic;
       font-size: 24px;
+      margin: 0 0 10px;
+      &:last-child {
+        margin: 0;
+      }
+      a {
+        font-family: @font-family-sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        color: lighten(@link-color, 20%);
+        margin-left: 5px;
+      }
     }
     .btn-apply {
       border-radius: 11px;
@@ -632,6 +643,10 @@
       }
       .hero-date-location {
         font-size: 18px;
+        margin: 0 0 30px;
+        &:last-child {
+          margin: 0;
+        }
       }
       .btn-apply {
         font-size: 18px;

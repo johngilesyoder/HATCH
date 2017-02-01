@@ -10633,7 +10633,7 @@ fieldset[disabled] .page-hatch15-donation-matching .give-btn.active {
   margin-bottom: 40px;
   text-shadow: 0 1px 20px #000;
   display: block;
-  width: 533px;
+  width: 633px;
   margin-left: auto;
   margin-right: auto;
   padding: 20px 15px 30px;
@@ -10656,6 +10656,17 @@ fieldset[disabled] .page-hatch15-donation-matching .give-btn.active {
   font-family: 'Archer SSm A', 'Archer SSm B';
   font-style: italic;
   font-size: 24px;
+  margin: 0 0 10px;
+}
+.page-template-template-experience .conference-apply .hero-date-location:last-child {
+  margin: 0;
+}
+.page-template-template-experience .conference-apply .hero-date-location a {
+  font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  color: #0ac6ff;
+  margin-left: 5px;
 }
 .page-template-template-experience .conference-apply .btn-apply {
   border-radius: 11px;
@@ -11118,6 +11129,10 @@ fieldset[disabled] .page-hatch15-donation-matching .give-btn.active {
   }
   .page-template-template-experience .conference-apply .hero-date-location {
     font-size: 18px;
+    margin: 0 0 30px;
+  }
+  .page-template-template-experience .conference-apply .hero-date-location:last-child {
+    margin: 0;
   }
   .page-template-template-experience .conference-apply .btn-apply {
     font-size: 18px;

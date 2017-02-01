@@ -7,7 +7,7 @@
 		"uuidString": "CC79F700-685D-4D96-A6F4-8585433D47F7"
 		}
 	],
-"creatorBuild": "25479",
+"creatorBuild": "25504",
 "files": {
 	"\/404.php": {
 		"ft": 8192,
@@ -527,7 +527,7 @@
 		},
 	"\/assets\/img\/experience\/where-bubble-1.jpg": {
 		"ft": 16384,
-		"iS": 62994,
+		"iS": 67320,
 		"oA": 0,
 		"oAP": "\/assets\/img\/experience\/where-bubble-1.jpg",
 		"oF": 0,
@@ -4075,6 +4075,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-await-in-loop": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-bitwise": {
 			"active": 0,
 			"optionString": "{'allow': ['~'], 'int32Hint': true}"
@@ -4614,6 +4618,10 @@
 		"prefer-const": {
 			"active": 0,
 			"optionString": "{'destructuring': 'any', 'ignoreReadBeforeAssign': false}"
+			},
+		"prefer-destructuring": {
+			"active": 0,
+			"optionString": "{'array': true, 'object': true}, {'enforceForRenamedProperties': false}"
 			},
 		"prefer-numeric-literals": {
 			"active": 0,

@@ -5,8 +5,8 @@
   		<div class="conference-apply">
 	  		<div class="hero-title">
 		  		<h1 class="hatch-logo hero-logo">HATCH</h1>
-          <span class="hero-date-location">Feb 8-11, 2017 &nbsp;//&nbsp; Panama City, Panama</span>
-          <span class="hero-date-location">Sep 19-23, 2017 &nbsp;//&nbsp; Big Sky, Montana</span>
+          <span class="hero-date-location">Feb 8-11, 2017 &nbsp;//&nbsp; Panama City, Panama <a href="/about/hatch-latin-america-panama/">Learn more &rarr;</a></span>
+          <span class="hero-date-location">Sep 19-23, 2017 &nbsp;//&nbsp; Big Sky, Montana <a href="/about/montana/">Learn more &rarr;</a></span>
 		  	</div>
 		  	<div>
 	  			<a href="/apply" class="btn btn-apply">Invite Only – <strong>Apply Now</strong></a>
@@ -161,8 +161,8 @@
   		<div class="conference-apply">
 	  		<div class="hero-title">
 		  		<h1 class="hatch-logo hero-logo">HATCH<sup>16</sup></h1>
-          <span class="hero-date-location">Feb 8-11, 2017 &nbsp;//&nbsp; Panama City, Panama</span>
-          <span class="hero-date-location">Sep 19-23, 2017 &nbsp;//&nbsp; Big Sky, Montana</span>
+          <span class="hero-date-location">Feb 8-11, 2017 &nbsp;//&nbsp; Panama City, Panama <a href="/about/hatch-latin-america-panama/">Learn more &rarr;</a></span>
+          <span class="hero-date-location">Sep 19-23, 2017 &nbsp;//&nbsp; Big Sky, Montana <a href="/about/montana/">Learn more &rarr;</a></span>
 		  	</div>
 		  	<div>
 	  			<a href="/apply" class="btn btn-apply">Invite Only – <strong>Apply Now</strong></a>
