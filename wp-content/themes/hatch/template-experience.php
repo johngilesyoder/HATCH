@@ -1,4 +1,4 @@
-<?php /* Template Name: Experience Template */ get_header(); ?>
+<?php /* Template Name: Experience Template */ get_header();  ?>
 
   <section class="section-block section-hero">
   	<div class="hero-content-wrapper">
