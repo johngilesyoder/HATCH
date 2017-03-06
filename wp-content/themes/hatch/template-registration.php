@@ -16,7 +16,7 @@
 
       <?php endif; ?>
 
-      <?php gravity_form(21, false, false, false, '', true); ?>
+      <?php gravity_form(24, false, false, false, '', true); ?>
     </div>
   </div>
 

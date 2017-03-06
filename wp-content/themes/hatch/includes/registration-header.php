@@ -40,7 +40,7 @@
   <header class="form-header">
     <div class="logo">
       <span class="site-logo">HATCH <span>2017</span></span>
-      <span class="site-logo-date">Sep 19-23, 2017 &bull; Bozeman, Montana</span>
+      <span class="site-logo-date">Sep 20-24, 2017 &bull; Big Sky, Montana</span>
     </div>
     <span class="form-name">Register</span>
   </header>
