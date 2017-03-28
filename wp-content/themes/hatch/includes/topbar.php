@@ -6,7 +6,7 @@
     <a href="https://filmfreeway.com/festival/HATCHExperience" class="btn btn-secondary btn-filmfreeway">Submit with <img src="<?php echo get_template_directory_uri(); ?>/assets/img/btn-filmfreeway.svg"></a>
   </div>
 </div> -->
-<div class="topbar topbar-apply topbar-panama" style="display: none;">
+<div class="topbar topbar-apply topbar-panama" style="">
   <div class="container">
     <p><strong>Hatch 2017:</strong> Apply now to attend or volunteer.</p>
     <a href="/apply-2017" class="btn btn-secondary btn-apply">Apply Now</a>
