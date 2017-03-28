@@ -7341,19 +7341,20 @@ a img.aligncenter {
 .blog-format .site-header {
   margin-bottom: 0;
   position: fixed;
+  top: 36px;
   width: 100%;
   z-index: 100;
 }
 .blog-format .container-blog {
   position: relative;
-  padding-top: 101px;
+  padding-top: 137px;
   height: 100%;
 }
 .blog-format .blog-roll-wrapper {
   width: 795px;
   position: absolute;
   left: 0;
-  top: 101px;
+  top: 137px;
   bottom: 0;
 }
 .blog-format .blog-roll-wrapper main {
@@ -7368,7 +7369,7 @@ a img.aligncenter {
 }
 .blog-format .blog-sidebar-wrapper {
   position: fixed;
-  top: 101px;
+  top: 137px;
   width: 360px;
   right: 50%;
   margin-right: -570px;
@@ -7409,7 +7410,7 @@ a img.aligncenter {
 @media (min-width: 992px) and (max-width: 1199px) {
   .blog-format .blog-roll-wrapper {
     width: 595px;
-    top: 101px;
+    top: 137px;
   }
   .blog-format .blog-roll-wrapper main {
     padding-right: 30px;
