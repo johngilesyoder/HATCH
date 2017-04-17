@@ -56,6 +56,14 @@ $photo_gallery_id = get_field('photo_gallery_id');
           </div>
         </div>
     </aside>
+    <!-- LEARN MORE ============== -->
+    <div class="learn-more">
+      <div class="well">
+        <h3>Learn more:</h3>
+        <a href="/the-experience/">The Experience</a>
+        <a href="/about/montana/">Montana</a>
+      </div>
+    </div>
 
     <!-- ALUMNI ============== -->
     <div class="registration-alumni">

@@ -12885,6 +12885,27 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
   font-size: 18px;
   line-height: 1.5em;
 }
+.page-template-template-registration .registration-content .learn-more,
+.page-template-template-registration-success .registration-content .learn-more {
+  margin: 0 0 80px;
+  text-align: center;
+}
+.page-template-template-registration .registration-content .learn-more h3,
+.page-template-template-registration-success .registration-content .learn-more h3 {
+  display: inline-block;
+  margin: 0 60px 0 0;
+}
+.page-template-template-registration .registration-content .learn-more a,
+.page-template-template-registration-success .registration-content .learn-more a {
+  font-size: 21px;
+  display: inline-block;
+}
+.page-template-template-registration .registration-content .learn-more a:last-child,
+.page-template-template-registration-success .registration-content .learn-more a:last-child {
+  border-left: 2px solid #ccc;
+  margin-left: 28px;
+  padding-left: 30px;
+}
 .page-template-template-registration .registration-content .section-aside,
 .page-template-template-registration-success .registration-content .section-aside {
   margin: 0 0 80px;
