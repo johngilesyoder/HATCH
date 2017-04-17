@@ -1,5 +1,6 @@
 <?php /* Template Name: Registration Page Template */ get_template_part( 'includes/registration-header' );
 $form_id = get_field('gravity_form_id');
+$photo_gallery_id = get_field('photo_gallery_id');
 ?>
 <?php //the_field('photo_gallery_id'); ?>
 
@@ -94,7 +95,7 @@ $form_id = get_field('gravity_form_id');
     </div>
   </div>
   <!-- GALLERY ============== -->
-  <?php if ( function_exists( 'envira_gallery' ) ) { envira_gallery( '1268' ); } ?>
+  <?php if ( function_exists( 'envira_gallery' ) ) { envira_gallery( $photo_gallery_id ); } ?>
 </section>
 
 <!-- FORM WRAPPER =========== -->
