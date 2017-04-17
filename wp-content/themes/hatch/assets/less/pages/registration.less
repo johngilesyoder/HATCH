@@ -2,50 +2,177 @@
 // -----------------------------------------------------------------
 
 .page-template-template-registration,
-.page-template-template-panama-registration,
-.page-template-template-registration-success,
-.page-template-template-hasbro-registration-success,
-.page-template-template-panama-registration-success {
+.page-template-template-registration-success {
   background: #fafafa;
-  .ui-datepicker-month,
-  .ui-datepicker-year {
-    color: #333 !important;
-  }
-  .form-header {
+  // HERO
+  // -----------------------
+  .registration-hero {
+    background-color: #aaa;
+    background-size: cover;
+    background-position: 50%;
+    color: #fff;
+    margin: 0;
+    overflow: hidden;
+    height: 550px;
+    padding: 50px 30px;
+    position: relative;
     text-align: center;
-    margin: 30px 0;
-    .logo {
+    clip-path: polygon(0 0, 1920px 0, 1920px 100%, 0 65%);
+    text-shadow: 0px 0px 15px rgba(15,101,128,0.85);
+    .form-title {
       display: inline-block;
       vertical-align: top;
     }
     .site-logo {
       .hatch-logo();
-      font-size: 60px;
+      font-size: 33px;
       display: block;
       line-height: .85em;
-      span {
-        color: #222;
+      color: #fff;
+      margin: 0 0 5px;
+      em {
+        font-style: normal;
+        color: @brand-secondary;
       }
     }
     .site-logo-date {
-      font-family: 'Archer SSm A', 'Archer SSm B';
-      font-weight: 400;
-      font-style: italic;
-      font-size: 16px;
-      color: #1a1a1a;
+      font-weight: 500;
+      font-size: 15px;
+      color: #fff;
     }
-    .form-name {
-      font-size: 50px;
-      display: inline-block;
-      font-weight: 300;
-      line-height: 1em;
-      vertical-align: top;
-      margin-top: 3px;
-      letter-spacing: -.5px;
-      margin-left: 10px;
+    h1 {
+      margin: 115px 0;
+      font-size: 73px;
+      font-weight: 400;
     }
   }
 
+  // BUTTON
+  // -----------------------
+  .registration-button-wrapper {
+    text-align: center;
+    position: relative;
+    top: -140px;
+    z-index: 2000;
+    margin-bottom: -50px;
+  }
+  .btn-registration {
+    font-size: 33px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 15px 80px;
+    border-radius: 10px;
+    #gradient > .vertical(#FFC000, #FFA100);
+    &.is--toggled {
+      display: none;
+    }
+    &:hover {
+      background: #FFA100;
+    }
+  }
+
+  // REGISTRATION CONTENT
+  // -----------------------
+  .registration-content {
+    margin: 0 0 60px;
+    // Video ---------------
+    .video-wrapper {
+      background: #D8D8D8;
+      border-radius: 10px;
+      padding: 10px;
+    }
+    // Summary ---------------
+    .registration-summary {
+      margin: 0 0 80px;
+      iframe {
+
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.5em;
+      }
+    }
+    // Quote ---------------
+    .section-aside {
+      margin: 0 0 80px;
+      .section-aside-title {
+        .make-md-column(3);
+        h3 {
+          font-family: @font-family-klavika-medium;
+          font-size: 60px;
+          margin: 0;
+          line-height: .9em;
+        }
+      }
+      .section-aside-content {
+        .make-md-column(9);
+        .section-aside-content-wrapper {
+          padding-left: 20px;
+          border-left: 6px solid @brand-secondary;
+        }
+      }
+      .quote-block {
+        .quote-statement {
+          font-family: @font-family-archer;
+          font-style: italic;
+          line-height: 1.5em;
+          font-size: 18px;
+          font-weight: 600;
+          margin: 0 0 15px;
+        }
+        cite {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          img {
+            height: 50px;
+            margin: 0 5px;
+          }
+          .cite-person {
+            font-size: 24px;
+          }
+          .cite-organization {
+            text-transform: uppercase;
+            font-size: 14px;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+    // Alumni -----------
+    .registration-alumni {
+      margin: 0 0 80px;
+      h3 {
+        font-weight: 400;
+        font-size: 30px;
+        margin: 0 0 30px;
+      }
+      .alumni-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+      }
+      .alumnus {
+        width: 16.667%;
+        text-align: center;
+        img {
+          border-radius: 50%;
+          margin: 0 0 10px;
+          height: 140px;
+        }
+        .alumnus-name {
+          display: block;
+          font-size: 16px;
+          font-weight: 500;
+        }
+        .alumnus-title {
+          display: block;
+        }
+      }
+    }
+  }
+
+  // FOOTER
+  // -----------------------
   .form-footer {
     color: #999;
     text-align: center;
@@ -54,6 +181,16 @@
   }
 
 
+  // FORM STYLING
+  // -----------------------
+  .ui-datepicker-month,
+  .ui-datepicker-year {
+    color: #333 !important;
+  }
+
+  #form-wrapper {
+    display: none;
+  }
   .form-wrapper {
     background: #fff;
     border: 1px solid #e5e5e5;
@@ -286,6 +423,147 @@
       #gf_coupon_button {
         .btn();
         .btn-default();
+      }
+    }
+  }
+
+}
+
+
+// Responsive: desktop to large desktop
+// --------------------------------------------------
+@media (min-width: 1200px) and (max-width: 1499px) {}
+
+// Responsive: Tablet to desktop
+// --------------------------------------------------
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Responsive: Tablet to desktop
+// --------------------------------------------------
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .page-template-template-registration,
+  .page-template-template-registration-success {
+    .registration-hero {
+      margin: 0 0 30px;
+      clip-path: none;
+      height: 400px;
+      h1 {
+        margin: 75px 0;
+      }
+    }
+    .registration-button-wrapper {
+      top: 0;
+      margin: 0 0 30px
+    }
+    .registration-content {
+      margin: 0 0 60px;
+      .registration-summary,
+      .section-aside,
+      .registration-alumni {
+        margin: 0 0 50px;
+        .alumnus {
+          width: 33.3333%;
+          margin: 0 0 30px;
+        }
+      }
+      .registration-summary {
+        .video-wrapper {
+          margin: 0 0 30px;
+        }
+      }
+      .section-aside {
+        .section-aside-title {
+          h3 {
+            font-size: 36px;
+            margin: 0 0 15px;
+          }
+        }
+        .section-aside-content {
+          .section-aside-content-wrapper {
+            padding-left: 15px;
+            border-left: 3px solid @brand-secondary;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// Responsive: Landscape phone to desktop/tablet
+// --------------------------------------------------
+@media (max-width: 767px) {
+
+  .page-template-template-registration,
+  .page-template-template-registration-success {
+    .registration-hero {
+      height: 300px;
+      margin: 0 0 30px;
+      padding: 30px;
+      clip-path: none;
+      h1 {
+        margin: 60px 30px;
+        font-size: 50px;
+      }
+    }
+    .registration-button-wrapper {
+      top: 0;
+      margin: 0 0 30px
+    }
+    .registration-content {
+      .registration-summary,
+      .section-aside,
+      .registration-alumni {
+        margin: 0 0 40px;
+        .alumnus {
+          width: 50%;
+          margin: 0 0 30px;
+        }
+      }
+      .registration-summary {
+        .video-wrapper {
+          margin: 0 0 30px;
+        }
+      }
+      .section-aside {
+        .section-aside-title {
+          h3 {
+            font-size: 36px;
+            margin: 0 0 15px;
+          }
+        }
+        .section-aside-content {
+          .section-aside-content-wrapper {
+            padding-left: 15px;
+            border-left: 3px solid @brand-secondary;
+          }
+        }
+        .quote-block {
+          .quote-statement {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// Responsive: Up to landscape phone
+// --------------------------------------------------
+@media (max-width: 480px) {
+
+  .page-template-template-registration,
+  .page-template-template-registration-success {
+    .registration-button-wrapper {
+      top: 0;
+      margin: 0 0 30px;
+      padding: 0 15px;
+      .btn-registration {
+        width: 100%;
+        padding: 12px 15px;
+        font-size: 27px;
       }
     }
   }

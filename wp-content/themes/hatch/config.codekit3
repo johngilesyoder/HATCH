@@ -7,7 +7,7 @@
 		"uuidString": "CC79F700-685D-4D96-A6F4-8585433D47F7"
 		}
 	],
-"creatorBuild": "25568",
+"creatorBuild": "25813",
 "files": {
 	"\/404.php": {
 		"ft": 8192,
@@ -321,7 +321,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/icons\/favicon.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/icons\/touch.png": {
 		"ft": 32768,
@@ -329,7 +332,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/icons\/touch.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/banner-adventures.jpg": {
 		"ft": 16384,
@@ -337,7 +343,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/banner-adventures.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/banner-apply.jpg": {
 		"ft": 16384,
@@ -345,7 +353,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/banner-apply.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/banner-c2.png": {
 		"ft": 32768,
@@ -353,7 +363,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/banner-c2.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/banner-matching.jpg": {
 		"ft": 16384,
@@ -361,7 +374,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/banner-matching.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/banner-partners.jpg": {
 		"ft": 16384,
@@ -369,7 +384,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/banner-partners.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/banner-volunteer.jpg": {
 		"ft": 16384,
@@ -377,7 +394,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/banner-volunteer.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/btn-filmfreeway.svg": {
 		"ft": 2097152,
@@ -405,7 +424,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/conference-photo.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/experience\/caret-because-of-hatch.svg": {
 		"ft": 2097152,
@@ -423,7 +444,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/experience\/hero-shadow.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/experience\/hero-shadow.svg": {
 		"ft": 2097152,
@@ -441,7 +465,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/experience\/section-bg-hero.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/experience\/section-bg-what.jpg": {
 		"ft": 16384,
@@ -449,7 +475,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/experience\/section-bg-what.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/experience\/section-bg-where.jpg": {
 		"ft": 16384,
@@ -457,7 +485,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/experience\/section-bg-where.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/experience\/section-bg-who.png": {
 		"ft": 32768,
@@ -465,7 +495,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/experience\/section-bg-who.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/experience\/section-bg-who.svg": {
 		"ft": 2097152,
@@ -483,7 +516,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/experience\/section-bg-why.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/experience\/testimonial-anne.png": {
 		"ft": 32768,
@@ -491,7 +526,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/experience\/testimonial-anne.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/experience\/testimonial-hoffer.png": {
 		"ft": 32768,
@@ -499,7 +537,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/experience\/testimonial-hoffer.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/experience\/testimonial-lighter.jpg": {
 		"ft": 16384,
@@ -507,7 +548,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/experience\/testimonial-lighter.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/experience\/testimonial-rahi.png": {
 		"ft": 32768,
@@ -515,7 +558,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/experience\/testimonial-rahi.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/experience\/testimonial-travis.png": {
 		"ft": 32768,
@@ -523,7 +569,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/experience\/testimonial-travis.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/experience\/where-bubble-1.jpg": {
 		"ft": 16384,
@@ -531,7 +580,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/experience\/where-bubble-1.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/experience\/where-bubble-2.jpg": {
 		"ft": 16384,
@@ -539,7 +590,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/experience\/where-bubble-2.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/experience\/why-block-1.jpg": {
 		"ft": 16384,
@@ -547,7 +600,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/experience\/why-block-1.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/experience\/why-block-2.jpg": {
 		"ft": 16384,
@@ -555,7 +610,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/experience\/why-block-2.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/hatchback\/badge-one-percent.svg": {
 		"ft": 2097152,
@@ -573,7 +630,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/hatchback\/banner-bg.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/hatchback\/hatchback-feature-img.png": {
 		"ft": 32768,
@@ -581,7 +641,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/hatchback\/hatchback-feature-img.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/hatchback\/hatchback-logo.svg": {
 		"ft": 2097152,
@@ -599,7 +662,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/hatchback\/hatchback-story-selina.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/hatchback\/icon-secure.svg": {
 		"ft": 2097152,
@@ -617,7 +683,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/hatchback\/logo-patreon.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/hatchback\/stories-title.svg": {
 		"ft": 2097152,
@@ -635,7 +704,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/hatchback\/story-1.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/hatchback\/story-2.png": {
 		"ft": 32768,
@@ -643,7 +715,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/hatchback\/story-2.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/icon-blog-footer-facebook.svg": {
 		"ft": 2097152,
@@ -791,7 +866,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/logo-moonlight.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/logo-soundtrap.png": {
 		"ft": 32768,
@@ -799,7 +877,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/logo-soundtrap.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/mentorship-1.png": {
 		"ft": 32768,
@@ -807,7 +888,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/mentorship-1.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/mentorship-2.png": {
 		"ft": 32768,
@@ -815,7 +899,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/mentorship-2.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/partner-intel-2.png": {
 		"ft": 32768,
@@ -823,7 +910,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/partner-intel-2.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/partner-intel.jpg": {
 		"ft": 16384,
@@ -831,7 +921,9 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/partner-intel.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/assets\/img\/partner-intel.png": {
 		"ft": 32768,
@@ -839,7 +931,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/partner-intel.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/partner-moonlight-basin.png": {
 		"ft": 32768,
@@ -847,7 +942,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/partner-moonlight-basin.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/post-format-because-of-hatch.svg": {
 		"ft": 2097152,
@@ -858,6 +956,94 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"\/assets\/img\/registration\/alumni-altringer.png": {
+		"ft": 32768,
+		"iS": 162615,
+		"oA": 0,
+		"oAP": "\/assets\/img\/registration\/alumni-altringer.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/img\/registration\/alumni-bridges.png": {
+		"ft": 32768,
+		"iS": 131757,
+		"oA": 0,
+		"oAP": "\/assets\/img\/registration\/alumni-bridges.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/img\/registration\/alumni-gruber.png": {
+		"ft": 32768,
+		"iS": 153836,
+		"oA": 0,
+		"oAP": "\/assets\/img\/registration\/alumni-gruber.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/img\/registration\/alumni-hardy.png": {
+		"ft": 32768,
+		"iS": 164830,
+		"oA": 0,
+		"oAP": "\/assets\/img\/registration\/alumni-hardy.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/img\/registration\/alumni-kuhr.png": {
+		"ft": 32768,
+		"iS": 158904,
+		"oA": 0,
+		"oAP": "\/assets\/img\/registration\/alumni-kuhr.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/img\/registration\/alumni-thaller.png": {
+		"ft": 32768,
+		"iS": 136896,
+		"oA": 0,
+		"oAP": "\/assets\/img\/registration\/alumni-thaller.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/img\/registration\/bg-registration-bigsky.png": {
+		"ft": 32768,
+		"iS": 6323361,
+		"oA": 0,
+		"oAP": "\/assets\/img\/registration\/bg-registration-bigsky.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/img\/registration\/grace-davis.png": {
+		"ft": 32768,
+		"iS": 20419,
+		"oA": 0,
+		"oAP": "\/assets\/img\/registration\/grace-davis.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/js\/lib\/conditionizr-4.3.0.min.js": {
 		"ft": 64,
@@ -936,6 +1122,24 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/sections\/min\/min\/home-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/assets\/js\/sections\/min\/registration-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/sections\/min\/min\/registration-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/assets\/js\/sections\/registration.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/sections\/min\/registration-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -3168,6 +3372,12 @@
 		"oAP": "\/page-advisory-board.php",
 		"oF": 0
 		},
+	"\/page-big-sky-advisory-board.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page-big-sky-advisory-board.php",
+		"oF": 0
+		},
 	"\/page-groundbreakers.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -3240,7 +3450,10 @@
 		"oA": 0,
 		"oAP": "\/screenshot.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/search.php": {
 		"ft": 8192,
@@ -4105,6 +4318,10 @@
 			"active": 1,
 			"optionString": ""
 			},
+		"no-compare-neg-zero": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-cond-assign": {
 			"active": 1,
 			"optionString": "'except-parens'"
@@ -4389,6 +4606,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-prototype-builtins": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-redeclare": {
 			"active": 1,
 			"optionString": "{'builtinGlobals': false}"
@@ -4584,6 +4805,10 @@
 		"no-with": {
 			"active": 0,
 			"optionString": ""
+			},
+		"nonblock-statement-body-position": {
+			"active": 0,
+			"optionString": "'beside'"
 			},
 		"object-curly-newline": {
 			"active": 0,
@@ -5184,7 +5409,8 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"quality": 100
 		},
 	"languageDefaultsJS": {
 		"autoOutputAction": 0,
@@ -5207,14 +5433,6 @@
 		"autoOutputPathStyle": 0,
 		"orderOutput": 0,
 		"outputStyle": 1
-		},
-	"languageDefaultsJSX": {
-		"autoOutputAction": 0,
-		"autoOutputPathFilenamePattern": "*.js",
-		"autoOutputPathRelativePath": "",
-		"autoOutputPathReplace1": "jsx",
-		"autoOutputPathReplace2": "js",
-		"autoOutputPathStyle": 0
 		},
 	"languageDefaultsKIT": {
 		"autoOutputAction": 0,
@@ -5277,7 +5495,9 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"optimizerType": 1,
+		"quality": 100
 		},
 	"languageDefaultsPUG": {
 		"autoOutputAction": 0,
