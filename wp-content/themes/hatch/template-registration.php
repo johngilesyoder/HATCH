@@ -29,7 +29,7 @@ $form_id = get_field('gravity_form_id');
       <div class="row">
         <div class="col-md-7">
           <div class="video-wrapper">
-            <iframe width="100%" height="375" src="https://www.youtube.com/embed/MV4rwFw94aw?rel=0" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/212979228" width="100%" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
           </div>
         </div>
         <div class="col-md-5">
