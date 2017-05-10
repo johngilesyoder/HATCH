@@ -96,7 +96,7 @@ $photo_gallery_id = get_field('photo_gallery_id');
         <div class="alumnus">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/alumni-kuhr.png">
           <span class="alumnus-name">Barbara Kuhr</span>
-          <span class="alumnus-title">Co-fouder, WIRED mag</span>
+          <span class="alumnus-title">Co-founder, WIRED mag</span>
         </div>
       </div>
     </div>
