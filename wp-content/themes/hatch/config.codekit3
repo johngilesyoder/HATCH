@@ -1100,6 +1100,15 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/assets\/js\/lib\/rangeslider.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/lib\/min\/rangeslider.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/assets\/js\/min\/scripts-min.js": {
 		"ft": 64,
 		"mi": 1,
@@ -1118,11 +1127,29 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/assets\/js\/sections\/briana-survey.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/sections\/min\/briana-survey-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/assets\/js\/sections\/home.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/sections\/min\/home-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/assets\/js\/sections\/min\/briana-survey-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/sections\/min\/min\/briana-survey-min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -2905,6 +2932,23 @@
 		"sM": 0,
 		"sU": 0
 		},
+	"\/assets\/less\/pages\/survey.less": {
+		"aP": 1,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/assets\/css\/pages\/survey.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
 	"\/assets\/less\/pages\/volunteer.less": {
 		"aP": 0,
 		"bl": 0,
@@ -3164,6 +3208,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/registration-header.php",
+		"oF": 0
+		},
+	"\/includes\/survey-people.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/survey-people.php",
 		"oF": 0
 		},
 	"\/includes\/tile-hero.php": {
@@ -3527,6 +3577,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/template-apply.php",
+		"oF": 0
+		},
+	"\/template-brianasurvey.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/template-brianasurvey.php",
 		"oF": 0
 		},
 	"\/template-contact.php": {
