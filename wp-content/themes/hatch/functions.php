@@ -226,11 +226,11 @@ function html5blank_conditional_scripts()
 
     if ( is_page_template( 'template-brianasurvey.php' ) ) {
 
-      wp_register_script('briana-survey', get_template_directory_uri() . '/assets/js/sections/min/briana-survey-min.js', array(), '1.0.0' );
-      wp_enqueue_script('briana-survey'); // Enqueue it!
-
       wp_register_script('range-slider', get_template_directory_uri() . '/assets/js/lib/rangeslider.min.js', array(), '1.0.0' );
       wp_enqueue_script('range-slider'); // Enqueue it!
+
+      wp_register_script('briana-survey', get_template_directory_uri() . '/assets/js/sections/min/briana-survey-min.js', array(), '1.0.0' );
+      wp_enqueue_script('briana-survey'); // Enqueue it!
 
     }
 }

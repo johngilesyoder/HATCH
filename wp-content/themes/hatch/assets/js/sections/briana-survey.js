@@ -7,7 +7,9 @@
     // DOM ready, take it away
     var gravityForm = $('#gform_wrapper_28');
 
-    $('input[type="range"]').rangeslider();
+    $('input[type="range"]').rangeslider({
+      //polyfill: false
+    });
 
     $(document).on('input','input[data-input-id]', function() {
       $('#input_28_' + $(this).data('input-id')).val($(this).val());
