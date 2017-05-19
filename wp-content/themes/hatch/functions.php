@@ -725,4 +725,12 @@ function hatch_tribe_event_featured_image( $post_id = null, $size = 'large', $li
     return apply_filters( 'hatch_tribe_event_featured_image', $featured_image, $post_id, $size, $image_src );
 }
 
+
+// Enable Options Page
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page();
+
+}
+
 ?>

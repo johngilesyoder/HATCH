@@ -8,7 +8,7 @@
 </div> -->
 <div class="topbar topbar-apply topbar-panama" style="">
   <div class="container">
-    <p><strong>Hatch 2017:</strong> Apply now to attend or volunteer.</p>
+    <p><strong>Hatch <?php the_field('current_hatch_big_sky_year', 'option'); ?>:</strong> Apply now to attend or volunteer.</p>
     <a href="/apply-2017" class="btn btn-secondary btn-apply">Apply Now</a>
   </div>
 </div>
