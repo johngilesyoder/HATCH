@@ -9610,6 +9610,7 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
 .page-2017-hatch-panama-attendees .page-title,
 .page-2017-hatch-panama-directory .page-title,
 .page-2017-hatch-c2-attendees .page-title,
+.page-2017-hatch-big-sky-attendees .page-title,
 .page-id-1521 .page-title {
   font-weight: 300;
   margin: 0 0 30px;
@@ -9626,6 +9627,7 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
 .page-2017-hatch-panama-attendees .page-title h1,
 .page-2017-hatch-panama-directory .page-title h1,
 .page-2017-hatch-c2-attendees .page-title h1,
+.page-2017-hatch-big-sky-attendees .page-title h1,
 .page-id-1521 .page-title h1 {
   padding-bottom: 25px;
   border-bottom: 2px solid #e6e6e6;
@@ -9639,6 +9641,7 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
 .page-2017-hatch-panama-attendees .featured-presenters-title,
 .page-2017-hatch-panama-directory .featured-presenters-title,
 .page-2017-hatch-c2-attendees .featured-presenters-title,
+.page-2017-hatch-big-sky-attendees .featured-presenters-title,
 .page-id-1521 .featured-presenters-title {
   display: none;
 }
@@ -9651,6 +9654,7 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
 .page-2017-hatch-panama-attendees .gv-list-view,
 .page-2017-hatch-panama-directory .gv-list-view,
 .page-2017-hatch-c2-attendees .gv-list-view,
+.page-2017-hatch-big-sky-attendees .gv-list-view,
 .page-id-1521 .gv-list-view {
   border: 0;
   border-bottom: 1px solid #e6e6e6;
@@ -9666,6 +9670,7 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
 .page-2017-hatch-panama-attendees .gv-list-view-title,
 .page-2017-hatch-panama-directory .gv-list-view-title,
 .page-2017-hatch-c2-attendees .gv-list-view-title,
+.page-2017-hatch-big-sky-attendees .gv-list-view-title,
 .page-id-1521 .gv-list-view-title {
   padding: 0 15px;
   border: 0;
@@ -9680,6 +9685,7 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
 .page-2017-hatch-panama-attendees .gv-list-view-title h3,
 .page-2017-hatch-panama-directory .gv-list-view-title h3,
 .page-2017-hatch-c2-attendees .gv-list-view-title h3,
+.page-2017-hatch-big-sky-attendees .gv-list-view-title h3,
 .page-id-1521 .gv-list-view-title h3 {
   color: #ffb100;
   font-size: 24px;
@@ -9695,6 +9701,7 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
 .page-2017-hatch-panama-attendees .gv-list-view-subtitle h4,
 .page-2017-hatch-panama-directory .gv-list-view-subtitle h4,
 .page-2017-hatch-c2-attendees .gv-list-view-subtitle h4,
+.page-2017-hatch-big-sky-attendees .gv-list-view-subtitle h4,
 .page-id-1521 .gv-list-view-subtitle h4 {
   font-size: 12px;
   text-transform: uppercase;
@@ -9708,6 +9715,7 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
 .page-2017-hatch-panama-attendees .gv-field-label,
 .page-2017-hatch-panama-directory .gv-field-label,
 .page-2017-hatch-c2-attendees .gv-field-label,
+.page-2017-hatch-big-sky-attendees .gv-field-label,
 .page-id-1521 .gv-field-label {
   padding: 0;
 }
@@ -9720,6 +9728,7 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
 .page-2017-hatch-panama-attendees .gv-list-view-content,
 .page-2017-hatch-panama-directory .gv-list-view-content,
 .page-2017-hatch-c2-attendees .gv-list-view-content,
+.page-2017-hatch-big-sky-attendees .gv-list-view-content,
 .page-id-1521 .gv-list-view-content {
   padding: 0;
 }
@@ -9732,6 +9741,7 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
 .page-2017-hatch-panama-attendees .gv-grid-col-1-3,
 .page-2017-hatch-panama-directory .gv-grid-col-1-3,
 .page-2017-hatch-c2-attendees .gv-grid-col-1-3,
+.page-2017-hatch-big-sky-attendees .gv-grid-col-1-3,
 .page-id-1521 .gv-grid-col-1-3 {
   width: 25%;
   padding: 0 15px !important;
@@ -9747,6 +9757,7 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
 .page-2017-hatch-panama-attendees .gv-list-view-content .gv-list-view-content-image,
 .page-2017-hatch-panama-directory .gv-list-view-content .gv-list-view-content-image,
 .page-2017-hatch-c2-attendees .gv-list-view-content .gv-list-view-content-image,
+.page-2017-hatch-big-sky-attendees .gv-list-view-content .gv-list-view-content-image,
 .page-id-1521 .gv-list-view-content .gv-list-view-content-image {
   padding: 0 15px !important;
 }
@@ -9759,6 +9770,7 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
 .page-2017-hatch-panama-attendees .gv-grid-col-2-3,
 .page-2017-hatch-panama-directory .gv-grid-col-2-3,
 .page-2017-hatch-c2-attendees .gv-grid-col-2-3,
+.page-2017-hatch-big-sky-attendees .gv-grid-col-2-3,
 .page-id-1521 .gv-grid-col-2-3 {
   width: 75%;
   padding: 0 15px;
@@ -9774,6 +9786,7 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
   .page-2017-hatch-panama-attendees .gv-grid-col-1-3,
   .page-2017-hatch-panama-directory .gv-grid-col-1-3,
   .page-2017-hatch-c2-attendees .gv-grid-col-1-3,
+  .page-2017-hatch-big-sky-attendees .gv-grid-col-1-3,
   .page-id-1521 .gv-grid-col-1-3 {
     width: 100%;
   }
@@ -9785,6 +9798,7 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
   .page-2017-hatch-panama-attendees .gv-grid-col-2-3,
   .page-2017-hatch-panama-directory .gv-grid-col-2-3,
   .page-2017-hatch-c2-attendees .gv-grid-col-2-3,
+  .page-2017-hatch-big-sky-attendees .gv-grid-col-2-3,
   .page-id-1521 .gv-grid-col-2-3 {
     width: 100%;
   }
