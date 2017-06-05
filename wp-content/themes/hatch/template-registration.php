@@ -37,6 +37,15 @@ $photo_gallery_id = get_field('photo_gallery_id');
           <p>HATCH is a community, movement, and a series of experiences designed to ACTIVATE CREATIVITY to HATCH a better world. In its 13th year, HATCH experience is a four day annual retreat meets summit gifted to 100 of the most provocative innovators, inventors, and cultural catalysts, across a wide range of disciplines.</p>
         </div>
       </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="welcome-section">
+            <h4>Welcome to the HATCH network</h4>
+            <p>HATCH is a non-profit designed to benefit you and expand our network to HATCH a Better World, as well as mentor the next generation of our global leaders.  It costs $2500 to host each individual guest. HATCH is all inclusive.  Once you get yourself to Montana, everything is taken care of:  lodging, food, workshops, speaker series, entertainment, music, and transportation to and from the airport are all included with your pass.</p>
+            <p>We do not want financial constraints to stand in the way of your ability to experience HATCH. If the cost is prohibitive, there is an option to apply for a sponsored cost reduction when registering.</p>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- QUOTE ============== -->
     <aside class="section-aside hard-to-explain">

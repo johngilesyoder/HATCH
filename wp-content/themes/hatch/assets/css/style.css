@@ -12884,6 +12884,10 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
 .page-template-template-registration-success .registration-content {
   margin: 0 0 60px;
 }
+.page-template-template-registration .registration-content .welcome-section,
+.page-template-template-registration-success .registration-content .welcome-section {
+  margin: 30px 0 0;
+}
 .page-template-template-registration .registration-content .video-wrapper,
 .page-template-template-registration-success .registration-content .video-wrapper {
   background: #D8D8D8;
