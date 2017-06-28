@@ -9077,6 +9077,12 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
 .page-big-sky-advisory-board .advisory-board-posts {
   margin-top: 30px;
 }
+.page-advisory-board .advisory-board-posts.exec-board,
+.page-latin-america-advisory-board .advisory-board-posts.exec-board,
+.page-big-sky-advisory-board .advisory-board-posts.exec-board {
+  padding-bottom: 30px;
+  border-bottom: 2px solid #E6E6E6;
+}
 .page-advisory-board .board-member,
 .page-latin-america-advisory-board .board-member,
 .page-big-sky-advisory-board .board-member {
