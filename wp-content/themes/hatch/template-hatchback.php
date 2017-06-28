@@ -9,7 +9,7 @@
         <span class="hashtag">#BecauseOfHatch</span>
       </div>
       <div class="banner-right">
-        <img class="hatchback-badge" src="<?php echo get_template_directory_uri(); ?>/assets/img/hatchback/badge-one-percent.svg" alt="1% HATCHBack">
+        <img class="hatchback-badge" src="<?php echo get_template_directory_uri(); ?>/assets/img/hatchback/badge-five-percent.png" alt="5% HATCHBack">
       </div>
     </div>
   </div>
@@ -22,10 +22,10 @@
       <div class="intro-right">
         <h2>Redefining a better future #becauseofhatch.</h2>
         <p>
-          HATCH is a conduit for incredible opportunity. A worldwide network of connections that fosters innovation and venture growth becomes accessible. World changing ideas and projects are born. Globally adopted technologies take their first steps from concepts to products.    
+          HATCH is a conduit for incredible opportunity. A worldwide network of connections that fosters innovation and venture growth becomes accessible. World changing ideas and projects are born. Globally adopted technologies take their first steps from concepts to products.
         </p>
         <p>
-          HATCH BACK is the platform for reinvesting 1% or more of profits from projects and products that come to being through the HATCH community.
+          HATCH BACK is the platform for reinvesting 5% or more of profits from projects and products that come to being through the HATCH community.
         </p>
       </div>
     </div>
@@ -34,7 +34,7 @@
         <h2 class="stories-title"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/hatchback/stories-title.svg" alt="Amazing things happen when HATCHers give back. Story time…"></h2>
 
         <?php query_posts( 'post_type=hatchback-story&posts_per_page=-1' ); ?>
-        <?php 
+        <?php
           // featured image
           $thumb_id = get_post_thumbnail_id();
           $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'medium-thumb', true);
