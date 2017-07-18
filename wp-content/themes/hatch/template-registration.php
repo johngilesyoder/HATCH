@@ -64,6 +64,17 @@ $photo_gallery_id = get_field('photo_gallery_id');
           </div>
         </div>
     </aside>
+
+    <div class="section-deductible">
+      <h4>Tax Deductible</h4>
+      <p>You'll be happy to hear that 50% of the cost of your HATCH ticket (at full price) can be claimed by you as a 501C3 tax deductible donation.</p>
+      <p>This is how your $2500 full ticket price breaks down:</p>
+      <ul>
+        <li><strong>50% ($1250)</strong> - hard costs (includes accommodations, food, transport, A/V, venue rental, entertainment, etc.,)</li>
+        <li><strong>25% ($650)</strong> - Scholarship fund to assist those in need to attend</li>
+        <li><strong>25% ($650)</strong> - to HATCH non-profit overhead / admin</li>
+      </ul>
+    </div>
     <!-- LEARN MORE ============== -->
     <div class="learn-more">
       <div class="well">

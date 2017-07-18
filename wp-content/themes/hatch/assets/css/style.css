@@ -12959,6 +12959,11 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
   font-size: 14px;
   margin-left: 5px;
 }
+.page-template-template-registration .registration-content .section-deductible,
+.page-template-template-registration-success .registration-content .section-deductible {
+  font-size: 18px;
+  margin: 0 0 80px;
+}
 .page-template-template-registration .registration-content .registration-alumni,
 .page-template-template-registration-success .registration-content .registration-alumni {
   margin: 0 0 80px;
@@ -14073,7 +14078,9 @@ fieldset[disabled] .page-template-template-registration-success .form-wrapper .g
   .page-template-template-registration .registration-content .section-aside,
   .page-template-template-registration-success .registration-content .section-aside,
   .page-template-template-registration .registration-content .registration-alumni,
-  .page-template-template-registration-success .registration-content .registration-alumni {
+  .page-template-template-registration-success .registration-content .registration-alumni,
+  .page-template-template-registration .registration-content .section-deductible,
+  .page-template-template-registration-success .registration-content .section-deductible {
     margin: 0 0 40px;
   }
   .page-template-template-registration .registration-content .registration-summary .alumnus,
@@ -14081,7 +14088,9 @@ fieldset[disabled] .page-template-template-registration-success .form-wrapper .g
   .page-template-template-registration .registration-content .section-aside .alumnus,
   .page-template-template-registration-success .registration-content .section-aside .alumnus,
   .page-template-template-registration .registration-content .registration-alumni .alumnus,
-  .page-template-template-registration-success .registration-content .registration-alumni .alumnus {
+  .page-template-template-registration-success .registration-content .registration-alumni .alumnus,
+  .page-template-template-registration .registration-content .section-deductible .alumnus,
+  .page-template-template-registration-success .registration-content .section-deductible .alumnus {
     width: 50%;
     margin: 0 0 30px;
   }
@@ -14102,6 +14111,23 @@ fieldset[disabled] .page-template-template-registration-success .form-wrapper .g
   .page-template-template-registration .registration-content .section-aside .quote-block .quote-statement,
   .page-template-template-registration-success .registration-content .section-aside .quote-block .quote-statement {
     font-size: 16px;
+  }
+  .page-template-template-registration .registration-content .learn-more h3,
+  .page-template-template-registration-success .registration-content .learn-more h3 {
+    display: block;
+    margin: 0 0 15px;
+  }
+  .page-template-template-registration .registration-content .learn-more a,
+  .page-template-template-registration-success .registration-content .learn-more a {
+    font-size: 18px;
+    display: block;
+  }
+  .page-template-template-registration .registration-content .learn-more a:last-child,
+  .page-template-template-registration-success .registration-content .learn-more a:last-child {
+    border-left: 0;
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 10px;
   }
 }
 @media (max-width: 480px) {
