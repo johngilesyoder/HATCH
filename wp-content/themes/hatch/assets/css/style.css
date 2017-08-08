@@ -13036,6 +13036,10 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
   margin: 0;
   max-width: 100%;
 }
+.page-template-template-registration .form-wrapper .gform_wrapper div.charleft,
+.page-template-template-registration-success .form-wrapper .gform_wrapper div.charleft {
+  color: #888;
+}
 .page-template-template-registration .form-wrapper .gform_wrapper input[type="text"],
 .page-template-template-registration-success .form-wrapper .gform_wrapper input[type="text"],
 .page-template-template-registration .form-wrapper .gform_wrapper input[type="tel"],
