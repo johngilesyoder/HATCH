@@ -110,7 +110,6 @@
 						      <h3 class="partners-title">Friends of HATCH / Individual Contributors</h3>
 						      <ul>
 										<li>Alicia &amp; Mike Alford</li>
-										<li>Andre Angel</li>
 										<li>George Bradt</li>
 										<li>Ania Bulis</li>
 										<li>Elias Cattan (#becauseofHATCH 1% supporter)</li>
@@ -131,6 +130,14 @@
 										<li>Madeline Valgenti</li>
 										<li>John Yoder</li>
 										<li>John Zirkle, Music Educator</li>
+										<li>Josh and Amy Vance</li>
+										<li>James Nam and Sun Park</li>
+										<li>Lynn and Kurt Kelley</li>
+										<li>Hunter Parks (MMH 48 LLC)</li>
+										<li>Raj Garapati and Jyoti Patel</li>
+										<li>David and Kate Mortenson</li>
+										<li>Carl and Barbara Ueland</li>
+										<li>Tarpon Dreams, LLC</li>
 						      </ul>
 						    </div>
 							</div>
