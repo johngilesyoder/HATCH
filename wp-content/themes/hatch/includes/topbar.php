@@ -6,12 +6,12 @@
     <a href="https://filmfreeway.com/festival/HATCHExperience" class="btn btn-secondary btn-filmfreeway">Submit with <img src="<?php echo get_template_directory_uri(); ?>/assets/img/btn-filmfreeway.svg"></a>
   </div>
 </div> -->
-<div class="topbar topbar-apply topbar-panama" style="">
+<!-- <div class="topbar topbar-apply topbar-panama" style="">
   <div class="container">
     <p><strong>Hatch <?php the_field('current_hatch_big_sky_year', 'option'); ?>:</strong> Apply now to attend or volunteer.</p>
     <a href="/apply-2017" class="btn btn-secondary btn-apply">Apply Now</a>
   </div>
-</div>
+</div> -->
 <!-- <div class="topbar topbar-support">
   <div class="container">
     <p><strong>Support HATCH:</strong> Students of today are our leaders of tomorrow. <span>It’s in the best interest of our future to invest in them.</span></p>
