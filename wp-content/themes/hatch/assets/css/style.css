@@ -9859,6 +9859,7 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
 .page-2017-hatch-big-sky-attendees .gv-image {
   border-radius: 50%;
   border: 5px solid #c49d17;
+  margin: 0 0 15px;
 }
 @media (max-width: 767px) {
   .page-hatch-2015-attendees .gv-grid-col-1-3,
