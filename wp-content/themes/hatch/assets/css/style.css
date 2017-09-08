@@ -7389,20 +7389,20 @@ a img.aligncenter {
 .blog-format .site-header {
   margin-bottom: 0;
   position: fixed;
-  top: 36px;
+  top: 0;
   width: 100%;
   z-index: 100;
 }
 .blog-format .container-blog {
   position: relative;
-  padding-top: 137px;
+  padding-top: 101px;
   height: 100%;
 }
 .blog-format .blog-roll-wrapper {
   width: 795px;
   position: absolute;
   left: 0;
-  top: 137px;
+  top: 101px;
   bottom: 0;
 }
 .blog-format .blog-roll-wrapper main {
@@ -7458,7 +7458,7 @@ a img.aligncenter {
 @media (min-width: 992px) and (max-width: 1199px) {
   .blog-format .blog-roll-wrapper {
     width: 595px;
-    top: 137px;
+    top: 101px;
   }
   .blog-format .blog-roll-wrapper main {
     padding-right: 30px;
