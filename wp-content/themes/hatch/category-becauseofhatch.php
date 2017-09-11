@@ -5,10 +5,11 @@
     <main role="main">
       <div class="because-title">
         <strong>#BecauseOfHatch</strong>
-        <p>You were invited to HATCH because you are amazing.  100 at a time.  As you inspire others, you are inspired… HATCH is a network in which we mutually invest in one another and few things promote this movement of good more effectively than a collective and shared social tissue for the work we are doing for the world under one hash tag.</p>
-        <p>#becauseOfHATCH takes all of our work collectively full circle. USE IT.</p>
-        <p>Permanently attach #becauseOfHATCH to your projects, ideas, creations, speaking engagements, etc. By attaching the #becauseofHATCH tag to social media posts, packaging, conferences and causes, it creates a trackable MOVEMENT, and serves as our metric to continue to find partners to fund this ecosystem.</p>
-        <p>Used consistently, it not only promotes YOU, via HATCH, but serves as a trackable node in which you are all supporting each other, the global HATCH community, by helping it grow and thrive, supporting your ideas and visions with more infrastructure and potency.</p>
+        <p>You were invited to HATCH — 100 at a time — because you are amazing. As you inspire others, you are inspired.</p>
+        <p>HATCH is a network in which we mutually invest in one another. Few things promote this movement of good more effectively than a collective and shared social tissue, showcasing the work we are doing throughout the world, under one hash tag.</p>
+        <p>#becauseOfHATCH brings all of our work collectively full circle. Use it.</p>
+        <p>Let's start a collective movement.  Attach #becauseOfHATCH to your projects, ideas, creations, speaking engagements, etc. By attaching the #becauseofHATCH hashtag to social media posts, packaging, conferences and causes, it creates a trackable MOVEMENT, and serves as a metric for securing future partners and funding.</p>
+        <p>Used consistently, #becauseOfHATCH not only promotes YOU, via HATCH, but serves as a trackable node in which each of you are supporting one other and the global HATCH community.</p>
       </div>
       <?php get_template_part('loop'); ?>
 
