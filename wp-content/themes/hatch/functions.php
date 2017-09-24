@@ -233,6 +233,13 @@ function html5blank_conditional_scripts()
       wp_enqueue_script('briana-survey'); // Enqueue it!
 
     }
+
+    if ( is_page_template( 'template-becauseofhatchsurvey.php' ) ) {
+
+      wp_register_script('becauseofhatch-survey', get_template_directory_uri() . '/assets/js/sections/min/becauseofhatch-survey-min.js', array(), '1.0.0' );
+      wp_enqueue_script('becauseofhatch-survey'); // Enqueue it!
+
+    }
 }
 
 // Load HTML5 Blank styles

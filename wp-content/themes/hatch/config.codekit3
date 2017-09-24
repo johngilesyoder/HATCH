@@ -1146,6 +1146,16 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/assets\/js\/sections\/becauseofhatch-survey.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/sections\/min\/becauseofhatch-survey-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/assets\/js\/sections\/briana-survey.js": {
 		"ft": 64,
 		"ma": 0,
@@ -1162,6 +1172,16 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/sections\/min\/home-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/assets\/js\/sections\/min\/becauseofhatch-survey-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/sections\/min\/min\/becauseofhatch-survey-min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -2719,6 +2739,23 @@
 		"sM": 0,
 		"sU": 0
 		},
+	"\/assets\/less\/pages\/becauseofhatch-survey.less": {
+		"aP": 1,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/assets\/css\/pages\/becauseofhatch-survey.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
 	"\/assets\/less\/pages\/blog-roll.less": {
 		"aP": 0,
 		"bl": 0,
@@ -3199,6 +3236,12 @@
 		"oAP": "\/includes\/analytics.php",
 		"oF": 0
 		},
+	"\/includes\/becauseofhatch-survey-people.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/becauseofhatch-survey-people.php",
+		"oF": 0
+		},
 	"\/includes\/carousel-hero.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -3604,6 +3647,12 @@
 		"oAP": "\/template-apply.php",
 		"oF": 0
 		},
+	"\/template-becauseofhatchsurvey.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/template-becauseofhatchsurvey.php",
+		"oF": 0
+		},
 	"\/template-brianasurvey.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -3720,6 +3769,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/tribe-events\/tribe-events.css.map",
+		"oF": 0
+		},
+	"\/Untitled.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/Untitled.html",
 		"oF": 0
 		},
 	"\/wp_bootstrap_navwalker.php": {
