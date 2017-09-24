@@ -1,4 +1,4 @@
-<div class="gv-list-view" id="gv_list_1864">
+<!-- <div class="gv-list-view" id="gv_list_1864">
   <div class="gv-list-view-title">
     <h3 class="gv-field-24-4">Avein Saaty-Tafoya</h3>
     <div class="gv-list-view-subtitle">
@@ -15,7 +15,7 @@
       <div class="gv-field-24-9" id="gv-field-24-9">
         <p>Avein is in her 12th year as President & CEO of Adelante Healthcare, a not-for-profit Community Health System serving over 75,000 patients in the Phoenix area. She won the Changemaker Award for building the first LEED Platinum Certified Health Center in the nation and set the stage for addressing social determinants of health well beyond medical primary care services to include integrated behavioral health, nutrition, naturopathic medicine, community coalition building, resource & referral, education, and financial services for the mission of serving those most in need.</p>
       </div>
-      <!-- COLLAB FORM -->
+
       <div class="collaboration-form">
         <div class="checkbox checkbox-toggle">
           <label>
@@ -26,10 +26,10 @@
           <textarea class="form-control collaboration-text" data-input-id="1" rows="3" placeholder="Describe your collaboration ..."></textarea>
         </div>
       </div>
-      <!-- =========== -->
+
     </div>
   </div>
-</div>
+</div> -->
 <div class="gv-list-view" id="gv_list_1864">
   <div class="gv-list-view-title">
     <h3 class="gv-field-24-4">Heidi DuBose</h3>
