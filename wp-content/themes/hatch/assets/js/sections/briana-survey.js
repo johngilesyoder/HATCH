@@ -21,17 +21,17 @@
 
     $( "#input-first-name" ).keyup(function() {
       var value = $( this ).val();
-      $( "#input_31_195_3" ).attr('value', value );
+      $( "#input_31_369_3" ).attr('value', value );
     })
     .keyup();
     $( "#input-last-name" ).keyup(function() {
       var value = $( this ).val();
-      $( "#input_31_195_6" ).attr('value', value );
+      $( "#input_31_369_6" ).attr('value', value );
     })
     .keyup();
     $( "#input-email" ).keyup(function() {
       var value = $( this ).val();
-      $( "#input_31_196" ).attr('value', value );
+      $( "#input_31_370" ).attr('value', value );
     })
     .keyup();
 
