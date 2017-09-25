@@ -14488,6 +14488,7 @@ fieldset[disabled] .page-template-template-registration-success .form-wrapper .g
 }
 .page-template-template-brianasurvey .form-header p {
   color: #fff;
+  font-size: 21px;
 }
 .page-template-template-brianasurvey .form-header .logo {
   display: inline-block;
@@ -14531,6 +14532,13 @@ fieldset[disabled] .page-template-template-registration-success .form-wrapper .g
 }
 .page-template-template-brianasurvey .form-wrapper {
   margin: 0 auto 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 .page-template-template-brianasurvey .form-wrapper .gform_wrapper {
   margin: 0;
