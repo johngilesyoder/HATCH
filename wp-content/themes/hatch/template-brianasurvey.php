@@ -88,7 +88,7 @@
     <div class="submit-wrapper">
       <!-- THE GRAVITY FORM -->
       <!-- ================ -->
-      <?php gravity_form( 28, false, false, false, '', true ); ?>
+      <?php gravity_form( 31, false, false, false, '', true ); ?>
       <!-- FOOTER ================= -->
       <!-- ======================== -->
       <footer class="form-footer">
