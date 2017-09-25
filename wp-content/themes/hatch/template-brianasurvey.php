@@ -85,10 +85,16 @@
       </div>
     </div>
 
-    <div class="submit-wrapper">
-      <!-- THE GRAVITY FORM -->
-      <!-- ================ -->
-      <?php gravity_form( 31, false, false, false, '', true ); ?>
+		<div class="submit-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+			      <!-- THE GRAVITY FORM -->
+			      <!-- ================ -->
+			      <?php gravity_form( 31, false, false, false, '', true ); ?>
+					</div>
+				</div>
+			</div>
       <!-- FOOTER ================= -->
       <!-- ======================== -->
       <footer class="form-footer">
