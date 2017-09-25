@@ -5,7 +5,7 @@
     'use strict';
 
     // DOM ready, take it away
-    var gravityForm = $('#gform_wrapper_28');
+    var gravityForm = $('#gform_wrapper_31');
 
     $('input[type="range"]').rangeslider({
       //polyfill: false
