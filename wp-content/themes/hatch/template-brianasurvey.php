@@ -47,7 +47,7 @@
               <span class="form-name">Connection Survey</span>
             </h1>
             <div class="user-name">
-              <label>First things first &mdash; Who are you?</label>
+              <label>First things first &mdash; Who are you? <small>(required)</small></label>
               <div class="row">
                 <div class="col-md-6">
                   <input type="text" id="input-first-name" class="form-control input-lg" data-input-id="195_3" placeholder="First name">
