@@ -10277,9 +10277,9 @@ textarea.page-support-contribute .give-form-wrap select {
   margin: 0 0 5px;
   border: 1px solid #007DA3;
   border-radius: 4px;
-  margin-right: 10px;
-  margin-bottom: 15px;
-  padding: 7px 8px 2px;
+  margin-right: 10px !important;
+  margin-bottom: 15px !important;
+  padding: 7px 8px 2px !important;
   line-height: 1em;
   display: inline-block;
 }
@@ -10287,6 +10287,7 @@ textarea.page-support-contribute .give-form-wrap select {
   font-weight: normal;
   color: #007DA3;
   margin-left: 3px;
+  margin: 0 0 3px 5px !important;
 }
 .page-support-contribute .give-gateway-option {
   font-weight: normal;
