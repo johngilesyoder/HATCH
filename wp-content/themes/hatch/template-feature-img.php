@@ -1,6 +1,6 @@
 <?php /* Template Name: Feature Image */ get_header(); ?>
 	<main role="main">
-		<div class="page-banner" style="background-image: url('<?php the_post_thumbnail(); ?>');background-position: 50% 50%;">
+		<div class="page-banner" style="background-image: url('<?php the_post_thumbnail_url(); ?>');background-position: 50% 50%;">
 			<div class="page-title">
 				<div class="container">
 					<h1><?php the_title(); ?></h1>
