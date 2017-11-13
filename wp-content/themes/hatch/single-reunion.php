@@ -60,7 +60,7 @@ $summaryPhoto = get_field('summary_photo');
 						<div class="detail">
 							<i class="material-icons">today</i>
 							<h3 class="detail-title">When</h3>
-							<p><?php the_field('hero_button_url'); ?></p>
+							<p><?php the_field('when'); ?></p>
 						</div>
 					</div>
 					<div class="col-md-6">
