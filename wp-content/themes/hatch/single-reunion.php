@@ -109,12 +109,12 @@ $summaryPhoto = get_field('summary_photo');
 		</div>
 
 		<!-- GOOD TIMES -->
-		<div class="reunion-good-times">
+		<!-- <div class="reunion-good-times">
 			<div class="container">
 				<h2 class="good-times-title">Let the Good Times Roll</h2>
 				<a href="#reunion-schedule" class="btn btn-default btn-view-schedule">View the Full Schedule &nbsp;&darr;</a>
 			</div>
-		</div>
+		</div> -->
 
 		<!-- PLANNING TEAM -->
 		<div class="reunion-planning-team">
