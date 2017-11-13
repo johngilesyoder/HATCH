@@ -7,229 +7,21 @@
 		"uuidString": "CC79F700-685D-4D96-A6F4-8585433D47F7"
 		}
 	],
-"creatorBuild": "25900",
+"creatorBuild": "26148",
 "files": {
 	"\/404.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/404.php",
 		"oF": 0
 		},
 	"\/archive.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/archive.php",
 		"oF": 0
-		},
-	"\/assets\/css\/sections\/404.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/assets\/css\/sections\/404-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/assets\/css\/sections\/advisory-board.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/assets\/css\/sections\/advisory-board-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/assets\/css\/sections\/apply.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/assets\/css\/sections\/apply-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/assets\/css\/sections\/attendees.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/assets\/css\/sections\/attendees-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/assets\/css\/sections\/blog-roll.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/assets\/css\/sections\/blog-roll-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/assets\/css\/sections\/blog.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/assets\/css\/sections\/blog-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/assets\/css\/sections\/category.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/assets\/css\/sections\/category-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/assets\/css\/sections\/contact.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/assets\/css\/sections\/contact-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/assets\/css\/sections\/donate.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/assets\/css\/sections\/donate-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/assets\/css\/sections\/donation-matching.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/assets\/css\/sections\/donation-matching-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/assets\/css\/sections\/experience.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/assets\/css\/sections\/experience-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/assets\/css\/sections\/features.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/assets\/css\/sections\/features-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/assets\/css\/sections\/groundbreakers.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/assets\/css\/sections\/groundbreakers-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/assets\/css\/sections\/hatch-alumni.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/assets\/css\/sections\/hatch-alumni-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/assets\/css\/sections\/home.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/assets\/css\/sections\/home-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/assets\/css\/sections\/our-partners.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/assets\/css\/sections\/our-partners-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/assets\/css\/sections\/page.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/assets\/css\/sections\/page-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/assets\/css\/sections\/registration.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/assets\/css\/sections\/registration-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/assets\/css\/sections\/search.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/assets\/css\/sections\/search-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/assets\/css\/sections\/single.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/assets\/css\/sections\/single-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/assets\/css\/sections\/volunteer.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/assets\/css\/sections\/volunteer-min.css",
-		"oF": 0,
-		"oS": 0
 		},
 	"\/assets\/css\/style.css": {
 		"aP": 0,
@@ -239,15 +31,17 @@
 		"oA": 2,
 		"oAP": "\/assets\/css\/style-min.css",
 		"oF": 0,
-		"oS": 0
+		"oS": 3
 		},
 	"\/assets\/css\/style.css.map": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/assets\/css\/style.css.map",
 		"oF": 0
 		},
 	"\/assets\/fonts\/klavika-bold.eot": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/assets\/fonts\/klavika-bold.eot",
@@ -264,24 +58,28 @@
 		"prP": 0
 		},
 	"\/assets\/fonts\/klavika-bold.ttf": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/assets\/fonts\/klavika-bold.ttf",
 		"oF": 0
 		},
 	"\/assets\/fonts\/klavika-bold.woff": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/assets\/fonts\/klavika-bold.woff",
 		"oF": 0
 		},
 	"\/assets\/fonts\/klavika-bold.woff2": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/assets\/fonts\/klavika-bold.woff2",
 		"oF": 0
 		},
 	"\/assets\/fonts\/klavika-medium.eot": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/assets\/fonts\/klavika-medium.eot",
@@ -298,18 +96,21 @@
 		"prP": 0
 		},
 	"\/assets\/fonts\/klavika-medium.ttf": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/assets\/fonts\/klavika-medium.ttf",
 		"oF": 0
 		},
 	"\/assets\/fonts\/klavika-medium.woff": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/assets\/fonts\/klavika-medium.woff",
 		"oF": 0
 		},
 	"\/assets\/fonts\/klavika-medium.woff2": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/assets\/fonts\/klavika-medium.woff2",
@@ -2620,6 +2421,23 @@
 		"sM": 0,
 		"sU": 0
 		},
+	"\/assets\/less\/layout\/reunion.less": {
+		"aP": 1,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/assets\/css\/layout\/reunion.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
 	"\/assets\/less\/layout\/sidebar.less": {
 		"aP": 0,
 		"bl": 0,
@@ -3165,34 +2983,38 @@
 		"sU": 0
 		},
 	"\/author.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/author.php",
 		"oF": 0
 		},
 	"\/category-becauseofhatch.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/category-becauseofhatch.php",
 		"oF": 0
 		},
 	"\/category.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/category.php",
 		"oF": 0
 		},
 	"\/CHANGELOG.html": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/CHANGELOG.html",
 		"oF": 0
 		},
 	"\/CHANGELOG.md": {
+		"cB": 0,
 		"cS": 0,
 		"eF": 0,
 		"eL": 1,
-		"eLB": 0,
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
@@ -3207,226 +3029,262 @@
 		"uCM": 0
 		},
 	"\/comments.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/comments.php",
 		"oF": 0
 		},
 	"\/footer.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/footer.php",
 		"oF": 0
 		},
 	"\/functions.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/functions.php",
 		"oF": 0
 		},
 	"\/header.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/header.php",
 		"oF": 0
 		},
 	"\/includes\/analytics.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/analytics.php",
 		"oF": 0
 		},
 	"\/includes\/becauseofhatch-survey-people.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/becauseofhatch-survey-people.php",
 		"oF": 0
 		},
 	"\/includes\/carousel-hero.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/carousel-hero.php",
 		"oF": 0
 		},
 	"\/includes\/partners-block.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/partners-block.php",
 		"oF": 0
 		},
 	"\/includes\/registration-footer.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/registration-footer.php",
 		"oF": 0
 		},
 	"\/includes\/registration-header-hasbro.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/registration-header-hasbro.php",
 		"oF": 0
 		},
 	"\/includes\/registration-header-panama.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/registration-header-panama.php",
 		"oF": 0
 		},
 	"\/includes\/registration-header.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/registration-header.php",
 		"oF": 0
 		},
 	"\/includes\/survey-people.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/survey-people.php",
 		"oF": 0
 		},
 	"\/includes\/tile-hero.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/tile-hero.php",
 		"oF": 0
 		},
 	"\/includes\/topbar.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/includes\/topbar.php",
 		"oF": 0
 		},
 	"\/includes\/what-is-hatch.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/includes\/what-is-hatch.php",
 		"oF": 0
 		},
 	"\/index.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/index.php",
 		"oF": 0
 		},
 	"\/languages\/de_DE.mo": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/languages\/de_DE.mo",
 		"oF": 0
 		},
 	"\/languages\/de_DE.po": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/languages\/de_DE.po",
 		"oF": 0
 		},
 	"\/languages\/es_CL.mo": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/languages\/es_CL.mo",
 		"oF": 0
 		},
 	"\/languages\/es_CL.po": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/languages\/es_CL.po",
 		"oF": 0
 		},
 	"\/languages\/es_ES.mo": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/languages\/es_ES.mo",
 		"oF": 0
 		},
 	"\/languages\/es_ES.po": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/languages\/es_ES.po",
 		"oF": 0
 		},
 	"\/languages\/fr_FR.mo": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/languages\/fr_FR.mo",
 		"oF": 0
 		},
 	"\/languages\/fr_FR.po": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/languages\/fr_FR.po",
 		"oF": 0
 		},
 	"\/languages\/HTML5Blank.pot": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/languages\/HTML5Blank.pot",
 		"oF": 0
 		},
 	"\/languages\/hu_HU.mo": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/languages\/hu_HU.mo",
 		"oF": 0
 		},
 	"\/languages\/hu_HU.po": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/languages\/hu_HU.po",
 		"oF": 0
 		},
 	"\/languages\/it_IT.mo": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/languages\/it_IT.mo",
 		"oF": 0
 		},
 	"\/languages\/it_IT.po": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/languages\/it_IT.po",
 		"oF": 0
 		},
 	"\/languages\/nl_NL.mo": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/languages\/nl_NL.mo",
 		"oF": 0
 		},
 	"\/languages\/nl_NL.po": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/languages\/nl_NL.po",
 		"oF": 0
 		},
 	"\/languages\/pt_BR.mo": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/languages\/pt_BR.mo",
 		"oF": 0
 		},
 	"\/languages\/pt_BR.po": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/languages\/pt_BR.po",
 		"oF": 0
 		},
 	"\/languages\/ro_RO.mo": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/languages\/ro_RO.mo",
 		"oF": 0
 		},
 	"\/languages\/ro_RO.po": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/languages\/ro_RO.po",
 		"oF": 0
 		},
 	"\/LICENSE.md": {
+		"cB": 0,
 		"cS": 0,
 		"eF": 0,
 		"eL": 1,
-		"eLB": 0,
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
@@ -3441,12 +3299,14 @@
 		"uCM": 0
 		},
 	"\/loop-search.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/loop-search.php",
 		"oF": 0
 		},
 	"\/loop.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/loop.php",
@@ -3483,82 +3343,94 @@
 		"oS": 0
 		},
 	"\/page-2016-hatch-c2-montreal-registration.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/page-2016-hatch-c2-montreal-registration.php",
 		"oF": 0
 		},
 	"\/page-2017-c2-montreal-registration.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/page-2017-c2-montreal-registration.php",
 		"oF": 0
 		},
 	"\/page-advisory-board.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/page-advisory-board.php",
 		"oF": 0
 		},
 	"\/page-big-sky-advisory-board.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/page-big-sky-advisory-board.php",
 		"oF": 0
 		},
 	"\/page-groundbreakers.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/page-groundbreakers.php",
 		"oF": 0
 		},
 	"\/page-hatch-alumni.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/page-hatch-alumni.php",
 		"oF": 0
 		},
 	"\/page-hatch15-donation-matching.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/page-hatch15-donation-matching.php",
 		"oF": 0
 		},
 	"\/page-latin-america-advisory-board.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/page-latin-america-advisory-board.php",
 		"oF": 0
 		},
 	"\/page-our-partners.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/page-our-partners.php",
 		"oF": 0
 		},
 	"\/page-volunteer.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/page-volunteer.php",
 		"oF": 0
 		},
 	"\/page.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/page.php",
 		"oF": 0
 		},
 	"\/pagination.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/pagination.php",
 		"oF": 0
 		},
 	"\/README.md": {
+		"cB": 0,
 		"cS": 0,
 		"eF": 0,
 		"eL": 1,
-		"eLB": 0,
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
@@ -3584,36 +3456,49 @@
 		"q": 100
 		},
 	"\/search.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/search.php",
 		"oF": 0
 		},
 	"\/searchform.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/searchform.php",
 		"oF": 0
 		},
 	"\/sidebar.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/sidebar.php",
 		"oF": 0
 		},
 	"\/single-hatch-adventure.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/single-hatch-adventure.php",
 		"oF": 0
 		},
 	"\/single-hatchback-story.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/single-hatchback-story.php",
 		"oF": 0
 		},
+	"\/single-reunion.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/single-reunion.php",
+		"oF": 0
+		},
 	"\/single.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/single.php",
@@ -3630,126 +3515,154 @@
 		"oS": 0
 		},
 	"\/style.css.map": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/style.css.map",
 		"oF": 0
 		},
 	"\/tag.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/tag.php",
 		"oF": 0
 		},
 	"\/template-apply.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/template-apply.php",
 		"oF": 0
 		},
 	"\/template-becauseofhatchsurvey.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/template-becauseofhatchsurvey.php",
 		"oF": 0
 		},
 	"\/template-brianasurvey.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/template-brianasurvey.php",
 		"oF": 0
 		},
 	"\/template-contact.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/template-contact.php",
 		"oF": 0
 		},
 	"\/template-events.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/template-events.php",
 		"oF": 0
 		},
 	"\/template-experience.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/template-experience.php",
 		"oF": 0
 		},
+	"\/template-feature-img.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/template-feature-img.php",
+		"oF": 0
+		},
 	"\/template-fullwidth.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/template-fullwidth.php",
 		"oF": 0
 		},
 	"\/template-hasbro-registration-success.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/template-hasbro-registration-success.php",
 		"oF": 0
 		},
 	"\/template-hasbro-registration.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/template-hasbro-registration.php",
 		"oF": 0
 		},
 	"\/template-hatchback.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/template-hatchback.php",
 		"oF": 0
 		},
 	"\/template-home.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/template-home.php",
 		"oF": 0
 		},
 	"\/template-panama-registration-success.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/template-panama-registration-success.php",
 		"oF": 0
 		},
 	"\/template-panama-registration.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/template-panama-registration.php",
 		"oF": 0
 		},
 	"\/template-registration-success.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/template-registration-success.php",
 		"oF": 0
 		},
 	"\/template-registration.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/template-registration.php",
 		"oF": 0
 		},
 	"\/template-test.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/template-test.php",
 		"oF": 0
 		},
 	"\/tribe-events\/default-template.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/tribe-events\/default-template.php",
 		"oF": 0
 		},
 	"\/tribe-events\/month\/content.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/tribe-events\/month\/content.php",
 		"oF": 0
 		},
 	"\/tribe-events\/single-event.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/tribe-events\/single-event.php",
@@ -3766,18 +3679,14 @@
 		"oS": 0
 		},
 	"\/tribe-events\/tribe-events.css.map": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/tribe-events\/tribe-events.css.map",
 		"oF": 0
 		},
-	"\/Untitled.html": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/Untitled.html",
-		"oF": 0
-		},
 	"\/wp_bootstrap_navwalker.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/wp_bootstrap_navwalker.php",
@@ -4328,6 +4237,10 @@
 			"active": 0,
 			"optionString": "'expression'"
 			},
+		"function-paren-newline": {
+			"active": 0,
+			"optionString": "'multiline'"
+			},
 		"generator-star-spacing": {
 			"active": 0,
 			"optionString": "{'before': true, 'after': false}"
@@ -4392,9 +4305,9 @@
 			"active": 0,
 			"optionString": "{'beforeBlockComment': true}"
 			},
-		"lines-around-directive": {
+		"lines-between-class-members": {
 			"active": 0,
-			"optionString": "{'before': 'always', 'after': 'always'}"
+			"optionString": "'always', {exceptAfterSingleLine: false}"
 			},
 		"max-depth": {
 			"active": 0,
@@ -4424,6 +4337,10 @@
 			"active": 0,
 			"optionString": "{'max': 1}"
 			},
+		"multiline-comment-style": {
+			"active": 0,
+			"optionString": "'starred-block'"
+			},
 		"multiline-ternary": {
 			"active": 0,
 			"optionString": "'always'"
@@ -4433,14 +4350,6 @@
 			"optionString": "{'newIsCap': true, 'capIsNew': true, 'newIsCapExceptions': [], 'capIsNewExceptions': ['Array', 'Boolean', 'Date', 'Error', 'Function', 'Number', 'Object', 'RegExp', 'String', 'Symbol'], 'properties': true}"
 			},
 		"new-parens": {
-			"active": 0,
-			"optionString": ""
-			},
-		"newline-after-var": {
-			"active": 0,
-			"optionString": "'always'"
-			},
-		"newline-before-return": {
 			"active": 0,
 			"optionString": ""
 			},
@@ -5544,7 +5453,8 @@
 		"createSourceMap": 0,
 		"minifyOutput": 1,
 		"outputStyle": 0,
-		"syntaxCheckerStyle": 1
+		"syntaxCheckerStyle": 1,
+		"transpilerStyle": 1
 		},
 	"languageDefaultsCSS": {
 		"autoOutputAction": 2,
@@ -5577,6 +5487,7 @@
 		"noEscapeInAttributes": 0,
 		"outputFormat": 2,
 		"outputStyle": 0,
+		"shouldRunCacheBuster": 0,
 		"useCDATA": 0,
 		"useDoubleQuotes": 0,
 		"useUnixNewlines": 0
@@ -5618,7 +5529,8 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsLESS": {
 		"allowInsecureImports": 0,
@@ -5650,13 +5562,13 @@
 		"enableFootnotes": 0,
 		"enableLabels": 1,
 		"enableSmartQuotes": 1,
-		"escapeLineBreaks": 0,
 		"maskEmailAddresses": 1,
 		"outputFormat": 0,
 		"outputStyle": 0,
 		"parseMetadata": 1,
 		"processHTML": 0,
 		"randomFootnoteNumbers": 0,
+		"shouldRunCacheBuster": 0,
 		"useCompatibilityMode": 0
 		},
 	"languageDefaultsOTHER": {
@@ -5665,7 +5577,8 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsPNG": {
 		"autoOutputAction": 0,
@@ -5685,7 +5598,8 @@
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
 		"compileDebug": 1,
-		"outputStyle": 0
+		"outputStyle": 0,
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsSASS": {
 		"autoOutputAction": 0,
@@ -5713,7 +5627,8 @@
 		"logicless": 0,
 		"outputFormat": 0,
 		"outputStyle": 1,
-		"railsCompatible": 0
+		"railsCompatible": 0,
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsSTYLUS": {
 		"autoOutputAction": 0,

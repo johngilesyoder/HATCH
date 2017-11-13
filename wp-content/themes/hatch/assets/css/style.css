@@ -8390,6 +8390,757 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
     vertical-align: top;
   }
 }
+.single-reunion .site-header {
+  margin: 0;
+}
+.single-reunion .persistent-cta {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 10px 30px;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 200;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  opacity: 0;
+  -webkit-transition: opacity 100ms, -webkit-transform 250ms;
+  transition: opacity 100ms, -webkit-transform 250ms;
+  transition: transform 250ms, opacity 100ms;
+  transition: transform 250ms, opacity 100ms, -webkit-transform 250ms;
+}
+.single-reunion .persistent-cta .cta-info .cta-title {
+  font-size: 18px;
+  margin: 0 5px 5px 0;
+  display: inline-block;
+}
+.single-reunion .persistent-cta .cta-info .cta-date {
+  font-family: 'Archer SSm A', 'Archer SSm B';
+  font-size: 16px;
+}
+.single-reunion .persistent-cta .cta-actions {
+  margin-left: auto;
+}
+.single-reunion .persistent-cta .cta-actions .btn-secondary {
+  font-weight: 500;
+}
+.single-reunion .persistent-cta.is--visible {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+.single-reunion main {
+  padding: 0 0 50px;
+  font-size: 18px;
+}
+.single-reunion .reunion-hero {
+  height: 80vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  background: #000;
+  margin: 0 0 60px;
+}
+.single-reunion .reunion-hero .hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  opacity: .8;
+}
+.single-reunion .reunion-hero .hero-content {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  margin: 0 0 120px;
+  position: relative;
+  z-index: 100;
+}
+.single-reunion .reunion-hero .hero-content .hero-title {
+  margin: 0;
+  font-family: 'Tungsten A', 'Tungsten B';
+  font-size: 100px;
+  color: #fff;
+}
+.single-reunion .reunion-hero .hero-content .hero-date {
+  display: block;
+  font-size: 30px;
+  font-family: 'Archer SSm A', 'Archer SSm B';
+  color: #fff;
+  margin: 0 0 30px;
+  font-weight: 700;
+}
+.single-reunion .reunion-hero .hero-content .btn-register {
+  font-size: 21px;
+  padding: 15px 30px;
+  font-weight: 700;
+}
+.single-reunion .reunion-summary {
+  margin: 0 0 60px;
+}
+.single-reunion .reunion-summary .summary-photo {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 320px;
+}
+.single-reunion .reunion-details {
+  margin: 0 0 90px;
+  padding: 90px 0;
+  background: #333;
+  color: #fff;
+}
+.single-reunion .reunion-details .details-title {
+  text-align: center;
+  margin: 0 0 60px;
+  font-size: 80px;
+  font-family: 'Tungsten A', 'Tungsten B';
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.single-reunion .reunion-details .details-title span {
+  padding: 5px 15px;
+  border: 4px solid #fff;
+  display: block;
+  margin: 0 auto;
+}
+.single-reunion .reunion-details .detail {
+  text-align: center;
+}
+.single-reunion .reunion-details .detail i {
+  font-size: 100px;
+  margin: 0 0 10px;
+}
+.single-reunion .reunion-details .detail .detail-title {
+  font-size: 36px;
+  margin: 0 0 30px;
+}
+.single-reunion .reunion-details .detail p {
+  font-size: 21px;
+}
+.single-reunion .reunion-accommodation {
+  margin: 0 0 30px;
+}
+.single-reunion .reunion-accommodation .accommodation-title {
+  margin: 0 0 60px;
+  font-size: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.single-reunion .reunion-accommodation .hotel {
+  margin: 0 0 60px;
+}
+.single-reunion .reunion-accommodation .hotel .hotel-title {
+  font-family: 'Tungsten A', 'Tungsten B';
+  text-transform: uppercase;
+  font-size: 36px;
+}
+.single-reunion .reunion-accommodation .hotel .hotel-photo {
+  width: 100%;
+  height: 320px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.single-reunion .reunion-good-times {
+  margin: 0 0 90px;
+}
+.single-reunion .reunion-good-times .good-times-title {
+  margin: 0 0 30px;
+  font-size: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.single-reunion .reunion-good-times .btn-view-schedule {
+  color: #007DA3;
+  font-weight: 500;
+}
+.single-reunion .reunion-good-times .btn-view-schedule:hover {
+  color: #004256;
+}
+.single-reunion .reunion-planning-team {
+  margin: 0;
+  padding: 90px 0;
+  background: #222222;
+  color: #fff;
+}
+.single-reunion .reunion-planning-team .planning-team-title {
+  text-align: center;
+  margin: 0 0 60px;
+  font-size: 80px;
+  font-family: 'Tungsten A', 'Tungsten B';
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.single-reunion .reunion-planning-team .planning-team-title span {
+  padding: 5px 15px;
+  border: 4px solid #fff;
+  display: block;
+  margin: 0 auto;
+}
+.single-reunion .reunion-planning-team .people {
+  margin: 0 0 -30px;
+}
+.single-reunion .reunion-planning-team .people .person {
+  margin: 0 0 30px;
+}
+.single-reunion .reunion-planning-team .people .person .person-photo {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  margin: 0 0 15px;
+}
+.single-reunion .reunion-planning-team .people .person .person-name {
+  display: block;
+  font-weight: 700;
+}
+.single-reunion .reunion-planning-team .people .person .person-role {
+  display: block;
+  font-size: 16px;
+  font-style: italic;
+}
+.single-reunion .reunion-planning-team .people .person .person-title {
+  display: block;
+  font-size: 16px;
+}
+.single-reunion .reunion-why {
+  background: #000;
+  margin: 0;
+  padding: 90px 0;
+  color: #fff;
+  position: relative;
+}
+.single-reunion .reunion-why .hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  opacity: .6;
+}
+.single-reunion .reunion-who {
+  margin: 0 0 90px;
+  position: relative;
+  z-index: 100;
+}
+.single-reunion .reunion-who .who-title {
+  text-align: center;
+  margin: 0 0 60px;
+  font-size: 80px;
+  font-family: 'Tungsten A', 'Tungsten B';
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.single-reunion .reunion-who .who-title span {
+  padding: 5px 15px;
+  border: 4px solid #fff;
+  display: block;
+  margin: 0 auto;
+}
+.single-reunion .reunion-who .btn-view-schedule {
+  color: #007DA3;
+  font-weight: 500;
+}
+.single-reunion .reunion-who .btn-view-schedule:hover {
+  color: #004256;
+}
+.single-reunion .reunion-purpose {
+  position: relative;
+  z-index: 100;
+}
+.single-reunion .reunion-purpose .purpose-title {
+  text-align: center;
+  margin: 0 0 60px;
+  font-size: 80px;
+  font-family: 'Tungsten A', 'Tungsten B';
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.single-reunion .reunion-purpose .purpose-title span {
+  padding: 5px 15px;
+  border: 4px solid #fff;
+  display: block;
+  margin: 0 auto;
+}
+.single-reunion .reunion-expect {
+  margin: 0;
+  padding: 90px 0;
+  background: #333;
+  color: #fff;
+}
+.single-reunion .reunion-expect .details-title {
+  text-align: center;
+  margin: 0 0 60px;
+  font-size: 80px;
+  font-family: 'Tungsten A', 'Tungsten B';
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.single-reunion .reunion-expect .details-title span {
+  padding: 5px 15px;
+  border: 4px solid #fff;
+  display: block;
+  margin: 0 auto;
+}
+.single-reunion .reunion-expect .detail {
+  text-align: center;
+}
+.single-reunion .reunion-expect .detail .number {
+  font-size: 36px;
+  line-height: 1;
+  font-family: 'Tungsten A', 'Tungsten B';
+  border: 2px dotted #fff;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto 30px;
+  opacity: .5;
+}
+.single-reunion .reunion-expect .detail .detail-title {
+  font-size: 36px;
+  margin: 0 0 30px;
+}
+.single-reunion .reunion-expect .detail p {
+  font-size: 21px;
+}
+.single-reunion .reunion-sponsorship {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 90px 30px;
+  background: #f2f2f2;
+}
+.single-reunion .reunion-sponsorship .sponsorship-content {
+  border: 4px solid #222222;
+  padding: 30px;
+  text-align: center;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .single-reunion .site-header {
+    margin: 0;
+  }
+  .single-reunion .persistent-cta {
+    padding: 10px 15px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+  .single-reunion .persistent-cta .cta-info {
+    width: 100%;
+  }
+  .single-reunion .persistent-cta .cta-info .cta-title {
+    font-size: 16px;
+    margin: 0 0 5px;
+    display: block;
+  }
+  .single-reunion .persistent-cta .cta-info .cta-date {
+    font-size: 14px;
+  }
+  .single-reunion .persistent-cta .cta-actions {
+    margin: 0;
+  }
+  .single-reunion .persistent-cta .cta-actions .btn-secondary {
+    font-weight: 500;
+    background: transparent;
+    color: #007DA3;
+    padding: 0;
+    border: 0;
+  }
+  .single-reunion main {
+    padding: 0 0 50px;
+  }
+  .single-reunion .reunion-hero {
+    height: 320px;
+    margin: 0 0 50px;
+  }
+  .single-reunion .reunion-hero .hero-content {
+    margin: 0 0 50px;
+  }
+  .single-reunion .reunion-hero .hero-content .hero-title {
+    font-size: 50px;
+  }
+  .single-reunion .reunion-hero .hero-content .hero-date {
+    font-size: 21px;
+    margin: 0 0 15px;
+  }
+  .single-reunion .reunion-hero .hero-content .btn-register {
+    font-size: 18px;
+    padding: 10px 15px;
+  }
+  .single-reunion .reunion-summary {
+    margin: 0 0 50px;
+  }
+  .single-reunion .reunion-summary .summary-photo {
+    margin: 50px 0 0;
+  }
+  .single-reunion .reunion-details {
+    margin: 0 0 50px;
+    padding: 50px 30px;
+  }
+  .single-reunion .reunion-details .details-title {
+    margin: 0 0 50px;
+    font-size: 50px;
+  }
+  .single-reunion .reunion-details .detail {
+    margin: 0 0 50px;
+  }
+  .single-reunion .reunion-details .detail i {
+    font-size: 50px;
+    margin: 0 0 10px;
+  }
+  .single-reunion .reunion-details .detail .detail-title {
+    font-size: 30px;
+    margin: 0 0 15px;
+  }
+  .single-reunion .reunion-accommodation {
+    margin: 0;
+  }
+  .single-reunion .reunion-accommodation .accommodation-title {
+    margin: 0 0 50px;
+    font-size: 30px;
+  }
+  .single-reunion .reunion-accommodation .hotel {
+    margin: 0 0 50px;
+  }
+  .single-reunion .reunion-accommodation .hotel .hotel-title {
+    font-family: 'Tungsten A', 'Tungsten B';
+    text-transform: uppercase;
+    font-size: 36px;
+  }
+  .single-reunion .reunion-accommodation .hotel .hotel-photo {
+    width: 100%;
+    height: 320px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+  }
+  .single-reunion .reunion-good-times {
+    margin: 0 0 50px;
+  }
+  .single-reunion .reunion-good-times .good-times-title {
+    margin: 0 0 50px;
+    font-size: 30px;
+  }
+  .single-reunion .reunion-good-times .btn-view-schedule {
+    color: #007DA3;
+    font-weight: 500;
+  }
+  .single-reunion .reunion-good-times .btn-view-schedule:hover {
+    color: #004256;
+  }
+  .single-reunion .reunion-planning-team {
+    padding: 50px 0;
+  }
+  .single-reunion .reunion-planning-team .planning-team-title {
+    margin: 0 0 50px;
+    font-size: 50px;
+  }
+  .single-reunion .reunion-planning-team .people {
+    margin: 0 0 -50px;
+  }
+  .single-reunion .reunion-planning-team .people .person {
+    margin: 0 0 50px;
+    text-align: center;
+  }
+  .single-reunion .reunion-planning-team .people .person .person-photo {
+    width: 200px;
+    height: 200px;
+    margin: 0 0 15px;
+  }
+  .single-reunion .reunion-why {
+    padding: 50px 0;
+  }
+  .single-reunion .reunion-who {
+    margin: 0 0 50px;
+  }
+  .single-reunion .reunion-who .who-title {
+    margin: 0 0 50px;
+    font-size: 50px;
+  }
+  .single-reunion .reunion-purpose .purpose-title {
+    margin: 0 0 50px;
+    font-size: 50px;
+  }
+  .single-reunion .reunion-expect {
+    padding: 50px 0 0;
+  }
+  .single-reunion .reunion-expect .details-title {
+    margin: 0 0 50px;
+    font-size: 50px;
+  }
+  .single-reunion .reunion-expect .detail {
+    margin: 0 0 50px;
+  }
+  .single-reunion .reunion-expect .detail .number {
+    margin: 0 auto 15px;
+  }
+  .single-reunion .reunion-expect .detail .detail-title {
+    font-size: 30px;
+    margin: 0 0 15px;
+  }
+  .single-reunion .reunion-expect .detail p {
+    font-size: 21px;
+  }
+  .single-reunion .reunion-sponsorship {
+    padding: 50px 15px;
+  }
+  .single-reunion .reunion-sponsorship .sponsorship-content {
+    border: 4px solid #222222;
+    padding: 15px;
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .single-reunion .site-header {
+    margin: 0;
+  }
+  .single-reunion .persistent-cta {
+    padding: 10px 15px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+  .single-reunion .persistent-cta .cta-info {
+    width: 100%;
+  }
+  .single-reunion .persistent-cta .cta-info .cta-title {
+    font-size: 16px;
+    margin: 0 0 5px;
+    display: block;
+  }
+  .single-reunion .persistent-cta .cta-info .cta-date {
+    font-size: 14px;
+  }
+  .single-reunion .persistent-cta .cta-actions {
+    margin: 0;
+  }
+  .single-reunion .persistent-cta .cta-actions .btn-secondary {
+    font-weight: 500;
+    background: transparent;
+    color: #007DA3;
+    padding: 0;
+    border: 0;
+  }
+  .single-reunion main {
+    padding: 0 0 30px;
+  }
+  .single-reunion .reunion-hero {
+    height: 320px;
+    margin: 0 0 30px;
+  }
+  .single-reunion .reunion-hero .hero-content {
+    margin: 0 0 30px;
+  }
+  .single-reunion .reunion-hero .hero-content .hero-title {
+    font-size: 50px;
+  }
+  .single-reunion .reunion-hero .hero-content .hero-date {
+    font-size: 21px;
+    margin: 0 0 15px;
+  }
+  .single-reunion .reunion-hero .hero-content .btn-register {
+    font-size: 18px;
+    padding: 10px 15px;
+  }
+  .single-reunion .reunion-summary {
+    margin: 0 0 30px;
+  }
+  .single-reunion .reunion-summary .summary-photo {
+    margin: 30px 0 0;
+  }
+  .single-reunion .reunion-details {
+    margin: 0 0 30px;
+    padding: 30px 15px;
+  }
+  .single-reunion .reunion-details .details-title {
+    margin: 0 0 60px;
+    font-size: 50px;
+  }
+  .single-reunion .reunion-details .detail {
+    margin: 0 0 30px;
+  }
+  .single-reunion .reunion-details .detail i {
+    font-size: 50px;
+    margin: 0 0 10px;
+  }
+  .single-reunion .reunion-details .detail .detail-title {
+    font-size: 30px;
+    margin: 0 0 15px;
+  }
+  .single-reunion .reunion-accommodation {
+    margin: 0;
+  }
+  .single-reunion .reunion-accommodation .accommodation-title {
+    margin: 0 0 30px;
+    font-size: 30px;
+  }
+  .single-reunion .reunion-accommodation .hotel {
+    margin: 0 0 30px;
+  }
+  .single-reunion .reunion-accommodation .hotel .hotel-title {
+    font-family: 'Tungsten A', 'Tungsten B';
+    text-transform: uppercase;
+    font-size: 36px;
+  }
+  .single-reunion .reunion-accommodation .hotel .hotel-photo {
+    width: 100%;
+    height: 320px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+  }
+  .single-reunion .reunion-good-times {
+    margin: 0 0 30px;
+  }
+  .single-reunion .reunion-good-times .good-times-title {
+    margin: 0 0 30px;
+    font-size: 30px;
+  }
+  .single-reunion .reunion-good-times .btn-view-schedule {
+    color: #007DA3;
+    font-weight: 500;
+  }
+  .single-reunion .reunion-good-times .btn-view-schedule:hover {
+    color: #004256;
+  }
+  .single-reunion .reunion-planning-team {
+    padding: 30px 0;
+  }
+  .single-reunion .reunion-planning-team .planning-team-title {
+    margin: 0 0 30px;
+    font-size: 50px;
+  }
+  .single-reunion .reunion-planning-team .people {
+    margin: 0 0 -30px;
+  }
+  .single-reunion .reunion-planning-team .people .person {
+    margin: 0 0 30px;
+    text-align: center;
+  }
+  .single-reunion .reunion-planning-team .people .person .person-photo {
+    width: 200px;
+    height: 200px;
+    margin: 0 0 15px;
+  }
+  .single-reunion .reunion-why {
+    padding: 30px 0;
+  }
+  .single-reunion .reunion-who {
+    margin: 0 0 30px;
+  }
+  .single-reunion .reunion-who .who-title {
+    margin: 0 0 30px;
+    font-size: 50px;
+  }
+  .single-reunion .reunion-purpose .purpose-title {
+    margin: 0 0 30px;
+    font-size: 50px;
+  }
+  .single-reunion .reunion-expect {
+    padding: 30px 0 0;
+  }
+  .single-reunion .reunion-expect .details-title {
+    margin: 0 0 30px;
+    font-size: 50px;
+  }
+  .single-reunion .reunion-expect .detail {
+    margin: 0 0 30px;
+  }
+  .single-reunion .reunion-expect .detail .number {
+    margin: 0 auto 15px;
+  }
+  .single-reunion .reunion-expect .detail .detail-title {
+    font-size: 30px;
+    margin: 0 0 15px;
+  }
+  .single-reunion .reunion-expect .detail p {
+    font-size: 21px;
+  }
+  .single-reunion .reunion-sponsorship {
+    padding: 30px 15px;
+  }
+  .single-reunion .reunion-sponsorship .sponsorship-content {
+    border: 4px solid #222222;
+    padding: 15px;
+    text-align: center;
+  }
+}
 .blog-sidebar {
   border-left: 1px solid #E6E6E6;
   border-right: 1px solid #E6E6E6;
