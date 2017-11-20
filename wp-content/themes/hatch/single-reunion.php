@@ -109,12 +109,12 @@ $summaryPhoto = get_field('summary_photo');
 		</div>
 
 		<!-- GOOD TIMES -->
-		<!-- <div class="reunion-good-times">
+		<div class="reunion-good-times">
 			<div class="container">
 				<h2 class="good-times-title">Let the Good Times Roll</h2>
 				<a href="#reunion-schedule" class="btn btn-default btn-view-schedule">View the Full Schedule &nbsp;&darr;</a>
 			</div>
-		</div> -->
+		</div>
 
 		<!-- PLANNING TEAM -->
 		<div class="reunion-planning-team">
@@ -210,6 +210,60 @@ $summaryPhoto = get_field('summary_photo');
 			<div class="sponsorship-content">
 				<h2>Interested in sponsorship opportunities? Let's talk!</h2>
 				<?php the_field('sponsorship_contact_method'); ?>
+			</div>
+		</div>
+
+		<div class="reunion-schedule">
+			<div class="container">
+
+				<h2 class="schedule-title"><span>Reunion Schedule</span></h2>
+
+				<?php // check if the flexible content field has rows of data ?>
+				<?php if( have_rows('schedule') ): ?>
+
+					<div class="table-responsive">
+						<table class="schedule-table table">
+							<thead>
+								<tr>
+									<th>Activity</th>
+									<th>Starts</th>
+									<th>Ends</th>
+									<th>Location</th>
+									<th>Notes</th>
+								</tr>
+							</thead>
+
+					    <?php // loop through the rows of data ?>
+					    <?php while ( have_rows('schedule') ) : the_row(); ?>
+
+					        <?php if( get_row_layout() == 'date_break' ): ?>
+
+					        	<tr class="date-break">
+											<th colspan="5"><?php the_sub_field('schedule_date'); ?> (<?php the_sub_field('schedule_day'); ?>)</th>
+										</tr>
+
+					        <?php elseif( get_row_layout() == 'item' ): ?>
+
+					        	<tr class="activity">
+											<td class="activity-event"><?php the_sub_field('schedule_event'); ?></td>
+											<td class="activity-start"><?php the_sub_field('schedule_start'); ?></td>
+											<td class="activity-end"><?php the_sub_field('schedule_end'); ?></td>
+											<td class="activity-location"><?php the_sub_field('schedule_location'); ?></td>
+											<td class="activity-notes"><?php the_sub_field('schedule_notes'); ?></td>
+										</tr>
+
+					        <?php endif; ?>
+
+					    <?php endwhile; ?>
+
+						</table>
+					</div>
+
+				<?php else : ?>
+
+				    // no layouts found
+
+				<?php endif; ?>
 			</div>
 		</div>
 
