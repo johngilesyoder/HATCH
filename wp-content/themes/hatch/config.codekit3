@@ -1027,6 +1027,16 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/assets\/js\/sections\/reunion.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/sections\/min\/reunion-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/assets\/less\/blog-wrapper.less": {
 		"aP": 0,
 		"bl": 0,

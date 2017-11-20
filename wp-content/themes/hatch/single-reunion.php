@@ -269,19 +269,4 @@ $summaryPhoto = get_field('summary_photo');
 
 	</main>
 
-	<script type="text/javascript">
-		var scrollHeight = jQuery(".site-header").height() + jQuery(".reunion-hero").height();
-		var persistentCta = jQuery('#persistent-cta');
-
-		jQuery(window).on('scroll', function(){
-		  var scrollPosition = jQuery(window).scrollTop();
-
-		  if (scrollPosition > scrollHeight) {
-		    persistentCta.addClass('is--visible');
-		  } else {
-		    persistentCta.removeClass('is--visible');
-		  }
-		});
-	</script>
-
 <?php get_footer(); ?>
