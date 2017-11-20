@@ -213,7 +213,7 @@ $summaryPhoto = get_field('summary_photo');
 			</div>
 		</div>
 
-		<div class="reunion-schedule">
+		<div id="reunion-schedule" class="reunion-schedule">
 			<div class="container">
 
 				<h2 class="schedule-title"><span>Reunion Schedule</span></h2>
