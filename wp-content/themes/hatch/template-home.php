@@ -20,8 +20,8 @@
         </div>
         <div class="conference-info">
           <h3 class="hatch-logo conference-title">HATCH<span><?php the_field('current_hatch_big_sky_year', 'option'); ?></span></h3>
-          <span class="conference-date date-panama"><?php the_field('panama_date', 'option'); ?> &nbsp;·&nbsp; Panama City, Panama</span>
-          <span class="conference-date"><?php the_field('big_sky_date', 'option'); ?> &nbsp;·&nbsp; Big Sky, Montana</span>
+          <span class="conference-date date-panama"><?php the_field('france_date', 'option'); ?> &nbsp;·&nbsp; Aix Provence, France</span>
+          <span class="conference-date date"><?php the_field('big_sky_date', 'option'); ?> &nbsp;·&nbsp; Big Sky, Montana</span>
           <p>Imagine gathering up a hundred innovators, artists, makers, creators, educators, risk-takers, influencers, and mavericks… people who want to shake the world by its ankles. And are. Imagine them in a room together, teased out of their cocoons, grids off, brains on, glass flying everywhere:</p>
           <p>A musician tackles a problem for an entrepreneur. A scientist cracks open an idea for music distribution. An ad-guy delivers insight to a health-care play. An inventor, architect, and educator sketching new models for learning…  Imagine that. Or just find yourself at HATCH.</p>
           <div class="conference-actions">

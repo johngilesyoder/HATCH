@@ -5,7 +5,7 @@
   		<div class="conference-apply">
 	  		<div class="hero-title">
 		  		<h1 class="hatch-logo hero-logo">HATCH</h1>
-          <span class="hero-date-location"><?php the_field('panama_date', 'option'); ?> &nbsp;//&nbsp; Panama City, Panama <a href="/about/hatch-latin-america-panama/">Learn more &rarr;</a></span>
+          <span class="hero-date-location"><?php the_field('france_date', 'option'); ?> &nbsp;//&nbsp; Aix Provence, France</span>
           <span class="hero-date-location"><?php the_field('big_sky_date', 'option'); ?> &nbsp;//&nbsp; Big Sky, Montana <a href="/about/montana/">Learn more &rarr;</a></span>
 		  	</div>
 		  	<div>
@@ -161,9 +161,9 @@
   		<div class="conference-apply">
 	  		<div class="hero-title">
 		  		<h1 class="hatch-logo hero-logo">HATCH<sup><?php the_field('hatch_version', 'option'); ?></sup></h1>
-          <span class="hero-date-location"><?php the_field('panama_date', 'option'); ?> &nbsp;//&nbsp; Panama City, Panama <a href="/about/hatch-latin-america-panama/">Learn more &rarr;</a></span>
+          <span class="hero-date-location"><?php the_field('france_date', 'option'); ?> &nbsp;//&nbsp; Aix Provence, France</span>
           <span class="hero-date-location"><?php the_field('big_sky_date', 'option'); ?> &nbsp;//&nbsp; Big Sky, Montana <a href="/about/montana/">Learn more &rarr;</a></span>
-		  	</div>
+        </div>
 		  	<div>
 	  			<a href="/apply" class="btn btn-apply">Invite Only – <strong>Apply Now</strong></a>
 	  		</div>
