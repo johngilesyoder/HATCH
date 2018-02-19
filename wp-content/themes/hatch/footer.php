@@ -9,7 +9,7 @@
 		      				<a href="http://www.facebook.com/hatchfestival"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-footer-facebook.svg"></a>
 		      				<a href="http://instagram.com/hatchexperience/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-footer-instagram.svg"></a>
 		      			</div>
-		      			<a href="mailto:hatchinfo@hatchexperience.org" class="footer-email"><span class="long-email">hatchinfo@hatchexperience.org</span><span class="short-email">Email us</span></a>
+		      			<a href="mailto:info@hatchexperience.org" class="footer-email"><span class="long-email">info@hatchexperience.org</span><span class="short-email">Email us</span></a>
 		      			<a class="rss-feed" href="<?php bloginfo('rss2_url'); ?>" class="rss-feed"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-rss.svg">RSS feed</a>
 		      		</div>
 		      		<div class="footer-links">
