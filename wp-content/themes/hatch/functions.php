@@ -217,7 +217,7 @@ function html5blank_conditional_scripts()
 
     }
 
-    if ( is_page_template( 'template-registration.php' ) ) {
+    if ( is_page_template( 'template-registration.php' || 'template-registration-europe.php' ) ) {
 
       wp_register_script('registration', get_template_directory_uri() . '/assets/js/sections/min/registration-min.js', array(), '1.0.0' ); // registration
       wp_enqueue_script('registration'); // Enqueue it!

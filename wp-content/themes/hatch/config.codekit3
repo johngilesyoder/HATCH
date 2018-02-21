@@ -78,6 +78,27 @@
 		"oAP": "\/assets\/fonts\/klavika-bold.woff2",
 		"oF": 0
 		},
+	"\/assets\/fonts\/klavika-light.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/assets\/fonts\/klavika-light.ttf",
+		"oF": 0
+		},
+	"\/assets\/fonts\/klavika-light.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/assets\/fonts\/klavika-light.woff",
+		"oF": 0
+		},
+	"\/assets\/fonts\/klavika-light.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/assets\/fonts\/klavika-light.woff2",
+		"oF": 0
+		},
 	"\/assets\/fonts\/klavika-medium.eot": {
 		"cB": 0,
 		"ft": 8192,
@@ -856,6 +877,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/assets\/img\/registration\/bg-registration-europe.png": {
+		"ft": 32768,
+		"iS": 5958678,
+		"oA": 0,
+		"oAP": "\/assets\/img\/registration\/bg-registration-europe.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/assets\/img\/registration\/grace-davis.png": {
 		"ft": 32768,
 		"iS": 6144,
@@ -866,6 +898,16 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
+		},
+	"\/assets\/img\/registration\/icon-multiply.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/img\/registration\/icon-multiply.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"\/assets\/js\/lib\/conditionizr-4.3.0.min.js": {
 		"ft": 64,
@@ -2781,6 +2823,23 @@
 		"sM": 0,
 		"sU": 0
 		},
+	"\/assets\/less\/pages\/registration-europe.less": {
+		"aP": 1,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/assets\/css\/pages\/registration-europe.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
 	"\/assets\/less\/pages\/registration.less": {
 		"aP": 0,
 		"bl": 0,
@@ -3109,6 +3168,13 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/registration-footer.php",
+		"oF": 0
+		},
+	"\/includes\/registration-header-europe.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/registration-header-europe.php",
 		"oF": 0
 		},
 	"\/includes\/registration-header-hasbro.php": {
@@ -3644,6 +3710,13 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/template-panama-registration.php",
+		"oF": 0
+		},
+	"\/template-registration-europe.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/template-registration-europe.php",
 		"oF": 0
 		},
 	"\/template-registration-success.php": {
