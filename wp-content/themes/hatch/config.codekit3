@@ -856,6 +856,26 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/assets\/img\/registration\/bg-camp-2.jpg": {
+		"ft": 16384,
+		"iS": 716391,
+		"oA": 0,
+		"oAP": "\/assets\/img\/registration\/bg-camp-2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/assets\/img\/registration\/bg-camp.jpg": {
+		"ft": 16384,
+		"iS": 146001,
+		"oA": 0,
+		"oAP": "\/assets\/img\/registration\/bg-camp.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/assets\/img\/registration\/bg-registration-bigsky.jpg": {
 		"ft": 16384,
 		"iS": 396013,
@@ -888,6 +908,50 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/assets\/img\/registration\/company-apple.png": {
+		"ft": 32768,
+		"iS": 1316,
+		"oA": 0,
+		"oAP": "\/assets\/img\/registration\/company-apple.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/img\/registration\/company-ey.png": {
+		"ft": 32768,
+		"iS": 2687,
+		"oA": 0,
+		"oAP": "\/assets\/img\/registration\/company-ey.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/img\/registration\/company-hasbro.png": {
+		"ft": 32768,
+		"iS": 4229,
+		"oA": 0,
+		"oAP": "\/assets\/img\/registration\/company-hasbro.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/img\/registration\/company-intel.png": {
+		"ft": 32768,
+		"iS": 2963,
+		"oA": 0,
+		"oAP": "\/assets\/img\/registration\/company-intel.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/assets\/img\/registration\/grace-davis.png": {
 		"ft": 32768,
 		"iS": 6144,
@@ -908,6 +972,50 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"\/assets\/img\/registration\/logo-the-camp-color.png": {
+		"ft": 32768,
+		"iS": 4667,
+		"oA": 0,
+		"oAP": "\/assets\/img\/registration\/logo-the-camp-color.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/img\/registration\/logo-the-camp-white.png": {
+		"ft": 32768,
+		"iS": 4245,
+		"oA": 0,
+		"oAP": "\/assets\/img\/registration\/logo-the-camp-white.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/img\/registration\/logo-the-camp.png": {
+		"ft": 32768,
+		"iS": 3242,
+		"oA": 0,
+		"oAP": "\/assets\/img\/registration\/logo-the-camp.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/img\/registration\/sustainable-development-goals.png": {
+		"ft": 32768,
+		"iS": 181156,
+		"oA": 0,
+		"oAP": "\/assets\/img\/registration\/sustainable-development-goals.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/js\/lib\/conditionizr-4.3.0.min.js": {
 		"ft": 64,

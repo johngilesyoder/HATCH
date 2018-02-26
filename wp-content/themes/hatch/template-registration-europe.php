@@ -38,7 +38,13 @@ $photo_gallery_id = get_field('photo_gallery_id');
             </div>
             <div class="col-md-6">
               <p>and to do that we must maximize our individual human potential. HATCH is designed to address.</p>
-              <p>The HATCH ecosystem exists of two signature summits each year, HATCH Labs (think tanks), <a target="_blank" href="https://www.hatchacademy.net/">HATCH Academy</a>, and an A.I. / machine learning platform that match makes needs / solutions and resources to ideas.</p>
+              <p>The HATCH ecosystem exists of:</p>
+              <ul>
+                <li>Two signature summits each year</li>
+                <li>HATCH Labs (think tanks)</li>
+                <li><a target="_blank" href="https://www.hatchacademy.net/">HATCH Academy</a></li>
+                <li>And an A.I. / machine learning platform that match makes needs / solutions and resources to ideas.</li>
+              </ul>
             </div>
           </div>
           <div class="welcome-section">
@@ -110,7 +116,7 @@ $photo_gallery_id = get_field('photo_gallery_id');
               </div>
             </div>
           </div>
-          <p><strong>Only 100 invites. Attendees need to arrive by 5pm on Wednesday, June 13th, and can leave thecamp Sunday morning.</strong> HATCH is a non-profit designed to benefit you, your organization, and the world, as well as mentor the next generation of our global leaders. A Signature HATCH Summit costs $2500, (all inclusive). Once you arrive, everything is taken care of: lodging, food, workshops, speaker series, entertainment, music, and transportation to and from the airport are all included with your pass.</p>
+          <p><strong>Only 100 invites. Event programming starts at 5:00pm on Wednesday, June 13th and ends after breakfast on Sunday, June 17th.</strong> HATCH is a non-profit designed to benefit you, your organization, and the world, as well as mentor the next generation of our global leaders. A Signature HATCH Summit costs $2500, (all inclusive). Once you arrive, everything is taken care of: lodging, food, workshops, speaker series, entertainment, music, and transportation to and from the airport are all included with your pass.</p>
           <p>We do not want financial constraints to stand in the way of your ability to experience HATCH. If the cost is prohibitive, please email experience@experience.org, and we will explore options for partial support from the scholarship fund. Some attendees may also choose to sponsor by "paying it forward".</p>
       		<p>For US citizens, 50% of this ticket is tax deductible to 501(c)(3) Non-Profit, which is used to fund scholarships for students, and artists. This is how your €2500 full ticket price breaks down:</p>
           <ul>
