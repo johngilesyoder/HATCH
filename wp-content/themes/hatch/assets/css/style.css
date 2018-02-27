@@ -16423,6 +16423,14 @@ fieldset[disabled] .page-template-template-registration-europe .form-wrapper .gf
   .page-template-template-registration-europe .registration-content .registration-alumni .company img {
     height: 50px;
   }
+  .page-template-template-registration-europe .form-wrapper {
+    width: auto;
+    padding: 15px;
+    margin: 30px -15px;
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+  }
 }
 .search .search-title {
   border-bottom: 1px solid #e6e6e6;
