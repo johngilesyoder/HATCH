@@ -165,19 +165,9 @@ $photo_gallery_id = get_field('photo_gallery_id');
               <span class="alumnus-title">Oscar-winning actor</span>
             </div>
             <div class="alumnus">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/alumni-kuhr.png">
-              <span class="alumnus-name">Barbara Kuhr</span>
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/alumni-earle.png">
+              <span class="alumnus-name">Sylvia Earle</span>
               <span class="alumnus-title">Co-founder, WIRED mag</span>
-            </div>
-            <div class="alumnus">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/alumni-altringer.png">
-              <span class="alumnus-name">Dr. Beth Altringer</span>
-              <span class="alumnus-title">Lead, Desirabilty Lab, Harvard</span>
-            </div>
-            <div class="alumnus">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/alumni-gruber.png">
-              <span class="alumnus-name">Tom Gruber</span>
-              <span class="alumnus-title">Inventor, Siri, Apple</span>
             </div>
           </div>
           <h3>Members of the HATCH network represents leadership from ...</h3>
