@@ -615,8 +615,7 @@
 // --------------------------------------------------
 @media (min-width: 768px) and (max-width: 991px) {
 
-  .page-template-template-registration,
-  .page-template-template-registration-success {
+  .page-template-template-registration-europe {
     .registration-hero {
       margin: 0 0 30px;
       clip-path: none;
@@ -668,70 +667,133 @@
 // --------------------------------------------------
 @media (max-width: 767px) {
 
-  .page-template-template-registration,
-  .page-template-template-registration-success {
-    .registration-hero {
-      height: 300px;
+  .page-template-template-registration-europe {
+    .section-title {
+      font-size: 36px;
       margin: 0 0 30px;
-      padding: 30px;
-      clip-path: none;
-      h1 {
-        margin: 60px 30px;
-        font-size: 50px;
+    }
+    // HERO
+    // -----------------------
+    .registration-hero {
+      height: 400px;
+      padding: 30px 15px;
+      .form-title {
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        width: 275px;
+        .site-logo {
+          align-items: flex-start;
+          width: 100%;
+        }
+      }
+      .where-when {
+        font-size: 30px;
+        color: #fff;
+        z-index: 400;
+        span {
+          display: block;
+        }
+      }
+      .btn-registration {
+        font-size: 24px;
+        padding: 15px;
+        display: block;
+        width: 100%;
       }
     }
-    .registration-button-wrapper {
-      top: 0;
-      margin: 0 0 30px
-    }
+
+    // REGISTRATION CONTENT
+    // -----------------------
     .registration-content {
-      .registration-summary,
-      .section-aside,
-      .registration-alumni,
-      .section-deductible {
-        margin: 0 0 40px;
-        .alumnus {
-          width: 50%;
-          margin: 0 0 30px;
-        }
+      margin: 0 0 30px;
+      .welcome-section {
+        margin: 30px 0 0;
       }
+      // Video ---------------
+      .video-wrapper {
+        margin: 0 0 30px;
+      }
+      // Summary ---------------
       .registration-summary {
-        .video-wrapper {
+        padding: 30px 0;
+        .sdp {
+          width: 100%;
           margin: 0 0 30px;
         }
       }
+      // Quote ---------------
       .section-aside {
+        margin: 0 0 30px;
         .section-aside-title {
           h3 {
-            font-size: 36px;
+            font-family: @font-family-sans-serif;
+            font-size: 24px;
+            font-weight: 700;
             margin: 0 0 15px;
           }
         }
         .section-aside-content {
           .section-aside-content-wrapper {
             padding-left: 15px;
-            border-left: 3px solid @brand-secondary;
-          }
-        }
-        .quote-block {
-          .quote-statement {
-            font-size: 16px;
           }
         }
       }
-      .learn-more {
-        h3 {
-          display: block;
-          margin: 0 0 15px;
+      // The Camp
+      // ------------------
+      .section-the-camp {
+        margin: 0 0 30px;
+        .the-camp-hero {
+          height: 400px;
+          margin: 0 0 30px;
+          .logo {
+            padding: 15px;
+            img {
+              height: 60px;
+            }
+          }
         }
-        a {
-          font-size: 18px;
-          display: block;
-          &:last-child {
-            border-left: 0;
-            margin-left: 0;
-            padding-left: 0;
-            margin-top: 10px;
+      }
+      // Details
+      // ------------------
+      .section-details {
+        font-size: 18px;
+        padding: 30px 0;
+        .includes {
+          font-size: 21px;
+          margin: 0 0 30px;
+          padding: 0;
+          h3 {
+            margin: 0 0 30px;
+          }
+          .point {
+            small {
+              font-weight: 400;
+              font-size: 18px;
+              display: block;
+            }
+          }
+        }
+      }
+
+      // Alumni -----------
+      .registration-alumni {
+        padding: 30px 0;
+        h3 {
+          font-size: 24px;
+        }
+        .alumnus {
+          width: 50%;
+          text-align: center;
+          margin: 0 0 30px;
+          img {
+            height: 120px;
+          }
+        }
+        .company {
+          width: 50%;
+          margin: 0 0 30px;
+          img {
+            height: 50px;
           }
         }
       }
@@ -744,18 +806,6 @@
 // --------------------------------------------------
 @media (max-width: 480px) {
 
-  .page-template-template-registration,
-  .page-template-template-registration-success {
-    .registration-button-wrapper {
-      top: 0;
-      margin: 0 0 30px;
-      padding: 0 15px;
-      .btn-registration {
-        width: 100%;
-        padding: 12px 15px;
-        font-size: 27px;
-      }
-    }
-  }
+
 
 }

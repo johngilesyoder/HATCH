@@ -13,7 +13,10 @@ $photo_gallery_id = get_field('photo_gallery_id');
     <img class="icon-multiply" src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/icon-multiply.svg">
     <img class="logo-the-camp" src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/logo-the-camp.png">
   </div>
-  <div class="where-when"><span><?php the_field('event_location'); ?> &nbsp;&bull;&nbsp; <?php the_field('event_date'); ?></span></div>
+  <div class="where-when">
+    <span><?php the_field('event_location'); ?></span>
+    <span><?php the_field('event_date'); ?></span>
+  </div>
   <button id="registration-toggle" class="btn btn-secondary btn-registration">Register Now</button>
 </header>
 
