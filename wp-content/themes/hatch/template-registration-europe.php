@@ -10,7 +10,7 @@ $photo_gallery_id = get_field('photo_gallery_id');
 <header class="registration-hero" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/registration/bg-registration-europe.png');">
   <div class="form-title">
     <span class="site-logo"><strong>HATCH</strong> <em>Europe</em></span>
-    <img class="icon-multiply" src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/icon-multiply.svg">
+    <span class="icon-plus">&plus;</span>
     <img class="logo-the-camp" src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/logo-the-camp.png">
   </div>
   <div class="where-when">
@@ -30,6 +30,7 @@ $photo_gallery_id = get_field('photo_gallery_id');
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
           <h2 class="section-title">HATCH a Better World</h2>
+          <p class="intro-statement">Founded in 2004, HATCH is a network of accomplished doers working to better humanity. HATCH connects innovative minds to resources and a global network to activate solutions.  theCamp was opened in 2018 with the mission of working on solutions for cities of the future. Together, HATCH and theCamp are bringing you the inaugural HATCH europe.</p>
           <div class="video-wrapper">
             <div style="position:relative;height:0;padding-bottom:57.0%">
               <iframe src="https://player.vimeo.com/video/212979228" width="480" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe>
@@ -37,10 +38,9 @@ $photo_gallery_id = get_field('photo_gallery_id');
           </div>
           <div class="row">
             <div class="col-md-6">
-              <p>Founded in 2004, HATCH is a network of accomplished doers working to better humanity. Currently there is a lack of time, space and incentive for collaboration to turn into actionable solutions. HATCH connects innovative minds to resources and a global network to activate solutions. However, to address global systems, we must first optimize communities and organizations, </p>
+              <p>Currently there is a lack of time, space and incentive for collaboration to turn into actionable solutions. HATCH addresses this by focusing on the individual and maximizing their potential, and then carefully curates and connects innovative minds to resources and a global network to activate solutions. </p>
             </div>
             <div class="col-md-6">
-              <p>and to do that we must maximize our individual human potential. HATCH is designed to address.</p>
               <p>The HATCH ecosystem exists of:</p>
               <ul>
                 <li>Two signature summits each year</li>
@@ -83,7 +83,7 @@ $photo_gallery_id = get_field('photo_gallery_id');
   <div class="section-the-camp">
     <div class="the-camp-hero" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/registration/bg-camp-2.jpg')">
       <div class="logo">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/logo-the-camp-color.png">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/logo-the-camp-white.png">
       </div>
     </div>
     <div class="container">
@@ -119,13 +119,13 @@ $photo_gallery_id = get_field('photo_gallery_id');
               </div>
             </div>
           </div>
-          <p><strong>Only 100 invites. Event programming starts at 5:00pm on Wednesday, June 13th and ends after breakfast on Sunday, June 17th.</strong> HATCH is a non-profit designed to benefit you, your organization, and the world, as well as mentor the next generation of our global leaders. A Signature HATCH Summit costs $2500, (all inclusive). Once you arrive, everything is taken care of: lodging, food, workshops, speaker series, entertainment, music, and transportation to and from the airport are all included with your pass.</p>
+          <p><strong>Only 100 invites. Event programming starts at 5:00pm on Wednesday, June 13th and ends after breakfast on Sunday, June 17th.</strong> HATCH is a non-profit designed to benefit you, your organization, and the world, as well as mentor the next generation of our global leaders. A Signature HATCH Summit costs €2500, (all inclusive). Once you arrive, everything is taken care of: lodging, food, workshops, speaker series, entertainment, music, and transportation to and from the airport are all included with your pass.</p>
           <p>We do not want financial constraints to stand in the way of your ability to experience HATCH. If the cost is prohibitive, please email experience@experience.org, and we will explore options for partial support from the scholarship fund. Some attendees may also choose to sponsor by "paying it forward".</p>
       		<p>For US citizens, 50% of this ticket is tax deductible to 501(c)(3) Non-Profit, which is used to fund scholarships for students, and artists. This is how your €2500 full ticket price breaks down:</p>
           <ul>
-            <li><strong>50% ($1250)</strong> - Hard costs (includes accommodations, food, transport, A/V, venue rental, entertainment, etc.)</li>
-            <li><strong>25% ($650)</strong> - Scholarship fund to assist those in need to attend</li>
-            <li><strong>25% ($650)</strong> - To HATCH non-profit overhead / admin</li>
+            <li><strong>50% (€1250)</strong> - Hard costs (includes accommodations, food, transport, A/V, venue rental, entertainment, etc.)</li>
+            <li><strong>25% (€650)</strong> - Scholarship fund to assist those in need to attend</li>
+            <li><strong>25% (€650)</strong> - To HATCH non-profit overhead / admin</li>
           </ul>
         </div>
       </div>
