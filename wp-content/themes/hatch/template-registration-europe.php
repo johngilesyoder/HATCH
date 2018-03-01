@@ -81,7 +81,7 @@ $photo_gallery_id = get_field('photo_gallery_id');
   </aside>
 
   <div class="section-the-camp">
-    <div class="the-camp-hero" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/registration/bg-camp-2.jpg')">
+    <div class="the-camp-hero" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/registration/the-camp-horizontal.jpg')">
       <div class="logo">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/logo-the-camp-white.png">
       </div>
