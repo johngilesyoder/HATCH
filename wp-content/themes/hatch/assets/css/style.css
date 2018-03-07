@@ -15149,7 +15149,6 @@ fieldset[disabled] .page-template-template-registration-success .form-wrapper .g
   text-align: center;
 }
 .page-template-template-registration-europe .registration-hero {
-  background-color: #aaa;
   background-size: cover;
   background-position: 50%;
   color: #fff;
@@ -15169,6 +15168,21 @@ fieldset[disabled] .page-template-template-registration-success .form-wrapper .g
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.page-template-template-registration-europe .registration-hero:after {
+  content: '';
+  display: block;
+  background-color: #aaa;
+  background-image: url('../img/registration/bg-registration-europe.png');
+  background-size: cover;
+  background-position: 50% 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-clip-path: polygon(0 0, 1920px 0, 1920px 100%, 0 65%);
+          clip-path: polygon(0 0, 1920px 0, 1920px 100%, 0 65%);
 }
 .page-template-template-registration-europe .registration-hero .form-title {
   display: -webkit-box;
@@ -15263,6 +15277,7 @@ fieldset[disabled] .page-template-template-registration-success .form-wrapper .g
   text-transform: uppercase;
   padding: 10px 70px;
   border-radius: 10px;
+  z-index: 300000;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#d4a411), to(#d48c11));
   background-image: linear-gradient(to bottom, #d4a411 0%, #d48c11 100%);
   background-repeat: repeat-x;

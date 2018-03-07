@@ -7,7 +7,7 @@ $photo_gallery_id = get_field('photo_gallery_id');
 
 <!-- HERO =================== -->
 <!-- ======================== -->
-<header class="registration-hero" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/registration/bg-registration-europe.png');">
+<header class="registration-hero">
   <div class="form-title">
     <span class="site-logo"><strong>HATCH</strong> <em>Europe</em></span>
     <span class="icon-plus">&plus;</span>
