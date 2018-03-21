@@ -15181,8 +15181,8 @@ fieldset[disabled] .page-template-template-registration-success .form-wrapper .g
   left: 0;
   right: 0;
   bottom: 0;
-  -webkit-clip-path: polygon(0 0, 1920px 0, 1920px 100%, 0 65%);
-          clip-path: polygon(0 0, 1920px 0, 1920px 100%, 0 65%);
+  -webkit-clip-path: polygon(0 0, 1920px 0, 1920px 100%, 0 85%);
+          clip-path: polygon(0 0, 1920px 0, 1920px 100%, 0 85%);
 }
 .page-template-template-registration-europe .registration-hero .form-title {
   display: -webkit-box;
@@ -15247,10 +15247,15 @@ fieldset[disabled] .page-template-template-registration-success .form-wrapper .g
   z-index: 100;
   height: 40px;
 }
+.page-template-template-registration-europe .registration-hero .hero-bottom {
+  position: relative;
+  margin: auto 0 60px;
+  z-index: 1000;
+}
 .page-template-template-registration-europe .registration-hero .where-when {
   font-size: 24px;
   font-family: klavika-light, "Helvetica Neue", Arial, sans-serif;
-  margin: auto 0 30px;
+  margin: 0 0 30px;
   position: relative;
 }
 .page-template-template-registration-europe .registration-hero .where-when span {
@@ -15277,7 +15282,6 @@ fieldset[disabled] .page-template-template-registration-success .form-wrapper .g
   text-transform: uppercase;
   padding: 10px 70px;
   border-radius: 10px;
-  z-index: 300000;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#d4a411), to(#d48c11));
   background-image: linear-gradient(to bottom, #d4a411 0%, #d48c11 100%);
   background-repeat: repeat-x;
@@ -15309,7 +15313,7 @@ fieldset[disabled] .page-template-template-registration-success .form-wrapper .g
   margin: 0 0 50px;
 }
 .page-template-template-registration-europe .registration-content .registration-summary {
-  padding: 80px 0;
+  padding: 30px 0 80px;
 }
 .page-template-template-registration-europe .registration-content .registration-summary h3 {
   font-size: 21px;
@@ -16328,6 +16332,9 @@ fieldset[disabled] .page-template-template-registration-europe .form-wrapper .gf
     width: 33.3333%;
     margin: 0 0 30px;
   }
+  .page-template-template-registration-europe .registration-content .registration-summary {
+    padding-top: 0;
+  }
   .page-template-template-registration-europe .registration-content .registration-summary .video-wrapper {
     margin: 0 0 30px;
   }
@@ -16338,6 +16345,9 @@ fieldset[disabled] .page-template-template-registration-europe .form-wrapper .gf
   .page-template-template-registration-europe .registration-content .section-aside .section-aside-content .section-aside-content-wrapper {
     padding-left: 15px;
     border-left: 3px solid #FFB100;
+  }
+  .page-template-template-registration-europe .form-wrapper {
+    margin-top: 0;
   }
 }
 @media (max-width: 767px) {
@@ -16369,7 +16379,7 @@ fieldset[disabled] .page-template-template-registration-europe .form-wrapper .gf
     margin-left: 0;
   }
   .page-template-template-registration-europe .registration-hero .where-when {
-    font-size: 30px;
+    font-size: 24px;
     color: #fff;
     z-index: 400;
   }
@@ -16395,7 +16405,7 @@ fieldset[disabled] .page-template-template-registration-europe .form-wrapper .gf
     margin: 0 0 30px;
   }
   .page-template-template-registration-europe .registration-content .registration-summary {
-    padding: 30px 0;
+    padding: 0 0 30px;
   }
   .page-template-template-registration-europe .registration-content .registration-summary .sdp {
     width: 100%;
@@ -16464,7 +16474,7 @@ fieldset[disabled] .page-template-template-registration-europe .form-wrapper .gf
   .page-template-template-registration-europe .form-wrapper {
     width: auto;
     padding: 15px;
-    margin: 30px -15px;
+    margin: 0 -15px 30px;
     border-radius: 0;
     border-left: 0;
     border-right: 0;

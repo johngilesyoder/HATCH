@@ -13,11 +13,13 @@ $photo_gallery_id = get_field('photo_gallery_id');
     <span class="icon-plus">&plus;</span>
     <img class="logo-the-camp" src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/logo-the-camp.png">
   </div>
-  <div class="where-when">
-    <span><?php the_field('event_location'); ?></span>
-    <span><?php the_field('event_date'); ?></span>
+  <div class="hero-bottom">
+    <div class="where-when">
+      <span><?php the_field('event_location'); ?></span>
+      <span><?php the_field('event_date'); ?></span>
+    </div>
+    <button id="registration-toggle" class="btn btn-secondary btn-registration">Register Now</button>
   </div>
-  <button id="registration-toggle" class="btn btn-secondary btn-registration">Register Now</button>
 </header>
 
 
@@ -110,12 +112,12 @@ $photo_gallery_id = get_field('photo_gallery_id');
             <h3>€2500 includes</h3>
             <div class="row">
               <div class="col-md-6">
-                <div class="point"><span>4 night accommodations</span></div>
-                <div class="point"><span>3 meals / day <small>(including snack breaks)</small></span></div>
                 <div class="point"><span>A global network</span></div>
+                <div class="point"><span>3 meals / day <small>(including snack breaks)</small></span></div>
               </div>
               <div class="col-md-6">
                 <div class="point"><span>An experience you will not forget <small>(workshops, speakers, entertainment, music)</small></span></div>
+                <div class="point"><span>4 night accommodations</span></div>
               </div>
             </div>
           </div>
@@ -123,9 +125,9 @@ $photo_gallery_id = get_field('photo_gallery_id');
           <p>We do not want financial constraints to stand in the way of your ability to experience HATCH. If the cost is prohibitive, please email experience@experience.org, and we will explore options for partial support from the scholarship fund. Some attendees may also choose to sponsor by "paying it forward".</p>
       		<p>For US citizens, 50% of this ticket is tax deductible to 501(c)(3) Non-Profit, which is used to fund scholarships for students, and artists. This is how your €2500 full ticket price breaks down:</p>
           <ul>
-            <li><strong>50% (€1250)</strong> - Hard costs (includes accommodations, food, transport, A/V, venue rental, entertainment, etc.)</li>
+            <li><strong>50% (€1250)</strong> - Hard costs (includes accommodations, food, logistics, A/V, venue rental, entertainment, etc.)</li>
             <li><strong>25% (€650)</strong> - Scholarship fund to assist those in need to attend</li>
-            <li><strong>25% (€650)</strong> - To HATCH non-profit overhead / admin</li>
+            <li><strong>25% (€650)</strong> - To HATCH non-profit overhead</li>
           </ul>
         </div>
       </div>
@@ -168,21 +170,6 @@ $photo_gallery_id = get_field('photo_gallery_id');
               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/alumni-earle.png">
               <span class="alumnus-name">Sylvia Earle</span>
               <span class="alumnus-title">Co-founder, WIRED mag</span>
-            </div>
-          </div>
-          <h3>Members of the HATCH network represents leadership from ...</h3>
-          <div class="leadership-wrapper">
-            <div class="company">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/company-hasbro.png">
-            </div>
-            <div class="company">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/company-ey.png">
-            </div>
-            <div class="company">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/company-apple.png">
-            </div>
-            <div class="company">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/company-intel.png">
             </div>
           </div>
         </div>

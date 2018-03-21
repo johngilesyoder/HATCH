@@ -36,7 +36,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      clip-path: polygon(0 0, 1920px 0, 1920px 100%, 0 65%);
+      clip-path: polygon(0 0, 1920px 0, 1920px 100%, 0 85%);
     }
     .form-title {
       display: flex;
@@ -94,10 +94,15 @@
         height: 40px;
       }
     }
+    .hero-bottom {
+      position: relative;
+      margin: auto 0 60px;
+      z-index: 1000;
+    }
     .where-when {
       font-size: 24px;
       font-family: @font-family-klavika-light;
-      margin: auto 0 30px;
+      margin: 0 0 30px;
       position: relative;
       span {
         position: relative;
@@ -123,7 +128,6 @@
       text-transform: uppercase;
       padding: 10px 70px;
       border-radius: 10px;
-      z-index: 300000;
       #gradient > .vertical(darken(desaturate(#FFC000, 15%), 5%), darken(desaturate(#FFA100, 15%), 5%));
       &:hover {
         background-color: darken(desaturate(#FFA100, 15%), 5%);
@@ -157,7 +161,7 @@
     }
     // Summary ---------------
     .registration-summary {
-      padding: 80px 0;
+      padding: 30px 0 80px;
       iframe {
 
       }
@@ -674,6 +678,7 @@
         }
       }
       .registration-summary {
+        padding-top: 0;
         .video-wrapper {
           margin: 0 0 30px;
         }
@@ -692,6 +697,9 @@
           }
         }
       }
+    }
+    .form-wrapper {
+      margin-top: 0;
     }
   }
 
@@ -724,7 +732,7 @@
         }
       }
       .where-when {
-        font-size: 30px;
+        font-size: 24px;
         color: #fff;
         z-index: 400;
         span {
@@ -755,7 +763,7 @@
       }
       // Summary ---------------
       .registration-summary {
-        padding: 30px 0;
+        padding: 0 0 30px;
         .sdp {
           width: 100%;
           margin: 0 0 30px;
@@ -840,7 +848,7 @@
     .form-wrapper {
       width: auto;
       padding: 15px;
-      margin: 30px -15px;
+      margin: 0 -15px 30px;
       border-radius: 0;
       border-left: 0;
       border-right: 0;
