@@ -1017,6 +1017,16 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/assets\/img\/registration\/success-bg.jpg": {
+		"ft": 16384,
+		"iS": 388012,
+		"oA": 0,
+		"oAP": "\/assets\/img\/registration\/success-bg.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/assets\/img\/registration\/sustainable-development-goals.png": {
 		"ft": 32768,
 		"iS": 181156,
@@ -3853,6 +3863,13 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/template-registration-europe.php",
+		"oF": 0
+		},
+	"\/template-registration-success-euro.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/template-registration-success-euro.php",
 		"oF": 0
 		},
 	"\/template-registration-success.php": {
