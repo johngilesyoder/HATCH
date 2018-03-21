@@ -7106,6 +7106,30 @@ a img.aligncenter {
   position: relative;
   top: -3px;
 }
+.page-template-template-registration-success .euro-payment,
+.page-template-template-hasbro-registration-success .euro-payment,
+.page-template-template-panama-registration-success .euro-payment {
+  padding: 30px;
+  background: #f2f2f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 0 30px;
+}
+.page-template-template-registration-success .euro-payment .btn,
+.page-template-template-hasbro-registration-success .euro-payment .btn,
+.page-template-template-panama-registration-success .euro-payment .btn {
+  font-size: 24px;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
 .page-template-template-registration-success .success-body,
 .page-template-template-hasbro-registration-success .success-body,
 .page-template-template-panama-registration-success .success-body {
