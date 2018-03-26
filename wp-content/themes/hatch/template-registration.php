@@ -9,7 +9,7 @@ $photo_gallery_id = get_field('photo_gallery_id');
 <!-- ======================== -->
 <header class="registration-hero" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/registration/bg-registration-bigsky.jpg');">
   <div class="form-title">
-    <span class="site-logo"><em>HATCH</em> 2017 Registration</span>
+    <span class="site-logo"><em>HATCH</em> 2018 Registration</span>
     <span class="site-logo-date"><?php the_field('event_date'); ?> &bull; <?php the_field('event_location'); ?></span>
   </div>
   <h1>Welcome.</h1>
