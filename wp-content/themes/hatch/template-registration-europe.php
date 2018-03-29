@@ -96,6 +96,11 @@ $photo_gallery_id = get_field('photo_gallery_id');
       	  <p>For thousands of years, people have had the same concerns: What will we eat tomorrow? How will we learn?  What will it be like to age?  How will we go from one place to another? Using what energy? Now, thecamp is undertaking these challenges and finding new approaches to universal issues, aggregating people and projects driven by the same excitement for the future.</p>
       		<p>And that’s why the partnership with HATCH is perfect.</p>
           <p><a class="learn-more" target="_blank" href="https://www.lonelyplanet.com/france/provence/aix-en-provence">Learn more about Aix-en-Provence, France</a></p>
+          <div class="video-wrapper">
+            <div style="position:relative;height:0;padding-bottom:57.0%">
+              <iframe src="https://player.vimeo.com/video/261960182" width="480" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe>
+            </div>
+          </div>
         </div>
       </div>
     </div>

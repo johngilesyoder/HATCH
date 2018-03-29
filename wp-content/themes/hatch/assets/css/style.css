@@ -15234,6 +15234,9 @@ fieldset[disabled] .page-template-template-registration .form-wrapper .gform_wra
   margin: 30px 0 0;
   display: inline-block;
 }
+.page-template-template-registration-europe .registration-content .section-the-camp .video-wrapper {
+  margin: 60px 0 0;
+}
 .page-template-template-registration-europe .registration-content .section-details {
   font-size: 18px;
   padding: 80px 0;
@@ -16223,6 +16226,9 @@ fieldset[disabled] .page-template-template-registration-europe .form-wrapper .gf
   }
   .page-template-template-registration-europe .registration-content .section-the-camp .the-camp-hero .logo img {
     height: 100px;
+  }
+  .page-template-template-registration-europe .registration-content .section-the-camp .video-wrapper {
+    margin: 30px 0 0;
   }
   .page-template-template-registration-europe .registration-content .section-details {
     font-size: 18px;
