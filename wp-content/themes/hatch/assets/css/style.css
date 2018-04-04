@@ -7061,6 +7061,7 @@ a img.aligncenter {
   }
 }
 .page-template-template-registration-success,
+.page-template-template-registration-success-euro,
 .page-template-template-hasbro-registration-success,
 .page-template-template-panama-registration-success {
   background-image: url('../img/registration/success-bg.jpg');
@@ -7070,6 +7071,7 @@ a img.aligncenter {
   height: 100vh;
 }
 .page-template-template-registration-success .hatch-logo,
+.page-template-template-registration-success-euro .hatch-logo,
 .page-template-template-hasbro-registration-success .hatch-logo,
 .page-template-template-panama-registration-success .hatch-logo {
   font-size: 36px;
@@ -7078,6 +7080,7 @@ a img.aligncenter {
   text-align: center;
 }
 .page-template-template-registration-success .message-wrapper,
+.page-template-template-registration-success-euro .message-wrapper,
 .page-template-template-hasbro-registration-success .message-wrapper,
 .page-template-template-panama-registration-success .message-wrapper {
   padding: 0;
@@ -7085,6 +7088,7 @@ a img.aligncenter {
           box-shadow: 0 2px 14px 10px rgba(0, 0, 0, 0.2), 0 1px 4px rgba(0, 0, 0, 0.06);
 }
 .page-template-template-registration-success .success-title,
+.page-template-template-registration-success-euro .success-title,
 .page-template-template-hasbro-registration-success .success-title,
 .page-template-template-panama-registration-success .success-title {
   background: #DFF0D8;
@@ -7099,6 +7103,7 @@ a img.aligncenter {
   border-radius: 20px 20px 0 0;
 }
 .page-template-template-registration-success .success-title img,
+.page-template-template-registration-success-euro .success-title img,
 .page-template-template-hasbro-registration-success .success-title img,
 .page-template-template-panama-registration-success .success-title img {
   margin-right: 13px;
@@ -7107,6 +7112,7 @@ a img.aligncenter {
   top: -3px;
 }
 .page-template-template-registration-success .euro-payment,
+.page-template-template-registration-success-euro .euro-payment,
 .page-template-template-hasbro-registration-success .euro-payment,
 .page-template-template-panama-registration-success .euro-payment {
   padding: 30px;
@@ -7123,6 +7129,7 @@ a img.aligncenter {
   margin: 0 0 30px;
 }
 .page-template-template-registration-success .euro-payment .btn,
+.page-template-template-registration-success-euro .euro-payment .btn,
 .page-template-template-hasbro-registration-success .euro-payment .btn,
 .page-template-template-panama-registration-success .euro-payment .btn {
   font-size: 24px;
@@ -7131,6 +7138,7 @@ a img.aligncenter {
   border-radius: 5px;
 }
 .page-template-template-registration-success .success-body,
+.page-template-template-registration-success-euro .success-body,
 .page-template-template-hasbro-registration-success .success-body,
 .page-template-template-panama-registration-success .success-body {
   padding: 25px 30px;
@@ -7139,11 +7147,13 @@ a img.aligncenter {
   font-size: 18px;
 }
 .page-template-template-registration-success .success-body hr,
+.page-template-template-registration-success-euro .success-body hr,
 .page-template-template-hasbro-registration-success .success-body hr,
 .page-template-template-panama-registration-success .success-body hr {
   margin: 40px 0;
 }
 .page-template-template-registration-success .form-footer,
+.page-template-template-registration-success-euro .form-footer,
 .page-template-template-hasbro-registration-success .form-footer,
 .page-template-template-panama-registration-success .form-footer {
   color: #B3B3B3;
@@ -7151,17 +7161,20 @@ a img.aligncenter {
   margin: 60px 0;
 }
 .page-template-template-registration-success .form-footer a,
+.page-template-template-registration-success-euro .form-footer a,
 .page-template-template-hasbro-registration-success .form-footer a,
 .page-template-template-panama-registration-success .form-footer a {
   color: #00b8f0;
 }
 @media (max-width: 767px) {
   .page-template-template-registration-success .hatch-logo,
+  .page-template-template-registration-success-euro .hatch-logo,
   .page-template-template-hasbro-registration-success .hatch-logo,
   .page-template-template-panama-registration-success .hatch-logo {
     margin: 30px auto;
   }
   .page-template-template-registration-success .success-title,
+  .page-template-template-registration-success-euro .success-title,
   .page-template-template-hasbro-registration-success .success-title,
   .page-template-template-panama-registration-success .success-title {
     padding: 15px;
@@ -7171,23 +7184,27 @@ a img.aligncenter {
     border-radius: 20px 20px 0 0;
   }
   .page-template-template-registration-success .success-title img,
+  .page-template-template-registration-success-euro .success-title img,
   .page-template-template-hasbro-registration-success .success-title img,
   .page-template-template-panama-registration-success .success-title img {
     margin-right: 8px;
     height: 20px;
   }
   .page-template-template-registration-success .success-body,
+  .page-template-template-registration-success-euro .success-body,
   .page-template-template-hasbro-registration-success .success-body,
   .page-template-template-panama-registration-success .success-body {
     padding: 15px;
     font-size: 16px;
   }
   .page-template-template-registration-success .success-body hr,
+  .page-template-template-registration-success-euro .success-body hr,
   .page-template-template-hasbro-registration-success .success-body hr,
   .page-template-template-panama-registration-success .success-body hr {
     margin: 15px 0;
   }
   .page-template-template-registration-success .form-footer,
+  .page-template-template-registration-success-euro .form-footer,
   .page-template-template-hasbro-registration-success .form-footer,
   .page-template-template-panama-registration-success .form-footer {
     margin: 30px 0;
