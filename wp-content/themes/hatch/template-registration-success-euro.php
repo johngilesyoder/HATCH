@@ -26,7 +26,7 @@
 
   <script type="text/javascript">
     window.setTimeout(function() {
-			window.location.href = 'http://booking.thecamp.fr/hatch-europe-x-thecamp-festival-aix-en-provence-non-datee-css5-thecamp-lgen-pg101-ri5302257.html';
+      window.open = ('http://booking.thecamp.fr/hatch-europe-x-thecamp-festival-aix-en-provence-non-datee-css5-thecamp-lgen-pg101-ri5302257.html', '_blank');
 		}, 10000);
   </script>
 
