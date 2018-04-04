@@ -2,140 +2,62 @@
 // -----------------------------------------------------------------
 
 .page-template-template-registration-europe {
-  background: #fafafa;
   .section-title {
     font-family: @font-family-klavika-light;
     font-size: 50px;
     margin: 0 0 80px;
     text-align: center;
   }
+  .yellow {
+    color: @brand-secondary;
+  }
+  .blue {
+    color: #006ff4;
+  }
+  .regular-margin {
+    margin: 0 0 10.5px !important;
+  }
+  .power-statements {
+    font-size: 24px;
+    margin: 0 0 60px;
+    p {
+      margin: 0 0 15px;
+    }
+  }
   // HERO
   // -----------------------
   .registration-hero {
-    background-size: cover;
-    background-position: 50%;
-    color: #fff;
-    margin: 0;
-    height: 610px;
-    padding: 80px 30px;
-    position: relative;
-    text-align: center;
-    text-shadow: 0px 0px 15px rgba(15,101,128,0.85);
     display: flex;
-    flex-flow: column;
-    align-items: center;
-    &:after {
-      content: '';
-      display: block;
-      background-color: #aaa;
-      background-image: url('../img/registration/bg-registration-europe.png');
-      background-size: cover;
-      background-position: 50% 50%;
+    justify-content: center;
+    overflow-x: hidden;
+    margin: 0 0 80px;
+    height: 960px;
+    position: relative;
+    img {
+      height: 100%;
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      clip-path: polygon(0 0, 1920px 0, 1920px 100%, 0 85%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
-    .form-title {
-      display: flex;
-      position: relative;
-      &:after {
-        content: '';
-        display: block;
-        opacity: .48;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: #54524B;
-        filter: blur(25px);
-      }
-      .site-logo {
-        position: relative;
-        z-index: 100;
-        .hatch-logo();
-        line-height: 1;
-        margin: 0 0 5px;
-        display: flex;
-        align-items: flex-start;
-        strong {
-          font-family: @font-family-klavika-bold;
-          color: @brand-secondary;
-          font-size: 50px;
-          text-transform: uppercase;
-          font-weight: normal;
-          display: block;
+  }
 
-        }
-        em {
-          font-style: normal;
-          text-transform: lowercase;
-          font-size: 33px;
-          font-weight: 400;
-          font-family: @font-family-klavika-light;
-          color: #fff;
-          display: block;
-
-        }
-      }
-      .icon-plus {
-        position: relative;
-        font-size: 36px;
-        font-weight: 500;
-        z-index: 100;
-        margin: 0 30px;
-      }
-      .logo-the-camp {
-        position: relative;
-        z-index: 100;
-        height: 40px;
-      }
+  .btn-registration {
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 10px 70px;
+    border-radius: 10px;
+    width: 400px;
+    display: block;
+    margin: 80px auto 0;
+    #gradient > .vertical(darken(desaturate(#FFC000, 15%), 5%), darken(desaturate(#FFA100, 15%), 5%));
+    &:hover {
+      background-color: darken(desaturate(#FFA100, 15%), 5%);
+      background-image: none;
     }
-    .hero-bottom {
-      position: relative;
-      margin: auto 0 60px;
-      z-index: 1000;
-    }
-    .where-when {
-      font-size: 24px;
-      font-family: @font-family-klavika-light;
-      margin: 0 0 30px;
-      position: relative;
-      span {
-        position: relative;
-        z-index: 110;
-      }
-      &:after {
-        content: '';
-        display: block;
-        opacity: .48;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: #54524B;
-        filter: blur(25px);
-        z-index: 105;
-      }
-    }
-    .btn-registration {
-      font-size: 30px;
-      font-weight: 500;
-      text-transform: uppercase;
-      padding: 10px 70px;
-      border-radius: 10px;
-      #gradient > .vertical(darken(desaturate(#FFC000, 15%), 5%), darken(desaturate(#FFA100, 15%), 5%));
-      &:hover {
-        background-color: darken(desaturate(#FFA100, 15%), 5%);
-        background-image: none;
-      }
-      &.is--toggled {
-        display: none;
-      }
+    &.is--toggled {
+      display: none;
     }
   }
 
@@ -145,9 +67,7 @@
     margin: 0 0 60px;
     p {
       font-size: 16px;
-    }
-    .welcome-section {
-      margin: 50px 0 0;
+      margin: 0 0 30px;
     }
     .intro-statement {
       margin: 0 0 50px;
@@ -166,17 +86,13 @@
 
       }
       h3 {
-        font-size: 21px;
+        font-size: 30px;
         font-weight: 700;
         margin: 0 0 10px;
       }
       p {
         font-size: 16px;
         line-height: 1.5em;
-      }
-      .sdp {
-        width: 100%;
-        margin: 30px 0 0;
       }
     }
     // Quote ---------------
@@ -227,6 +143,46 @@
       }
     }
 
+    // Alumni -----------
+    .registration-alumni {
+      margin: 0 0 80px;
+      h3 {
+        font-weight: 400;
+        font-size: 30px;
+        margin: 0 0 30px;
+      }
+      .alumni-wrapper,
+      .leadership-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+      }
+      .alumnus {
+        width: 33%;
+        text-align: center;
+        margin: 0 0 30px;
+        img {
+          height: 140px;
+          border-radius: 50%;
+          margin: 0 0 10px;
+        }
+        .alumnus-name {
+          display: block;
+          font-size: 16px;
+          font-weight: 500;
+        }
+        .alumnus-title {
+          display: block;
+        }
+      }
+      .company {
+        width: 25%;
+        text-align: center;
+        img {
+          height: 75px;
+        }
+      }
+    }
+
     // The Camp
     // ------------------
     .section-the-camp {
@@ -263,8 +219,15 @@
           z-index: 50;
         }
       }
-      h3 {
+      .camp-title {
         font-size: 21px;
+        img {
+          height: 100px;
+          margin-right: 30px;
+        }
+      }
+      h3 {
+        font-size: 30px;
         font-weight: 700;
         margin: 0 0 10px;
       }
@@ -278,6 +241,13 @@
       .video-wrapper {
         margin: 60px 0 0;
       }
+      .welcome-section {
+        margin: 50px 0 0;
+      }
+      .sdp {
+        width: 100%;
+        margin: 30px 0 0;
+      }
     }
 
     // Details
@@ -288,7 +258,7 @@
       background: #333;
       color: #fff;
       h3 {
-        font-size: 21px;
+        font-size: 30px;
         font-weight: 700;
         margin: 0 0 10px;
       }
@@ -336,47 +306,6 @@
             font-size: 18px;
             display: block;
           }
-        }
-      }
-    }
-
-
-    // Alumni -----------
-    .registration-alumni {
-      padding: 80px 0;
-      h3 {
-        font-weight: 400;
-        font-size: 30px;
-        margin: 0 0 30px;
-      }
-      .alumni-wrapper,
-      .leadership-wrapper {
-        display: flex;
-        flex-flow: row wrap;
-      }
-      .alumnus {
-        width: 33%;
-        text-align: center;
-        margin: 0 0 30px;
-        img {
-          height: 140px;
-          border-radius: 50%;
-          margin: 0 0 10px;
-        }
-        .alumnus-name {
-          display: block;
-          font-size: 16px;
-          font-weight: 500;
-        }
-        .alumnus-title {
-          display: block;
-        }
-      }
-      .company {
-        width: 25%;
-        text-align: center;
-        img {
-          height: 75px;
         }
       }
     }
@@ -657,12 +586,16 @@
 @media (min-width: 768px) and (max-width: 991px) {
 
   .page-template-template-registration-europe {
+    .power-statements {
+      margin: 0 0 60px;
+    }
     .registration-hero {
-      margin: 0 0 30px;
-      clip-path: none;
-      height: 400px;
-      h1 {
-        margin: 75px 0;
+      overflow: hidden;
+      margin: 0 0 60px;
+      height: 480px;
+      img {
+        height: auto;
+        width: 150%;
       }
     }
     .registration-button-wrapper {
@@ -717,36 +650,30 @@
       font-size: 36px;
       margin: 0 0 30px;
     }
+    .power-statements {
+      margin: 0 0 30px;
+      font-size: 21px;
+      text-align: center;
+      p {
+        margin: 0 0 15px;
+      }
+    }
+    .btn-registration {
+      margin-top: 30px;
+      font-size: 21px;
+      padding: 10px 30px;
+      display: block;
+      width: 100%;
+    }
     // HERO
     // -----------------------
     .registration-hero {
-      height: 400px;
-      padding: 30px 15px;
-      .form-title {
-        flex-flow: row wrap;
-        justify-content: flex-end;
-        width: 275px;
-        .site-logo {
-          align-items: flex-start;
-          width: 100%;
-        }
-        .icon-plus {
-          margin-left: 0;
-        }
-      }
-      .where-when {
-        font-size: 24px;
-        color: #fff;
-        z-index: 400;
-        span {
-          display: block;
-        }
-      }
-      .btn-registration {
-        font-size: 24px;
-        padding: 10px 15px;
-        display: block;
-        width: 100%;
+      overflow: hidden;
+      margin: 0 0 30px;
+      height: 480px;
+      img {
+        height: auto;
+        width: 150%;
       }
     }
 
@@ -757,9 +684,6 @@
       .intro-statement {
         margin: 0 0 30px;
       }
-      .welcome-section {
-        margin: 30px 0 0;
-      }
       // Video ---------------
       .video-wrapper {
         margin: 0 0 30px;
@@ -767,9 +691,8 @@
       // Summary ---------------
       .registration-summary {
         padding: 0 0 30px;
-        .sdp {
-          width: 100%;
-          margin: 0 0 30px;
+        h3 {
+          font-size: 21px;
         }
       }
       // Quote ---------------
@@ -801,6 +724,21 @@
               height: 100px;
             }
           }
+        }
+        h3 {
+          font-size: 21px;
+        }
+        .camp-title {
+          span {
+            display: block;
+          }
+        }
+        .welcome-section {
+          margin: 30px 0 0;
+        }
+        .sdp {
+          width: 100%;
+          margin: 0 0 30px;
         }
         .video-wrapper {
           margin: 30px 0 0;

@@ -14947,159 +14947,67 @@ fieldset[disabled] .page-template-template-registration .form-wrapper .gform_wra
     font-size: 27px;
   }
 }
-.page-template-template-registration-europe {
-  background: #fafafa;
-}
 .page-template-template-registration-europe .section-title {
   font-family: klavika-light, "Helvetica Neue", Arial, sans-serif;
   font-size: 50px;
   margin: 0 0 80px;
   text-align: center;
 }
-.page-template-template-registration-europe .registration-hero {
-  background-size: cover;
-  background-position: 50%;
-  color: #fff;
-  margin: 0;
-  height: 610px;
-  padding: 80px 30px;
-  position: relative;
-  text-align: center;
-  text-shadow: 0px 0px 15px rgba(15, 101, 128, 0.85);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.page-template-template-registration-europe .registration-hero:after {
-  content: '';
-  display: block;
-  background-color: #aaa;
-  background-image: url('../img/registration/bg-registration-europe.png');
-  background-size: cover;
-  background-position: 50% 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  -webkit-clip-path: polygon(0 0, 1920px 0, 1920px 100%, 0 85%);
-          clip-path: polygon(0 0, 1920px 0, 1920px 100%, 0 85%);
-}
-.page-template-template-registration-europe .registration-hero .form-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-}
-.page-template-template-registration-europe .registration-hero .form-title:after {
-  content: '';
-  display: block;
-  opacity: .48;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #54524B;
-  -webkit-filter: blur(25px);
-          filter: blur(25px);
-}
-.page-template-template-registration-europe .registration-hero .form-title .site-logo {
-  position: relative;
-  z-index: 100;
+.page-template-template-registration-europe .yellow {
   color: #FFB100;
-  font-family: klavika-bold, "Helvetica Neue", Arial, sans-serif;
-  text-transform: uppercase;
-  line-height: 1;
-  margin: 0 0 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
 }
-.page-template-template-registration-europe .registration-hero .form-title .site-logo strong {
-  font-family: klavika-bold, "Helvetica Neue", Arial, sans-serif;
-  color: #FFB100;
-  font-size: 50px;
-  text-transform: uppercase;
-  font-weight: normal;
-  display: block;
+.page-template-template-registration-europe .blue {
+  color: #006ff4;
 }
-.page-template-template-registration-europe .registration-hero .form-title .site-logo em {
-  font-style: normal;
-  text-transform: lowercase;
-  font-size: 33px;
-  font-weight: 400;
-  font-family: klavika-light, "Helvetica Neue", Arial, sans-serif;
-  color: #fff;
-  display: block;
+.page-template-template-registration-europe .regular-margin {
+  margin: 0 0 10.5px !important;
 }
-.page-template-template-registration-europe .registration-hero .form-title .icon-plus {
-  position: relative;
-  font-size: 36px;
-  font-weight: 500;
-  z-index: 100;
-  margin: 0 30px;
-}
-.page-template-template-registration-europe .registration-hero .form-title .logo-the-camp {
-  position: relative;
-  z-index: 100;
-  height: 40px;
-}
-.page-template-template-registration-europe .registration-hero .hero-bottom {
-  position: relative;
-  margin: auto 0 60px;
-  z-index: 1000;
-}
-.page-template-template-registration-europe .registration-hero .where-when {
+.page-template-template-registration-europe .power-statements {
   font-size: 24px;
-  font-family: klavika-light, "Helvetica Neue", Arial, sans-serif;
-  margin: 0 0 30px;
+  margin: 0 0 60px;
+}
+.page-template-template-registration-europe .power-statements p {
+  margin: 0 0 15px;
+}
+.page-template-template-registration-europe .registration-hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow-x: hidden;
+  margin: 0 0 80px;
+  height: 960px;
   position: relative;
 }
-.page-template-template-registration-europe .registration-hero .where-when span {
-  position: relative;
-  z-index: 110;
-}
-.page-template-template-registration-europe .registration-hero .where-when:after {
-  content: '';
-  display: block;
-  opacity: .48;
+.page-template-template-registration-europe .registration-hero img {
+  height: 100%;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #54524B;
-  -webkit-filter: blur(25px);
-          filter: blur(25px);
-  z-index: 105;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
-.page-template-template-registration-europe .registration-hero .btn-registration {
+.page-template-template-registration-europe .btn-registration {
   font-size: 30px;
   font-weight: 500;
   text-transform: uppercase;
   padding: 10px 70px;
   border-radius: 10px;
+  width: 400px;
+  display: block;
+  margin: 80px auto 0;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#d4a411), to(#d48c11));
   background-image: linear-gradient(to bottom, #d4a411 0%, #d48c11 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd4a411', endColorstr='#ffd48c11', GradientType=0);
 }
-.page-template-template-registration-europe .registration-hero .btn-registration:hover {
+.page-template-template-registration-europe .btn-registration:hover {
   background-color: #d48c11;
   background-image: none;
 }
-.page-template-template-registration-europe .registration-hero .btn-registration.is--toggled {
+.page-template-template-registration-europe .btn-registration.is--toggled {
   display: none;
 }
 .page-template-template-registration-europe .registration-content {
@@ -15107,9 +15015,7 @@ fieldset[disabled] .page-template-template-registration .form-wrapper .gform_wra
 }
 .page-template-template-registration-europe .registration-content p {
   font-size: 16px;
-}
-.page-template-template-registration-europe .registration-content .welcome-section {
-  margin: 50px 0 0;
+  margin: 0 0 30px;
 }
 .page-template-template-registration-europe .registration-content .intro-statement {
   margin: 0 0 50px;
@@ -15124,17 +15030,13 @@ fieldset[disabled] .page-template-template-registration .form-wrapper .gform_wra
   padding: 30px 0 80px;
 }
 .page-template-template-registration-europe .registration-content .registration-summary h3 {
-  font-size: 21px;
+  font-size: 30px;
   font-weight: 700;
   margin: 0 0 10px;
 }
 .page-template-template-registration-europe .registration-content .registration-summary p {
   font-size: 16px;
   line-height: 1.5em;
-}
-.page-template-template-registration-europe .registration-content .registration-summary .sdp {
-  width: 100%;
-  margin: 30px 0 0;
 }
 .page-template-template-registration-europe .registration-content .section-aside {
   margin: 0 0 80px;
@@ -15198,6 +15100,49 @@ fieldset[disabled] .page-template-template-registration .form-wrapper .gform_wra
   font-size: 14px;
   margin-left: 5px;
 }
+.page-template-template-registration-europe .registration-content .registration-alumni {
+  margin: 0 0 80px;
+}
+.page-template-template-registration-europe .registration-content .registration-alumni h3 {
+  font-weight: 400;
+  font-size: 30px;
+  margin: 0 0 30px;
+}
+.page-template-template-registration-europe .registration-content .registration-alumni .alumni-wrapper,
+.page-template-template-registration-europe .registration-content .registration-alumni .leadership-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+.page-template-template-registration-europe .registration-content .registration-alumni .alumnus {
+  width: 33%;
+  text-align: center;
+  margin: 0 0 30px;
+}
+.page-template-template-registration-europe .registration-content .registration-alumni .alumnus img {
+  height: 140px;
+  border-radius: 50%;
+  margin: 0 0 10px;
+}
+.page-template-template-registration-europe .registration-content .registration-alumni .alumnus .alumnus-name {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+}
+.page-template-template-registration-europe .registration-content .registration-alumni .alumnus .alumnus-title {
+  display: block;
+}
+.page-template-template-registration-europe .registration-content .registration-alumni .company {
+  width: 25%;
+  text-align: center;
+}
+.page-template-template-registration-europe .registration-content .registration-alumni .company img {
+  height: 75px;
+}
 .page-template-template-registration-europe .registration-content .section-the-camp {
   font-size: 18px;
   margin: 0 0 80px;
@@ -15239,8 +15184,15 @@ fieldset[disabled] .page-template-template-registration .form-wrapper .gform_wra
   background: rgba(0, 0, 0, 0.2);
   z-index: 50;
 }
-.page-template-template-registration-europe .registration-content .section-the-camp h3 {
+.page-template-template-registration-europe .registration-content .section-the-camp .camp-title {
   font-size: 21px;
+}
+.page-template-template-registration-europe .registration-content .section-the-camp .camp-title img {
+  height: 100px;
+  margin-right: 30px;
+}
+.page-template-template-registration-europe .registration-content .section-the-camp h3 {
+  font-size: 30px;
   font-weight: 700;
   margin: 0 0 10px;
 }
@@ -15254,6 +15206,13 @@ fieldset[disabled] .page-template-template-registration .form-wrapper .gform_wra
 .page-template-template-registration-europe .registration-content .section-the-camp .video-wrapper {
   margin: 60px 0 0;
 }
+.page-template-template-registration-europe .registration-content .section-the-camp .welcome-section {
+  margin: 50px 0 0;
+}
+.page-template-template-registration-europe .registration-content .section-the-camp .sdp {
+  width: 100%;
+  margin: 30px 0 0;
+}
 .page-template-template-registration-europe .registration-content .section-details {
   font-size: 18px;
   padding: 80px 0;
@@ -15261,7 +15220,7 @@ fieldset[disabled] .page-template-template-registration .form-wrapper .gform_wra
   color: #fff;
 }
 .page-template-template-registration-europe .registration-content .section-details h3 {
-  font-size: 21px;
+  font-size: 30px;
   font-weight: 700;
   margin: 0 0 10px;
 }
@@ -15315,49 +15274,6 @@ fieldset[disabled] .page-template-template-registration .form-wrapper .gform_wra
   font-weight: 400;
   font-size: 18px;
   display: block;
-}
-.page-template-template-registration-europe .registration-content .registration-alumni {
-  padding: 80px 0;
-}
-.page-template-template-registration-europe .registration-content .registration-alumni h3 {
-  font-weight: 400;
-  font-size: 30px;
-  margin: 0 0 30px;
-}
-.page-template-template-registration-europe .registration-content .registration-alumni .alumni-wrapper,
-.page-template-template-registration-europe .registration-content .registration-alumni .leadership-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-}
-.page-template-template-registration-europe .registration-content .registration-alumni .alumnus {
-  width: 33%;
-  text-align: center;
-  margin: 0 0 30px;
-}
-.page-template-template-registration-europe .registration-content .registration-alumni .alumnus img {
-  height: 140px;
-  border-radius: 50%;
-  margin: 0 0 10px;
-}
-.page-template-template-registration-europe .registration-content .registration-alumni .alumnus .alumnus-name {
-  display: block;
-  font-size: 16px;
-  font-weight: 500;
-}
-.page-template-template-registration-europe .registration-content .registration-alumni .alumnus .alumnus-title {
-  display: block;
-}
-.page-template-template-registration-europe .registration-content .registration-alumni .company {
-  width: 25%;
-  text-align: center;
-}
-.page-template-template-registration-europe .registration-content .registration-alumni .company img {
-  height: 75px;
 }
 .page-template-template-registration-europe .form-footer {
   color: #999;
@@ -16116,14 +16032,17 @@ fieldset[disabled] .page-template-template-registration-europe .form-wrapper .gf
   background-color: #333;
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  .page-template-template-registration-europe .registration-hero {
-    margin: 0 0 30px;
-    -webkit-clip-path: none;
-            clip-path: none;
-    height: 400px;
+  .page-template-template-registration-europe .power-statements {
+    margin: 0 0 60px;
   }
-  .page-template-template-registration-europe .registration-hero h1 {
-    margin: 75px 0;
+  .page-template-template-registration-europe .registration-hero {
+    overflow: hidden;
+    margin: 0 0 60px;
+    height: 480px;
+  }
+  .page-template-template-registration-europe .registration-hero img {
+    height: auto;
+    width: 150%;
   }
   .page-template-template-registration-europe .registration-button-wrapper {
     top: 0;
@@ -16166,42 +16085,29 @@ fieldset[disabled] .page-template-template-registration-europe .form-wrapper .gf
     font-size: 36px;
     margin: 0 0 30px;
   }
+  .page-template-template-registration-europe .power-statements {
+    margin: 0 0 30px;
+    font-size: 21px;
+    text-align: center;
+  }
+  .page-template-template-registration-europe .power-statements p {
+    margin: 0 0 15px;
+  }
+  .page-template-template-registration-europe .btn-registration {
+    margin-top: 30px;
+    font-size: 21px;
+    padding: 10px 30px;
+    display: block;
+    width: 100%;
+  }
   .page-template-template-registration-europe .registration-hero {
-    height: 400px;
-    padding: 30px 15px;
+    overflow: hidden;
+    margin: 0 0 30px;
+    height: 480px;
   }
-  .page-template-template-registration-europe .registration-hero .form-title {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    width: 275px;
-  }
-  .page-template-template-registration-europe .registration-hero .form-title .site-logo {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    width: 100%;
-  }
-  .page-template-template-registration-europe .registration-hero .form-title .icon-plus {
-    margin-left: 0;
-  }
-  .page-template-template-registration-europe .registration-hero .where-when {
-    font-size: 24px;
-    color: #fff;
-    z-index: 400;
-  }
-  .page-template-template-registration-europe .registration-hero .where-when span {
-    display: block;
-  }
-  .page-template-template-registration-europe .registration-hero .btn-registration {
-    font-size: 24px;
-    padding: 10px 15px;
-    display: block;
-    width: 100%;
+  .page-template-template-registration-europe .registration-hero img {
+    height: auto;
+    width: 150%;
   }
   .page-template-template-registration-europe .registration-content {
     margin: 0 0 30px;
@@ -16209,18 +16115,14 @@ fieldset[disabled] .page-template-template-registration-europe .form-wrapper .gf
   .page-template-template-registration-europe .registration-content .intro-statement {
     margin: 0 0 30px;
   }
-  .page-template-template-registration-europe .registration-content .welcome-section {
-    margin: 30px 0 0;
-  }
   .page-template-template-registration-europe .registration-content .video-wrapper {
     margin: 0 0 30px;
   }
   .page-template-template-registration-europe .registration-content .registration-summary {
     padding: 0 0 30px;
   }
-  .page-template-template-registration-europe .registration-content .registration-summary .sdp {
-    width: 100%;
-    margin: 0 0 30px;
+  .page-template-template-registration-europe .registration-content .registration-summary h3 {
+    font-size: 21px;
   }
   .page-template-template-registration-europe .registration-content .section-aside {
     margin: 0 0 30px;
@@ -16243,6 +16145,19 @@ fieldset[disabled] .page-template-template-registration-europe .form-wrapper .gf
   }
   .page-template-template-registration-europe .registration-content .section-the-camp .the-camp-hero .logo img {
     height: 100px;
+  }
+  .page-template-template-registration-europe .registration-content .section-the-camp h3 {
+    font-size: 21px;
+  }
+  .page-template-template-registration-europe .registration-content .section-the-camp .camp-title span {
+    display: block;
+  }
+  .page-template-template-registration-europe .registration-content .section-the-camp .welcome-section {
+    margin: 30px 0 0;
+  }
+  .page-template-template-registration-europe .registration-content .section-the-camp .sdp {
+    width: 100%;
+    margin: 0 0 30px;
   }
   .page-template-template-registration-europe .registration-content .section-the-camp .video-wrapper {
     margin: 30px 0 0;

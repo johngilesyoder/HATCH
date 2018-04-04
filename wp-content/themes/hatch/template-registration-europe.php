@@ -8,30 +8,46 @@ $photo_gallery_id = get_field('photo_gallery_id');
 <!-- HERO =================== -->
 <!-- ======================== -->
 <header class="registration-hero">
-  <div class="form-title">
-    <span class="site-logo"><strong>HATCH</strong> <em>Europe</em></span>
-    <span class="icon-plus">&plus;</span>
-    <img class="logo-the-camp" src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/logo-the-camp.png">
-  </div>
-  <div class="hero-bottom">
-    <div class="where-when">
-      <span><?php the_field('event_location'); ?></span>
-      <span><?php the_field('event_date'); ?></span>
-    </div>
-    <button id="registration-toggle" class="btn btn-secondary btn-registration">Register Now</button>
-  </div>
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/euro-hero.jpg">
 </header>
-
 
 <!-- REGISTRATION CONTENT === -->
 <!-- ======================== -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="power-statements">
+        <p><span class="yellow"><strong>Explore</strong></span> the future</p>
+        <p><span class="yellow"><strong>Accelerate</strong></span> positive global impact</p>
+        <p>Partner in <span class="blue"><strong>peer to peer</strong></span> project acceleration</p>
+        <p><span class="yellow"><strong>Empower</strong></span> next generation leaders</p>
+        <p>Become our <span class="blue"><strong>action</strong></span> partner.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <section id="registration-content" class="registration-content">
+
   <!-- SUMMARY ============== -->
   <div class="registration-summary">
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
-          <h2 class="section-title">HATCH a Better World</h2>
+          <p>
+            For the first time in Europe, HATCH and thecamp are joining forces to
+            create a cross-pollinated alchemy of global perspectives, bringing
+            thought leaders together to re-ignite their creative vision, and establish
+            bonds with a new network for life. HATCH outcomes have led to hundreds
+            of new projects, collaborations, and ongoing mentorship.
+          </p>
+          <p>
+            HATCH brings together the most provocative innovators, inventors
+            and cultural catalysts across a wide range of disciplines for four
+            unforgettable days launching impactful projects, radical creativity, and
+            unexpected encounters.
+          </p>
           <p class="intro-statement">Founded in 2004, HATCH is a network of accomplished doers working to better humanity. HATCH connects innovative minds to resources and a global network to activate solutions.  theCamp was opened in 2018 with the mission of working on solutions for cities of the future. Together, HATCH and theCamp are bringing you the inaugural HATCH europe.</p>
           <div class="video-wrapper">
             <div style="position:relative;height:0;padding-bottom:57.0%">
@@ -40,10 +56,20 @@ $photo_gallery_id = get_field('photo_gallery_id');
           </div>
           <div class="row">
             <div class="col-md-6">
-              <p>Currently there is a lack of time, space and incentive for collaboration to turn into actionable solutions. HATCH addresses this by focusing on the individual and maximizing their potential, and then carefully curates and connects innovative minds to resources and a global network to activate solutions. </p>
+              <p class="regular-margin">
+                Currently there is a lack of time, space
+                and incentive for collaboration to turn
+                into actionable solutions. HATCH
+                addresses this by focusing on the
+                individual and maximizing their
+                potential, and then carefully curates and
+                connects innovative minds to resources
+                and a global network to activate
+                solutions.
+              </p>
             </div>
             <div class="col-md-6">
-              <p>The HATCH ecosystem exists of:</p>
+              <p class="regular-margin">The HATCH ecosystem exists of:</p>
               <ul>
                 <li>Two signature summits each year</li>
                 <li>HATCH Labs (think tanks)</li>
@@ -51,11 +77,6 @@ $photo_gallery_id = get_field('photo_gallery_id');
                 <li>And an A.I. / machine learning platform that match makes needs / solutions and resources to ideas.</li>
               </ul>
             </div>
-          </div>
-          <div class="welcome-section">
-            <h3>Creative Collaboration to Solve Global Challenges</h2>
-            <p>The goal is to make forward progress on the UN’s <a target="_blank" href="http://www.undp.org/content/undp/en/home/sustainable-development-goals.html">Sustainable Development Goals</a> (SDGs), which are universal call to actions centered around equality, poverty, the environment, global warming and restoring peace and prosperity. They address the root causes that unite us in an effort to create positive change for both people and planet.</p>
-            <img class="sdp" src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/sustainable-development-goals.png">
           </div>
         </div>
       </div>
@@ -81,63 +102,6 @@ $photo_gallery_id = get_field('photo_gallery_id');
       </div>
     </div>
   </aside>
-
-  <div class="section-the-camp">
-    <div class="the-camp-hero" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/registration/the-camp-horizontal.jpg')">
-      <div class="logo">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/logo-the-camp-white.png">
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          <h3><a target="_blank" href="http://thecamp.fr">The Camp</a> in Aix-en-Provence, France</h2>
-          <p>Open since October 2017 in Aix-en-Provence, France, thecamp is a base camp for exploring the future. It's a new focal point and meeting point that welcomes all kinds of explorer communities. A space where expeditions are planned to sound out and invent the future in a collaborative way. Dedicated to emerging technologies (virtual reality, robotics, artificial intelligence, biotechnology) and social innovation (collective intelligence, sustainable economic models, shared governance), thecamp is a place for inspiration, exchanges, creation and experimentation on a large scale.</p>
-      	  <p>For thousands of years, people have had the same concerns: What will we eat tomorrow? How will we learn?  What will it be like to age?  How will we go from one place to another? Using what energy? Now, thecamp is undertaking these challenges and finding new approaches to universal issues, aggregating people and projects driven by the same excitement for the future.</p>
-      		<p>And that’s why the partnership with HATCH is perfect.</p>
-          <p><a class="learn-more" target="_blank" href="https://www.lonelyplanet.com/france/provence/aix-en-provence">Learn more about Aix-en-Provence, France</a></p>
-          <div class="video-wrapper">
-            <div style="position:relative;height:0;padding-bottom:57.0%">
-              <iframe src="https://player.vimeo.com/video/261960182" width="480" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section-details">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          <h2 class="section-title">
-            Details &amp; Cost
-          </h2>
-          <div class="includes">
-            <h3>€2500 includes</h3>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="point"><span>A global network</span></div>
-                <div class="point"><span>3 meals / day <small>(including snack breaks)</small></span></div>
-              </div>
-              <div class="col-md-6">
-                <div class="point"><span>An experience you will not forget <small>(workshops, speakers, entertainment, music)</small></span></div>
-                <div class="point"><span>4 night accommodations</span></div>
-              </div>
-            </div>
-          </div>
-          <p><strong>Only 100 invites. Event programming starts at 5:00pm on Wednesday, June 13th and ends after breakfast on Sunday, June 17th.</strong> HATCH is a non-profit designed to benefit you, your organization, and the world, as well as mentor the next generation of our global leaders. A Signature HATCH Summit costs €2500, (all inclusive). Once you arrive, everything is taken care of: lodging, food, workshops, speaker series, entertainment, music, and transportation to and from the airport are all included with your pass.</p>
-          <p>We do not want financial constraints to stand in the way of your ability to experience HATCH. If the cost is prohibitive, please email experience@experience.org, and we will explore options for partial support from the scholarship fund. Some attendees may also choose to sponsor by "paying it forward".</p>
-      		<p>For US citizens, 50% of this ticket is tax deductible to 501(c)(3) Non-Profit, which is used to fund scholarships for students, and artists. This is how your €2500 full ticket price breaks down:</p>
-          <ul>
-            <li><strong>50% (€1250)</strong> - Hard costs (includes accommodations, food, logistics, A/V, venue rental, entertainment, etc.)</li>
-            <li><strong>25% (€650)</strong> - Scholarship fund to assist those in need to attend</li>
-            <li><strong>25% (€650)</strong> - To HATCH non-profit overhead</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- ALUMNI ============== -->
   <div class="registration-alumni">
@@ -181,6 +145,112 @@ $photo_gallery_id = get_field('photo_gallery_id');
       </div>
     </div>
   </div>
+</div>
+
+  <div class="section-the-camp">
+    <div class="the-camp-hero" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/registration/the-camp-horizontal.jpg')"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h3 class="camp-title">
+            <a target="_blank" href="http://thecamp.fr"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/logo-the-camp-color.png"></a>
+            <span>Aix-en-Provence, France</span>
+          </h3>
+          <p>
+            Open since October 2017 in Aix-en-Provence, France, thecamp is a base
+            camp for exploring the future. It's a new focal point and meeting point
+            that welcomes all kinds of explorer communities. A space where
+            expeditions are planned to sound out and invent the future in a
+            collaborative way. Dedicated to emerging technologies (virtual reality,
+            robotics, artificial intelligence, biotechnology) and social innovation
+            (collective intelligence, sustainable economic models, shared governance),
+            thecamp is a place for inspiration, exchanges, creation and
+            experimentation on a large scale.
+          </p>
+      	  <p>
+            For thousands of years, people have had the same concerns: What will
+            we eat tomorrow? How will we learn? What will it be like to age? How will
+            we go from one place to another? Using what energy? Now, thecamp is
+            undertaking these challenges and finding new approaches to universal
+            issues, aggregating people and projects driven by
+            the same excitement for the future.
+          </p>
+      		<p>And that’s why the partnership with HATCH is perfect.</p>
+          <div class="video-wrapper">
+            <div style="position:relative;height:0;padding-bottom:57.0%">
+              <iframe src="https://player.vimeo.com/video/261960182" width="480" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe>
+            </div>
+          </div>
+          <p><a class="learn-more" target="_blank" href="https://www.lonelyplanet.com/france/provence/aix-en-provence">Learn more about Aix-en-Provence, France</a></p>
+          <div class="welcome-section">
+            <h3>Creative Collaboration to Solve Global Challenges</h2>
+            <p>
+              The goal at HATCH Europe is to make forward progress on the UN’s
+              Sustainable Development Goals (SDGs), which are universal call to actions
+              centered around equality, poverty, the environment, global warming and
+              restoring peace and prosperity. They address the root causes that unite us
+              in an effort to create positive change for both people and planet.
+            </p>
+            <img class="sdp" src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/sustainable-development-goals.png">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-details">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h2 class="section-title">
+            Details &amp; Cost
+          </h2>
+          <div class="includes">
+            <h3>$2500 / €2500 includes</h3>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="point"><span>Access to a global network</span></div>
+                <div class="point"><span>Accelerate postive impact projects</span></div>
+                <div class="point"><span>Sponsor young talent</span></div>
+              </div>
+              <div class="col-md-6">
+                <div class="point"><span>An unforgettable experience <small>(workshops, speakers, entertainment, music)</small></span></div>
+                <div class="point"><span>4 night accommodations / 3 meals per day <small>(including snack breaks)</small></span></div>
+              </div>
+            </div>
+          </div>
+          <p>
+            Only 100 invites. Event programming starts at 5:00pm on Wednesday, June 13th and
+            ends after breakfast on Sunday, June 17th. HATCH is a non-profit designed to benefit
+            you, your organization, and the world, as well as mentor the next generation of our
+            global leaders. A Signature HATCH Summit costs $2500/€2500, (all inclusive). Once you arrive,
+            everything is taken care of: lodging, food, workshops, speaker series, entertainment,
+            music, and transportation to and from the airport are all included with your pass.
+          </p>
+          <p>
+            We do not want financial constraints to stand in the way of your ability to experience
+            HATCH. If the cost is prohibitive, please email experience@experience.org, and we will
+            explore options for partial support from the scholarship fund. Some attendees may
+            also choose to sponsor by "paying it forward".
+          </p>
+      		<p>
+            For US citizens, 50% of this ticket is tax deductible to 501(c)(3) Non-Profit, which is
+            used to fund scholarships for students, and artists. This is how your $2500/€2500 full ticket
+            price breaks down:
+          </p>
+          <ul>
+            <li><strong>50% (€1250)</strong> - Hard costs (includes accommodations, food, logistics, A/V, venue rental, entertainment, etc.)</li>
+            <li><strong>25% (€650)</strong> - Scholarship fund to assist those in need to attend</li>
+            <li><strong>25% (€650)</strong> - To HATCH non-profit overhead</li>
+          </ul>
+
+          <button id="registration-toggle" class="btn btn-secondary btn-registration">Register Now</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- GALLERY ============== -->
   <?php if ( function_exists( 'envira_gallery' ) ) { envira_gallery( $photo_gallery_id ); } ?>
 </section>
