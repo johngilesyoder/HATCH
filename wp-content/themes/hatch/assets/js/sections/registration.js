@@ -9,6 +9,9 @@
       $('#registration-content').hide();
       $('#form-wrapper').show();
       $(this).addClass('is--toggled');
+			$('html,body').animate({
+        scrollTop: $("#form-wrapper").offset().top},
+      'slow');
     });
 
   });

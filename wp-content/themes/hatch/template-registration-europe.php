@@ -245,7 +245,7 @@ $photo_gallery_id = get_field('photo_gallery_id');
           </ul>
 
           <button id="registration-toggle" class="btn btn-secondary btn-registration">Register Now</button>
-          
+
         </div>
       </div>
     </div>
@@ -261,6 +261,7 @@ $photo_gallery_id = get_field('photo_gallery_id');
   <div class="container">
     <!-- FORM ================== -->
     <div class="form-wrapper">
+      
       <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
         <!-- article -->
