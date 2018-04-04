@@ -1,5 +1,5 @@
 <?php /* Template Name: Registration Success Template */ get_template_part( 'includes/registration-header' ); ?>
-  
+
   <div class="container">
     <div class="form-wrapper">
       <?php if (have_posts()): while (have_posts()) : the_post(); ?>
@@ -21,8 +21,11 @@
     </div>
   </div>
 
+  <script type="text/javascript">
+    window.setTimeout(function() {
+			window.location.href = 'http://booking.thecamp.fr/hatch-europe-x-thecamp-festival-aix-en-provence-non-datee-css5-thecamp-lgen-pg101-ri5302257.html';
+		}, 10000);
+  </script>
+
 
 <?php get_template_part( 'includes/registration-footer' ); ?>
-
-
-
