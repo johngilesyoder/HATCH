@@ -16144,14 +16144,15 @@ fieldset[disabled] .page-template-template-registration-europe .form-wrapper .gf
     height: 400px;
     margin: 0 0 30px;
   }
-  .page-template-template-registration-europe .registration-content .section-the-camp .the-camp-hero .logo img {
-    height: 100px;
-  }
   .page-template-template-registration-europe .registration-content .section-the-camp h3 {
     font-size: 21px;
   }
   .page-template-template-registration-europe .registration-content .section-the-camp .camp-title span {
     display: block;
+  }
+  .page-template-template-registration-europe .registration-content .section-the-camp .camp-title img {
+    height: 70px;
+    margin-right: 0;
   }
   .page-template-template-registration-europe .registration-content .section-the-camp .welcome-section {
     margin: 30px 0 0;
