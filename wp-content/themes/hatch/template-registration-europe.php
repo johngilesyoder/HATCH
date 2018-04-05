@@ -22,7 +22,6 @@ $photo_gallery_id = get_field('photo_gallery_id');
         <p><span class="yellow"><strong>Accelerate</strong></span> positive global impact</p>
         <p>Partner in <span class="blue"><strong>peer to peer</strong></span> project acceleration</p>
         <p><span class="yellow"><strong>Empower</strong></span> next generation leaders</p>
-        <p>Become our <span class="blue"><strong>action</strong></span> partner.</p>
       </div>
     </div>
   </div>
@@ -48,7 +47,7 @@ $photo_gallery_id = get_field('photo_gallery_id');
             unforgettable days launching impactful projects, radical creativity, and
             unexpected encounters.
           </p>
-          <p class="intro-statement">Founded in 2004, HATCH is a network of accomplished doers working to better humanity. HATCH connects innovative minds to resources and a global network to activate solutions.  theCamp was opened in 2018 with the mission of working on solutions for cities of the future. Together, HATCH and theCamp are bringing you the inaugural HATCH europe.</p>
+          <p class="intro-statement">Founded in 2004, HATCH is a network of accomplished doers working to better humanity. HATCH connects innovative minds to resources and a global network to activate solutions. thecamp was opened in 2018 with the mission of working on solutions for cities of the future. Together, HATCH and theCamp are bringing you the inaugural HATCH europe.</p>
           <div class="video-wrapper">
             <div style="position:relative;height:0;padding-bottom:57.0%">
               <iframe src="https://player.vimeo.com/video/212979228" width="480" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe>
@@ -220,8 +219,8 @@ $photo_gallery_id = get_field('photo_gallery_id');
             </div>
           </div>
           <p>
-            Only 100 invites. Event programming starts at 5:00pm on Wednesday, June 13th and
-            ends after breakfast on Sunday, June 17th. HATCH is a non-profit designed to benefit
+            <strong>Only 100 invites. Event programming starts at 5:00pm on Wednesday, June 13th and
+            ends after breakfast on Sunday, June 17th.</strong> HATCH is a non-profit designed to benefit
             you, your organization, and the world, as well as mentor the next generation of our
             global leaders. A Signature HATCH Summit costs $2500/€2500, (all inclusive). Once you arrive,
             everything is taken care of: lodging, food, workshops, speaker series, entertainment,
@@ -229,7 +228,7 @@ $photo_gallery_id = get_field('photo_gallery_id');
           </p>
           <p>
             We do not want financial constraints to stand in the way of your ability to experience
-            HATCH. If the cost is prohibitive, please email experience@experience.org, and we will
+            HATCH. If the cost is prohibitive, please email <a href="mailto:hatchexperience@experience.org">hatchexperience@experience.org</a>, and we will
             explore options for partial support from the scholarship fund. Some attendees may
             also choose to sponsor by "paying it forward".
           </p>
@@ -239,9 +238,9 @@ $photo_gallery_id = get_field('photo_gallery_id');
             price breaks down:
           </p>
           <ul>
-            <li><strong>50% (€1250)</strong> - Hard costs (includes accommodations, food, logistics, A/V, venue rental, entertainment, etc.)</li>
-            <li><strong>25% (€650)</strong> - Scholarship fund to assist those in need to attend</li>
-            <li><strong>25% (€650)</strong> - To HATCH non-profit overhead</li>
+            <li><strong>50% ($/€1250)</strong> - Hard costs (includes accommodations, food, logistics, A/V, venue rental, entertainment, etc.)</li>
+            <li><strong>25% ($/€650)</strong> - Scholarship fund to assist those in need to attend</li>
+            <li><strong>25% ($/€650)</strong> - To HATCH non-profit overhead</li>
           </ul>
 
           <button id="registration-toggle" class="btn btn-secondary btn-registration">Register Now</button>
@@ -261,7 +260,7 @@ $photo_gallery_id = get_field('photo_gallery_id');
   <div class="container">
     <!-- FORM ================== -->
     <div class="form-wrapper">
-      
+
       <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
         <!-- article -->

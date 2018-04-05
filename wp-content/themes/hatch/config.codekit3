@@ -790,6 +790,16 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/assets\/img\/registration\/1.jpeg": {
+		"ft": 16384,
+		"iS": 224112,
+		"oA": 0,
+		"oAP": "\/assets\/img\/registration\/1.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/assets\/img\/registration\/alumni-altringer.png": {
 		"ft": 32768,
 		"iS": 42278,
@@ -865,26 +875,6 @@
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
-		"q": 100
-		},
-	"\/assets\/img\/registration\/bg-camp-2.jpg": {
-		"ft": 16384,
-		"iS": 716391,
-		"oA": 0,
-		"oAP": "\/assets\/img\/registration\/bg-camp-2.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/assets\/img\/registration\/bg-camp.jpg": {
-		"ft": 16384,
-		"iS": 146001,
-		"oA": 0,
-		"oAP": "\/assets\/img\/registration\/bg-camp.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
 		"q": 100
 		},
 	"\/assets\/img\/registration\/bg-registration-bigsky.jpg": {
@@ -1050,7 +1040,7 @@
 		},
 	"\/assets\/img\/registration\/the-camp-horizontal.jpg": {
 		"ft": 16384,
-		"iS": 309002,
+		"iS": 448286,
 		"oA": 0,
 		"oAP": "\/assets\/img\/registration\/the-camp-horizontal.jpg",
 		"oF": 0,
