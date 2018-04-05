@@ -228,7 +228,7 @@ $photo_gallery_id = get_field('photo_gallery_id');
           </p>
           <p>
             We do not want financial constraints to stand in the way of your ability to experience
-            HATCH. If the cost is prohibitive, please email <a href="mailto:hatchexperience@experience.org">hatchexperience@experience.org</a>, and we will
+            HATCH. If the cost is prohibitive, please email <a href="mailto:experience@hatchexperience.org">experience@hatchexperience.org</a>, and we will
             explore options for partial support from the scholarship fund. Some attendees may
             also choose to sponsor by "paying it forward".
           </p>
