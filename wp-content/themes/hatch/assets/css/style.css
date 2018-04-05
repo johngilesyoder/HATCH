@@ -15010,6 +15010,9 @@ fieldset[disabled] .page-template-template-registration .form-wrapper .gform_wra
 .page-template-template-registration-europe .btn-registration.is--toggled {
   display: none;
 }
+.page-template-template-registration-europe .btn-registration.btn-top {
+  margin: 80px auto 60px;
+}
 .page-template-template-registration-europe .registration-content {
   margin: 0 0 60px;
 }
@@ -16100,6 +16103,9 @@ fieldset[disabled] .page-template-template-registration-europe .form-wrapper .gf
     padding: 10px 30px;
     display: block;
     width: 100%;
+  }
+  .page-template-template-registration-europe .btn-registration.btn-top {
+    margin: 30px auto;
   }
   .page-template-template-registration-europe .registration-hero {
     overflow: hidden;
@@ -17961,4 +17967,3 @@ fieldset[disabled] .page-volunteer .gform_wrapper .gform_button.active {
 .page-volunteer .gform_wrapper .gform_button:hover {
   background: #FF9D00;
 }
-/*# sourceMappingURL=style.css.map */

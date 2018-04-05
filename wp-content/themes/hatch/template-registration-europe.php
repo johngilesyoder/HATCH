@@ -23,6 +23,7 @@ $photo_gallery_id = get_field('photo_gallery_id');
         <p>Partner in <span class="blue"><strong>peer to peer</strong></span> project acceleration</p>
         <p><span class="yellow"><strong>Empower</strong></span> next generation leaders</p>
       </div>
+      <button class="btn btn-secondary btn-top btn-registration">Register Now</button>
     </div>
   </div>
 </div>
@@ -243,7 +244,7 @@ $photo_gallery_id = get_field('photo_gallery_id');
             <li><strong>25% ($/€650)</strong> - To HATCH non-profit overhead</li>
           </ul>
 
-          <button id="registration-toggle" class="btn btn-secondary btn-registration">Register Now</button>
+          <button class="btn btn-secondary btn-registration">Register Now</button>
 
         </div>
       </div>
