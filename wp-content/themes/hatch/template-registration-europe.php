@@ -239,10 +239,21 @@ $photo_gallery_id = get_field('photo_gallery_id');
             price breaks down:
           </p>
           <ul>
-            <li><strong>50% ($1462/€1250)</strong> - Hard costs (includes accommodations, food, logistics, A/V, venue rental, entertainment, etc.)</li>
-            <li><strong>25% ($760/€650)</strong> - Scholarship fund to assist those in need to attend</li>
-            <li><strong>25% ($760/€650)</strong> - To HATCH non-profit overhead</li>
+            <li><strong>50%</strong> - Hard costs (includes accommodations, food, logistics, A/V, venue rental, entertainment, etc.)</li>
+            <li><strong>25%</strong> - Scholarship fund to assist those in need to attend</li>
+            <li><strong>25%</strong> - To HATCH non-profit overhead</li>
           </ul>
+
+          <!-- <div class="well">
+            <h4>HATCH Europe Premium Tickets $5859 / €5000</h4>
+            <p>First, you are making this special gathering possible.  We all have you to thank for buying these tickets.</p>
+            <ul>
+              <li>You will have brokered, curated, Intimate meetings with other VIPS and keynote speakers</li>
+              <li>VIP seating with keynote speakers at lunches, dinners and in the auditorium</li>
+              <li>VIP Transportation to and from the airport or TGV</li>
+              <li>One year membership to <a href="https://h360.io">HATCH360.ai</a></li>
+            </ul>
+          </div> -->
 
           <button class="btn btn-secondary btn-registration">Register Now</button>
 
