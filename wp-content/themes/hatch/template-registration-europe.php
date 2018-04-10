@@ -206,7 +206,7 @@ $photo_gallery_id = get_field('photo_gallery_id');
             Details &amp; Cost
           </h2>
           <div class="includes">
-            <h3>$2500 / €2500 includes</h3>
+            <h3>$2925 / €2500 includes</h3>
             <div class="row">
               <div class="col-md-6">
                 <div class="point"><span>Access to a global network</span></div>
@@ -223,7 +223,7 @@ $photo_gallery_id = get_field('photo_gallery_id');
             <strong>Only 100 invites. Event programming starts at 5:00pm on Wednesday, June 13th and
             ends after breakfast on Sunday, June 17th.</strong> HATCH is a non-profit designed to benefit
             you, your organization, and the world, as well as mentor the next generation of our
-            global leaders. A Signature HATCH Summit costs $2500/€2500, (all inclusive). Once you arrive,
+            global leaders. A Signature HATCH Summit costs $2925/€2500, (all inclusive). Once you arrive,
             everything is taken care of: lodging, food, workshops, speaker series, entertainment,
             music, and transportation to and from the airport are all included with your pass.
           </p>
@@ -235,13 +235,13 @@ $photo_gallery_id = get_field('photo_gallery_id');
           </p>
       		<p>
             For US citizens, 50% of this ticket is tax deductible to 501(c)(3) Non-Profit, which is
-            used to fund scholarships for students, and artists. This is how your $2500/€2500 full ticket
+            used to fund scholarships for students, and artists. This is how your $2925/€2500 full ticket
             price breaks down:
           </p>
           <ul>
-            <li><strong>50% ($/€1250)</strong> - Hard costs (includes accommodations, food, logistics, A/V, venue rental, entertainment, etc.)</li>
-            <li><strong>25% ($/€650)</strong> - Scholarship fund to assist those in need to attend</li>
-            <li><strong>25% ($/€650)</strong> - To HATCH non-profit overhead</li>
+            <li><strong>50% ($1462/€1250)</strong> - Hard costs (includes accommodations, food, logistics, A/V, venue rental, entertainment, etc.)</li>
+            <li><strong>25% ($760/€650)</strong> - Scholarship fund to assist those in need to attend</li>
+            <li><strong>25% ($760/€650)</strong> - To HATCH non-profit overhead</li>
           </ul>
 
           <button class="btn btn-secondary btn-registration">Register Now</button>
