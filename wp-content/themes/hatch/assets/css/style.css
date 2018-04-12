@@ -7515,20 +7515,20 @@ a img.aligncenter {
 .blog-format .site-header {
   margin-bottom: 0;
   position: fixed;
-  top: 0;
+  top: 36px;
   width: 100%;
   z-index: 100;
 }
 .blog-format .container-blog {
   position: relative;
-  padding-top: 101px;
+  padding-top: 137px;
   height: 100%;
 }
 .blog-format .blog-roll-wrapper {
   width: 795px;
   position: absolute;
   left: 0;
-  top: 101px;
+  top: 137px;
   bottom: 0;
 }
 .blog-format .blog-roll-wrapper main {
