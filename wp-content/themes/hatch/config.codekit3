@@ -7,7 +7,7 @@
 		"uuidString": "CC79F700-685D-4D96-A6F4-8585433D47F7"
 		}
 	],
-"creatorBuild": "26330",
+"creatorBuild": "26680",
 "files": {
 	"\/404.php": {
 		"cB": 0,
@@ -162,6 +162,7 @@
 	"\/assets\/img\/banner-adventures.jpg": {
 		"ft": 16384,
 		"iS": 141089,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/img\/banner-adventures.jpg",
 		"oF": 0,
@@ -172,6 +173,7 @@
 	"\/assets\/img\/banner-apply.jpg": {
 		"ft": 16384,
 		"iS": 120629,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/img\/banner-apply.jpg",
 		"oF": 0,
@@ -193,6 +195,7 @@
 	"\/assets\/img\/banner-matching.jpg": {
 		"ft": 16384,
 		"iS": 218113,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/img\/banner-matching.jpg",
 		"oF": 0,
@@ -203,6 +206,7 @@
 	"\/assets\/img\/banner-partners.jpg": {
 		"ft": 16384,
 		"iS": 51486,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/img\/banner-partners.jpg",
 		"oF": 0,
@@ -213,6 +217,7 @@
 	"\/assets\/img\/banner-volunteer.jpg": {
 		"ft": 16384,
 		"iS": 145759,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/img\/banner-volunteer.jpg",
 		"oF": 0,
@@ -243,6 +248,7 @@
 	"\/assets\/img\/conference-photo.jpg": {
 		"ft": 16384,
 		"iS": 78436,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/img\/conference-photo.jpg",
 		"oF": 0,
@@ -284,6 +290,7 @@
 	"\/assets\/img\/experience\/section-bg-hero.jpg": {
 		"ft": 16384,
 		"iS": 389074,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/img\/experience\/section-bg-hero.jpg",
 		"oF": 0,
@@ -294,6 +301,7 @@
 	"\/assets\/img\/experience\/section-bg-what.jpg": {
 		"ft": 16384,
 		"iS": 124169,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/img\/experience\/section-bg-what.jpg",
 		"oF": 0,
@@ -304,6 +312,7 @@
 	"\/assets\/img\/experience\/section-bg-where.jpg": {
 		"ft": 16384,
 		"iS": 329423,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/img\/experience\/section-bg-where.jpg",
 		"oF": 0,
@@ -335,6 +344,7 @@
 	"\/assets\/img\/experience\/section-bg-why.jpg": {
 		"ft": 16384,
 		"iS": 112578,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/img\/experience\/section-bg-why.jpg",
 		"oF": 0,
@@ -367,6 +377,7 @@
 	"\/assets\/img\/experience\/testimonial-lighter.jpg": {
 		"ft": 16384,
 		"iS": 15565,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/img\/experience\/testimonial-lighter.jpg",
 		"oF": 0,
@@ -399,6 +410,7 @@
 	"\/assets\/img\/experience\/where-bubble-1.jpg": {
 		"ft": 16384,
 		"iS": 67320,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/img\/experience\/where-bubble-1.jpg",
 		"oF": 0,
@@ -409,6 +421,7 @@
 	"\/assets\/img\/experience\/where-bubble-2.jpg": {
 		"ft": 16384,
 		"iS": 34815,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/img\/experience\/where-bubble-2.jpg",
 		"oF": 0,
@@ -419,6 +432,7 @@
 	"\/assets\/img\/experience\/why-block-1.jpg": {
 		"ft": 16384,
 		"iS": 35171,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/img\/experience\/why-block-1.jpg",
 		"oF": 0,
@@ -429,6 +443,7 @@
 	"\/assets\/img\/experience\/why-block-2.jpg": {
 		"ft": 16384,
 		"iS": 39200,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/img\/experience\/why-block-2.jpg",
 		"oF": 0,
@@ -751,6 +766,7 @@
 	"\/assets\/img\/partner-intel.jpg": {
 		"ft": 16384,
 		"iS": 35202,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/img\/partner-intel.jpg",
 		"oF": 0,
@@ -793,6 +809,7 @@
 	"\/assets\/img\/registration\/1.jpeg": {
 		"ft": 16384,
 		"iS": 224112,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/img\/registration\/1.jpg",
 		"oF": 0,
@@ -880,6 +897,7 @@
 	"\/assets\/img\/registration\/bg-registration-bigsky.jpg": {
 		"ft": 16384,
 		"iS": 396013,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/img\/registration\/bg-registration-bigsky.jpg",
 		"oF": 0,
@@ -956,6 +974,7 @@
 	"\/assets\/img\/registration\/euro-hero.jpg": {
 		"ft": 16384,
 		"iS": 210045,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/img\/registration\/euro-hero.jpg",
 		"oF": 0,
@@ -1020,6 +1039,7 @@
 	"\/assets\/img\/registration\/success-bg.jpg": {
 		"ft": 16384,
 		"iS": 388012,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/img\/registration\/success-bg.jpg",
 		"oF": 0,
@@ -1041,6 +1061,7 @@
 	"\/assets\/img\/registration\/the-camp-horizontal.jpg": {
 		"ft": 16384,
 		"iS": 448286,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/img\/registration\/the-camp-horizontal.jpg",
 		"oF": 0,
@@ -3947,7 +3968,8 @@
 	"creationDate": 501478686,
 	"displayValue": "HATCH",
 	"displayValueWasSetByUser": 1,
-	"iconImageName": "meme-chloe"
+	"iconImageName": "meme-chloe",
+	"iconImageWasSetByUser": 0
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -5750,6 +5772,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
+		"outputFormat": 0,
 		"quality": 100
 		},
 	"languageDefaultsJS": {

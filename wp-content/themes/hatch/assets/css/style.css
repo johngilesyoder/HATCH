@@ -7283,12 +7283,12 @@ a img.aligncenter {
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .topbar {
-    display: none;
+    display: none !important;
   }
 }
 @media (max-width: 767px) {
   .topbar {
-    display: none;
+    display: none !important;
   }
 }
 .what-is-hatch {

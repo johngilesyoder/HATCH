@@ -5,19 +5,19 @@
 		'use strict';
 
 		// DOM ready, take it away
-	// 	window.setInterval(function() {
-	//
-	//   var current = new Date();
-	//   var expiry = new Date("February 7, 2017 23:59:59");
-	//
-	//   if (current.getTime() > expiry.getTime()) {
-	//     $('.topbar-panama').hide();
-	//
-	//   } else if (current.getTime() < expiry.getTime()) {
-	//     $('.topbar-panama').show();
-	//   }
-	//
-	// }, 0);
+		window.setInterval(function() {
+
+	  var current = new Date();
+	  var expiry = new Date("Sep 29, 2018 23:59:59");
+
+	  if (current.getTime() > expiry.getTime()) {
+	    $('.topbar-apply').hide();
+
+	  } else if (current.getTime() < expiry.getTime()) {
+	    $('.topbar-apply').show();
+	  }
+
+	}, 0);
 
 	});
 
