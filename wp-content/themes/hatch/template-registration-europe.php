@@ -223,9 +223,7 @@ $photo_gallery_id = get_field('photo_gallery_id');
             <strong>Only 100 invites. Event programming starts at 5:00pm on Wednesday, June 13th and
             ends after breakfast on Sunday, June 17th.</strong> HATCH is a non-profit designed to benefit
             you, your organization, and the world, as well as mentor the next generation of our
-            global leaders. A Signature HATCH Summit costs $2925/€2500, (all inclusive). Once you arrive,
-            everything is taken care of: lodging, food, workshops, speaker series, entertainment,
-            music, and transportation to and from the airport are all included with your pass.
+            global leaders. A Signature HATCH Summit costs $2925/€2500, (all inclusive).
           </p>
           <p>
             We do not want financial constraints to stand in the way of your ability to experience
