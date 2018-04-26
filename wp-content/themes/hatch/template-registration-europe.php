@@ -221,7 +221,13 @@ $photo_gallery_id = get_field('photo_gallery_id');
           </div>
           <p>
             <strong>Only 100 invites. Event programming starts after lunch at 1:30pm on Friday, June 15th and
-            ends after breakfast on Monday, June 18th.</strong> HATCH is a non-profit designed to benefit
+            ends after breakfast on Monday, June 18th.</strong>
+          </p>
+          <p>
+            <strong>UPDATE:</strong> Due to the strikes in France we have moved the dates (June 15 - 18) and are scaling back from the full Signature Summit experience, and focusing on creating an exclusive, intimate experience.  A smaller think tank and peer-to-peer project accelerator to create positive impact in your lives and on the world.  We are excited about power of the exceptional people that are converging for this special inaugural initiative to catalyze a pipeline of innovation between multiple countries.
+          </p>
+          <p>
+            HATCH is a non-profit designed to benefit
             you, your organization, and the world, as well as mentor the next generation of our
             global leaders. A Signature HATCH Summit costs $2925/€2500, (all inclusive).
           </p>
