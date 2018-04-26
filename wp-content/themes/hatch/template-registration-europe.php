@@ -223,7 +223,6 @@ $photo_gallery_id = get_field('photo_gallery_id');
             <strong>Only 100 invites. Event programming starts after lunch at 1:30pm on Friday, June 15th and
             ends after breakfast on Monday, June 18th.</strong>
           </p>
-          <p>Schedule:</p>
           <ul>
             <li>Thurs, June 14 - International guests arrive to thecamp</li>
             <li>Fri, June 15 - French guests arrive // programming begins after lunch at 1:30pm</li>
