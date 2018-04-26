@@ -293,9 +293,9 @@ $photo_gallery_id = get_field('photo_gallery_id');
 <!-- FOOTER ================= -->
 <!-- ======================== -->
 <?php get_template_part( 'includes/registration-footer' ); ?>
-
+<!-- 
 
 
 
 <div class="well"><h4>HATCH Europe Tickets $2925 / €2500</h4>
-<p>Once you get to thecamp, everything is included (entertainment, food, drink, accomodation.)</p></div>
+<p>Once you get to thecamp, everything is included (entertainment, food, drink, accomodation.)</p></div> -->
