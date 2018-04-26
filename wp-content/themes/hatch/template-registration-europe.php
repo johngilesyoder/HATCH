@@ -220,8 +220,8 @@ $photo_gallery_id = get_field('photo_gallery_id');
             </div>
           </div>
           <p>
-            <strong>Only 100 invites. Event programming starts at 5:00pm on Wednesday, June 13th and
-            ends after breakfast on Sunday, June 17th.</strong> HATCH is a non-profit designed to benefit
+            <strong>Only 100 invites. Event programming starts at 5:00pm on Thursday, June 14th and
+            ends after breakfast on Monday, June 18th.</strong> HATCH is a non-profit designed to benefit
             you, your organization, and the world, as well as mentor the next generation of our
             global leaders. A Signature HATCH Summit costs $2925/€2500, (all inclusive).
           </p>
