@@ -82,9 +82,14 @@
         box-shadow: none;
         transform: translateY(0);
         transition: box-shadow 150ms, transform 150ms;
+        overflow: hidden;
         &:hover {
           box-shadow: 0 1px 3px rgba(0,0,0,.15);
           transform: translateY(-4px);
+          h3 {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
         h3 {
           background: @text-color;
@@ -96,6 +101,9 @@
           font-size: 30px;
           margin: 0;
           font-weight: 400;
+          opacity: 0;
+          transform: translateY(50%);
+          transition: opacity 150ms, transform 150ms;
         }
       }
     }

@@ -13274,12 +13274,18 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
   transition: -webkit-box-shadow 150ms, -webkit-transform 150ms;
   transition: box-shadow 150ms, transform 150ms;
   transition: box-shadow 150ms, transform 150ms, -webkit-box-shadow 150ms, -webkit-transform 150ms;
+  overflow: hidden;
 }
 .page-template-template-home .posts-hero .tiles .tile:hover {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
   -webkit-transform: translateY(-4px);
           transform: translateY(-4px);
+}
+.page-template-template-home .posts-hero .tiles .tile:hover h3 {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 .page-template-template-home .posts-hero .tiles .tile h3 {
   background: #222222;
@@ -13291,6 +13297,13 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
   font-size: 30px;
   margin: 0;
   font-weight: 400;
+  opacity: 0;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  -webkit-transition: opacity 150ms, -webkit-transform 150ms;
+  transition: opacity 150ms, -webkit-transform 150ms;
+  transition: opacity 150ms, transform 150ms;
+  transition: opacity 150ms, transform 150ms, -webkit-transform 150ms;
 }
 .page-template-template-home .section-block {
   margin-bottom: 70px;
