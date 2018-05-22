@@ -3309,6 +3309,13 @@
 		"oAP": "\/includes\/becauseofhatch-survey-people.php",
 		"oF": 0
 		},
+	"\/includes\/carousel-hero-2.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/carousel-hero-2.php",
+		"oF": 0
+		},
 	"\/includes\/carousel-hero.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -3363,6 +3370,13 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/survey-people.php",
+		"oF": 0
+		},
+	"\/includes\/tile-hero-2.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/tile-hero-2.php",
 		"oF": 0
 		},
 	"\/includes\/tile-hero.php": {

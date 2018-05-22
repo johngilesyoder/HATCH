@@ -19,7 +19,7 @@ function hatch_get_tiles()
     //start output buffering
     ob_start();
 
-    get_template_part( 'includes/tile-hero' );
+    get_template_part( 'includes/tile-hero-2' );
 
     //get the contents in a string that JavaScript can use
     $tiles = ob_get_contents();
@@ -35,7 +35,7 @@ function hatch_get_carousel()
     //start output buffering
     ob_start();
 
-    get_template_part( 'includes/carousel-hero' );
+    get_template_part( 'includes/carousel-hero-2' );
 
     //get the contents in a string that JavaScript can use
     $carousel = ob_get_contents();
