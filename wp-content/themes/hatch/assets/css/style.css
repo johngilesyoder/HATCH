@@ -10811,8 +10811,21 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
   position: relative;
   min-height: 1px;
 }
+.page-hatch-2015-attendees .gv-image,
+.page-hatch-labs-hasbro .gv-image,
+.page-hatch-panama-2016-attendees .gv-image,
+.page-hatch-panama-2016-directory .gv-image,
+.page-2016-hatch-big-sky-attendees .gv-image,
+.page-2017-msu-hatch-lab-attendees .gv-image,
+.page-2017-hatch-panama-attendees .gv-image,
+.page-2017-hatch-panama-directory .gv-image,
+.page-2017-hatch-c2-attendees .gv-image,
 .page-2017-hatch-big-sky-attendees .gv-image,
-.page-2017-hatch-big-sky-directory .gv-image {
+.page-2017-hatch-big-sky-directory .gv-image,
+.page-2018-hatch-c2-attendees .gv-image,
+.page-2018-hatch-europe-attendees .gv-image,
+.page-id-1521 .gv-image,
+.page-id-2120 .gv-image {
   border-radius: 50%;
   border: 5px solid #c49d17;
   margin: 0 0 15px;
