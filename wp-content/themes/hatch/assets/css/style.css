@@ -10826,7 +10826,7 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
 .page-2018-hatch-europe-attendees .gv-image,
 .page-id-1521 .gv-image,
 .page-id-2120 .gv-image {
-  border-radius: 50%;
+  border-radius: 20px;
   border: 5px solid #c49d17;
   margin: 0 0 15px;
 }
