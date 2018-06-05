@@ -241,7 +241,7 @@ $photo_gallery_id = get_field('photo_gallery_id');
               <a target="_blank" href="http://www.giglam.fr/" class="sponsor"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/europe-experience/giglam.png"/></a>
               <a target="_blank" href="http://www.ladn.eu/" class="sponsor"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/europe-experience/ladn.png"/></a>
               <a target="_blank" href="http://www.lafrenchtech.com/" class="sponsor"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/europe-experience/lafrenchtech.jpg"/></a>
-              <a target="_blank" href="https://www.pernod-ricard.com/" class="sponsor"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/europe-experience/pernodricard.png"/></a>
+              <a target="_blank" href="https://www.gretel-box.com/" class="sponsor"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/europe-experience/gretel-box.png"/></a>
               <a target="_blank" href="http://www.seafoodia.com/" class="sponsor"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/europe-experience/seafoodia.jpg"/></a>
               <a target="_blank" href="https://www.steelcase.com/eu-en" class="sponsor"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/europe-experience/steelcase.png"/></a>
             </div>
