@@ -40,7 +40,7 @@
       <div class="row">
         <div class="mentorship-block">
           <div class="block-wrapper">
-            <a href="#" class="mentorship-block-img" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/mentorship-1.png');">
+            <a href="/nextgen-2/" class="mentorship-block-img" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/mentorship-1.png');">
               <h3 class="mentorship-block-title gradient">
                 <span>Groundbreakers</span>
               </h3>
@@ -50,7 +50,7 @@
         </div>
         <div class="mentorship-block">
           <div class="block-wrapper">
-            <a href="#" class="mentorship-block-img" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/mentorship-2.png');">
+            <a href="/nextgen-2/" class="mentorship-block-img" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/mentorship-2.png');">
               <h3 class="mentorship-block-title gradient">
                 <span>360&deg; Mentorship</span>
               </h3>
