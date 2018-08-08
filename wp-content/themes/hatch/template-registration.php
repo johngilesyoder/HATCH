@@ -76,6 +76,15 @@ $photo_gallery_id = get_field('photo_gallery_id');
         <li><strong>$300</strong> - to HATCH non-profit overhead / admin</li>
       </ul>
     </div>
+
+    <div class="section-timing">
+      <h4>Timing / Travel Details</h4>
+      <p><strong>Arrive:</strong> Wednesday, October 3rd by 4:30PM in to Bozeman Yellowstone International Airport (BZN).</p>
+      <p><strong>Depart:</strong> Sunday, October 7th after 10:30AM from (BZN)</p>
+      <p>If you would you like to stay for an optional decompression and explore the area and Yellowstone National Park with a night spent at a hot springs resort for a night or two, please email experinece@hatchexperience.org</p>
+      <p><strong>Questions?:</strong> email Sara Mo at experience@hatchexperience.org</p>
+    </div>
+    
     <!-- LEARN MORE ============== -->
     <div class="learn-more">
       <div class="well">

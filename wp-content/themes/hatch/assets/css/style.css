@@ -14134,7 +14134,8 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
   font-size: 14px;
   margin-left: 5px;
 }
-.page-template-template-registration .registration-content .section-deductible {
+.page-template-template-registration .registration-content .section-deductible,
+.page-template-template-registration .registration-content .section-timing {
   font-size: 18px;
   margin: 0 0 80px;
 }
@@ -15007,7 +15008,9 @@ fieldset[disabled] .page-template-template-registration .form-wrapper .gform_wra
   .page-template-template-registration .registration-content .registration-alumni,
   .page-template-template-registration-success .registration-content .registration-alumni,
   .page-template-template-registration .registration-content .section-deductible,
-  .page-template-template-registration-success .registration-content .section-deductible {
+  .page-template-template-registration-success .registration-content .section-deductible,
+  .page-template-template-registration .registration-content .section-timing,
+  .page-template-template-registration-success .registration-content .section-timing {
     margin: 0 0 40px;
   }
   .page-template-template-registration .registration-content .registration-summary .alumnus,
@@ -15017,7 +15020,9 @@ fieldset[disabled] .page-template-template-registration .form-wrapper .gform_wra
   .page-template-template-registration .registration-content .registration-alumni .alumnus,
   .page-template-template-registration-success .registration-content .registration-alumni .alumnus,
   .page-template-template-registration .registration-content .section-deductible .alumnus,
-  .page-template-template-registration-success .registration-content .section-deductible .alumnus {
+  .page-template-template-registration-success .registration-content .section-deductible .alumnus,
+  .page-template-template-registration .registration-content .section-timing .alumnus,
+  .page-template-template-registration-success .registration-content .section-timing .alumnus {
     width: 50%;
     margin: 0 0 30px;
   }
