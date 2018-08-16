@@ -71,7 +71,7 @@ $photo_gallery_id = get_field('photo_gallery_id');
       <p>This is how your $2500 full ticket price breaks down:</p>
       <ul>
         <li><strong>$1500</strong> - hard costs (includes accommodations, food)</li>
-        <li><strong>$350</strong> - Scholarship fund for Montana students and educators</li>
+        <li><strong>$350</strong> - Into scholarship fund for NextGen students, educators, non-profits, etc.</li>
         <li><strong>$350</strong> - production, transport, A/V, venue rental, entertainment, etc.</li>
         <li><strong>$300</strong> - to HATCH non-profit overhead / admin</li>
       </ul>
