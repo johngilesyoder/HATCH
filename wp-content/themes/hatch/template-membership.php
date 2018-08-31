@@ -19,7 +19,7 @@
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						<?php the_content(); ?>
 						<div class="become-member-form">
-							<?php echo do_shortcode('[give_form id="87"]'); ?>
+							<?php echo do_shortcode('[give_form id="2545"]'); ?>
 						</div>
 					</article>
 				<?php endwhile; ?>
