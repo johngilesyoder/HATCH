@@ -13867,7 +13867,8 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
   }
 }
 .page-template-template-membership .give-form-wrap {
-  margin-top: 30px;
+  max-width: 600px;
+  margin: 30px auto 0;
 }
 .page-template-template-membership .give-form-wrap input[type="text"],
 .page-template-template-membership .give-form-wrap input[type="email"],
@@ -13938,6 +13939,12 @@ textarea.page-template-template-membership .give-form-wrap select {
 }
 .page-template-template-membership .give-form-wrap input[type="text"] {
   border-radius: 4px !important;
+}
+.page-template-template-membership .give-form-wrap fieldset {
+  margin: 0 0 30px;
+}
+.page-template-template-membership .give-form-wrap .give-recurring-donors-choice {
+  margin: 0 0 30px;
 }
 .page-template-template-membership .give-form-title {
   display: none;
