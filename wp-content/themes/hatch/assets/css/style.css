@@ -14016,7 +14016,109 @@ textarea.page-template-template-membership .give-form-wrap select {
 .page-template-template-membership #give_secure_site_wrapper span:last-child .alert-link {
   color: #245269;
 }
-.page-template-template-membership .give-btn {
+.page-template-template-membership .give-submit {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #fff;
+  background-color: #FFB100;
+  border-color: #e69f00;
+  font-size: 21px;
+  font-weight: 500;
+}
+.page-template-template-membership .give-submit:focus,
+.page-template-template-membership .give-submit:active:focus,
+.page-template-template-membership .give-submit.active:focus,
+.page-template-template-membership .give-submit.focus,
+.page-template-template-membership .give-submit:active.focus,
+.page-template-template-membership .give-submit.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.page-template-template-membership .give-submit:hover,
+.page-template-template-membership .give-submit:focus,
+.page-template-template-membership .give-submit.focus {
+  color: #333;
+  text-decoration: none;
+}
+.page-template-template-membership .give-submit:active,
+.page-template-template-membership .give-submit.active {
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.page-template-template-membership .give-submit.disabled,
+.page-template-template-membership .give-submit[disabled],
+fieldset[disabled] .page-template-template-membership .give-submit {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.page-template-template-membership .give-submit:hover,
+.page-template-template-membership .give-submit:focus,
+.page-template-template-membership .give-submit.focus,
+.page-template-template-membership .give-submit:active,
+.page-template-template-membership .give-submit.active,
+.open > .dropdown-toggle.page-template-template-membership .give-submit {
+  color: #fff;
+  background-color: #cc8e00;
+  border-color: #a87500;
+}
+.page-template-template-membership .give-submit:active,
+.page-template-template-membership .give-submit.active,
+.open > .dropdown-toggle.page-template-template-membership .give-submit {
+  background-image: none;
+}
+.page-template-template-membership .give-submit.disabled,
+.page-template-template-membership .give-submit[disabled],
+fieldset[disabled] .page-template-template-membership .give-submit,
+.page-template-template-membership .give-submit.disabled:hover,
+.page-template-template-membership .give-submit[disabled]:hover,
+fieldset[disabled] .page-template-template-membership .give-submit:hover,
+.page-template-template-membership .give-submit.disabled:focus,
+.page-template-template-membership .give-submit[disabled]:focus,
+fieldset[disabled] .page-template-template-membership .give-submit:focus,
+.page-template-template-membership .give-submit.disabled.focus,
+.page-template-template-membership .give-submit[disabled].focus,
+fieldset[disabled] .page-template-template-membership .give-submit.focus,
+.page-template-template-membership .give-submit.disabled:active,
+.page-template-template-membership .give-submit[disabled]:active,
+fieldset[disabled] .page-template-template-membership .give-submit:active,
+.page-template-template-membership .give-submit.disabled.active,
+.page-template-template-membership .give-submit[disabled].active,
+fieldset[disabled] .page-template-template-membership .give-submit.active {
+  background-color: #FFB100;
+  border-color: #e69f00;
+}
+.page-template-template-membership .give-submit .badge {
+  color: #FFB100;
+  background-color: #fff;
+}
+.page-template-template-membership .give-submit:hover {
+  background: #FF9D00;
+}
+.page-template-template-membership .give-donation-level-btn {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -14040,32 +14142,32 @@ textarea.page-template-template-membership .give-form-wrap select {
   color: #007DA3;
   border: 2px solid #007DA3;
 }
-.page-template-template-membership .give-btn:focus,
-.page-template-template-membership .give-btn:active:focus,
-.page-template-template-membership .give-btn.active:focus,
-.page-template-template-membership .give-btn.focus,
-.page-template-template-membership .give-btn:active.focus,
-.page-template-template-membership .give-btn.active.focus {
+.page-template-template-membership .give-donation-level-btn:focus,
+.page-template-template-membership .give-donation-level-btn:active:focus,
+.page-template-template-membership .give-donation-level-btn.active:focus,
+.page-template-template-membership .give-donation-level-btn.focus,
+.page-template-template-membership .give-donation-level-btn:active.focus,
+.page-template-template-membership .give-donation-level-btn.active.focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-.page-template-template-membership .give-btn:hover,
-.page-template-template-membership .give-btn:focus,
-.page-template-template-membership .give-btn.focus {
+.page-template-template-membership .give-donation-level-btn:hover,
+.page-template-template-membership .give-donation-level-btn:focus,
+.page-template-template-membership .give-donation-level-btn.focus {
   color: #333;
   text-decoration: none;
 }
-.page-template-template-membership .give-btn:active,
-.page-template-template-membership .give-btn.active {
+.page-template-template-membership .give-donation-level-btn:active,
+.page-template-template-membership .give-donation-level-btn.active {
   outline: 0;
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
-.page-template-template-membership .give-btn.disabled,
-.page-template-template-membership .give-btn[disabled],
-fieldset[disabled] .page-template-template-membership .give-btn {
+.page-template-template-membership .give-donation-level-btn.disabled,
+.page-template-template-membership .give-donation-level-btn[disabled],
+fieldset[disabled] .page-template-template-membership .give-donation-level-btn {
   cursor: not-allowed;
   pointer-events: none;
   opacity: 0.65;
@@ -14073,7 +14175,7 @@ fieldset[disabled] .page-template-template-membership .give-btn {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.page-template-template-membership .give-btn:hover {
+.page-template-template-membership .give-donation-level-btn:hover {
   background: transparent;
   color: #004256;
   border-color: #004256;
