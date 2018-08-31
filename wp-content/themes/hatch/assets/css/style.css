@@ -13882,6 +13882,7 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  z-index: 100;
 }
 .page-template-template-membership .become-member-form {
   margin: 60px 0 0;
