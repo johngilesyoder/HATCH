@@ -13866,52 +13866,250 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
     height: 350px;
   }
 }
-.error404 {
-  padding-top: 100px;
+.page-template-template-membership .give-form-wrap {
+  margin-top: 30px;
 }
-.error404 h1 {
-  margin-top: 0;
-  font-size: 100px;
-  margin-bottom: 0;
-  font-weight: 400;
-  line-height: 1em;
-  font-family: 'Tungsten A', 'Tungsten B';
-  color: #007DA3;
-}
-.error404 h2 {
-  line-height: 1em;
-  font-family: klavika-medium, "Helvetica Neue", Arial, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: .02em;
-  font-size: 21px;
-  margin: 0 0 50px;
-  color: #007DA3;
-}
-.error404 .hatch-logo {
-  font-size: 30px;
-  text-align: center;
-  padding-top: 35px;
+.page-template-template-membership .give-form-wrap input[type="text"],
+.page-template-template-membership .give-form-wrap input[type="email"],
+.page-template-template-membership .give-form-wrap select {
   display: block;
-  color: #FFB100;
+  width: 100%;
+  height: 35px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
 }
-.error404 .hatch-logo:hover {
-  color: #FFB100;
+.page-template-template-membership .give-form-wrap input[type="text"]:focus,
+.page-template-template-membership .give-form-wrap input[type="email"]:focus,
+.page-template-template-membership .give-form-wrap select:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.page-template-template-membership .give-form-wrap input[type="text"]::-moz-placeholder,
+.page-template-template-membership .give-form-wrap input[type="email"]::-moz-placeholder,
+.page-template-template-membership .give-form-wrap select::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.page-template-template-membership .give-form-wrap input[type="text"]:-ms-input-placeholder,
+.page-template-template-membership .give-form-wrap input[type="email"]:-ms-input-placeholder,
+.page-template-template-membership .give-form-wrap select:-ms-input-placeholder {
+  color: #999;
+}
+.page-template-template-membership .give-form-wrap input[type="text"]::-webkit-input-placeholder,
+.page-template-template-membership .give-form-wrap input[type="email"]::-webkit-input-placeholder,
+.page-template-template-membership .give-form-wrap select::-webkit-input-placeholder {
+  color: #999;
+}
+.page-template-template-membership .give-form-wrap input[type="text"][disabled],
+.page-template-template-membership .give-form-wrap input[type="email"][disabled],
+.page-template-template-membership .give-form-wrap select[disabled],
+.page-template-template-membership .give-form-wrap input[type="text"][readonly],
+.page-template-template-membership .give-form-wrap input[type="email"][readonly],
+.page-template-template-membership .give-form-wrap select[readonly],
+fieldset[disabled] .page-template-template-membership .give-form-wrap input[type="text"],
+fieldset[disabled] .page-template-template-membership .give-form-wrap input[type="email"],
+fieldset[disabled] .page-template-template-membership .give-form-wrap select {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+  opacity: 1;
+}
+textarea.page-template-template-membership .give-form-wrap input[type="text"],
+textarea.page-template-template-membership .give-form-wrap input[type="email"],
+textarea.page-template-template-membership .give-form-wrap select {
+  height: auto;
+}
+.page-template-template-membership .give-form-wrap select {
+  display: inline-block;
+}
+.page-template-template-membership .give-form-wrap input[type="text"] {
+  border-radius: 4px !important;
+}
+.page-template-template-membership .give-form-title {
+  display: none;
+}
+.page-template-template-membership #give-amount {
+  border-radius: 0 4px 4px 0 !important;
+}
+.page-template-template-membership #give-donation-level-radio-list li {
+  margin: 0 0 5px;
+  border: 1px solid #007DA3;
+  border-radius: 4px;
+  margin-right: 10px !important;
+  margin-bottom: 15px !important;
+  padding: 7px 8px 2px !important;
+  line-height: 1em;
+  display: inline-block;
+}
+.page-template-template-membership #give-donation-level-radio-list li label {
+  font-weight: normal;
+  color: #007DA3;
+  margin-left: 3px;
+  margin: 0 0 3px 5px !important;
+}
+.page-template-template-membership .give-gateway-option {
+  font-weight: normal;
+}
+.page-template-template-membership #give_secure_site_wrapper {
+  font-weight: normal;
+  margin: 15px 0 30px;
+  padding: 0;
+}
+.page-template-template-membership #give_secure_site_wrapper span:first-child {
+  display: none;
+}
+.page-template-template-membership #give_secure_site_wrapper span:last-child {
+  padding: 15px;
+  margin-bottom: 21px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #31708f;
+  font-weight: normal;
+  display: block;
+}
+.page-template-template-membership #give_secure_site_wrapper span:last-child h4 {
+  margin-top: 0;
+  color: inherit;
+}
+.page-template-template-membership #give_secure_site_wrapper span:last-child .alert-link {
+  font-weight: bold;
+}
+.page-template-template-membership #give_secure_site_wrapper span:last-child > p,
+.page-template-template-membership #give_secure_site_wrapper span:last-child > ul {
+  margin-bottom: 0;
+}
+.page-template-template-membership #give_secure_site_wrapper span:last-child > p + p {
+  margin-top: 5px;
+}
+.page-template-template-membership #give_secure_site_wrapper span:last-child ul {
+  margin-top: 10px;
+}
+.page-template-template-membership #give_secure_site_wrapper span:last-child strong {
+  font-weight: normal;
+}
+.page-template-template-membership #give_secure_site_wrapper span:last-child hr {
+  border-top-color: #a6e1ec;
+}
+.page-template-template-membership #give_secure_site_wrapper span:last-child .alert-link {
+  color: #245269;
+}
+.page-template-template-membership .give-btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #fff;
+  background-color: #FFB100;
+  border-color: #e69f00;
+  font-size: 21px;
+  font-weight: 500;
+}
+.page-template-template-membership .give-btn:focus,
+.page-template-template-membership .give-btn:active:focus,
+.page-template-template-membership .give-btn.active:focus,
+.page-template-template-membership .give-btn.focus,
+.page-template-template-membership .give-btn:active.focus,
+.page-template-template-membership .give-btn.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.page-template-template-membership .give-btn:hover,
+.page-template-template-membership .give-btn:focus,
+.page-template-template-membership .give-btn.focus {
+  color: #333;
   text-decoration: none;
 }
-.error404 .error-message {
-  text-align: center;
-  margin-bottom: 100px;
+.page-template-template-membership .give-btn:active,
+.page-template-template-membership .give-btn.active {
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
-.error404 .error-message a {
-  text-decoration: underline;
+.page-template-template-membership .give-btn.disabled,
+.page-template-template-membership .give-btn[disabled],
+fieldset[disabled] .page-template-template-membership .give-btn {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
-@media (max-width: 480px) {
-  .error404 {
-    padding-top: 60px;
-  }
-  .error404 .error-message {
-    margin-bottom: 30px;
-  }
+.page-template-template-membership .give-btn:hover,
+.page-template-template-membership .give-btn:focus,
+.page-template-template-membership .give-btn.focus,
+.page-template-template-membership .give-btn:active,
+.page-template-template-membership .give-btn.active,
+.open > .dropdown-toggle.page-template-template-membership .give-btn {
+  color: #fff;
+  background-color: #cc8e00;
+  border-color: #a87500;
+}
+.page-template-template-membership .give-btn:active,
+.page-template-template-membership .give-btn.active,
+.open > .dropdown-toggle.page-template-template-membership .give-btn {
+  background-image: none;
+}
+.page-template-template-membership .give-btn.disabled,
+.page-template-template-membership .give-btn[disabled],
+fieldset[disabled] .page-template-template-membership .give-btn,
+.page-template-template-membership .give-btn.disabled:hover,
+.page-template-template-membership .give-btn[disabled]:hover,
+fieldset[disabled] .page-template-template-membership .give-btn:hover,
+.page-template-template-membership .give-btn.disabled:focus,
+.page-template-template-membership .give-btn[disabled]:focus,
+fieldset[disabled] .page-template-template-membership .give-btn:focus,
+.page-template-template-membership .give-btn.disabled.focus,
+.page-template-template-membership .give-btn[disabled].focus,
+fieldset[disabled] .page-template-template-membership .give-btn.focus,
+.page-template-template-membership .give-btn.disabled:active,
+.page-template-template-membership .give-btn[disabled]:active,
+fieldset[disabled] .page-template-template-membership .give-btn:active,
+.page-template-template-membership .give-btn.disabled.active,
+.page-template-template-membership .give-btn[disabled].active,
+fieldset[disabled] .page-template-template-membership .give-btn.active {
+  background-color: #FFB100;
+  border-color: #e69f00;
+}
+.page-template-template-membership .give-btn .badge {
+  color: #FFB100;
+  background-color: #fff;
+}
+.page-template-template-membership .give-btn:hover {
+  background: #FF9D00;
 }
 .page-our-partners .page-banner .page-title {
   background-image: none;
