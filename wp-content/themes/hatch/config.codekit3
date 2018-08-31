@@ -3082,6 +3082,23 @@
 		"sM": 0,
 		"sU": 0
 		},
+	"\/assets\/less\/pages\/membership.less": {
+		"aP": 1,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/pages\/membership.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
 	"\/assets\/less\/pages\/our-partners.less": {
 		"aP": 0,
 		"bl": 0,
@@ -4000,6 +4017,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/template-home.php",
+		"oF": 0
+		},
+	"\/template-membership.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/template-membership.php",
 		"oF": 0
 		},
 	"\/template-panama-registration-success.php": {

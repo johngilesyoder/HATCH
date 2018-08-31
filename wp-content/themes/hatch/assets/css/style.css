@@ -13866,6 +13866,53 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
     height: 350px;
   }
 }
+.error404 {
+  padding-top: 100px;
+}
+.error404 h1 {
+  margin-top: 0;
+  font-size: 100px;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: 1em;
+  font-family: 'Tungsten A', 'Tungsten B';
+  color: #007DA3;
+}
+.error404 h2 {
+  line-height: 1em;
+  font-family: klavika-medium, "Helvetica Neue", Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  font-size: 21px;
+  margin: 0 0 50px;
+  color: #007DA3;
+}
+.error404 .hatch-logo {
+  font-size: 30px;
+  text-align: center;
+  padding-top: 35px;
+  display: block;
+  color: #FFB100;
+}
+.error404 .hatch-logo:hover {
+  color: #FFB100;
+  text-decoration: none;
+}
+.error404 .error-message {
+  text-align: center;
+  margin-bottom: 100px;
+}
+.error404 .error-message a {
+  text-decoration: underline;
+}
+@media (max-width: 480px) {
+  .error404 {
+    padding-top: 60px;
+  }
+  .error404 .error-message {
+    margin-bottom: 30px;
+  }
+}
 .page-our-partners .page-banner .page-title {
   background-image: none;
   background-color: transparent;
