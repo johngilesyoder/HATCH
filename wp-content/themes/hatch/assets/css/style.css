@@ -13866,10 +13866,28 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
     height: 350px;
   }
 }
+.page-template-template-membership .page-title {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  padding: 10px 0;
+  border-bottom: 1px solid grey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 .page-template-template-membership .become-member-form {
   margin: 60px 0 0;
   padding-top: 60px;
   border-top: 1px solid #E6E6E6;
+  clear: both;
 }
 .page-template-template-membership .give-form-wrap {
   max-width: 600px;

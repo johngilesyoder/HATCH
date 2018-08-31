@@ -12,13 +12,14 @@
 				<?php endif; ?>
 				<div class="page-title">
 					<h1><?php the_title(); ?></h1>
+					<a href="#member-form" class="btn btn-secondary">Become a Member</a>
 				</div>
 
 				<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 					<!-- article -->
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						<?php the_content(); ?>
-						<div class="become-member-form">
+						<div id="member-form" class="become-member-form">
 							<?php echo do_shortcode('[give_form id="2545"]'); ?>
 						</div>
 					</article>
