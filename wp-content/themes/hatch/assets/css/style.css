@@ -13866,9 +13866,14 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
     height: 350px;
   }
 }
+.page-template-template-membership .become-member-form {
+  margin: 60px 0 0;
+  padding-top: 60px;
+  border-top: 1px solid #E6E6E6;
+}
 .page-template-template-membership .give-form-wrap {
   max-width: 600px;
-  margin: 30px auto 0;
+  margin: 0 auto;
 }
 .page-template-template-membership .give-form-wrap input[type="text"],
 .page-template-template-membership .give-form-wrap input[type="email"],
