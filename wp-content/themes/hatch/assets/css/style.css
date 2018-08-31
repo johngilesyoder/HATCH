@@ -14029,18 +14029,16 @@ textarea.page-template-template-membership .give-form-wrap select {
   border: 1px solid transparent;
   white-space: nowrap;
   padding: 6px 12px;
-  font-size: 14px;
   line-height: 1.5;
   border-radius: 4px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #fff;
-  background-color: #FFB100;
-  border-color: #e69f00;
-  font-size: 21px;
-  font-weight: 500;
+  font-size: 14px;
+  background: transparent;
+  color: #007DA3;
+  border: 2px solid #007DA3;
 }
 .page-template-template-membership .give-btn:focus,
 .page-template-template-membership .give-btn:active:focus,
@@ -14075,48 +14073,10 @@ fieldset[disabled] .page-template-template-membership .give-btn {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.page-template-template-membership .give-btn:hover,
-.page-template-template-membership .give-btn:focus,
-.page-template-template-membership .give-btn.focus,
-.page-template-template-membership .give-btn:active,
-.page-template-template-membership .give-btn.active,
-.open > .dropdown-toggle.page-template-template-membership .give-btn {
-  color: #fff;
-  background-color: #cc8e00;
-  border-color: #a87500;
-}
-.page-template-template-membership .give-btn:active,
-.page-template-template-membership .give-btn.active,
-.open > .dropdown-toggle.page-template-template-membership .give-btn {
-  background-image: none;
-}
-.page-template-template-membership .give-btn.disabled,
-.page-template-template-membership .give-btn[disabled],
-fieldset[disabled] .page-template-template-membership .give-btn,
-.page-template-template-membership .give-btn.disabled:hover,
-.page-template-template-membership .give-btn[disabled]:hover,
-fieldset[disabled] .page-template-template-membership .give-btn:hover,
-.page-template-template-membership .give-btn.disabled:focus,
-.page-template-template-membership .give-btn[disabled]:focus,
-fieldset[disabled] .page-template-template-membership .give-btn:focus,
-.page-template-template-membership .give-btn.disabled.focus,
-.page-template-template-membership .give-btn[disabled].focus,
-fieldset[disabled] .page-template-template-membership .give-btn.focus,
-.page-template-template-membership .give-btn.disabled:active,
-.page-template-template-membership .give-btn[disabled]:active,
-fieldset[disabled] .page-template-template-membership .give-btn:active,
-.page-template-template-membership .give-btn.disabled.active,
-.page-template-template-membership .give-btn[disabled].active,
-fieldset[disabled] .page-template-template-membership .give-btn.active {
-  background-color: #FFB100;
-  border-color: #e69f00;
-}
-.page-template-template-membership .give-btn .badge {
-  color: #FFB100;
-  background-color: #fff;
-}
 .page-template-template-membership .give-btn:hover {
-  background: #FF9D00;
+  background: transparent;
+  color: #004256;
+  border-color: #004256;
 }
 .page-our-partners .page-banner .page-title {
   background-image: none;
