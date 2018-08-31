@@ -14204,6 +14204,25 @@ fieldset[disabled] .page-template-template-membership .give-donation-level-btn {
   color: #004256;
   border-color: #004256;
 }
+@media (max-width: 480px) {
+  .page-template-template-membership .page-title {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .page-template-template-membership .page-title h1 {
+    font-size: 21px;
+    width: 100%;
+    display: block;
+  }
+  .page-template-template-membership .page-title .btn {
+    margin-top: 10px;
+  }
+}
 .page-our-partners .page-banner .page-title {
   background-image: none;
   background-color: transparent;
