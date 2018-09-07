@@ -10602,7 +10602,8 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
 .page-2018-hatch-europe-attendees .page-title,
 .page-id-1521 .page-title,
 .page-id-2120 .page-title,
-.page-2018-hatch-europe-directory .page-title {
+.page-2018-hatch-europe-directory .page-title,
+.page-2018-hatch-big-sky-attendees .page-title {
   font-weight: 300;
   margin: 0 0 30px;
   padding: 0 15px;
@@ -10624,7 +10625,8 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
 .page-2018-hatch-europe-attendees .page-title h1,
 .page-id-1521 .page-title h1,
 .page-id-2120 .page-title h1,
-.page-2018-hatch-europe-directory .page-title h1 {
+.page-2018-hatch-europe-directory .page-title h1,
+.page-2018-hatch-big-sky-attendees .page-title h1 {
   padding-bottom: 25px;
   border-bottom: 2px solid #e6e6e6;
 }
@@ -10643,7 +10645,8 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
 .page-2018-hatch-europe-attendees .featured-presenters-title,
 .page-id-1521 .featured-presenters-title,
 .page-id-2120 .featured-presenters-title,
-.page-2018-hatch-europe-directory .featured-presenters-title {
+.page-2018-hatch-europe-directory .featured-presenters-title,
+.page-2018-hatch-big-sky-attendees .featured-presenters-title {
   display: none;
 }
 .page-hatch-2015-attendees .gv-list-view,
@@ -10661,7 +10664,8 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
 .page-2018-hatch-europe-attendees .gv-list-view,
 .page-id-1521 .gv-list-view,
 .page-id-2120 .gv-list-view,
-.page-2018-hatch-europe-directory .gv-list-view {
+.page-2018-hatch-europe-directory .gv-list-view,
+.page-2018-hatch-big-sky-attendees .gv-list-view {
   border: 0;
   border-bottom: 1px solid #e6e6e6;
   margin-bottom: 30px;
@@ -10682,7 +10686,8 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
 .page-2018-hatch-europe-attendees .gv-list-view-title,
 .page-id-1521 .gv-list-view-title,
 .page-id-2120 .gv-list-view-title,
-.page-2018-hatch-europe-directory .gv-list-view-title {
+.page-2018-hatch-europe-directory .gv-list-view-title,
+.page-2018-hatch-big-sky-attendees .gv-list-view-title {
   padding: 0 15px;
   border: 0;
   margin-bottom: 25px;
@@ -10702,7 +10707,8 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
 .page-2018-hatch-europe-attendees .gv-list-view-title h3,
 .page-id-1521 .gv-list-view-title h3,
 .page-id-2120 .gv-list-view-title h3,
-.page-2018-hatch-europe-directory .gv-list-view-title h3 {
+.page-2018-hatch-europe-directory .gv-list-view-title h3,
+.page-2018-hatch-big-sky-attendees .gv-list-view-title h3 {
   color: #ffb100;
   font-size: 24px;
   font-weight: 500;
@@ -10723,7 +10729,8 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
 .page-2018-hatch-europe-attendees .gv-list-view-subtitle h4,
 .page-id-1521 .gv-list-view-subtitle h4,
 .page-id-2120 .gv-list-view-subtitle h4,
-.page-2018-hatch-europe-directory .gv-list-view-subtitle h4 {
+.page-2018-hatch-europe-directory .gv-list-view-subtitle h4,
+.page-2018-hatch-big-sky-attendees .gv-list-view-subtitle h4 {
   font-size: 12px;
   text-transform: uppercase;
 }
@@ -10742,7 +10749,8 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
 .page-2018-hatch-europe-attendees .gv-field-label,
 .page-id-1521 .gv-field-label,
 .page-id-2120 .gv-field-label,
-.page-2018-hatch-europe-directory .gv-field-label {
+.page-2018-hatch-europe-directory .gv-field-label,
+.page-2018-hatch-big-sky-attendees .gv-field-label {
   padding: 0;
   font-weight: 700;
 }
@@ -10761,7 +10769,8 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
 .page-2018-hatch-europe-attendees .gv-list-view-content,
 .page-id-1521 .gv-list-view-content,
 .page-id-2120 .gv-list-view-content,
-.page-2018-hatch-europe-directory .gv-list-view-content {
+.page-2018-hatch-europe-directory .gv-list-view-content,
+.page-2018-hatch-big-sky-attendees .gv-list-view-content {
   padding: 0;
 }
 .page-hatch-2015-attendees .gv-grid-col-1-3,
@@ -10779,7 +10788,8 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
 .page-2018-hatch-europe-attendees .gv-grid-col-1-3,
 .page-id-1521 .gv-grid-col-1-3,
 .page-id-2120 .gv-grid-col-1-3,
-.page-2018-hatch-europe-directory .gv-grid-col-1-3 {
+.page-2018-hatch-europe-directory .gv-grid-col-1-3,
+.page-2018-hatch-big-sky-attendees .gv-grid-col-1-3 {
   width: 25%;
   padding: 0 15px !important;
   position: relative;
@@ -10800,7 +10810,8 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
 .page-2018-hatch-europe-attendees .gv-list-view-content .gv-list-view-content-image,
 .page-id-1521 .gv-list-view-content .gv-list-view-content-image,
 .page-id-2120 .gv-list-view-content .gv-list-view-content-image,
-.page-2018-hatch-europe-directory .gv-list-view-content .gv-list-view-content-image {
+.page-2018-hatch-europe-directory .gv-list-view-content .gv-list-view-content-image,
+.page-2018-hatch-big-sky-attendees .gv-list-view-content .gv-list-view-content-image {
   padding: 0 15px !important;
 }
 .page-hatch-2015-attendees .gv-grid-col-2-3,
@@ -10818,7 +10829,8 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
 .page-2018-hatch-europe-attendees .gv-grid-col-2-3,
 .page-id-1521 .gv-grid-col-2-3,
 .page-id-2120 .gv-grid-col-2-3,
-.page-2018-hatch-europe-directory .gv-grid-col-2-3 {
+.page-2018-hatch-europe-directory .gv-grid-col-2-3,
+.page-2018-hatch-big-sky-attendees .gv-grid-col-2-3 {
   width: 75%;
   padding: 0 15px;
   position: relative;
@@ -10839,7 +10851,8 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
 .page-2018-hatch-europe-attendees .gv-image,
 .page-id-1521 .gv-image,
 .page-id-2120 .gv-image,
-.page-2018-hatch-europe-directory .gv-image {
+.page-2018-hatch-europe-directory .gv-image,
+.page-2018-hatch-big-sky-attendees .gv-image {
   border-radius: 20px;
   border: 5px solid #c49d17;
   margin: 0 0 15px;
@@ -10859,7 +10872,8 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
   .page-2018-hatch-europe-attendees .gv-grid-col-1-3,
   .page-id-1521 .gv-grid-col-1-3,
   .page-id-2120 .gv-grid-col-1-3,
-  .page-2018-hatch-europe-directory .gv-grid-col-1-3 {
+  .page-2018-hatch-europe-directory .gv-grid-col-1-3,
+  .page-2018-hatch-big-sky-attendees .gv-grid-col-1-3 {
     width: 100%;
   }
   .page-hatch-2015-attendees .gv-grid-col-2-3,
@@ -10876,7 +10890,8 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
   .page-2018-hatch-europe-attendees .gv-grid-col-2-3,
   .page-id-1521 .gv-grid-col-2-3,
   .page-id-2120 .gv-grid-col-2-3,
-  .page-2018-hatch-europe-directory .gv-grid-col-2-3 {
+  .page-2018-hatch-europe-directory .gv-grid-col-2-3,
+  .page-2018-hatch-big-sky-attendees .gv-grid-col-2-3 {
     width: 100%;
   }
 }
