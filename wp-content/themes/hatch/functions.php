@@ -258,7 +258,7 @@ function html5blank_styles()
 
     //wp_register_style('styles', get_template_directory_uri() . '/assets/css/style.css', array(), filemtime(), 'all');
     //wp_enqueue_style('styles'); // Enqueue it!
-    wp_enqueue_style('styles', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.8', 'all');
+    wp_enqueue_style('styles', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.9', 'all');
 }
 
 // Load HTML5 Blank conditional styles
