@@ -1,0 +1,143 @@
+.page-template-template-membership {
+  .page-title {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    padding: 10px 0;
+    border-bottom: 1px solid @border-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+  }
+  .become-member-form {
+    margin: 60px 0 0;
+    padding-top: 60px;
+    border-top: 1px solid @border-color;
+    clear: both;
+  }
+  .give-form-wrap {
+    max-width: 600px;
+    margin: 0 auto;
+    input[type="text"],
+    input[type="email"],
+    select {
+      .form-control();
+    }
+    select {
+      display: inline-block;
+    }
+    input[type="text"] {
+      border-radius: 4px !important;
+    }
+    fieldset {
+      margin: 0 0 30px;
+    }
+    .give-recurring-donors-choice {
+      margin: 0 0 30px;
+    }
+  }
+
+  .give-form-title {
+    display: none;
+  }
+
+  #give-amount {
+    border-radius: 0 4px 4px 0 !important;
+  }
+
+  #give-donation-level-radio-list {
+    & > {
+      li {
+        margin: 0 0 5px;
+        border: 1px solid @link-color;
+        border-radius: 4px;
+        margin-right: 10px !important;
+        margin-bottom: 15px !important;
+        padding: 7px 8px 2px !important;
+        line-height: 1em;
+        display: inline-block;
+        label {
+          font-weight: normal;
+          color: @link-color;
+          margin-left: 3px;
+          margin: 0 0 3px 5px !important;
+        }
+      }
+    }
+  }
+
+  .give-gateway-option {
+    font-weight: normal;
+  }
+
+  #give_secure_site_wrapper {
+    font-weight: normal;
+    margin: 15px 0 30px;
+    padding: 0;
+    span {
+      &:first-child {
+        display: none;
+      }
+      &:last-child {
+        .alert();
+        .alert-info();
+        font-weight: normal;
+        display: block;
+      }
+    }
+  }
+
+  .give-submit {
+    .btn();
+    .btn-secondary();
+    font-size: 21px;
+    font-weight: 500;
+  }
+  .give-donation-level-btn {
+    .btn();
+    font-size: 14px;
+    background: transparent;
+    color: @link-color;
+    border: 2px solid @link-color;
+    &:hover {
+      background: transparent;
+      color: @link-hover-color;
+      border-color: @link-hover-color;
+    }
+  }
+}
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// Up to tablet
+@media (max-width: 767px) {}
+
+// Up to landscape phone
+@media (max-width: 480px) {
+  .page-template-template-membership {
+    .page-title {
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      h1 {
+        font-size: 21px;
+        width: 100%;
+        display: block;
+      }
+      .btn {
+        margin-top: 10px;
+      }
+    }
+  }
+}

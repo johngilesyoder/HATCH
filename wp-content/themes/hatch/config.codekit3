@@ -1,5 +1,5 @@
 {
-"AAInfo": "This is a CodeKit 3 project config file. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. Doing so will cause CodeKit to crash and\/or corrupt your project. I know it looks like JSON, but it is *not*. Many numbers in this file are 64-bit long long bitFlags, which JSON does not support. These numbers *cannot* be treated as discrete values and if you attempt to parse this file as standard JSON with any public JSON parser, these values will be corrupted. This file is not backwards-compatible with CodeKit 1 or 2. For more information, see https:\/\/codekitapp.com\/",
+"AAInfo": "This is a CodeKit 3 project config file. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. Doing so will cause CodeKit to crash and/or corrupt your project. I know it looks like JSON, but it is *not*. Many numbers in this file are 64-bit long long bitFlags, which JSON does not support. These numbers *cannot* be treated as discrete values and if you attempt to parse this file as standard JSON with any public JSON parser, these values will be corrupted. This file is not backwards-compatible with CodeKit 1 or 2. For more information, see https://codekitapp.com/",
 "buildSteps": [
 	{
 		"name": "Process All Remaining Files and Folders",
@@ -7,3365 +7,3382 @@
 		"uuidString": "CC79F700-685D-4D96-A6F4-8585433D47F7"
 		}
 	],
-"creatorBuild": "26680",
+"creatorBuild": "28901",
 "files": {
-	"\/404.php": {
+	"/404.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/404.php",
+		"oAP": "/404.php",
 		"oF": 0
 		},
-	"\/archive.php": {
+	"/archive.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/archive.php",
+		"oAP": "/archive.php",
 		"oF": 0
 		},
-	"\/assets\/css\/style.css": {
+	"/assets/css/style.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 2,
-		"oAP": "\/assets\/css\/style-min.css",
+		"oAP": "/assets/css/style-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"\/assets\/css\/style.css.map": {
+	"/assets/css/style.css.map": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/assets\/css\/style.css.map",
+		"oAP": "/assets/css/style.css.map",
 		"oF": 0
 		},
-	"\/assets\/fonts\/klavika-bold.eot": {
+	"/assets/fonts/klavika-bold.eot": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/assets\/fonts\/klavika-bold.eot",
+		"oAP": "/assets/fonts/klavika-bold.eot",
 		"oF": 0
 		},
-	"\/assets\/fonts\/klavika-bold.svg": {
+	"/assets/fonts/klavika-bold.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/assets\/fonts\/klavika-bold.svg",
+		"oAP": "/assets/fonts/klavika-bold.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/fonts\/klavika-bold.ttf": {
+	"/assets/fonts/klavika-bold.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/assets\/fonts\/klavika-bold.ttf",
+		"oAP": "/assets/fonts/klavika-bold.ttf",
 		"oF": 0
 		},
-	"\/assets\/fonts\/klavika-bold.woff": {
+	"/assets/fonts/klavika-bold.woff": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/assets\/fonts\/klavika-bold.woff",
+		"oAP": "/assets/fonts/klavika-bold.woff",
 		"oF": 0
 		},
-	"\/assets\/fonts\/klavika-bold.woff2": {
+	"/assets/fonts/klavika-bold.woff2": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/assets\/fonts\/klavika-bold.woff2",
+		"oAP": "/assets/fonts/klavika-bold.woff2",
 		"oF": 0
 		},
-	"\/assets\/fonts\/klavika-light.ttf": {
+	"/assets/fonts/klavika-light.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/assets\/fonts\/klavika-light.ttf",
+		"oAP": "/assets/fonts/klavika-light.ttf",
 		"oF": 0
 		},
-	"\/assets\/fonts\/klavika-light.woff": {
+	"/assets/fonts/klavika-light.woff": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/assets\/fonts\/klavika-light.woff",
+		"oAP": "/assets/fonts/klavika-light.woff",
 		"oF": 0
 		},
-	"\/assets\/fonts\/klavika-light.woff2": {
+	"/assets/fonts/klavika-light.woff2": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/assets\/fonts\/klavika-light.woff2",
+		"oAP": "/assets/fonts/klavika-light.woff2",
 		"oF": 0
 		},
-	"\/assets\/fonts\/klavika-medium.eot": {
+	"/assets/fonts/klavika-medium.eot": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/assets\/fonts\/klavika-medium.eot",
+		"oAP": "/assets/fonts/klavika-medium.eot",
 		"oF": 0
 		},
-	"\/assets\/fonts\/klavika-medium.svg": {
+	"/assets/fonts/klavika-medium.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/assets\/fonts\/klavika-medium.svg",
+		"oAP": "/assets/fonts/klavika-medium.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/fonts\/klavika-medium.ttf": {
+	"/assets/fonts/klavika-medium.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/assets\/fonts\/klavika-medium.ttf",
+		"oAP": "/assets/fonts/klavika-medium.ttf",
 		"oF": 0
 		},
-	"\/assets\/fonts\/klavika-medium.woff": {
+	"/assets/fonts/klavika-medium.woff": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/assets\/fonts\/klavika-medium.woff",
+		"oAP": "/assets/fonts/klavika-medium.woff",
 		"oF": 0
 		},
-	"\/assets\/fonts\/klavika-medium.woff2": {
+	"/assets/fonts/klavika-medium.woff2": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/assets\/fonts\/klavika-medium.woff2",
+		"oAP": "/assets/fonts/klavika-medium.woff2",
 		"oF": 0
 		},
-	"\/assets\/icons\/favicon.png": {
+	"/assets/icons/favicon.png": {
 		"ft": 32768,
 		"iS": 1419,
 		"oA": 0,
-		"oAP": "\/assets\/icons\/favicon.png",
+		"oAP": "/assets/icons/favicon.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/icons\/touch.png": {
+	"/assets/icons/touch.png": {
 		"ft": 32768,
 		"iS": 13988,
 		"oA": 0,
-		"oAP": "\/assets\/icons\/touch.png",
+		"oAP": "/assets/icons/touch.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/banner-adventures.jpg": {
+	"/assets/img/banner-adventures.jpg": {
 		"ft": 16384,
 		"iS": 141089,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/assets\/img\/banner-adventures.jpg",
+		"oAP": "/assets/img/banner-adventures.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/assets\/img\/banner-apply.jpg": {
+	"/assets/img/banner-apply.jpg": {
 		"ft": 16384,
 		"iS": 120629,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/assets\/img\/banner-apply.jpg",
+		"oAP": "/assets/img/banner-apply.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/assets\/img\/banner-c2.png": {
+	"/assets/img/banner-c2.png": {
 		"ft": 32768,
 		"iS": 240762,
 		"oA": 0,
-		"oAP": "\/assets\/img\/banner-c2.png",
+		"oAP": "/assets/img/banner-c2.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/banner-matching.jpg": {
+	"/assets/img/banner-matching.jpg": {
 		"ft": 16384,
 		"iS": 218113,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/assets\/img\/banner-matching.jpg",
+		"oAP": "/assets/img/banner-matching.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/assets\/img\/banner-partners.jpg": {
+	"/assets/img/banner-partners.jpg": {
 		"ft": 16384,
 		"iS": 51486,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/assets\/img\/banner-partners.jpg",
+		"oAP": "/assets/img/banner-partners.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/assets\/img\/banner-volunteer.jpg": {
+	"/assets/img/banner-volunteer.jpg": {
 		"ft": 16384,
 		"iS": 145759,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/assets\/img\/banner-volunteer.jpg",
+		"oAP": "/assets/img/banner-volunteer.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/assets\/img\/btn-filmfreeway.svg": {
+	"/assets/img/btn-filmfreeway.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/assets\/img\/btn-filmfreeway.svg",
+		"oAP": "/assets/img/btn-filmfreeway.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/img\/built-by.svg": {
+	"/assets/img/built-by.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/assets\/img\/built-by.svg",
+		"oAP": "/assets/img/built-by.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/img\/conference-photo.jpg": {
+	"/assets/img/conference-photo.jpg": {
 		"ft": 16384,
 		"iS": 78436,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/assets\/img\/conference-photo.jpg",
+		"oAP": "/assets/img/conference-photo.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/assets\/img\/europe-experience\/Domo.jpg": {
+	"/assets/img/europe-experience/domo.jpg": {
 		"ft": 16384,
-		"iS": 5467,
+		"iS": 4622,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/assets\/img\/europe-experience\/Domo.jpg",
+		"oAP": "/assets/img/europe-experience/domo.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
-	"\/assets\/img\/europe-experience\/futurio.jpg": {
+	"/assets/img/europe-experience/futurio.jpg": {
 		"ft": 16384,
 		"iS": 18136,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/assets\/img\/europe-experience\/futurio.jpg",
+		"oAP": "/assets/img/europe-experience/futurio.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/assets\/img\/europe-experience\/giglam.png": {
+	"/assets/img/europe-experience/giglam.png": {
 		"ft": 32768,
 		"iS": 16529,
 		"oA": 0,
-		"oAP": "\/assets\/img\/europe-experience\/giglam.png",
+		"oAP": "/assets/img/europe-experience/giglam.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/europe-experience\/gretel-box.png": {
+	"/assets/img/europe-experience/gretel-box.png": {
 		"ft": 32768,
 		"iS": 5862,
 		"oA": 0,
-		"oAP": "\/assets\/img\/europe-experience\/gretel-box.png",
+		"oAP": "/assets/img/europe-experience/gretel-box.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/europe-experience\/ladn.png": {
+	"/assets/img/europe-experience/ladn.png": {
 		"ft": 32768,
 		"iS": 65361,
 		"oA": 0,
-		"oAP": "\/assets\/img\/europe-experience\/ladn.png",
+		"oAP": "/assets/img/europe-experience/ladn.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/europe-experience\/lafrenchtech.jpg": {
+	"/assets/img/europe-experience/lafrenchtech.jpg": {
 		"ft": 16384,
 		"iS": 30795,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/assets\/img\/europe-experience\/lafrenchtech.jpg",
+		"oAP": "/assets/img/europe-experience/lafrenchtech.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/assets\/img\/europe-experience\/pernodricard.png": {
+	"/assets/img/europe-experience/pernodricard.png": {
 		"ft": 32768,
 		"iS": 90174,
 		"oA": 0,
-		"oAP": "\/assets\/img\/europe-experience\/pernodricard.png",
+		"oAP": "/assets/img/europe-experience/pernodricard.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/europe-experience\/Seafoodia.jpg": {
+	"/assets/img/europe-experience/seafoodia.jpg": {
 		"ft": 16384,
 		"iS": 18605,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/assets\/img\/europe-experience\/Seafoodia.jpg",
+		"oAP": "/assets/img/europe-experience/seafoodia.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
-	"\/assets\/img\/europe-experience\/steelcase.png": {
+	"/assets/img/europe-experience/steelcase.png": {
 		"ft": 32768,
 		"iS": 9591,
 		"oA": 0,
-		"oAP": "\/assets\/img\/europe-experience\/steelcase.png",
+		"oAP": "/assets/img/europe-experience/steelcase.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/experience\/caret-because-of-hatch.svg": {
+	"/assets/img/experience/caret-because-of-hatch.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/assets\/img\/experience\/caret-because-of-hatch.svg",
+		"oAP": "/assets/img/experience/caret-because-of-hatch.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/img\/experience\/hero-shadow.png": {
+	"/assets/img/experience/hero-shadow.png": {
 		"ft": 32768,
 		"iS": 6698,
 		"oA": 0,
-		"oAP": "\/assets\/img\/experience\/hero-shadow.png",
+		"oAP": "/assets/img/experience/hero-shadow.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/experience\/hero-shadow.svg": {
+	"/assets/img/experience/hero-shadow.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/assets\/img\/experience\/hero-shadow.svg",
+		"oAP": "/assets/img/experience/hero-shadow.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/img\/experience\/section-bg-hero.jpg": {
+	"/assets/img/experience/section-bg-hero.jpg": {
 		"ft": 16384,
 		"iS": 389074,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/assets\/img\/experience\/section-bg-hero.jpg",
+		"oAP": "/assets/img/experience/section-bg-hero.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/assets\/img\/experience\/section-bg-what.jpg": {
+	"/assets/img/experience/section-bg-what.jpg": {
 		"ft": 16384,
 		"iS": 124169,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/assets\/img\/experience\/section-bg-what.jpg",
+		"oAP": "/assets/img/experience/section-bg-what.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/assets\/img\/experience\/section-bg-where.jpg": {
+	"/assets/img/experience/section-bg-where.jpg": {
 		"ft": 16384,
 		"iS": 329423,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/assets\/img\/experience\/section-bg-where.jpg",
+		"oAP": "/assets/img/experience/section-bg-where.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/assets\/img\/experience\/section-bg-who.png": {
+	"/assets/img/experience/section-bg-who.png": {
 		"ft": 32768,
 		"iS": 221,
 		"oA": 0,
-		"oAP": "\/assets\/img\/experience\/section-bg-who.png",
+		"oAP": "/assets/img/experience/section-bg-who.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/experience\/section-bg-who.svg": {
+	"/assets/img/experience/section-bg-who.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/assets\/img\/experience\/section-bg-who.svg",
+		"oAP": "/assets/img/experience/section-bg-who.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/img\/experience\/section-bg-why.jpg": {
+	"/assets/img/experience/section-bg-why.jpg": {
 		"ft": 16384,
 		"iS": 112578,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/assets\/img\/experience\/section-bg-why.jpg",
+		"oAP": "/assets/img/experience/section-bg-why.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/assets\/img\/experience\/testimonial-anne.png": {
+	"/assets/img/experience/testimonial-anne.png": {
 		"ft": 32768,
 		"iS": 24216,
 		"oA": 0,
-		"oAP": "\/assets\/img\/experience\/testimonial-anne.png",
+		"oAP": "/assets/img/experience/testimonial-anne.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/experience\/testimonial-hoffer.png": {
+	"/assets/img/experience/testimonial-hoffer.png": {
 		"ft": 32768,
 		"iS": 36395,
 		"oA": 0,
-		"oAP": "\/assets\/img\/experience\/testimonial-hoffer.png",
+		"oAP": "/assets/img/experience/testimonial-hoffer.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/experience\/testimonial-lighter.jpg": {
+	"/assets/img/experience/testimonial-lighter.jpg": {
 		"ft": 16384,
 		"iS": 15565,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/assets\/img\/experience\/testimonial-lighter.jpg",
+		"oAP": "/assets/img/experience/testimonial-lighter.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/assets\/img\/experience\/testimonial-rahi.png": {
+	"/assets/img/experience/testimonial-rahi.png": {
 		"ft": 32768,
 		"iS": 30644,
 		"oA": 0,
-		"oAP": "\/assets\/img\/experience\/testimonial-rahi.png",
+		"oAP": "/assets/img/experience/testimonial-rahi.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/experience\/testimonial-travis.png": {
+	"/assets/img/experience/testimonial-travis.png": {
 		"ft": 32768,
 		"iS": 36819,
 		"oA": 0,
-		"oAP": "\/assets\/img\/experience\/testimonial-travis.png",
+		"oAP": "/assets/img/experience/testimonial-travis.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/experience\/where-bubble-1.jpg": {
+	"/assets/img/experience/where-bubble-1.jpg": {
 		"ft": 16384,
 		"iS": 67320,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/assets\/img\/experience\/where-bubble-1.jpg",
+		"oAP": "/assets/img/experience/where-bubble-1.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/assets\/img\/experience\/where-bubble-2.jpg": {
+	"/assets/img/experience/where-bubble-2.jpg": {
 		"ft": 16384,
 		"iS": 34815,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/assets\/img\/experience\/where-bubble-2.jpg",
+		"oAP": "/assets/img/experience/where-bubble-2.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/assets\/img\/experience\/why-block-1.jpg": {
+	"/assets/img/experience/why-block-1.jpg": {
 		"ft": 16384,
 		"iS": 35171,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/assets\/img\/experience\/why-block-1.jpg",
+		"oAP": "/assets/img/experience/why-block-1.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/assets\/img\/experience\/why-block-2.jpg": {
+	"/assets/img/experience/why-block-2.jpg": {
 		"ft": 16384,
 		"iS": 39200,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/assets\/img\/experience\/why-block-2.jpg",
+		"oAP": "/assets/img/experience/why-block-2.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/assets\/img\/hatchback\/badge-five-percent.png": {
+	"/assets/img/hatchback/badge-five-percent.png": {
 		"ft": 32768,
 		"iS": 21612,
 		"oA": 0,
-		"oAP": "\/assets\/img\/hatchback\/badge-five-percent.png",
+		"oAP": "/assets/img/hatchback/badge-five-percent.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/hatchback\/badge-one-percent.svg": {
+	"/assets/img/hatchback/badge-one-percent.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/assets\/img\/hatchback\/badge-one-percent.svg",
+		"oAP": "/assets/img/hatchback/badge-one-percent.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/img\/hatchback\/banner-bg.png": {
+	"/assets/img/hatchback/banner-bg.png": {
 		"ft": 32768,
 		"iS": 29052,
 		"oA": 0,
-		"oAP": "\/assets\/img\/hatchback\/banner-bg.png",
+		"oAP": "/assets/img/hatchback/banner-bg.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/hatchback\/hatchback-feature-img.png": {
+	"/assets/img/hatchback/hatchback-feature-img.png": {
 		"ft": 32768,
 		"iS": 150729,
 		"oA": 0,
-		"oAP": "\/assets\/img\/hatchback\/hatchback-feature-img.png",
+		"oAP": "/assets/img/hatchback/hatchback-feature-img.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/hatchback\/hatchback-logo.svg": {
+	"/assets/img/hatchback/hatchback-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/assets\/img\/hatchback\/hatchback-logo.svg",
+		"oAP": "/assets/img/hatchback/hatchback-logo.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/img\/hatchback\/hatchback-story-selina.png": {
+	"/assets/img/hatchback/hatchback-story-selina.png": {
 		"ft": 32768,
 		"iS": 229697,
 		"oA": 0,
-		"oAP": "\/assets\/img\/hatchback\/hatchback-story-selina.png",
+		"oAP": "/assets/img/hatchback/hatchback-story-selina.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/hatchback\/icon-secure.svg": {
+	"/assets/img/hatchback/icon-secure.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/assets\/img\/hatchback\/icon-secure.svg",
+		"oAP": "/assets/img/hatchback/icon-secure.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/img\/hatchback\/logo-patreon.png": {
+	"/assets/img/hatchback/logo-patreon.png": {
 		"ft": 32768,
 		"iS": 847,
 		"oA": 0,
-		"oAP": "\/assets\/img\/hatchback\/logo-patreon.png",
+		"oAP": "/assets/img/hatchback/logo-patreon.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/hatchback\/stories-title.svg": {
+	"/assets/img/hatchback/stories-title.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/assets\/img\/hatchback\/stories-title.svg",
+		"oAP": "/assets/img/hatchback/stories-title.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/img\/hatchback\/story-1.png": {
+	"/assets/img/hatchback/story-1.png": {
 		"ft": 32768,
 		"iS": 86029,
 		"oA": 0,
-		"oAP": "\/assets\/img\/hatchback\/story-1.png",
+		"oAP": "/assets/img/hatchback/story-1.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/hatchback\/story-2.png": {
+	"/assets/img/hatchback/story-2.png": {
 		"ft": 32768,
 		"iS": 47238,
 		"oA": 0,
-		"oAP": "\/assets\/img\/hatchback\/story-2.png",
+		"oAP": "/assets/img/hatchback/story-2.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/icon-blog-footer-facebook.svg": {
+	"/assets/img/icon-blog-footer-facebook.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/assets\/img\/icon-blog-footer-facebook.svg",
+		"oAP": "/assets/img/icon-blog-footer-facebook.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/img\/icon-blog-footer-instagram.svg": {
+	"/assets/img/icon-blog-footer-instagram.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/assets\/img\/icon-blog-footer-instagram.svg",
+		"oAP": "/assets/img/icon-blog-footer-instagram.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/img\/icon-blog-footer-twitter.svg": {
+	"/assets/img/icon-blog-footer-twitter.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/assets\/img\/icon-blog-footer-twitter.svg",
+		"oAP": "/assets/img/icon-blog-footer-twitter.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/img\/icon-category.svg": {
+	"/assets/img/icon-category.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/assets\/img\/icon-category.svg",
+		"oAP": "/assets/img/icon-category.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/img\/icon-external-link.svg": {
+	"/assets/img/icon-external-link.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/assets\/img\/icon-external-link.svg",
+		"oAP": "/assets/img/icon-external-link.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/img\/icon-footer-facebook.svg": {
+	"/assets/img/icon-footer-facebook.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/assets\/img\/icon-footer-facebook.svg",
+		"oAP": "/assets/img/icon-footer-facebook.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/img\/icon-footer-instagram.svg": {
+	"/assets/img/icon-footer-instagram.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/assets\/img\/icon-footer-instagram.svg",
+		"oAP": "/assets/img/icon-footer-instagram.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/img\/icon-footer-twitter.svg": {
+	"/assets/img/icon-footer-twitter.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/assets\/img\/icon-footer-twitter.svg",
+		"oAP": "/assets/img/icon-footer-twitter.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/img\/icon-link-chevron.svg": {
+	"/assets/img/icon-link-chevron.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/assets\/img\/icon-link-chevron.svg",
+		"oAP": "/assets/img/icon-link-chevron.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/img\/icon-parent-chevron.svg": {
+	"/assets/img/icon-parent-chevron.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/assets\/img\/icon-parent-chevron.svg",
+		"oAP": "/assets/img/icon-parent-chevron.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/img\/icon-registration-success.svg": {
+	"/assets/img/icon-registration-success.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/assets\/img\/icon-registration-success.svg",
+		"oAP": "/assets/img/icon-registration-success.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/img\/icon-rss.svg": {
+	"/assets/img/icon-rss.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/assets\/img\/icon-rss.svg",
+		"oAP": "/assets/img/icon-rss.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/img\/icon-search-button.svg": {
+	"/assets/img/icon-search-button.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/assets\/img\/icon-search-button.svg",
+		"oAP": "/assets/img/icon-search-button.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/img\/icon-search.svg": {
+	"/assets/img/icon-search.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/assets\/img\/icon-search.svg",
+		"oAP": "/assets/img/icon-search.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/img\/logo-moonlight.png": {
+	"/assets/img/logo-moonlight.png": {
 		"ft": 32768,
 		"iS": 21032,
 		"oA": 0,
-		"oAP": "\/assets\/img\/logo-moonlight.png",
+		"oAP": "/assets/img/logo-moonlight.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/logo-soundtrap.png": {
+	"/assets/img/logo-soundtrap.png": {
 		"ft": 32768,
 		"iS": 67989,
 		"oA": 0,
-		"oAP": "\/assets\/img\/logo-soundtrap.png",
+		"oAP": "/assets/img/logo-soundtrap.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/mentorship-1.png": {
+	"/assets/img/mentorship-1.png": {
 		"ft": 32768,
 		"iS": 105543,
 		"oA": 0,
-		"oAP": "\/assets\/img\/mentorship-1.png",
+		"oAP": "/assets/img/mentorship-1.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/mentorship-2.png": {
+	"/assets/img/mentorship-2.png": {
 		"ft": 32768,
 		"iS": 118579,
 		"oA": 0,
-		"oAP": "\/assets\/img\/mentorship-2.png",
+		"oAP": "/assets/img/mentorship-2.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/partner-intel-2.png": {
+	"/assets/img/partner-intel-2.png": {
 		"ft": 32768,
 		"iS": 29493,
 		"oA": 0,
-		"oAP": "\/assets\/img\/partner-intel-2.png",
+		"oAP": "/assets/img/partner-intel-2.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/partner-intel.jpg": {
+	"/assets/img/partner-intel.jpg": {
 		"ft": 16384,
 		"iS": 35202,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/assets\/img\/partner-intel.jpg",
+		"oAP": "/assets/img/partner-intel.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/assets\/img\/partner-intel.png": {
+	"/assets/img/partner-intel.png": {
 		"ft": 32768,
 		"iS": 8102,
 		"oA": 0,
-		"oAP": "\/assets\/img\/partner-intel.png",
+		"oAP": "/assets/img/partner-intel.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/partner-moonlight-basin.png": {
+	"/assets/img/partner-moonlight-basin.png": {
 		"ft": 32768,
 		"iS": 19760,
 		"oA": 0,
-		"oAP": "\/assets\/img\/partner-moonlight-basin.png",
+		"oAP": "/assets/img/partner-moonlight-basin.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/post-format-because-of-hatch.svg": {
+	"/assets/img/post-format-because-of-hatch.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/assets\/img\/post-format-because-of-hatch.svg",
+		"oAP": "/assets/img/post-format-because-of-hatch.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/img\/registration\/1.jpeg": {
+	"/assets/img/registration/1.jpeg": {
 		"ft": 16384,
 		"iS": 224112,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/assets\/img\/registration\/1.jpg",
+		"oAP": "/assets/img/registration/1.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/assets\/img\/registration\/alumni-altringer.png": {
+	"/assets/img/registration/alumni-altringer.png": {
 		"ft": 32768,
 		"iS": 42278,
 		"oA": 0,
-		"oAP": "\/assets\/img\/registration\/alumni-altringer.png",
+		"oAP": "/assets/img/registration/alumni-altringer.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/registration\/alumni-bridges.png": {
+	"/assets/img/registration/alumni-bridges.png": {
 		"ft": 32768,
 		"iS": 40424,
 		"oA": 0,
-		"oAP": "\/assets\/img\/registration\/alumni-bridges.png",
+		"oAP": "/assets/img/registration/alumni-bridges.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/registration\/alumni-earle.png": {
+	"/assets/img/registration/alumni-earle.png": {
 		"ft": 32768,
 		"iS": 134518,
 		"oA": 0,
-		"oAP": "\/assets\/img\/registration\/alumni-earle.png",
+		"oAP": "/assets/img/registration/alumni-earle.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/registration\/alumni-gruber.png": {
+	"/assets/img/registration/alumni-gruber.png": {
 		"ft": 32768,
 		"iS": 45093,
 		"oA": 0,
-		"oAP": "\/assets\/img\/registration\/alumni-gruber.png",
+		"oAP": "/assets/img/registration/alumni-gruber.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/registration\/alumni-hardy.png": {
+	"/assets/img/registration/alumni-hardy.png": {
 		"ft": 32768,
 		"iS": 48312,
 		"oA": 0,
-		"oAP": "\/assets\/img\/registration\/alumni-hardy.png",
+		"oAP": "/assets/img/registration/alumni-hardy.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/registration\/alumni-kuhr.png": {
+	"/assets/img/registration/alumni-kuhr.png": {
 		"ft": 32768,
 		"iS": 41974,
 		"oA": 0,
-		"oAP": "\/assets\/img\/registration\/alumni-kuhr.png",
+		"oAP": "/assets/img/registration/alumni-kuhr.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/registration\/alumni-thaller.png": {
+	"/assets/img/registration/alumni-thaller.png": {
 		"ft": 32768,
 		"iS": 39140,
 		"oA": 0,
-		"oAP": "\/assets\/img\/registration\/alumni-thaller.png",
+		"oAP": "/assets/img/registration/alumni-thaller.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/registration\/bg-registration-bigsky.jpg": {
+	"/assets/img/registration/bg-registration-bigsky.jpg": {
 		"ft": 16384,
 		"iS": 396013,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/assets\/img\/registration\/bg-registration-bigsky.jpg",
+		"oAP": "/assets/img/registration/bg-registration-bigsky.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/assets\/img\/registration\/bg-registration-bigsky.png": {
+	"/assets/img/registration/bg-registration-bigsky.png": {
 		"ft": 32768,
 		"iS": 6323361,
 		"oA": 0,
-		"oAP": "\/assets\/img\/registration\/bg-registration-bigsky.png",
+		"oAP": "/assets/img/registration/bg-registration-bigsky.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/registration\/bg-registration-europe.png": {
+	"/assets/img/registration/bg-registration-europe.png": {
 		"ft": 32768,
 		"iS": 5958678,
 		"oA": 0,
-		"oAP": "\/assets\/img\/registration\/bg-registration-europe.png",
+		"oAP": "/assets/img/registration/bg-registration-europe.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/registration\/company-apple.png": {
+	"/assets/img/registration/company-apple.png": {
 		"ft": 32768,
 		"iS": 1316,
 		"oA": 0,
-		"oAP": "\/assets\/img\/registration\/company-apple.png",
+		"oAP": "/assets/img/registration/company-apple.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/registration\/company-ey.png": {
+	"/assets/img/registration/company-ey.png": {
 		"ft": 32768,
 		"iS": 2687,
 		"oA": 0,
-		"oAP": "\/assets\/img\/registration\/company-ey.png",
+		"oAP": "/assets/img/registration/company-ey.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/registration\/company-hasbro.png": {
+	"/assets/img/registration/company-hasbro.png": {
 		"ft": 32768,
 		"iS": 4229,
 		"oA": 0,
-		"oAP": "\/assets\/img\/registration\/company-hasbro.png",
+		"oAP": "/assets/img/registration/company-hasbro.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/registration\/company-intel.png": {
+	"/assets/img/registration/company-intel.png": {
 		"ft": 32768,
 		"iS": 2963,
 		"oA": 0,
-		"oAP": "\/assets\/img\/registration\/company-intel.png",
+		"oAP": "/assets/img/registration/company-intel.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/registration\/euro-hero.jpg": {
+	"/assets/img/registration/euro-hero.jpg": {
 		"ft": 16384,
 		"iS": 210045,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/assets\/img\/registration\/euro-hero.jpg",
+		"oAP": "/assets/img/registration/euro-hero.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/assets\/img\/registration\/grace-davis.png": {
+	"/assets/img/registration/grace-davis.png": {
 		"ft": 32768,
 		"iS": 6144,
 		"oA": 0,
-		"oAP": "\/assets\/img\/registration\/grace-davis.png",
+		"oAP": "/assets/img/registration/grace-davis.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/registration\/icon-multiply.svg": {
+	"/assets/img/registration/icon-multiply.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/assets\/img\/registration\/icon-multiply.svg",
+		"oAP": "/assets/img/registration/icon-multiply.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/img\/registration\/logo-the-camp-color.png": {
+	"/assets/img/registration/logo-the-camp-color.png": {
 		"ft": 32768,
 		"iS": 4667,
 		"oA": 0,
-		"oAP": "\/assets\/img\/registration\/logo-the-camp-color.png",
+		"oAP": "/assets/img/registration/logo-the-camp-color.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/registration\/logo-the-camp-white.png": {
+	"/assets/img/registration/logo-the-camp-white.png": {
 		"ft": 32768,
 		"iS": 4245,
 		"oA": 0,
-		"oAP": "\/assets\/img\/registration\/logo-the-camp-white.png",
+		"oAP": "/assets/img/registration/logo-the-camp-white.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/registration\/logo-the-camp.png": {
+	"/assets/img/registration/logo-the-camp.png": {
 		"ft": 32768,
 		"iS": 3242,
 		"oA": 0,
-		"oAP": "\/assets\/img\/registration\/logo-the-camp.png",
+		"oAP": "/assets/img/registration/logo-the-camp.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/registration\/success-bg.jpg": {
+	"/assets/img/registration/success-bg.jpg": {
 		"ft": 16384,
 		"iS": 388012,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/assets\/img\/registration\/success-bg.jpg",
+		"oAP": "/assets/img/registration/success-bg.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/assets\/img\/registration\/sustainable-development-goals.png": {
+	"/assets/img/registration/sustainable-development-goals.png": {
 		"ft": 32768,
 		"iS": 181156,
 		"oA": 0,
-		"oAP": "\/assets\/img\/registration\/sustainable-development-goals.png",
+		"oAP": "/assets/img/registration/sustainable-development-goals.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/img\/registration\/the-camp-horizontal.jpg": {
+	"/assets/img/registration/the-camp-horizontal.jpg": {
 		"ft": 16384,
 		"iS": 448286,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/assets\/img\/registration\/the-camp-horizontal.jpg",
+		"oAP": "/assets/img/registration/the-camp-horizontal.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/assets\/js\/lib\/conditionizr-4.3.0.min.js": {
+	"/assets/js/lib/conditionizr-4.3.0.min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/assets\/js\/lib\/min\/conditionizr-4.3.0.min-min.js",
+		"oAP": "/assets/js/lib/min/conditionizr-4.3.0.min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/assets\/js\/lib\/flickity.pkgd.min.js": {
+	"/assets/js/lib/flickity.pkgd.min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/assets\/js\/lib\/min\/flickity.pkgd.min-min.js",
+		"oAP": "/assets/js/lib/min/flickity.pkgd.min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/assets\/js\/lib\/isotope.pkgd.min.js": {
+	"/assets/js/lib/isotope.pkgd.min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/assets\/js\/lib\/min\/isotope.pkgd.min-min.js",
+		"oAP": "/assets/js/lib/min/isotope.pkgd.min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/assets\/js\/lib\/masonry-horizontal.js": {
+	"/assets/js/lib/masonry-horizontal.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/assets\/js\/lib\/min\/masonry-horizontal-min.js",
+		"oAP": "/assets/js/lib/min/masonry-horizontal-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/assets\/js\/lib\/modernizr-2.7.1.min.js": {
+	"/assets/js/lib/modernizr-2.7.1.min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/assets\/js\/lib\/min\/modernizr-2.7.1.min-min.js",
+		"oAP": "/assets/js/lib/min/modernizr-2.7.1.min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/assets\/js\/lib\/rangeslider.min.js": {
+	"/assets/js/lib/rangeslider.min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/assets\/js\/lib\/min\/rangeslider.min-min.js",
+		"oAP": "/assets/js/lib/min/rangeslider.min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/assets\/js\/min\/scripts-min.js": {
+	"/assets/js/min/scripts-min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/assets\/js\/min\/min\/scripts-min-min.js",
+		"oAP": "/assets/js/min/min/scripts-min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/assets\/js\/scripts.js": {
+	"/assets/js/scripts.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/assets\/js\/min\/scripts-min.js",
+		"oAP": "/assets/js/min/scripts-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/assets\/js\/sections\/becauseofhatch-survey.js": {
+	"/assets/js/sections/becauseofhatch-survey.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/assets\/js\/sections\/min\/becauseofhatch-survey-min.js",
+		"oAP": "/assets/js/sections/min/becauseofhatch-survey-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/assets\/js\/sections\/briana-survey.js": {
+	"/assets/js/sections/briana-survey.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/assets\/js\/sections\/min\/briana-survey-min.js",
+		"oAP": "/assets/js/sections/min/briana-survey-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/assets\/js\/sections\/home.js": {
+	"/assets/js/sections/home.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/assets\/js\/sections\/min\/home-min.js",
+		"oAP": "/assets/js/sections/min/home-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/assets\/js\/sections\/min\/becauseofhatch-survey-min.js": {
+	"/assets/js/sections/min/becauseofhatch-survey-min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/assets\/js\/sections\/min\/min\/becauseofhatch-survey-min-min.js",
+		"oAP": "/assets/js/sections/min/min/becauseofhatch-survey-min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/assets\/js\/sections\/min\/briana-survey-min.js": {
+	"/assets/js/sections/min/briana-survey-min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/assets\/js\/sections\/min\/min\/briana-survey-min-min.js",
+		"oAP": "/assets/js/sections/min/min/briana-survey-min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/assets\/js\/sections\/min\/home-min.js": {
+	"/assets/js/sections/min/home-min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/assets\/js\/sections\/min\/min\/home-min-min.js",
+		"oAP": "/assets/js/sections/min/min/home-min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/assets\/js\/sections\/min\/registration-min.js": {
+	"/assets/js/sections/min/registration-min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/assets\/js\/sections\/min\/min\/registration-min-min.js",
+		"oAP": "/assets/js/sections/min/min/registration-min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/assets\/js\/sections\/min\/reunion-min.js": {
+	"/assets/js/sections/min/reunion-min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/assets\/js\/sections\/min\/min\/reunion-min-min.js",
+		"oAP": "/assets/js/sections/min/min/reunion-min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/assets\/js\/sections\/registration.js": {
+	"/assets/js/sections/registration.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/assets\/js\/sections\/min\/registration-min.js",
+		"oAP": "/assets/js/sections/min/registration-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/assets\/js\/sections\/reunion.js": {
+	"/assets/js/sections/reunion.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/assets\/js\/sections\/min\/reunion-min.js",
+		"oAP": "/assets/js/sections/min/reunion-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/assets\/less\/blog-wrapper.less": {
+	"/assets/less/blog-wrapper.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 0,
-		"oAP": "\/assets\/css\/blog-wrapper.css",
+		"oAP": "/assets/css/blog-wrapper.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/alerts.less": {
+	"/assets/less/bootstrap/alerts.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/alerts.css",
+		"oAP": "/assets/css/bootstrap/alerts.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/badges.less": {
+	"/assets/less/bootstrap/badges.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/badges.css",
+		"oAP": "/assets/css/bootstrap/badges.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/bootstrap.less": {
+	"/assets/less/bootstrap/bootstrap.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/bootstrap.css",
+		"oAP": "/assets/css/bootstrap/bootstrap.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/breadcrumbs.less": {
+	"/assets/less/bootstrap/breadcrumbs.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/breadcrumbs.css",
+		"oAP": "/assets/css/bootstrap/breadcrumbs.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/button-groups.less": {
+	"/assets/less/bootstrap/button-groups.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/button-groups.css",
+		"oAP": "/assets/css/bootstrap/button-groups.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/buttons.less": {
+	"/assets/less/bootstrap/buttons.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/buttons.css",
+		"oAP": "/assets/css/bootstrap/buttons.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/carousel.less": {
+	"/assets/less/bootstrap/carousel.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/carousel.css",
+		"oAP": "/assets/css/bootstrap/carousel.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/close.less": {
+	"/assets/less/bootstrap/close.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/close.css",
+		"oAP": "/assets/css/bootstrap/close.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/code.less": {
+	"/assets/less/bootstrap/code.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/code.css",
+		"oAP": "/assets/css/bootstrap/code.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/component-animations.less": {
+	"/assets/less/bootstrap/component-animations.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/component-animations.css",
+		"oAP": "/assets/css/bootstrap/component-animations.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/dropdowns.less": {
+	"/assets/less/bootstrap/dropdowns.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/dropdowns.css",
+		"oAP": "/assets/css/bootstrap/dropdowns.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/forms.less": {
+	"/assets/less/bootstrap/forms.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/forms.css",
+		"oAP": "/assets/css/bootstrap/forms.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/glyphicons.less": {
+	"/assets/less/bootstrap/glyphicons.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/glyphicons.css",
+		"oAP": "/assets/css/bootstrap/glyphicons.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/grid.less": {
+	"/assets/less/bootstrap/grid.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/grid.css",
+		"oAP": "/assets/css/bootstrap/grid.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/input-groups.less": {
+	"/assets/less/bootstrap/input-groups.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/input-groups.css",
+		"oAP": "/assets/css/bootstrap/input-groups.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/jumbotron.less": {
+	"/assets/less/bootstrap/jumbotron.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/jumbotron.css",
+		"oAP": "/assets/css/bootstrap/jumbotron.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/labels.less": {
+	"/assets/less/bootstrap/labels.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/labels.css",
+		"oAP": "/assets/css/bootstrap/labels.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/list-group.less": {
+	"/assets/less/bootstrap/list-group.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/list-group.css",
+		"oAP": "/assets/css/bootstrap/list-group.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/media.less": {
+	"/assets/less/bootstrap/media.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/media.css",
+		"oAP": "/assets/css/bootstrap/media.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/mixins.less": {
+	"/assets/less/bootstrap/mixins.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/mixins.css",
+		"oAP": "/assets/css/bootstrap/mixins.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/mixins\/alerts.less": {
+	"/assets/less/bootstrap/mixins/alerts.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/mixins\/alerts.css",
+		"oAP": "/assets/css/bootstrap/mixins/alerts.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/mixins\/background-variant.less": {
+	"/assets/less/bootstrap/mixins/background-variant.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/mixins\/background-variant.css",
+		"oAP": "/assets/css/bootstrap/mixins/background-variant.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/mixins\/border-radius.less": {
+	"/assets/less/bootstrap/mixins/border-radius.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/mixins\/border-radius.css",
+		"oAP": "/assets/css/bootstrap/mixins/border-radius.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/mixins\/buttons.less": {
+	"/assets/less/bootstrap/mixins/buttons.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/mixins\/buttons.css",
+		"oAP": "/assets/css/bootstrap/mixins/buttons.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/mixins\/center-block.less": {
+	"/assets/less/bootstrap/mixins/center-block.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/mixins\/center-block.css",
+		"oAP": "/assets/css/bootstrap/mixins/center-block.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/mixins\/clearfix.less": {
+	"/assets/less/bootstrap/mixins/clearfix.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/mixins\/clearfix.css",
+		"oAP": "/assets/css/bootstrap/mixins/clearfix.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/mixins\/forms.less": {
+	"/assets/less/bootstrap/mixins/forms.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/mixins\/forms.css",
+		"oAP": "/assets/css/bootstrap/mixins/forms.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/mixins\/gradients.less": {
+	"/assets/less/bootstrap/mixins/gradients.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/mixins\/gradients.css",
+		"oAP": "/assets/css/bootstrap/mixins/gradients.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/mixins\/grid-framework.less": {
+	"/assets/less/bootstrap/mixins/grid-framework.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/mixins\/grid-framework.css",
+		"oAP": "/assets/css/bootstrap/mixins/grid-framework.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/mixins\/grid.less": {
+	"/assets/less/bootstrap/mixins/grid.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/mixins\/grid.css",
+		"oAP": "/assets/css/bootstrap/mixins/grid.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/mixins\/hide-text.less": {
+	"/assets/less/bootstrap/mixins/hide-text.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/mixins\/hide-text.css",
+		"oAP": "/assets/css/bootstrap/mixins/hide-text.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/mixins\/image.less": {
+	"/assets/less/bootstrap/mixins/image.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/mixins\/image.css",
+		"oAP": "/assets/css/bootstrap/mixins/image.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/mixins\/labels.less": {
+	"/assets/less/bootstrap/mixins/labels.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/mixins\/labels.css",
+		"oAP": "/assets/css/bootstrap/mixins/labels.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/mixins\/list-group.less": {
+	"/assets/less/bootstrap/mixins/list-group.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/mixins\/list-group.css",
+		"oAP": "/assets/css/bootstrap/mixins/list-group.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/mixins\/nav-divider.less": {
+	"/assets/less/bootstrap/mixins/nav-divider.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/mixins\/nav-divider.css",
+		"oAP": "/assets/css/bootstrap/mixins/nav-divider.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/mixins\/nav-vertical-align.less": {
+	"/assets/less/bootstrap/mixins/nav-vertical-align.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/mixins\/nav-vertical-align.css",
+		"oAP": "/assets/css/bootstrap/mixins/nav-vertical-align.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/mixins\/opacity.less": {
+	"/assets/less/bootstrap/mixins/opacity.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/mixins\/opacity.css",
+		"oAP": "/assets/css/bootstrap/mixins/opacity.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/mixins\/pagination.less": {
+	"/assets/less/bootstrap/mixins/pagination.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/mixins\/pagination.css",
+		"oAP": "/assets/css/bootstrap/mixins/pagination.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/mixins\/panels.less": {
+	"/assets/less/bootstrap/mixins/panels.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/mixins\/panels.css",
+		"oAP": "/assets/css/bootstrap/mixins/panels.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/mixins\/progress-bar.less": {
+	"/assets/less/bootstrap/mixins/progress-bar.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/mixins\/progress-bar.css",
+		"oAP": "/assets/css/bootstrap/mixins/progress-bar.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/mixins\/reset-filter.less": {
+	"/assets/less/bootstrap/mixins/reset-filter.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/mixins\/reset-filter.css",
+		"oAP": "/assets/css/bootstrap/mixins/reset-filter.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/mixins\/resize.less": {
+	"/assets/less/bootstrap/mixins/resize.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/mixins\/resize.css",
+		"oAP": "/assets/css/bootstrap/mixins/resize.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/mixins\/responsive-visibility.less": {
+	"/assets/less/bootstrap/mixins/responsive-visibility.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/mixins\/responsive-visibility.css",
+		"oAP": "/assets/css/bootstrap/mixins/responsive-visibility.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/mixins\/size.less": {
+	"/assets/less/bootstrap/mixins/size.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/mixins\/size.css",
+		"oAP": "/assets/css/bootstrap/mixins/size.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/mixins\/tab-focus.less": {
+	"/assets/less/bootstrap/mixins/tab-focus.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/mixins\/tab-focus.css",
+		"oAP": "/assets/css/bootstrap/mixins/tab-focus.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/mixins\/table-row.less": {
+	"/assets/less/bootstrap/mixins/table-row.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/mixins\/table-row.css",
+		"oAP": "/assets/css/bootstrap/mixins/table-row.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/mixins\/text-emphasis.less": {
+	"/assets/less/bootstrap/mixins/text-emphasis.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/mixins\/text-emphasis.css",
+		"oAP": "/assets/css/bootstrap/mixins/text-emphasis.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/mixins\/text-overflow.less": {
+	"/assets/less/bootstrap/mixins/text-overflow.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/mixins\/text-overflow.css",
+		"oAP": "/assets/css/bootstrap/mixins/text-overflow.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/mixins\/vendor-prefixes.less": {
+	"/assets/less/bootstrap/mixins/vendor-prefixes.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/mixins\/vendor-prefixes.css",
+		"oAP": "/assets/css/bootstrap/mixins/vendor-prefixes.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/modals.less": {
+	"/assets/less/bootstrap/modals.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/modals.css",
+		"oAP": "/assets/css/bootstrap/modals.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/navbar.less": {
+	"/assets/less/bootstrap/navbar.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/navbar.css",
+		"oAP": "/assets/css/bootstrap/navbar.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/navs.less": {
+	"/assets/less/bootstrap/navs.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/navs.css",
+		"oAP": "/assets/css/bootstrap/navs.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/normalize.less": {
+	"/assets/less/bootstrap/normalize.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/normalize.css",
+		"oAP": "/assets/css/bootstrap/normalize.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/pager.less": {
+	"/assets/less/bootstrap/pager.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/pager.css",
+		"oAP": "/assets/css/bootstrap/pager.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/pagination.less": {
+	"/assets/less/bootstrap/pagination.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/pagination.css",
+		"oAP": "/assets/css/bootstrap/pagination.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/panels.less": {
+	"/assets/less/bootstrap/panels.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/panels.css",
+		"oAP": "/assets/css/bootstrap/panels.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/popovers.less": {
+	"/assets/less/bootstrap/popovers.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/popovers.css",
+		"oAP": "/assets/css/bootstrap/popovers.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/print.less": {
+	"/assets/less/bootstrap/print.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/print.css",
+		"oAP": "/assets/css/bootstrap/print.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/progress-bars.less": {
+	"/assets/less/bootstrap/progress-bars.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/progress-bars.css",
+		"oAP": "/assets/css/bootstrap/progress-bars.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/responsive-embed.less": {
+	"/assets/less/bootstrap/responsive-embed.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/responsive-embed.css",
+		"oAP": "/assets/css/bootstrap/responsive-embed.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/responsive-utilities.less": {
+	"/assets/less/bootstrap/responsive-utilities.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/responsive-utilities.css",
+		"oAP": "/assets/css/bootstrap/responsive-utilities.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/scaffolding.less": {
+	"/assets/less/bootstrap/scaffolding.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/scaffolding.css",
+		"oAP": "/assets/css/bootstrap/scaffolding.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/tables.less": {
+	"/assets/less/bootstrap/tables.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/tables.css",
+		"oAP": "/assets/css/bootstrap/tables.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/theme.less": {
+	"/assets/less/bootstrap/theme.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 0,
-		"oAP": "\/assets\/css\/bootstrap\/theme.css",
+		"oAP": "/assets/css/bootstrap/theme.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/thumbnails.less": {
+	"/assets/less/bootstrap/thumbnails.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/thumbnails.css",
+		"oAP": "/assets/css/bootstrap/thumbnails.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/tooltip.less": {
+	"/assets/less/bootstrap/tooltip.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/tooltip.css",
+		"oAP": "/assets/css/bootstrap/tooltip.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/type.less": {
+	"/assets/less/bootstrap/type.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/type.css",
+		"oAP": "/assets/css/bootstrap/type.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/utilities.less": {
+	"/assets/less/bootstrap/utilities.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/utilities.css",
+		"oAP": "/assets/css/bootstrap/utilities.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/variables.less": {
+	"/assets/less/bootstrap/variables.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/variables.css",
+		"oAP": "/assets/css/bootstrap/variables.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/bootstrap\/wells.less": {
+	"/assets/less/bootstrap/wells.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/bootstrap\/wells.css",
+		"oAP": "/assets/css/bootstrap/wells.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/components\/partners-block.less": {
+	"/assets/less/components/partners-block.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/components\/partners-block.css",
+		"oAP": "/assets/css/components/partners-block.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/components\/registration-success.less": {
+	"/assets/less/components/registration-success.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/components\/registration-success.css",
+		"oAP": "/assets/css/components/registration-success.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/components\/topbar.less": {
+	"/assets/less/components/topbar.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/components\/topbar.css",
+		"oAP": "/assets/css/components/topbar.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/components\/what-is-hatch.less": {
+	"/assets/less/components/what-is-hatch.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/components\/what-is-hatch.css",
+		"oAP": "/assets/css/components/what-is-hatch.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/events\/tribe-events.less": {
+	"/assets/less/events/tribe-events.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 0,
-		"oAP": "\/assets\/css\/events\/tribe-events.css",
+		"oAP": "/assets/css/events/tribe-events.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/layout\/adventure.less": {
+	"/assets/less/layout/adventure.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/layout\/adventure.css",
+		"oAP": "/assets/css/layout/adventure.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/layout\/blog.less": {
+	"/assets/less/layout/blog.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/layout\/blog.css",
+		"oAP": "/assets/css/layout/blog.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/layout\/event.less": {
+	"/assets/less/layout/event.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/layout\/event.css",
+		"oAP": "/assets/css/layout/event.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/layout\/page.less": {
+	"/assets/less/layout/page.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/layout\/page.css",
+		"oAP": "/assets/css/layout/page.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/layout\/patterns.less": {
+	"/assets/less/layout/patterns.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/layout\/patterns.css",
+		"oAP": "/assets/css/layout/patterns.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/layout\/post.less": {
+	"/assets/less/layout/post.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/layout\/post.css",
+		"oAP": "/assets/css/layout/post.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/layout\/reunion.less": {
+	"/assets/less/layout/reunion.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/layout\/reunion.css",
+		"oAP": "/assets/css/layout/reunion.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/layout\/sidebar.less": {
+	"/assets/less/layout/sidebar.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/layout\/sidebar.css",
+		"oAP": "/assets/css/layout/sidebar.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/layout\/site-footer.less": {
+	"/assets/less/layout/site-footer.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/layout\/site-footer.css",
+		"oAP": "/assets/css/layout/site-footer.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/layout\/site-header.less": {
+	"/assets/less/layout/site-header.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/layout\/site-header.css",
+		"oAP": "/assets/css/layout/site-header.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/pages\/404.less": {
+	"/assets/less/pages/404.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/pages\/404.css",
+		"oAP": "/assets/css/pages/404.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/pages\/advisory-board.less": {
+	"/assets/less/pages/advisory-board.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/pages\/advisory-board.css",
+		"oAP": "/assets/css/pages/advisory-board.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/pages\/apply.less": {
+	"/assets/less/pages/apply.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/pages\/apply.css",
+		"oAP": "/assets/css/pages/apply.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/pages\/attendees.less": {
+	"/assets/less/pages/attendees.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/pages\/attendees.css",
+		"oAP": "/assets/css/pages/attendees.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/pages\/becauseofhatch-survey.less": {
+	"/assets/less/pages/becauseofhatch-survey.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/pages\/becauseofhatch-survey.css",
+		"oAP": "/assets/css/pages/becauseofhatch-survey.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/pages\/blog-roll.less": {
+	"/assets/less/pages/blog-roll.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/pages\/blog-roll.css",
+		"oAP": "/assets/css/pages/blog-roll.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/pages\/category.less": {
+	"/assets/less/pages/category.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/pages\/category.css",
+		"oAP": "/assets/css/pages/category.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/pages\/contact.less": {
+	"/assets/less/pages/contact.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/pages\/contact.css",
+		"oAP": "/assets/css/pages/contact.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/pages\/donate.less": {
+	"/assets/less/pages/donate.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/pages\/donate.css",
+		"oAP": "/assets/css/pages/donate.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/pages\/donation-matching.less": {
+	"/assets/less/pages/donation-matching.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/pages\/donation-matching.css",
+		"oAP": "/assets/css/pages/donation-matching.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/pages\/experience-europe.less": {
+	"/assets/less/pages/experience-europe.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/pages\/experience-europe.css",
+		"oAP": "/assets/css/pages/experience-europe.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/pages\/experience.less": {
+	"/assets/less/pages/experience.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/pages\/experience.css",
+		"oAP": "/assets/css/pages/experience.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/pages\/groundbreakers.less": {
+	"/assets/less/pages/groundbreakers.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/pages\/groundbreakers.css",
+		"oAP": "/assets/css/pages/groundbreakers.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/pages\/hatch-alumni.less": {
+	"/assets/less/pages/hatch-alumni.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/pages\/hatch-alumni.css",
+		"oAP": "/assets/css/pages/hatch-alumni.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/pages\/hatchback.less": {
+	"/assets/less/pages/hatchback.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/pages\/hatchback.css",
+		"oAP": "/assets/css/pages/hatchback.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/pages\/home.less": {
+	"/assets/less/pages/home.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/pages\/home.css",
+		"oAP": "/assets/css/pages/home.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/pages\/our-partners.less": {
-		"aP": 0,
-		"bl": 0,
-		"dJ": 0,
-		"ft": 1,
-		"ie": 1,
-		"iI": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/assets\/css\/pages\/our-partners.css",
-		"oF": 0,
-		"oS": 0,
-		"rU": 0,
-		"sI": 0,
-		"sM": 0,
-		"sU": 0
-		},
-	"\/assets\/less\/pages\/registration-europe.less": {
+	"/assets/less/pages/membership.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/pages\/registration-europe.css",
+		"oAP": "/assets/css/pages/membership.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/pages\/registration.less": {
+	"/assets/less/pages/our-partners.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/pages\/registration.css",
+		"oAP": "/assets/css/pages/our-partners.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/pages\/search.less": {
-		"aP": 0,
-		"bl": 0,
-		"dJ": 0,
-		"ft": 1,
-		"ie": 1,
-		"iI": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/assets\/css\/pages\/search.css",
-		"oF": 0,
-		"oS": 0,
-		"rU": 0,
-		"sI": 0,
-		"sM": 0,
-		"sU": 0
-		},
-	"\/assets\/less\/pages\/single.less": {
-		"aP": 0,
-		"bl": 0,
-		"dJ": 0,
-		"ft": 1,
-		"ie": 1,
-		"iI": 0,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/assets\/css\/pages\/single.css",
-		"oF": 0,
-		"oS": 0,
-		"rU": 0,
-		"sI": 0,
-		"sM": 0,
-		"sU": 0
-		},
-	"\/assets\/less\/pages\/survey.less": {
+	"/assets/less/pages/registration-europe.less": {
 		"aP": 1,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/pages\/survey.css",
+		"oAP": "/assets/css/pages/registration-europe.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/pages\/volunteer.less": {
+	"/assets/less/pages/registration.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/pages\/volunteer.css",
+		"oAP": "/assets/css/pages/registration.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/style.less": {
-		"aP": 1,
+	"/assets/less/pages/search.less": {
+		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
+		"oA": 1,
+		"oAP": "/assets/css/pages/search.css",
+		"oF": 0,
+		"oS": 0,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 0
+		},
+	"/assets/less/pages/single.less": {
+		"aP": 0,
+		"bl": 0,
+		"eJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"mS": 0,
+		"oA": 1,
+		"oAP": "/assets/css/pages/single.css",
+		"oF": 0,
+		"oS": 0,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 0
+		},
+	"/assets/less/pages/survey.less": {
+		"aP": 1,
+		"bl": 0,
+		"eJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"mS": 0,
+		"oA": 1,
+		"oAP": "/assets/css/pages/survey.css",
+		"oF": 0,
+		"oS": 0,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 0
+		},
+	"/assets/less/pages/volunteer.less": {
+		"aP": 0,
+		"bl": 0,
+		"eJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"mS": 0,
+		"oA": 1,
+		"oAP": "/assets/css/pages/volunteer.css",
+		"oF": 0,
+		"oS": 0,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 0
+		},
+	"/assets/less/style.less": {
+		"aP": 1,
+		"bl": 0,
+		"eJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"mS": 0,
 		"oA": 0,
-		"oAP": "\/assets\/css\/style.css",
+		"oAP": "/assets/css/style.css",
 		"oF": 2,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/utilities\/buttons.less": {
+	"/assets/less/utilities/buttons.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/utilities\/buttons.css",
+		"oAP": "/assets/css/utilities/buttons.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/utilities\/colors.less": {
+	"/assets/less/utilities/colors.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/utilities\/colors.css",
+		"oAP": "/assets/css/utilities/colors.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/utilities\/fonts.less": {
+	"/assets/less/utilities/fonts.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/utilities\/fonts.css",
+		"oAP": "/assets/css/utilities/fonts.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/utilities\/variables.less": {
+	"/assets/less/utilities/variables.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/utilities\/variables.css",
+		"oAP": "/assets/css/utilities/variables.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/utilities\/wordpress-core.less": {
+	"/assets/less/utilities/wordpress-core.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/utilities\/wordpress-core.css",
+		"oAP": "/assets/css/utilities/wordpress-core.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/utilities\/z-index.less": {
+	"/assets/less/utilities/z-index.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/utilities\/z-index.css",
+		"oAP": "/assets/css/utilities/z-index.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/assets\/less\/vendor\/flickity.less": {
+	"/assets/less/vendor/flickity.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/assets\/css\/vendor\/flickity.css",
+		"oAP": "/assets/css/vendor/flickity.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/author.php": {
+	"/author.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/author.php",
+		"oAP": "/author.php",
 		"oF": 0
 		},
-	"\/category-becauseofhatch.php": {
+	"/category-becauseofhatch.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/category-becauseofhatch.php",
+		"oAP": "/category-becauseofhatch.php",
 		"oF": 0
 		},
-	"\/category.php": {
+	"/category.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/category.php",
+		"oAP": "/category.php",
 		"oF": 0
 		},
-	"\/CHANGELOG.html": {
+	"/CHANGELOG.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/CHANGELOG.html",
+		"oAP": "/CHANGELOG.html",
 		"oF": 0
 		},
-	"\/CHANGELOG.md": {
+	"/CHANGELOG.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 0,
@@ -3374,7 +3391,7 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 0,
-		"oAP": "\/CHANGELOG.html",
+		"oAP": "/CHANGELOG.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -3383,280 +3400,280 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/comments.php": {
+	"/comments.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/comments.php",
+		"oAP": "/comments.php",
 		"oF": 0
 		},
-	"\/footer.php": {
+	"/footer.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/footer.php",
+		"oAP": "/footer.php",
 		"oF": 0
 		},
-	"\/functions.php": {
+	"/functions.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/functions.php",
+		"oAP": "/functions.php",
 		"oF": 0
 		},
-	"\/header.php": {
+	"/header.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/header.php",
+		"oAP": "/header.php",
 		"oF": 0
 		},
-	"\/includes\/analytics.php": {
+	"/includes/analytics.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/analytics.php",
+		"oAP": "/includes/analytics.php",
 		"oF": 0
 		},
-	"\/includes\/becauseofhatch-survey-people.php": {
+	"/includes/becauseofhatch-survey-people.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/becauseofhatch-survey-people.php",
+		"oAP": "/includes/becauseofhatch-survey-people.php",
 		"oF": 0
 		},
-	"\/includes\/carousel-hero-2.php": {
+	"/includes/carousel-hero-2.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/carousel-hero-2.php",
+		"oAP": "/includes/carousel-hero-2.php",
 		"oF": 0
 		},
-	"\/includes\/carousel-hero.php": {
+	"/includes/carousel-hero.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/carousel-hero.php",
+		"oAP": "/includes/carousel-hero.php",
 		"oF": 0
 		},
-	"\/includes\/partners-block.php": {
+	"/includes/partners-block.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/partners-block.php",
+		"oAP": "/includes/partners-block.php",
 		"oF": 0
 		},
-	"\/includes\/registration-footer.php": {
+	"/includes/registration-footer.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/registration-footer.php",
+		"oAP": "/includes/registration-footer.php",
 		"oF": 0
 		},
-	"\/includes\/registration-header-europe.php": {
+	"/includes/registration-header-europe.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/registration-header-europe.php",
+		"oAP": "/includes/registration-header-europe.php",
 		"oF": 0
 		},
-	"\/includes\/registration-header-hasbro.php": {
+	"/includes/registration-header-hasbro.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/registration-header-hasbro.php",
+		"oAP": "/includes/registration-header-hasbro.php",
 		"oF": 0
 		},
-	"\/includes\/registration-header-panama.php": {
+	"/includes/registration-header-panama.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/registration-header-panama.php",
+		"oAP": "/includes/registration-header-panama.php",
 		"oF": 0
 		},
-	"\/includes\/registration-header.php": {
+	"/includes/registration-header.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/registration-header.php",
+		"oAP": "/includes/registration-header.php",
 		"oF": 0
 		},
-	"\/includes\/survey-people.php": {
+	"/includes/survey-people.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/survey-people.php",
+		"oAP": "/includes/survey-people.php",
 		"oF": 0
 		},
-	"\/includes\/tile-hero-2.php": {
+	"/includes/tile-hero-2.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/tile-hero-2.php",
+		"oAP": "/includes/tile-hero-2.php",
 		"oF": 0
 		},
-	"\/includes\/tile-hero.php": {
+	"/includes/tile-hero.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/tile-hero.php",
+		"oAP": "/includes/tile-hero.php",
 		"oF": 0
 		},
-	"\/includes\/topbar.php": {
+	"/includes/topbar.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/includes\/topbar.php",
+		"oAP": "/includes/topbar.php",
 		"oF": 0
 		},
-	"\/includes\/what-is-hatch.php": {
+	"/includes/what-is-hatch.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/includes\/what-is-hatch.php",
+		"oAP": "/includes/what-is-hatch.php",
 		"oF": 0
 		},
-	"\/index.php": {
+	"/index.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/index.php",
+		"oAP": "/index.php",
 		"oF": 0
 		},
-	"\/languages\/de_DE.mo": {
+	"/languages/de_DE.mo": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/languages\/de_DE.mo",
+		"oAP": "/languages/de_DE.mo",
 		"oF": 0
 		},
-	"\/languages\/de_DE.po": {
+	"/languages/de_DE.po": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/languages\/de_DE.po",
+		"oAP": "/languages/de_DE.po",
 		"oF": 0
 		},
-	"\/languages\/es_CL.mo": {
+	"/languages/es_CL.mo": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/languages\/es_CL.mo",
+		"oAP": "/languages/es_CL.mo",
 		"oF": 0
 		},
-	"\/languages\/es_CL.po": {
+	"/languages/es_CL.po": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/languages\/es_CL.po",
+		"oAP": "/languages/es_CL.po",
 		"oF": 0
 		},
-	"\/languages\/es_ES.mo": {
+	"/languages/es_ES.mo": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/languages\/es_ES.mo",
+		"oAP": "/languages/es_ES.mo",
 		"oF": 0
 		},
-	"\/languages\/es_ES.po": {
+	"/languages/es_ES.po": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/languages\/es_ES.po",
+		"oAP": "/languages/es_ES.po",
 		"oF": 0
 		},
-	"\/languages\/fr_FR.mo": {
+	"/languages/fr_FR.mo": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/languages\/fr_FR.mo",
+		"oAP": "/languages/fr_FR.mo",
 		"oF": 0
 		},
-	"\/languages\/fr_FR.po": {
+	"/languages/fr_FR.po": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/languages\/fr_FR.po",
+		"oAP": "/languages/fr_FR.po",
 		"oF": 0
 		},
-	"\/languages\/HTML5Blank.pot": {
+	"/languages/HTML5Blank.pot": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/languages\/HTML5Blank.pot",
+		"oAP": "/languages/HTML5Blank.pot",
 		"oF": 0
 		},
-	"\/languages\/hu_HU.mo": {
+	"/languages/hu_HU.mo": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/languages\/hu_HU.mo",
+		"oAP": "/languages/hu_HU.mo",
 		"oF": 0
 		},
-	"\/languages\/hu_HU.po": {
+	"/languages/hu_HU.po": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/languages\/hu_HU.po",
+		"oAP": "/languages/hu_HU.po",
 		"oF": 0
 		},
-	"\/languages\/it_IT.mo": {
+	"/languages/it_IT.mo": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/languages\/it_IT.mo",
+		"oAP": "/languages/it_IT.mo",
 		"oF": 0
 		},
-	"\/languages\/it_IT.po": {
+	"/languages/it_IT.po": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/languages\/it_IT.po",
+		"oAP": "/languages/it_IT.po",
 		"oF": 0
 		},
-	"\/languages\/nl_NL.mo": {
+	"/languages/nl_NL.mo": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/languages\/nl_NL.mo",
+		"oAP": "/languages/nl_NL.mo",
 		"oF": 0
 		},
-	"\/languages\/nl_NL.po": {
+	"/languages/nl_NL.po": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/languages\/nl_NL.po",
+		"oAP": "/languages/nl_NL.po",
 		"oF": 0
 		},
-	"\/languages\/pt_BR.mo": {
+	"/languages/pt_BR.mo": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/languages\/pt_BR.mo",
+		"oAP": "/languages/pt_BR.mo",
 		"oF": 0
 		},
-	"\/languages\/pt_BR.po": {
+	"/languages/pt_BR.po": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/languages\/pt_BR.po",
+		"oAP": "/languages/pt_BR.po",
 		"oF": 0
 		},
-	"\/languages\/ro_RO.mo": {
+	"/languages/ro_RO.mo": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/languages\/ro_RO.mo",
+		"oAP": "/languages/ro_RO.mo",
 		"oF": 0
 		},
-	"\/languages\/ro_RO.po": {
+	"/languages/ro_RO.po": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/languages\/ro_RO.po",
+		"oAP": "/languages/ro_RO.po",
 		"oF": 0
 		},
-	"\/LICENSE.md": {
+	"/LICENSE.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 0,
@@ -3665,7 +3682,7 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 0,
-		"oAP": "\/LICENSE.html",
+		"oAP": "/LICENSE.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -3674,142 +3691,142 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/loop-search.php": {
+	"/loop-search.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/loop-search.php",
+		"oAP": "/loop-search.php",
 		"oF": 0
 		},
-	"\/loop.php": {
+	"/loop.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/loop.php",
+		"oAP": "/loop.php",
 		"oF": 0
 		},
-	"\/normalize.css": {
+	"/normalize.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/normalize-min.css",
+		"oAP": "/normalize-min.css",
 		"oF": 0,
 		"oS": 0
 		},
-	"\/normalize.min.css": {
+	"/normalize.min.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/normalize.min-min.css",
+		"oAP": "/normalize.min-min.css",
 		"oF": 0,
 		"oS": 0
 		},
-	"\/our-partners.css": {
+	"/our-partners.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 2,
-		"oAP": "\/our-partners-min.css",
+		"oAP": "/our-partners-min.css",
 		"oF": 0,
 		"oS": 0
 		},
-	"\/page-2016-hatch-c2-montreal-registration.php": {
+	"/page-2016-hatch-c2-montreal-registration.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/page-2016-hatch-c2-montreal-registration.php",
+		"oAP": "/page-2016-hatch-c2-montreal-registration.php",
 		"oF": 0
 		},
-	"\/page-2017-c2-montreal-registration.php": {
+	"/page-2017-c2-montreal-registration.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/page-2017-c2-montreal-registration.php",
+		"oAP": "/page-2017-c2-montreal-registration.php",
 		"oF": 0
 		},
-	"\/page-2018-c2-montreal-registration.php": {
+	"/page-2018-c2-montreal-registration.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/page-2018-c2-montreal-registration.php",
+		"oAP": "/page-2018-c2-montreal-registration.php",
 		"oF": 0
 		},
-	"\/page-advisory-board.php": {
+	"/page-advisory-board.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/page-advisory-board.php",
+		"oAP": "/page-advisory-board.php",
 		"oF": 0
 		},
-	"\/page-big-sky-advisory-board.php": {
+	"/page-big-sky-advisory-board.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/page-big-sky-advisory-board.php",
+		"oAP": "/page-big-sky-advisory-board.php",
 		"oF": 0
 		},
-	"\/page-groundbreakers.php": {
+	"/page-groundbreakers.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/page-groundbreakers.php",
+		"oAP": "/page-groundbreakers.php",
 		"oF": 0
 		},
-	"\/page-hatch-alumni.php": {
+	"/page-hatch-alumni.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/page-hatch-alumni.php",
+		"oAP": "/page-hatch-alumni.php",
 		"oF": 0
 		},
-	"\/page-hatch15-donation-matching.php": {
+	"/page-hatch15-donation-matching.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/page-hatch15-donation-matching.php",
+		"oAP": "/page-hatch15-donation-matching.php",
 		"oF": 0
 		},
-	"\/page-latin-america-advisory-board.php": {
+	"/page-latin-america-advisory-board.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/page-latin-america-advisory-board.php",
+		"oAP": "/page-latin-america-advisory-board.php",
 		"oF": 0
 		},
-	"\/page-our-partners.php": {
+	"/page-our-partners.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/page-our-partners.php",
+		"oAP": "/page-our-partners.php",
 		"oF": 0
 		},
-	"\/page-volunteer.php": {
+	"/page-volunteer.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/page-volunteer.php",
+		"oAP": "/page-volunteer.php",
 		"oF": 0
 		},
-	"\/page.php": {
+	"/page.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/page.php",
+		"oAP": "/page.php",
 		"oF": 0
 		},
-	"\/pagination.php": {
+	"/pagination.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/pagination.php",
+		"oAP": "/pagination.php",
 		"oF": 0
 		},
-	"\/README.md": {
+	"/README.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 0,
@@ -3818,7 +3835,7 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 0,
-		"oAP": "\/README.html",
+		"oAP": "/README.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -3827,273 +3844,280 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/screenshot.png": {
+	"/screenshot.png": {
 		"ft": 32768,
 		"iS": 55056,
 		"oA": 0,
-		"oAP": "\/screenshot.png",
+		"oAP": "/screenshot.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/search.php": {
+	"/search.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/search.php",
+		"oAP": "/search.php",
 		"oF": 0
 		},
-	"\/searchform.php": {
+	"/searchform.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/searchform.php",
+		"oAP": "/searchform.php",
 		"oF": 0
 		},
-	"\/sidebar.php": {
+	"/sidebar.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/sidebar.php",
+		"oAP": "/sidebar.php",
 		"oF": 0
 		},
-	"\/single-hatch-adventure.php": {
+	"/single-hatch-adventure.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/single-hatch-adventure.php",
+		"oAP": "/single-hatch-adventure.php",
 		"oF": 0
 		},
-	"\/single-hatchback-story.php": {
+	"/single-hatchback-story.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/single-hatchback-story.php",
+		"oAP": "/single-hatchback-story.php",
 		"oF": 0
 		},
-	"\/single-reunion.php": {
+	"/single-reunion.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/single-reunion.php",
+		"oAP": "/single-reunion.php",
 		"oF": 0
 		},
-	"\/single.php": {
+	"/single.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/single.php",
+		"oAP": "/single.php",
 		"oF": 0
 		},
-	"\/style.css": {
+	"/style.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/style-min.css",
+		"oAP": "/style-min.css",
 		"oF": 0,
 		"oS": 0
 		},
-	"\/style.css.map": {
+	"/style.css.map": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/style.css.map",
+		"oAP": "/style.css.map",
 		"oF": 0
 		},
-	"\/tag.php": {
+	"/tag.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/tag.php",
+		"oAP": "/tag.php",
 		"oF": 0
 		},
-	"\/template-apply.php": {
+	"/template-apply.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-apply.php",
+		"oAP": "/template-apply.php",
 		"oF": 0
 		},
-	"\/template-becauseofhatchsurvey.php": {
+	"/template-becauseofhatchsurvey.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-becauseofhatchsurvey.php",
+		"oAP": "/template-becauseofhatchsurvey.php",
 		"oF": 0
 		},
-	"\/template-brianasurvey.php": {
+	"/template-brianasurvey.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-brianasurvey.php",
+		"oAP": "/template-brianasurvey.php",
 		"oF": 0
 		},
-	"\/template-contact.php": {
+	"/template-contact.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-contact.php",
+		"oAP": "/template-contact.php",
 		"oF": 0
 		},
-	"\/template-events.php": {
+	"/template-events.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-events.php",
+		"oAP": "/template-events.php",
 		"oF": 0
 		},
-	"\/template-experience-europe.php": {
+	"/template-experience-europe.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-experience-europe.php",
+		"oAP": "/template-experience-europe.php",
 		"oF": 0
 		},
-	"\/template-experience.php": {
+	"/template-experience.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-experience.php",
+		"oAP": "/template-experience.php",
 		"oF": 0
 		},
-	"\/template-feature-img.php": {
+	"/template-feature-img.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-feature-img.php",
+		"oAP": "/template-feature-img.php",
 		"oF": 0
 		},
-	"\/template-fullwidth.php": {
+	"/template-fullwidth.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-fullwidth.php",
+		"oAP": "/template-fullwidth.php",
 		"oF": 0
 		},
-	"\/template-hasbro-registration-success.php": {
+	"/template-hasbro-registration-success.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-hasbro-registration-success.php",
+		"oAP": "/template-hasbro-registration-success.php",
 		"oF": 0
 		},
-	"\/template-hasbro-registration.php": {
+	"/template-hasbro-registration.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-hasbro-registration.php",
+		"oAP": "/template-hasbro-registration.php",
 		"oF": 0
 		},
-	"\/template-hatchback.php": {
+	"/template-hatchback.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-hatchback.php",
+		"oAP": "/template-hatchback.php",
 		"oF": 0
 		},
-	"\/template-home.php": {
+	"/template-home.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/template-home.php",
+		"oAP": "/template-home.php",
 		"oF": 0
 		},
-	"\/template-panama-registration-success.php": {
+	"/template-membership.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-panama-registration-success.php",
+		"oAP": "/template-membership.php",
 		"oF": 0
 		},
-	"\/template-panama-registration.php": {
+	"/template-panama-registration-success.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-panama-registration.php",
+		"oAP": "/template-panama-registration-success.php",
 		"oF": 0
 		},
-	"\/template-registration-europe.php": {
+	"/template-panama-registration.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-registration-europe.php",
+		"oAP": "/template-panama-registration.php",
 		"oF": 0
 		},
-	"\/template-registration-success-euro.php": {
+	"/template-registration-europe.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-registration-success-euro.php",
+		"oAP": "/template-registration-europe.php",
 		"oF": 0
 		},
-	"\/template-registration-success.php": {
+	"/template-registration-success-euro.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-registration-success.php",
+		"oAP": "/template-registration-success-euro.php",
 		"oF": 0
 		},
-	"\/template-registration.php": {
+	"/template-registration-success.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-registration.php",
+		"oAP": "/template-registration-success.php",
 		"oF": 0
 		},
-	"\/template-test.php": {
+	"/template-registration.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-test.php",
+		"oAP": "/template-registration.php",
 		"oF": 0
 		},
-	"\/tribe-events\/default-template.php": {
+	"/template-test.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/tribe-events\/default-template.php",
+		"oAP": "/template-test.php",
 		"oF": 0
 		},
-	"\/tribe-events\/month\/content.php": {
+	"/tribe-events/default-template.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/tribe-events\/month\/content.php",
+		"oAP": "/tribe-events/default-template.php",
 		"oF": 0
 		},
-	"\/tribe-events\/single-event.php": {
+	"/tribe-events/month/content.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/tribe-events\/single-event.php",
+		"oAP": "/tribe-events/month/content.php",
 		"oF": 0
 		},
-	"\/tribe-events\/tribe-events.css": {
+	"/tribe-events/single-event.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "/tribe-events/single-event.php",
+		"oF": 0
+		},
+	"/tribe-events/tribe-events.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 2,
-		"oAP": "\/tribe-events\/tribe-events-min.css",
+		"oAP": "/tribe-events/tribe-events-min.css",
 		"oF": 0,
 		"oS": 0
 		},
-	"\/tribe-events\/tribe-events.css.map": {
+	"/tribe-events/tribe-events.css.map": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/tribe-events\/tribe-events.css.map",
+		"oAP": "/tribe-events/tribe-events.css.map",
 		"oF": 0
 		},
-	"\/wp_bootstrap_navwalker.php": {
+	"/wp_bootstrap_navwalker.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/wp_bootstrap_navwalker.php",
+		"oAP": "/wp_bootstrap_navwalker.php",
 		"oF": 0
 		}
 	},
@@ -4113,141 +4137,94 @@
 	"alwaysUseExternalServer": 1,
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
-	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
 	"autoprefixerEnableIEGrid": 0,
+	"babel7PresetType": 1,
+	"babelAllowRCFiles": 0,
 	"babelAuxiliaryCommentAfter": "",
 	"babelAuxiliaryCommentBefore": "",
-	"babelConfigFileHandlingType": 0,
+	"babelConfigType": 0,
 	"babelCustomPluginsList": "",
 	"babelCustomPresetsList": "",
 	"babelInsertModuleIDs": 0,
 	"babelModuleID": "",
 	"babelNoComments": 0,
 	"babelPlugins": {
+		"arrow-functions": {
+			"active": 0
+			},
 		"async-generator-functions": {
 			"active": 0
 			},
 		"async-to-generator": {
 			"active": 0
 			},
-		"async-to-module-method": {
+		"block-scoped-functions": {
+			"active": 0
+			},
+		"block-scoping": {
 			"active": 0
 			},
 		"class-properties": {
 			"active": 0
 			},
+		"classes": {
+			"active": 0
+			},
+		"computed-properties": {
+			"active": 0
+			},
 		"decorators": {
 			"active": 0
 			},
-		"decorators-legacy": {
+		"destructuring": {
 			"active": 0
 			},
 		"do-expressions": {
 			"active": 0
 			},
-		"es2015-arrow-functions": {
+		"dotall-regex": {
 			"active": 0
 			},
-		"es2015-block-scoped-functions": {
-			"active": 0
-			},
-		"es2015-block-scoping": {
-			"active": 0
-			},
-		"es2015-classes": {
-			"active": 0
-			},
-		"es2015-computed-properties": {
-			"active": 0
-			},
-		"es2015-constants": {
-			"active": 0
-			},
-		"es2015-destructuring": {
-			"active": 0
-			},
-		"es2015-duplicate-keys": {
-			"active": 0
-			},
-		"es2015-for-of": {
-			"active": 0
-			},
-		"es2015-function-name": {
-			"active": 0
-			},
-		"es2015-literals": {
-			"active": 0
-			},
-		"es2015-modules-amd": {
-			"active": 0
-			},
-		"es2015-modules-commonjs": {
-			"active": 0
-			},
-		"es2015-modules-systemjs": {
-			"active": 0
-			},
-		"es2015-modules-umd": {
-			"active": 0
-			},
-		"es2015-object-super": {
-			"active": 0
-			},
-		"es2015-parameters": {
-			"active": 0
-			},
-		"es2015-shorthand-properties": {
-			"active": 0
-			},
-		"es2015-spread": {
-			"active": 0
-			},
-		"es2015-sticky-regex": {
-			"active": 0
-			},
-		"es2015-template-literals": {
-			"active": 0
-			},
-		"es2015-typeof-symbol": {
-			"active": 0
-			},
-		"es2015-unicode-regex": {
-			"active": 0
-			},
-		"es3-member-expression-literals": {
-			"active": 0
-			},
-		"es3-property-literals": {
-			"active": 0
-			},
-		"es5-property-mutators": {
-			"active": 0
-			},
-		"eval": {
+		"duplicate-keys": {
 			"active": 0
 			},
 		"exponentiation-operator": {
 			"active": 0
 			},
-		"export-extensions": {
+		"export-default-from": {
+			"active": 0
+			},
+		"export-namespace-from": {
 			"active": 0
 			},
 		"external-helpers": {
 			"active": 0
 			},
-		"flow-comments": {
+		"flow-strip-types": {
 			"active": 0
 			},
-		"flow-strip-types": {
+		"for-of": {
 			"active": 0
 			},
 		"function-bind": {
 			"active": 0
 			},
-		"inline-environment-variables": {
+		"function-name": {
+			"active": 0
+			},
+		"function-sent": {
+			"active": 0
+			},
+		"instanceof": {
 			"active": 0
 			},
 		"jscript": {
+			"active": 0
+			},
+		"literals": {
+			"active": 0
+			},
+		"logical-assignment-operators": {
 			"active": 0
 			},
 		"member-expression-literals": {
@@ -4259,7 +4236,28 @@
 		"minify-booleans": {
 			"active": 0
 			},
+		"modules-amd": {
+			"active": 0
+			},
+		"modules-commonjs": {
+			"active": 0
+			},
+		"modules-systemjs": {
+			"active": 0
+			},
+		"modules-umd": {
+			"active": 0
+			},
+		"new-target": {
+			"active": 0
+			},
 		"node-env-inline": {
+			"active": 0
+			},
+		"nullish-coalescing-operator": {
+			"active": 0
+			},
+		"numeric-separator": {
 			"active": 0
 			},
 		"object-assign": {
@@ -4271,7 +4269,25 @@
 		"object-set-prototype-of-to-assign": {
 			"active": 0
 			},
+		"object-super": {
+			"active": 0
+			},
+		"optional-catch-binding": {
+			"active": 0
+			},
+		"optional-chaining": {
+			"active": 0
+			},
+		"parameters": {
+			"active": 0
+			},
+		"pipeline-operator": {
+			"active": 0
+			},
 		"property-literals": {
+			"active": 0
+			},
+		"property-mutators": {
 			"active": 0
 			},
 		"proto-to-assign": {
@@ -4307,53 +4323,46 @@
 		"remove-debugger": {
 			"active": 0
 			},
+		"reserved-words": {
+			"active": 0
+			},
 		"runtime": {
+			"active": 0
+			},
+		"shorthand-properties": {
 			"active": 0
 			},
 		"simplify-comparison-operators": {
 			"active": 0
 			},
+		"spread": {
+			"active": 0
+			},
+		"sticky-regex": {
+			"active": 0
+			},
 		"strict-mode": {
 			"active": 0
 			},
-		"syntax-async-generators": {
+		"template-literals": {
 			"active": 0
 			},
-		"syntax-class-properties": {
+		"throw-expressions": {
 			"active": 0
 			},
-		"syntax-decorators": {
-			"active": 0
-			},
-		"syntax-do-expressions": {
-			"active": 0
-			},
-		"syntax-export-extensions": {
-			"active": 0
-			},
-		"syntax-flow": {
-			"active": 0
-			},
-		"syntax-function-bind": {
-			"active": 0
-			},
-		"syntax-function-sent": {
-			"active": 0
-			},
-		"syntax-jsx": {
-			"active": 0
-			},
-		"syntax-object-rest-spread": {
-			"active": 0
-			},
-		"undeclared-variables-check": {
+		"typeof-symbol": {
 			"active": 0
 			},
 		"undefined-to-void": {
 			"active": 0
+			},
+		"unicode-property-regex": {
+			"active": 0
+			},
+		"unicode-regex": {
+			"active": 0
 			}
 		},
-	"babelPresetType": 193,
 	"babelRetainLines": 0,
 	"bowerAbbreviatedPath": "bower_components",
 	"bowerAutoCreateInfoFile": 1,
@@ -4362,6 +4371,7 @@
 	"bowerSaveDevDependencies": 0,
 	"bowerUseExactVersion": 0,
 	"browserRefreshDelay": 0,
+	"browserslistString": ">0.2%, last 2 versions, Firefox ESR, not dead",
 	"buildFolderActive": 0,
 	"buildFolderName": "build",
 	"cleanBuild": 1,
@@ -4719,6 +4729,10 @@
 			"active": 0,
 			"optionString": "'always', {exceptAfterSingleLine: false}"
 			},
+		"max-classes-per-file": {
+			"active": 0,
+			"optionString": "1"
+			},
 		"max-depth": {
 			"active": 0,
 			"optionString": "{'max': 4}"
@@ -4730,6 +4744,10 @@
 		"max-lines": {
 			"active": 0,
 			"optionString": "{'max': 300, 'skipBlankLines': true, 'skipComments': true}"
+			},
+		"max-lines-per-function": {
+			"active": 0,
+			"optionString": "{'max': 50, 'skipBlankLines': true, 'skipComments': true, 'IIFEs': false}"
 			},
 		"max-nested-callbacks": {
 			"active": 0,
@@ -4775,6 +4793,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-async-promise-executor": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-await-in-loop": {
 			"active": 0,
 			"optionString": ""
@@ -4793,10 +4815,6 @@
 			},
 		"no-case-declarations": {
 			"active": 1,
-			"optionString": ""
-			},
-		"no-catch-shadow": {
-			"active": 0,
 			"optionString": ""
 			},
 		"no-class-assign": {
@@ -4995,9 +5013,13 @@
 			"active": 0,
 			"optionString": "{'ignore': [], 'ignoreArrayIndexes': true, 'enforceConst': false, 'detectObjects': false}"
 			},
+		"no-misleading-character-class": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-mixed-operators": {
 			"active": 0,
-			"optionString": "{'groups': [['+', '-', '*', '\/', '%', '**'], ['&', '|', '^', '~', '<<', '>>', '>>>'], ['==', '!=', '===', '!==', '>', '>=', '<', '<='], ['&&', '||'], ['in', 'instanceof']], 'allowSamePrecedence': true}"
+			"optionString": "{'groups': [['+', '-', '*', '/', '%', '**'], ['&', '|', '^', '~', '<<', '>>', '>>>'], ['==', '!=', '===', '!==', '>', '>=', '<', '<='], ['&&', '||'], ['in', 'instanceof']], 'allowSamePrecedence': true}"
 			},
 		"no-mixed-requires": {
 			"active": 0,
@@ -5351,6 +5373,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"prefer-object-spread": {
+			"active": 0,
+			"optionString": ""
+			},
 		"prefer-promise-reject-errors": {
 			"active": 0,
 			"optionString": "{'allowEmptyReject': false}"
@@ -5379,6 +5405,10 @@
 			"active": 0,
 			"optionString": "'always'"
 			},
+		"require-atomic-updates": {
+			"active": 0,
+			"optionString": ""
+			},
 		"require-await": {
 			"active": 0,
 			"optionString": ""
@@ -5386,6 +5416,10 @@
 		"require-jsdoc": {
 			"active": 0,
 			"optionString": "{'require': {'FunctionDeclaration': true, 'MethodDefinition': false, 'ClassDeclaration': false}}"
+			},
+		"require-unicode-regexp": {
+			"active": 0,
+			"optionString": ""
 			},
 		"require-yield": {
 			"active": 0,
@@ -5441,7 +5475,7 @@
 			},
 		"spaced-comment": {
 			"active": 0,
-			"optionString": "'always', {'line': {'markers': ['\/'], 'exceptions': ['-', '+']}, 'block': {'markers': ['!'], 'exceptions': ['*'], 'balanced': false}}"
+			"optionString": "'always', {'line': {'markers': ['/'], 'exceptions': ['-', '+']}, 'block': {'markers': ['!'], 'exceptions': ['*'], 'balanced': false}}"
 			},
 		"strict": {
 			"active": 0,
@@ -5501,7 +5535,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http:\/\/hatch.build",
+	"externalServerAddress": "http://hatch.build",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",
@@ -5896,7 +5930,6 @@
 		"escapeHTMLCharacters": 0,
 		"noEscapeInAttributes": 0,
 		"outputFormat": 2,
-		"outputStyle": 0,
 		"shouldRunCacheBuster": 0,
 		"useCDATA": 0,
 		"useDoubleQuotes": 0,
@@ -5915,7 +5948,7 @@
 	"languageDefaultsJS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*-min.js",
-		"autoOutputPathRelativePath": "\/min",
+		"autoOutputPathRelativePath": "/min",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 2,
@@ -5947,19 +5980,19 @@
 		"allowInsecureImports": 0,
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.css",
-		"autoOutputPathRelativePath": "..\/css",
+		"autoOutputPathRelativePath": "../css",
 		"autoOutputPathReplace1": "less",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 3,
 		"createSourceMap": 0,
-		"disableJavascript": 0,
+		"enableJavascript": 0,
 		"ieCompatibility": 1,
+		"mathStyle": 0,
 		"outputStyle": 0,
-		"relativeURLS": 0,
+		"rewriteURLStyle": 0,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
 		"strictImports": 0,
-		"strictMath": 0,
 		"strictUnits": 0
 		},
 	"languageDefaultsMARKDOWN": {
@@ -6015,7 +6048,7 @@
 	"languageDefaultsSASS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.css",
-		"autoOutputPathRelativePath": "..\/css",
+		"autoOutputPathRelativePath": "../css",
 		"autoOutputPathReplace1": "sass",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 2,
@@ -6044,7 +6077,7 @@
 	"languageDefaultsSTYLUS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.css",
-		"autoOutputPathRelativePath": "..\/css",
+		"autoOutputPathRelativePath": "../css",
 		"autoOutputPathReplace1": "stylus",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 2,
@@ -6068,36 +6101,70 @@
 	"languageDefaultsTS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.js",
-		"autoOutputPathRelativePath": "\/js",
+		"autoOutputPathRelativePath": "/js",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 2,
 		"createDeclarationFile": 0,
 		"createSourceMap": 0,
-		"jsxMode": 0,
 		"minifyOutput": 0,
 		"moduleResolutionType": 0,
 		"moduleType": 0,
-		"noImplicitAny": 0,
-		"preserveConstEnums": 0,
 		"removeComments": 0,
-		"suppressImplicitAnyIndexErrors": 0,
 		"targetECMAVersion": 0
 		},
 	"languageDefaultsUserDefined": [
 		],
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, /storage/framework/sessions, node_modules",
 	"sourceFolderName": "source",
 	"susyVersion": 3,
+	"tsAllowSyntheticDefaultImports": 0,
+	"tsAllowUnreachableCode": 0,
+	"tsAllowUnusedLabels": 0,
+	"tsAlwaysStrict": 0,
+	"tsDownlevelIteration": 0,
+	"tsEmitBOM": 0,
+	"tsEmitDecoratorMetadata": 0,
+	"tsESModuleInterop": 0,
+	"tsForceConsistentCasingInFileNames": 0,
+	"tsImportHelpers": 0,
+	"tsIsolatedModules": 0,
+	"tsJSXFactory": "React.createElement",
+	"tsKeyofStringsOnly": 0,
+	"tsNoEmitHelpers": 0,
+	"tsNoFallthroughCasesInSwitch": 0,
+	"tsNoImplicitAny": 0,
+	"tsNoImplicitReturns": 0,
+	"tsNoImplicitThis": 0,
+	"tsNoImplicitUseStrict": 0,
+	"tsNoLib": 0,
+	"tsNoResolve": 0,
+	"tsNoStrictGenericChecks": 0,
+	"tsNoUnusedLocals": 0,
+	"tsNoUnusedParameters": 0,
+	"tsPreserveConstEnums": 0,
+	"tsPreserveSymlinks": 0,
+	"tsResolveJsonModule": 0,
+	"tsSkipLibCheck": 0,
+	"tsStrictFunctionTypes": 0,
+	"tsStrictNullChecks": 0,
+	"tsStrictPropertyInitialization": 0,
+	"tsStripInternal": 0,
+	"tsSuppressExcessPropertyErrors": 0,
+	"tsSuppressImplicitAnyIndexErrors": 0,
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {
-		"ascii-only": {
+		"arguments": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"ascii_only": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"bare-returns": {
+		"bare_returns": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -6105,11 +6172,11 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"bracketize": {
+		"braces": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"cascade": {
+		"collapse_vars": {
 			"active": 1,
 			"flagValue": -1
 			},
@@ -6133,6 +6200,10 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"directives": {
+			"active": 1,
+			"flagValue": -1
+			},
 		"drop_console": {
 			"active": 0,
 			"flagValue": -1
@@ -6149,7 +6220,15 @@
 			"active": 1,
 			"flagValue": -1
 			},
+		"expression": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"hoist_funs": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"hoist_props": {
 			"active": 1,
 			"flagValue": -1
 			},
@@ -6157,20 +6236,32 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"if_return": {
+		"html5_comments": {
 			"active": 1,
 			"flagValue": -1
 			},
-		"indent-level": {
+		"ie8": {
 			"active": 0,
-			"flagValue": 4
+			"flagValue": -1
+			},
+		"if_return": {
+			"active": 1,
+			"flagValue": -1
 			},
 		"indent-start": {
 			"active": 0,
 			"flagValue": 0
 			},
-		"inline-script": {
+		"indent_level": {
 			"active": 0,
+			"flagValue": 4
+			},
+		"inline": {
+			"active": 1,
+			"flagValue": 3
+			},
+		"inline_script": {
+			"active": 1,
 			"flagValue": -1
 			},
 		"join_vars": {
@@ -6185,6 +6276,14 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"keep_infinity": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"keep_quoted_props": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"loops": {
 			"active": 1,
 			"flagValue": -1
@@ -6193,12 +6292,20 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"max-line-len": {
+		"max_line_len": {
 			"active": 1,
 			"flagValue": 32000
 			},
 		"negate_iife": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"passes": {
+			"active": 1,
+			"flagValue": 1
+			},
+		"preserve_line": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"properties": {
@@ -6209,12 +6316,20 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"quote-keys": {
+		"quote_keys": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"screw-ie8": {
-			"active": 0,
+		"quote_style": {
+			"active": 1,
+			"flagValue": 0
+			},
+		"reduce_funcs": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"reduce_vars": {
+			"active": 1,
 			"flagValue": -1
 			},
 		"semicolons": {
@@ -6225,23 +6340,51 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"sort": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"space-colon": {
+		"shebang": {
 			"active": 1,
 			"flagValue": -1
 			},
-		"support-ie8": {
-			"active": 0,
+		"side_effects": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"switches": {
+			"active": 1,
 			"flagValue": -1
 			},
 		"toplevel": {
 			"active": 0,
 			"flagValue": -1
 			},
+		"typeofs": {
+			"active": 1,
+			"flagValue": -1
+			},
 		"unsafe": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_comps": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_Function": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_math": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_proto": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_regexp": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_undefined": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -6253,9 +6396,17 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"webkit": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"width": {
 			"active": 1,
 			"flagValue": 80
+			},
+		"wrap_iife": {
+			"active": 0,
+			"flagValue": -1
 			}
 		},
 	"uglifyReservedNamesString": "$",
