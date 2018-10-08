@@ -18,22 +18,22 @@
     var gravityForm = $('#gform_wrapper_9');
 
     $(document).on('input','textarea[data-input-id]', function() {
-      $('#input_39_' + $(this).data('input-id')).text($(this).val());
+      $('#input_40_' + $(this).data('input-id')).text($(this).val());
     });
 
     $( "#input-first-name" ).keyup(function() {
       var value = $( this ).val();
-      $( "#input_39_1_3" ).attr('value', value );
+      $( "#input_40_1_3" ).attr('value', value );
     })
     .keyup();
     $( "#input-last-name" ).keyup(function() {
       var value = $( this ).val();
-      $( "#input_39_1_6" ).attr('value', value );
+      $( "#input_40_1_6" ).attr('value', value );
     })
     .keyup();
     $( "#input-email" ).keyup(function() {
       var value = $( this ).val();
-      $( "#input_39_2" ).attr('value', value );
+      $( "#input_40_2" ).attr('value', value );
     })
     .keyup();
 
