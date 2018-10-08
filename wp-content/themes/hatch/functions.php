@@ -236,7 +236,7 @@ function html5blank_conditional_scripts()
 
     if ( is_page_template( 'template-becauseofhatchsurvey.php' ) ) {
 
-      wp_register_script('becauseofhatch-survey', get_template_directory_uri() . '/assets/js/sections/min/becauseofhatch-survey-min.js', array(), '1.0.0' );
+      wp_register_script('becauseofhatch-survey', get_template_directory_uri() . '/assets/js/sections/min/becauseofhatch-survey-min.js', array(), '1.2' );
       wp_enqueue_script('becauseofhatch-survey'); // Enqueue it!
 
     }
@@ -258,7 +258,7 @@ function html5blank_styles()
 
     //wp_register_style('styles', get_template_directory_uri() . '/assets/css/style.css', array(), filemtime(), 'all');
     //wp_enqueue_style('styles'); // Enqueue it!
-    wp_enqueue_style('styles', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.9', 'all');
+    wp_enqueue_style('styles', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.10', 'all');
 }
 
 // Load HTML5 Blank conditional styles
