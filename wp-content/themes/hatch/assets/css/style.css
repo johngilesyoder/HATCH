@@ -11090,9 +11090,12 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
     margin-top: 0;
   }
 }
-.page-template-template-donate .initiatives h3 {
+.page-template-template-donate .initiatives .initiatives-title {
   margin: 30px 0;
   color: #222;
+}
+.page-template-template-donate .give-wrap .give-card__title {
+  color: #007DA3 !important;
 }
 .page-template-template-donate .give-form-wrap {
   max-width: 600px;
