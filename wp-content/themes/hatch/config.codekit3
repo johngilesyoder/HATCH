@@ -7,7 +7,7 @@
 		"uuidString": "CC79F700-685D-4D96-A6F4-8585433D47F7"
 		}
 	],
-"creatorBuild": "28901",
+"creatorBuild": "28905",
 "files": {
 	"/404.php": {
 		"cB": 0,
@@ -2946,6 +2946,23 @@
 		"sI": 0,
 		"sU": 0
 		},
+	"/assets/less/pages/contribute.less": {
+		"aP": 0,
+		"bl": 0,
+		"eJ": 0,
+		"ft": 1,
+		"ie": 0,
+		"iI": 0,
+		"ma": 1,
+		"mS": 0,
+		"oA": 1,
+		"oAP": "/assets/less/pages/contribute.css",
+		"oF": 0,
+		"oS": 0,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 0
+		},
 	"/assets/less/pages/donate.less": {
 		"aP": 0,
 		"bl": 0,
@@ -3956,6 +3973,13 @@
 		"oAP": "/template-contact.php",
 		"oF": 0
 		},
+	"/template-donate.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/template-donate.php",
+		"oF": 0
+		},
 	"/template-events.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -4134,7 +4158,7 @@
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
-	"alwaysUseExternalServer": 0,
+	"alwaysUseExternalServer": 1,
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
 	"autoprefixerEnableIEGrid": 0,
@@ -5535,7 +5559,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http://localhost:8888",
+	"externalServerAddress": "http://hatch.build",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",
