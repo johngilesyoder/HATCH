@@ -11171,9 +11171,6 @@ textarea.page-template-template-donate .give-form-wrap select {
 .page-template-template-donate .give-form-wrap .give-recurring-donors-choice {
   margin: 0 0 30px;
 }
-.page-template-template-donate .give-form-title {
-  display: none;
-}
 .page-template-template-donate #give-amount {
   border-radius: 0 4px 4px 0 !important;
 }
