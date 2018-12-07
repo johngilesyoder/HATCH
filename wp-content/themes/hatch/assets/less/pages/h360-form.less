@@ -1,0 +1,79 @@
+// survey.less
+// -----------------------------------------------------------------
+
+.page-template-template-h360form {
+  padding-top: 100px;
+  background-color: #F7F8FA;
+  color: #232E42;
+  a {
+    color: #3966BF;
+    &:hover {
+      color: darken(#3966BF, 15%);
+    }
+  }
+  .logo {
+    text-align: center;
+    margin: 0 0 40px;
+  }
+  .form-name {
+    font-size: 21px;
+    text-align: center;
+    font-weight: 500;
+    margin: 0 0 60px;
+  }
+
+  // FORM FOOTER
+  .footer-wrapper {
+    color: #999;
+    font-size: 13px;
+    margin: 60px 0 30px;
+  }
+
+  .gform_footer {
+    text-align: center;
+  }
+  .gform_button {
+    .btn();
+    background-color: #3966BF;
+    height: 50px;
+    line-height: 50px;
+    font-size: 21px !important;
+    font-weight: 500;
+    padding: 0 30px;
+    margin: 30px 0;
+    width: 100% !important;
+    &:hover {
+      background-color: darken(#3966BF, 15%);
+      color: #fff;
+    }
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .page-template-template-h360form {
+    padding-top: 60px;
+    .logo {
+
+      img {
+        height: 90px;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .page-template-template-h360form {
+    padding-top: 30px;
+    .logo {
+      margin: 0 0 30px;
+      img {
+        height: 60px;
+      }
+    }
+  }
+
+}
