@@ -45,7 +45,7 @@
 						<img class="app-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/app-icon-h360.svg">
 					</div>
           <h1 class="form-name">Update your H360 profile</h1>
-          <?php gravity_form( 12, false, false, false, '', true ); ?>
+          <?php gravity_form( 41, false, false, false, '', true ); ?>
         </div>
       </div>
     </div>
