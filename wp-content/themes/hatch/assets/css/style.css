@@ -12697,6 +12697,9 @@ fieldset[disabled] .page-hatch15-donation-matching .give-btn.active {
   text-align: center;
   margin: 0 0 40px;
 }
+.page-template-template-h360form .logo .app-icon {
+  height: 85px;
+}
 .page-template-template-h360form .form-name {
   font-size: 21px;
   text-align: center;

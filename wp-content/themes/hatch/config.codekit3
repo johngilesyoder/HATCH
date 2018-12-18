@@ -925,6 +925,17 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/assets/img/powered-by-h360.png": {
+		"ft": 32768,
+		"iS": 14693,
+		"oA": 0,
+		"oAP": "/assets/img/powered-by-h360.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/assets/img/registration/1.jpeg": {
 		"ft": 16384,
 		"iS": 224112,

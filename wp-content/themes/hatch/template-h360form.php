@@ -42,7 +42,7 @@
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
 					<div class="logo">
-						<img class="app-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/app-icon-h360.svg">
+						<img class="app-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/powered-by-h360.png">
 					</div>
           <h1 class="form-name">Update your H360 profile</h1>
           <?php gravity_form( 41, false, false, false, '', true ); ?>
