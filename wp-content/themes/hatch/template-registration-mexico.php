@@ -30,48 +30,7 @@ $photo_gallery_id = get_field('photo_gallery_id');
     <div class="registration-summary">
       <div class="row">
         <div class="col-md-12">					
-          <p><img class="alignleft size-full wp-image-2884" src="https://hatchexperience.org/wp-content/uploads/2018/12/HATCH-MX-Rodavento-.jpg" alt="" data-wp-pid="2884" srcset="https://hatchexperience.org/wp-content/uploads/2018/12/HATCH-MX-Rodavento-.jpg 1471w, https://hatchexperience.org/wp-content/uploads/2018/12/HATCH-MX-Rodavento--250x79.jpg 250w, https://hatchexperience.org/wp-content/uploads/2018/12/HATCH-MX-Rodavento--700x220.jpg 700w, https://hatchexperience.org/wp-content/uploads/2018/12/HATCH-MX-Rodavento--120x38.jpg 120w, https://hatchexperience.org/wp-content/uploads/2018/12/HATCH-MX-Rodavento--768x241.jpg 768w, https://hatchexperience.org/wp-content/uploads/2018/12/HATCH-MX-Rodavento--800x251.jpg 800w" sizes="(max-width: 1471px) 100vw, 1471px"><b>WHEN: &nbsp;Mar 27 – 31 </b>&nbsp;or <b>April 3 – 7</b>&nbsp;or <strong>April 10-14</strong> &nbsp;You can select your preference during registration.</p>
-          <p><b>WHERE:&nbsp; <a href="http://rodavento.com/">RODAVENTO</a>, an hour and half outside Mexico City.</b></p>
-          <p><b>INCLUDES:</b></p>
-          <ul>
-          <li><span style="font-weight: 400;">4 NIGHTS OF HOSPITALITY</span></li>
-          <li><span style="font-weight: 400;">3 MEALS / DAY</span></li>
-          <li><span style="font-weight: 400;">3 DAYS OF USE OF SALON FOR SESSION AND GARDENS FOR ACTIVITIES</span></li>
-          <li><span style="font-weight: 400;">TAXES, SERVICE AND TRAVELER INSURANCE</span></li>
-          </ul>
-          <p><b>THE FEELING OF RODAVENTO</b></p>
-          <ul>
-          <li style="font-weight: 400;"><span style="font-weight: 400;">An Origin of Nurturing – A beautiful story of place – origins and how it came to be – this place nurtures one of the largest cities in the world, layerd systems</span></li>
-          <li style="font-weight: 400;"><span style="font-weight: 400;">Instills an instant sense of peace – feels like zen</span></li>
-          <li style="font-weight: 400;"><span style="font-weight: 400;">Spaciousness</span></li>
-          <li style="font-weight: 400;"><span style="font-weight: 400;">Water &amp; Running streams</span></li>
-          <li style="font-weight: 400;"><span style="font-weight: 400;">Firepits</span></li>
-          <li style="font-weight: 400;"><span style="font-weight: 400;">Wellness</span></li>
-          <li style="font-weight: 400;"><span style="font-weight: 400;">Meditation</span></li>
-          <li style="font-weight: 400;"><span style="font-weight: 400;">Diversity</span></li>
-          </ul>
-          <p><b>THEMES / CONTENT</b></p>
-          <ul>
-          <li style="font-weight: 400;"><span style="font-weight: 400;">Mastery of Life</span></li>
-          <li style="font-weight: 400;"><span style="font-weight: 400;">Transformation / Growth</span></li>
-          <li style="font-weight: 400;"><span style="font-weight: 400;">Creative Problem Solving</span></li>
-          <li style="font-weight: 400;"><span style="font-weight: 400;">Environment</span></li>
-          <li style="font-weight: 400;"><span style="font-weight: 400;">Nature / Water / Biodiversity</span></li>
-          <li style="font-weight: 400;"><span style="font-weight: 400;">Good Energy</span></li>
-          <li style="font-weight: 400;"><span style="font-weight: 400;">Food &amp; Food systems</span></li>
-          </ul>
-          <p><b>ACTIVITIES</b></p>
-          <ul>
-          <li style="font-weight: 400;"><span style="font-weight: 400;"> Morning Walks</span></li>
-          <li style="font-weight: 400;"><span style="font-weight: 400;"> Yoga</span></li>
-          <li style="font-weight: 400;"><span style="font-weight: 400;"> Meditation</span></li>
-          <li style="font-weight: 400;"><span style="font-weight: 400;"> Spa Treatments</span></li>
-          <li style="font-weight: 400;"><span style="font-weight: 400;"> Archery</span></li>
-          <li style="font-weight: 400;"><span style="font-weight: 400;"> Canoe</span></li>
-          <li style="font-weight: 400;"><span style="font-weight: 400;"> Zipline</span></li>
-          <li style="font-weight: 400;"><span style="font-weight: 400;"> Sailing </span></li>
-          <li style="font-weight: 400;"><span style="font-weight: 400;"> Horseback Riding</span></li>
-          </ul>
+          <?php the_content(); ?>
         </div>
       </div>
     </div>
