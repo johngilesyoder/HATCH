@@ -129,20 +129,6 @@ $photo_gallery_id = get_field('photo_gallery_id');
   <div class="container">
     <!-- FORM ================== -->
     <div class="form-wrapper">
-      <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-
-        <!-- article -->
-        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-          <?php the_content(); ?>
-
-        </article>
-        <!-- /article -->
-
-      <?php endwhile; ?>
-
-      <?php endif; ?>
-
       <?php gravity_form($form_id, false, false, false, '', true); ?>
     </div>
   </div>
