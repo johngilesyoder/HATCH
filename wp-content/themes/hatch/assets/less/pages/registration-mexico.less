@@ -1,0 +1,628 @@
+// registration.less
+// -----------------------------------------------------------------
+
+.page-template-template-registration-mexico {
+  background: #fafafa;
+  .gallery {
+    img {
+      width: 100%;
+    }
+  }
+  .size-full {
+    width: 100%;
+  }
+  // HERO
+  // -----------------------
+  .registration-hero {
+    background-color: #aaa;
+    background-size: cover;
+    background-position: 50%;
+    color: #fff;
+    margin: 0;
+    overflow: hidden;
+    height: 550px;
+    padding: 50px 30px;
+    position: relative;
+    text-align: center;
+    clip-path: polygon(0 0, 1920px 0, 1920px 100%, 0 65%);
+    text-shadow: 0px 0px 15px rgba(15,101,128,0.85);
+    .form-title {
+      display: inline-block;
+      vertical-align: top;
+    }
+    .site-logo {
+      .hatch-logo();
+      font-size: 33px;
+      display: block;
+      line-height: .85em;
+      color: #fff;
+      margin: 0 0 5px;
+      em {
+        font-style: normal;
+        color: @brand-secondary;
+      }
+    }
+    .site-logo-date {
+      font-weight: 500;
+      font-size: 15px;
+      color: #fff;
+    }
+    h1 {
+      margin: 115px 0;
+      font-size: 73px;
+      font-weight: 400;
+    }
+  }
+
+  // BUTTON
+  // -----------------------
+  .registration-button-wrapper {
+    text-align: center;
+    position: relative;
+    top: -140px;
+    z-index: 2000;
+    margin-bottom: -50px;
+  }
+  .btn-registration {
+    font-size: 33px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 15px 80px;
+    border-radius: 10px;
+    #gradient > .vertical(#FFC000, #FFA100);
+    &.is--toggled {
+      display: none;
+    }
+    &:hover {
+      background: #FFA100;
+    }
+  }
+
+  // REGISTRATION CONTENT
+  // -----------------------
+  .registration-content {
+    margin: 0 0 60px;
+    .welcome-section {
+      margin: 30px 0 0;
+    }
+    // Video ---------------
+    .video-wrapper {
+      background: #D8D8D8;
+      border-radius: 10px;
+      padding: 10px;
+    }
+    // Summary ---------------
+    .registration-summary {
+      margin: 0 0 80px;
+      iframe {
+
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.5em;
+      }
+    }
+    .learn-more {
+      margin: 0 0 80px;
+      text-align: center;
+      h3 {
+        display: inline-block;
+        margin: 0 60px 0 0;;
+      }
+      a {
+        font-size: 21px;
+        display: inline-block;
+        &:last-child {
+          border-left: 2px solid #ccc;
+          margin-left: 28px;
+          padding-left: 30px;
+        }
+      }
+    }
+    // Quote ---------------
+    .section-aside {
+      margin: 0 0 80px;
+      .section-aside-title {
+        .make-md-column(3);
+        h3 {
+          font-family: @font-family-klavika-medium;
+          font-size: 60px;
+          margin: 0;
+          line-height: .9em;
+        }
+      }
+      .section-aside-content {
+        .make-md-column(9);
+        .section-aside-content-wrapper {
+          padding-left: 20px;
+          border-left: 6px solid @brand-secondary;
+        }
+      }
+      .quote-block {
+        .quote-statement {
+          font-family: @font-family-archer;
+          font-style: italic;
+          line-height: 1.5em;
+          font-size: 18px;
+          font-weight: 600;
+          margin: 0 0 15px;
+        }
+        cite {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          img {
+            height: 50px;
+            margin: 0 5px;
+          }
+          .cite-person {
+            font-size: 24px;
+          }
+          .cite-organization {
+            text-transform: uppercase;
+            font-size: 14px;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+    // Deductible
+    // ------------------
+    .section-deductible,
+    .section-timing {
+      font-size: 18px;
+      margin: 0 0 80px;
+    }
+
+
+    // Alumni -----------
+    .registration-alumni {
+      margin: 0 0 80px;
+      h3 {
+        font-weight: 400;
+        font-size: 30px;
+        margin: 0 0 30px;
+      }
+      .alumni-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+      }
+      .alumnus {
+        width: 16.667%;
+        text-align: center;
+        img {
+          border-radius: 50%;
+          margin: 0 0 10px;
+          height: 140px;
+        }
+        .alumnus-name {
+          display: block;
+          font-size: 16px;
+          font-weight: 500;
+        }
+        .alumnus-title {
+          display: block;
+        }
+      }
+    }
+  }
+
+  // FOOTER
+  // -----------------------
+  .form-footer {
+    color: #999;
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 30px;
+  }
+
+
+  // FORM STYLING
+  // -----------------------
+  .ui-datepicker-month,
+  .ui-datepicker-year {
+    color: #333 !important;
+  }
+
+  #form-wrapper {
+    display: none;
+  }
+  .form-wrapper {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    width: 615px;
+    padding: 25px 30px;
+    margin: 0 auto 60px;
+    .gform_wrapper {
+      margin: 0;
+      max-width: 100%;
+      div.charleft {
+        color: #888;
+      }
+      input[type="text"],
+      input[type="tel"],
+      input[type="email"],
+      input[type="url"],
+      input[type="number"] {
+        .form-control();
+        height: 40px;
+        font-size: 14px !important;
+        padding: 6px 12px !important;
+      }
+      .gfield_html {
+        max-width: 100%;
+      }
+      .ginput_price {
+        display: none;
+      }
+      select {
+        .form-control();
+        height: 40px;
+      }
+      .gf_progressbar_wrapper {
+        margin-bottom: 25px;
+      }
+      // .gf_progressbar {
+      //   background-image: none;
+      //   line-height: 1em;
+      //   border: 0;
+      //   .progress();
+      //   .gf_progressbar_percentage {
+      //     background-image: none;
+      //     .progress-bar();
+      //     span {
+      //       display: none;
+      //     }
+      //   }
+      // }
+      .validation_message {
+        color: @state-danger-text;
+      }
+      div.validation_error {
+        .alert();
+        .alert-danger();
+        font-weight: normal;
+        margin-top: 25px;
+      }
+      .top_label .gfield_error {
+        width: 100%;
+        border-bottom: 0;
+        textarea.textarea {
+          width: 100%;
+        }
+      }
+      li.gfield.gfield_error {
+        background-color: @state-danger-bg;
+        border-top-color: @state-danger-border;
+        .gfield_label {
+          color: @state-danger-text;
+        }
+        &.gfield_contains_required {
+          padding-left: 10px;
+          padding-right: 10px;
+          margin-top: 0;
+          margin-bottom: 25px !important;
+          div.gfield_description {
+            font-family: @font-family-serif;
+            font-style: italic;
+            font-weight: normal;
+            color: @state-danger-text;
+          }
+        }
+      }
+      .ginput_card_security_code {
+        display: inline-block !important;
+      }
+      .gfield_time_hour,
+      .gfield_time_minute {
+        width: 6.5em;
+        position: relative;
+        i {
+          position: absolute;
+          top: 9px;
+          right: 0;
+          margin-top: 0;
+        }
+      }
+      .gfield_radio,
+      .gfield_checkbox {
+        li {
+          padding-left: 10px !important;
+        }
+        label {
+          font-weight: normal;
+        }
+      }
+      textarea {
+        .form-control();
+        padding: 6px 12px !important;
+        height: 100px;
+        resize: auto;
+      }
+      &.gf_browser_chrome ul.gform_fields li.gfield input[type=radio] {
+        margin-left: .1em !important;
+      }
+      .gfield {
+        .form-group();
+        margin-bottom: 25px;
+      }
+      li.gfield_error div.ginput_complex.ginput_container label {
+        color: @state-danger-text;
+      }
+      .gfield_error .ginput_complex {
+        .ginput_left {
+          width: 49%;
+        }
+        .ginput_right {
+          margin-left: 2%;
+          width: 49%;
+          input[type=text] {
+            width: 100%;
+          }
+        }
+      }
+      .gfield_description {
+        font-style: italic;
+        font-size: 13px;
+      }
+      .top_label {
+        input.medium,
+        select.medium {
+          width: 100% !important;
+        }
+      }
+
+      .ginput_complex {
+        label {
+          font-weight: normal;
+          text-transform: uppercase;
+          font-size: 10px !important;
+        }
+        input[type=text] {
+          width: 100%;
+        }
+        .ginput_full {
+          input[type=text] {
+            width: 100% !important;
+          }
+        }
+        .ginput-right {
+          margin-left: 2%;
+        }
+        &.ginput_container.has_first_name.no_middle_name.has_last_name  {
+          span.name_first {
+            margin-right: 2%;
+          }
+        }
+      }
+      .gfield_required {
+        color: @brand-danger;
+      }
+      .gfield_time_hour,
+      .gfield_time_minute {
+        width: 75px !important;
+        max-width: 100px !important;
+        input[type="number"] {
+          width: 100% !important;
+        }
+        label {
+          font-weight: normal;
+          text-transform: uppercase;
+          font-size: .7em;
+        }
+      }
+      textarea.medium {
+        width: 100%;
+        height: 100px;
+        resize: auto;
+      }
+      .gform_next_button,
+      .gform_previous_button {
+        .btn();
+        height: 50px;
+        line-height: 50px;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 0 65px;
+        margin-top: 30px;
+        color: @link-color;
+        border-color: @link-color;
+        background: #fff;
+        width: 100%;
+        &:hover {
+          background: @link-color;
+          color: #fff;
+        }
+      }
+      .gform_previous_button {
+        .btn();
+        .btn-link();
+        width: auto;
+        margin-bottom: 0 !important;
+        margin-top: 10px;
+        height: auto;
+        padding: 0;
+      }
+      .gform_button {
+        .btn();
+        .btn-secondary();
+        height: 50px;
+        line-height: 50px;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 0 65px;
+        margin-top: 30px;
+        width: 100%;
+      }
+      .gf_coupon_code {
+        width: 50% !important;
+        display: inline-block !important;
+      }
+      #gf_coupon_button {
+        .btn();
+        .btn-default();
+      }
+    }
+  }
+
+}
+
+
+// Responsive: desktop to large desktop
+// --------------------------------------------------
+@media (min-width: 1200px) and (max-width: 1499px) {}
+
+// Responsive: Tablet to desktop
+// --------------------------------------------------
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Responsive: Tablet to desktop
+// --------------------------------------------------
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .page-template-template-registration-mexico,
+  .page-template-template-registration-success {
+    .registration-hero {
+      margin: 0 0 30px;
+      clip-path: none;
+      height: 400px;
+      h1 {
+        margin: 75px 0;
+      }
+    }
+    .registration-button-wrapper {
+      top: 0;
+      margin: 0 0 30px
+    }
+    .registration-content {
+      margin: 0 0 60px;
+      .registration-summary,
+      .section-aside,
+      .registration-alumni {
+        margin: 0 0 50px;
+        .alumnus {
+          width: 33.3333%;
+          margin: 0 0 30px;
+        }
+      }
+      .registration-summary {
+        .video-wrapper {
+          margin: 0 0 30px;
+        }
+      }
+      .section-aside {
+        .section-aside-title {
+          h3 {
+            font-size: 36px;
+            margin: 0 0 15px;
+          }
+        }
+        .section-aside-content {
+          .section-aside-content-wrapper {
+            padding-left: 15px;
+            border-left: 3px solid @brand-secondary;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// Responsive: Landscape phone to desktop/tablet
+// --------------------------------------------------
+@media (max-width: 767px) {
+
+  .page-template-template-registration-mexico,
+  .page-template-template-registration-success {
+    .registration-hero {
+      height: 300px;
+      margin: 0 0 30px;
+      padding: 30px;
+      clip-path: none;
+      h1 {
+        margin: 60px 30px;
+        font-size: 50px;
+      }
+    }
+    .registration-button-wrapper {
+      top: 0;
+      margin: 0 0 30px
+    }
+    .registration-content {
+      .registration-summary,
+      .section-aside,
+      .registration-alumni,
+      .section-deductible,
+      .section-timing {
+        margin: 0 0 40px;
+        .alumnus {
+          width: 50%;
+          margin: 0 0 30px;
+        }
+      }
+      .registration-summary {
+        .video-wrapper {
+          margin: 0 0 30px;
+        }
+      }
+      .section-aside {
+        .section-aside-title {
+          h3 {
+            font-size: 36px;
+            margin: 0 0 15px;
+          }
+        }
+        .section-aside-content {
+          .section-aside-content-wrapper {
+            padding-left: 15px;
+            border-left: 3px solid @brand-secondary;
+          }
+        }
+        .quote-block {
+          .quote-statement {
+            font-size: 16px;
+          }
+        }
+      }
+      .learn-more {
+        h3 {
+          display: block;
+          margin: 0 0 15px;
+        }
+        a {
+          font-size: 18px;
+          display: block;
+          &:last-child {
+            border-left: 0;
+            margin-left: 0;
+            padding-left: 0;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// Responsive: Up to landscape phone
+// --------------------------------------------------
+@media (max-width: 480px) {
+
+  .page-template-template-registration-mexico,
+  .page-template-template-registration-success {
+    .registration-button-wrapper {
+      top: 0;
+      margin: 0 0 30px;
+      padding: 0 15px;
+      .btn-registration {
+        width: 100%;
+        padding: 12px 15px;
+        font-size: 27px;
+      }
+    }
+  }
+
+}
