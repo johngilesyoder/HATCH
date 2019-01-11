@@ -179,7 +179,7 @@
   	<div class="container">
   		<div class="conference-apply">
 	  		<div class="hero-title">
-		  		<h1 class="hatch-logo hero-logo">HATCH<sup><?php the_field('hatch_version', 'option'); ?></sup></h1>
+		  		<h1 class="hatch-logo hero-logo">HATCH</h1>
           <?php if( have_rows('hatch_event', 'option') ): ?>
             
             <div class="events">
