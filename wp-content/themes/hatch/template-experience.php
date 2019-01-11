@@ -4,9 +4,28 @@
   	<div class="hero-content-wrapper">
   		<div class="conference-apply">
 	  		<div class="hero-title">
-		  		<h1 class="hatch-logo hero-logo">HATCH</h1>
-          <span class="hero-date-location"><?php the_field('france_date', 'option'); ?> &nbsp;//&nbsp; Aix Provence, France</span>
-          <span class="hero-date-location"><?php the_field('big_sky_date', 'option'); ?> &nbsp;//&nbsp; Big Sky, Montana <a href="/about/montana/">Learn more &rarr;</a></span>
+          <h1 class="hatch-logo hero-logo">HATCH</h1>
+          <?php if( have_rows('hatch_event', 'option') ): ?>
+            
+            <div class="events">
+            
+              <?php while( have_rows('hatch_event', 'option') ): the_row(); 
+
+                // vars
+                $date = get_sub_field('date');
+                $title = get_sub_field('locationtitle');
+
+                ?>
+
+                <span class="hero-date-location"><?php echo $date; ?> &nbsp;//&nbsp; <?php echo $title; ?></span>
+
+              <?php endwhile; ?>
+            
+            </div>
+
+          <?php endif; ?>
+          <!-- <span class="hero-date-location"><?php the_field('france_date', 'option'); ?> &nbsp;//&nbsp; Aix Provence, France</span>
+          <span class="hero-date-location"><?php the_field('big_sky_date', 'option'); ?> &nbsp;//&nbsp; Big Sky, Montana <a href="/about/montana/">Learn more &rarr;</a></span> -->
 		  	</div>
 		  	<div>
 	  			<a href="/apply" class="btn btn-apply">Invite Only – <strong>Apply Now</strong></a>
@@ -161,8 +180,25 @@
   		<div class="conference-apply">
 	  		<div class="hero-title">
 		  		<h1 class="hatch-logo hero-logo">HATCH<sup><?php the_field('hatch_version', 'option'); ?></sup></h1>
-          <span class="hero-date-location"><?php the_field('france_date', 'option'); ?> &nbsp;//&nbsp; Aix Provence, France</span>
-          <span class="hero-date-location"><?php the_field('big_sky_date', 'option'); ?> &nbsp;//&nbsp; Big Sky, Montana <a href="/about/montana/">Learn more &rarr;</a></span>
+          <?php if( have_rows('hatch_event', 'option') ): ?>
+            
+            <div class="events">
+            
+              <?php while( have_rows('hatch_event', 'option') ): the_row(); 
+
+                // vars
+                $date = get_sub_field('date');
+                $title = get_sub_field('locationtitle');
+
+                ?>
+
+                <span class="hero-date-location"><?php echo $date; ?> &nbsp;//&nbsp; <?php echo $title; ?></span>
+
+              <?php endwhile; ?>
+            
+            </div>
+
+          <?php endif; ?>
         </div>
 		  	<div>
 	  			<a href="/apply" class="btn btn-apply">Invite Only – <strong>Apply Now</strong></a>
