@@ -13701,17 +13701,16 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
 .page-template-template-home .section-conference .conference-info .conference-title span {
   color: #666;
 }
-.page-template-template-home .section-conference .conference-info .conference-date {
+.page-template-template-home .section-conference .conference-info .events {
+  margin: 0 0 20px;
+}
+.page-template-template-home .section-conference .conference-info .event {
   font-family: 'Archer SSm A', 'Archer SSm B';
   font-style: italic;
   color: #000;
   font-weight: 600;
   font-size: 21px;
-  margin-bottom: 20px;
   display: block;
-}
-.page-template-template-home .section-conference .conference-info .conference-date.date-panama {
-  margin-bottom: 0;
 }
 .page-template-template-home .section-conference .conference-info p {
   margin-bottom: 20px;
@@ -13982,7 +13981,7 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
     font-size: 42px;
     line-height: 1em;
   }
-  .page-template-template-home .section-conference .conference-info .conference-date {
+  .page-template-template-home .section-conference .conference-info .event {
     font-size: 18px;
   }
   .page-template-template-home .section-conference .conference-info .conference-actions {
@@ -14086,7 +14085,7 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
     font-size: 42px;
     line-height: 1em;
   }
-  .page-template-template-home .section-conference .conference-info .conference-date {
+  .page-template-template-home .section-conference .conference-info .event {
     font-size: 18px;
   }
   .page-template-template-home .section-conference .conference-info .conference-actions {

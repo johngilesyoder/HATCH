@@ -20,8 +20,25 @@
         </div>
         <div class="conference-info">
           <h3 class="hatch-logo conference-title">HATCH<span><?php the_field('current_hatch_big_sky_year', 'option'); ?></span></h3>
-          <span class="conference-date date-panama"><?php the_field('france_date', 'option'); ?> &nbsp;·&nbsp; Aix-en-Provence, France</span>
-          <span class="conference-date date"><?php the_field('big_sky_date', 'option'); ?> &nbsp;·&nbsp; Big Sky, Montana</span>
+          <?php if( have_rows('hatch_event', 'option') ): ?>
+            
+            <div class="events">
+            
+              <?php while( have_rows('hatch_event', 'option') ): the_row(); 
+
+                // vars
+                $date = get_sub_field('date');
+                $title = get_sub_field('locationtitle');
+
+                ?>
+
+                <span class="event"><?php echo $date; ?> &nbsp;·&nbsp; <?php echo $title; ?></span>
+
+              <?php endwhile; ?>
+            
+            </div>
+
+          <?php endif; ?>
           <p>Imagine gathering up a hundred innovators, artists, makers, creators, educators, risk-takers, influencers, and mavericks… people who want to shake the world by its ankles. And are. Imagine them in a room together, teased out of their cocoons, grids off, brains on, glass flying everywhere:</p>
           <p>A musician tackles a problem for an entrepreneur. A scientist cracks open an idea for music distribution. An ad-guy delivers insight to a health-care play. An inventor, architect, and educator sketching new models for learning…  Imagine that. Or just find yourself at HATCH.</p>
           <div class="conference-actions">
