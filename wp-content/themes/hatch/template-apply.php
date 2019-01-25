@@ -50,8 +50,7 @@
 									<!-- <div class="alert alert-warning">
 										The curation window for HATCH 2017 has now closed. Check back here next year for HATCH 2018.
 									</div> -->
-									<?php $form_id = types_render_field( 'application-form-id', array() ); ?>
-									<?php gravity_form($form_id, false, false, false, '', true); ?>
+									<?php gravity_form(45, false, false, false, '', true); ?>
 								</div>
 							</div>
 
