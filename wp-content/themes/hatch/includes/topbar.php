@@ -1,7 +1,7 @@
-<div class="topbar topbar-apply topbar-bigsky" style="display: none;">
+<div class="topbar topbar-apply topbar-bigsky">
   <div class="container">
-    <p><strong>Hatch 2018:</strong> Apply now to attend or volunteer.</p>
-    <a href="/apply-2018" class="btn btn-secondary btn-apply">Apply Now</a>
+    <p><strong>Hatch 2019:</strong> Apply now to attend or volunteer.</p>
+    <a href="/apply-2019" class="btn btn-secondary btn-apply">Apply Now</a>
     <a href="/partners/support-contribute/" class="btn btn-secondary btn-volunteer">Donate</a>
     <!-- <a href="/volunteer" class="btn btn-secondary btn-volunteer">Volunteer</a> -->
     <!-- <a href="https://filmfreeway.com/festival/HATCHExperience" class="btn btn-secondary btn-filmfreeway">Submit with <img src="<?php echo get_template_directory_uri(); ?>/assets/img/btn-filmfreeway.svg"></a> -->

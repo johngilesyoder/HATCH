@@ -1,24 +1,24 @@
 (function ($, root, undefined) {
 
-	$(function () {
+	// $(function () {
 
-		'use strict';
+	// 	'use strict';
 
-		// DOM ready, take it away
-		window.setInterval(function() {
+	// 	// DOM ready, take it away
+	// 	window.setInterval(function() {
 
-	  var current = new Date();
-	  var expiry = new Date("Sep 29, 2018 23:59:59");
+	//   var current = new Date();
+	//   var expiry = new Date("Sep 29, 2018 23:59:59");
 
-	  if (current.getTime() > expiry.getTime()) {
-	    $('.topbar-apply').hide();
+	//   if (current.getTime() > expiry.getTime()) {
+	//     $('.topbar-apply').hide();
 
-	  } else if (current.getTime() < expiry.getTime()) {
-	    $('.topbar-apply').show();
-	  }
+	//   } else if (current.getTime() < expiry.getTime()) {
+	//     $('.topbar-apply').show();
+	//   }
 
-	}, 0);
+	// }, 0);
 
-	});
+	// });
 
 })(jQuery, this);
