@@ -1291,6 +1291,16 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"/assets/js/scripts-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/js/scripts-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/assets/js/scripts.js": {
 		"ft": 64,
 		"ma": 0,
@@ -3858,6 +3868,13 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "/page-2018-c2-montreal-registration.php",
+		"oF": 0
+		},
+	"/page-2019-c2-montreal-registration.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/page-2019-c2-montreal-registration.php",
 		"oF": 0
 		},
 	"/page-advisory-board.php": {
