@@ -9,7 +9,7 @@ $photo_gallery_id = get_field('photo_gallery_id');
 <!-- ======================== -->
 <header class="registration-hero" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/registration/bg-registration-bigsky.jpg');">
   <div class="form-title">
-    <span class="site-logo"><em>HATCH</em> 2018 Registration</span>
+    <span class="site-logo"><em>HATCH</em> 2019 Registration</span>
     <span class="site-logo-date"><?php the_field('event_date'); ?> &bull; <?php the_field('event_location'); ?></span>
   </div>
   <h1>Welcome.</h1>
@@ -18,7 +18,8 @@ $photo_gallery_id = get_field('photo_gallery_id');
 <!-- BUTTON ================= -->
 <!-- ======================== -->
 <div class="registration-button-wrapper">
-  <span style='display:inline-block;background:#111111;color:#ffffff;font-size:21px;font-weight:500;padding: 10px 30px;border-radius:10px;'>Hello!  We're sorry, but this HATCH Summit Cohort is now full. If you have ay questions contact Yarrow.</span>
+  <button id="registration-toggle" class="btn btn-secondary btn-registration">Register Now</button>
+  <!-- <span style='display:inline-block;background:#111111;color:#ffffff;font-size:21px;font-weight:500;padding: 10px 30px;border-radius:10px;'>Hello!  We're sorry, but this HATCH Summit Cohort is now full. If you have any questions contact Yarrow.</span> -->
 </div>
 
 <!-- REGISTRATION CONTENT === -->
@@ -66,23 +67,27 @@ $photo_gallery_id = get_field('photo_gallery_id');
     </aside>
 
     <div class="section-deductible">
-      <h4>Tax Deductible</h4>
-      <p>You'll be happy to hear that 50% of the cost of your HATCH ticket (at full price) can be claimed by you as a 501C3 tax deductible donation.</p>
-      <p>This is how your $2500 full ticket price breaks down:</p>
+      <h4>All inclusive registration includes:</h4>
       <ul>
-        <li><strong>$1500</strong> - hard costs (includes accommodations, food)</li>
-        <li><strong>$350</strong> - Into scholarship fund for NextGen students, educators, non-profits, etc.</li>
-        <li><strong>$350</strong> - production, transport, A/V, venue rental, entertainment, etc.</li>
-        <li><strong>$300</strong> - to HATCH non-profit overhead / admin</li>
+        <li>4 nights of hospitality</li>
+        <li>Food and drink</li>
+        <li>Entertainment</li>
+        <li>Transport to and from the airport</li>
       </ul>
+    </div>
+
+    <div class="section-deductible">
+      <h4>Cost:</h4>
+      <p><strong>$2500 USD</strong> - All-Inclusive (entertainment, accommodations, food, drink, transport to and from the airport).</p>
+      <p>If the cost is prohibitive, email <a href="mailto:rachel@hatchexperience.org">rachel@hatchexperience.org</a> and we will add you to a wait list in hopes that we can bring in additional sponsorship for partial scholarships (or when a “pay it forward” ticket is gifted).</p>
     </div>
 
     <div class="section-timing">
       <h4>Timing / Travel Details</h4>
-      <p><strong>Arrive:</strong> Wednesday, October 3rd by 4:30PM in to Bozeman Yellowstone International Airport (BZN).</p>
-      <p><strong>Depart:</strong> Sunday, October 7th after 10:30AM from (BZN)</p>
+      <p><strong>Arrive:</strong> Wednesday, October 2nd by 4:00PM in to Bozeman Yellowstone International Airport (BZN).</p>
+      <p><strong>Depart:</strong> Sunday, October 6th in the late morning or early afternoon (BZN)</p>
       <p>If you would you like to stay for an optional decompression and explore the area and Yellowstone National Park with a night spent at a hot springs resort for a night or two, please email <a href="mailto:experience@hatchexperience.org">experience@hatchexperience.org</a></p>
-      <p><strong>Questions?:</strong> email Sara Mo at <a href="mailto:experience@hatchexperience.org">experience@hatchexperience.org</a></p>
+      <p><strong>Questions?:</strong> email Rachel Hicks at <a href="mailto:experience@hatchexperience.org">experience@hatchexperience.org</a></p>
     </div>
 
     <!-- LEARN MORE ============== -->
