@@ -18,8 +18,8 @@ $photo_gallery_id = get_field('photo_gallery_id');
 <!-- BUTTON ================= -->
 <!-- ======================== -->
 <div class="registration-button-wrapper">
-  <button id="registration-toggle" class="btn btn-secondary btn-registration">Register Now</button>
-  <!-- <span style='display:inline-block;background:#111111;color:#ffffff;font-size:21px;font-weight:500;padding: 10px 30px;border-radius:10px;'>Hello!  We're sorry, but this HATCH Summit Cohort is now full. If you have any questions contact Yarrow.</span> -->
+  <!-- <button id="registration-toggle" class="btn btn-secondary btn-registration">Register Now</button> -->
+  <span style='display:inline-block;background:#111111;color:#ffffff;font-size:21px;font-weight:500;padding: 10px 30px;border-radius:10px;'>Hello!  We're sorry, but this HATCH Summit Cohort is now full. If you have any questions contact Yarrow.</span>
 </div>
 
 <!-- REGISTRATION CONTENT === -->
