@@ -78,14 +78,14 @@ $photo_gallery_id = get_field('photo_gallery_id');
 
     <div class="section-deductible">
       <h4>Cost:</h4>
-      <p><strong>$2500 USD</strong> - All-Inclusive (entertainment, accommodations, food, drink, transport to and from the airport).</p>
+      <p><strong>$2750 USD</strong> - All-Inclusive (entertainment, accommodations, food, drink, transport to and from the airport).</p>
       <p>If the cost is prohibitive, email <a href="mailto:rachel@hatchexperience.org">rachel@hatchexperience.org</a> and we will add you to a wait list in hopes that we can bring in additional sponsorship for partial scholarships (or when a “pay it forward” ticket is gifted).</p>
     </div>
 
     <div class="section-timing">
       <h4>Timing / Travel Details</h4>
-      <p><strong>Arrive:</strong> Wednesday, October 2nd by 4:00PM in to Bozeman Yellowstone International Airport (BZN).</p>
-      <p><strong>Depart:</strong> Sunday, October 6th in the late morning or early afternoon (BZN)</p>
+      <p><strong>Arrive:</strong> Wednesday, October 13 by 4:00PM in to Bozeman Yellowstone International Airport (BZN).</p>
+      <p><strong>Depart:</strong> Sunday, October 17 in the late morning or early afternoon (BZN)</p>
       <p>If you would you like to stay for an optional decompression and explore the area and Yellowstone National Park with a night spent at a hot springs resort for a night or two, please email <a href="mailto:experience@hatchexperience.org">experience@hatchexperience.org</a></p>
       <p><strong>Questions?:</strong> email Rachel Hicks at <a href="mailto:experience@hatchexperience.org">experience@hatchexperience.org</a></p>
     </div>
