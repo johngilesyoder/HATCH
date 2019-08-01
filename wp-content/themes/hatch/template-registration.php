@@ -84,7 +84,7 @@ $photo_gallery_id = get_field('photo_gallery_id');
 
     <div class="section-timing">
       <h4>Timing / Travel Details</h4>
-      <p><strong>Arrive:</strong> Wednesday, October 13 by 4:00PM in to Bozeman Yellowstone International Airport (BZN).</p>
+      <p><strong>Arrive:</strong> Thursday, October 13 by 4:00PM in to Bozeman Yellowstone International Airport (BZN).</p>
       <p><strong>Depart:</strong> Sunday, October 17 in the late morning or early afternoon (BZN)</p>
       <p>If you would you like to stay for an optional decompression and explore the area and Yellowstone National Park with a night spent at a hot springs resort for a night or two, please email <a href="mailto:experience@hatchexperience.org">experience@hatchexperience.org</a></p>
       <p><strong>Questions?:</strong> email Rachel Hicks at <a href="mailto:experience@hatchexperience.org">experience@hatchexperience.org</a></p>
