@@ -152,7 +152,7 @@
   	<div class="container">
   		<h2 class="section-title">In the mountains of <span class="hatch-logo">Montana</span>.</h2>
   		<div class="where-summary">
-  			<p><strong>Big Sky, MT</strong> — Consistently named one of the best towns in America by publications such as Outdoor Magazine, Business Week, USA Today, New York Times, Forbes, and more. Big Sky is an epicenter of creativity and innovation, and home to Montana State University. The area is a destination for some of the world’s most coveted fly-fishing, and was the central location for “A River Runs Through It.” Southwest Montana is a cultural and scenic oasis, and is only an hour outside of the stunning Yellowstone Park. Within the last decade, Montana has also become a place where innovators like Bill Gates, Justin Timberlake, Peter Chernin, and Larry Ellison converge to re-calibrate on how they are impacting the world.</p>
+  			<p><strong>Southwest Montana</strong> — Southwest Montana is consistently recognized as one of the best areas to live, work and play in America by magazines such as Outdoor Magazine, Business Week, USA Today, New York Times, and Forbes.  The Kauffman Foundation has ranked Montana as #1 in startup activity four years running, and Montana was recently named the #1 most entrepreneurial state by CNN’s Money Magazine, and three years in a row by the Kaufman Foundation, while Bozeman, home to one of HATCH’s educational partners, Montana State University, thrives on its ability to blend a lifestyle rich in culture, arts and the great outdoors. Learn more about the start-up landscape and Montana Economic Development here.</p>
   		</div>
   		<aside class="section-aside off-the-grid">
   			<div class="row">
