@@ -154,7 +154,7 @@
   		<div class="where-summary">
   			<p><strong>Southwest Montana</strong> — Southwest Montana is consistently recognized as one of the best areas to live, work and play in America by magazines such as Outdoor Magazine, Business Week, USA Today, New York Times, and Forbes.  The Kauffman Foundation has ranked Montana as #1 in startup activity four years running, and Montana was recently named the #1 most entrepreneurial state by CNN’s Money Magazine, and three years in a row by the Kaufman Foundation, while Bozeman, home to one of HATCH’s educational partners, Montana State University, thrives on its ability to blend a lifestyle rich in culture, arts and the great outdoors. Learn more about the start-up landscape and Montana Economic Development here.</p>
   		</div>
-  		<aside class="section-aside off-the-grid">
+  		<!-- <aside class="section-aside off-the-grid">
   			<div class="row">
   				<div class="section-aside-title">
 	  				<h3>Moonlight Basin</h3>
@@ -169,7 +169,7 @@
               </p>
 			  		</div>
 		  		</div>
-  		</aside>
+  		</aside> -->
   		<img class="bubble bubble-1" src="<?php echo get_template_directory_uri(); ?>/assets/img/experience/where-bubble-1.jpg">
   		<img class="bubble bubble-2" src="<?php echo get_template_directory_uri(); ?>/assets/img/experience/where-bubble-2.jpg">
   	</div>
