@@ -67,26 +67,27 @@ $photo_gallery_id = get_field('photo_gallery_id');
     </aside>
 
     <div class="section-deductible">
-      <h4>All inclusive registration includes:</h4>
+      <h4>Cost:</h4>
+      <p><strong>Your HATCH invitiation is free.</strong></p>
+      <p><strong>The fee is to cover hard costs:</strong></p>
+      <p>(We’ve bundled everything for you to make it easy)</p>
       <ul>
         <li>4 nights of hospitality</li>
         <li>Food and drink</li>
         <li>Entertainment</li>
         <li>Transport to and from the airport</li>
       </ul>
-    </div>
-
-    <div class="section-deductible">
-      <h4>Cost:</h4>
-      <p><strong>$2750 USD</strong> - All-Inclusive (entertainment, accommodations, food, drink, transport to and from the airport).</p>
-      <p>If the cost is prohibitive, email <a href="mailto:rachel@hatchexperience.org">rachel@hatchexperience.org</a> and we will add you to a wait list in hopes that we can bring in additional sponsorship for partial scholarships (or when a “pay it forward” ticket is gifted).</p>
+      <p><strong>$2750 USD</strong> (plus flight)</p>
+      <p>HATCH is a non-profit, and these summits work at break-even costs. HATCH writes a check per head for hard costs to the venue and vendors. At other conferences and convenings, attendees must pay for their entrance AND accommodations, food, etc., At HATCH you only cover your hard costs.</p>
+      <p>This is an investment in you (personally and professionally), with tangible outcomes and not simply access to a one-off event, but access to a 15 year global network awaiting on the other side of the summit.</p>
+      <p>If the cost is prohibitive, there are sometimes amazing attendees that select the “pay it forward” option to sponsor an artist, educator, or student. If you are in need of a partial scholarship please email <a href="mailto:cassidy@hatchexperience.org">cassidy@hatchexperience.org</a> and we will add you to a waitlist in hopes that we can bring in additional sponsorship for partial scholarships (or when a “pay it forward” ticket is gifted). If this is the case, we will let you know with three weeks advance notice. We hope to see you at HATCH.</p>
     </div>
 
     <div class="section-timing">
       <h4>Timing / Travel Details</h4>
       <p><strong>Arrive:</strong> Sunday, October 13 by 4:00PM in to Bozeman Yellowstone International Airport (BZN).</p>
       <p><strong>Depart:</strong> Thursday, October 17 in the late morning or early afternoon (BZN)</p>
-      <p>If you would you like to stay for an optional decompression and explore the area and Yellowstone National Park with a night spent at a hot springs resort for a night or two, please email <a href="mailto:experience@hatchexperience.org">experience@hatchexperience.org</a></p>
+      <p>If you would you like to stay for an optional decompression and explore the area and Yellowstone National Park with a night spent at a hot springs resort for a night or two, please email <a href="mailto:cassidy@hatchexperience.org">cassidy@hatchexperience.org</a></p>
       <p><strong>Questions?:</strong> email Cassidy Seckman at <a href="mailto:experience@hatchexperience.org">experience@hatchexperience.org</a></p>
     </div>
 
