@@ -280,6 +280,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/assets/img/default-lab.jpg": {
+		"ft": 16384,
+		"iS": 44305,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/default-lab.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/assets/img/europe-experience/domo.jpg": {
 		"ft": 16384,
 		"iS": 4622,
@@ -3212,6 +3223,23 @@
 		"sI": 0,
 		"sU": 0
 		},
+	"/assets/less/pages/labs-voting.less": {
+		"aP": 0,
+		"bl": 0,
+		"eJ": 0,
+		"ft": 1,
+		"ie": 0,
+		"iI": 0,
+		"ma": 1,
+		"mS": 0,
+		"oA": 1,
+		"oAP": "/assets/less/pages/labs-voting.css",
+		"oF": 0,
+		"oS": 0,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 0
+		},
 	"/assets/less/pages/membership.less": {
 		"aP": 0,
 		"bl": 0,
@@ -4279,6 +4307,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/template-home.php",
+		"oF": 0
+		},
+	"/template-labs-voting.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-labs-voting.php",
 		"oF": 0
 		},
 	"/template-membership.php": {
