@@ -15,25 +15,25 @@
     });
 
 
-    var gravityForm = $('#gform_wrapper_9');
+    var gravityForm = $('#gform_wrapper_53');
 
     $(document).on('input','textarea[data-input-id]', function() {
-      $('#input_40_' + $(this).data('input-id')).text($(this).val());
+      $('#input_53_' + $(this).data('input-id')).text($(this).val());
     });
 
     $( "#input-first-name" ).keyup(function() {
       var value = $( this ).val();
-      $( "#input_40_1_3" ).attr('value', value );
+      $( "#input_53_1_3" ).attr('value', value );
     })
     .keyup();
     $( "#input-last-name" ).keyup(function() {
       var value = $( this ).val();
-      $( "#input_40_1_6" ).attr('value', value );
+      $( "#input_53_1_6" ).attr('value', value );
     })
     .keyup();
     $( "#input-email" ).keyup(function() {
       var value = $( this ).val();
-      $( "#input_40_2" ).attr('value', value );
+      $( "#input_53_2" ).attr('value', value );
     })
     .keyup();
 
