@@ -241,6 +241,13 @@ function html5blank_conditional_scripts()
 
     }
 
+    if ( is_page_template( 'template-labs-voting.php' ) ) {
+
+      wp_register_script('labs-voting', get_template_directory_uri() . '/assets/js/sections/min/labs-voting-min.js', array(), '1.0.0' );
+      wp_enqueue_script('labs-voting'); // Enqueue it!
+
+    }
+
     if ( is_singular( 'reunion' ) ) {
 
       wp_register_script('reunion', get_template_directory_uri() . '/assets/js/sections/min/reunion-min.js', array(), '1.0.0' ); // registration

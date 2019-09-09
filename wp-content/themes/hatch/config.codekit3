@@ -1378,6 +1378,17 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"/assets/js/sections/labs-voting.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/js/sections/labs-voting-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/assets/js/sections/min/becauseofhatch-survey-min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -1409,6 +1420,17 @@
 		"oAP": "/assets/js/sections/min/home-min-min.js",
 		"oF": 0,
 		"sC": 1,
+		"tS": 0
+		},
+	"/assets/js/sections/min/labs-voting-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/js/sections/min/labs-voting-min-min.js",
+		"oF": 0,
+		"sC": 3,
 		"tS": 0
 		},
 	"/assets/js/sections/min/registration-min.js": {
