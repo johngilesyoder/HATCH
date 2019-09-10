@@ -20770,9 +20770,14 @@ fieldset[disabled] .page-template-template-labs-voting .gform_button.active {
   box-shadow: 0 40px 60px -30px rgba(0, 0, 0, 0.4);
   padding: 30px;
   margin: 0 0 30px;
-  width: calc(50% - 15px);
+  width: calc(33.3333% - 15px);
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
+  .page-template-template-labs-voting .lab {
+    width: calc(50% - 15px);
+  }
+}
+@media (max-width: 767px) {
   .page-template-template-labs-voting .lab {
     width: 100%;
   }
@@ -20803,7 +20808,7 @@ fieldset[disabled] .page-template-template-labs-voting .gform_button.active {
   color: #fff;
   position: relative;
   z-index: 2;
-  padding-top: 60px;
+  padding-top: 180px;
 }
 .page-template-template-labs-voting .lab .lab-header .header-content .leader-name {
   display: block;

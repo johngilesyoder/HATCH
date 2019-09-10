@@ -43,7 +43,7 @@
         <div class="row">
           <div class="col-md-8">
             <h1 class="logo">
-              <span class="site-logo">#becauseOfHATCH Labs</span>
+              <span class="site-logo">HATCH Montana Lab Sprints</span>
               <span class="form-name">2019</span>
             </h1>
             <div class="instructions">
@@ -78,7 +78,7 @@
       </div>
     </header>
 
-    <div class="container">
+    <div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12">
 		      <div class="form-wrapper">

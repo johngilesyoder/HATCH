@@ -17,6 +17,14 @@
 		"oAP": "/404.php",
 		"oF": 0
 		},
+	"/archive-lab.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/archive-lab.php",
+		"oF": 0
+		},
 	"/archive.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1420,6 +1428,17 @@
 		"oAP": "/assets/js/sections/min/home-min-min.js",
 		"oF": 0,
 		"sC": 1,
+		"tS": 0
+		},
+	"/assets/js/sections/min/labs-voting-min-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/js/sections/min/labs-voting-min-min-min.js",
+		"oF": 0,
+		"sC": 3,
 		"tS": 0
 		},
 	"/assets/js/sections/min/labs-voting-min.js": {
