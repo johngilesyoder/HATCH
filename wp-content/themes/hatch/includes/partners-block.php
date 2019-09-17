@@ -10,7 +10,7 @@
     <div class="special-partner founding-partner">
       <div class="special-partner-wrapper">
         <img class="partner-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/partner-mountainsky.gif">
-        <span class="partner-title">Founding Partner</span>
+        <span class="partner-title">Hosting Partner</span>
       </div>
     </div>
     <a href="partners/innovation-partner/" class="special-partner innovation-partner">
