@@ -27,17 +27,17 @@
 				      <h3 class="partners-title">Founding/Hosting Partner</h3>
 				      <div class="partner-logos">
 				        <div class="partner">
-				          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/partner-moonlight-basin.png">
+				          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/partner-mountainsky.gif">
 				        </div>
 				        <br>
 				        <a href="/partners/founding-partner-moonlight-basin/">Learn more</a> about our Founding Partner, Moonlight Basin
 				      </div>
 				    </div>
 						<div class="partners partners-innovation">
-				      <h3 class="partners-title">Innovation Partners</h3>
+				      <h3 class="partners-title">Innovation Partner</h3>
 				      <div class="partner-logos">
 				        <a href="/partners/innovation-partner/" class="partner partner-intel">
-				          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/partner-intel-2.png">
+				          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/partner-kauffman.png">
 				        </a>
 				      </div>
 				    </div>

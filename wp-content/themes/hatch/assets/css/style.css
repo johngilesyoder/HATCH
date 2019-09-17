@@ -6881,7 +6881,8 @@ a img.aligncenter {
 }
 .section-partners .special-partner .special-partner-wrapper .partner-logo {
   margin-right: 30px;
-  height: 75px;
+  max-height: 75px;
+  max-width: 160px;
 }
 .section-partners .special-partner .special-partner-wrapper .partner-title {
   font-size: 21px;
@@ -13614,6 +13615,253 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
     float: none !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
+  }
+}
+.page-template-template-hatching-a-better-world .form-header {
+  padding: 30px 15px;
+  margin: 0 0 30px;
+  background: #222222;
+  color: #fff;
+}
+.page-template-template-hatching-a-better-world .form-header p {
+  color: #fff;
+  font-size: 21px;
+}
+.page-template-template-hatching-a-better-world .form-header .logo {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0 30px;
+}
+.page-template-template-hatching-a-better-world .form-header .site-logo {
+  color: #FFB100;
+  font-family: klavika-bold, "Helvetica Neue", Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 60px;
+  display: inline-block;
+  line-height: 0.85em;
+}
+@media (max-width: 992px) {
+  .page-template-template-hatching-a-better-world .form-header .site-logo {
+    font-size: 36px;
+  }
+}
+.page-template-template-hatching-a-better-world .form-header .form-name {
+  font-size: 50px;
+  display: inline-block;
+  font-weight: 300;
+  line-height: 1em;
+  vertical-align: top;
+  margin-top: 3px;
+  letter-spacing: -0.5px;
+  margin-left: 10px;
+}
+@media (max-width: 992px) {
+  .page-template-template-hatching-a-better-world .form-header .form-name {
+    font-size: 30px;
+  }
+}
+.page-template-template-hatching-a-better-world .form-header a {
+  color: #fff;
+  text-decoration: underline;
+}
+.page-template-template-hatching-a-better-world .user-name {
+  margin: 30px 0 60px;
+}
+.page-template-template-hatching-a-better-world .user-name input {
+  margin-bottom: 15px;
+}
+.page-template-template-hatching-a-better-world .form-footer {
+  color: #999;
+  text-align: center;
+  font-size: 13px;
+  margin: 60px 0 30px;
+}
+.page-template-template-hatching-a-better-world .submit-wrapper {
+  background: #222222;
+  color: #fff;
+  padding: 30px 0;
+}
+.page-template-template-hatching-a-better-world .form-wrapper {
+  margin: 0 auto 60px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
+}
+.page-template-template-hatching-a-better-world .form-wrapper .gform_wrapper {
+  margin: 0;
+  max-width: 100%;
+  background: #222222;
+}
+.page-template-template-hatching-a-better-world .form-wrapper .gform_wrapper .validation_message {
+  color: #a94442;
+}
+.page-template-template-hatching-a-better-world .form-wrapper .gform_wrapper div.validation_error {
+  padding: 15px;
+  margin-bottom: 21px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+  font-weight: normal;
+  margin-top: 25px;
+}
+.page-template-template-hatching-a-better-world .form-wrapper .gform_wrapper div.validation_error h4 {
+  margin-top: 0;
+  color: inherit;
+}
+.page-template-template-hatching-a-better-world .form-wrapper .gform_wrapper div.validation_error .alert-link {
+  font-weight: bold;
+}
+.page-template-template-hatching-a-better-world .form-wrapper .gform_wrapper div.validation_error > p,
+.page-template-template-hatching-a-better-world .form-wrapper .gform_wrapper div.validation_error > ul {
+  margin-bottom: 0;
+}
+.page-template-template-hatching-a-better-world .form-wrapper .gform_wrapper div.validation_error > p + p {
+  margin-top: 5px;
+}
+.page-template-template-hatching-a-better-world .form-wrapper .gform_wrapper div.validation_error ul {
+  margin-top: 10px;
+}
+.page-template-template-hatching-a-better-world .form-wrapper .gform_wrapper div.validation_error strong {
+  font-weight: normal;
+}
+.page-template-template-hatching-a-better-world .form-wrapper .gform_wrapper div.validation_error hr {
+  border-top-color: #e4b9c0;
+}
+.page-template-template-hatching-a-better-world .form-wrapper .gform_wrapper div.validation_error .alert-link {
+  color: #843534;
+}
+.page-template-template-hatching-a-better-world .labs {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
+.page-template-template-hatching-a-better-world .lab {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 40px 60px -30px rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  margin: 0 0 30px;
+  width: calc(33.3333% - 15px);
+}
+@media (max-width: 1200px) {
+  .page-template-template-hatching-a-better-world .lab {
+    width: calc(50% - 15px);
+  }
+}
+@media (max-width: 767px) {
+  .page-template-template-hatching-a-better-world .lab {
+    width: 100%;
+  }
+}
+.page-template-template-hatching-a-better-world .lab .lab-header {
+  margin: -30px -30px 30px;
+  padding: 30px;
+  position: relative;
+  background-image: url('../../assets/img/default-lab.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.page-template-template-hatching-a-better-world .lab .lab-header:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.8)));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#cc000000', GradientType=0);
+  z-index: 1;
+}
+.page-template-template-hatching-a-better-world .lab .lab-header .header-content {
+  color: #fff;
+  position: relative;
+  z-index: 2;
+  padding-top: 180px;
+  display: block;
+}
+.page-template-template-hatching-a-better-world .lab .lab-header .header-content:hover {
+  text-decoration: none;
+}
+.page-template-template-hatching-a-better-world .lab .lab-header .header-content .leader-name {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+}
+.page-template-template-hatching-a-better-world .lab .lab-header .header-content .project-name {
+  display: block;
+  font-size: 60px;
+  line-height: 1;
+  font-weight: 700;
+  font-family: 'Tungsten A', 'Tungsten B';
+  text-transform: uppercase;
+}
+.page-template-template-hatching-a-better-world .lab .lab-section {
+  margin: 0 0 15px;
+}
+.page-template-template-hatching-a-better-world .lab .categories ul,
+.page-template-template-hatching-a-better-world .lab .sdgs ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.page-template-template-hatching-a-better-world .lab .categories ul li,
+.page-template-template-hatching-a-better-world .lab .sdgs ul li {
+  display: inline-block;
+  background: rgba(0, 125, 163, 0.2);
+  border-radius: 300px;
+  padding: 2px 10px;
+  margin: 0 10px 10px 0;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700;
+}
+.page-template-template-hatching-a-better-world .lab .links ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.page-template-template-hatching-a-better-world .lab .action {
+  background: #fff;
+  margin: 0 -30px -30px;
+  padding: 30px;
+  border-top: 1px solid #E6E6E6;
+}
+.page-template-template-hatching-a-better-world .lab .action .btn {
+  color: #007DA3;
+  display: block;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+}
+.page-template-template-hatching-a-better-world .lab .action .btn:hover {
+  color: #004256;
+}
+@media (max-width: 767px) {
+  .page-template-template-becauseofhatchsurvey .form-header p {
+    font-size: 18px;
+  }
+  .page-template-template-becauseofhatchsurvey .form-header .logo {
+    margin: 0 0 15px;
+  }
+  .page-template-template-becauseofhatchsurvey .form-header .site-logo {
+    font-size: 30px;
+  }
+  .page-template-template-becauseofhatchsurvey .user-name {
+    margin: 15px 0 30px;
+  }
+  .page-template-template-becauseofhatchsurvey .user-name input {
+    margin-bottom: 10px;
   }
 }
 .page-template-template-home .site-header {

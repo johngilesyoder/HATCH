@@ -17,12 +17,12 @@
 		"oAP": "/404.php",
 		"oF": 0
 		},
-	"/archive-lab.php": {
+	"/archive-story.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/archive-lab.php",
+		"oAP": "/archive-story.php",
 		"oF": 0
 		},
 	"/archive.php": {
@@ -937,6 +937,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/assets/img/partner-kauffman.png": {
+		"ft": 32768,
+		"iS": 5424,
+		"oA": 0,
+		"oAP": "/assets/img/partner-kauffman.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/assets/img/partner-moonlight-basin.png": {
 		"ft": 32768,
 		"iS": 19760,
@@ -947,6 +958,14 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
+		},
+	"/assets/img/partner-mountainsky.gif": {
+		"ft": 4194304,
+		"iS": 18923,
+		"oA": 0,
+		"oAP": "/assets/img/partner-mountainsky.gif",
+		"oF": 0,
+		"opt": 0
 		},
 	"/assets/img/post-format-because-of-hatch.svg": {
 		"ft": 2097152,
@@ -3043,6 +3062,23 @@
 		"sI": 0,
 		"sU": 0
 		},
+	"/assets/less/pages/better-world.less": {
+		"aP": 0,
+		"bl": 0,
+		"eJ": 0,
+		"ft": 1,
+		"ie": 0,
+		"iI": 0,
+		"ma": 1,
+		"mS": 0,
+		"oA": 1,
+		"oAP": "/assets/less/pages/better-world.css",
+		"oF": 0,
+		"oS": 0,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 0
+		},
 	"/assets/less/pages/blog-roll.less": {
 		"aP": 0,
 		"bl": 0,
@@ -3733,6 +3769,14 @@
 		"oAP": "/includes/registration-header.php",
 		"oF": 0
 		},
+	"/includes/story.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/includes/story.php",
+		"oF": 0
+		},
 	"/includes/survey-people.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -4340,6 +4384,14 @@
 		"hM": 0,
 		"oA": 2,
 		"oAP": "/template-hatchback.php",
+		"oF": 0
+		},
+	"/template-hatching-a-better-world.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-hatching-a-better-world.php",
 		"oF": 0
 		},
 	"/template-home.php": {
