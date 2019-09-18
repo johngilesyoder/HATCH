@@ -1,9 +1,9 @@
 <?php
   $project_description = get_field('project_description');
   $leader_name = get_field('leader_name');
-  $categories = get_the_term_list( $post->ID, 'story_category', '<li>', '', '</li>' );
+  $categories = get_the_term_list( $post->ID, 'story_category', '<li>', '</li><li>', '</li>' );
   $categories = strip_tags( $categories, '<li>' );
-  $sdgs = get_the_term_list( $post->ID, 'sdg', '<li>', '', '</li>' );
+  $sdgs = get_the_term_list( $post->ID, 'sdg', '<li>', '</li><li>', '</li>' );
   $sdgs = strip_tags( $sdgs, '<li>' );
 ?>
 
