@@ -2,12 +2,20 @@
 
 	<main role="main">
 
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="because-title">
+            <strong>HATCHing a Better World</strong>
+            <p>HATCH is a network of world-shapers that mentor and mutually invest in one another. As positive things happen #becauseOfHATCH, the tag is used to help track the many projects and initiatives that grow from HATCH to create a global movement for good.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
-          <div class="page-title">
-            <h1><?php the_title(); ?></h1>
-          </div>
 
           <?php if (have_posts()): while (have_posts()) : the_post(); ?>
             <!-- article -->
