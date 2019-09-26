@@ -15,27 +15,108 @@
     });
 
 
-    var gravityForm = $('#gform_wrapper_55');
+    var gravityForm = $('#gform_wrapper_12');
 
     $(document).on('input','textarea[data-input-id]', function() {
-      $('#input_55_' + $(this).data('input-id')).text($(this).val());
+      $('#input_12_' + $(this).data('input-id')).text($(this).val());
     });
 
     $( "#input-first-name" ).keyup(function() {
       var value = $( this ).val();
-      $( "#input_55_1_3" ).attr('value', value );
+      $( "#input_12_2_3" ).attr('value', value );
     })
     .keyup();
     $( "#input-last-name" ).keyup(function() {
       var value = $( this ).val();
-      $( "#input_55_1_6" ).attr('value', value );
+      $( "#input_12_2_6" ).attr('value', value );
     })
     .keyup();
     $( "#input-email" ).keyup(function() {
       var value = $( this ).val();
-      $( "#input_55_2" ).attr('value', value );
+      $( "#input_12_3" ).attr('value', value );
     })
     .keyup();
+
+    $(document).on('click', 'button[data-type="btn-upvote"]', function() {
+      var $this = $(this);
+      var projectName = $this.data('project-title');
+      var $upvote1 = $('#input_12_9');
+      var $upvote2 = $('#input_12_10');
+      var $upvote3 = $('#input_12_11');
+      if ($this.hasClass('is-selected')) {
+        $this.removeClass('is-selected');
+        if ( $upvote1.val() === projectName ) {
+          $upvote1.attr('value', '' );
+        } else if ( $upvote2.val() === projectName ) {
+          $upvote2.attr('value', '' );
+        } else if ( $upvote3.val() === projectName ) {
+          $upvote3.attr('value', '' );
+        }
+      } else {
+        if ( $('button[data-type="btn-upvote"].is-selected').length >= 3 ) {
+          alert('You can only upvote 3, douche.');
+          return;
+        } 
+        $this.addClass('is-selected');
+        if ( $upvote1.val() === '' ) {
+          $upvote1.attr('value', projectName );
+        } else if ( $upvote2.val() === '' ) {
+          $upvote2.attr('value', projectName );
+        } else if ( $upvote3.val() === '' ) {
+          $upvote3.attr('value', projectName );
+        }
+      }
+    });
+
+    $(document).on('click', 'button[data-type="btn-participate"]', function() {
+      var $this = $(this);
+      var projectName = $this.data('project-title');
+      var $input = $('#input_12_8');
+      if ($this.hasClass('is-selected')) {
+        $this.removeClass('is-selected');
+        $input.attr('value', '' );
+      } else {
+        if ( $('button[data-type="btn-participate"].is-selected').length >= 1 ) {
+          alert('You can only select one participation preference, douche.');
+          return;
+        }
+        $this.addClass('is-selected');
+        $input.attr('value', projectName );
+      }
+    });
+
+    $(document).on('submit', '#gform_12', function(evt) {
+      var errors = [];
+      if (!$("#input_12_2_3").val().trim()) {
+        errors.push('First name is required.');
+      }
+      if (!$("#input_12_2_6").val().trim()) {
+        errors.push('Last name is required.');
+      }
+      if (!$("#input_12_3").val().trim()) {
+        errors.push('Email is required.');
+      }
+      if ($('button[data-type="btn-participate"].is-selected').length <= 0) {
+        errors.push('You must select a Lab you\'d prefer to participate in.');
+      }
+      if ($('button[data-type="btn-upvote"].is-selected').length <= 0) {
+        errors.push('You must upvote at least one lab.');
+      }
+
+      if (errors.length > 0) {
+        evt.preventDefault();
+        var $ul = $('<ul>');
+        for (var i = 0; i < errors.length; i++) {
+          $ul.append($('<li>', {
+            text: errors[i]
+          }));
+        }
+        $('#alert-container').html($ul).show();
+        $('#gform_ajax_spinner_12').remove();
+      } else {
+        $('#alert-container').hide();
+      }
+    });
 
   });
 

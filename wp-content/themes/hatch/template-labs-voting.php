@@ -126,13 +126,14 @@
                 </div>
                 <div class="voting">
                   <div class="upvoting">
-                    <button class="btn btn-default"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+                    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
                   </div>
                   <div class="participate-button">
-                    <button class="btn btn-default">Participate</button>
+                    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-participate">Participate</button>
                   </div>
                 </div>
               </div>
+
               <div class="lab">
                 <header class="lab-header" style="background-image: url('http://whm2q99smo2ozzei318jpo8e.wpengine.netdna-cdn.com/wp-content/uploads/2015/08/Niger_Water-Supply-and-Irrigation-Program_main.jpg');">
                   <div class="header-content">
@@ -175,13 +176,14 @@
                 </div>
                 <div class="voting">
                   <div class="upvoting">
-                    <button class="btn btn-default"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+                    <button class="btn btn-default" data-project-title="Space Jam" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
                   </div>
                   <div class="participate-button">
-                    <button class="btn btn-default">Participate</button>
+                    <button class="btn btn-default" data-project-title="Space Jam" data-type="btn-participate">Participate</button>
                   </div>
                 </div>
               </div>
+
               <div class="lab">
                 <header class="lab-header">
                   <div class="header-content">
@@ -224,13 +226,14 @@
                 </div>
                 <div class="voting">
                   <div class="upvoting">
-                    <button class="btn btn-default"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+                    <button class="btn btn-default" data-project-title="Book Of Mormon" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
                   </div>
                   <div class="participate-button">
-                    <button class="btn btn-default">Participate</button>
+                    <button class="btn btn-default" data-project-title="Book Of Mormon" data-type="btn-participate">Participate</button>
                   </div>
                 </div>
               </div>
+
               <div class="lab">
                 <header class="lab-header" style="background-image: url('https://www.humanityfirstcanada.ca/wp-content/uploads/2018/07/water-for-life.jpg');">
                   <div class="header-content">
@@ -273,10 +276,10 @@
                 </div>
                 <div class="voting">
                   <div class="upvoting">
-                    <button class="btn btn-default"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+                    <button class="btn btn-default" data-project-title="Always Sunny" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
                   </div>
                   <div class="participate-button">
-                    <button class="btn btn-default">Participate</button>
+                    <button class="btn btn-default" data-project-title="Always Sunny" data-type="btn-participate">Participate</button>
                   </div>
                 </div>
               </div>
@@ -293,8 +296,11 @@
 					<div class="col-md-8 col-md-offset-2">
 			      <!-- THE GRAVITY FORM -->
 			      <!-- ================ -->
-			      <?php gravity_form( 55, false, false, false, '', true ); ?>
-					</div>
+			      <?php gravity_form( 12, false, false, false, '', true ); ?>
+          </div>
+          <div class="alert alert-danger" id="alert-container" style="display: none;">
+            
+          </div>
 				</div>
 			</div>
       <!-- FOOTER ================= -->
