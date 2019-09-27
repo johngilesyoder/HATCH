@@ -10,8 +10,7 @@
   $contact = get_field('contact_information');
   $categories = get_the_term_list( $post->ID, 'story_category', '<li>', '</li><li>', '</li>' );
   $categories = strip_tags( $categories, '<li>' );
-  $sdgs = get_the_term_list( $post->ID, 'sdg', '<li>', '</li><li>', '</li>' );
-  $sdgs = strip_tags( $sdgs, '<li>' );
+  $sdgs = get_the_terms( $post->ID, 'sdg' );
 ?>
 
 	<main role="main" aria-label="Content">
@@ -61,9 +60,23 @@
               </div>
               <div class="sdgs lab-section">
                 <label>SDGs <small>(UN Sustainable Development Goals)</small></label>
-                <ul>
-                  <?php echo $sdgs; ?>
-                </ul>
+                <div class="sdgs">
+                  <?php foreach ($sdgs as $sdg) : ?>
+                    <?php $sdg_tiles = apply_filters( 'taxonomy-images-get-terms', '', array(
+                        'taxonomy' => 'sdg',
+                          'term_args' => array(
+                            'slug' => $sdg->slug,
+                          )
+                        ) 
+                      );
+                    ?>
+                    <?php foreach( (array) $sdg_tiles as $sdg_tile) : ?>
+                      <div class="sdg">
+                        <?php echo wp_get_attachment_image( $sdg_tile->image_id, 'full', array('class' => 'sdg-image')); ?>
+                      </div>
+                    <?php endforeach; ?>
+                  <?php endforeach; ?>
+                </div>
               </div>
             </div>
             <div class="summary lab-section">

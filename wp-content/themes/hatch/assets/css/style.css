@@ -13727,14 +13727,12 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
 .page-template-template-hatching-a-better-world .lab .lab-section {
   margin: 0 0 15px;
 }
-.page-template-template-hatching-a-better-world .lab .categories ul,
-.page-template-template-hatching-a-better-world .lab .sdgs ul {
+.page-template-template-hatching-a-better-world .lab .categories ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-.page-template-template-hatching-a-better-world .lab .categories ul li,
-.page-template-template-hatching-a-better-world .lab .sdgs ul li {
+.page-template-template-hatching-a-better-world .lab .categories ul li {
   display: inline-block;
   background: rgba(0, 125, 163, 0.2);
   border-radius: 300px;
@@ -13743,6 +13741,17 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
   text-transform: uppercase;
   font-size: 11px;
   font-weight: 700;
+}
+.page-template-template-hatching-a-better-world .lab .sdgs label {
+  display: block;
+}
+.page-template-template-hatching-a-better-world .lab .sdgs .sdg {
+  display: inline-block;
+  margin-right: 10px;
+}
+.page-template-template-hatching-a-better-world .lab .sdgs .sdg img {
+  width: 60px;
+  height: auto;
 }
 .page-template-template-hatching-a-better-world .lab .links ul {
   margin: 0;
@@ -19703,24 +19712,20 @@ fieldset[disabled] .page-template-template-experience-europe .form-wrapper .gfor
   -webkit-box-direction: normal;
           flex-flow: row wrap;
 }
-.single-story .lab .categories,
-.single-story .lab .sdgs {
+.single-story .lab .categories {
   width: 50%;
 }
 @media (max-width: 768px) {
-  .single-story .lab .categories,
-  .single-story .lab .sdgs {
+  .single-story .lab .categories {
     width: 100%;
   }
 }
-.single-story .lab .categories ul,
-.single-story .lab .sdgs ul {
+.single-story .lab .categories ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-.single-story .lab .categories ul li,
-.single-story .lab .sdgs ul li {
+.single-story .lab .categories ul li {
   display: inline-block;
   background: rgba(0, 125, 163, 0.2);
   border-radius: 300px;
@@ -19729,6 +19734,17 @@ fieldset[disabled] .page-template-template-experience-europe .form-wrapper .gfor
   text-transform: uppercase;
   font-size: 11px;
   font-weight: 700;
+}
+.single-story .lab .sdgs label {
+  display: block;
+}
+.single-story .lab .sdgs .sdg {
+  display: inline-block;
+  margin-right: 10px;
+}
+.single-story .lab .sdgs .sdg img {
+  width: 60px;
+  height: auto;
 }
 .single-story .lab .actions {
   display: -webkit-box;
@@ -21177,13 +21193,26 @@ fieldset[disabled] .page-template-template-labs-voting .gform_button.active {
 .page-template-template-labs-voting .lab .lab-section {
   margin: 0 0 15px;
 }
-.page-template-template-labs-voting .lab .categories ul,
+.page-template-template-labs-voting .lab .categories ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.page-template-template-labs-voting .lab .categories ul li {
+  display: inline-block;
+  background: rgba(0, 125, 163, 0.2);
+  border-radius: 300px;
+  padding: 2px 10px;
+  margin: 0 10px 10px 0;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700;
+}
 .page-template-template-labs-voting .lab .sdgs ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-.page-template-template-labs-voting .lab .categories ul li,
 .page-template-template-labs-voting .lab .sdgs ul li {
   display: inline-block;
   background: rgba(0, 125, 163, 0.2);

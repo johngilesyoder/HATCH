@@ -3,8 +3,7 @@
   $leader_name = get_field('leader_name');
   $categories = get_the_term_list( $post->ID, 'story_category', '<li>', '</li><li>', '</li>' );
   $categories = strip_tags( $categories, '<li>' );
-  $sdgs = get_the_term_list( $post->ID, 'sdg', '<li>', '</li><li>', '</li>' );
-  $sdgs = strip_tags( $sdgs, '<li>' );
+  $sdgs = get_the_terms( $post->ID, 'sdg' );
 ?>
 
 <div class="lab">
@@ -26,10 +25,25 @@
   </div>
   <div class="sdgs lab-section">
     <label>SDGs <small>(UN Sustainable Development Goals)</small></label>
-    <ul>
-      <?php echo $sdgs; ?>
-    </ul>
+
+    <?php foreach ($sdgs as $sdg) : ?>
+      <?php $colors = apply_filters( 'taxonomy-images-get-terms', '', array(
+          'taxonomy' => 'sdg',
+            'term_args' => array(
+              'slug' => $sdg->slug,
+            )
+          ) 
+        );
+      ?>
+      <?php foreach( (array) $colors as $color) : ?>
+        <div class="sdg">
+          <?php echo wp_get_attachment_image( $color->image_id, 'full', array('class' => 'sdg-image')); ?>
+        </div>
+      <?php endforeach; ?>
+    <?php endforeach; ?>
+
   </div>
+
   <div class="summary lab-section">
     <label>Summary</label>
     <div><?php the_excerpt(); ?></div>
