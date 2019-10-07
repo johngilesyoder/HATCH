@@ -296,7 +296,7 @@
 					<div class="col-md-8 col-md-offset-2">
 			      <!-- THE GRAVITY FORM -->
 			      <!-- ================ -->
-			      <?php gravity_form( 12, false, false, false, '', true ); ?>
+			      <?php gravity_form( 55, false, false, false, '', true ); ?>
           </div>
           <div class="alert alert-danger" id="alert-container" style="display: none;">
             
