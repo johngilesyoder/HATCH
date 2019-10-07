@@ -43,9 +43,10 @@
         <div class="row">
           <div class="col-md-8">
             <h1 class="logo">
-              <span class="site-logo">HATCH Montana Lab Sprints</span>
+              <span class="site-logo">HATCH Montana Lab Sprints. Vote now!</span>
               <span class="form-name">2019</span>
             </h1>
+            <h2>Upvote 3. Select 1.</h2>
             <div class="instructions">
               <strong>INSTRUCTIONS:</strong> Upvote up to <strong>three</strong> proposed Labs that you'd like to see come to fruition. And don't forget to select <strong>one</strong> Lab that you prefer to participate in. Your selections will help us shape the 2019 HATCH Labs which will be tracked and nurtured at <a href="#">hatch.com/because-of-hatch</a>. After you have made your selections, please submit the form via the button at the bottom of this page. Thanks!
             </div>

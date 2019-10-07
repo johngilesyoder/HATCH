@@ -20909,7 +20909,7 @@ fieldset[disabled] .page-template-template-becauseofhatchsurvey .gform_button.ac
   font-size: 21px;
 }
 .page-template-template-labs-voting .form-header .logo {
-  display: inline-block;
+  display: block;
   vertical-align: top;
   margin: 0 0 30px;
 }
@@ -20918,7 +20918,7 @@ fieldset[disabled] .page-template-template-becauseofhatchsurvey .gform_button.ac
   font-family: klavika-bold, "Helvetica Neue", Arial, sans-serif;
   text-transform: uppercase;
   font-size: 60px;
-  display: inline-block;
+  display: inline;
   line-height: 0.85em;
 }
 @media (max-width: 992px) {
@@ -20928,7 +20928,7 @@ fieldset[disabled] .page-template-template-becauseofhatchsurvey .gform_button.ac
 }
 .page-template-template-labs-voting .form-header .form-name {
   font-size: 50px;
-  display: inline-block;
+  display: inline;
   font-weight: 300;
   line-height: 1em;
   vertical-align: top;
@@ -20939,6 +20939,12 @@ fieldset[disabled] .page-template-template-becauseofhatchsurvey .gform_button.ac
 @media (max-width: 992px) {
   .page-template-template-labs-voting .form-header .form-name {
     font-size: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .page-template-template-labs-voting .form-header .form-name {
+    display: block;
+    margin-left: 0;
   }
 }
 .page-template-template-labs-voting .form-header a {
