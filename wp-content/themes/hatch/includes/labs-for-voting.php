@@ -138,58 +138,6 @@
   </div>
 </div>
 </div><div class="lab">
-<header class="lab-header" style="background-image: url('http://hatchexperience.org/wp-content/uploads/gravity_forms/56-2ee578ede6a1fc8f02425f4105bb73ee/2019/10/SLU-flyer-2019.png , http://hatchexperience.org/wp-content/uploads/gravity_forms/56-2ee578ede6a1fc8f02425f4105bb73ee/2019/10/wacky-group-photo.jpg , http://hatchexperience.org/wp-content/uploads/gravity_forms/56-2ee578ede6a1fc8f02425f4105bb73ee/2019/10/MSPGroup-high-res.jpg');">
-  <div class="header-content">
-    <span class="leader-name">Jocelyn (Josie) Lehrer</span>
-    <span class="project-name">The Men's Story Project</span>
-  </div>
-</header>
-<div class="categories lab-section">
-  <label>Categories</label>
-  <ul>
-    <li class="category">Equity</li>
-  </ul>
-</div>
-<div class="sdgs lab-section">
-  <label>SDGs <small>(UN Sustainable Development Goals)</small></label>
-  <ul>
-    <li class="sdg">Good Health & Wellbeing</li>
-    <li class="sdg">Gender Equality</li>
-    <li class="sdg">Reduced Inequalities</li>
-    <li class="sdg">Peace, Justice & Strong Institutions</li>
-  </ul>
-</div>
-<div class="summary lab-section">
-  <label>Summary</label>
-  <p>The Men's Story Project is a movement-building project which helps groups create and film powerful live events where diverse men publicly share personal stories that challenge masculinity norms and take a stand for healthy masculinities and gender justice. Founded in San Francisco in 2008, it is research-based and revolutionary -- a project where men are basically challenging and dismantling the patriarchy from within, by publicly sharing courageous personal stories that advance health and equality for all.</p>
-</div>
-<div class="project-description lab-section">
-  <label>Project Description</label>
-  <p>The Men's Story Project is a movement-building project which helps groups create and film powerful live events where diverse men publicly share personal stories that challenge masculinity norms and take a stand for healthy masculinities and gender justice. Founded in San Francisco in 2008, it is research-based and revolutionary -- a project where men are basically challenging and dismantling the patriarchy from within, by publicly sharing courageous personal stories that advance health and equality for all.</p>
-</div>
-<div class="project-description lab-section">
-  <label>Challenge</label>
-  <p>The Men's Story Project helps groups around the world create live productions where diverse men share personal stories that take a stand for intersectional gender justice. There have been 28 live productions and two films thus far in the U.S., Canada, Chile, Gaza and the West Bank. It has been formally evaluated and found to have many positive impacts for both audience members & presenters. It's now time for the MSP to scale! How can we help the MSP grow to become a viral social phenomenon, with hundreds or thousands of new local productions each year, catalyzing a mass global emergence of men sharing stories that take a personal, public stand for gender justice?</p>
-</div>
-<div class="project-description lab-section">
-  <label>Needs</label>
-  <p>The Men's Story Project has a sound research foundation and has been piloted a great deal, and is ready to be implemented at scale. For this to happen, it needs: a stronger social media presence; strong publicity/PR strategies and implementation partners; introductions to celebrities, producers and a media distributor to create and film a new live celebrity MSP production; and introductions to funders who would like to help the MSP scale in the U.S. and abroad. Many groups in the U.S. and abroad have expressed interest in creating MSP productions and doing trainings-of-trainers; funding is a primary need for helping that happen.</p>
-</div>
-<div class="links lab-section">
-  <label>Attachments</label>
-  <ul>
-    <li><a href="http://hatchexperience.org/wp-content/uploads/gravity_forms/56-2ee578ede6a1fc8f02425f4105bb73ee/2019/10/Mens-Story-Project-Overview-_-Fall-2019.pdf">http://hatchexperience.org/wp-content/uploads/gravity_forms/56-2ee578ede6a1fc8f02425f4105bb73ee/2019/10/Mens-Story-Project-Overview-_-Fall-2019.pdf</a></li>
-  </ul>
-</div>
-<div class="voting">
-  <div class="upvoting">
-    <button class="btn btn-default" data-project-title="The Men's Story Project" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
-  </div>
-  <div class="participate-button">
-    <button class="btn btn-default" data-project-title="The Men's Story Project" data-type="btn-participate">Participate</button>
-  </div>
-</div>
-</div><div class="lab">
 <header class="lab-header" style="background-image: url('http://hatchexperience.org/wp-content/uploads/gravity_forms/56-2ee578ede6a1fc8f02425f4105bb73ee/2019/10/image.jpg');">
   <div class="header-content">
     <span class="leader-name">Marcus Eriksen</span>
