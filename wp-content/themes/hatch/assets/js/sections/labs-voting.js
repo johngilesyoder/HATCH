@@ -85,7 +85,7 @@
       }
     });
 
-    $(document).on('submit', '#gform_12', function(evt) {
+    $(document).on('submit', '#gform_55', function(evt) {
       var errors = [];
       if (!$("#input_55_1_3").val().trim()) {
         errors.push('First name is required.');
