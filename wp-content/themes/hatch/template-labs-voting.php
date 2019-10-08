@@ -85,7 +85,11 @@
 		      <div class="form-wrapper">
 
             <div class="labs">
-              <div class="lab">
+
+              <?php get_template_part( 'includes/labs-for-voting' ); ?>
+
+              
+              <!-- <div class="lab">
                 <header class="lab-header" style="background-image: url('https://www.humanityfirstcanada.ca/wp-content/uploads/2018/07/water-for-life.jpg');">
                   <div class="header-content">
                     <span class="leader-name">Jeff Ament</span>
@@ -283,7 +287,8 @@
                     <button class="btn btn-default" data-project-title="Always Sunny" data-type="btn-participate">Participate</button>
                   </div>
                 </div>
-              </div>
+              </div> -->
+
             </div>
 
 		      </div>

@@ -21136,6 +21136,7 @@ fieldset[disabled] .page-template-template-labs-voting .gform_button.active {
           flex-flow: row wrap;
   -webkit-box-pack: justify;
           justify-content: space-between;
+  width: 100%;
 }
 .page-template-template-labs-voting .lab {
   background: #fff;
@@ -21144,6 +21145,11 @@ fieldset[disabled] .page-template-template-labs-voting .gform_button.active {
   padding: 30px;
   margin: 0 0 30px;
   width: calc(33.3333% - 15px);
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
 }
 @media (max-width: 1200px) {
   .page-template-template-labs-voting .lab {
@@ -21162,6 +21168,16 @@ fieldset[disabled] .page-template-template-labs-voting .gform_button.active {
   background-image: url('../../assets/img/default-lab.jpg');
   background-size: cover;
   background-position: center;
+  height: 600px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: end;
+          align-items: flex-end;
+}
+@media (max-width: 768px) {
+  .page-template-template-labs-voting .lab .lab-header {
+    height: auto;
+  }
 }
 .page-template-template-labs-voting .lab .lab-header:after {
   content: '';
@@ -21190,7 +21206,7 @@ fieldset[disabled] .page-template-template-labs-voting .gform_button.active {
 }
 .page-template-template-labs-voting .lab .lab-header .header-content .project-name {
   display: block;
-  font-size: 60px;
+  font-size: 42px;
   line-height: 1;
   font-weight: 700;
   font-family: 'Tungsten A', 'Tungsten B';
@@ -21236,7 +21252,7 @@ fieldset[disabled] .page-template-template-labs-voting .gform_button.active {
 }
 .page-template-template-labs-voting .lab .voting {
   background: #fff;
-  margin: 0 -30px -30px;
+  margin: auto -30px -30px;
   padding: 30px;
   border-top: 1px solid #E6E6E6;
   display: -webkit-box;

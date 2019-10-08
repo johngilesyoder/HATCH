@@ -54,7 +54,7 @@
         }
       } else {
         if ( $('button[data-type="btn-upvote"].is-selected').length >= 3 ) {
-          alert('You can only upvote 3, douche.');
+          alert('You can only upvote 3 Labs.');
           return;
         } 
         $this.addClass('is-selected');
@@ -77,7 +77,7 @@
         $input.attr('value', '' );
       } else {
         if ( $('button[data-type="btn-participate"].is-selected').length >= 1 ) {
-          alert('You can only select one participation preference, douche.');
+          alert('You can only select one participation preference.');
           return;
         }
         $this.addClass('is-selected');
