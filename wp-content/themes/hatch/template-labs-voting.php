@@ -304,10 +304,8 @@
 			      <!-- ================ -->
 			      <?php gravity_form( 55, false, false, false, '', true ); ?>
           </div>
-          <div class="alert alert-danger" id="alert-container" style="display: none;">
-            
-          </div>
-				</div>
+        </div>
+        <div class="alert alert-danger" id="alert-container" style="display: none;"></div>
 			</div>
       <!-- FOOTER ================= -->
       <!-- ======================== -->
