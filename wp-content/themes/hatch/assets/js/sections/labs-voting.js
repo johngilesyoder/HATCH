@@ -23,26 +23,26 @@
 
     $( "#input-first-name" ).keyup(function() {
       var value = $( this ).val();
-      $( "#input_55_2_3" ).attr('value', value );
+      $( "#input_55_1_3" ).attr('value', value );
     })
     .keyup();
     $( "#input-last-name" ).keyup(function() {
       var value = $( this ).val();
-      $( "#input_55_2_6" ).attr('value', value );
+      $( "#input_55_1_6" ).attr('value', value );
     })
     .keyup();
     $( "#input-email" ).keyup(function() {
       var value = $( this ).val();
-      $( "#input_55_3" ).attr('value', value );
+      $( "#input_55_2" ).attr('value', value );
     })
     .keyup();
 
     $(document).on('click', 'button[data-type="btn-upvote"]', function() {
       var $this = $(this);
       var projectName = $this.data('project-title');
-      var $upvote1 = $('#input_55_9');
-      var $upvote2 = $('#input_55_10');
-      var $upvote3 = $('#input_55_11');
+      var $upvote1 = $('#input_55_4');
+      var $upvote2 = $('#input_55_5');
+      var $upvote3 = $('#input_55_6');
       if ($this.hasClass('is-selected')) {
         $this.removeClass('is-selected');
         if ( $upvote1.val() === projectName ) {
@@ -71,7 +71,7 @@
     $(document).on('click', 'button[data-type="btn-participate"]', function() {
       var $this = $(this);
       var projectName = $this.data('project-title');
-      var $input = $('#input_55_8');
+      var $input = $('#input_55_3');
       if ($this.hasClass('is-selected')) {
         $this.removeClass('is-selected');
         $input.attr('value', '' );
