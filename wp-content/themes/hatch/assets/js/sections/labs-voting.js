@@ -15,34 +15,34 @@
     });
 
 
-    var gravityForm = $('#gform_wrapper_12');
+    var gravityForm = $('#gform_wrapper_55');
 
     $(document).on('input','textarea[data-input-id]', function() {
-      $('#input_12_' + $(this).data('input-id')).text($(this).val());
+      $('#input_55_' + $(this).data('input-id')).text($(this).val());
     });
 
     $( "#input-first-name" ).keyup(function() {
       var value = $( this ).val();
-      $( "#input_12_2_3" ).attr('value', value );
+      $( "#input_55_2_3" ).attr('value', value );
     })
     .keyup();
     $( "#input-last-name" ).keyup(function() {
       var value = $( this ).val();
-      $( "#input_12_2_6" ).attr('value', value );
+      $( "#input_55_2_6" ).attr('value', value );
     })
     .keyup();
     $( "#input-email" ).keyup(function() {
       var value = $( this ).val();
-      $( "#input_12_3" ).attr('value', value );
+      $( "#input_55_3" ).attr('value', value );
     })
     .keyup();
 
     $(document).on('click', 'button[data-type="btn-upvote"]', function() {
       var $this = $(this);
       var projectName = $this.data('project-title');
-      var $upvote1 = $('#input_12_9');
-      var $upvote2 = $('#input_12_10');
-      var $upvote3 = $('#input_12_11');
+      var $upvote1 = $('#input_55_9');
+      var $upvote2 = $('#input_55_10');
+      var $upvote3 = $('#input_55_11');
       if ($this.hasClass('is-selected')) {
         $this.removeClass('is-selected');
         if ( $upvote1.val() === projectName ) {
@@ -71,7 +71,7 @@
     $(document).on('click', 'button[data-type="btn-participate"]', function() {
       var $this = $(this);
       var projectName = $this.data('project-title');
-      var $input = $('#input_12_8');
+      var $input = $('#input_55_8');
       if ($this.hasClass('is-selected')) {
         $this.removeClass('is-selected');
         $input.attr('value', '' );
@@ -87,13 +87,13 @@
 
     $(document).on('submit', '#gform_12', function(evt) {
       var errors = [];
-      if (!$("#input_12_2_3").val().trim()) {
+      if (!$("#input_55_2_3").val().trim()) {
         errors.push('First name is required.');
       }
-      if (!$("#input_12_2_6").val().trim()) {
+      if (!$("#input_55_2_6").val().trim()) {
         errors.push('Last name is required.');
       }
-      if (!$("#input_12_3").val().trim()) {
+      if (!$("#input_55_3").val().trim()) {
         errors.push('Email is required.');
       }
       if ($('button[data-type="btn-participate"].is-selected').length <= 0) {
@@ -112,7 +112,7 @@
           }));
         }
         $('#alert-container').html($ul).show();
-        $('#gform_ajax_spinner_12').remove();
+        $('#gform_ajax_spinner_55').remove();
       } else {
         $('#alert-container').hide();
       }
