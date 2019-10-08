@@ -35,10 +35,10 @@
 </div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-default" data-project-title="The next mile of corporate sustainability" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-participate">Participate</button>
+    <button class="btn btn-default" data-project-title="The next mile of corporate sustainability" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -79,10 +79,10 @@
 </div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-default" data-project-title="Creating Sustainable Build Projects Within Middle and High School Design Classes While Repurposing Old Materials" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-participate">Participate</button>
+    <button class="btn btn-default" data-project-title="Creating Sustainable Build Projects Within Middle and High School Design Classes While Repurposing Old Materials" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -131,10 +131,10 @@
 </div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-default" data-project-title="The Men's Story Project" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-participate">Participate</button>
+    <button class="btn btn-default" data-project-title="The Men's Story Project" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -183,10 +183,10 @@
 </div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-default" data-project-title="The Men's Story Project" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-participate">Participate</button>
+    <button class="btn btn-default" data-project-title="The Men's Story Project" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -232,10 +232,10 @@ Need funding for start ups to devote their teams to the R & D.</p>
 </div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-default" data-project-title="Bioengineering the new plastic film" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-participate">Participate</button>
+    <button class="btn btn-default" data-project-title="Bioengineering the new plastic film" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -290,10 +290,10 @@ R & D around software/hardware/tech development (we've been at this for 2.5 year
 </div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-default" data-project-title="TEAL Tag" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-participate">Participate</button>
+    <button class="btn btn-default" data-project-title="TEAL Tag" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -340,10 +340,10 @@ We would benefit from assistance in clarifying our narrative and ensuring our vi
 </div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-default" data-project-title="The Bridge Faith Initiative" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-participate">Participate</button>
+    <button class="btn btn-default" data-project-title="The Bridge Faith Initiative" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -381,10 +381,10 @@ We would benefit from assistance in clarifying our narrative and ensuring our vi
 </div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-default" data-project-title="Success Beyond School" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-participate">Participate</button>
+    <button class="btn btn-default" data-project-title="Success Beyond School" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -422,10 +422,10 @@ People who have been labeled as bad or 'other' are those that need and deserve s
 </div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-default" data-project-title="Mama YOUniverse" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-participate">Participate</button>
+    <button class="btn btn-default" data-project-title="Mama YOUniverse" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -482,10 +482,10 @@ People who have been labeled as bad or 'other' are those that need and deserve s
 </div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-default" data-project-title="The Social Good Club" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-participate">Participate</button>
+    <button class="btn btn-default" data-project-title="The Social Good Club" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -521,10 +521,10 @@ People who have been labeled as bad or 'other' are those that need and deserve s
 </div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-default" data-project-title="End Game for Ocean Plastics" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-participate">Participate</button>
+    <button class="btn btn-default" data-project-title="End Game for Ocean Plastics" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -567,10 +567,10 @@ People who have been labeled as bad or 'other' are those that need and deserve s
 </div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-default" data-project-title="The Wonder Barn" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-participate">Participate</button>
+    <button class="btn btn-default" data-project-title="The Wonder Barn" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -613,10 +613,10 @@ People who have been labeled as bad or 'other' are those that need and deserve s
 </div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-default" data-project-title="Women's Skydiving Network Pro Team (WSN Pro Team)" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-participate">Participate</button>
+    <button class="btn btn-default" data-project-title="Women's Skydiving Network Pro Team (WSN Pro Team)" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -652,10 +652,10 @@ People who have been labeled as bad or 'other' are those that need and deserve s
 </div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-default" data-project-title="alley-oop" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-participate">Participate</button>
+    <button class="btn btn-default" data-project-title="alley-oop" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div>

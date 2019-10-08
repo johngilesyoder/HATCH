@@ -87,13 +87,13 @@
 
     $(document).on('submit', '#gform_12', function(evt) {
       var errors = [];
-      if (!$("#input_55_2_3").val().trim()) {
+      if (!$("#input_55_1_3").val().trim()) {
         errors.push('First name is required.');
       }
-      if (!$("#input_55_2_6").val().trim()) {
+      if (!$("#input_55_1_6").val().trim()) {
         errors.push('Last name is required.');
       }
-      if (!$("#input_55_3").val().trim()) {
+      if (!$("#input_55_2").val().trim()) {
         errors.push('Email is required.');
       }
       if ($('button[data-type="btn-participate"].is-selected').length <= 0) {
