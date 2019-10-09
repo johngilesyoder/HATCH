@@ -61,7 +61,7 @@ Standardized tests create a one-size-fits-all, leading to results that cause to 
   </div>
 </div>
 </div><div class="lab">
-<header class="lab-header" style="background-image: url(', http://hatchexperience.org/wp-content/uploads/gravity_forms/56-2ee578ede6a1fc8f02425f4105bb73ee/2019/10/Screen-Shot-2019-10-09-at-12.08.56-PM.png');">
+<header class="lab-header" style="background-image: url('http://hatchexperience.org/wp-content/uploads/gravity_forms/56-2ee578ede6a1fc8f02425f4105bb73ee/2019/10/Screen-Shot-2019-10-09-at-12.08.56-PM.png');">
   <div class="header-content">
     <span class="leader-name">Chiara Cecchini</span>
     <span class="project-name">Future Food Living Labs</span>
@@ -357,7 +357,7 @@ Funding for satellite mission flying a hyperspectral imaging payload coupled wit
   </div>
 </div>
 </div><div class="lab">
-<header class="lab-header" style="background-image: url('http://hatchexperience.org/wp-content/uploads/gravity_forms/56-2ee578ede6a1fc8f02425f4105bb73ee/2019/10/2F9130F7-E039-4B3E-85A5-E7636C253281.jpeg , http://hatchexperience.org/wp-content/uploads/gravity_forms/56-2ee578ede6a1fc8f02425f4105bb73ee/2019/10/5813E687-6A9D-414F-B7A4-5C18FA5F81BD.jpeg');">
+<header class="lab-header" style="background-image: url('http://hatchexperience.org/wp-content/uploads/gravity_forms/56-2ee578ede6a1fc8f02425f4105bb73ee/2019/10/2F9130F7-E039-4B3E-85A5-E7636C253281.jpeg');">
   <div class="header-content">
     <span class="leader-name">Mustafa Turan</span>
     <span class="project-name">SDG Impact Accelerator</span>
