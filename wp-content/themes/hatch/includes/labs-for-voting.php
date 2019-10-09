@@ -525,7 +525,7 @@ My students often have lofty goals as they begin to identify local and global is
 </div>
 <div class="project-description lab-section">
   <label>Challenge</label>
-  <p>How might we grow The Men’s Story Project ‘s presence globally to grow its capacity to catalyze change for men’s gender justice? (or intersectional gender justice)</p>
+  <p>How can we grow The Men’s Story Project‘s activities globally, to support more men and boys in taking a public stand for healthy masculinity and gender equality?</p>
 </div>
 <div class="project-description lab-section">
   <label>Full Project Description</label>
