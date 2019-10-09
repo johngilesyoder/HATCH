@@ -498,7 +498,7 @@ My students often have lofty goals as they begin to identify local and global is
   </div>
 </div>
 </div><div class="lab">
-<header class="lab-header" style="background-image: url('http://hatchexperience.org/wp-content/uploads/gravity_forms/56-2ee578ede6a1fc8f02425f4105bb73ee/2019/10/SLU-group-2018.png');">
+<header class="lab-header" style="background-image: url('https://hatchexperience.org/index.php?gf-download=2019%2F10%2Fmens-story-project.jpg&form-id=56&field-id=14&hash=905b237cdd28856d88ec7adfc87f30404dab1da3aa59654a5241a5d19498d031');">
   <div class="header-content">
     <span class="leader-name">Jocelyn (Josie) Lehrer</span>
     <span class="project-name">The Men's Story Project</span>
