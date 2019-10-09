@@ -434,7 +434,7 @@ Funding for satellite mission flying a hyperspectral imaging payload coupled wit
 </div>
 <div class="project-description lab-section">
   <label>Challenge</label>
-  <p>What would it mean to create an integrated corporate purpose strategy that operationalizes core products and services to make progress towards the Sustainable Development Goals (SDGs) with a specific focus on SDG 12.</p>
+  <p>How might we support and incentivize diverse silos within organizations to move from aligned intention to aligned support and implementation of global sustainable goals?</p>
 </div>
 <div class="project-description lab-section">
   <label>Full Project Description</label>
@@ -478,7 +478,7 @@ Funding for satellite mission flying a hyperspectral imaging payload coupled wit
 </div>
 <div class="project-description lab-section">
   <label>Challenge</label>
-  <p>How might we continue to build authentic design projects with a limited budget and safe working space while tapping into student creativity and solving local and global problems?</p>
+  <p>How might we design classroom programs/projects for teens where the scarcity of a resource inspires sustainable outlook to problem-solving?</p>
 </div>
 <div class="project-description lab-section">
   <label>Full Project Description</label>
@@ -525,7 +525,7 @@ My students often have lofty goals as they begin to identify local and global is
 </div>
 <div class="project-description lab-section">
   <label>Challenge</label>
-  <p>The Men's Story Project helps groups around the world create live productions where diverse men share personal stories that take a stand for intersectional gender justice. There have been 28 live productions and two films thus far in the U.S., Canada, Chile, Gaza and the West Bank. It has been formally evaluated and found to have many positive impacts for both audience members & presenters. It's now time for the MSP to scale! How can we help the MSP grow to become a viral social phenomenon, with hundreds or thousands of new local productions each year, catalyzing a mass global emergence of men sharing stories that take a personal, public stand for gender justice?</p>
+  <p>How might we grow The Men’s Story Project ‘s presence globally to grow its capacity to catalyze change for men’s gender justice? (or intersectional gender justice)</p>
 </div>
 <div class="project-description lab-section">
   <label>Full Project Description</label>
@@ -592,7 +592,7 @@ Twenty-eight MSP live productions have taken place thus far at UC-Berkeley, UC-S
 </div>
 <div class="project-description lab-section">
   <label>Challenge</label>
-  <p>The new material must give companies the shelf life they want (2 years) and really degrade in backyard compost (2months).  Thin film packaging needs to be reinvented to meet these criteria.</p>
+  <p>How might we design and deliver sustainable nonwoven materials for single-use consumer products that have a neutral to positive ecological impact?</p>
 </div>
 <div class="project-description lab-section">
   <label>Full Project Description</label>
