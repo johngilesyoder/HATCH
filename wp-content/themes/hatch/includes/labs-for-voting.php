@@ -26,21 +26,21 @@
 </div>
 <div class="summary lab-section">
   <label>Brief Summary</label>
-  <p>For decades, k-12 education has battled against "teaching to the test", yet through teacher and school ratings, teaching to the test is the norm. For the sake of each precious student and for the sake of having each year a diverse and empowered new generation of citizens, classrooms need to teach to the whole person not a test.</p>
+  <p class="read-more">For decades, k-12 education has battled against "teaching to the test", yet through teacher and school ratings, teaching to the test is the norm. For the sake of each precious student and for the sake of having each year a diverse and empowered new generation of citizens, classrooms need to teach to the whole person not a test.</p>
 </div>
 <div class="project-description lab-section">
   <label>Challenge</label>
-  <p>How might we make our K-12 educational systems produce skilled and confident people for our communities rather than test numbers?</p>
+  <p class="read-more">How might we make our K-12 educational systems produce skilled and confident people for our communities rather than test numbers?</p>
 </div>
 <div class="project-description lab-section">
   <label>Full Project Description</label>
-  <p>Standardized testing is a hot topic. They are great for politicians and affluent communities, but cause a narrowing of society. Teachers are supposed to teach to learning standards, but are under maximum pressure to adjust their instruction for students to produce high and higher standardized test scores. If students produce low or lower standardized test scores, the schools, the teachers, the students, and their ethnic community is stigmatized leading to externalized and internalized oppression. Standardized testing like the SAT, ACT, and State assessment of student performance exams have narrowed classrooms' focus on a limited skillset: English, math, and for some states science and history. Take for example California. California rates high schools only in 11 grade for college and career readiness using only one test, the CAASPP. The CAASPP only evaluates only English and math, and math requires a proficient level of English to understand each math problem. 
+  <p class="read-more">Standardized testing is a hot topic. They are great for politicians and affluent communities, but cause a narrowing of society. Teachers are supposed to teach to learning standards, but are under maximum pressure to adjust their instruction for students to produce high and higher standardized test scores. If students produce low or lower standardized test scores, the schools, the teachers, the students, and their ethnic community is stigmatized leading to externalized and internalized oppression. Standardized testing like the SAT, ACT, and State assessment of student performance exams have narrowed classrooms' focus on a limited skillset: English, math, and for some states science and history. Take for example California. California rates high schools only in 11 grade for college and career readiness using only one test, the CAASPP. The CAASPP only evaluates only English and math, and math requires a proficient level of English to understand each math problem. 
 
 This test focus has caused our students nationwide to receive narrow-minded education, which each year has produced graduates to enter the workforce or college with a single set of skills or less. This continues to cause the narrowing the mind of the American Dream. Each beautiful child enters our mandated education experience with diverse potential that our society needs. Yet, through our current test-focused education system, their diverse potential is standardized to a single set. America is ripe for a change in educational focus but needs a think-tank consisting of leaders from a wide range of disciplines to produce a viable alternative to the narrowing the mind of America and its dream.</p>
 </div>
 <div class="project-description lab-section">
   <label>Needs</label>
-  <p>High-stakes testing dictates national, state, district, school, and classroom practices and content. 
+  <p class="read-more">High-stakes testing dictates national, state, district, school, and classroom practices and content. 
 
 What is a viable alternative to evaluating schools and teachers that not not limit or included standardized tests?
 
@@ -81,19 +81,19 @@ Standardized tests create a one-size-fits-all, leading to results that cause to 
 </div>
 <div class="summary lab-section">
   <label>Brief Summary</label>
-  <p>Food & Beverage companies are having hard time to face young generations who are looking for healthier, more sustainable products. We are building a platform where Food & Beverage companies can globally test new SDG-focused products with young consumers, using a network of food services on university campuses. This foster user and planet-centered design in the food industry, as well as youth involvement into sustainable food innovation.</p>
+  <p class="read-more">Food & Beverage companies are having hard time to face young generations who are looking for healthier, more sustainable products. We are building a platform where Food & Beverage companies can globally test new SDG-focused products with young consumers, using a network of food services on university campuses. This foster user and planet-centered design in the food industry, as well as youth involvement into sustainable food innovation.</p>
 </div>
 <div class="project-description lab-section">
   <label>Challenge</label>
-  <p>How might we enable F&B companies to create and test SDG-focused products, while involving youth?</p>
+  <p class="read-more">How might we enable F&B companies to create and test SDG-focused products, while involving youth?</p>
 </div>
 <div class="project-description lab-section">
   <label>Full Project Description</label>
-  <p>Our planet is falling apart and food has a major role in it. 1/4 of the global greenhouse emission is generated by the food system. The industry is proved to be number one in terms of its impact on the achievement of the UN SDGs. And Generation Z is showing to care. There were over 2,500 youth climate strikes scheduled in over 163 countries on all seven continents: a total of 4 million young people. Veganism and vegetarianism is booming among young generations, as well as their obsession for sustainable ingredients and packaging. But the F&B industry don't have any way to talk with the up-and-coming consumers and craft new products around their needs and feedback. That's why almost 90% of new CPG products fail within two years. We are building a platform where F&B companies can globally test physical products with young consumers, using a network of food vendors on university campuses. We call each location in this network, a Future Food Living Lab. The client specifies locations, goals, type of product and deadlines, and it is matched with local vendors, who will temporarily integrate the products into their existing offering, in exchange for compensation. User interviews are run by local students, allowing them to have an extra source of income while being engaged with food and sustainability topics. This means youth empowerment, working education and food involvement. The client gets access to a dashboard with qualitative and quantitate data about its concept before launching it, being able to fine-tuning the product based on real market feedbacks.</p>
+  <p class="read-more">Our planet is falling apart and food has a major role in it. 1/4 of the global greenhouse emission is generated by the food system. The industry is proved to be number one in terms of its impact on the achievement of the UN SDGs. And Generation Z is showing to care. There were over 2,500 youth climate strikes scheduled in over 163 countries on all seven continents: a total of 4 million young people. Veganism and vegetarianism is booming among young generations, as well as their obsession for sustainable ingredients and packaging. But the F&B industry don't have any way to talk with the up-and-coming consumers and craft new products around their needs and feedback. That's why almost 90% of new CPG products fail within two years. We are building a platform where F&B companies can globally test physical products with young consumers, using a network of food vendors on university campuses. We call each location in this network, a Future Food Living Lab. The client specifies locations, goals, type of product and deadlines, and it is matched with local vendors, who will temporarily integrate the products into their existing offering, in exchange for compensation. User interviews are run by local students, allowing them to have an extra source of income while being engaged with food and sustainability topics. This means youth empowerment, working education and food involvement. The client gets access to a dashboard with qualitative and quantitate data about its concept before launching it, being able to fine-tuning the product based on real market feedbacks.</p>
 </div>
 <div class="project-description lab-section">
   <label>Needs</label>
-  <p>Now that we have a pretty solid POC the project needs:
+  <p class="read-more">Now that we have a pretty solid POC the project needs:
 Raise seed funding
 Grow the phisical locations, opening more FFLL, by signing agreements with local vandors
 Hire a community manager to engage, educate and assist local students
@@ -141,15 +141,15 @@ Digitalize part of the process, by building a web platform to facilitate the int
 </div>
 <div class="summary lab-section">
   <label>Brief Summary</label>
-  <p>Peace in 10,000 Hands was inspired by the belief that art has the power to challenge and inspire. An artists job is not to point at or to highlight an issue. It is to hold a mirror to society and allow the viewers conversation to direct and grow their own narrative.</p>
+  <p class="read-more">Peace in 10,000 Hands was inspired by the belief that art has the power to challenge and inspire. An artists job is not to point at or to highlight an issue. It is to hold a mirror to society and allow the viewers conversation to direct and grow their own narrative.</p>
 </div>
 <div class="project-description lab-section">
   <label>Challenge</label>
-  <p>How might we establish and fuel 'Peace in 10,000 Hands' to amplify its impact now and beyond the length of the project?</p>
+  <p class="read-more">How might we establish and fuel 'Peace in 10,000 Hands' to amplify its impact now and beyond the length of the project?</p>
 </div>
 <div class="project-description lab-section">
   <label>Full Project Description</label>
-  <p>I am photographing an ancient symbol of peace, a single white rose, in the hands of 10,000 people from every country on the planet. The catalyse will be toured globally as a provocative & insightful contemporary art exhibition to challenge and inspire the global conversation for peace. Through the sale of artworks we aim to raise $100 million dollars for charities focused on furthering peace through children’s health, education, safety and wellbeing.
+  <p class="read-more">I am photographing an ancient symbol of peace, a single white rose, in the hands of 10,000 people from every country on the planet. The catalyse will be toured globally as a provocative & insightful contemporary art exhibition to challenge and inspire the global conversation for peace. Through the sale of artworks we aim to raise $100 million dollars for charities focused on furthering peace through children’s health, education, safety and wellbeing.
 
 To date we have photographed 3,500 people in over 50 countries, from celebrities in the Hollywood hills, to people in the slums of India and His Holiness The Dalai Lama who has blessed the rose and project. Every human being has a voice, I aim to make the invisible visible and to give people a stage to align their voice with our collective purpose to evoke the conversation for peace.   
 
@@ -157,7 +157,7 @@ This link (4 mins) will give you feel for it / copy and paste - https://www.yout
 </div>
 <div class="project-description lab-section">
   <label>Needs</label>
-  <p>- Connections of people to photograph - everything flows from this.
+  <p class="read-more">- Connections of people to photograph - everything flows from this.
 - Digital amplification to apply and augment the messaging as far and wide as possible. 
 - Locations for exhibitions in North America. We would like to launch 2 exhibits in North America and 1 exhibit in APAC in 2020</p>
 </div>
@@ -200,19 +200,19 @@ This link (4 mins) will give you feel for it / copy and paste - https://www.yout
 </div>
 <div class="summary lab-section">
   <label>Brief Summary</label>
-  <p>In 2014 I published an original work "Growing Mentor Intelligence - A Field Guide to Mentoring" to change the world by changing the conversation around mentoring.  As a self-published author and independent consultant with no staff, I am challenged to scale my work and its promise for changing the world beyond my social media and word of mouth connections.</p>
+  <p class="read-more">In 2014 I published an original work "Growing Mentor Intelligence - A Field Guide to Mentoring" to change the world by changing the conversation around mentoring.  As a self-published author and independent consultant with no staff, I am challenged to scale my work and its promise for changing the world beyond my social media and word of mouth connections.</p>
 </div>
 <div class="project-description lab-section">
   <label>Challenge</label>
-  <p>How might we socialize to a modern era the ancient wisdom of mentorship and grow the reach and impact of mentor intelligence to create more effective, inclusive and sharable mentorship frameworks</p>
+  <p class="read-more">How might we socialize to a modern era the ancient wisdom of mentorship and grow the reach and impact of mentor intelligence to create more effective, inclusive and sharable mentorship frameworks</p>
 </div>
 <div class="project-description lab-section">
   <label>Full Project Description</label>
-  <p>After 4+ decades in leadership and strategy positions in government, industry and non-profit sectors, I became an author to change the conversation around mentoring to make it more available, more inclusive, more structured, more egalitarian, and more effective.  I wrote "Growing Mentor Intelligence - A Field Guide to Mentoring" in 2014 to start that process combining my passion for mentoring with insights gained from deep and unique experiences in leadership, mentoring and diversity and inclusion. Following publication I began to offer workshops to organizations large and small - this work continues today.  I change the world one mentor relationship at a time, but I know that the real promise of this life work is to scale beyond my social media connections and word of mouth marketing to a global audience that desperately needs to hear this message.  Mentoring is a core enabler to every one of the UN Sustainable Development Goals.</p>
+  <p class="read-more">After 4+ decades in leadership and strategy positions in government, industry and non-profit sectors, I became an author to change the conversation around mentoring to make it more available, more inclusive, more structured, more egalitarian, and more effective.  I wrote "Growing Mentor Intelligence - A Field Guide to Mentoring" in 2014 to start that process combining my passion for mentoring with insights gained from deep and unique experiences in leadership, mentoring and diversity and inclusion. Following publication I began to offer workshops to organizations large and small - this work continues today.  I change the world one mentor relationship at a time, but I know that the real promise of this life work is to scale beyond my social media connections and word of mouth marketing to a global audience that desperately needs to hear this message.  Mentoring is a core enabler to every one of the UN Sustainable Development Goals.</p>
 </div>
 <div class="project-description lab-section">
   <label>Needs</label>
-  <p>I need help with marketing my work to a global audience and scaling my reach to catalyze irreversible momentum in making mentoring part of every culture</p>
+  <p class="read-more">I need help with marketing my work to a global audience and scaling my reach to catalyze irreversible momentum in making mentoring part of every culture</p>
 </div>
 <div class="voting">
   <div class="upvoting">
@@ -258,19 +258,19 @@ This link (4 mins) will give you feel for it / copy and paste - https://www.yout
 </div>
 <div class="summary lab-section">
   <label>Brief Summary</label>
-  <p>The Sustainable Development Goals have been an incredible way to focus the world's efforts on comprehensive set of core problems we must solve to sustain our life support system and improve human well-being.  The challenge with these goals and targets, however, is that there a so many of them.  Within the 17 Goals, there are 171 'Targets' - or root problems to solve. And to make things more difficult, these Targets are interdependent. Solving one may help solve another, or make it worse.  How can we unpack these inter-dependencies to help prioritize - if we only could focus on a few - which subset of Targets, if solved, would have the biggest positive cascading impact on the rest?</p>
+  <p class="read-more">The Sustainable Development Goals have been an incredible way to focus the world's efforts on comprehensive set of core problems we must solve to sustain our life support system and improve human well-being.  The challenge with these goals and targets, however, is that there a so many of them.  Within the 17 Goals, there are 171 'Targets' - or root problems to solve. And to make things more difficult, these Targets are interdependent. Solving one may help solve another, or make it worse.  How can we unpack these inter-dependencies to help prioritize - if we only could focus on a few - which subset of Targets, if solved, would have the biggest positive cascading impact on the rest?</p>
 </div>
 <div class="project-description lab-section">
   <label>Challenge</label>
-  <p>How migh we identify the subset of SDG Targets that have the most leverage - that are solvable, and if solved, have the biggest cascading positive impacts on the rest?</p>
+  <p class="read-more">How migh we identify the subset of SDG Targets that have the most leverage - that are solvable, and if solved, have the biggest cascading positive impacts on the rest?</p>
 </div>
 <div class="project-description lab-section">
   <label>Full Project Description</label>
-  <p>The Sustainable Development Goals have been an incredible way to focus the world's efforts on comprehensive set of core problems we must solve to sustain our life support system and improve human well-being.  The challenge with these goals and targets, however, is that there a so many of them.  Within the 17 Goals, there are 171 'Targets' - or root problems to solve. And to make things more difficult, these Targets are interdependent. Solving one may help solve another, or make it worse.  How can we unpack these inter-dependencies to help prioritize - if we only could focus on a few - which subset of Targets, if solved, would have the biggest positive cascading impact on the rest?</p>
+  <p class="read-more">The Sustainable Development Goals have been an incredible way to focus the world's efforts on comprehensive set of core problems we must solve to sustain our life support system and improve human well-being.  The challenge with these goals and targets, however, is that there a so many of them.  Within the 17 Goals, there are 171 'Targets' - or root problems to solve. And to make things more difficult, these Targets are interdependent. Solving one may help solve another, or make it worse.  How can we unpack these inter-dependencies to help prioritize - if we only could focus on a few - which subset of Targets, if solved, would have the biggest positive cascading impact on the rest?</p>
 </div>
 <div class="project-description lab-section">
   <label>Needs</label>
-  <p>Unpacking the complex inter-dependencies among 171 SDG Targets.</p>
+  <p class="read-more">Unpacking the complex inter-dependencies among 171 SDG Targets.</p>
 </div>
 <div class="voting">
   <div class="upvoting">
@@ -315,15 +315,15 @@ This link (4 mins) will give you feel for it / copy and paste - https://www.yout
 </div>
 <div class="summary lab-section">
   <label>Brief Summary</label>
-  <p>Urban Matrix One is utilizing satellite imagery, machine learning, and unique data sets to quantify the impact of projects concerning the built environment. We are working to utilize appropriate technologies to better inform capital markets to invest in more regenerative and sustainable projects through minimizing risk and making SDG impact explainable.</p>
+  <p class="read-more">Urban Matrix One is utilizing satellite imagery, machine learning, and unique data sets to quantify the impact of projects concerning the built environment. We are working to utilize appropriate technologies to better inform capital markets to invest in more regenerative and sustainable projects through minimizing risk and making SDG impact explainable.</p>
 </div>
 <div class="project-description lab-section">
   <label>Challenge</label>
-  <p>How do we balance growth vs. the health of our planet? How will metacities with 20+ million people sustain themselves? What might circular cities look and feel like? How could artificial intelligence and machine learning transform our energy use? How could informal slums become regenerative urban systems? Could they leapfrog formal cities to become the showcase and platform of the sustainable urban future.</p>
+  <p class="read-more">How do we balance growth vs. the health of our planet? How will metacities with 20+ million people sustain themselves? What might circular cities look and feel like? How could artificial intelligence and machine learning transform our energy use? How could informal slums become regenerative urban systems? Could they leapfrog formal cities to become the showcase and platform of the sustainable urban future.</p>
 </div>
 <div class="project-description lab-section">
   <label>Full Project Description</label>
-  <p>Spawned out of a program hosted by NASA, Urban Matrix One is utilizing satellite imagery, machine learning, and unique data sets to quantify the impact of projects focused on the built environment. We are working to utilize appropriate technologies to better inform capital markets to invest in more regenerative and sustainable projects through minimizing risk and making SDG impact explainable. 
+  <p class="read-more">Spawned out of a program hosted by NASA, Urban Matrix One is utilizing satellite imagery, machine learning, and unique data sets to quantify the impact of projects focused on the built environment. We are working to utilize appropriate technologies to better inform capital markets to invest in more regenerative and sustainable projects through minimizing risk and making SDG impact explainable. 
 
 
 Being able to quantify the impact of complex global systems is a challenge. Through the utilization of current and edge technologies how do we holistically quantify and empower capital markets to make better decisions in identifying and quantifying built environment investments?  
@@ -336,7 +336,7 @@ With remote sensing, computation and space flight becoming less capital intensiv
 </div>
 <div class="project-description lab-section">
   <label>Needs</label>
-  <p>We’re interested in collaborating with people that want to solve sustainable development business problems.  If you have a deep understanding of a problem that has financial / risk implications for business and social and climate implications for the world, we want to dig into it together.
+  <p class="read-more">We’re interested in collaborating with people that want to solve sustainable development business problems.  If you have a deep understanding of a problem that has financial / risk implications for business and social and climate implications for the world, we want to dig into it together.
 
 Introductions to Institutional Investors, Municipalities, NGOs, Project Developers.
 
@@ -381,19 +381,19 @@ Funding for satellite mission flying a hyperspectral imaging payload coupled wit
 </div>
 <div class="summary lab-section">
   <label>Brief Summary</label>
-  <p>Based on a public-private partnership model, SDG Impact Accelerator empowers impact entrepreneurs to provide systemic solutions to complex challenges faced by marginalised and vulnerable groups including displaced populations and refugees.</p>
+  <p class="read-more">Based on a public-private partnership model, SDG Impact Accelerator empowers impact entrepreneurs to provide systemic solutions to complex challenges faced by marginalised and vulnerable groups including displaced populations and refugees.</p>
 </div>
 <div class="project-description lab-section">
   <label>Challenge</label>
-  <p>More than 70 million people are displaced around the world due to wars, economic inequalities and climate change. This number is expected only to increase in the upcoming years. Displaced people face a variety of livelihood challenges. These challenges are complex and their solutions are usually beyond the capacity of individual governments, corporations or international organizations. How can we empower entrepreneurs in providing solutions to the livelihood problems of displaced people by catalyzing cooperation between the relevant stakeholders in an action-oriented and solution-focused way?</p>
+  <p class="read-more">More than 70 million people are displaced around the world due to wars, economic inequalities and climate change. This number is expected only to increase in the upcoming years. Displaced people face a variety of livelihood challenges. These challenges are complex and their solutions are usually beyond the capacity of individual governments, corporations or international organizations. How can we empower entrepreneurs in providing solutions to the livelihood problems of displaced people by catalyzing cooperation between the relevant stakeholders in an action-oriented and solution-focused way?</p>
 </div>
 <div class="project-description lab-section">
   <label>Full Project Description</label>
-  <p>The SDG Impact Accelerator (SDGia) - A global accelerator built by a multi stakeholder platform focusing on empowering “systems entrepreneurs” and innovators who are providing impact at scale. SDGia aims to generate market-creating innovations initially for refugee populations and least-developed country (LDC) populations. We are building a unique model for accelerating the discovery and market entry of solutions for the selected big problems. Market-creating innovations are executed by mobilizing different stakeholders to catalyze systems change.</p>
+  <p class="read-more">The SDG Impact Accelerator (SDGia) - A global accelerator built by a multi stakeholder platform focusing on empowering “systems entrepreneurs” and innovators who are providing impact at scale. SDGia aims to generate market-creating innovations initially for refugee populations and least-developed country (LDC) populations. We are building a unique model for accelerating the discovery and market entry of solutions for the selected big problems. Market-creating innovations are executed by mobilizing different stakeholders to catalyze systems change.</p>
 </div>
 <div class="project-description lab-section">
   <label>Needs</label>
-  <p>We need an experienced CEO to run our Accelerator with vision and passion in multiple international locations with Istanbul as its hub. We are also planning to create an in-house impact investment fund and need ideas and expertise on how best to do it. We need influential Ambassadors to represent SDGia around the world.</p>
+  <p class="read-more">We need an experienced CEO to run our Accelerator with vision and passion in multiple international locations with Istanbul as its hub. We are also planning to create an in-house impact investment fund and need ideas and expertise on how best to do it. We need influential Ambassadors to represent SDGia around the world.</p>
 </div>
 <div class="links lab-section">
   <label>Attachments</label>
@@ -430,19 +430,19 @@ Funding for satellite mission flying a hyperspectral imaging payload coupled wit
 </div>
 <div class="summary lab-section">
   <label>Brief Summary</label>
-  <p>The global need, consumer demand and business value of implementing the Sustainability Design Goals (SDGs) is widely documented but the corporate path to get there is unclear. While corporate purpose has continued to evolve to meet the global demand for change, corporate responses are still very much siloed across corporate foundations, CSR, sustainability, product, innovation, etc.. What would it mean to create an integrated corporate purpose strategy that operationalizes core products and services to make progress towards the Sustainable Development Goals (SDGs) with a specific focus on SDG 12.</p>
+  <p class="read-more">The global need, consumer demand and business value of implementing the Sustainability Design Goals (SDGs) is widely documented but the corporate path to get there is unclear. While corporate purpose has continued to evolve to meet the global demand for change, corporate responses are still very much siloed across corporate foundations, CSR, sustainability, product, innovation, etc.. What would it mean to create an integrated corporate purpose strategy that operationalizes core products and services to make progress towards the Sustainable Development Goals (SDGs) with a specific focus on SDG 12.</p>
 </div>
 <div class="project-description lab-section">
   <label>Challenge</label>
-  <p>How might we support and incentivize diverse silos within organizations to move from aligned intention to aligned support and implementation of global sustainable goals?</p>
+  <p class="read-more">How might we support and incentivize diverse silos within organizations to move from aligned intention to aligned support and implementation of global sustainable goals?</p>
 </div>
 <div class="project-description lab-section">
   <label>Full Project Description</label>
-  <p>The global need, consumer demand and business value of implementing the Sustainability Design Goals (SDGs) is widely documented but the corporate path to get there is unclear. While corporate purpose has continued to evolve to meet the global demand for change, corporate responses are still very much siloed across corporate foundations, CSR, sustainability, product, innovation, etc.. What would it mean to create an integrated corporate purpose strategy that operationalizes core products and services to make progress towards the Sustainable Development Goals (SDGs) with a specific focus on SDG 12.</p>
+  <p class="read-more">The global need, consumer demand and business value of implementing the Sustainability Design Goals (SDGs) is widely documented but the corporate path to get there is unclear. While corporate purpose has continued to evolve to meet the global demand for change, corporate responses are still very much siloed across corporate foundations, CSR, sustainability, product, innovation, etc.. What would it mean to create an integrated corporate purpose strategy that operationalizes core products and services to make progress towards the Sustainable Development Goals (SDGs) with a specific focus on SDG 12.</p>
 </div>
 <div class="project-description lab-section">
   <label>Needs</label>
-  <p>We are currently trying to understand how to bridge the organizational silos between CSR, Sustainability, product, innovation, etc... to create an integrated corporate strategy.</p>
+  <p class="read-more">We are currently trying to understand how to bridge the organizational silos between CSR, Sustainability, product, innovation, etc... to create an integrated corporate strategy.</p>
 </div>
 <div class="voting">
   <div class="upvoting">
@@ -474,20 +474,20 @@ Funding for satellite mission flying a hyperspectral imaging payload coupled wit
 </div>
 <div class="summary lab-section">
   <label>Brief Summary</label>
-  <p>I have been tasked with creating authentic lessons, activities, and projects for a  Design class in middle and high school.  Currently, my design limitations involve workspace and materials.</p>
+  <p class="read-more">I have been tasked with creating authentic lessons, activities, and projects for a  Design class in middle and high school.  Currently, my design limitations involve workspace and materials.</p>
 </div>
 <div class="project-description lab-section">
   <label>Challenge</label>
-  <p>How might we design classroom programs/projects for teens where the scarcity of a resource inspires sustainable outlook to problem-solving?</p>
+  <p class="read-more">How might we design classroom programs/projects for teens where the scarcity of a resource inspires sustainable outlook to problem-solving?</p>
 </div>
 <div class="project-description lab-section">
   <label>Full Project Description</label>
-  <p>In my current teaching assignment, I am tasked with creating authentic lessons, activities, and projects for a  Design class in middle and high school.  Currently, I am facing some design limitations that involve workspace and materials. Specifically, we are struggling with creating a safe workspace to create, build and follow through with design projects. I am also attempting to problem solve with a very limited public school budget and a demanding Design Technology curriculum and expectations set forth through an International Baccalaureate program in our district.  
+  <p class="read-more">In my current teaching assignment, I am tasked with creating authentic lessons, activities, and projects for a  Design class in middle and high school.  Currently, I am facing some design limitations that involve workspace and materials. Specifically, we are struggling with creating a safe workspace to create, build and follow through with design projects. I am also attempting to problem solve with a very limited public school budget and a demanding Design Technology curriculum and expectations set forth through an International Baccalaureate program in our district.  
 My students often have lofty goals as they begin to identify local and global issues/problems that they want to solve.  With limited space and materials, we often bog down when it comes to building prototypes or canvassing solutions to change.  After demonstrating my success with students and teaching for 20 years in the district, I have gained the support of the administration and school board, but their hands are tied as well with budgeting and creating a space for future goals. Another component of this success, I believe, depends on building working relationships and partnerships with local and global professionals and organizations.   How might we continue to build authentic design projects with a limited budget and safe working space while tapping into student creativity and solving local and global problems? Bottom line... how do we make our classrooms representative of the working world by solving authentic problems and creating a collaborative world of change?</p>
 </div>
 <div class="project-description lab-section">
   <label>Needs</label>
-  <p>Safe workspace to create, build and follow through with design projects.  Very limited public school budget. Demanding Design Technology curriculum and expectations set forth through an International Baccalaureate program.</p>
+  <p class="read-more">Safe workspace to create, build and follow through with design projects.  Very limited public school budget. Demanding Design Technology curriculum and expectations set forth through an International Baccalaureate program.</p>
 </div>
 <div class="voting">
   <div class="upvoting">
@@ -521,15 +521,15 @@ My students often have lofty goals as they begin to identify local and global is
 </div>
 <div class="summary lab-section">
   <label>Brief Summary</label>
-  <p>The Men's Story Project is a movement-building project which helps groups create and film powerful live events where diverse men publicly share personal stories that challenge masculinity norms and take a stand for healthy masculinities and gender justice. Founded in San Francisco in 2008, it is research-based and revolutionary -- a project where men are basically challenging and dismantling the patriarchy from within, by publicly sharing courageous personal stories that advance health and equality for all.</p>
+  <p class="read-more">The Men's Story Project is a movement-building project which helps groups create and film powerful live events where diverse men publicly share personal stories that challenge masculinity norms and take a stand for healthy masculinities and gender justice. Founded in San Francisco in 2008, it is research-based and revolutionary -- a project where men are basically challenging and dismantling the patriarchy from within, by publicly sharing courageous personal stories that advance health and equality for all.</p>
 </div>
 <div class="project-description lab-section">
   <label>Challenge</label>
-  <p>How can we grow The Men’s Story Project‘s activities globally, to support more men and boys in taking a public stand for healthy masculinity and gender equality?</p>
+  <p class="read-more">How can we grow The Men’s Story Project‘s activities globally, to support more men and boys in taking a public stand for healthy masculinity and gender equality?</p>
 </div>
 <div class="project-description lab-section">
   <label>Full Project Description</label>
-  <p>The Challenge: In the U.S. and around the world, social ideas about masculinity contribute to challenges including men's violence against women and other men, bullying, homo/transphobia, HIV/AIDS, men's reduced seeking of physical and mental health care, and gender inequality. But public dialogue on masculinity is still quite rare – people often don't realize there's much to talk about, or that can be changed, as to how boys and men are socialized to be "men." 
+  <p class="read-more">The Challenge: In the U.S. and around the world, social ideas about masculinity contribute to challenges including men's violence against women and other men, bullying, homo/transphobia, HIV/AIDS, men's reduced seeking of physical and mental health care, and gender inequality. But public dialogue on masculinity is still quite rare – people often don't realize there's much to talk about, or that can be changed, as to how boys and men are socialized to be "men." 
 
 The Men's Story Project (MSP) was founded by Dr. Jocelyn Lehrer in 2008 to address this need. The MSP helps groups create live story-sharing events, documentaries and social media where men and boys publicly explore social ideas about manhood - through the lens of their own life experience. MSP productions can be stand-alone or integrated with broader education programs. As a bold movement-building project, the MSP helps groups "crowdsource culture change" in social ideas about masculinity, in locally-led ways, via men's own voices and stories.                                                         
                                                                                                                                                                                                
@@ -547,7 +547,7 @@ Twenty-eight MSP live productions have taken place thus far at UC-Berkeley, UC-S
 </div>
 <div class="project-description lab-section">
   <label>Needs</label>
-  <p>The Men's Story Project has a sound research foundation and has been piloted a great deal, and is ready to be implemented at scale. For this to happen, its needs include: a stronger social media presence; strong publicity/PR strategies and implementation partners; introductions to celebrities, producers and a media distributor to create and film a new live celebrity MSP production; and introductions to funders who would like to help the MSP scale in the U.S. and abroad. Many groups in the U.S. and abroad have expressed interest in creating MSP productions and doing trainings-of-trainers; funding is a primary need for helping that happen.</p>
+  <p class="read-more">The Men's Story Project has a sound research foundation and has been piloted a great deal, and is ready to be implemented at scale. For this to happen, its needs include: a stronger social media presence; strong publicity/PR strategies and implementation partners; introductions to celebrities, producers and a media distributor to create and film a new live celebrity MSP production; and introductions to funders who would like to help the MSP scale in the U.S. and abroad. Many groups in the U.S. and abroad have expressed interest in creating MSP productions and doing trainings-of-trainers; funding is a primary need for helping that happen.</p>
 </div>
 <div class="links lab-section">
   <label>Attachments</label>
@@ -588,15 +588,15 @@ Twenty-eight MSP live productions have taken place thus far at UC-Berkeley, UC-S
 </div>
 <div class="summary lab-section">
   <label>Brief Summary</label>
-  <p>Plastic film packaging is the biggest ocean polluter and causes the most harm, but if a bio-material could both provide food safety and shelf life, and degrade in your backyard, the harm would cease, therefore we need to invent a new kind of thin film packaging.</p>
+  <p class="read-more">Plastic film packaging is the biggest ocean polluter and causes the most harm, but if a bio-material could both provide food safety and shelf life, and degrade in your backyard, the harm would cease, therefore we need to invent a new kind of thin film packaging.</p>
 </div>
 <div class="project-description lab-section">
   <label>Challenge</label>
-  <p>How might we design and deliver sustainable nonwoven materials for single-use consumer products that have a neutral to positive ecological impact?</p>
+  <p class="read-more">How might we design and deliver sustainable nonwoven materials for single-use consumer products that have a neutral to positive ecological impact?</p>
 </div>
 <div class="project-description lab-section">
   <label>Full Project Description</label>
-  <p>Thin film packaging is the most abundant and widely distributed type of plastic waste causing harm to people and the planet.  Communities may benefit from globalization, but it comes heavily packaged in plastic, which accumulates in neighborhoods in emerging where waste management does no exist.  It’s a human health, sanitation, and quality of life problem.  What is needed is a better way to deliver goods to market, without the legacy of trash.
+  <p class="read-more">Thin film packaging is the most abundant and widely distributed type of plastic waste causing harm to people and the planet.  Communities may benefit from globalization, but it comes heavily packaged in plastic, which accumulates in neighborhoods in emerging where waste management does no exist.  It’s a human health, sanitation, and quality of life problem.  What is needed is a better way to deliver goods to market, without the legacy of trash.
 
 Companies want shelf life and food safety, so they will not give up on thin film plastic packaging because of its barrier properties.  Chip and candy wrappers, diapers, sachet packs, bags of all kinds, are useful to companies, but they wreak havoc on communities and the planet.
 
@@ -608,7 +608,7 @@ These criteria are our challenge.</p>
 </div>
 <div class="project-description lab-section">
   <label>Needs</label>
-  <p>Capital.
+  <p class="read-more">Capital.
 Willingness of private sector to give this challenge time and money.
 Need funding for start ups to devote their teams to the R & D.</p>
 </div>
@@ -647,21 +647,21 @@ Need funding for start ups to devote their teams to the R & D.</p>
 </div>
 <div class="summary lab-section">
   <label>Brief Summary</label>
-  <p>TEAL Tag: Technology. Education. Agriculture. Landscape 
+  <p class="read-more">TEAL Tag: Technology. Education. Agriculture. Landscape 
 Pairing technology with land ethics for a better tomorrow on large landscapes.</p>
 </div>
 <div class="project-description lab-section">
   <label>Challenge</label>
-  <p>How do we make the necessary change from a large-scale mindset of conventional/traditional agriculture/ranching (heavy-handed, human ego-dominated, control, overuse) to regenerative agriculture  (biomimicry, supporting and enhancing shared landscapes, diverse ecosystems/habitat, living soils and watersheds health, and low-stress livestock handling). And how can we achieve this with a positive approach using new innovations in technology?</p>
+  <p class="read-more">How do we make the necessary change from a large-scale mindset of conventional/traditional agriculture/ranching (heavy-handed, human ego-dominated, control, overuse) to regenerative agriculture  (biomimicry, supporting and enhancing shared landscapes, diverse ecosystems/habitat, living soils and watersheds health, and low-stress livestock handling). And how can we achieve this with a positive approach using new innovations in technology?</p>
 </div>
 <div class="project-description lab-section">
   <label>Full Project Description</label>
-  <p>The TEAL Tag: A wellness microchip worn by cattle in predator dense areas, measuring GPS, body temperature, and heart rate, and paired to a smart phone providing crucial, real-time information through the use of IoT technology. This tech will help locate deceased or sick livestock, alert when they might be stressed due to the presence of a predator, and would know immediately if an animal is dead, how, and where to find it. This system will revolutionize safer landscapes by decreasing encounters between humans, livestock, and wildlife and widen the platform of tolerance of diverse landscapes in agriculture. 
+  <p class="read-more">The TEAL Tag: A wellness microchip worn by cattle in predator dense areas, measuring GPS, body temperature, and heart rate, and paired to a smart phone providing crucial, real-time information through the use of IoT technology. This tech will help locate deceased or sick livestock, alert when they might be stressed due to the presence of a predator, and would know immediately if an animal is dead, how, and where to find it. This system will revolutionize safer landscapes by decreasing encounters between humans, livestock, and wildlife and widen the platform of tolerance of diverse landscapes in agriculture. 
 Equally important (if not more) is this project's support and enhancement of conservation and protection of key wildlife species across the globe, ultimately changing the way we live with wildlife/predators everywhere. While scalability may look small (cattle in predator country), it's scalable capacity reaches into all sectors of agriculture and wildlife management on a global level.</p>
 </div>
 <div class="project-description lab-section">
   <label>Needs</label>
-  <p>Creating/developing a team that helps drive towards the solution. 
+  <p class="read-more">Creating/developing a team that helps drive towards the solution. 
 R & D around software/hardware/tech development (we've been at this for 2.5 years, but still could use more help)</p>
 </div>
 <div class="links lab-section">
@@ -699,17 +699,17 @@ R & D around software/hardware/tech development (we've been at this for 2.5 year
 </div>
 <div class="summary lab-section">
   <label>Brief Summary</label>
-  <p>The Bridge Faith Initiative is a human rights organization that educates elected officials, policymakers, media, advocacy organizations, faith leaders to advance a progressive national security strategy that prioritizes human security and diplomacy over war. Our pillars are Immigration, Peace and Justice:</p>
+  <p class="read-more">The Bridge Faith Initiative is a human rights organization that educates elected officials, policymakers, media, advocacy organizations, faith leaders to advance a progressive national security strategy that prioritizes human security and diplomacy over war. Our pillars are Immigration, Peace and Justice:</p>
 </div>
 <div class="project-description lab-section">
   <label>Challenge</label>
-  <p>We seek to cease endless war, mass atrocities and our global refugee crisis that is caused by our U.S. Foreign and Military policies and exacerbated by our Domestic Immigration policies. We urge that our U.S. legislators bring these policies in alignment with one another and with the end goals of human rights and peace and we want to better educate our citizens and faith communities on how these policies intersect so that we better understand how we impact violence, injustice and contribute to the destabilization of communities that contribute to our refugee crisis. 
+  <p class="read-more">We seek to cease endless war, mass atrocities and our global refugee crisis that is caused by our U.S. Foreign and Military policies and exacerbated by our Domestic Immigration policies. We urge that our U.S. legislators bring these policies in alignment with one another and with the end goals of human rights and peace and we want to better educate our citizens and faith communities on how these policies intersect so that we better understand how we impact violence, injustice and contribute to the destabilization of communities that contribute to our refugee crisis. 
 
 As an emerging organization, we need to figure out how to best tell this narrative in a compelling way to legislators of all parties and how to enroll a network of leaders, influencers and faith communities to join with us in advocating for justice in global peace efforts and stemming the refugee crisis.</p>
 </div>
 <div class="project-description lab-section">
   <label>Full Project Description</label>
-  <p>The Bridge Faith Initiative is a policy and educational organization that works to bring progressive faith voices through advocacy and grassroots activism to Washington DC. We believe in a world of peace, human rights, and democracy. Our faith has taught us that we are one people in an interconnected world. However, human actions try to divide us by spreading hate and fear of each other throughout the world. We acknowledge that the U.S has a leadership role to play and a responsibility in the area of building a just and peaceful world and that is why we are bringing our voices to Washington DC to ensure and offer just policies are in place.  
+  <p class="read-more">The Bridge Faith Initiative is a policy and educational organization that works to bring progressive faith voices through advocacy and grassroots activism to Washington DC. We believe in a world of peace, human rights, and democracy. Our faith has taught us that we are one people in an interconnected world. However, human actions try to divide us by spreading hate and fear of each other throughout the world. We acknowledge that the U.S has a leadership role to play and a responsibility in the area of building a just and peaceful world and that is why we are bringing our voices to Washington DC to ensure and offer just policies are in place.  
 
 The U.S policy space is divided into Foreign Policy and Domestic Policy, Military Policy and Non-Military policy. Our focus areas are in the places where all of this intersects and becomes one. For example, the U.S foreign and military policy influences foreign wars, which in some instances perpetuate mass atrocities, which always cause people to flee their countries and seek safety causing grave implications for refugees. It is because many U.S. citizens are led to believe that these are separate policies funded separately so that the government can spend freely on policies that do not have peace and human rights as an end goal and claim that it has to take away money from these programs that support the vision of a just America to fund the other programs such as healthcare and social security. 
 
@@ -726,7 +726,7 @@ Justice- We will work to:
 </div>
 <div class="project-description lab-section">
   <label>Needs</label>
-  <p>We are in the very beginning stages of our formation. We are working with the pro bono office of Kilpatrick Stockton who has helped us incorporate and is in the process of filing for our 501c3 status.
+  <p class="read-more">We are in the very beginning stages of our formation. We are working with the pro bono office of Kilpatrick Stockton who has helped us incorporate and is in the process of filing for our 501c3 status.
 
 We are developing our board and need help with by-laws and recruiting a skill-diverse board. We currently have 6 members on our board.
 We need support in fundraising and a development plan and refining our strategic plan.
@@ -764,15 +764,15 @@ We would benefit from assistance in clarifying our narrative and ensuring our vi
 </div>
 <div class="summary lab-section">
   <label>Brief Summary</label>
-  <p>The Success Beyond School project is an ambitious effort to broaden our definition of what a successful life looks like for a young adult, help schools gather useful, real-time data on how their graduates are faring in the adult world, and develop new support systems and networks for these young people.</p>
+  <p class="read-more">The Success Beyond School project is an ambitious effort to broaden our definition of what a successful life looks like for a young adult, help schools gather useful, real-time data on how their graduates are faring in the adult world, and develop new support systems and networks for these young people.</p>
 </div>
 <div class="project-description lab-section">
   <label>Challenge</label>
-  <p>Our school does a really good job of graduating students and getting them into college or careers. While we believe we are preparing them to succeed, the reality is that we have far less contact with them once they've graduated, and don't always know how they're doing or how we could better support them. We need meaningful, timely data on our graduates, and we need to do a better job of supporting them when they encounter challenges. How can we build a robust and engaged alumni community, track progress and outcomes, and meet the evolving needs of our graduates, all with minimal resources?</p>
+  <p class="read-more">Our school does a really good job of graduating students and getting them into college or careers. While we believe we are preparing them to succeed, the reality is that we have far less contact with them once they've graduated, and don't always know how they're doing or how we could better support them. We need meaningful, timely data on our graduates, and we need to do a better job of supporting them when they encounter challenges. How can we build a robust and engaged alumni community, track progress and outcomes, and meet the evolving needs of our graduates, all with minimal resources?</p>
 </div>
 <div class="project-description lab-section">
   <label>Full Project Description</label>
-  <p>The Workshop School is high school focused on building real-world skills through authentic work and intensive community building. Through interdisciplinary project-based learning, internships, consultancies, service projects and youth entrepreneurship, we create learning environments that both demand and cultivate creativity, collaboration, self-awareness, work ethic, emotional intelligence, and agency. We do this work with a population that faces entrenched poverty, trauma, and discrimination.
+  <p class="read-more">The Workshop School is high school focused on building real-world skills through authentic work and intensive community building. Through interdisciplinary project-based learning, internships, consultancies, service projects and youth entrepreneurship, we create learning environments that both demand and cultivate creativity, collaboration, self-awareness, work ethic, emotional intelligence, and agency. We do this work with a population that faces entrenched poverty, trauma, and discrimination.
 
 Now in our seventh year, we've gotten to a place where we have high graduation and college acceptance rates, which is good news. But getting students into college or careers is only the beginning. We need to know how our graduates are doing, and we need to continue to support them as they transition to adulthood. Getting good data isn't just about how we collect it, it's about what we choose to measure.  We know that college and work matter, but so do wellbeing, agency, even happiness. When we put it all together, what does long-term success actually look like? Equally important, how do we know when our graduates need support, and how do we make sure they get it?
 
@@ -809,17 +809,17 @@ Solving this problem would have a huge impact not only for our little school, bu
 </div>
 <div class="summary lab-section">
   <label>Brief Summary</label>
-  <p>Mama YOUniverse is a platform and in person facilitation for women in maximum security prison and jails. The program provides the space and tools to activate, elevate and support internal transformation to end violence from the inside so that it is reflected in our outer world.</p>
+  <p class="read-more">Mama YOUniverse is a platform and in person facilitation for women in maximum security prison and jails. The program provides the space and tools to activate, elevate and support internal transformation to end violence from the inside so that it is reflected in our outer world.</p>
 </div>
 <div class="project-description lab-section">
   <label>Challenge</label>
-  <p>The challenge is changing our perception of those who are incarcerated, starting with themselves.  This is the seed of change.
+  <p class="read-more">The challenge is changing our perception of those who are incarcerated, starting with themselves.  This is the seed of change.
 
 People who have been labeled as bad or 'other' are those that need and deserve support, accountability, healing to end the cycle of violence.  The challenges faced in communities and in prison is often inherited - train tracks laid by past generations.  How do you stand against violence when it is all you have ever known?  This program holds space for a new internal conversation and paradigm to emerge where violence is transformed from anger and deep fear into forgiveness and then love.</p>
 </div>
 <div class="project-description lab-section">
   <label>Full Project Description</label>
-  <p>What does compassion, empathy and forgiveness in the brains of incarcerated individuals who are considered some of the most hardened criminals look like?  Mama YOUniverse wants to eventually answer this question.  How can we remember the goodness in ourselves so we can see and acknowledge that in others.  It starts in the prisons, considered one of the darkest corners of society.  This is where we can find the greatest potential for light. 
+  <p class="read-more">What does compassion, empathy and forgiveness in the brains of incarcerated individuals who are considered some of the most hardened criminals look like?  Mama YOUniverse wants to eventually answer this question.  How can we remember the goodness in ourselves so we can see and acknowledge that in others.  It starts in the prisons, considered one of the darkest corners of society.  This is where we can find the greatest potential for light. 
 
 Mama YOUniverse is a in person facilitated program within jails and prisons to ignite healing from within. People on on the outside will come in and experience alongside incarcerated individuals the same transformational training. Often the prisons within our minds and hearts are the same as the concrete prisons. Together both civilians and incarcerated people will leave the trainings with the tools to break free from self limitation.  
 
@@ -871,15 +871,15 @@ For a year, we have been operating in the jails.  Since the beginning, the suppo
 </div>
 <div class="summary lab-section">
   <label>Brief Summary</label>
-  <p>The Social Good Club is a digital content studio bringing together the internet's top influencers with the people and organizations working to save our planet to create entertainment content around the global solutions currently taking place, specifically targeted at the 12-25 age demo.</p>
+  <p class="read-more">The Social Good Club is a digital content studio bringing together the internet's top influencers with the people and organizations working to save our planet to create entertainment content around the global solutions currently taking place, specifically targeted at the 12-25 age demo.</p>
 </div>
 <div class="project-description lab-section">
   <label>Challenge</label>
-  <p>Our biggest challenge is something that experts have been trying to figure out for 30 years. How do you change the language and messaging around climate change and our use of resources to take politics out of the conversation and bring humanity back into the global solutions? If this ship sinks, we'll all go down with it, regardless of party preference.</p>
+  <p class="read-more">Our biggest challenge is something that experts have been trying to figure out for 30 years. How do you change the language and messaging around climate change and our use of resources to take politics out of the conversation and bring humanity back into the global solutions? If this ship sinks, we'll all go down with it, regardless of party preference.</p>
 </div>
 <div class="project-description lab-section">
   <label>Full Project Description</label>
-  <p>Society has changed. From tribal living to self-sufficient isolation. From vast Green Planet to The Arctic and The Amazon burning at the same time.
+  <p class="read-more">Society has changed. From tribal living to self-sufficient isolation. From vast Green Planet to The Arctic and The Amazon burning at the same time.
 
 We're caught in an age of over-consumption and over-connection that has led to an epidemic of loneliness and isolation, creating a 
 disconnection to the very communities and natural worlds we need for our survival. And, we don't know what to do about it. But, what if we did?
@@ -925,15 +925,15 @@ The Social Good Club is working to accelerate the progress by simplifying the Su
 </div>
 <div class="summary lab-section">
   <label>Brief Summary</label>
-  <p>Adapting plasma arc technology to completely, permanently ocean and coastal plastics from the waste stream. Our first priority is outfitting a ship that can be used as a mobile response unit for coastal environments. Our ultimate goal is placing units along the 8 rivers in Asia and 2 in Africa currently contributing 90% of ocean plastic pollution.</p>
+  <p class="read-more">Adapting plasma arc technology to completely, permanently ocean and coastal plastics from the waste stream. Our first priority is outfitting a ship that can be used as a mobile response unit for coastal environments. Our ultimate goal is placing units along the 8 rivers in Asia and 2 in Africa currently contributing 90% of ocean plastic pollution.</p>
 </div>
 <div class="project-description lab-section">
   <label>Challenge</label>
-  <p>How might we best combine the efforts of NGOs and technologists to eliminate ocean plastic pollution at sea, and at its source?</p>
+  <p class="read-more">How might we best combine the efforts of NGOs and technologists to eliminate ocean plastic pollution at sea, and at its source?</p>
 </div>
 <div class="project-description lab-section">
   <label>Full Project Description</label>
-  <p>SeaChange is adapting plasma technology to completely, permanently ocean and coastal plastics from the waste stream. We're stepping into the gaps created by a broken recycling system and the high temperatures and oxygenless environment of a plasma chamber to transform hydrocarbon molecular structures into inert, non-toxic glass. Our first priority is outfitting a ship that can be used as a mobile response unit for coastal environments. Our ultimate goal is placing units along the 8 rivers in Asia and 2 in Africa currently contributing 90% of ocean plastic pollution.</p>
+  <p class="read-more">SeaChange is adapting plasma technology to completely, permanently ocean and coastal plastics from the waste stream. We're stepping into the gaps created by a broken recycling system and the high temperatures and oxygenless environment of a plasma chamber to transform hydrocarbon molecular structures into inert, non-toxic glass. Our first priority is outfitting a ship that can be used as a mobile response unit for coastal environments. Our ultimate goal is placing units along the 8 rivers in Asia and 2 in Africa currently contributing 90% of ocean plastic pollution.</p>
 </div>
 <div class="voting">
   <div class="upvoting">
@@ -965,15 +965,15 @@ The Social Good Club is working to accelerate the progress by simplifying the Su
 </div>
 <div class="summary lab-section">
   <label>Brief Summary</label>
-  <p>THE WONDER BARN: Giving creative souls who live in urban edges (aka suburbia) a place to gather, share, and create together without having to sacrifice their city ethos. Reimagining suburban country clubs into urban-like culture clubs. Think SoHo House, except serving creative souls who live in the burbs or city edges.</p>
+  <p class="read-more">THE WONDER BARN: Giving creative souls who live in urban edges (aka suburbia) a place to gather, share, and create together without having to sacrifice their city ethos. Reimagining suburban country clubs into urban-like culture clubs. Think SoHo House, except serving creative souls who live in the burbs or city edges.</p>
 </div>
 <div class="project-description lab-section">
   <label>Challenge</label>
-  <p>How can we transform outdated models of country clubs into thriving culture clubs to foster community amongst creative souls who live in urban edges (aka suburbia)? What could this model look like and how can we all "raise the barn" together?</p>
+  <p class="read-more">How can we transform outdated models of country clubs into thriving culture clubs to foster community amongst creative souls who live in urban edges (aka suburbia)? What could this model look like and how can we all "raise the barn" together?</p>
 </div>
 <div class="project-description lab-section">
   <label>Full Project Description</label>
-  <p>Technology has given us the incredible ability to connect to almost anyone. However, what we gain in connectivity, we sacrifice in both community and culture. As city populations overflow beyond their current boundaries into urban edges, how can we provide creative souls who live in urban edges (aka suburbia) a place to gather, share, and create together? In other words, how can we transform the outdated models of country clubs into thriving culture clubs?</p>
+  <p class="read-more">Technology has given us the incredible ability to connect to almost anyone. However, what we gain in connectivity, we sacrifice in both community and culture. As city populations overflow beyond their current boundaries into urban edges, how can we provide creative souls who live in urban edges (aka suburbia) a place to gather, share, and create together? In other words, how can we transform the outdated models of country clubs into thriving culture clubs?</p>
 </div>
 <div class="links lab-section">
   <label>Attachments</label>
@@ -1011,15 +1011,15 @@ The Social Good Club is working to accelerate the progress by simplifying the Su
 </div>
 <div class="summary lab-section">
   <label>Brief Summary</label>
-  <p>We are a fully funded (no cost to partners) all-female demonstration jump team using skydiving as our vehicle to capture attention, motivate and inspire women to live bold, brave lives of their own design. We seek to align with events and organizations that stand for social justice missions we want to help promote, at our core elevating the conversation and action around gender equality and equality at large.</p>
+  <p class="read-more">We are a fully funded (no cost to partners) all-female demonstration jump team using skydiving as our vehicle to capture attention, motivate and inspire women to live bold, brave lives of their own design. We seek to align with events and organizations that stand for social justice missions we want to help promote, at our core elevating the conversation and action around gender equality and equality at large.</p>
 </div>
 <div class="project-description lab-section">
   <label>Challenge</label>
-  <p>Please help me expand the original imagined reach and impact of this project... how can we leverage the in-person shows, content collected from that... how can I use my own skills as a speaker and front-facing leader to elevate this impact... please help me envision a more clear vision of this global impact and clarify the building blocks to get there... the players I might need in place to support our team and the execution of our larger mission and message... how our mission can be created now with such unprecedented financial backing such that it can continue beyond that support in the future…</p>
+  <p class="read-more">Please help me expand the original imagined reach and impact of this project... how can we leverage the in-person shows, content collected from that... how can I use my own skills as a speaker and front-facing leader to elevate this impact... please help me envision a more clear vision of this global impact and clarify the building blocks to get there... the players I might need in place to support our team and the execution of our larger mission and message... how our mission can be created now with such unprecedented financial backing such that it can continue beyond that support in the future…</p>
 </div>
 <div class="project-description lab-section">
   <label>Full Project Description</label>
-  <p>Recently founded and am co-leading a fully funded professional skydiving demonstration jump team (Women's Skydiving Network Pro Team / WSN Pro Team) who's mission is to inspire and encourage women to live a brave life, to think outside any current limiting views they might have about what is possible for them and their lives to play big in any way they are called. Using skydiving as our vehicle to capture attention and lead by this example and using these public opportunities and values-aligned partnerships/outdoor events to elevate the conversation of gender equality and other messages of social justice, our goal is to create win-win PR opportunities for our partners and the messages and missions we are committed to using our voice and vehicle to promote. 
+  <p class="read-more">Recently founded and am co-leading a fully funded professional skydiving demonstration jump team (Women's Skydiving Network Pro Team / WSN Pro Team) who's mission is to inspire and encourage women to live a brave life, to think outside any current limiting views they might have about what is possible for them and their lives to play big in any way they are called. Using skydiving as our vehicle to capture attention and lead by this example and using these public opportunities and values-aligned partnerships/outdoor events to elevate the conversation of gender equality and other messages of social justice, our goal is to create win-win PR opportunities for our partners and the messages and missions we are committed to using our voice and vehicle to promote. 
 
 At the onset, we are focused on the 100-year centennial anniversary of the 19th amendment to the United States Constitution that granted women the right to vote in August 1920. We aim to bring awareness to this part of history, the worldwide mission of women’s suffrage and the courage it took these women to literally stand day after day in opposition to the established systems set up to silence them. With this focus, our goal is to connect women today to what it took for this huge step in women’s right to happen and the extreme value inherent in those human stories of struggle and courage to secure our rights. Our goal is to inspire action in women today to use their voices and vehicles for elevated positive impact in their own ways.
 
@@ -1060,15 +1060,15 @@ Beyond 2020, we look to expand our mission, supporting others in their efforts t
 </div>
 <div class="summary lab-section">
   <label>Brief Summary</label>
-  <p>Alley-oop is a tech startup focused on strengthening relationships across generations. Our first product is a collection of challenges and activities - delivered virtually every month - intentionally designed for Dads & Daughters.</p>
+  <p class="read-more">Alley-oop is a tech startup focused on strengthening relationships across generations. Our first product is a collection of challenges and activities - delivered virtually every month - intentionally designed for Dads & Daughters.</p>
 </div>
 <div class="project-description lab-section">
   <label>Challenge</label>
-  <p>While other companies have enabled us to more broadly expand our networks and "connect" to others around the world, often the depth in our closest relationships (especially inter-generationally) is lacking, leaving many people more isolated than ever before. Alley-oop is working to change that by strengthening relationships ACROSS generations. We are starting first with Dads & Daughters, a truly game-changing relationship given its significant benefits to both people involved. That said, Dads are a notoriously difficult consumer market to reach.  With this Lab Sprint, we're hoping the HATCH network can help us create an effective action plan for our partner and marketing strategy for the next 9 months. This time period is critical in order to keep investors engaged while we scale quickly to this targeted (but often neglected) Dad community before expanding to Grandparents & Grandchildren.</p>
+  <p class="read-more">While other companies have enabled us to more broadly expand our networks and "connect" to others around the world, often the depth in our closest relationships (especially inter-generationally) is lacking, leaving many people more isolated than ever before. Alley-oop is working to change that by strengthening relationships ACROSS generations. We are starting first with Dads & Daughters, a truly game-changing relationship given its significant benefits to both people involved. That said, Dads are a notoriously difficult consumer market to reach.  With this Lab Sprint, we're hoping the HATCH network can help us create an effective action plan for our partner and marketing strategy for the next 9 months. This time period is critical in order to keep investors engaged while we scale quickly to this targeted (but often neglected) Dad community before expanding to Grandparents & Grandchildren.</p>
 </div>
 <div class="project-description lab-section">
   <label>Full Project Description</label>
-  <p>At alley-oop, we are looking to enhance and inspire some of our most important relationships by exchanging perspectives and experiences across generational lines.
+  <p class="read-more">At alley-oop, we are looking to enhance and inspire some of our most important relationships by exchanging perspectives and experiences across generational lines.
 With our initial monthly subscription product, we are inviting Dads and Daughters to complete different challenges together (as a team). The challenges vary by both type (some are physical/athletic, others are more creative; some are fast-paced and dynamic, while others are more thoughtful and discussion-based), and time - with some as short as 15-20 min - keeping the teams engaged while still enabling them to work on their own schedules around work and other family priorities. Delivering the challenges virtually has allowed us to spend less capital on physical goods and more on marketing and partnerships. We've built a partner platform where partner companies can build challenges themselves (with our approval, of course), gaining insights and learning from these important Dad & Daughter audiences, while simultaneously helping to build a community of Dads who recognize the need for - and celebrate! - a deeper relationships with their Daughters.
 Once alley-oop is more established with this initial product, we will expand both horizontally - with a variety of different product and experiential offerings, as well as vertically - to the much larger market for Grandparents & Grandchildren.  We're just getting started . . .</p>
 </div>

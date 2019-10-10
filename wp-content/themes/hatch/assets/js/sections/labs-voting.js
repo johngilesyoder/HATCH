@@ -5,6 +5,13 @@
     'use strict';
 
     // DOM ready, take it away
+
+    $('.read-more').readmore({
+      collapsedHeight: 65,
+      lessLink: '<a href="#">Read less</a>'
+    });
+
+
     $(document).on('change','.collaboration-input', function() {
       if( $('.collaboration-input').is(':checked') ) {
         $(this).closest('.collaboration-form').find('.collaboration-text').addClass('is--active');

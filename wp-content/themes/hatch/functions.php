@@ -243,8 +243,11 @@ function html5blank_conditional_scripts()
 
     if ( is_page_template( 'template-labs-voting.php' ) ) {
 
-      wp_register_script('labs-voting', get_template_directory_uri() . '/assets/js/sections/labs-voting.js', array(), '1.0.1' );
+      wp_register_script('labs-voting', get_template_directory_uri() . '/assets/js/sections/labs-voting.js', array(), '1.0.2' );
       wp_enqueue_script('labs-voting'); // Enqueue it!
+
+      wp_register_script('read-more', get_template_directory_uri() . '/assets/js/lib/readmore.min.js', array(), '1.0.0' );
+      wp_enqueue_script('read-more'); // Enqueue it!
 
     }
 
