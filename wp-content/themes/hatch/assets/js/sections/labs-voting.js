@@ -6,8 +6,8 @@
 
     // DOM ready, take it away
 
-    $('.read-more').readmore({
-      collapsedHeight: 65,
+    $('.wrapper').readmore({
+      collapsedHeight: 300,
       lessLink: '<a href="#">Read less</a>'
     });
 
