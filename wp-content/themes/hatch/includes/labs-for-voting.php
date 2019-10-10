@@ -398,7 +398,8 @@ Funding for satellite mission flying a hyperspectral imaging payload coupled wit
 <div class="links lab-section">
   <label>Attachments</label>
   <ul>
-    <li><a href="http://hatchexperience.org/wp-content/uploads/gravity_forms/56-2ee578ede6a1fc8f02425f4105bb73ee/2019/10/2342117E-5919-46EB-B5C3-FA9F4ED4E23D.jpeg , http://hatchexperience.org/wp-content/uploads/gravity_forms/56-2ee578ede6a1fc8f02425f4105bb73ee/2019/10/960E7AD4-B62E-4E93-BECA-F72C03FC8528.png" target="_blank">Link to attachment</a></li>
+    <li><a href="http://hatchexperience.org/wp-content/uploads/gravity_forms/56-2ee578ede6a1fc8f02425f4105bb73ee/2019/10/2342117E-5919-46EB-B5C3-FA9F4ED4E23D.jpeg" target="_blank">Link to attachment</a></li>
+    <li><a href="https://www.sdgia.org/">SDGia.org</a></li>
   </ul>
 </div>
 <div class="voting">
