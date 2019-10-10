@@ -8,7 +8,8 @@
 
     $('.wrapper').readmore({
       collapsedHeight: 300,
-      lessLink: '<a href="#">Read less</a>'
+      lessLink: '<a href="#" class="btn-more">Read less</a>',
+      moreLink: '<a href="#" class="btn-more">Read more</a>'
     });
 
 
