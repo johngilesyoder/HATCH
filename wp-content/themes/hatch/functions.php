@@ -180,7 +180,7 @@ function html5blank_header_scripts()
         wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
         wp_enqueue_script('modernizr'); // Enqueue it!
 
-        wp_register_script('html5blankscripts', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
+        wp_register_script('html5blankscripts', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), '1.0.1'); // Custom scripts
         wp_enqueue_script('html5blankscripts'); // Enqueue it!
 
         wp_register_script( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js', array(), null, false );
@@ -236,7 +236,7 @@ function html5blank_conditional_scripts()
 
     if ( is_page_template( 'template-becauseofhatchsurvey.php' ) ) {
 
-      wp_register_script('becauseofhatch-survey', get_template_directory_uri() . '/assets/js/sections/min/becauseofhatch-survey-min.js', array(), '1.2.1' );
+      wp_register_script('becauseofhatch-survey', get_template_directory_uri() . '/assets/js/sections/min/becauseofhatch-survey-min.js', array(), '1.2.2' );
       wp_enqueue_script('becauseofhatch-survey'); // Enqueue it!
 
     }
