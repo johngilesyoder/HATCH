@@ -2,7 +2,7 @@
   <div class="gv-list-view-title">
     <h3>Marcus Eriksen</h3>
     <div class="gv-list-view-subtitle">
-      <h4>5 Gyres 5 Gyres</h4>
+      <h4>Chief Science Officer & Co-Founder 5 Gyres</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -28,7 +28,7 @@
   <div class="gv-list-view-title">
     <h3>Amity Rembold</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Rural Community Assistance Corporation Rural Community Assistance Corporation</h4>
+      <h4>Rural Development Specialist - Economic Development Rural Community Assistance Corporation</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -54,7 +54,7 @@
   <div class="gv-list-view-title">
     <h3>Kamia Douglas</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Alliance Judy Ivie Burton Technology Academy High School Alliance Judy Ivie Burton Technology Academy High School</h4>
+      <h4>Freshman student Alliance Judy Ivie Burton Technology Academy High School</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -80,7 +80,7 @@
   <div class="gv-list-view-title">
     <h3>James Sullivan</h3>
     <div class="gv-list-view-subtitle">
-      <h4>SAP SAP</h4>
+      <h4>Head, Global Sustainability Innovation Accelerator SAP</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -106,7 +106,7 @@
   <div class="gv-list-view-title">
     <h3>Finnegan Kelly</h3>
     <div class="gv-list-view-subtitle">
-      <h4>The Go Game The Go Game</h4>
+      <h4>Co-Founder and CTO The Go Game</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -132,7 +132,7 @@
   <div class="gv-list-view-title">
     <h3>Megan Boettcher</h3>
     <div class="gv-list-view-subtitle">
-      <h4>BSD7 BSD7</h4>
+      <h4>Fine Arts Educator BSD7</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -158,7 +158,7 @@
   <div class="gv-list-view-title">
     <h3>Christopher Harris</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Ewing Marion Kauffman Foundation Ewing Marion Kauffman Foundation</h4>
+      <h4>Senior Program Officer - Entrepreneurship Ewing Marion Kauffman Foundation</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -184,7 +184,7 @@
   <div class="gv-list-view-title">
     <h3>Chiara Cecchini</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Future Food Americas Future Food Americas</h4>
+      <h4>Co-Founder and CEO Future Food Americas</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -210,7 +210,7 @@
   <div class="gv-list-view-title">
     <h3>Jill Bernstein</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Pepp Collective Pepp Collective</h4>
+      <h4>Founder Pepp Collective</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -236,7 +236,7 @@
   <div class="gv-list-view-title">
     <h3>Charles Garcia</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Harvard University Harvard University</h4>
+      <h4>2019 Advanced Leadership Initiative Fellow Harvard University</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -262,7 +262,7 @@
   <div class="gv-list-view-title">
     <h3>Columbine Culberg</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Entrepreneur Entrepreneur</h4>
+      <h4>Intersecting people + environment Entrepreneur</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -288,7 +288,7 @@
   <div class="gv-list-view-title">
     <h3>Brian Stevens</h3>
     <div class="gv-list-view-subtitle">
-      <h4>MediaVision Produtions, Inc. MediaVision Produtions, Inc.</h4>
+      <h4>Owner MediaVision Produtions, Inc.</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -314,7 +314,7 @@
   <div class="gv-list-view-title">
     <h3>Paul Roethle</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Chemistry Chemistry</h4>
+      <h4>CEO Chemistry</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -340,7 +340,7 @@
   <div class="gv-list-view-title">
     <h3>Elysa Fenenbock</h3>
     <div class="gv-list-view-subtitle">
-      <h4>d.school Stanford University d.school Stanford University</h4>
+      <h4>Design Mystic d.school Stanford University</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -366,7 +366,7 @@
   <div class="gv-list-view-title">
     <h3>Tuck Tyrrell</h3>
     <div class="gv-list-view-subtitle">
-      <h4>GroundEd Holistics GroundEd Holistics</h4>
+      <h4>Earth Worker GroundEd Holistics</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -392,7 +392,7 @@
   <div class="gv-list-view-title">
     <h3>Laura Parker</h3>
     <div class="gv-list-view-subtitle">
-      <h4>National Geographic National Geographic</h4>
+      <h4>Staff writer National Geographic</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -418,7 +418,7 @@
   <div class="gv-list-view-title">
     <h3>Andrea Eastman</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Roy Rogers - Happy Trails Broadway bound play Roy Rogers - Happy Trails Broadway bound play</h4>
+      <h4>Producer future broadway musical Roy Rogers - Happy Trails Broadway bound play</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -444,7 +444,7 @@
   <div class="gv-list-view-title">
     <h3>Matthew Grayson</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Jereco Studios Jereco Studios</h4>
+      <h4>Audio Engineer Jereco Studios</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -470,7 +470,7 @@
   <div class="gv-list-view-title">
     <h3>Katy Yam</h3>
     <div class="gv-list-view-subtitle">
-      <h4>// Producer & Head Curator @ TEDxMontreal // Producer & Head Curator @ TEDxMontreal</h4>
+      <h4>Marketing Director @ Element AI // Producer & Head Curator @ TEDxMontreal</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -496,7 +496,7 @@
   <div class="gv-list-view-title">
     <h3>Brian Wingert</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Brian Wingert Cinematography Brian Wingert Cinematography</h4>
+      <h4>Cinematographer Brian Wingert Cinematography</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -548,7 +548,7 @@
   <div class="gv-list-view-title">
     <h3>Kip Morales</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Alliance for College-Ready Public Schools (Collins High School) Alliance for College-Ready Public Schools (Collins High School)</h4>
+      <h4>Teacher Alliance for College-Ready Public Schools (Collins High School)</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -574,7 +574,7 @@
   <div class="gv-list-view-title">
     <h3>Sophia Cone</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Big Sky Redesign Big Sky Redesign</h4>
+      <h4>Interior Designer Big Sky Redesign</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -600,7 +600,7 @@
   <div class="gv-list-view-title">
     <h3>Lindsay Blatt</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Archerfish Productions Archerfish Productions</h4>
+      <h4>Filmmaker Archerfish Productions</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -626,7 +626,7 @@
   <div class="gv-list-view-title">
     <h3>Elizabeth Wrzesinski</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Bozeman High School Bozeman High School</h4>
+      <h4>Student Bozeman High School</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -652,7 +652,7 @@
   <div class="gv-list-view-title">
     <h3>Stephan Gueguen</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Jereco Studios Jereco Studios</h4>
+      <h4>Sound Engineer Jereco Studios</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -678,7 +678,7 @@
   <div class="gv-list-view-title">
     <h3>Thomas Silverman</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Junior State of America Junior State of America</h4>
+      <h4>Chief Development Officer Junior State of America</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -704,7 +704,7 @@
   <div class="gv-list-view-title">
     <h3>Lou Morris</h3>
     <div class="gv-list-view-subtitle">
-      <h4>QBS Safeguard QBS Safeguard</h4>
+      <h4>Sales Manager QBS Safeguard</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -730,7 +730,7 @@
   <div class="gv-list-view-title">
     <h3>Mark Goerner</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Eqogo Eqogo</h4>
+      <h4>Founder Eqogo</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -756,7 +756,7 @@
   <div class="gv-list-view-title">
     <h3>Erica Mackey</h3>
     <div class="gv-list-view-subtitle">
-      <h4>MyVillage MyVillage</h4>
+      <h4>CEO and co-founder MyVillage</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -782,7 +782,7 @@
   <div class="gv-list-view-title">
     <h3>Jason Hirschton</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Full Circle Fund Full Circle Fund</h4>
+      <h4>CEO Full Circle Fund</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -808,7 +808,7 @@
   <div class="gv-list-view-title">
     <h3>Sean Mackinson</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Lone Mountain Ranch, Yellowstone Club Lone Mountain Ranch, Yellowstone Club</h4>
+      <h4>Guide, photographer Lone Mountain Ranch, Yellowstone Club</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -834,7 +834,7 @@
   <div class="gv-list-view-title">
     <h3>Amarachukwu Ifeji</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Bangor High School Bangor High School</h4>
+      <h4>Student Bangor High School</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -860,7 +860,7 @@
   <div class="gv-list-view-title">
     <h3>Kim Dabbs</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Steelcase Steelcase</h4>
+      <h4>Social Innovation | Global Director Steelcase</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -886,7 +886,7 @@
   <div class="gv-list-view-title">
     <h3>Jaqueline Yngvason</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Mama YOUniverse Mama YOUniverse</h4>
+      <h4>Facilitator Of Love Mama YOUniverse</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -912,7 +912,7 @@
   <div class="gv-list-view-title">
     <h3>Gillian Davis</h3>
     <div class="gv-list-view-subtitle">
-      <h4>OverTime Leader OverTime Leader</h4>
+      <h4>Founder / CEO OverTime Leader</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -938,7 +938,7 @@
   <div class="gv-list-view-title">
     <h3>Anne Mahlum</h3>
     <div class="gv-list-view-subtitle">
-      <h4>[solidcore] [solidcore]</h4>
+      <h4>founder, ceo [solidcore] [solidcore]</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -964,7 +964,7 @@
   <div class="gv-list-view-title">
     <h3>Andrew Truong</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Facebook, Inc. Facebook, Inc.</h4>
+      <h4>Product Marketing Lead, News Feed and Stories Facebook, Inc.</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -990,7 +990,7 @@
   <div class="gv-list-view-title">
     <h3>Jeremiah Pate</h3>
     <div class="gv-list-view-subtitle">
-      <h4>LunaSonde LunaSonde</h4>
+      <h4>CEO LunaSonde</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1016,7 +1016,7 @@
   <div class="gv-list-view-title">
     <h3>Kat Magill</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Say Word Say Word</h4>
+      <h4>Executive Director/ Poet / Producer Say Word</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1042,7 +1042,7 @@
   <div class="gv-list-view-title">
     <h3>Liz Marchi</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Liz Marchi Consulting Liz Marchi Consulting</h4>
+      <h4>Consultant Liz Marchi Consulting</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1068,7 +1068,7 @@
   <div class="gv-list-view-title">
     <h3>Sam Andrew</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Revellah Revellah</h4>
+      <h4>Entrepreneur & Investor Revellah</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1094,7 +1094,7 @@
   <div class="gv-list-view-title">
     <h3>Patrick Hoffman</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Bozeman School District Bozeman School District</h4>
+      <h4>Secondary Visual Fine Arts Educator Bozeman School District</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1120,7 +1120,7 @@
   <div class="gv-list-view-title">
     <h3>Jessica Bough</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Lone Peak High School Lone Peak High School</h4>
+      <h4>Student Lone Peak High School</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1146,7 +1146,7 @@
   <div class="gv-list-view-title">
     <h3>Victoria Salcedo</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Junior States of America Junior States of America</h4>
+      <h4>Club President Junior States of America</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1172,7 +1172,7 @@
   <div class="gv-list-view-title">
     <h3>Ania Bulis</h3>
     <div class="gv-list-view-subtitle">
-      <h4>The Big Sky Real Estate Company The Big Sky Real Estate Company</h4>
+      <h4>Founder // Broker The Big Sky Real Estate Company</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1198,7 +1198,7 @@
   <div class="gv-list-view-title">
     <h3>Valeria Gonzalez</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Junior State of America Junior State of America</h4>
+      <h4>Club President Junior State of America</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1224,7 +1224,7 @@
   <div class="gv-list-view-title">
     <h3>Jeremy Harder</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Big Sky School District Big Sky School District</h4>
+      <h4>Middle and High School Design Instructor Big Sky School District</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1250,7 +1250,7 @@
   <div class="gv-list-view-title">
     <h3>Reilly Germain</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Lone Peak High School Lone Peak High School</h4>
+      <h4>Student Lone Peak High School</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1276,7 +1276,7 @@
   <div class="gv-list-view-title">
     <h3>Roshi Givechi</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Self-employed Self-employed</h4>
+      <h4>Creative Director - Design Strategist - Narrative Consultant - Facilitator Self-employed</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1302,7 +1302,7 @@
   <div class="gv-list-view-title">
     <h3>Jurgis Didziulis</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Jurgis DID Jurgis DID</h4>
+      <h4>Founder Jurgis DID</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1328,7 +1328,7 @@
   <div class="gv-list-view-title">
     <h3>Mark Brand</h3>
     <div class="gv-list-view-subtitle">
-      <h4>A Better Life Foundation/Alight/MB Inc. A Better Life Foundation/Alight/MB Inc.</h4>
+      <h4>Chef/Professor/Speaker/Facilitator A Better Life Foundation/Alight/MB Inc.</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1354,7 +1354,7 @@
   <div class="gv-list-view-title">
     <h3>Ryan Tomich</h3>
     <div class="gv-list-view-subtitle">
-      <h4>none none</h4>
+      <h4>High school freshman none</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1380,7 +1380,7 @@
   <div class="gv-list-view-title">
     <h3>Matthew Riggan</h3>
     <div class="gv-list-view-subtitle">
-      <h4>The Workshop School The Workshop School</h4>
+      <h4>Co-Founder/Executive Director The Workshop School</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1406,7 +1406,7 @@
   <div class="gv-list-view-title">
     <h3>Yarrow Kraner</h3>
     <div class="gv-list-view-subtitle">
-      <h4>HATCH & H360 HATCH & H360</h4>
+      <h4>CEO / Founder HATCH & H360</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1432,7 +1432,7 @@
   <div class="gv-list-view-title">
     <h3>Cassidy Seckman</h3>
     <div class="gv-list-view-subtitle">
-      <h4>HATCH HATCH</h4>
+      <h4>Executive Coordinator HATCH</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1458,7 +1458,7 @@
   <div class="gv-list-view-title">
     <h3>Gaute Juliussen</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Tor Corp Tor Corp</h4>
+      <h4>CEO Tor Corp</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1484,7 +1484,7 @@
   <div class="gv-list-view-title">
     <h3>John McKee</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Headframe Spirits and Headframe Spirits Manufacturing Headframe Spirits and Headframe Spirits Manufacturing</h4>
+      <h4>Owner/Founder Headframe Spirits and Headframe Spirits Manufacturing</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1510,7 +1510,7 @@
   <div class="gv-list-view-title">
     <h3>Michael Turri</h3>
     <div class="gv-list-view-subtitle">
-      <h4>fortyforty labs fortyforty labs</h4>
+      <h4>Co-Founder and CDO fortyforty labs</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1536,7 +1536,7 @@
   <div class="gv-list-view-title">
     <h3>Alayna Rasile</h3>
     <div class="gv-list-view-subtitle">
-      <h4>May West Milkweed May West Milkweed</h4>
+      <h4>Co-Founder May West Milkweed</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1562,7 +1562,7 @@
   <div class="gv-list-view-title">
     <h3>Jared Silverman</h3>
     <div class="gv-list-view-subtitle">
-      <h4>HATCH || Gwydion Fund HATCH || Gwydion Fund</h4>
+      <h4>Director of Development HATCH || Gwydion Fund</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1588,7 +1588,7 @@
   <div class="gv-list-view-title">
     <h3>Rachel Hicks</h3>
     <div class="gv-list-view-subtitle">
-      <h4>HATCH || Rachel Hicks Design HATCH || Rachel Hicks Design</h4>
+      <h4>Designer | Strategist | Facilitator | Event Producer HATCH || Rachel Hicks Design</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1614,7 +1614,7 @@
   <div class="gv-list-view-title">
     <h3>Brandon Kaufer</h3>
     <div class="gv-list-view-subtitle">
-      <h4>The Social Good Club The Social Good Club</h4>
+      <h4>Co-Founder The Social Good Club</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1640,7 +1640,7 @@
   <div class="gv-list-view-title">
     <h3>Alexis Jackson</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Big Sky Discovery Academy Big Sky Discovery Academy</h4>
+      <h4>Full Time Student Big Sky Discovery Academy</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1666,7 +1666,7 @@
   <div class="gv-list-view-title">
     <h3>Aithan Shapira</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Making to Think Making to Think</h4>
+      <h4>Founder + CEO Making to Think</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1692,7 +1692,7 @@
   <div class="gv-list-view-title">
     <h3>Joshua Alexander</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Alliance Dr. Olga Mohan High School Alliance Dr. Olga Mohan High School</h4>
+      <h4>Student Alliance Dr. Olga Mohan High School</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1718,7 +1718,7 @@
   <div class="gv-list-view-title">
     <h3>Merielen Espino</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Alliance Dr Olga Mohan High School Alliance Dr Olga Mohan High School</h4>
+      <h4>Student Alliance Dr Olga Mohan High School</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1744,7 +1744,7 @@
   <div class="gv-list-view-title">
     <h3>Susan Carstensen</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Yellowstone Growth Partners, LLC Yellowstone Growth Partners, LLC</h4>
+      <h4>Cofounder Yellowstone Growth Partners Yellowstone Growth Partners, LLC</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1770,7 +1770,7 @@
   <div class="gv-list-view-title">
     <h3>Josie Caton</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Summit Perspectives / Yellowstone Club Summit Perspectives / Yellowstone Club</h4>
+      <h4>Founder / Facilitator / Guide Summit Perspectives / Yellowstone Club</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1796,7 +1796,7 @@
   <div class="gv-list-view-title">
     <h3>Rebecca Trobe</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Impact Coaching & Consulting LLC Impact Coaching & Consulting LLC</h4>
+      <h4>Executive Leadership Coach + Family Wealth/Family Philanthropy Consultant Impact Coaching & Consulting LLC</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1822,7 +1822,7 @@
   <div class="gv-list-view-title">
     <h3>Ainsley McCaskill</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Independent GP Locum | Seth Godins' altMBA | Ainsley Lewis Coaching Independent GP Locum | Seth Godins' altMBA | Ainsley Lewis Coaching</h4>
+      <h4>Doctor | Coach Independent GP Locum | Seth Godins' altMBA | Ainsley Lewis Coaching</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1848,7 +1848,7 @@
   <div class="gv-list-view-title">
     <h3>Joelle Parent-Proulx</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Two Steps Out Two Steps Out</h4>
+      <h4>Founder and Self-disruptor Two Steps Out</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1874,7 +1874,7 @@
   <div class="gv-list-view-title">
     <h3>Nathan Browne</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Lone Peak High school BSSD Lone Peak High school BSSD</h4>
+      <h4>Student Lone Peak High school BSSD</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1900,7 +1900,7 @@
   <div class="gv-list-view-title">
     <h3>Samantha Suazo</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Lone Peak Highschool Lone Peak Highschool</h4>
+      <h4>Student Lone Peak Highschool</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1926,7 +1926,7 @@
   <div class="gv-list-view-title">
     <h3>Frank Douglas</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Jereco Studios Jereco Studios</h4>
+      <h4>Lighting Designer/Programmer Jereco Studios</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1952,7 +1952,7 @@
   <div class="gv-list-view-title">
     <h3>Marques Anderson</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Urban Matrix One/WE Foundation Urban Matrix One/WE Foundation</h4>
+      <h4>Tech Entrepreneur/Philanthropist Urban Matrix One/WE Foundation</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -1978,7 +1978,7 @@
   <div class="gv-list-view-title">
     <h3>Meredith Haberfeld</h3>
     <div class="gv-list-view-subtitle">
-      <h4>ThinkHuman ThinkHuman</h4>
+      <h4>CEO ThinkHuman</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2004,7 +2004,7 @@
   <div class="gv-list-view-title">
     <h3>Jaime Hansen</h3>
     <div class="gv-list-view-subtitle">
-      <h4>alley-oop alley-oop</h4>
+      <h4>Founder / CEO alley-oop</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2030,7 +2030,7 @@
   <div class="gv-list-view-title">
     <h3>Malou Anderson-Ramirez</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Anderson Ranch/Tom Miner Basin Association Anderson Ranch/Tom Miner Basin Association</h4>
+      <h4>Rancher/Cofounder Anderson Ranch/Tom Miner Basin Association</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2056,7 +2056,7 @@
   <div class="gv-list-view-title">
     <h3>Samara Cohen</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Princess Lockerooo Productions Princess Lockerooo Productions</h4>
+      <h4>Entertainer, Educator, Producer Princess Lockerooo Productions</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2082,7 +2082,7 @@
   <div class="gv-list-view-title">
     <h3>Stu Robertson</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Peace in 10,000 Hands Peace in 10,000 Hands</h4>
+      <h4>Founder / Director Peace in 10,000 Hands</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2108,7 +2108,7 @@
   <div class="gv-list-view-title">
     <h3>Chris Krohn</h3>
     <div class="gv-list-view-subtitle">
-      <h4>IDEO IDEO</h4>
+      <h4>Program Lead IDEO</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2134,7 +2134,7 @@
   <div class="gv-list-view-title">
     <h3>Bryant Sterczala</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Kinetic Meditation Kinetic Meditation</h4>
+      <h4>Instructor Kinetic Meditation</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2160,7 +2160,7 @@
   <div class="gv-list-view-title">
     <h3>Chris Bruha</h3>
     <div class="gv-list-view-subtitle">
-      <h4>PureWest Christie's Real Estate PureWest Christie's Real Estate</h4>
+      <h4>Realtor/Electrician/Solar PureWest Christie's Real Estate</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2186,7 +2186,7 @@
   <div class="gv-list-view-title">
     <h3>COL (RET) Alan Landry</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Founder and Owner ALTUITIVE HOLDINGS LLC Founder and Owner ALTUITIVE HOLDINGS LLC</h4>
+      <h4>Author of "Growing Mentor Intelligence - A Field Guide to Mentoring" Founder and Owner ALTUITIVE HOLDINGS LLC</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2212,7 +2212,7 @@
   <div class="gv-list-view-title">
     <h3>Pete Strom</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Ten Directions | Making to Think | SHINE | La Pa Grill Ten Directions | Making to Think | SHINE | La Pa Grill</h4>
+      <h4>Integral Facilitator | Experience Designer Ten Directions | Making to Think | SHINE | La Pa Grill</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2238,7 +2238,7 @@
   <div class="gv-list-view-title">
     <h3>Nicholas Tenney</h3>
     <div class="gv-list-view-subtitle">
-      <h4>The Artery Collective The Artery Collective</h4>
+      <h4>The Artery Collective, Co-Founder The Artery Collective</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2264,7 +2264,7 @@
   <div class="gv-list-view-title">
     <h3>Ryall Carroll</h3>
     <div class="gv-list-view-subtitle">
-      <h4>CR SCORE CR SCORE</h4>
+      <h4>Co-Founder CR SCORE & Associate Prof Marketing St. John's University CR SCORE</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2290,7 +2290,7 @@
   <div class="gv-list-view-title">
     <h3>Kene Sperry</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Eye in the Sky Photography Eye in the Sky Photography</h4>
+      <h4>Photographer Eye in the Sky Photography</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2316,7 +2316,7 @@
   <div class="gv-list-view-title">
     <h3>Raymond Ansotegui</h3>
     <div class="gv-list-view-subtitle">
-      <h4>7th Direction 7th Direction</h4>
+      <h4>Environmental Consultant 7th Direction</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2342,7 +2342,7 @@
   <div class="gv-list-view-title">
     <h3>Robert Edwards</h3>
     <div class="gv-list-view-subtitle">
-      <h4>VG Capital Group / Brownfield Farms / VG Capital Group / Brownfield Farms /</h4>
+      <h4>Founding Manager VG Capital Group / Brownfield Farms /</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2368,7 +2368,7 @@
   <div class="gv-list-view-title">
     <h3>Teneia Sanders</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Teneia Teneia</h4>
+      <h4>CEO of Teneia Teneia</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2394,7 +2394,7 @@
   <div class="gv-list-view-title">
     <h3>Dee Fretwell</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Modern Roots Foundation, Southern Oregon University, University of Georgia Modern Roots Foundation, Southern Oregon University, University of Georgia</h4>
+      <h4>Executive Director, Professor Modern Roots Foundation, Southern Oregon University, University of Georgia</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2420,7 +2420,7 @@
   <div class="gv-list-view-title">
     <h3>Shannon Hughes</h3>
     <div class="gv-list-view-subtitle">
-      <h4>SeaChange SeaChange</h4>
+      <h4>Project Director SeaChange</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2446,7 +2446,7 @@
   <div class="gv-list-view-title">
     <h3>Marta Ferro</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Starfish Impact Starfish Impact</h4>
+      <h4>Founder & President Starfish Impact</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2472,7 +2472,7 @@
   <div class="gv-list-view-title">
     <h3>Lia Rose Evans</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Lia Rose / Built for the Sea Lia Rose / Built for the Sea</h4>
+      <h4>Musician / Activist Lia Rose / Built for the Sea</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2498,7 +2498,7 @@
   <div class="gv-list-view-title">
     <h3>Katey Stoetzel</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Ewing Marion Kauffman Foundation Ewing Marion Kauffman Foundation</h4>
+      <h4>Content Marketing Coordinator Ewing Marion Kauffman Foundation</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2524,7 +2524,7 @@
   <div class="gv-list-view-title">
     <h3>Rachel Kaganoff Stern</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Junior State of America Junior State of America</h4>
+      <h4>Interim CEO Junior State of America</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2550,7 +2550,7 @@
   <div class="gv-list-view-title">
     <h3>Jocelyn (Josie) Lehrer</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Men's Story Project; University of California-San Francisco Bixby Center for Global Reproductive Health Men's Story Project; University of California-San Francisco Bixby Center for Global Reproductive Health</h4>
+      <h4>Founder/Director; Affiliated Senior Research Associate Men's Story Project; University of California-San Francisco Bixby Center for Global Reproductive Health</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2576,7 +2576,7 @@
   <div class="gv-list-view-title">
     <h3>Elke Govertsen</h3>
     <div class="gv-list-view-subtitle">
-      <h4>MyVillage MyVillage</h4>
+      <h4>Chief Community Officer MyVillage, CEO Mamalode MyVillage</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2602,7 +2602,7 @@
   <div class="gv-list-view-title">
     <h3>Melanie Curtis</h3>
     <div class="gv-list-view-subtitle">
-      <h4>How to Fly, Inc. How to Fly, Inc.</h4>
+      <h4>Coach, Artist, Speaker, Professional Skydiver How to Fly, Inc.</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2628,7 +2628,7 @@
   <div class="gv-list-view-title">
     <h3>Joe Kleinschmidt</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Obindo Obindo</h4>
+      <h4>CEO Obindo</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2654,7 +2654,7 @@
   <div class="gv-list-view-title">
     <h3>DANIEL WORDSWORTH</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Alight Alight</h4>
+      <h4>President and CEO Alight</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2680,7 +2680,7 @@
   <div class="gv-list-view-title">
     <h3>Jessica Felts</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Ampush Ampush</h4>
+      <h4>Senior Director of People Ampush</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2706,7 +2706,7 @@
   <div class="gv-list-view-title">
     <h3>Kenneth Lacovara</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Edelman Fossil Park & Museum/Rowan University Edelman Fossil Park & Museum/Rowan University</h4>
+      <h4>Museum Director/Dean/Paleontologist Edelman Fossil Park & Museum/Rowan University</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2732,7 +2732,7 @@
   <div class="gv-list-view-title">
     <h3>Jennifer O'Connor</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Guidelight Strategies Guidelight Strategies</h4>
+      <h4>Founder, Chief Strategist Guidelight Strategies</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2758,7 +2758,7 @@
   <div class="gv-list-view-title">
     <h3>Amy Climer</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Climer Consulting Climer Consulting</h4>
+      <h4>Speaker, trainer, podcast host Climer Consulting</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2784,7 +2784,7 @@
   <div class="gv-list-view-title">
     <h3>Brooks Tyrrell</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Big Sky Real Estate Co. Big Sky Real Estate Co.</h4>
+      <h4>Sales Assistant Big Sky Real Estate Co.</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2810,7 +2810,7 @@
   <div class="gv-list-view-title">
     <h3>Erik Wallsten</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Adobe Capital Adobe Capital</h4>
+      <h4>Managing Partner Adobe Capital</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2836,7 +2836,7 @@
   <div class="gv-list-view-title">
     <h3>Jess Phoenix</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Blueprint Earth Blueprint Earth</h4>
+      <h4>Executive Director/Volcanologist Blueprint Earth</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2862,7 +2862,7 @@
   <div class="gv-list-view-title">
     <h3>Ed O'Malley</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Kansas Leadership Center Kansas Leadership Center</h4>
+      <h4>President and CEO Kansas Leadership Center</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2888,7 +2888,7 @@
   <div class="gv-list-view-title">
     <h3>Mustafa Osman Turan</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Ministry of Foreign Affairs of Republic of Turkey Ministry of Foreign Affairs of Republic of Turkey</h4>
+      <h4>Deputy Director General for Multilateral Economic Affairs Ministry of Foreign Affairs of Republic of Turkey</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2914,7 +2914,7 @@
   <div class="gv-list-view-title">
     <h3>Joshua Lesser</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Congregation Bet Haverim Congregation Bet Haverim</h4>
+      <h4>Rabbi Congregation Bet Haverim</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2940,7 +2940,7 @@
   <div class="gv-list-view-title">
     <h3>Greg Arthur</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Lifeology Lifeology</h4>
+      <h4>People Developmentalist Lifeology</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2966,7 +2966,7 @@
   <div class="gv-list-view-title">
     <h3>Rebeca Velazquez-Publes</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Urban Core Collective Urban Core Collective</h4>
+      <h4>Community Builder Urban Core Collective</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -2992,7 +2992,7 @@
   <div class="gv-list-view-title">
     <h3>Sam Lucas</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Triple Tree Software Triple Tree Software</h4>
+      <h4>Managing Director Triple Tree Software</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -3018,7 +3018,7 @@
   <div class="gv-list-view-title">
     <h3>Brandon Kinports</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Artefact Artefact</h4>
+      <h4>Sr. Director of Partnerships Artefact</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -3044,7 +3044,7 @@
   <div class="gv-list-view-title">
     <h3>Gautam (Dr.G) Gulati</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Well Played Well Played</h4>
+      <h4>Chief Storyteller & Co-Founder Well Played</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -3070,7 +3070,7 @@
   <div class="gv-list-view-title">
     <h3>Henri Stern</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Stanford University Stanford University</h4>
+      <h4>Student Stanford University</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -3096,7 +3096,7 @@
   <div class="gv-list-view-title">
     <h3>Julie Craig</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Self Employed, or otherwise varies by project Self Employed, or otherwise varies by project</h4>
+      <h4>Actress, Singer, Producer, Writer Self Employed, or otherwise varies by project</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -3122,7 +3122,7 @@
   <div class="gv-list-view-title">
     <h3>Lori Shaffer</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Kimberly-Clark Kimberly-Clark</h4>
+      <h4>Director of Front End Innovation Kimberly-Clark</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -3148,7 +3148,7 @@
   <div class="gv-list-view-title">
     <h3>Max Palazzi</h3>
     <div class="gv-list-view-subtitle">
-      <h4>NAU NAU</h4>
+      <h4>Student NAU</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -3174,7 +3174,7 @@
   <div class="gv-list-view-title">
     <h3>Ed Huber</h3>
     <div class="gv-list-view-subtitle">
-      <h4>The Clorox Company The Clorox Company</h4>
+      <h4>Vice - President/General Manager and Corporate Leader of Sustainability The Clorox Company</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -3200,7 +3200,7 @@
   <div class="gv-list-view-title">
     <h3>Daniel Sieberg</h3>
     <div class="gv-list-view-subtitle">
-      <h4>iO iO</h4>
+      <h4>CEO, founder iO</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -3226,7 +3226,7 @@
   <div class="gv-list-view-title">
     <h3>Ellen Jackowski</h3>
     <div class="gv-list-view-subtitle">
-      <h4>HP Inc. HP Inc.</h4>
+      <h4>Global Head of Sustainability Strategy & Innovation HP Inc.</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -3252,7 +3252,7 @@
   <div class="gv-list-view-title">
     <h3>Liz Dozier</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Chicago Beyond Chicago Beyond</h4>
+      <h4>CEO Chicago Beyond</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -3278,7 +3278,7 @@
   <div class="gv-list-view-title">
     <h3>Eric Berlow</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Vibrant Data Labs Vibrant Data Labs</h4>
+      <h4>CEO Vibrant Data Labs</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
@@ -3304,7 +3304,7 @@
   <div class="gv-list-view-title">
     <h3>Lee Rosenblatt</h3>
     <div class="gv-list-view-subtitle">
-      <h4>Lee Rosenblatt Lee Rosenblatt</h4>
+      <h4>Human Being Lee Rosenblatt</h4>
     </div>
   </div>
   <div class="gv-grid gv-list-view-content">
