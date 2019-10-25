@@ -79,12 +79,13 @@
                 </div>
               <?php endif; ?>
             </div>
-            
+            <?php if ( have_posts() ) : while (have_posts() ) : the_post(); ?>
               <div class="summary lab-section">
                 <label>Summary</label>
                 <div><?php the_content(); ?></div>
               </div>
-         
+            <?php endwhile; ?>
+            <?php endif; ?>
             <?php if ($project_description) : ?>
             <div class="project-description lab-section">
               <label>Project Description</label>
