@@ -79,12 +79,12 @@
                 </div>
               <?php endif; ?>
             </div>
-            <?php if (!empty($the_content)) : ?>
+            
               <div class="summary lab-section">
                 <label>Summary</label>
                 <div><?php the_content(); ?></div>
               </div>
-            <?php endif; ?>
+         
             <?php if ($project_description) : ?>
             <div class="project-description lab-section">
               <label>Project Description</label>
