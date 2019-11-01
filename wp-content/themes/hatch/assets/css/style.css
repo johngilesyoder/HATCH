@@ -13666,6 +13666,18 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
     width: 100%;
   }
 }
+.page-template-template-hatching-a-better-world .lab .btn-more {
+  margin: 0 0 30px;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100 */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=0);
+  /* IE6-9 */
+  padding-top: 15px;
+}
 .page-template-template-hatching-a-better-world .lab .lab-header {
   margin: -30px -30px 30px;
   padding: 30px;

@@ -47,6 +47,29 @@
                 </div>
               </div>
             <?php endif; ?>
+            
+            <?php if ( have_posts() ) : while (have_posts() ) : the_post(); ?>
+              <div class="summary lab-section">
+                <label>Summary</label>
+                <div><?php the_content(); ?></div>
+              </div>
+            <?php endwhile; ?>
+            <?php endif; ?>
+            <?php if ($project_description) : ?>
+            <div class="project-description lab-section">
+              <label>Project Description</label>
+              <div>
+                <?php echo $project_description; ?>
+              </div>
+            </div>
+            <?php endif; ?>
+            <?php if ($needs) : ?>
+              <div class="project-needs lab-section">
+                <label>Project Needs</label>
+                <div><?php echo $needs; ?></div>
+              </div>
+            <?php endif; ?>
+
             <div class="classifications">
               <?php if (! empty( $categories )) : ?>
                 <div class="categories lab-section">
@@ -79,27 +102,7 @@
                 </div>
               <?php endif; ?>
             </div>
-            <?php if ( have_posts() ) : while (have_posts() ) : the_post(); ?>
-              <div class="summary lab-section">
-                <label>Summary</label>
-                <div><?php the_content(); ?></div>
-              </div>
-            <?php endwhile; ?>
-            <?php endif; ?>
-            <?php if ($project_description) : ?>
-            <div class="project-description lab-section">
-              <label>Project Description</label>
-              <div>
-                <?php echo $project_description; ?>
-              </div>
-            </div>
-            <?php endif; ?>
-            <?php if ($needs) : ?>
-              <div class="project-needs lab-section">
-                <label>Project Needs</label>
-                <div><?php echo $needs; ?></div>
-              </div>
-            <?php endif; ?>
+            
             <div class="actions">
               <div class="links lab-section">
                 <label>Links</label>

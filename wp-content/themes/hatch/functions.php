@@ -251,6 +251,16 @@ function html5blank_conditional_scripts()
 
     }
 
+    if ( is_page_template( 'template-hatching-a-better-world.php' ) ) {
+
+      wp_register_script('hatching-better-world', get_template_directory_uri() . '/assets/js/sections/hatching-better-world.js', array(), '1.0.4' );
+      wp_enqueue_script('hatching-better-world'); // Enqueue it!
+
+      wp_register_script('read-more', get_template_directory_uri() . '/assets/js/lib/readmore.min.js', array(), '1.0.0' );
+      wp_enqueue_script('read-more'); // Enqueue it!
+
+    }
+
     if ( is_singular( 'reunion' ) ) {
 
       wp_register_script('reunion', get_template_directory_uri() . '/assets/js/sections/min/reunion-min.js', array(), '1.0.0' ); // registration
