@@ -34,7 +34,7 @@
 						<div class="partners partners-innovation">
 				      <h3 class="partners-title">Innovation Partner</h3>
 				      <div class="partner-logos">
-				        <a href="/partners/innovation-partner/" class="partner partner-intel">
+				        <a href="/partners/kauffman-foundation-hatch/" class="partner partner-intel">
 				          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/partner-kauffman.png">
 				        </a>
 				      </div>
