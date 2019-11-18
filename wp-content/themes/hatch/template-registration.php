@@ -42,9 +42,7 @@ $photo_gallery_id = get_field('photo_gallery_id');
         <div class="col-md-12">
           <div class="welcome-section">
             <h4>Welcome to the HATCH network</h4>
-            <p>HATCH is a non-profit designed to benefit you and expand our network to HATCH a Better World, as well as mentor the next generation of our global leaders.  It costs $2750 to host each individual guest. HATCH is all inclusive.  Once you get yourself to Montana, everything is taken care of:  lodging, food, workshops, speaker series, entertainment, music, and transportation to and from the airport are all included with your pass.</p>
-            <p>We do not want financial constraints to stand in the way of your ability to experience HATCH. If the cost is prohibitive, there is an option to apply for a sponsored cost reduction when registering.</p>
-          </div>
+            <p>HATCH is a non-profit designed to benefit you and expand our network to HATCH a Better World, as well as mentor the next generation of our global leaders.  It costs $2750 to host each individual guest. HATCH is all inclusive.  Once you get yourself to Montana, everything is taken care of:  lodging, food, workshops, speaker series, entertainment, music, and transportation to and from the airport are all included with your pass.</p>          </div>
         </div>
       </div>
     </div>
@@ -80,13 +78,13 @@ $photo_gallery_id = get_field('photo_gallery_id');
       <p><strong>$2750 USD</strong> (plus flight)</p>
       <p>HATCH is a non-profit, and these summits work at break-even costs. HATCH writes a check per head for hard costs to the venue and vendors. At other conferences and convenings, attendees must pay for their entrance AND accommodations, food, etc., At HATCH you only cover your hard costs.</p>
       <p>This is an investment in you (personally and professionally), with tangible outcomes and not simply access to a one-off event, but access to a 15 year global network awaiting on the other side of the summit.</p>
-      <p>If the cost is prohibitive, there are sometimes amazing attendees that select the “pay it forward” option to sponsor an artist, educator, or student. If you are in need of a partial scholarship please email <a href="mailto:cassidy@hatchexperience.org">cassidy@hatchexperience.org</a> and we will add you to a waitlist in hopes that we can bring in additional sponsorship for partial scholarships (or when a “pay it forward” ticket is gifted). If this is the case, we will let you know with three weeks advance notice. We hope to see you at HATCH.</p>
+      <!-- <p>If the cost is prohibitive, there are sometimes amazing attendees that select the “pay it forward” option to sponsor an artist, educator, or student. If you are in need of a partial scholarship please email <a href="mailto:cassidy@hatchexperience.org">cassidy@hatchexperience.org</a> and we will add you to a waitlist in hopes that we can bring in additional sponsorship for partial scholarships (or when a “pay it forward” ticket is gifted). If this is the case, we will let you know with three weeks advance notice. We hope to see you at HATCH.</p> -->
     </div>
 
     <div class="section-timing">
       <h4>Timing / Travel Details</h4>
-      <p><strong>Arrive:</strong> Sunday, October 13 by 4:00PM in to Bozeman Yellowstone International Airport (BZN).</p>
-      <p><strong>Depart:</strong> Thursday, October 17 in the late morning or early afternoon (BZN)</p>
+      <p><strong>Arrive:</strong> Tuesday, September 29 by 4:00PM in to Bozeman Yellowstone International Airport (BZN).</p>
+      <p><strong>Depart:</strong> Saturday, October 3 in the late morning or early afternoon (BZN)</p>
       <p>If you would you like to stay for an optional decompression and explore the area and Yellowstone National Park with a night spent at a hot springs resort for a night or two, please email <a href="mailto:cassidy@hatchexperience.org">cassidy@hatchexperience.org</a></p>
       <p><strong>Questions?:</strong> email Cassidy Seckman at <a href="mailto:experience@hatchexperience.org">experience@hatchexperience.org</a></p>
     </div>
