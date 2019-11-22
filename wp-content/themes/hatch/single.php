@@ -1,69 +1,104 @@
 <?php get_header(); ?>
+<!-- Modal -->
+<div class="modal fade" id="categoriesModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Categories</h4>
+      </div>
+      <div class="modal-body">
+        <?php wp_list_categories('title_li=&orderby=count&order=DESC&taxonomy=post_tag'); ?>
+      </div>
+    </div>
+  </div>
+</div>
 
-	<main role="main" aria-label="Content">
-	<!-- section -->
-	<section>
+<div class="container container-blog">
+  <div class="blog-roll-wrapper">
 
-	<?php if ( have_posts() ) : while (have_posts() ) : the_post(); ?>
+		<main role="main">
+      <?php if ( in_category('becauseofhatch') ) : ?>
+        <div class="because-title">
+          <strong>#BecauseOfHatch</strong>
+          <p>HATCH is a network of world-shapers that mentor and mutually invest in one another. As positive things happen #becauseOfHATCH, the tag is used to help track the many projects and initiatives that grow from HATCH to create a global movement for good.</p>
+        </div>
+      <?php endif; ?>
+			<div class="view-all-posts">
+				<a href="/blog">&larr;&nbsp; View all posts</a>
+			</div>
 
-		<!-- article -->
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-			<!-- post thumbnail -->
-			<?php if ( has_post_thumbnail() ) : // Check if Thumbnail exists. ?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-					<?php the_post_thumbnail(); // Fullsize image for the single post. ?>
-				</a>
+				<!-- article -->
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+					<!-- post title -->
+					<h1 class="post-title">
+						<?php if ( in_category( 'profiles' ) ) : ?>
+							Profile &nbsp;//&nbsp;
+						<?php endif; ?>
+						<?php the_title(); ?>
+					</h1>
+					<div class="post-meta">
+						<span class="author"><?php _e( '', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span> &nbsp;&bull;&nbsp; <span class="date"><?php the_time('F j, Y'); ?></p></span>
+					</div>
+
+					<div class="share-post">
+						<div class="tweet-button">
+							<a href="https://twitter.com/share" class="twitter-share-button" data-via="kindkudos" data-count="none">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+						</div>
+						<div class="like-button">
+							<div class="fb-like" data-href="<?php the_permalink(); ?>" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+						</div>
+					</div>
+
+					<!-- post thumbnail -->
+					<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
+						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+							<?php the_post_thumbnail('large'); // Declare pixel size you need inside the array ?>
+						</a>
+					<?php endif; ?>
+
+					<div class="post-content">
+						<!-- Profile intro statement -->
+						<?php if ( get_post_meta( get_the_ID(), 'wpcf-profile-introduction-statement', true ) ) : ?>
+					    <div class="profile-intro-statement">
+					    	<?php echo get_post_meta( get_the_ID(), 'wpcf-profile-introduction-statement', true ); ?>
+					    </div>
+					  <?php endif; ?>
+
+						<?php the_content(); // Dynamic Content ?>
+
+						<!-- Profile intro statement -->
+						<?php if ( get_post_meta( get_the_ID(), 'wpcf-profile-closing-statement', true ) ) : ?>
+					    <div class="profile-closing-statement">
+					    	<?php echo get_post_meta( get_the_ID(), 'wpcf-profile-closing-statement', true ); ?>
+					    </div>
+					  <?php endif; ?>
+					</div>
+
+					<?php comments_template(); ?>
+
+				</article>
+				<!-- /article -->
+
+			<?php endwhile; ?>
+
 			<?php endif; ?>
-			<!-- /post thumbnail -->
 
-			<!-- post title -->
-			<h1>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-			</h1>
-			<!-- /post title -->
+		</main>
+	</div>
 
-			<!-- post details -->
-			<span class="date">
-				<time datetime="<?php the_time( 'Y-m-d' ); ?> <?php the_time( 'H:i' ); ?>">
-					<?php the_date(); ?> <?php the_time(); ?>
-				</time>
-			</span>
-			<span class="author"><?php esc_html_e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-			<span class="comments"><?php if ( comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' ) ); ?></span>
-			<!-- /post details -->
 
-			<?php the_content(); // Dynamic Content. ?>
+  <div class="blog-sidebar-wrapper">
+    <aside class="blog-sidebar">
+      <?php get_sidebar(); ?>
+    </aside>
+  </div>
+</div>
 
-			<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>' ); // Separated by commas with a line break at the end. ?>
+    <?php wp_footer(); ?>
 
-			<p><?php esc_html_e( 'Categorised in: ', 'html5blank' ); the_category( ', ' ); // Separated by commas. ?></p>
-
-			<p><?php esc_html_e( 'This post was written by ', 'html5blank' ); the_author(); ?></p>
-
-			<?php edit_post_link(); // Always handy to have Edit Post Links available. ?>
-
-			<?php comments_template(); ?>
-
-		</article>
-		<!-- /article -->
-
-	<?php endwhile; ?>
-
-	<?php else : ?>
-
-		<!-- article -->
-		<article>
-
-			<h1><?php esc_html_e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
-
-		</article>
-		<!-- /article -->
-
-	<?php endif; ?>
-
-	</section>
-	<!-- /section -->
-	</main>
-
-<?php get_footer(); ?>
+  </body>
+</html>
