@@ -57,9 +57,9 @@
       <div class="row">
         <div class="mentorship-block">
           <div class="block-wrapper">
-            <a href="/nextgen-2/" class="mentorship-block-img" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/mentorship-1.png');">
+            <a href="/hatching-a-better-world/" class="mentorship-block-img" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/mentorship-1.png');">
               <h3 class="mentorship-block-title gradient">
-                <span>Groundbreakers</span>
+                <span>HATCH a Better World</span>
               </h3>
             </a>
             <p>Central to hatch is cultivating the next generation of creative leaders. Each year, HATCH selects up to 10 “Groundbreakers” who have shown exceptional talent and dedication to their work. So far, HATCH has sponsored more than 100 Groundbreakers and has impacted over 5,000 students directly. <a href="#">See Groundbreakers Alumni</a></p>
@@ -69,7 +69,7 @@
           <div class="block-wrapper">
             <a href="/nextgen-2/" class="mentorship-block-img" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/mentorship-2.png');">
               <h3 class="mentorship-block-title gradient">
-                <span>360&deg; Mentorship</span>
+                <span>HATCH NextGen</span>
               </h3>
             </a>
             <p>Mentoring is a Hatch cornerstone. What began as top-down mentorship has evolved into a ‘360’ mentorship approach; bottom-up and peer to peer. We encourage — if not expect — all HATCH community members to mentor, share, and challenge one another. <a href="#">Learn more about 360° Mentorships</a></p>
