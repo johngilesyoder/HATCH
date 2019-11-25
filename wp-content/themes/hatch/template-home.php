@@ -19,7 +19,7 @@
           </div>
         </div>
         <div class="conference-info">
-          <h3 class="hatch-logo conference-title">HATCH<span><?php echo date('Y'); ?></span></h3>
+          <h3 class="hatch-logo conference-title">HATCH<span><?php the_field('current_hatch_big_sky_year', 'option'); ?></span></h3>
           <?php if( have_rows('hatch_event', 'option') ): ?>
             
             <div class="events">
