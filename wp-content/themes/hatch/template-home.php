@@ -52,7 +52,7 @@
     <!-- Mentorship -->
     <section class="section-block section-mentorship">
       <div class="section-header">
-        <h2 class="section-title">Mentorship</h2>
+        <h2 class="section-title">Programs</h2>
       </div>
       <div class="row">
         <div class="mentorship-block">

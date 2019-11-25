@@ -9305,6 +9305,11 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   top: 0;
   bottom: 0;
   width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-flow: column;
 }
 .blog-sidebar .widget_twitter {
   width: 100%;
@@ -9410,10 +9415,11 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
 }
 .blog-sidebar .sidebar-footer {
   text-align: center;
-  position: absolute;
-  bottom: 30px;
+  position: static;
+  margin-bottom: 30px;
   left: 0;
   width: 100%;
+  margin-top: auto;
 }
 .blog-sidebar .sidebar-footer .sidebar-footer-logo {
   position: relative;

@@ -9,6 +9,8 @@
   top: 0;
   bottom: 0;
   width: 100%;
+  display: flex;
+  flex-flow: column;
   .widget_twitter {
     width: 100%;
     padding: 0 15px;
@@ -113,10 +115,11 @@
   }
   .sidebar-footer {
     text-align: center;
-    position: absolute;
-    bottom: 30px;
+    position: static;
+    margin-bottom: 30px;
     left: 0;
     width: 100%;
+    margin-top: auto;
     .sidebar-footer-logo {
       position: relative;
       margin-bottom: 15px;
