@@ -57,22 +57,22 @@
       <div class="row">
         <div class="mentorship-block">
           <div class="block-wrapper">
-            <a href="/hatching-a-better-world/" class="mentorship-block-img" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/mentorship-1.png');">
+            <a href="/hatching-a-better-world/" class="mentorship-block-img" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/homepage-habw.jpg');">
               <h3 class="mentorship-block-title gradient">
                 <span>HATCH a Better World</span>
               </h3>
             </a>
-            <p>Central to hatch is cultivating the next generation of creative leaders. Each year, HATCH selects up to 10 “Groundbreakers” who have shown exceptional talent and dedication to their work. So far, HATCH has sponsored more than 100 Groundbreakers and has impacted over 5,000 students directly. <a href="#">See Groundbreakers Alumni</a></p>
+            <p>The HATCH network consists of world-shapers that mentor and mutually invest in one another. The HATCH A Better World program is designed to foster and support projects, initiatives, and collaborations from within the HATCH network.This program serves as the amplifier for creative solutions for good. <a href="/hatching-a-better-world/">Learn More</a></p>
           </div>
         </div>
         <div class="mentorship-block">
           <div class="block-wrapper">
-            <a href="/nextgen-2/" class="mentorship-block-img" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/mentorship-2.png');">
+            <a href="/nextgen-2/" class="mentorship-block-img" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/homepage-nextgen.jpg');">
               <h3 class="mentorship-block-title gradient">
-                <span>HATCH NextGen</span>
+                <span>NextGen</span>
               </h3>
             </a>
-            <p>Mentoring is a Hatch cornerstone. What began as top-down mentorship has evolved into a ‘360’ mentorship approach; bottom-up and peer to peer. We encourage — if not expect — all HATCH community members to mentor, share, and challenge one another. <a href="#">Learn more about 360° Mentorships</a></p>
+            <p>Central to HATCH is cultivating the next generation of creative leaders. Each year, HATCH connects students to global leaders and mentors at the top of their industries.  As a community of innovators and influencers, HATCH works to support NextGen students and expand their horizons of what’s possible. <a href="/home/nextgen-2/">Learn more about 360° Mentorships</a></p>
           </div>
         </div>
       </div>

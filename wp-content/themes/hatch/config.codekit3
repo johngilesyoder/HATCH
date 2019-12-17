@@ -720,6 +720,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/assets/img/homepage-habw.jpg": {
+		"ft": 16384,
+		"iS": 302005,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/homepage-habw.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/assets/img/icon-blog-footer-facebook.svg": {
 		"ft": 2097152,
 		"miP": 0,
