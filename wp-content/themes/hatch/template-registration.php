@@ -42,7 +42,9 @@ $photo_gallery_id = get_field('photo_gallery_id');
         <div class="col-md-12">
           <div class="welcome-section">
             <h4>Welcome to the HATCH network</h4>
-            <p>HATCH is a non-profit designed to benefit you and expand our network to HATCH a Better World, as well as mentor the next generation of our global leaders.  It costs $2750 to host each individual guest. HATCH is all inclusive.  Once you get yourself to Montana, everything is taken care of:  lodging, food, workshops, speaker series, entertainment, music, and transportation to and from the airport are all included with your pass.</p>          </div>
+            <p>The cost of this invite-only Summit is zero, as a gift to you for HATCHing a Better World. You will need to cover hard costs, which includes 4 nights accommodations, 3 meals a day, drinks, entertainment, and shuttles to and from the airport. This totals $2750 for HATCH Montana.</p>
+            <p>Note - we do not want finances to be the barrier of entry, so if you need to request a partial scholarship, click here.  Scholarships are limited and preference will be offered to students, educators, marginalized communities, and those in social impact / non-profit sectors.</p>
+            <p>HATCH is a non-profit designed to benefit you and expand our network to HATCH a Better World, as well as mentor the next generation of our global leaders.</p>          </div>
         </div>
       </div>
     </div>
