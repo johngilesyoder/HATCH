@@ -79,7 +79,7 @@
     </section>
 
     <!-- Upcoming Hatchings -->
-    <section class="section-block section-hatchings">
+    <!-- <section class="section-block section-hatchings">
       <div class="section-header">
         <h2 class="section-title">Upcoming (&amp; Past) Hatchings</h2>
         <div class="section-header-links">
@@ -114,7 +114,7 @@
 
       <?php } ?>
       </div>
-    </section>
+    </section> -->
 
     <!-- Partners -->
     <?php get_template_part( 'includes/partners-block' ); ?>
