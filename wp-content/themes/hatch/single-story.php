@@ -10,8 +10,7 @@
   $contact = get_field('contact_information');
   $categories = get_the_term_list( $post->ID, 'story_category', '<li>', '</li><li>', '</li>' );
   $categories = strip_tags( $categories, '<li>' );
-  $category_titles = get_the_term_list( $post->ID, 'story_category', '', '', '' );
-  $category_titles = strip_tags( $category_titles, '<li>' );
+  $primary_category = get_field('primary_category');
   $sdgs = get_the_terms( $post->ID, 'sdg' );
   $the_content = apply_filters('the_content', get_the_content());
 ?>
@@ -33,7 +32,7 @@
               <header class="lab-header">
             <?php endif; ?>
               <div class="header-content">
-                <span class="project-category"><?php echo $category_titles; ?></span>
+                <span class="project-category"><?php echo $primary_category; ?></span>
               </div>
             </header>
             <?php if ($leader_name && $leader_avatar && $leader_bio) : ?>
