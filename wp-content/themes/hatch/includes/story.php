@@ -1,4 +1,5 @@
 <?php
+  $primary_category = get_field('primary_category');
   $project_description = get_field('project_description');
   $leader_name = get_field('leader_name');
   $categories = get_the_term_list( $post->ID, 'story_category', '<li>', '</li><li>', '</li>' );
@@ -13,8 +14,8 @@
     <header class="lab-header">
   <?php endif; ?>
     <a href="<?php the_permalink(); ?>" class="header-content">
-      <span class="leader-name"><?php echo $leader_name; ?></span>
-      <span class="project-name"><?php the_title(); ?></span>
+      <span class="leader-name"><?php echo the_title(); ?></span>
+      <span class="project-name"><?php echo $primary_category; ?></span>
     </a>
   </header>
   <div class="wrapper">
