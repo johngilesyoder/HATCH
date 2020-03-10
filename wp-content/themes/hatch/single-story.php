@@ -10,11 +10,14 @@
   $contact = get_field('contact_information');
   $categories = get_the_term_list( $post->ID, 'story_category', '<li>', '</li><li>', '</li>' );
   $categories = strip_tags( $categories, '<li>' );
+  $category_titles = get_the_term_list( $post->ID, 'story_category', '', '', '' );
+  $category_titles = strip_tags( $category_titles, '<li>' );
   $sdgs = get_the_terms( $post->ID, 'sdg' );
   $the_content = apply_filters('the_content', get_the_content());
 ?>
 
 	<main role="main" aria-label="Content">
+
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -30,7 +33,7 @@
               <header class="lab-header">
             <?php endif; ?>
               <div class="header-content">
-                <span class="project-name"><?php the_title(); ?></span>
+                <span class="project-category"><?php echo $category_titles; ?></span>
               </div>
             </header>
             <?php if ($leader_name && $leader_avatar && $leader_bio) : ?>
@@ -49,6 +52,12 @@
             <?php endif; ?>
             
             <?php if ( have_posts() ) : while (have_posts() ) : the_post(); ?>
+              <div class="project-title lab-section">
+                <label>Project Name</label>
+                <div>
+                  <span class="project-name"><?php the_title(); ?></span>
+                </div>
+              </div>
               <div class="summary lab-section">
                 <label>Summary</label>
                 <div><?php the_content(); ?></div>
