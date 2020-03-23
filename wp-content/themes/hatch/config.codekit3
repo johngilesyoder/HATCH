@@ -3427,6 +3427,22 @@
 		"sI": 0,
 		"sU": 0
 		},
+	"/assets/less/pages/hatch-membership.less": {
+		"aP": 0,
+		"bl": 0,
+		"eJ": 0,
+		"ft": 1,
+		"iI": 0,
+		"ma": 1,
+		"mS": 0,
+		"oA": 1,
+		"oAP": "/assets/less/pages/hatch-membership.css",
+		"oF": 0,
+		"oS": 0,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 0
+		},
 	"/assets/less/pages/hatchback.less": {
 		"aP": 0,
 		"bl": 0,
@@ -4549,6 +4565,14 @@
 		"hM": 0,
 		"oA": 2,
 		"oAP": "/template-hasbro-registration.php",
+		"oF": 0
+		},
+	"/template-hatch-membership.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-hatch-membership.php",
 		"oF": 0
 		},
 	"/template-hatchback.php": {
