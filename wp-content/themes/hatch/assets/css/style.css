@@ -12927,6 +12927,12 @@ fieldset[disabled] .page-template-template-h360form .gform_button {
 .memberpressgroup-template-template-hatch-membership .membership-section {
   padding: 60px 0;
 }
+@media (max-width: 767px) {
+  .page-template-template-hatch-membership .membership-section,
+  .memberpressgroup-template-template-hatch-membership .membership-section {
+    padding: 30px 0;
+  }
+}
 .page-template-template-hatch-membership .membership-section .section-title,
 .memberpressgroup-template-template-hatch-membership .membership-section .section-title {
   font-family: 'Tungsten A', 'Tungsten B';
@@ -12936,6 +12942,13 @@ fieldset[disabled] .page-template-template-h360form .gform_button {
   letter-spacing: 1px;
   text-align: center;
   margin: 0 0 60px;
+}
+@media (max-width: 767px) {
+  .page-template-template-hatch-membership .membership-section .section-title,
+  .memberpressgroup-template-template-hatch-membership .membership-section .section-title {
+    margin: 0 0 30px;
+    font-size: 36px;
+  }
 }
 .page-template-template-hatch-membership .membership-hero,
 .memberpressgroup-template-template-hatch-membership .membership-hero {
@@ -12950,16 +12963,57 @@ fieldset[disabled] .page-template-template-h360form .gform_button {
           align-items: center;
   -webkit-box-pack: center;
           justify-content: center;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .page-template-template-hatch-membership .membership-hero,
+  .memberpressgroup-template-template-hatch-membership .membership-hero {
+    padding: 60px 30px;
+  }
+}
+.page-template-template-hatch-membership .membership-hero:after,
+.memberpressgroup-template-template-hatch-membership .membership-hero:after {
+  content: '';
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  z-index: 5;
 }
 .page-template-template-hatch-membership .membership-hero .hero-content,
 .memberpressgroup-template-template-hatch-membership .membership-hero .hero-content {
   text-align: center;
+  position: relative;
+  z-index: 10;
 }
 .page-template-template-hatch-membership .membership-hero .hero-content h1,
 .memberpressgroup-template-template-hatch-membership .membership-hero .hero-content h1 {
   font-size: 80px;
   font-family: 'Tungsten A', 'Tungsten B';
   margin: 0 0 30px;
+}
+@media (max-width: 767px) {
+  .page-template-template-hatch-membership .membership-hero .hero-content h1,
+  .memberpressgroup-template-template-hatch-membership .membership-hero .hero-content h1 {
+    font-size: 60px;
+  }
+}
+.page-template-template-hatch-membership .membership-hero .hero-content .btn,
+.memberpressgroup-template-template-hatch-membership .membership-hero .hero-content .btn {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 15px 60px;
+}
+@media (max-width: 767px) {
+  .page-template-template-hatch-membership .membership-hero .hero-content .btn,
+  .memberpressgroup-template-template-hatch-membership .membership-hero .hero-content .btn {
+    padding: 15px;
+    width: 100%;
+    display: block;
+  }
 }
 .page-template-template-hatch-membership .invest,
 .memberpressgroup-template-template-hatch-membership .invest {
@@ -12993,6 +13047,27 @@ fieldset[disabled] .page-template-template-h360form .gform_button {
      object-position: center;
   border-radius: 10px;
   margin: 0 0 10px;
+}
+.page-template-template-hatch-membership .levels,
+.memberpressgroup-template-template-hatch-membership .levels {
+  padding-top: 0;
+}
+.page-template-template-hatch-membership .levels .membership-options .membership-option,
+.memberpressgroup-template-template-hatch-membership .levels .membership-options .membership-option {
+  background: #f2f2f2;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 0 0 30px;
+}
+.page-template-template-hatch-membership .levels .membership-options .membership-option .option-title,
+.memberpressgroup-template-template-hatch-membership .levels .membership-options .membership-option .option-title {
+  margin: 0 0 10px;
+}
+.page-template-template-hatch-membership .levels .membership-options .membership-option .btn,
+.memberpressgroup-template-template-hatch-membership .levels .membership-options .membership-option .btn {
+  width: 100%;
+  display: block;
+  font-weight: 700;
 }
 .page-template-template-hatchback .hatchback-banner {
   background-color: #222;

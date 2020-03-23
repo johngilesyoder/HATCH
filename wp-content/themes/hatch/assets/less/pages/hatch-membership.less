@@ -11,6 +11,9 @@
   }
   .membership-section {
     padding: 60px 0;
+    @media (max-width: 767px) {
+      padding: 30px 0;
+    }
     .section-title {
       font-family: @font-family-tungsten;
       text-transform: uppercase;
@@ -19,6 +22,10 @@
       letter-spacing: 1px;
       text-align: center;
       margin: 0 0 60px;
+      @media (max-width: 767px) {
+        margin: 0 0 30px;
+        font-size: 36px;
+      }
     }
   }
   .membership-hero {
@@ -30,12 +37,42 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    @media (max-width: 767px) {
+      padding: 60px 30px;
+    }
+    &:after {
+      content: '';
+      background: rgba(0,0,0,.3);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      z-index: 5;
+    }
     .hero-content {
       text-align: center;
+      position: relative;
+      z-index: 10;
       h1 {
         font-size: 80px;
         font-family: @font-family-tungsten;
         margin: 0 0 30px;
+        @media (max-width: 767px) {
+          font-size: 60px;
+        }
+      }
+      .btn {
+        font-size: 18px;
+        font-weight: 700;
+        padding: 15px 60px;
+        @media (max-width: 767px) {
+          padding: 15px;
+          width: 100%;
+          display: block;
+        }
       }
     }
   }
@@ -61,6 +98,29 @@
         object-position: center;
         border-radius: 10px;
         margin: 0 0 10px;
+      }
+    }
+  }
+
+  .levels {
+    padding-top: 0;
+    .membership-options {
+      .membership-option {
+        background: #f2f2f2;
+        border-radius: 10px;
+        padding: 30px;
+        margin: 0 0 30px;
+        .option-title {
+          margin: 0 0 10px;
+        }
+        .option-cost {
+
+        }
+        .btn {
+          width: 100%;
+          display: block;
+          font-weight: 700;
+        }
       }
     }
   }

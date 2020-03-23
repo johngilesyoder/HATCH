@@ -1,4 +1,9 @@
-<?php /* Template Name: HATCH Membership Template */ get_header(); ?>
+<?php /* Template Name: HATCH Membership Template */
+get_header(); 
+$investmentSectionTitle = get_field('investment_section_title');
+$investmentSectionContent = get_field('investment_section_content');
+$levelsSectionTitle = get_field('levels_section_title');
+?>
 
 <main role="main">
 
@@ -13,9 +18,8 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2 class="section-title">Invest in HATCH to invest in you</h2>
-          <p>Each year, HATCH activates hundreds of real-life superheroes across the globe through our annual summits, year-round mentorship programs, and custom-designed lab sprints. This critical work is made possible by the contributions of individuals and institutions who believe in the shared mission of HATCHing a better world. (Pay what you want).</p>
-          <p>HATCH+ Membership provides you with complete access to the HATCH Network, including information and invitations to future events, forums, projects, content, and more. (HATCH+ Membership is available to HATCH alumni only)</p>
+          <h2 class="section-title"><?php echo $investmentSectionTitle; ?></h2>
+          <?php echo $investmentSectionContent; ?>
         </div>
       </div>
     </div>
@@ -27,6 +31,28 @@
         <div class="col-md-12">
           <h2 class="section-title">Member Benefits</h2>
           <div class="row">
+
+          <?php if( have_rows('membership_benefits') ): ?>
+
+            <?php while( have_rows('membership_benefits') ): the_row(); 
+
+              // vars
+              $image = get_sub_field('benefit_image');
+              $label = get_sub_field('benefit_label');
+              ?>
+
+              <div class="col-md-4">
+                <div class="member-benefit">
+                  <img src="<?php echo $image['url']; ?>">
+                  <h3><?php echo $label; ?></h3>
+                </div>
+              </div>
+
+            <?php endwhile; ?>
+
+            <?php endif; ?>
+
+
             <div class="col-md-4">
               <div class="member-benefit">
                 <img src="http://placehold.it/1920x1080">
@@ -63,118 +89,66 @@
     </div>
   </section>
 
-  <section class="membership-section levels">
+  <section id="join" class="membership-section levels">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2 class="section-title">Membership Levels</h2>
+          <h2 class="section-title"><?php echo $levelsSectionTitle; ?></h2>
 
           <!-- Membership Options -->
-          <div class="mepr-price-menu minimal_gray_horizontal minimal_horizontal">
-            <div class="mepr-price-boxes mepr-6-col">
-              <div id="mepr-price-box-3867" class="mepr-price-box ">
-                <div class="mepr-most-popular">Most Popular</div>
-                <div class="mepr-price-box-head">
-                  <div class="mepr-price-box-title">HATCH+ Monthly ($10)</div>
-                  <div class="mepr-price-box-price">
-                    $10 / month </div>
-                </div>
-                <div class="mepr-price-box-benefits">
-                  <div class="mepr-price-box-benefits-list"></div>
-                </div>
-                <div class="mepr-price-box-foot">
-                  <div class="mepr-price-box-footer"></div>
-                  <div class="mepr-price-box-button">
-                    <a href="https://hatchexperience.org/register/hatch-monthly-10/" class="">Sign Up</a>
-                  </div>
+          <div class="membership-options">
+            <div class="row">
+
+              <div class="col-md-4">
+                <div class="membership-option">
+                  <h4 class="option-title">HATCH+ (Monthly)</h4>
+                  <p class="option-cost">$10 / month</p>
+                  <a href="/register/hatch-monthly-10/" class="btn btn-secondary">Join now</a>
                 </div>
               </div>
-              <div id="mepr-price-box-3830" class="mepr-price-box ">
-                <div class="mepr-most-popular">Most Popular</div>
-                <div class="mepr-price-box-head">
-                  <div class="mepr-price-box-title">HATCH+</div>
-                  <div class="mepr-price-box-price">
-                    $20 / month </div>
-                </div>
-                <div class="mepr-price-box-benefits">
-                  <div class="mepr-price-box-benefits-list"></div>
-                </div>
-                <div class="mepr-price-box-foot">
-                  <div class="mepr-price-box-footer"></div>
-                  <div class="mepr-price-box-button">
-                    <a href="https://hatchexperience.org/register/hatch/" class="">Sign Up</a>
-                  </div>
+
+              <div class="col-md-4">
+                <div class="membership-option">
+                  <h4 class="option-title">HATCH+ (Monthly)</h4>
+                  <p class="option-cost">$20 / month</p>
+                  <a href="/register/hatch/" class="btn btn-secondary">Join now</a>
                 </div>
               </div>
-              <div id="mepr-price-box-3880" class="mepr-price-box ">
-                <div class="mepr-most-popular">Most Popular</div>
-                <div class="mepr-price-box-head">
-                  <div class="mepr-price-box-title">HATCH+ Membership Monthly ($25)</div>
-                  <div class="mepr-price-box-price">
-                    $25 / month </div>
-                </div>
-                <div class="mepr-price-box-benefits">
-                  <div class="mepr-price-box-benefits-list"></div>
-                </div>
-                <div class="mepr-price-box-foot">
-                  <div class="mepr-price-box-footer"></div>
-                  <div class="mepr-price-box-button">
-                    <a href="https://hatchexperience.org/register/hatch-membership-monthly-25/" class="">Sign Up</a>
-                  </div>
+
+              <div class="col-md-4">
+                <div class="membership-option">
+                  <h4 class="option-title">HATCH+ (Monthly)</h4>
+                  <p class="option-cost">$25 / month</p>
+                  <a href="/register/hatch-membership-monthly-25/" class="btn btn-secondary">Join now</a>
                 </div>
               </div>
-              <div id="mepr-price-box-3881" class="mepr-price-box ">
-                <div class="mepr-most-popular">Most Popular</div>
-                <div class="mepr-price-box-head">
-                  <div class="mepr-price-box-title">HATCH+ Monthly ($50)</div>
-                  <div class="mepr-price-box-price">
-                    $50 / month </div>
-                </div>
-                <div class="mepr-price-box-benefits">
-                  <div class="mepr-price-box-benefits-list"></div>
-                </div>
-                <div class="mepr-price-box-foot">
-                  <div class="mepr-price-box-footer"></div>
-                  <div class="mepr-price-box-button">
-                    <a href="https://hatchexperience.org/register/hatch-monthly-50/" class="">Sign Up</a>
-                  </div>
+
+              <div class="col-md-4">
+                <div class="membership-option">
+                  <h4 class="option-title">HATCH+ (Monthly)</h4>
+                  <p class="option-cost">$50 / month</p>
+                  <a href="/register/hatch-monthly-50/" class="btn btn-secondary">Join now</a>
                 </div>
               </div>
-              <div id="mepr-price-box-3866" class="mepr-price-box ">
-                <div class="mepr-most-popular">Most Popular</div>
-                <div class="mepr-price-box-head">
-                  <div class="mepr-price-box-title">HATCH+ Annual Membership</div>
-                  <div class="mepr-price-box-price">
-                    $100 / year </div>
-                </div>
-                <div class="mepr-price-box-benefits">
-                  <div class="mepr-price-box-benefits-list"></div>
-                </div>
-                <div class="mepr-price-box-foot">
-                  <div class="mepr-price-box-footer"></div>
-                  <div class="mepr-price-box-button">
-                    <a href="https://hatchexperience.org/register/hatch-annual-membership/" class="">Sign Up</a>
-                  </div>
+
+              <div class="col-md-4">
+                <div class="membership-option">
+                  <h4 class="option-title">HATCH+ (Annual)</h4>
+                  <p class="option-cost">$100 / year</p>
+                  <a href="/register/hatch-annual-membership/" class="btn btn-secondary">Join now</a>
                 </div>
               </div>
-              <div id="mepr-price-box-3879" class="mepr-price-box ">
-                <div class="mepr-most-popular">Most Popular</div>
-                <div class="mepr-price-box-head">
-                  <div class="mepr-price-box-title">HATCH+ Annual ($1,000)</div>
-                  <div class="mepr-price-box-price">
-                    $1,000 / year </div>
-                </div>
-                <div class="mepr-price-box-benefits">
-                  <div class="mepr-price-box-benefits-list"></div>
-                </div>
-                <div class="mepr-price-box-foot">
-                  <div class="mepr-price-box-footer"></div>
-                  <div class="mepr-price-box-button">
-                    <a href="https://hatchexperience.org/register/hatch-annual-1000/" class="">Sign Up</a>
-                  </div>
+
+              <div class="col-md-4">
+                <div class="membership-option">
+                  <h4 class="option-title">HATCH+ (Annual)</h4>
+                  <p class="option-cost">$1000 / year</p>
+                  <a href="/register/hatch-annual-1000/" class="btn btn-secondary">Join now</a>
                 </div>
               </div>
+
             </div>
+
           </div>
 
         </div>
