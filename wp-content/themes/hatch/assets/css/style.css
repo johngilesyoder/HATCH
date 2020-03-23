@@ -12915,16 +12915,20 @@ fieldset[disabled] .page-template-template-h360form .gform_button {
   height: auto;
   width: 350px;
 }
-.page-template-template-hatch-membership .site-header {
+.page-template-template-hatch-membership .site-header,
+.memberpressgroup-template-template-hatch-membership .site-header {
   margin: 0;
 }
-.page-template-template-hatch-membership main {
+.page-template-template-hatch-membership main,
+.memberpressgroup-template-template-hatch-membership main {
   padding-top: 0;
 }
-.page-template-template-hatch-membership .membership-section {
+.page-template-template-hatch-membership .membership-section,
+.memberpressgroup-template-template-hatch-membership .membership-section {
   padding: 60px 0;
 }
-.page-template-template-hatch-membership .membership-section .section-title {
+.page-template-template-hatch-membership .membership-section .section-title,
+.memberpressgroup-template-template-hatch-membership .membership-section .section-title {
   font-family: 'Tungsten A', 'Tungsten B';
   text-transform: uppercase;
   font-size: 60px;
@@ -12933,7 +12937,8 @@ fieldset[disabled] .page-template-template-h360form .gform_button {
   text-align: center;
   margin: 0 0 60px;
 }
-.page-template-template-hatch-membership .membership-hero {
+.page-template-template-hatch-membership .membership-hero,
+.memberpressgroup-template-template-hatch-membership .membership-hero {
   background-color: #333;
   background-size: cover;
   background-position: center;
@@ -12946,32 +12951,40 @@ fieldset[disabled] .page-template-template-h360form .gform_button {
   -webkit-box-pack: center;
           justify-content: center;
 }
-.page-template-template-hatch-membership .membership-hero .hero-content {
+.page-template-template-hatch-membership .membership-hero .hero-content,
+.memberpressgroup-template-template-hatch-membership .membership-hero .hero-content {
   text-align: center;
 }
-.page-template-template-hatch-membership .membership-hero .hero-content h1 {
+.page-template-template-hatch-membership .membership-hero .hero-content h1,
+.memberpressgroup-template-template-hatch-membership .membership-hero .hero-content h1 {
   font-size: 80px;
   font-family: 'Tungsten A', 'Tungsten B';
   margin: 0 0 30px;
 }
-.page-template-template-hatch-membership .invest {
+.page-template-template-hatch-membership .invest,
+.memberpressgroup-template-template-hatch-membership .invest {
   text-align: center;
 }
-.page-template-template-hatch-membership .invest p {
+.page-template-template-hatch-membership .invest p,
+.memberpressgroup-template-template-hatch-membership .invest p {
   font-size: 16px;
 }
-.page-template-template-hatch-membership .benefits {
+.page-template-template-hatch-membership .benefits,
+.memberpressgroup-template-template-hatch-membership .benefits {
   padding-top: 0;
 }
-.page-template-template-hatch-membership .benefits .member-benefit {
+.page-template-template-hatch-membership .benefits .member-benefit,
+.memberpressgroup-template-template-hatch-membership .benefits .member-benefit {
   margin: 0 0 30px;
 }
-.page-template-template-hatch-membership .benefits .member-benefit h3 {
+.page-template-template-hatch-membership .benefits .member-benefit h3,
+.memberpressgroup-template-template-hatch-membership .benefits .member-benefit h3 {
   margin: 0;
   font-size: 16px;
   line-height: 1.25;
 }
-.page-template-template-hatch-membership .benefits .member-benefit img {
+.page-template-template-hatch-membership .benefits .member-benefit img,
+.memberpressgroup-template-template-hatch-membership .benefits .member-benefit img {
   height: 200px;
   width: 100%;
   -o-object-fit: cover;
