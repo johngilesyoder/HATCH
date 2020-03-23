@@ -13069,6 +13069,12 @@ fieldset[disabled] .page-template-template-h360form .gform_button {
   display: block;
   font-weight: 700;
 }
+.memberpressproduct-template-default .site-header {
+  margin: 0;
+}
+.memberpressproduct-template-default main {
+  padding: 60px 0;
+}
 .page-template-template-hatchback .hatchback-banner {
   background-color: #222;
   background-image: url('../img/hatchback/banner-bg.png');
