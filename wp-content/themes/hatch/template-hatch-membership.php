@@ -51,38 +51,7 @@ $levelsSectionTitle = get_field('levels_section_title');
             <?php endwhile; ?>
 
             <?php endif; ?>
-
-
-            <div class="col-md-4">
-              <div class="member-benefit">
-                <img src="http://placehold.it/1920x1080">
-                <h3>Membership to a global network of thought leaders</h3>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="member-benefit">
-                <img src="http://placehold.it/1920x1080">
-                <h3>Membership to a global network of thought leaders</h3>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="member-benefit">
-                <img src="http://placehold.it/1920x1080">
-                <h3>Membership to a global network of thought leaders</h3>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="member-benefit">
-                <img src="http://placehold.it/1920x1080">
-                <h3>Membership to a global network of thought leaders</h3>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="member-benefit">
-                <img src="http://placehold.it/1920x1080">
-                <h3>Membership to a global network of thought leaders</h3>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>
