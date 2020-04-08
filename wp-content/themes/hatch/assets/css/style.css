@@ -12939,6 +12939,7 @@ fieldset[disabled] .page-template-template-h360form .gform_button {
 .page-template-template-hatch-membership .benefits .member-benefit,
 .memberpressgroup-template-template-hatch-membership .benefits .member-benefit {
   margin: 0 0 30px;
+  text-align: center;
 }
 .page-template-template-hatch-membership .benefits .member-benefit h3,
 .memberpressgroup-template-template-hatch-membership .benefits .member-benefit h3 {
