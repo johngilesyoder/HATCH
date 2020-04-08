@@ -39,12 +39,14 @@ $levelsSectionTitle = get_field('levels_section_title');
               // vars
               $image = get_sub_field('benefit_image');
               $label = get_sub_field('benefit_label');
+              $description = get_sub_field('benefit_description');
               ?>
 
               <div class="col-md-4">
                 <div class="member-benefit">
                   <img src="<?php echo $image['url']; ?>">
                   <h3><?php echo $label; ?></h3>
+                  <p><?php echo $description; ?></p>
                 </div>
               </div>
 

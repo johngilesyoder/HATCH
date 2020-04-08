@@ -1114,7 +1114,6 @@ img {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   display: inline-block;
   max-width: 100%;
@@ -2614,7 +2613,6 @@ output {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 .form-control:focus {
@@ -3417,7 +3415,6 @@ input[type="button"].btn-block {
 }
 .fade {
   opacity: 0;
-  -webkit-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear;
 }
 .fade.in {
@@ -3441,11 +3438,8 @@ tbody.collapse.in {
   position: relative;
   height: 0;
   overflow: hidden;
-  -webkit-transition-property: height, visibility;
   transition-property: height, visibility;
-  -webkit-transition-duration: 0.35s;
   transition-duration: 0.35s;
-  -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
 .caret {
@@ -4932,7 +4926,6 @@ a.badge:focus {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
-  -webkit-transition: border 0.2s ease-in-out;
   transition: border 0.2s ease-in-out;
 }
 .thumbnail > img,
@@ -5058,7 +5051,6 @@ a.thumbnail.active {
   text-align: center;
   background-color: #007DA3;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-  -webkit-transition: width 0.6s ease;
   transition: width 0.6s ease;
 }
 .progress-striped .progress-bar,
@@ -5736,15 +5728,10 @@ button.close {
   outline: 0;
 }
 .modal.fade .modal-dialog {
-  -webkit-transform: translate(0, -25%);
   transform: translate(0, -25%);
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  transition: -webkit-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
-  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
 .modal.in .modal-dialog {
-  -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
 }
 .modal-open .modal {
@@ -6071,7 +6058,6 @@ button.close {
 .carousel-inner > .item {
   display: none;
   position: relative;
-  -webkit-transition: 0.6s ease-in-out left;
   transition: 0.6s ease-in-out left;
 }
 .carousel-inner > .item > img,
@@ -6080,31 +6066,24 @@ button.close {
 }
 @media all and (transform-3d), (-webkit-transform-3d) {
   .carousel-inner > .item {
-    -webkit-transition: -webkit-transform 0.6s ease-in-out;
-    transition: -webkit-transform 0.6s ease-in-out;
     transition: transform 0.6s ease-in-out;
-    transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-perspective: 1000;
     perspective: 1000;
   }
   .carousel-inner > .item.next,
   .carousel-inner > .item.active.right {
-    -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
     left: 0;
   }
   .carousel-inner > .item.prev,
   .carousel-inner > .item.active.left {
-    -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
     left: 0;
   }
   .carousel-inner > .item.next.left,
   .carousel-inner > .item.prev.right,
   .carousel-inner > .item.active {
-    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     left: 0;
   }
@@ -6153,7 +6132,6 @@ button.close {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 .carousel-control.left {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
@@ -6161,7 +6139,6 @@ button.close {
 .carousel-control.right {
   left: auto;
   right: 0;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.5)));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
@@ -6619,7 +6596,6 @@ http://flickity.metafizzy.co
   background: hsla(0, 0%, 100%, 0.75);
   cursor: pointer;
   /* vertically center */
-  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 .flickity-prev-next-button:hover {
@@ -7168,12 +7144,9 @@ a img.aligncenter {
 .page-template-template-panama-registration-success .euro-payment {
   padding: 30px;
   background: #f2f2f2;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   margin: 0 0 30px;
 }
 .page-template-template-registration-success .euro-payment .btn,
@@ -7412,7 +7385,6 @@ a img.aligncenter {
 }
 .single-hatch-adventure .page-banner .page-title {
   margin: 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, rgba(0, 0, 0, 0.0001)), to(#000000));
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0001) 40%, #000000 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#ff000000', GradientType=0);
@@ -7508,7 +7480,6 @@ a img.aligncenter {
   }
   .page .page-banner .page-title {
     margin: 0;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, rgba(0, 0, 0, 0.0001)), to(#000000));
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0001) 40%, #000000 100%);
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#ff000000', GradientType=0);
@@ -7770,7 +7741,6 @@ a img.aligncenter {
 }
 .page .page-banner .page-title {
   margin: 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, rgba(0, 0, 0, 0.0001)), to(#000000));
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0001) 40%, #000000 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#ff000000', GradientType=0);
@@ -7922,7 +7892,6 @@ a img.aligncenter {
   }
   .page .page-banner .page-title {
     margin: 0;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, rgba(0, 0, 0, 0.0001)), to(#000000));
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0001) 40%, #000000 100%);
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#ff000000', GradientType=0);
@@ -7966,11 +7935,9 @@ a img.aligncenter {
 .vertical-center {
   position: relative;
   top: 50%;
-  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 .vertical-center-parent {
-  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 .alert ul {
@@ -7998,7 +7965,6 @@ a img.aligncenter {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   height: 40px;
   font-size: 14px !important;
@@ -8069,7 +8035,6 @@ textarea.gform_wrapper input[type="url"] {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 .gform_wrapper select:focus {
@@ -8121,7 +8086,6 @@ textarea.gform_wrapper select {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   padding: 6px 12px !important;
 }
@@ -8316,7 +8280,6 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   border-radius: 50%;
   display: block;
   text-align: center;
-  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 .blog-format .post .post-format .format-icon,
@@ -8324,8 +8287,7 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
 .blog-format .hatchback-story .post-format .format-icon {
   position: relative;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   display: inline-block;
 }
 .blog-format .post.category-becauseofhatch .post-format,
@@ -8558,18 +8520,12 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   padding: 10px 30px;
   background: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
   z-index: 200;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  transform: translateY(-100%);
   opacity: 0;
-  -webkit-transition: opacity 100ms, -webkit-transform 250ms;
-  transition: opacity 100ms, -webkit-transform 250ms;
   transition: transform 250ms, opacity 100ms;
-  transition: transform 250ms, opacity 100ms, -webkit-transform 250ms;
 }
 .single-reunion .persistent-cta .cta-info .cta-title {
   font-size: 18px;
@@ -8587,8 +8543,7 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   font-weight: 500;
 }
 .single-reunion .persistent-cta.is--visible {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
   opacity: 1;
 }
 .single-reunion main {
@@ -8598,7 +8553,6 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
 .single-reunion .reunion-hero {
   height: 650px;
   width: 100%;
-  display: -webkit-box;
   display: flex;
   position: relative;
   background: #000;
@@ -8616,8 +8570,7 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
 }
 .single-reunion .reunion-hero .hero-content {
   align-self: flex-end;
-  -webkit-box-flex: 1;
-          flex: auto;
+  flex: auto;
   margin: 0 0 120px;
   position: relative;
   z-index: 100;
@@ -8664,10 +8617,8 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   font-size: 80px;
   font-family: 'Tungsten A', 'Tungsten B';
   text-transform: uppercase;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
 }
 .single-reunion .reunion-details .details-title span {
   padding: 5px 15px;
@@ -8695,10 +8646,8 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
 .single-reunion .reunion-accommodation .accommodation-title {
   margin: 0 0 60px;
   font-size: 36px;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
 }
 .single-reunion .reunion-accommodation .hotel {
   margin: 0 0 60px;
@@ -8722,10 +8671,8 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
 .single-reunion .reunion-good-times .good-times-title {
   margin: 0 0 30px;
   font-size: 36px;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
 }
 .single-reunion .reunion-good-times .btn-view-schedule {
   color: #007DA3;
@@ -8746,10 +8693,8 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   font-size: 80px;
   font-family: 'Tungsten A', 'Tungsten B';
   text-transform: uppercase;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
 }
 .single-reunion .reunion-planning-team .planning-team-title span {
   padding: 5px 15px;
@@ -8813,10 +8758,8 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   font-size: 80px;
   font-family: 'Tungsten A', 'Tungsten B';
   text-transform: uppercase;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
 }
 .single-reunion .reunion-who .who-title span {
   padding: 5px 15px;
@@ -8841,10 +8784,8 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   font-size: 80px;
   font-family: 'Tungsten A', 'Tungsten B';
   text-transform: uppercase;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
 }
 .single-reunion .reunion-purpose .purpose-title span {
   padding: 5px 15px;
@@ -8864,10 +8805,8 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   font-size: 80px;
   font-family: 'Tungsten A', 'Tungsten B';
   text-transform: uppercase;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
 }
 .single-reunion .reunion-expect .details-title span {
   padding: 5px 15px;
@@ -8886,12 +8825,9 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   height: 45px;
   width: 45px;
   border-radius: 50%;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto 30px;
   opacity: 0.5;
 }
@@ -8903,12 +8839,9 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   font-size: 21px;
 }
 .single-reunion .reunion-sponsorship {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   padding: 90px 30px;
   background: #f2f2f2;
 }
@@ -8926,10 +8859,8 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   font-size: 80px;
   font-family: 'Tungsten A', 'Tungsten B';
   text-transform: uppercase;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
 }
 .single-reunion .reunion-schedule .schedule-title span {
   padding: 5px 15px;
@@ -8951,9 +8882,7 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   }
   .single-reunion .persistent-cta {
     padding: 10px 15px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-flow: row wrap;
+    flex-flow: row wrap;
   }
   .single-reunion .persistent-cta .cta-info {
     width: 100%;
@@ -9127,9 +9056,7 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   }
   .single-reunion .persistent-cta {
     padding: 10px 15px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-flow: row wrap;
+    flex-flow: row wrap;
   }
   .single-reunion .persistent-cta .cta-info {
     width: 100%;
@@ -9305,11 +9232,8 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   top: 0;
   bottom: 0;
   width: 100%;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-flow: column;
+  flex-flow: column;
 }
 .blog-sidebar .widget_twitter {
   width: 100%;
@@ -9623,7 +9547,6 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
 .site-footer .built-by a {
   display: inline-block;
   opacity: 0.4;
-  -webkit-transition: opacity 150ms;
   transition: opacity 150ms;
   margin-top: 5px;
 }
@@ -10139,7 +10062,6 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   height: 40px;
   font-size: 14px !important;
@@ -10221,7 +10143,6 @@ textarea.page-template-template-apply .gform_wrapper input[type="number"] {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   height: 40px;
 }
@@ -10275,7 +10196,6 @@ textarea.page-template-template-apply .gform_wrapper select {
   text-align: center;
   background-color: #007DA3;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-  -webkit-transition: width 0.6s ease;
   transition: width 0.6s ease;
 }
 .page-template-template-apply .gform_wrapper .gf_progressbar .gf_progressbar_percentage span {
@@ -10383,7 +10303,6 @@ textarea.page-template-template-apply .gform_wrapper select {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   padding: 6px 12px !important;
 }
@@ -11212,7 +11131,6 @@ fieldset[disabled] .page-template-template-apply .gform_wrapper .gform_button.ac
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 .page-template-template-donate .give-form-wrap input[type="text"]:focus,
@@ -11511,7 +11429,6 @@ fieldset[disabled] .page-template-template-donate .give-donation-level-btn {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 .page-support-contribute .give-form-wrap input[type="text"]:focus,
@@ -11748,7 +11665,6 @@ fieldset[disabled] .page-support-contribute .give-btn.active {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 .page-hatch15-donation-matching .give-form-wrap input[type="text"]:focus,
@@ -12172,7 +12088,6 @@ fieldset[disabled] .page-hatch15-donation-matching .give-btn.active {
   height: 55px;
   line-height: 55px;
   padding: 0 25px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#0CC4ED), to(#006699));
   background-image: linear-gradient(to bottom, #0CC4ED 0%, #006699 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0cc4ed', endColorstr='#ff006699', GradientType=0);
@@ -12183,7 +12098,6 @@ fieldset[disabled] .page-hatch15-donation-matching .give-btn.active {
   font-weight: 600;
 }
 .page-template-template-experience .conference-apply .btn-apply:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#0BB9E0), to(#005E8C));
   background-image: linear-gradient(to bottom, #0BB9E0 0%, #005E8C 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0bb9e0', endColorstr='#ff005e8c', GradientType=0);
@@ -12196,14 +12110,12 @@ fieldset[disabled] .page-hatch15-donation-matching .give-btn.active {
   background-size: cover;
   background-position: 50% 50%;
   border-bottom: 16px solid #000;
-  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 .page-template-template-experience .section-hero .hero-content-wrapper {
   position: relative;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   text-align: center;
 }
 .page-template-template-experience .section-hero .conference-apply .hero-title {
@@ -12957,12 +12869,9 @@ fieldset[disabled] .page-template-template-h360form .gform_button {
   background-position: center;
   color: #fff;
   padding: 120px 60px;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   position: relative;
 }
 @media (max-width: 767px) {
@@ -13033,7 +12942,7 @@ fieldset[disabled] .page-template-template-h360form .gform_button {
 }
 .page-template-template-hatch-membership .benefits .member-benefit h3,
 .memberpressgroup-template-template-hatch-membership .benefits .member-benefit h3 {
-  margin: 0;
+  margin: 0 0 10px;
   font-size: 16px;
   line-height: 1.25;
 }
@@ -13047,6 +12956,10 @@ fieldset[disabled] .page-template-template-h360form .gform_button {
      object-position: center;
   border-radius: 10px;
   margin: 0 0 10px;
+}
+.page-template-template-hatch-membership .benefits .member-benefit p,
+.memberpressgroup-template-template-hatch-membership .benefits .member-benefit p {
+  margin: 0;
 }
 .page-template-template-hatch-membership .levels,
 .memberpressgroup-template-template-hatch-membership .levels {
@@ -13345,7 +13258,6 @@ fieldset[disabled] .page-template-template-hatchback .other-ways .btn-donation.a
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 .page-template-template-hatchback .give-form-wrap input[type="text"]:focus,
@@ -13806,13 +13718,9 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
   display: inline-block;
 }
 .page-template-template-hatching-a-better-world .labs {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 .page-template-template-hatching-a-better-world .lab {
   background: #fff;
@@ -13837,7 +13745,6 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100 */
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=0);
@@ -13859,7 +13766,6 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.8)));
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#cc000000', GradientType=0);
@@ -13948,18 +13854,13 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
   background: #F0F2F2;
 }
 .page-template-template-home .posts-hero .tiles {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   width: 100%;
 }
 .page-template-template-home .posts-hero .tiles .tile-column {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-flow: column;
+  flex-flow: column;
   height: 490px;
 }
 .page-template-template-home .posts-hero .tiles .tile-column:nth-child(1) {
@@ -14007,40 +13908,29 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
   width: 100%;
 }
 .page-template-template-home .posts-hero .tiles .tile-row {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 .page-template-template-home .posts-hero .tiles .tile {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: center;
-          justify-content: center;
+  align-items: flex-end;
+  justify-content: center;
   background-color: rgba(0, 0, 0, 0.05);
   background-size: cover;
   background-position: 50% 50%;
   height: 100%;
   box-shadow: none;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  -webkit-transition: box-shadow 150ms, -webkit-transform 150ms;
-  transition: box-shadow 150ms, -webkit-transform 150ms;
+  transform: translateY(0);
   transition: box-shadow 150ms, transform 150ms;
-  transition: box-shadow 150ms, transform 150ms, -webkit-transform 150ms;
   overflow: hidden;
 }
 .page-template-template-home .posts-hero .tiles .tile:hover {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-  -webkit-transform: translateY(-4px);
-          transform: translateY(-4px);
+  transform: translateY(-4px);
 }
 .page-template-template-home .posts-hero .tiles .tile:hover h3 {
   opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
 }
 .page-template-template-home .posts-hero .tiles .tile h3 {
   background: #222222;
@@ -14053,12 +13943,8 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
   margin: 0;
   font-weight: 400;
   opacity: 0;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
-  -webkit-transition: opacity 150ms, -webkit-transform 150ms;
-  transition: opacity 150ms, -webkit-transform 150ms;
+  transform: translateY(50%);
   transition: opacity 150ms, transform 150ms;
-  transition: opacity 150ms, transform 150ms, -webkit-transform 150ms;
 }
 .page-template-template-home .section-block {
   margin-bottom: 70px;
@@ -14199,7 +14085,6 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
   /* Chrome10+,Safari5.1+ */
   /* Opera 11.10+ */
   /* IE10+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.8)));
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.8) 100%);
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#0000000', GradientType=0);
@@ -14225,7 +14110,6 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
   color: #222222;
   position: relative;
   top: 0;
-  -webkit-transition: 150ms top;
   transition: 150ms top;
 }
 @media (min-width: 768px) {
@@ -14244,7 +14128,6 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
 .page-template-template-home .section-hatchings .hatching-block .block-wrapper {
   background: #F0F2F2;
   padding: 10px;
-  -webkit-transition: 150ms background;
   transition: 150ms background;
 }
 .page-template-template-home .section-hatchings .hatching-block .hatching-block-img {
@@ -14265,9 +14148,7 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .page-template-template-home .posts-hero .tiles {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-flow: row wrap;
+    flex-flow: row wrap;
   }
   .page-template-template-home .posts-hero .tiles .tile-column:nth-child(1) {
     width: calc(50% - 15px);
@@ -14304,11 +14185,8 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
   }
   .page-template-template-home .posts-hero .tiles .tile-column:nth-child(3) {
     width: 100%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-flow: row;
-    -webkit-box-pack: justify;
-            justify-content: space-between;
+    flex-flow: row;
+    justify-content: space-between;
     height: 245px;
   }
   .page-template-template-home .posts-hero .tiles .tile-column:nth-child(3) .tile-row {
@@ -14326,23 +14204,16 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
     width: 100%;
   }
   .page-template-template-home .posts-hero .tiles .tile {
-    display: -webkit-box;
     display: flex;
-    -webkit-box-align: end;
-            align-items: flex-end;
-    -webkit-box-pack: center;
-            justify-content: center;
+    align-items: flex-end;
+    justify-content: center;
     background-color: rgba(0, 0, 0, 0.05);
     background-size: cover;
     background-position: 50% 50%;
     height: 100%;
     box-shadow: none;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-transition: box-shadow 150ms, -webkit-transform 150ms;
-    transition: box-shadow 150ms, -webkit-transform 150ms;
+    transform: translateY(0);
     transition: box-shadow 150ms, transform 150ms;
-    transition: box-shadow 150ms, transform 150ms, -webkit-transform 150ms;
   }
   .page-template-template-home .posts-hero .tiles .tile h3 {
     background: #222222;
@@ -14397,16 +14268,12 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
   }
   .page-template-template-home .posts-hero .mobile-carousel .gallery-cell article .gradient-wrapper {
     height: 100%;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, rgba(0, 0, 0, 0.0001)), to(#000000));
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0001) 40%, #000000 100%);
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#ff000000', GradientType=0);
-    display: -webkit-box;
     display: flex;
-    -webkit-box-align: end;
-            align-items: flex-end;
-    -webkit-box-pack: center;
-            justify-content: center;
+    align-items: flex-end;
+    justify-content: center;
   }
   .page-template-template-home .posts-hero .mobile-carousel .gallery-cell article .post-title {
     color: #fff;
@@ -14480,16 +14347,12 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
   }
   .page-template-template-home .posts-hero .mobile-carousel .gallery-cell article .gradient-wrapper {
     height: 100%;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, rgba(0, 0, 0, 0.0001)), to(#000000));
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0001) 40%, #000000 100%);
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#ff000000', GradientType=0);
-    display: -webkit-box;
     display: flex;
-    -webkit-box-align: end;
-            align-items: flex-end;
-    -webkit-box-pack: center;
-            justify-content: center;
+    align-items: flex-end;
+    justify-content: center;
   }
   .page-template-template-home .posts-hero .mobile-carousel .gallery-cell article .post-title {
     color: #fff;
@@ -14552,7 +14415,6 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
     font-size: 42px;
   }
   .page-template-template-home .section-hatchings .hatching-block {
-    -webkit-transition: none;
     transition: none;
     margin-bottom: 15px;
   }
@@ -14563,7 +14425,6 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
     background: #E6E8E8;
   }
   .page-template-template-home .section-hatchings .hatching-block .block-wrapper {
-    -webkit-transition: none;
     transition: none;
   }
   .page-template-template-home .section-partners {
@@ -14585,12 +14446,9 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
   background: #fff;
   padding: 10px 0;
   border-bottom: 1px solid #E6E6E6;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   z-index: 100;
 }
 .page-template-template-membership .become-member-form {
@@ -14618,7 +14476,6 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 .page-template-template-membership .give-form-wrap input[type="text"]:focus,
@@ -14904,11 +14761,8 @@ fieldset[disabled] .page-template-template-membership .give-donation-level-btn {
 }
 @media (max-width: 480px) {
   .page-template-template-membership .page-title {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-flow: row wrap;
-    -webkit-box-pack: start;
-            justify-content: flex-start;
+    flex-flow: row wrap;
+    justify-content: flex-start;
   }
   .page-template-template-membership .page-title h1 {
     font-size: 21px;
@@ -14983,8 +14837,7 @@ fieldset[disabled] .page-template-template-membership .give-donation-level-btn {
 .page-our-partners .partner .partner-content {
   position: relative;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 .page-our-partners .partner img {
   max-width: 145px;
@@ -15079,7 +14932,6 @@ fieldset[disabled] .page-template-template-membership .give-donation-level-btn {
   text-transform: uppercase;
   padding: 15px 80px;
   border-radius: 10px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#FFC000), to(#FFA100));
   background-image: linear-gradient(to bottom, #FFC000 0%, #FFA100 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffc000', endColorstr='#ffffa100', GradientType=0);
@@ -15201,11 +15053,8 @@ fieldset[disabled] .page-template-template-membership .give-donation-level-btn {
   margin: 0 0 30px;
 }
 .page-template-template-registration .registration-content .registration-alumni .alumni-wrapper {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 .page-template-template-registration .registration-content .registration-alumni .alumnus {
   width: 16.667%;
@@ -15269,7 +15118,6 @@ fieldset[disabled] .page-template-template-membership .give-donation-level-btn {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   height: 40px;
   font-size: 14px !important;
@@ -15351,7 +15199,6 @@ textarea.page-template-template-registration .form-wrapper .gform_wrapper input[
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   height: 40px;
 }
@@ -15485,7 +15332,6 @@ textarea.page-template-template-registration .form-wrapper .gform_wrapper select
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   padding: 6px 12px !important;
   height: 100px;
@@ -16122,10 +15968,8 @@ fieldset[disabled] .page-template-template-registration .form-wrapper .gform_wra
   margin: 0 0 15px;
 }
 .page-template-template-registration-europe .registration-hero {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
+  justify-content: center;
   overflow-x: hidden;
   margin: 0 0 80px;
   height: 960px;
@@ -16136,8 +15980,7 @@ fieldset[disabled] .page-template-template-registration .form-wrapper .gform_wra
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .page-template-template-registration-europe .btn-registration {
   font-size: 30px;
@@ -16148,7 +15991,6 @@ fieldset[disabled] .page-template-template-registration .form-wrapper .gform_wra
   width: 400px;
   display: block;
   margin: 80px auto 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#d4a411), to(#d48c11));
   background-image: linear-gradient(to bottom, #d4a411 0%, #d48c11 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd4a411', endColorstr='#ffd48c11', GradientType=0);
@@ -16263,11 +16105,8 @@ fieldset[disabled] .page-template-template-registration .form-wrapper .gform_wra
 }
 .page-template-template-registration-europe .registration-content .registration-alumni .alumni-wrapper,
 .page-template-template-registration-europe .registration-content .registration-alumni .leadership-wrapper {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 .page-template-template-registration-europe .registration-content .registration-alumni .alumnus {
   width: 33%;
@@ -16304,12 +16143,9 @@ fieldset[disabled] .page-template-template-registration .form-wrapper .gform_wra
   margin: 0 0 80px;
   background-size: cover;
   background-position: 50% 50%;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 .page-template-template-registration-europe .registration-content .section-the-camp .the-camp-hero .logo {
@@ -16400,10 +16236,8 @@ fieldset[disabled] .page-template-template-registration .form-wrapper .gform_wra
 }
 .page-template-template-registration-europe .registration-content .section-details .includes .point {
   font-weight: 700;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: baseline;
-          align-items: baseline;
+  align-items: baseline;
   margin: 0 0 30px;
 }
 .page-template-template-registration-europe .registration-content .section-details .includes .point:before {
@@ -16466,7 +16300,6 @@ fieldset[disabled] .page-template-template-registration .form-wrapper .gform_wra
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   height: 40px;
   font-size: 14px !important;
@@ -16548,7 +16381,6 @@ textarea.page-template-template-registration-europe .form-wrapper .gform_wrapper
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   height: 40px;
 }
@@ -16682,7 +16514,6 @@ textarea.page-template-template-registration-europe .form-wrapper .gform_wrapper
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   padding: 6px 12px !important;
   height: 100px;
@@ -17397,7 +17228,6 @@ fieldset[disabled] .page-template-template-registration-europe .form-wrapper .gf
   text-transform: uppercase;
   padding: 15px 80px;
   border-radius: 10px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#FFC000), to(#FFA100));
   background-image: linear-gradient(to bottom, #FFC000 0%, #FFA100 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffc000', endColorstr='#ffffa100', GradientType=0);
@@ -17519,11 +17349,8 @@ fieldset[disabled] .page-template-template-registration-europe .form-wrapper .gf
   margin: 0 0 30px;
 }
 .page-template-template-registration-mexico .registration-content .registration-alumni .alumni-wrapper {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 .page-template-template-registration-mexico .registration-content .registration-alumni .alumnus {
   width: 16.667%;
@@ -17587,7 +17414,6 @@ fieldset[disabled] .page-template-template-registration-europe .form-wrapper .gf
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   height: 40px;
   font-size: 14px !important;
@@ -17669,7 +17495,6 @@ textarea.page-template-template-registration-mexico .form-wrapper .gform_wrapper
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   height: 40px;
 }
@@ -17803,7 +17628,6 @@ textarea.page-template-template-registration-mexico .form-wrapper .gform_wrapper
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   padding: 6px 12px !important;
   height: 100px;
@@ -18440,10 +18264,8 @@ fieldset[disabled] .page-template-template-registration-mexico .form-wrapper .gf
   margin: 0 0 15px;
 }
 .page-template-template-experience-europe .registration-hero {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
+  justify-content: center;
   overflow-x: hidden;
   margin: 0 0 80px;
   height: 960px;
@@ -18454,8 +18276,7 @@ fieldset[disabled] .page-template-template-registration-mexico .form-wrapper .gf
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .page-template-template-experience-europe .btn-registration {
   font-size: 30px;
@@ -18466,7 +18287,6 @@ fieldset[disabled] .page-template-template-registration-mexico .form-wrapper .gf
   width: 400px;
   display: block;
   margin: 80px auto 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#d4a411), to(#d48c11));
   background-image: linear-gradient(to bottom, #d4a411 0%, #d48c11 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd4a411', endColorstr='#ffd48c11', GradientType=0);
@@ -18581,11 +18401,8 @@ fieldset[disabled] .page-template-template-registration-mexico .form-wrapper .gf
 }
 .page-template-template-experience-europe .registration-content .registration-alumni .alumni-wrapper,
 .page-template-template-experience-europe .registration-content .registration-alumni .leadership-wrapper {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 .page-template-template-experience-europe .registration-content .registration-alumni .alumnus {
   width: 33%;
@@ -18622,12 +18439,9 @@ fieldset[disabled] .page-template-template-registration-mexico .form-wrapper .gf
   margin: 0 0 80px;
   background-size: cover;
   background-position: 50% 50%;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 .page-template-template-experience-europe .registration-content .section-the-camp .the-camp-hero .logo {
@@ -18687,24 +18501,17 @@ fieldset[disabled] .page-template-template-registration-mexico .form-wrapper .gf
   color: #fff;
 }
 .page-template-template-experience-europe .registration-content .section-details .sponsors .sponsors-wrapper {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
+  justify-content: space-between;
+  flex-flow: row wrap;
 }
 .page-template-template-experience-europe .registration-content .section-details .sponsors .sponsor {
   width: calc(25% - 15px);
   background: #fff;
   margin: 0 0 15px;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   padding: 10px;
 }
 .page-template-template-experience-europe .registration-content .section-details .sponsors .sponsor img {
@@ -18755,7 +18562,6 @@ fieldset[disabled] .page-template-template-registration-mexico .form-wrapper .gf
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   height: 40px;
   font-size: 14px !important;
@@ -18837,7 +18643,6 @@ textarea.page-template-template-experience-europe .form-wrapper .gform_wrapper i
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   height: 40px;
 }
@@ -18971,7 +18776,6 @@ textarea.page-template-template-experience-europe .form-wrapper .gform_wrapper s
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   padding: 6px 12px !important;
   height: 100px;
@@ -19787,7 +19591,6 @@ fieldset[disabled] .page-template-template-experience-europe .form-wrapper .gfor
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.8)));
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#cc000000', GradientType=0);
@@ -19842,7 +19645,6 @@ fieldset[disabled] .page-template-template-experience-europe .form-wrapper .gfor
   background: #f2f2f2;
 }
 .single-story .lab .project-leader .leader {
-  display: -webkit-box;
   display: flex;
 }
 .single-story .lab .project-leader .leader .leader-avatar {
@@ -19862,11 +19664,8 @@ fieldset[disabled] .page-template-template-experience-europe .form-wrapper .gfor
   letter-spacing: -0.5px;
 }
 .single-story .lab .classifications {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 .single-story .lab .categories {
   width: 50%;
@@ -19903,11 +19702,8 @@ fieldset[disabled] .page-template-template-experience-europe .form-wrapper .gfor
   height: auto;
 }
 .single-story .lab .actions {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 .single-story .lab .links {
   width: 50%;
@@ -20001,11 +19797,8 @@ fieldset[disabled] .page-template-template-experience-europe .form-wrapper .gfor
 }
 .page-template-template-brianasurvey .form-wrapper {
   margin: 0 auto 60px;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 .page-template-template-brianasurvey .form-wrapper .gform_wrapper {
   margin: 0;
@@ -20160,12 +19953,9 @@ fieldset[disabled] .page-template-template-brianasurvey .gform_button.active {
   background: #FF9D00;
 }
 .page-template-template-brianasurvey .tiles {
-  display: -webkit-box;
   display: flex;
   justify-content: space-around;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 .page-template-template-brianasurvey .hatcher {
   text-align: center;
@@ -20189,14 +19979,10 @@ fieldset[disabled] .page-template-template-brianasurvey .gform_button.active {
   font-size: 30px;
 }
 .page-template-template-brianasurvey .hatcher .range-wrapper {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
   margin: 0 0 25px;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 .page-template-template-brianasurvey .hatcher .range-wrapper label {
   width: 100%;
@@ -20237,7 +20023,6 @@ input[type=range]::-webkit-slider-thumb {
   background: #ffffff;
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4xIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
   background-size: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.1)));
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1));
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
   border-radius: 50%;
@@ -20293,7 +20078,6 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   position: absolute;
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4xIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
   background-size: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.1)));
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1));
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
   border-radius: 50%;
@@ -20311,7 +20095,6 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   left: 0;
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjEzIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.13)), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(rgba(0, 0, 0, 0.13), rgba(255, 255, 255, 0));
   border-radius: 50%;
 }
@@ -20319,7 +20102,6 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 .rangeslider--active .rangeslider__handle {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjEiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4xMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.12)));
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.12));
 }
 .rangeslider--horizontal .rangeslider__handle {
@@ -20387,11 +20169,8 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
 }
 .page-template-template-becauseofhatchsurvey .form-wrapper {
   margin: 0 auto 60px;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 .page-template-template-becauseofhatchsurvey .form-wrapper .gform_wrapper {
   margin: 0;
@@ -20547,23 +20326,16 @@ fieldset[disabled] .page-template-template-becauseofhatchsurvey .gform_button.ac
 }
 .page-template-template-becauseofhatchsurvey .gv-widget-search {
   -js-display: flex;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
   align-content: flex-start;
-  -webkit-box-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
-  -webkit-box-flex: 1;
-          flex: 1 0 auto;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex: 1 0 auto;
   margin: 20px -20px;
 }
 .page-template-template-becauseofhatchsurvey .gv-widget-search.gv-search-horizontal .gv-search-box {
-  -webkit-box-flex: 1;
-          flex: 1 1 10em;
+  flex: 1 1 10em;
 }
 .page-template-template-becauseofhatchsurvey .gv-widget-search.gv-search-horizontal label.gv-check-radio {
   display: inline-block;
@@ -20573,13 +20345,10 @@ fieldset[disabled] .page-template-template-becauseofhatchsurvey .gform_button.ac
   display: inline;
 }
 .page-template-template-becauseofhatchsurvey .gv-widget-search.gv-search-vertical {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
+  flex-direction: column;
 }
 .page-template-template-becauseofhatchsurvey .gv-widget-search.gv-search-vertical .gv-search-box {
-  -webkit-box-flex: 1;
-          flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 .page-template-template-becauseofhatchsurvey .gv-widget-search.gv-search-vertical label.gv-check-radio {
   display: block;
@@ -20605,57 +20374,42 @@ fieldset[disabled] .page-template-template-becauseofhatchsurvey .gform_button.ac
 }
 .page-template-template-becauseofhatchsurvey .gv-widget-search .gv-search-box.gv-search-box-submit {
   -js-display: flex;
-  display: -webkit-box;
   display: flex;
   width: 100%;
-  -webkit-box-flex: 0;
-          flex: 0 0 auto;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
+  flex: 0 0 auto;
+  flex-flow: row wrap;
 }
 .page-template-template-becauseofhatchsurvey .gv-widget-search .gv-search-box.gv-search-box-submit .gv-search-button {
-  -webkit-box-ordinal-group: -110;
-          order: -111;
+  order: -111;
 }
 .page-template-template-becauseofhatchsurvey .gv-widget-search .gv-search-box.gv-search-field-search_all {
-  -webkit-box-flex: 3;
-          flex-grow: 3;
+  flex-grow: 3;
 }
 .page-template-template-becauseofhatchsurvey .gv-widget-search .gv-search-box.gv-search-date {
   -js-display: flex;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
-  -webkit-box-pack: start;
-          justify-content: flex-start;
+  flex-flow: row wrap;
+  justify-content: flex-start;
 }
 .page-template-template-becauseofhatchsurvey .gv-search-horizontal .gv-widget-search .gv-search-box.gv-search-date {
-  -webkit-box-flex: 1;
-          flex: 1 0 20em;
+  flex: 1 0 20em;
 }
 .page-template-template-becauseofhatchsurvey .gv-widget-search .gv-search-box.gv-search-date p {
   -js-display: flex;
-  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  -webkit-box-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
 }
 .page-template-template-becauseofhatchsurvey .gv-widget-search .gv-search-box.gv-search-date input {
   margin-bottom: 0.5em;
   margin-right: 1%;
-  -webkit-box-flex: 1;
-          flex: 1 1 49%;
+  flex: 1 1 49%;
 }
 .page-template-template-becauseofhatchsurvey .gv-search-clear {
   display: none;
 }
 .page-template-template-becauseofhatchsurvey .gv-is-search .gv-search-clear {
-  -webkit-box-ordinal-group: 3;
-          order: 2;
+  order: 2;
   display: inline-block;
   margin: 0 3%;
   height: 100%;
@@ -20970,11 +20724,8 @@ fieldset[disabled] .page-template-template-becauseofhatchsurvey .gform_button.ac
 }
 .page-template-template-becauseofhatchsurvey .gv-list-view-content {
   padding: 0;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 .page-template-template-becauseofhatchsurvey .gv-grid-col-1-3 {
   width: 100%;
@@ -21005,7 +20756,6 @@ fieldset[disabled] .page-template-template-becauseofhatchsurvey .gform_button.ac
   height: 0;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: 150ms height, 150ms opacity;
   transition: 150ms height, 150ms opacity;
 }
 .page-template-template-becauseofhatchsurvey .collaboration-text.is--active {
@@ -21118,11 +20868,8 @@ fieldset[disabled] .page-template-template-becauseofhatchsurvey .gform_button.ac
 }
 .page-template-template-labs-voting .form-wrapper {
   margin: 0 auto 60px;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 .page-template-template-labs-voting .form-wrapper .gform_wrapper {
   margin: 0;
@@ -21277,13 +21024,9 @@ fieldset[disabled] .page-template-template-labs-voting .gform_button.active {
   background: #FF9D00;
 }
 .page-template-template-labs-voting .labs {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
+  flex-flow: row wrap;
+  justify-content: space-between;
   width: 100%;
 }
 .page-template-template-labs-voting .lab {
@@ -21293,11 +21036,8 @@ fieldset[disabled] .page-template-template-labs-voting .gform_button.active {
   padding: 30px;
   margin: 0 0 30px;
   width: calc(33.3333% - 15px);
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
+  flex-direction: column;
 }
 @media (max-width: 1200px) {
   .page-template-template-labs-voting .lab {
@@ -21314,7 +21054,6 @@ fieldset[disabled] .page-template-template-labs-voting .gform_button.active {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100 */
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=0);
@@ -21329,10 +21068,8 @@ fieldset[disabled] .page-template-template-labs-voting .gform_button.active {
   background-size: cover;
   background-position: center;
   height: 500px;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
 }
 @media (max-width: 768px) {
   .page-template-template-labs-voting .lab .lab-header {
@@ -21346,7 +21083,6 @@ fieldset[disabled] .page-template-template-labs-voting .gform_button.active {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.8)));
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#cc000000', GradientType=0);
@@ -21414,12 +21150,9 @@ fieldset[disabled] .page-template-template-labs-voting .gform_button.active {
   margin: auto -30px -30px;
   padding: 30px;
   border-top: 1px solid #E6E6E6;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
 .page-template-template-labs-voting .lab .voting .upvoting button {
   color: #007DA3;
@@ -21490,7 +21223,6 @@ fieldset[disabled] .page-template-template-labs-voting .gform_button.active {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   height: 40px;
   font-size: 14px !important;
@@ -21572,7 +21304,6 @@ textarea.page-volunteer .gform_wrapper input[type="number"] {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   height: 40px;
 }
@@ -21626,7 +21357,6 @@ textarea.page-volunteer .gform_wrapper select {
   text-align: center;
   background-color: #007DA3;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-  -webkit-transition: width 0.6s ease;
   transition: width 0.6s ease;
 }
 .page-volunteer .gform_wrapper .gf_progressbar .gf_progressbar_percentage span {
@@ -21734,7 +21464,6 @@ textarea.page-volunteer .gform_wrapper select {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   padding: 6px 12px !important;
 }

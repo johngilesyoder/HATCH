@@ -7,7 +7,7 @@
 		"uuidString": "CC79F700-685D-4D96-A6F4-8585433D47F7"
 		}
 	],
-"creatorBuild": "31934",
+"creatorBuild": "32001",
 "files": {
 	"/404.php": {
 		"cB": 0,
@@ -5335,6 +5335,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"grouped-accessor-pairs": {
+			"active": 0,
+			"optionString": "'anyOrder'"
+			},
 		"guard-for-in": {
 			"active": 0,
 			"optionString": ""
@@ -5511,6 +5515,10 @@
 			"active": 1,
 			"optionString": "{'checkLoops': true}"
 			},
+		"no-constructor-return": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-continue": {
 			"active": 0,
 			"optionString": ""
@@ -5536,6 +5544,10 @@
 			"optionString": ""
 			},
 		"no-dupe-class-members": {
+			"active": 1,
+			"optionString": ""
+			},
+		"no-dupe-else-if": {
 			"active": 1,
 			"optionString": ""
 			},
@@ -5839,6 +5851,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-setter-return": {
+			"active": 1,
+			"optionString": ""
+			},
 		"no-shadow": {
 			"active": 0,
 			"optionString": "{'builtinGlobals': false, 'hoist': 'functions', 'allow': []}"
@@ -6042,6 +6058,10 @@
 		"prefer-destructuring": {
 			"active": 0,
 			"optionString": "{'array': true, 'object': true}, {'enforceForRenamedProperties': false}"
+			},
+		"prefer-exponentiation-operator": {
+			"active": 0,
+			"optionString": ""
 			},
 		"prefer-named-capture-group": {
 			"active": 0,
