@@ -12966,6 +12966,21 @@ fieldset[disabled] .page-template-template-h360form .gform_button {
 .memberpressgroup-template-template-hatch-membership .levels {
   padding-top: 0;
 }
+.page-template-template-hatch-membership .levels .section-title,
+.memberpressgroup-template-template-hatch-membership .levels .section-title {
+  margin: 0 0 30px;
+}
+.page-template-template-hatch-membership .levels .section-summary,
+.memberpressgroup-template-template-hatch-membership .levels .section-summary {
+  margin: 0 0 60px;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .page-template-template-hatch-membership .levels .section-summary,
+  .memberpressgroup-template-template-hatch-membership .levels .section-summary {
+    margin: 0 0 30px;
+  }
+}
 .page-template-template-hatch-membership .levels .membership-options .membership-option,
 .memberpressgroup-template-template-hatch-membership .levels .membership-options .membership-option {
   background: #f2f2f2;

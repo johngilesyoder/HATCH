@@ -65,6 +65,7 @@ $levelsSectionTitle = get_field('levels_section_title');
       <div class="row">
         <div class="col-md-12">
           <h2 class="section-title"><?php echo $levelsSectionTitle; ?></h2>
+          <p class="section-summary">Membership is only as powerful as the members themselves. We want to ensure that HATCH is accessible to everyone regardless of one’s financial circumstance – even if that’s $10/month! HATCHers can choose the price point that best reflects their ability to pay using a sliding scale.</p>
 
           <!-- Membership Options -->
           <div class="membership-options">
