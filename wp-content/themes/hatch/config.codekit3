@@ -3491,6 +3491,22 @@
 		"sI": 0,
 		"sU": 0
 		},
+	"/assets/less/pages/living-room.less": {
+		"aP": 0,
+		"bl": 0,
+		"eJ": 0,
+		"ft": 1,
+		"iI": 0,
+		"ma": 1,
+		"mS": 0,
+		"oA": 1,
+		"oAP": "/assets/less/pages/living-room.css",
+		"oF": 0,
+		"oS": 0,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 0
+		},
 	"/assets/less/pages/membership.less": {
 		"aP": 0,
 		"bl": 0,
@@ -4605,6 +4621,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/template-labs-voting.php",
+		"oF": 0
+		},
+	"/template-living-room.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-living-room.php",
 		"oF": 0
 		},
 	"/template-membership.php": {
