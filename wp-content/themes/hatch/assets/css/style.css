@@ -14834,17 +14834,6 @@ fieldset[disabled] .page-template-template-membership .give-donation-level-btn {
     padding: 60px 30px;
   }
 }
-.page-template-template-living-room .living-room-hero:after {
-  content: '';
-  background: rgba(0, 0, 0, 0.3);
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: block;
-  z-index: 5;
-}
 .page-template-template-living-room .living-room-hero .hero-content {
   text-align: center;
   position: relative;
@@ -14888,12 +14877,33 @@ fieldset[disabled] .page-template-template-membership .give-donation-level-btn {
 .page-template-template-living-room .resources {
   padding-top: 0;
 }
+.page-template-template-living-room .resources .resources-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.page-template-template-living-room .resources .resources-wrapper:after {
+  content: "";
+  flex: auto;
+}
 .page-template-template-living-room .resources .resource {
   display: block;
+  width: 33%;
+  padding: 0 15px;
   margin: 0 0 30px;
   text-align: center;
   color: #222222;
   text-decoration: none;
+}
+@media (max-width: 767px) {
+  .page-template-template-living-room .resources .resource {
+    width: 50%;
+  }
+}
+@media (max-width: 480px) {
+  .page-template-template-living-room .resources .resource {
+    width: 100%;
+  }
 }
 .page-template-template-living-room .resources .resource:hover h3 {
   color: #004256;

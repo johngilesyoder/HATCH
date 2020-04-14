@@ -37,7 +37,7 @@ $supportSectionContent = get_field('support_section_content');
       <div class="row">
         <div class="col-md-12">
           <h2 class="section-title"><?php echo $resourcesSectionTitle; ?></h2>
-          <div class="row">
+          <div class="resources-wrapper">
 
             <?php if( have_rows('resources') ): ?>
 
@@ -50,13 +50,11 @@ $supportSectionContent = get_field('support_section_content');
                 $link = get_sub_field('resource_link');
                 ?>
 
-                <div class="col-md-4">
-                  <a class="resource" target="_blank" href="<?php echo $link; ?>">
-                    <img src="<?php echo $image['url']; ?>">
-                    <h3><?php echo $label; ?> <i class="material-icons">launch</i></h3>
-                    <p><?php echo $description; ?></p>
-                  </a>
-                </div>
+                <a class="resource" target="_blank" href="<?php echo $link; ?>">
+                  <img src="<?php echo $image['url']; ?>">
+                  <h3><?php echo $label; ?> <i class="material-icons">launch</i></h3>
+                  <p><?php echo $description; ?></p>
+                </a>
 
               <?php endwhile; ?>
 
