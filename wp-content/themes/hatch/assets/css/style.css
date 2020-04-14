@@ -14796,7 +14796,7 @@ fieldset[disabled] .page-template-template-membership .give-donation-level-btn {
   padding-top: 0;
 }
 .page-template-template-living-room .living-room-section {
-  padding: 60px 0;
+  padding: 50px 0;
 }
 @media (max-width: 767px) {
   .page-template-template-living-room .living-room-section {
@@ -14877,6 +14877,13 @@ fieldset[disabled] .page-template-template-membership .give-donation-level-btn {
 }
 .page-template-template-living-room .invest p {
   font-size: 16px;
+}
+.page-template-template-living-room .calendar .btn {
+  margin-top: 30px;
+  font-weight: 700;
+}
+.page-template-template-living-room .calendar .btn i {
+  vertical-align: middle;
 }
 .page-template-template-living-room .resources {
   padding-top: 0;
