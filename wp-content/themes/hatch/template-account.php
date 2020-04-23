@@ -4,8 +4,12 @@
 
   <div class="account-header" style="background-image: url('');">
     <div class="container">
-      <div class="hero-content">
-        <h1>Your HATCH+ Membership</h1>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="hero-content">
+            <h1>Your HATCH+ Membership</h1>
+          </div>
+        </div>
       </div>
     </div>
   </div>

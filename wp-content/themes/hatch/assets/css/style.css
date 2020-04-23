@@ -9996,7 +9996,7 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   background-size: cover;
   background-position: center;
   color: #fff;
-  padding: 30px;
+  padding: 30px 0;
   display: flex;
   align-items: center;
   position: relative;
@@ -10004,7 +10004,8 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
 }
 @media (max-width: 767px) {
   .page-template-template-account .account-header {
-    padding: 60px 30px;
+    padding: 15px 0;
+    margin: 0 0 30px;
   }
 }
 .page-template-template-account .account-header:after {
@@ -10030,7 +10031,7 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
 }
 @media (max-width: 767px) {
   .page-template-template-account .account-header .hero-content h1 {
-    font-size: 60px;
+    font-size: 36px;
   }
 }
 .page-template-template-account .mp_wrapper #mepr-account-nav {
@@ -10039,11 +10040,29 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   padding-left: 0;
   margin-bottom: 60px;
 }
+@media (max-width: 767px) {
+  .page-template-template-account .mp_wrapper #mepr-account-nav {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .page-template-template-account .mp_wrapper #mepr-account-nav .mepr-nav-item {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+}
 .page-template-template-account .mp_wrapper #mepr-account-nav .mepr-nav-item a {
   display: block;
   padding: 0.5rem 1rem;
   border-radius: 6px;
   font-size: 18px;
+}
+@media (max-width: 767px) {
+  .page-template-template-account .mp_wrapper #mepr-account-nav .mepr-nav-item a {
+    font-size: 16px;
+    display: block;
+  }
 }
 .page-template-template-account .mp_wrapper #mepr-account-nav .mepr-active-nav-tab a {
   background: #007DA3;
@@ -10072,6 +10091,7 @@ fieldset[disabled] .gform_wrapper .gform_button.active {
   background-color: #FFB100;
   border-color: #e69f00;
   font-weight: 700;
+  margin-bottom: 5px;
 }
 .page-template-template-account .mp_wrapper .mepr-account-row-action:focus,
 .page-template-template-account .mp_wrapper .mepr-account-row-action:active:focus,
@@ -10291,40 +10311,6 @@ textarea.page-template-template-account .mp_wrapper input[type="text"],
 textarea.page-template-template-account .mp_wrapper textarea {
   height: auto;
 }
-.page-template-template-account .mp_wrapper .mepr-account-table {
-  width: 100%;
-  max-width: 100%;
-  margin-bottom: 21px;
-}
-.page-template-template-account .mp_wrapper .mepr-account-table > thead > tr > th,
-.page-template-template-account .mp_wrapper .mepr-account-table > tbody > tr > th,
-.page-template-template-account .mp_wrapper .mepr-account-table > tfoot > tr > th,
-.page-template-template-account .mp_wrapper .mepr-account-table > thead > tr > td,
-.page-template-template-account .mp_wrapper .mepr-account-table > tbody > tr > td,
-.page-template-template-account .mp_wrapper .mepr-account-table > tfoot > tr > td {
-  padding: 8px;
-  line-height: 1.5;
-  vertical-align: top;
-  border-top: 1px solid #ddd;
-}
-.page-template-template-account .mp_wrapper .mepr-account-table > thead > tr > th {
-  vertical-align: bottom;
-  border-bottom: 2px solid #ddd;
-}
-.page-template-template-account .mp_wrapper .mepr-account-table > caption + thead > tr:first-child > th,
-.page-template-template-account .mp_wrapper .mepr-account-table > colgroup + thead > tr:first-child > th,
-.page-template-template-account .mp_wrapper .mepr-account-table > thead:first-child > tr:first-child > th,
-.page-template-template-account .mp_wrapper .mepr-account-table > caption + thead > tr:first-child > td,
-.page-template-template-account .mp_wrapper .mepr-account-table > colgroup + thead > tr:first-child > td,
-.page-template-template-account .mp_wrapper .mepr-account-table > thead:first-child > tr:first-child > td {
-  border-top: 0;
-}
-.page-template-template-account .mp_wrapper .mepr-account-table > tbody + tbody {
-  border-top: 2px solid #ddd;
-}
-.page-template-template-account .mp_wrapper .mepr-account-table .table {
-  background-color: #fff;
-}
 .page-template-template-login .site-header {
   margin: 0;
 }
@@ -10336,7 +10322,7 @@ textarea.page-template-template-account .mp_wrapper textarea {
   background-size: cover;
   background-position: center;
   color: #fff;
-  padding: 30px;
+  padding: 30px 0;
   display: flex;
   align-items: center;
   position: relative;
@@ -10344,7 +10330,8 @@ textarea.page-template-template-account .mp_wrapper textarea {
 }
 @media (max-width: 767px) {
   .page-template-template-login .account-header {
-    padding: 60px 30px;
+    padding: 15px 0;
+    margin: 0 0 30px;
   }
 }
 .page-template-template-login .account-header:after {
@@ -10370,7 +10357,7 @@ textarea.page-template-template-account .mp_wrapper textarea {
 }
 @media (max-width: 767px) {
   .page-template-template-login .account-header .hero-content h1 {
-    font-size: 60px;
+    font-size: 36px;
   }
 }
 .page-template-template-login .mp_wrapper #mepr-account-nav {
