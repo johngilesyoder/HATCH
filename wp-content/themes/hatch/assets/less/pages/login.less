@@ -1,0 +1,111 @@
+// hatch-membership.less
+// -----------------------------------------------------------------
+
+.page-template-template-login {
+  .site-header {
+    margin: 0;
+  }
+  main {
+    padding-top: 0;
+  }
+  .account-header {
+    background-color: #333;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0 0 60px;
+    @media (max-width: 767px) {
+      padding: 60px 30px;
+    }
+    &:after {
+      content: '';
+      background: rgba(0,0,0,.3);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      z-index: 5;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      h1 {
+        font-size: 60px;
+        font-family: @font-family-tungsten;
+        margin: 0;
+        text-transform: uppercase;
+        @media (max-width: 767px) {
+          font-size: 60px;
+        }
+      }
+    }
+  }
+  .mp_wrapper {
+    #mepr-account-nav {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 0;
+      margin-bottom: 60px;
+      .mepr-nav-item {
+        a {
+          display: block;
+          padding: .5rem 1rem;
+          border-radius: 6px;
+          font-size: 18px;
+        }
+      }
+      .mepr-active-nav-tab {
+        a {
+          background: @link-color;
+          color: #fff;
+        }
+      }
+    }
+    .mepr-account-row-action {
+      .btn();
+      .btn-secondary();
+      font-weight: 700;
+    }
+    .button-primary {
+      .btn();
+      .btn-primary();
+      font-weight: 700;
+    }
+    input[type="text"],
+    textarea {
+      .form-control();
+    }
+  }
+}
+
+
+
+// Responsive: desktop to large desktop
+// --------------------------------------------------
+@media (min-width: 1200px) and (max-width: 1499px) {}
+
+// Responsive: Tablet to desktop
+// --------------------------------------------------
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Responsive: Tablet to desktop
+// --------------------------------------------------
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// Responsive: Landscape phone to desktop/tablet
+// --------------------------------------------------
+@media (max-width: 767px) {}
+
+// Responsive: Up to landscape phone
+// --------------------------------------------------
+@media (max-width: 480px) {}
+
+// Responsive: Up to portrait phone
+// --------------------------------------------------
+@media (max-width: 400px) {}
