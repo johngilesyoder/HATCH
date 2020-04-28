@@ -69,56 +69,41 @@ $levelsSectionTitle = get_field('levels_section_title');
 
           <!-- Membership Options -->
           <div class="membership-options">
-            <div class="row">
 
-              <div class="col-md-4">
-                <div class="membership-option">
-                  <h4 class="option-title">HATCH+ Hero – Lifetime Membership</h4>
-                  <p class="option-cost">$5000</p>
-                  <a href="/register/hatch-hero-lifetime-membership/" class="btn btn-secondary">Join now</a>
-                </div>
-              </div>
+            <div class="membership-option">
+              <h4 class="option-title">HATCH+ Hero – Lifetime Membership</h4>
+              <p class="option-cost">$5000</p>
+              <a href="/register/hatch-hero-lifetime-membership/" class="btn btn-secondary">Join now</a>
+            </div>
+            
+            <div class="membership-option">
+              <h4 class="option-title">HATCH+ (Annual)</h4>
+              <p class="option-cost">$1000 / year</p>
+              <a href="/register/hatch-annual-1000/" class="btn btn-secondary">Join now</a>
+            </div>
 
-              <div class="col-md-4">
-                <div class="membership-option">
-                  <h4 class="option-title">HATCH+ (Annual)</h4>
-                  <p class="option-cost">$1000 / year</p>
-                  <a href="/register/hatch-annual-1000/" class="btn btn-secondary">Join now</a>
-                </div>
-              </div>
+            <div class="membership-option">
+              <h4 class="option-title">HATCH+ (Annual)</h4>
+              <p class="option-cost">$100 / year</p>
+              <a href="/register/hatch-annual-membership/" class="btn btn-secondary">Join now</a>
+            </div>
 
-              <div class="col-md-4">
-                <div class="membership-option">
-                  <h4 class="option-title">HATCH+ (Annual)</h4>
-                  <p class="option-cost">$100 / year</p>
-                  <a href="/register/hatch-annual-membership/" class="btn btn-secondary">Join now</a>
-                </div>
-              </div>
+            <div class="membership-option">
+              <h4 class="option-title">HATCH+ (Monthly)</h4>
+              <p class="option-cost">$50 / month</p>
+              <a href="/register/hatch-monthly-50/" class="btn btn-secondary">Join now</a>
+            </div>
 
-              <div class="col-md-4">
-                <div class="membership-option">
-                  <h4 class="option-title">HATCH+ (Monthly)</h4>
-                  <p class="option-cost">$50 / month</p>
-                  <a href="/register/hatch-monthly-50/" class="btn btn-secondary">Join now</a>
-                </div>
-              </div>
+            <div class="membership-option">
+              <h4 class="option-title">HATCH+ (Monthly)</h4>
+              <p class="option-cost">$25 / month</p>
+              <a href="/register/hatch-membership-monthly-25/" class="btn btn-secondary">Join now</a>
+            </div>
 
-              <div class="col-md-4">
-                <div class="membership-option">
-                  <h4 class="option-title">HATCH+ (Monthly)</h4>
-                  <p class="option-cost">$25 / month</p>
-                  <a href="/register/hatch-membership-monthly-25/" class="btn btn-secondary">Join now</a>
-                </div>
-              </div>
-
-              <div class="col-md-4">
-                <div class="membership-option">
-                  <h4 class="option-title">HATCH+ (Monthly)</h4>
-                  <p class="option-cost">$10 / month</p>
-                  <a href="/register/hatch-monthly-10/" class="btn btn-secondary">Join now</a>
-                </div>
-              </div>
-
+            <div class="membership-option">
+              <h4 class="option-title">HATCH+ (Monthly)</h4>
+              <p class="option-cost">$10 / month</p>
+              <a href="/register/hatch-monthly-10/" class="btn btn-secondary">Join now</a>
             </div>
 
           </div>

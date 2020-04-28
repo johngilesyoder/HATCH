@@ -119,11 +119,24 @@
       }
     }
     .membership-options {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      
       .membership-option {
         background: #f2f2f2;
         border-radius: 10px;
+        display: block;
+        width: calc(33% - 30px);
         padding: 30px;
-        margin: 0 0 30px;
+        margin: 0 15px 30px;
+        @media (max-width: 767px) {
+          width: calc(50% - 30px);
+        }
+        @media (max-width: 480px) {
+          width: 100%;
+          margin: 0 0 30px;
+        }
         .option-title {
           margin: 0 0 10px;
         }

@@ -13614,12 +13614,33 @@ fieldset[disabled] .page-template-template-h360form .gform_button {
     margin: 0 0 30px;
   }
 }
+.page-template-template-hatch-membership .levels .membership-options,
+.memberpressgroup-template-template-hatch-membership .levels .membership-options {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
 .page-template-template-hatch-membership .levels .membership-options .membership-option,
 .memberpressgroup-template-template-hatch-membership .levels .membership-options .membership-option {
   background: #f2f2f2;
   border-radius: 10px;
+  display: block;
+  width: calc(33% - 30px);
   padding: 30px;
-  margin: 0 0 30px;
+  margin: 0 15px 30px;
+}
+@media (max-width: 767px) {
+  .page-template-template-hatch-membership .levels .membership-options .membership-option,
+  .memberpressgroup-template-template-hatch-membership .levels .membership-options .membership-option {
+    width: calc(50% - 30px);
+  }
+}
+@media (max-width: 480px) {
+  .page-template-template-hatch-membership .levels .membership-options .membership-option,
+  .memberpressgroup-template-template-hatch-membership .levels .membership-options .membership-option {
+    width: 100%;
+    margin: 0 0 30px;
+  }
 }
 .page-template-template-hatch-membership .levels .membership-options .membership-option .option-title,
 .memberpressgroup-template-template-hatch-membership .levels .membership-options .membership-option .option-title {
