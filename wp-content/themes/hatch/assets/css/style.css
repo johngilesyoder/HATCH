@@ -15464,7 +15464,7 @@ fieldset[disabled] .page-template-template-membership .give-donation-level-btn {
   font-weight: 600;
   letter-spacing: 1px;
   text-align: center;
-  margin: 0 0 60px;
+  margin: 0 0 30px;
 }
 @media (max-width: 767px) {
   .page-template-template-living-room .living-room-section .section-title {
@@ -15525,7 +15525,6 @@ fieldset[disabled] .page-template-template-membership .give-donation-level-btn {
   font-weight: 700;
   font-size: 18px;
   margin-top: 30px;
-  margin-bottom: 30px;
   padding-left: 30px;
   padding-right: 30px;
 }
