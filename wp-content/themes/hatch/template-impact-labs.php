@@ -12,7 +12,7 @@ $supportSectionContent = get_field('support_section_content');
 
   <div class="living-room-hero" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
     <div class="hero-content">
-      <h1><?php the_title(); ?></h1>
+      <h1><?php //the_title(); ?></h1>
     </div>
   </div>
 
@@ -75,12 +75,6 @@ $supportSectionContent = get_field('support_section_content');
           <div class="row">
 
             <div class="col-md-12">
-              <a 
-                class="btn btn-secondary" 
-                href="https://calendar.google.com/calendar?cid=aGF0Y2hleHBlcmllbmNlLm9yZ19rNDRlajdzbjhxdGRhNDFwZW5nOHNsNXZuOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
-              >
-                <i class="material-icons">add</i> Add to my calendar
-              </a>
               <?php echo $calendarSectionContent; ?>
             </div>
             
