@@ -4663,6 +4663,14 @@
 		"oAP": "/template-home.php",
 		"oF": 0
 		},
+	"/template-impact-labs.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-impact-labs.php",
+		"oF": 0
+		},
 	"/template-labs-voting.php": {
 		"cB": 0,
 		"ft": 8192,
