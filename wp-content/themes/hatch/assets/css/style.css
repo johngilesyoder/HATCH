@@ -14527,6 +14527,9 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
 .page-template-template-home .site-header {
   margin-bottom: 0;
 }
+.page-template-template-home #mc_embed_signup form {
+  padding: 0;
+}
 .page-template-template-home .posts-hero {
   margin-bottom: 60px;
   padding: 30px;
