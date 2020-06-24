@@ -22949,3 +22949,89 @@ fieldset[disabled] .page-volunteer .gform_wrapper .gform_button.active {
 .page-volunteer .gform_wrapper .gform_button:hover {
   background: #FF9D00;
 }
+.page-template-template-resources .site-header {
+  margin: 0;
+}
+.page-template-template-resources main {
+  padding-top: 0;
+}
+.page-template-template-resources .section {
+  padding: 40px 0;
+}
+@media (max-width: 767px) {
+  .page-template-template-resources .section {
+    padding: 30px 0;
+  }
+}
+.page-template-template-resources .section .section-title {
+  font-family: 'Tungsten A', 'Tungsten B';
+  text-transform: uppercase;
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 0 0 30px;
+}
+@media (max-width: 767px) {
+  .page-template-template-resources .section .section-title {
+    margin: 0 0 30px;
+    font-size: 36px;
+  }
+}
+.page-template-template-resources .resources {
+  padding-top: 0;
+}
+.page-template-template-resources .resources .resources-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.page-template-template-resources .resources .resources-wrapper:after {
+  content: "";
+  flex: auto;
+}
+.page-template-template-resources .resources .resource {
+  display: block;
+  width: 33%;
+  padding: 0 15px;
+  margin: 0 0 30px;
+  text-align: center;
+  color: #222222;
+  text-decoration: none;
+}
+@media (max-width: 767px) {
+  .page-template-template-resources .resources .resource {
+    width: 50%;
+  }
+}
+@media (max-width: 480px) {
+  .page-template-template-resources .resources .resource {
+    width: 100%;
+  }
+}
+.page-template-template-resources .resources .resource:hover h3 {
+  color: #004256;
+}
+.page-template-template-resources .resources .resource h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  line-height: 1.25;
+  color: #007DA3;
+}
+.page-template-template-resources .resources .resource h3 i {
+  font-size: 14px;
+  vertical-align: middle;
+}
+.page-template-template-resources .resources .resource img {
+  height: 200px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 10px;
+  margin: 0 0 10px;
+}
+.page-template-template-resources .resources .resource p {
+  margin: 0;
+}

@@ -3619,6 +3619,22 @@
 		"sI": 0,
 		"sU": 0
 		},
+	"/assets/less/pages/resources.less": {
+		"aP": 0,
+		"bl": 0,
+		"eJ": 0,
+		"ft": 1,
+		"iI": 0,
+		"ma": 1,
+		"mS": 0,
+		"oA": 1,
+		"oAP": "/assets/less/pages/resources.css",
+		"oF": 0,
+		"oS": 0,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 0
+		},
 	"/assets/less/pages/search.less": {
 		"aP": 0,
 		"bl": 0,
@@ -4765,6 +4781,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/template-registration.php",
+		"oF": 0
+		},
+	"/template-resources.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-resources.php",
 		"oF": 0
 		},
 	"/template-test.php": {
