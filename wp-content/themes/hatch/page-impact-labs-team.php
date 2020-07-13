@@ -48,7 +48,7 @@ $query_two = new WP_Query( $query_two_args );
 
 						<div class="advisory-board-posts exec-board">
 
-							<h4>Executive Board</h4>
+							<h4>Core Team</h4>
 							<?php if ( $query_one->have_posts() ) : while ( $query_one->have_posts() ) : $query_one->the_post(); ?>
 							<?php
 								// featured image
@@ -77,7 +77,7 @@ $query_two = new WP_Query( $query_two_args );
 
 						<div class="advisory-board-posts">
 
-							<h4>Advisory Board</h4>
+							<h4>Facilitators</h4>
 							<?php if ( $query_two->have_posts() ) : while ( $query_two->have_posts() ) : $query_two->the_post(); ?>
 							<?php
 								// featured image
