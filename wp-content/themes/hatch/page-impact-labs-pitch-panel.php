@@ -28,7 +28,6 @@ $query_one = new WP_Query( $query_one_args );
 
 						<div class="advisory-board-posts exec-board">
 
-							<h4>Core Team</h4>
 							<?php if ( $query_one->have_posts() ) : while ( $query_one->have_posts() ) : $query_one->the_post(); ?>
 							<?php
 								// featured image
