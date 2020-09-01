@@ -1,0 +1,151 @@
+.page-template-template-impact-lab-projects {
+
+  .because-title {
+      margin-bottom: 60px;
+      padding: 10px 15px;
+      width: auto;
+      background: #f2f2f2;
+      strong {
+        color: #F7862F;
+        font-family: @font-family-tungsten;
+        font-size: 30px;
+        font-style: normal;
+        margin-right: 15px;
+        letter-spacing: .02em;
+      }
+      p {
+        font-style: italic;
+        color: #555;
+        margin: 0;
+        display: inline-block;
+      }
+  }
+  // Labs
+  .labs {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  .lab {
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 40px 60px -30px rgba(0,0,0,.4);
+    padding: 30px;
+    margin: 0 0 30px;
+    width: calc(33.3333% - 15px);
+    @media (max-width: 1200px) {
+      width: calc(50% - 15px);
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+    .btn-more {
+      margin: 0 0 30px;
+      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100 */
+      background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+      padding-top: 15px;
+
+    }
+    .lab-header {
+      margin: -30px -30px 30px;
+      padding: 30px;
+      position: relative;
+      background-image: url('../../assets/img/default-lab.jpg');
+      background-size: cover;
+      background-position: center;
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        #gradient > .vertical(rgba(0,0,0,0), rgba(0,0,0,.8));
+        z-index: 1;
+      }
+      .header-content {
+        color: #fff;
+        position: relative;
+        z-index: 2;
+        padding-top: 180px;
+        display: block;
+        &:hover {
+          text-decoration: none;
+        }
+        .leader-name {
+          display: block;
+          font-weight: 500;
+          font-size: 16px;
+        }
+        .project-name {
+          display: block;
+          font-size: 60px;
+          line-height: 1;
+          font-weight: 700;
+          font-family: @font-family-tungsten;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .lab-section {
+      margin: 0 0 15px;
+    }
+    .categories{
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li {
+          display: inline-block;
+          background: rgba(@brand-primary, 20%);
+          border-radius: 300px;
+          padding: 2px 10px;
+          margin: 0 10px 10px 0;
+          text-transform: uppercase;
+          font-size: 11px;
+          font-weight: 700;
+        }
+      }
+    }
+    .sdgs {
+      label {
+        display: block;
+      }
+      .sdg {
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        img {
+          width: 60px;
+          height: auto;
+        }
+      }
+    }
+    .links {
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+    }
+    .action {
+      background: #fff;
+      margin: 0 -30px -30px;
+      padding: 30px;
+      border-top: 1px solid @border-color;
+      .btn {
+        color: @link-color;
+        display: block;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 700;
+        &:hover {
+          color: @link-hover-color;
+        }
+      }
+    }
+  }
+}

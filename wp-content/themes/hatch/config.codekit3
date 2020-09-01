@@ -3491,6 +3491,22 @@
 		"sI": 0,
 		"sU": 0
 		},
+	"/assets/less/pages/impact-lab-projects.less": {
+		"aP": 0,
+		"bl": 0,
+		"eJ": 0,
+		"ft": 1,
+		"iI": 0,
+		"ma": 1,
+		"mS": 0,
+		"oA": 1,
+		"oAP": "/assets/less/pages/impact-lab-projects.css",
+		"oF": 0,
+		"oS": 0,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 0
+		},
 	"/assets/less/pages/labs-voting.less": {
 		"aP": 0,
 		"bl": 0,
@@ -3651,7 +3667,7 @@
 		"sI": 0,
 		"sU": 0
 		},
-	"/assets/less/pages/single-impact-labs-project.less": {
+	"/assets/less/pages/single-impact-lab-project.less": {
 		"aP": 0,
 		"bl": 0,
 		"eJ": 0,
@@ -3660,7 +3676,7 @@
 		"ma": 1,
 		"mS": 0,
 		"oA": 1,
-		"oAP": "/assets/less/pages/single-impact-labs-project.css",
+		"oAP": "/assets/less/pages/single-impact-lab-project.css",
 		"oF": 0,
 		"oS": 0,
 		"rwU": 0,
@@ -4717,6 +4733,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/template-home.php",
+		"oF": 0
+		},
+	"/template-impact-lab-projects.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-impact-lab-projects.php",
 		"oF": 0
 		},
 	"/template-impact-labs.php": {

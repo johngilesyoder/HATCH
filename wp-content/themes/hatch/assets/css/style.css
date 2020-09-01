@@ -14394,6 +14394,154 @@ fieldset[disabled] .page-template-template-hatchback .give-btn.active {
     margin-right: 0 !important;
   }
 }
+.page-template-template-impact-lab-projects .because-title {
+  margin-bottom: 60px;
+  padding: 10px 15px;
+  width: auto;
+  background: #f2f2f2;
+}
+.page-template-template-impact-lab-projects .because-title strong {
+  color: #F7862F;
+  font-family: 'Tungsten A', 'Tungsten B';
+  font-size: 30px;
+  font-style: normal;
+  margin-right: 15px;
+  letter-spacing: 0.02em;
+}
+.page-template-template-impact-lab-projects .because-title p {
+  font-style: italic;
+  color: #555;
+  margin: 0;
+  display: inline-block;
+}
+.page-template-template-impact-lab-projects .labs {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.page-template-template-impact-lab-projects .lab {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 40px 60px -30px rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  margin: 0 0 30px;
+  width: calc(33.3333% - 15px);
+}
+@media (max-width: 1200px) {
+  .page-template-template-impact-lab-projects .lab {
+    width: calc(50% - 15px);
+  }
+}
+@media (max-width: 767px) {
+  .page-template-template-impact-lab-projects .lab {
+    width: 100%;
+  }
+}
+.page-template-template-impact-lab-projects .lab .btn-more {
+  margin: 0 0 30px;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100 */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=0);
+  /* IE6-9 */
+  padding-top: 15px;
+}
+.page-template-template-impact-lab-projects .lab .lab-header {
+  margin: -30px -30px 30px;
+  padding: 30px;
+  position: relative;
+  background-image: url('../../assets/img/default-lab.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.page-template-template-impact-lab-projects .lab .lab-header:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#cc000000', GradientType=0);
+  z-index: 1;
+}
+.page-template-template-impact-lab-projects .lab .lab-header .header-content {
+  color: #fff;
+  position: relative;
+  z-index: 2;
+  padding-top: 180px;
+  display: block;
+}
+.page-template-template-impact-lab-projects .lab .lab-header .header-content:hover {
+  text-decoration: none;
+}
+.page-template-template-impact-lab-projects .lab .lab-header .header-content .leader-name {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+}
+.page-template-template-impact-lab-projects .lab .lab-header .header-content .project-name {
+  display: block;
+  font-size: 60px;
+  line-height: 1;
+  font-weight: 700;
+  font-family: 'Tungsten A', 'Tungsten B';
+  text-transform: uppercase;
+}
+.page-template-template-impact-lab-projects .lab .lab-section {
+  margin: 0 0 15px;
+}
+.page-template-template-impact-lab-projects .lab .categories ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.page-template-template-impact-lab-projects .lab .categories ul li {
+  display: inline-block;
+  background: rgba(0, 125, 163, 0.2);
+  border-radius: 300px;
+  padding: 2px 10px;
+  margin: 0 10px 10px 0;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700;
+}
+.page-template-template-impact-lab-projects .lab .sdgs label {
+  display: block;
+}
+.page-template-template-impact-lab-projects .lab .sdgs .sdg {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.page-template-template-impact-lab-projects .lab .sdgs .sdg img {
+  width: 60px;
+  height: auto;
+}
+.page-template-template-impact-lab-projects .lab .links ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.page-template-template-impact-lab-projects .lab .action {
+  background: #fff;
+  margin: 0 -30px -30px;
+  padding: 30px;
+  border-top: 1px solid #E6E6E6;
+}
+.page-template-template-impact-lab-projects .lab .action .btn {
+  color: #007DA3;
+  display: block;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+}
+.page-template-template-impact-lab-projects .lab .action .btn:hover {
+  color: #004256;
+}
 .page-template-template-hatching-a-better-world .because-title {
   margin-bottom: 60px;
   padding: 10px 15px;
