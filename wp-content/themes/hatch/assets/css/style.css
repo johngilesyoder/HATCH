@@ -21051,13 +21051,13 @@ fieldset[disabled] .page-template-template-experience-europe .form-wrapper .gfor
   font-size: 14px;
   margin: 0 0 10px;
 }
-.single-story .because-title {
+.single-impact-lab-project .because-title {
   margin-bottom: 30px;
   padding: 10px 15px;
   width: auto;
   background: #f2f2f2;
 }
-.single-story .because-title strong {
+.single-impact-lab-project .because-title strong {
   color: #F7862F;
   font-family: 'Tungsten A', 'Tungsten B';
   font-size: 30px;
@@ -21065,27 +21065,27 @@ fieldset[disabled] .page-template-template-experience-europe .form-wrapper .gfor
   margin-right: 15px;
   letter-spacing: 0.02em;
 }
-.single-story .because-title p {
+.single-impact-lab-project .because-title p {
   font-style: italic;
   color: #555;
   margin: 0 0 10px;
   display: inline-block;
 }
-.single-story .lab {
+.single-impact-lab-project .lab {
   margin: 0 0 60px;
 }
-.single-story .lab label {
+.single-impact-lab-project .lab label {
   font-size: 30px;
   font-weight: 700;
   font-family: 'Tungsten A', 'Tungsten B';
   text-transform: uppercase;
 }
 @media (max-width: 480px) {
-  .single-story .lab label {
+  .single-impact-lab-project .lab label {
     font-size: 24px;
   }
 }
-.single-story .lab .lab-header {
+.single-impact-lab-project .lab .lab-header {
   margin: 0 0 30px;
   padding: 30px;
   position: relative;
@@ -21093,7 +21093,7 @@ fieldset[disabled] .page-template-template-experience-europe .form-wrapper .gfor
   background-size: cover;
   background-position: center;
 }
-.single-story .lab .lab-header:after {
+.single-impact-lab-project .lab .lab-header:after {
   content: '';
   position: absolute;
   top: 0;
@@ -21105,22 +21105,22 @@ fieldset[disabled] .page-template-template-experience-europe .form-wrapper .gfor
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#cc000000', GradientType=0);
   z-index: 1;
 }
-.single-story .lab .lab-header .header-content {
+.single-impact-lab-project .lab .lab-header .header-content {
   color: #fff;
   position: relative;
   z-index: 2;
   padding-top: 280px;
   display: block;
 }
-.single-story .lab .lab-header .header-content:hover {
+.single-impact-lab-project .lab .lab-header .header-content:hover {
   text-decoration: none;
 }
-.single-story .lab .lab-header .header-content .leader-name {
+.single-impact-lab-project .lab .lab-header .header-content .leader-name {
   display: block;
   font-weight: 500;
   font-size: 16px;
 }
-.single-story .lab .lab-header .header-content .project-category {
+.single-impact-lab-project .lab .lab-header .header-content .project-category {
   display: block;
   font-size: 60px;
   line-height: 1;
@@ -21128,20 +21128,20 @@ fieldset[disabled] .page-template-template-experience-europe .form-wrapper .gfor
   font-family: 'Tungsten A', 'Tungsten B';
   text-transform: uppercase;
 }
-.single-story .lab .lab-section {
+.single-impact-lab-project .lab .lab-section {
   margin: 0 0 30px;
 }
 @media (max-width: 768px) {
-  .single-story .lab .lab-section {
+  .single-impact-lab-project .lab .lab-section {
     margin: 0 0 15px;
   }
 }
-.single-story .lab .project-video .iframe-container {
+.single-impact-lab-project .lab .project-video .iframe-container {
   position: relative;
   overflow: hidden;
   padding-top: 56.25%;
 }
-.single-story .lab .project-video .iframe-container iframe {
+.single-impact-lab-project .lab .project-video .iframe-container iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -21149,14 +21149,14 @@ fieldset[disabled] .page-template-template-experience-europe .form-wrapper .gfor
   height: 100%;
   border: 0;
 }
-.single-story .lab .project-leader {
+.single-impact-lab-project .lab .project-leader {
   padding: 30px;
   background: #f2f2f2;
 }
-.single-story .lab .project-leader .leader {
+.single-impact-lab-project .lab .project-leader .leader {
   display: flex;
 }
-.single-story .lab .project-leader .leader .leader-avatar {
+.single-impact-lab-project .lab .project-leader .leader .leader-avatar {
   margin-right: 15px;
   height: 60px;
   width: 60px;
@@ -21166,30 +21166,30 @@ fieldset[disabled] .page-template-template-experience-europe .form-wrapper .gfor
      object-position: center;
   border-radius: 50%;
 }
-.single-story .lab .project-leader .leader .leader-details .leader-name {
+.single-impact-lab-project .lab .project-leader .leader .leader-details .leader-name {
   font-size: 18px;
   font-weight: 700;
   display: block;
   letter-spacing: -0.5px;
 }
-.single-story .lab .classifications {
+.single-impact-lab-project .lab .classifications {
   display: flex;
   flex-flow: row wrap;
 }
-.single-story .lab .categories {
+.single-impact-lab-project .lab .categories {
   width: 50%;
 }
 @media (max-width: 768px) {
-  .single-story .lab .categories {
+  .single-impact-lab-project .lab .categories {
     width: 100%;
   }
 }
-.single-story .lab .categories ul {
+.single-impact-lab-project .lab .categories ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-.single-story .lab .categories ul li {
+.single-impact-lab-project .lab .categories ul li {
   display: inline-block;
   background: rgba(0, 125, 163, 0.2);
   border-radius: 300px;
@@ -21199,53 +21199,53 @@ fieldset[disabled] .page-template-template-experience-europe .form-wrapper .gfor
   font-size: 11px;
   font-weight: 700;
 }
-.single-story .lab .sdgs label {
+.single-impact-lab-project .lab .sdgs label {
   display: block;
 }
-.single-story .lab .sdgs .sdg {
+.single-impact-lab-project .lab .sdgs .sdg {
   display: inline-block;
   margin-right: 10px;
 }
-.single-story .lab .sdgs .sdg img {
+.single-impact-lab-project .lab .sdgs .sdg img {
   width: 60px;
   height: auto;
 }
-.single-story .lab .actions {
+.single-impact-lab-project .lab .actions {
   display: flex;
   flex-flow: row wrap;
 }
-.single-story .lab .links {
+.single-impact-lab-project .lab .links {
   width: 50%;
 }
 @media (max-width: 768px) {
-  .single-story .lab .links {
+  .single-impact-lab-project .lab .links {
     width: 100%;
   }
 }
-.single-story .lab .links ul {
+.single-impact-lab-project .lab .links ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-.single-story .lab .donate {
+.single-impact-lab-project .lab .donate {
   width: 50%;
 }
 @media (max-width: 768px) {
-  .single-story .lab .donate {
+  .single-impact-lab-project .lab .donate {
     width: 100%;
   }
 }
-.single-story .lab .updates .update {
+.single-impact-lab-project .lab .updates .update {
   background: #f2f2f2;
   padding: 30px;
   margin: 0 0 15px;
 }
-.single-story .lab .updates .update .update-title {
+.single-impact-lab-project .lab .updates .update .update-title {
   font-weight: 700;
   font-size: 21px;
   display: block;
 }
-.single-story .lab .updates .update .update-date {
+.single-impact-lab-project .lab .updates .update .update-date {
   display: block;
   font-style: italic;
   font-size: 14px;

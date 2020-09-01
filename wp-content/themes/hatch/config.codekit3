@@ -4509,12 +4509,12 @@
 		"oAP": "/single-hatchback-story.php",
 		"oF": 0
 		},
-	"/single-impact-labs-project.php": {
+	"/single-impact-lab-project.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/single-impact-labs-project.php",
+		"oAP": "/single-impact-lab-project.php",
 		"oF": 0
 		},
 	"/single-reunion.php": {
