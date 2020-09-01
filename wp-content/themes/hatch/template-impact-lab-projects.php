@@ -7,7 +7,7 @@
         <div class="col-md-12">
           <div class="because-title">
             <strong>Impact Labs</strong>
-            <p>HATCH is a network of world-shapers that mentor and mutually invest in one another. As positive things happen #becauseOfHATCH, the tag is used to help track the many projects and initiatives that grow from HATCH to create a global movement for good.</p>
+            <p>The IMPACT LABS were created to bring together a global community to co-create solutions for major systemic problems in humanity at a time when solutions are most needed. HATCH has developed a prototype framework to leverage innovation and creative problem-solving methodologies while building momentum around current critical focus areas.</p>
           </div>
         </div>
       </div>
