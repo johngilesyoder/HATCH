@@ -23,7 +23,7 @@
           <div class="because-title">
             <strong>HATCHing a Better World</strong>
             <p>The IMPACT LABS were created to bring together a global community to co-create solutions for major systemic problems in humanity at a time when solutions are most needed. HATCH has developed a prototype framework to leverage innovation and creative problem-solving methodologies while building momentum around current critical focus areas.</p>
-            <a href="/hatching-a-better-world/">&larr; Back to all Projects</a>
+            <a href="/impact-lab-projects/">&larr; Back to all Projects</a>
           </div>
           <div class="lab">
             <?php if(has_post_thumbnail()) : ?>
