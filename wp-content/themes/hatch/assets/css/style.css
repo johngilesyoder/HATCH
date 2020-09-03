@@ -6767,6 +6767,7 @@ fieldset[disabled] .btn-secondary.active {
 }
 .hentry img {
   max-width: 100%;
+  height: auto;
 }
 @media (max-width: 767px) {
   .hentry h4 {
