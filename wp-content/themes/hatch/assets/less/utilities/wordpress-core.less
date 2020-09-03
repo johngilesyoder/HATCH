@@ -1,72 +1,61 @@
-// wordpress-core.less
+// cms-content.scss
 // -----------------------------------------------------------------
 
-.alignnone {
-  margin:5px 20px 20px 0;
-}
-.aligncenter,
-div.aligncenter {
-  display:block;
-  margin:5px auto 5px auto;
-}
-.alignright {
-  float:right;
-  margin:5px 0 20px 20px;
-}
-.alignleft {
-  float:left;
-  margin:5px 20px 20px 0;
-}
-a img.alignright {
-  float:right;
-  margin:5px 0 20px 20px;
-}
-a img.alignnone {
-  margin:5px 20px 20px 0;
-}
-a img.alignleft {
-  float:left;
-  margin:5px 20px 20px 0;
-}
-a img.aligncenter {
-  display:block;
-  margin-left:auto;
-  margin-right:auto;
-}
-.wp-caption {
-  background:#FFF;
-  border:1px solid #F0F0F0;
-  max-width:96%;
-  padding:5px 3px 10px;
-  text-align:center;
-}
-.wp-caption.alignnone {
-  margin:5px 20px 20px 0;
-}
-.wp-caption.alignleft {
-  margin:5px 20px 20px 0;
-}
-.wp-caption.alignright {
-  margin:5px 0 20px 20px;
-}
-.wp-caption img {
-  border:0 none;
-  height:auto;
-  margin:0;
-  max-width:98.5%;
-  padding:0;
-  width:auto;
-}
-.wp-caption .wp-caption-text,
-.gallery-caption {
-  font-size:11px;
-  line-height:17px;
-  margin:0;
-  padding:0 4px 5px;
-}
-.sticky {
+.hentry {
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 21px;
+  }
+  h4 {
+    font-size: 18px;
+    margin-top: 30px;
+    line-height: 1.5;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  img {
+    max-width: 100%;
+  }
 
 }
-.bypostauthor {
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .hentry {
+    h4 {
+      font-size: 16px;
+    }
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {
+
+  .hentry {
+    img {
+      width: 100%;
+    }
+    h4 {
+      font-size: 14px;
+    }
+  }
 
 }
