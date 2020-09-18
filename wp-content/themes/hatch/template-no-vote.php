@@ -27,7 +27,7 @@ $supportSectionContent = get_field('support_section_content');
               </article>
             <?php endwhile; ?>
           <?php endif; ?>
-          <a href="https://us02web.zoom.us/meeting/register/tZIudOGgrzkqHtT3LnfFk8-RrWiiWQFPtR3N" class="btn btn-secondary btn-support">Register</a>
+          <a href="https://www.eventbrite.com/e/119025248723/" class="btn btn-secondary btn-support">RSVP Now</a>
         </div>
       </div>
     </div>
