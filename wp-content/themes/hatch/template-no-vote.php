@@ -1,4 +1,4 @@
-<?php /* Template Name: Impact Labs */
+<?php /* Template Name: No Vote Left Behind */
 get_header(); 
 $resourcesSectionTitle = get_field('resources_section_title');
 $calendarSectionTitle = get_field('calendar_section_title');
