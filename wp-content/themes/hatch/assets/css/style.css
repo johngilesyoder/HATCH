@@ -15591,29 +15591,29 @@ fieldset[disabled] .page-template-template-membership .give-donation-level-btn {
 }
 .page-template-template-living-room .site-header,
 .page-template-template-impact-labs .site-header,
-.page-template-template-no-vote-left-behind .site-header {
+.page-template-template-no-vote .site-header {
   margin: 0;
 }
 .page-template-template-living-room main,
 .page-template-template-impact-labs main,
-.page-template-template-no-vote-left-behind main {
+.page-template-template-no-vote main {
   padding-top: 0;
 }
 .page-template-template-living-room .living-room-section,
 .page-template-template-impact-labs .living-room-section,
-.page-template-template-no-vote-left-behind .living-room-section {
+.page-template-template-no-vote .living-room-section {
   padding: 40px 0;
 }
 @media (max-width: 767px) {
   .page-template-template-living-room .living-room-section,
   .page-template-template-impact-labs .living-room-section,
-  .page-template-template-no-vote-left-behind .living-room-section {
+  .page-template-template-no-vote .living-room-section {
     padding: 30px 0;
   }
 }
 .page-template-template-living-room .living-room-section .section-title,
 .page-template-template-impact-labs .living-room-section .section-title,
-.page-template-template-no-vote-left-behind .living-room-section .section-title {
+.page-template-template-no-vote .living-room-section .section-title {
   font-family: 'Tungsten A', 'Tungsten B';
   text-transform: uppercase;
   font-size: 60px;
@@ -15625,14 +15625,14 @@ fieldset[disabled] .page-template-template-membership .give-donation-level-btn {
 @media (max-width: 767px) {
   .page-template-template-living-room .living-room-section .section-title,
   .page-template-template-impact-labs .living-room-section .section-title,
-  .page-template-template-no-vote-left-behind .living-room-section .section-title {
+  .page-template-template-no-vote .living-room-section .section-title {
     margin: 0 0 30px;
     font-size: 36px;
   }
 }
 .page-template-template-living-room .living-room-hero,
 .page-template-template-impact-labs .living-room-hero,
-.page-template-template-no-vote-left-behind .living-room-hero {
+.page-template-template-no-vote .living-room-hero {
   background-color: #333;
   background-size: cover;
   background-position: center;
@@ -15646,20 +15646,20 @@ fieldset[disabled] .page-template-template-membership .give-donation-level-btn {
 @media (max-width: 767px) {
   .page-template-template-living-room .living-room-hero,
   .page-template-template-impact-labs .living-room-hero,
-  .page-template-template-no-vote-left-behind .living-room-hero {
+  .page-template-template-no-vote .living-room-hero {
     padding: 60px 30px;
   }
 }
 .page-template-template-living-room .living-room-hero .hero-content,
 .page-template-template-impact-labs .living-room-hero .hero-content,
-.page-template-template-no-vote-left-behind .living-room-hero .hero-content {
+.page-template-template-no-vote .living-room-hero .hero-content {
   text-align: center;
   position: relative;
   z-index: 10;
 }
 .page-template-template-living-room .living-room-hero .hero-content h1,
 .page-template-template-impact-labs .living-room-hero .hero-content h1,
-.page-template-template-no-vote-left-behind .living-room-hero .hero-content h1 {
+.page-template-template-no-vote .living-room-hero .hero-content h1 {
   font-size: 80px;
   font-family: 'Tungsten A', 'Tungsten B';
   margin: 0 0 30px;
@@ -15667,13 +15667,13 @@ fieldset[disabled] .page-template-template-membership .give-donation-level-btn {
 @media (max-width: 767px) {
   .page-template-template-living-room .living-room-hero .hero-content h1,
   .page-template-template-impact-labs .living-room-hero .hero-content h1,
-  .page-template-template-no-vote-left-behind .living-room-hero .hero-content h1 {
+  .page-template-template-no-vote .living-room-hero .hero-content h1 {
     font-size: 60px;
   }
 }
 .page-template-template-living-room .living-room-hero .hero-content .btn,
 .page-template-template-impact-labs .living-room-hero .hero-content .btn,
-.page-template-template-no-vote-left-behind .living-room-hero .hero-content .btn {
+.page-template-template-no-vote .living-room-hero .hero-content .btn {
   font-size: 18px;
   font-weight: 700;
   padding: 15px 60px;
@@ -15681,7 +15681,7 @@ fieldset[disabled] .page-template-template-membership .give-donation-level-btn {
 @media (max-width: 767px) {
   .page-template-template-living-room .living-room-hero .hero-content .btn,
   .page-template-template-impact-labs .living-room-hero .hero-content .btn,
-  .page-template-template-no-vote-left-behind .living-room-hero .hero-content .btn {
+  .page-template-template-no-vote .living-room-hero .hero-content .btn {
     padding: 15px;
     width: 100%;
     display: block;
@@ -15689,17 +15689,17 @@ fieldset[disabled] .page-template-template-membership .give-donation-level-btn {
 }
 .page-template-template-living-room .invest,
 .page-template-template-impact-labs .invest,
-.page-template-template-no-vote-left-behind .invest {
+.page-template-template-no-vote .invest {
   text-align: center;
 }
 .page-template-template-living-room .invest p,
 .page-template-template-impact-labs .invest p,
-.page-template-template-no-vote-left-behind .invest p {
+.page-template-template-no-vote .invest p {
   font-size: 16px;
 }
 .page-template-template-living-room .invest .btn-support,
 .page-template-template-impact-labs .invest .btn-support,
-.page-template-template-no-vote-left-behind .invest .btn-support {
+.page-template-template-no-vote .invest .btn-support {
   font-weight: 700;
   font-size: 18px;
   margin-top: 30px;
@@ -15708,36 +15708,36 @@ fieldset[disabled] .page-template-template-membership .give-donation-level-btn {
 }
 .page-template-template-living-room .calendar .btn,
 .page-template-template-impact-labs .calendar .btn,
-.page-template-template-no-vote-left-behind .calendar .btn {
+.page-template-template-no-vote .calendar .btn {
   margin-bottom: 30px;
   font-weight: 700;
 }
 .page-template-template-living-room .calendar .btn i,
 .page-template-template-impact-labs .calendar .btn i,
-.page-template-template-no-vote-left-behind .calendar .btn i {
+.page-template-template-no-vote .calendar .btn i {
   vertical-align: middle;
 }
 .page-template-template-living-room .resources,
 .page-template-template-impact-labs .resources,
-.page-template-template-no-vote-left-behind .resources {
+.page-template-template-no-vote .resources {
   padding-top: 0;
 }
 .page-template-template-living-room .resources .resources-wrapper,
 .page-template-template-impact-labs .resources .resources-wrapper,
-.page-template-template-no-vote-left-behind .resources .resources-wrapper {
+.page-template-template-no-vote .resources .resources-wrapper {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
 }
 .page-template-template-living-room .resources .resources-wrapper:after,
 .page-template-template-impact-labs .resources .resources-wrapper:after,
-.page-template-template-no-vote-left-behind .resources .resources-wrapper:after {
+.page-template-template-no-vote .resources .resources-wrapper:after {
   content: "";
   flex: auto;
 }
 .page-template-template-living-room .resources .resource,
 .page-template-template-impact-labs .resources .resource,
-.page-template-template-no-vote-left-behind .resources .resource {
+.page-template-template-no-vote .resources .resource {
   display: block;
   width: 33%;
   padding: 0 15px;
@@ -15749,25 +15749,25 @@ fieldset[disabled] .page-template-template-membership .give-donation-level-btn {
 @media (max-width: 767px) {
   .page-template-template-living-room .resources .resource,
   .page-template-template-impact-labs .resources .resource,
-  .page-template-template-no-vote-left-behind .resources .resource {
+  .page-template-template-no-vote .resources .resource {
     width: 50%;
   }
 }
 @media (max-width: 480px) {
   .page-template-template-living-room .resources .resource,
   .page-template-template-impact-labs .resources .resource,
-  .page-template-template-no-vote-left-behind .resources .resource {
+  .page-template-template-no-vote .resources .resource {
     width: 100%;
   }
 }
 .page-template-template-living-room .resources .resource:hover h3,
 .page-template-template-impact-labs .resources .resource:hover h3,
-.page-template-template-no-vote-left-behind .resources .resource:hover h3 {
+.page-template-template-no-vote .resources .resource:hover h3 {
   color: #004256;
 }
 .page-template-template-living-room .resources .resource h3,
 .page-template-template-impact-labs .resources .resource h3,
-.page-template-template-no-vote-left-behind .resources .resource h3 {
+.page-template-template-no-vote .resources .resource h3 {
   margin: 0 0 10px;
   font-size: 18px;
   line-height: 1.25;
@@ -15775,13 +15775,13 @@ fieldset[disabled] .page-template-template-membership .give-donation-level-btn {
 }
 .page-template-template-living-room .resources .resource h3 i,
 .page-template-template-impact-labs .resources .resource h3 i,
-.page-template-template-no-vote-left-behind .resources .resource h3 i {
+.page-template-template-no-vote .resources .resource h3 i {
   font-size: 14px;
   vertical-align: middle;
 }
 .page-template-template-living-room .resources .resource img,
 .page-template-template-impact-labs .resources .resource img,
-.page-template-template-no-vote-left-behind .resources .resource img {
+.page-template-template-no-vote .resources .resource img {
   height: 200px;
   width: 100%;
   -o-object-fit: cover;
@@ -15793,12 +15793,12 @@ fieldset[disabled] .page-template-template-membership .give-donation-level-btn {
 }
 .page-template-template-living-room .resources .resource p,
 .page-template-template-impact-labs .resources .resource p,
-.page-template-template-no-vote-left-behind .resources .resource p {
+.page-template-template-no-vote .resources .resource p {
   margin: 0;
 }
 .page-template-template-living-room .highlights .resp-container,
 .page-template-template-impact-labs .highlights .resp-container,
-.page-template-template-no-vote-left-behind .highlights .resp-container {
+.page-template-template-no-vote .highlights .resp-container {
   position: relative;
   overflow: hidden;
   padding-top: 56.25%;
@@ -15806,7 +15806,7 @@ fieldset[disabled] .page-template-template-membership .give-donation-level-btn {
 }
 .page-template-template-living-room .highlights .resp-iframe,
 .page-template-template-impact-labs .highlights .resp-iframe,
-.page-template-template-no-vote-left-behind .highlights .resp-iframe {
+.page-template-template-no-vote .highlights .resp-iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -15816,24 +15816,24 @@ fieldset[disabled] .page-template-template-membership .give-donation-level-btn {
 }
 .page-template-template-living-room .give-wrap .give-card__title,
 .page-template-template-impact-labs .give-wrap .give-card__title,
-.page-template-template-no-vote-left-behind .give-wrap .give-card__title {
+.page-template-template-no-vote .give-wrap .give-card__title {
   color: #007DA3 !important;
 }
 .page-template-template-living-room .give-form-wrap,
 .page-template-template-impact-labs .give-form-wrap,
-.page-template-template-no-vote-left-behind .give-form-wrap {
+.page-template-template-no-vote .give-form-wrap {
   max-width: 600px;
   margin: 0 auto;
 }
 .page-template-template-living-room .give-form-wrap input[type="text"],
 .page-template-template-impact-labs .give-form-wrap input[type="text"],
-.page-template-template-no-vote-left-behind .give-form-wrap input[type="text"],
+.page-template-template-no-vote .give-form-wrap input[type="text"],
 .page-template-template-living-room .give-form-wrap input[type="email"],
 .page-template-template-impact-labs .give-form-wrap input[type="email"],
-.page-template-template-no-vote-left-behind .give-form-wrap input[type="email"],
+.page-template-template-no-vote .give-form-wrap input[type="email"],
 .page-template-template-living-room .give-form-wrap select,
 .page-template-template-impact-labs .give-form-wrap select,
-.page-template-template-no-vote-left-behind .give-form-wrap select {
+.page-template-template-no-vote .give-form-wrap select {
   display: block;
   width: 100%;
   height: 35px;
@@ -15850,126 +15850,126 @@ fieldset[disabled] .page-template-template-membership .give-donation-level-btn {
 }
 .page-template-template-living-room .give-form-wrap input[type="text"]:focus,
 .page-template-template-impact-labs .give-form-wrap input[type="text"]:focus,
-.page-template-template-no-vote-left-behind .give-form-wrap input[type="text"]:focus,
+.page-template-template-no-vote .give-form-wrap input[type="text"]:focus,
 .page-template-template-living-room .give-form-wrap input[type="email"]:focus,
 .page-template-template-impact-labs .give-form-wrap input[type="email"]:focus,
-.page-template-template-no-vote-left-behind .give-form-wrap input[type="email"]:focus,
+.page-template-template-no-vote .give-form-wrap input[type="email"]:focus,
 .page-template-template-living-room .give-form-wrap select:focus,
 .page-template-template-impact-labs .give-form-wrap select:focus,
-.page-template-template-no-vote-left-behind .give-form-wrap select:focus {
+.page-template-template-no-vote .give-form-wrap select:focus {
   border-color: #66afe9;
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 .page-template-template-living-room .give-form-wrap input[type="text"]::-moz-placeholder,
 .page-template-template-impact-labs .give-form-wrap input[type="text"]::-moz-placeholder,
-.page-template-template-no-vote-left-behind .give-form-wrap input[type="text"]::-moz-placeholder,
+.page-template-template-no-vote .give-form-wrap input[type="text"]::-moz-placeholder,
 .page-template-template-living-room .give-form-wrap input[type="email"]::-moz-placeholder,
 .page-template-template-impact-labs .give-form-wrap input[type="email"]::-moz-placeholder,
-.page-template-template-no-vote-left-behind .give-form-wrap input[type="email"]::-moz-placeholder,
+.page-template-template-no-vote .give-form-wrap input[type="email"]::-moz-placeholder,
 .page-template-template-living-room .give-form-wrap select::-moz-placeholder,
 .page-template-template-impact-labs .give-form-wrap select::-moz-placeholder,
-.page-template-template-no-vote-left-behind .give-form-wrap select::-moz-placeholder {
+.page-template-template-no-vote .give-form-wrap select::-moz-placeholder {
   color: #999;
   opacity: 1;
 }
 .page-template-template-living-room .give-form-wrap input[type="text"]:-ms-input-placeholder,
 .page-template-template-impact-labs .give-form-wrap input[type="text"]:-ms-input-placeholder,
-.page-template-template-no-vote-left-behind .give-form-wrap input[type="text"]:-ms-input-placeholder,
+.page-template-template-no-vote .give-form-wrap input[type="text"]:-ms-input-placeholder,
 .page-template-template-living-room .give-form-wrap input[type="email"]:-ms-input-placeholder,
 .page-template-template-impact-labs .give-form-wrap input[type="email"]:-ms-input-placeholder,
-.page-template-template-no-vote-left-behind .give-form-wrap input[type="email"]:-ms-input-placeholder,
+.page-template-template-no-vote .give-form-wrap input[type="email"]:-ms-input-placeholder,
 .page-template-template-living-room .give-form-wrap select:-ms-input-placeholder,
 .page-template-template-impact-labs .give-form-wrap select:-ms-input-placeholder,
-.page-template-template-no-vote-left-behind .give-form-wrap select:-ms-input-placeholder {
+.page-template-template-no-vote .give-form-wrap select:-ms-input-placeholder {
   color: #999;
 }
 .page-template-template-living-room .give-form-wrap input[type="text"]::-webkit-input-placeholder,
 .page-template-template-impact-labs .give-form-wrap input[type="text"]::-webkit-input-placeholder,
-.page-template-template-no-vote-left-behind .give-form-wrap input[type="text"]::-webkit-input-placeholder,
+.page-template-template-no-vote .give-form-wrap input[type="text"]::-webkit-input-placeholder,
 .page-template-template-living-room .give-form-wrap input[type="email"]::-webkit-input-placeholder,
 .page-template-template-impact-labs .give-form-wrap input[type="email"]::-webkit-input-placeholder,
-.page-template-template-no-vote-left-behind .give-form-wrap input[type="email"]::-webkit-input-placeholder,
+.page-template-template-no-vote .give-form-wrap input[type="email"]::-webkit-input-placeholder,
 .page-template-template-living-room .give-form-wrap select::-webkit-input-placeholder,
 .page-template-template-impact-labs .give-form-wrap select::-webkit-input-placeholder,
-.page-template-template-no-vote-left-behind .give-form-wrap select::-webkit-input-placeholder {
+.page-template-template-no-vote .give-form-wrap select::-webkit-input-placeholder {
   color: #999;
 }
 .page-template-template-living-room .give-form-wrap input[type="text"][disabled],
 .page-template-template-impact-labs .give-form-wrap input[type="text"][disabled],
-.page-template-template-no-vote-left-behind .give-form-wrap input[type="text"][disabled],
+.page-template-template-no-vote .give-form-wrap input[type="text"][disabled],
 .page-template-template-living-room .give-form-wrap input[type="email"][disabled],
 .page-template-template-impact-labs .give-form-wrap input[type="email"][disabled],
-.page-template-template-no-vote-left-behind .give-form-wrap input[type="email"][disabled],
+.page-template-template-no-vote .give-form-wrap input[type="email"][disabled],
 .page-template-template-living-room .give-form-wrap select[disabled],
 .page-template-template-impact-labs .give-form-wrap select[disabled],
-.page-template-template-no-vote-left-behind .give-form-wrap select[disabled],
+.page-template-template-no-vote .give-form-wrap select[disabled],
 .page-template-template-living-room .give-form-wrap input[type="text"][readonly],
 .page-template-template-impact-labs .give-form-wrap input[type="text"][readonly],
-.page-template-template-no-vote-left-behind .give-form-wrap input[type="text"][readonly],
+.page-template-template-no-vote .give-form-wrap input[type="text"][readonly],
 .page-template-template-living-room .give-form-wrap input[type="email"][readonly],
 .page-template-template-impact-labs .give-form-wrap input[type="email"][readonly],
-.page-template-template-no-vote-left-behind .give-form-wrap input[type="email"][readonly],
+.page-template-template-no-vote .give-form-wrap input[type="email"][readonly],
 .page-template-template-living-room .give-form-wrap select[readonly],
 .page-template-template-impact-labs .give-form-wrap select[readonly],
-.page-template-template-no-vote-left-behind .give-form-wrap select[readonly],
+.page-template-template-no-vote .give-form-wrap select[readonly],
 fieldset[disabled] .page-template-template-living-room .give-form-wrap input[type="text"],
 fieldset[disabled] .page-template-template-impact-labs .give-form-wrap input[type="text"],
-fieldset[disabled] .page-template-template-no-vote-left-behind .give-form-wrap input[type="text"],
+fieldset[disabled] .page-template-template-no-vote .give-form-wrap input[type="text"],
 fieldset[disabled] .page-template-template-living-room .give-form-wrap input[type="email"],
 fieldset[disabled] .page-template-template-impact-labs .give-form-wrap input[type="email"],
-fieldset[disabled] .page-template-template-no-vote-left-behind .give-form-wrap input[type="email"],
+fieldset[disabled] .page-template-template-no-vote .give-form-wrap input[type="email"],
 fieldset[disabled] .page-template-template-living-room .give-form-wrap select,
 fieldset[disabled] .page-template-template-impact-labs .give-form-wrap select,
-fieldset[disabled] .page-template-template-no-vote-left-behind .give-form-wrap select {
+fieldset[disabled] .page-template-template-no-vote .give-form-wrap select {
   cursor: not-allowed;
   background-color: #eeeeee;
   opacity: 1;
 }
 textarea.page-template-template-living-room .give-form-wrap input[type="text"],
 textarea.page-template-template-impact-labs .give-form-wrap input[type="text"],
-textarea.page-template-template-no-vote-left-behind .give-form-wrap input[type="text"],
+textarea.page-template-template-no-vote .give-form-wrap input[type="text"],
 textarea.page-template-template-living-room .give-form-wrap input[type="email"],
 textarea.page-template-template-impact-labs .give-form-wrap input[type="email"],
-textarea.page-template-template-no-vote-left-behind .give-form-wrap input[type="email"],
+textarea.page-template-template-no-vote .give-form-wrap input[type="email"],
 textarea.page-template-template-living-room .give-form-wrap select,
 textarea.page-template-template-impact-labs .give-form-wrap select,
-textarea.page-template-template-no-vote-left-behind .give-form-wrap select {
+textarea.page-template-template-no-vote .give-form-wrap select {
   height: auto;
 }
 .page-template-template-living-room .give-form-wrap select,
 .page-template-template-impact-labs .give-form-wrap select,
-.page-template-template-no-vote-left-behind .give-form-wrap select {
+.page-template-template-no-vote .give-form-wrap select {
   display: inline-block;
 }
 .page-template-template-living-room .give-form-wrap input[type="text"],
 .page-template-template-impact-labs .give-form-wrap input[type="text"],
-.page-template-template-no-vote-left-behind .give-form-wrap input[type="text"] {
+.page-template-template-no-vote .give-form-wrap input[type="text"] {
   border-radius: 4px !important;
 }
 .page-template-template-living-room .give-form-wrap fieldset,
 .page-template-template-impact-labs .give-form-wrap fieldset,
-.page-template-template-no-vote-left-behind .give-form-wrap fieldset {
+.page-template-template-no-vote .give-form-wrap fieldset {
   margin: 0 0 30px;
 }
 .page-template-template-living-room .give-form-wrap .give-recurring-donors-choice,
 .page-template-template-impact-labs .give-form-wrap .give-recurring-donors-choice,
-.page-template-template-no-vote-left-behind .give-form-wrap .give-recurring-donors-choice {
+.page-template-template-no-vote .give-form-wrap .give-recurring-donors-choice {
   margin: 0 0 30px;
 }
 .page-template-template-living-room .give-form-title,
 .page-template-template-impact-labs .give-form-title,
-.page-template-template-no-vote-left-behind .give-form-title {
+.page-template-template-no-vote .give-form-title {
   display: none;
 }
 .page-template-template-living-room #give-amount,
 .page-template-template-impact-labs #give-amount,
-.page-template-template-no-vote-left-behind #give-amount {
+.page-template-template-no-vote #give-amount {
   border-radius: 0 4px 4px 0 !important;
 }
 .page-template-template-living-room #give-donation-level-radio-list li,
 .page-template-template-impact-labs #give-donation-level-radio-list li,
-.page-template-template-no-vote-left-behind #give-donation-level-radio-list li {
+.page-template-template-no-vote #give-donation-level-radio-list li {
   margin: 0 0 5px;
   border: 1px solid #007DA3;
   border-radius: 4px;
@@ -15981,7 +15981,7 @@ textarea.page-template-template-no-vote-left-behind .give-form-wrap select {
 }
 .page-template-template-living-room #give-donation-level-radio-list li label,
 .page-template-template-impact-labs #give-donation-level-radio-list li label,
-.page-template-template-no-vote-left-behind #give-donation-level-radio-list li label {
+.page-template-template-no-vote #give-donation-level-radio-list li label {
   font-weight: normal;
   color: #007DA3;
   margin-left: 3px;
@@ -15989,24 +15989,24 @@ textarea.page-template-template-no-vote-left-behind .give-form-wrap select {
 }
 .page-template-template-living-room .give-gateway-option,
 .page-template-template-impact-labs .give-gateway-option,
-.page-template-template-no-vote-left-behind .give-gateway-option {
+.page-template-template-no-vote .give-gateway-option {
   font-weight: normal;
 }
 .page-template-template-living-room #give_secure_site_wrapper,
 .page-template-template-impact-labs #give_secure_site_wrapper,
-.page-template-template-no-vote-left-behind #give_secure_site_wrapper {
+.page-template-template-no-vote #give_secure_site_wrapper {
   font-weight: normal;
   margin: 15px 0 30px;
   padding: 0;
 }
 .page-template-template-living-room #give_secure_site_wrapper span:first-child,
 .page-template-template-impact-labs #give_secure_site_wrapper span:first-child,
-.page-template-template-no-vote-left-behind #give_secure_site_wrapper span:first-child {
+.page-template-template-no-vote #give_secure_site_wrapper span:first-child {
   display: none;
 }
 .page-template-template-living-room #give_secure_site_wrapper span:last-child,
 .page-template-template-impact-labs #give_secure_site_wrapper span:last-child,
-.page-template-template-no-vote-left-behind #give_secure_site_wrapper span:last-child {
+.page-template-template-no-vote #give_secure_site_wrapper span:last-child {
   padding: 15px;
   margin-bottom: 21px;
   border: 1px solid transparent;
@@ -16019,51 +16019,51 @@ textarea.page-template-template-no-vote-left-behind .give-form-wrap select {
 }
 .page-template-template-living-room #give_secure_site_wrapper span:last-child h4,
 .page-template-template-impact-labs #give_secure_site_wrapper span:last-child h4,
-.page-template-template-no-vote-left-behind #give_secure_site_wrapper span:last-child h4 {
+.page-template-template-no-vote #give_secure_site_wrapper span:last-child h4 {
   margin-top: 0;
   color: inherit;
 }
 .page-template-template-living-room #give_secure_site_wrapper span:last-child .alert-link,
 .page-template-template-impact-labs #give_secure_site_wrapper span:last-child .alert-link,
-.page-template-template-no-vote-left-behind #give_secure_site_wrapper span:last-child .alert-link {
+.page-template-template-no-vote #give_secure_site_wrapper span:last-child .alert-link {
   font-weight: bold;
 }
 .page-template-template-living-room #give_secure_site_wrapper span:last-child > p,
 .page-template-template-impact-labs #give_secure_site_wrapper span:last-child > p,
-.page-template-template-no-vote-left-behind #give_secure_site_wrapper span:last-child > p,
+.page-template-template-no-vote #give_secure_site_wrapper span:last-child > p,
 .page-template-template-living-room #give_secure_site_wrapper span:last-child > ul,
 .page-template-template-impact-labs #give_secure_site_wrapper span:last-child > ul,
-.page-template-template-no-vote-left-behind #give_secure_site_wrapper span:last-child > ul {
+.page-template-template-no-vote #give_secure_site_wrapper span:last-child > ul {
   margin-bottom: 0;
 }
 .page-template-template-living-room #give_secure_site_wrapper span:last-child > p + p,
 .page-template-template-impact-labs #give_secure_site_wrapper span:last-child > p + p,
-.page-template-template-no-vote-left-behind #give_secure_site_wrapper span:last-child > p + p {
+.page-template-template-no-vote #give_secure_site_wrapper span:last-child > p + p {
   margin-top: 5px;
 }
 .page-template-template-living-room #give_secure_site_wrapper span:last-child ul,
 .page-template-template-impact-labs #give_secure_site_wrapper span:last-child ul,
-.page-template-template-no-vote-left-behind #give_secure_site_wrapper span:last-child ul {
+.page-template-template-no-vote #give_secure_site_wrapper span:last-child ul {
   margin-top: 10px;
 }
 .page-template-template-living-room #give_secure_site_wrapper span:last-child strong,
 .page-template-template-impact-labs #give_secure_site_wrapper span:last-child strong,
-.page-template-template-no-vote-left-behind #give_secure_site_wrapper span:last-child strong {
+.page-template-template-no-vote #give_secure_site_wrapper span:last-child strong {
   font-weight: normal;
 }
 .page-template-template-living-room #give_secure_site_wrapper span:last-child hr,
 .page-template-template-impact-labs #give_secure_site_wrapper span:last-child hr,
-.page-template-template-no-vote-left-behind #give_secure_site_wrapper span:last-child hr {
+.page-template-template-no-vote #give_secure_site_wrapper span:last-child hr {
   border-top-color: #a6e1ec;
 }
 .page-template-template-living-room #give_secure_site_wrapper span:last-child .alert-link,
 .page-template-template-impact-labs #give_secure_site_wrapper span:last-child .alert-link,
-.page-template-template-no-vote-left-behind #give_secure_site_wrapper span:last-child .alert-link {
+.page-template-template-no-vote #give_secure_site_wrapper span:last-child .alert-link {
   color: #245269;
 }
 .page-template-template-living-room .give-submit,
 .page-template-template-impact-labs .give-submit,
-.page-template-template-no-vote-left-behind .give-submit {
+.page-template-template-no-vote .give-submit {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -16090,57 +16090,57 @@ textarea.page-template-template-no-vote-left-behind .give-form-wrap select {
 }
 .page-template-template-living-room .give-submit:focus,
 .page-template-template-impact-labs .give-submit:focus,
-.page-template-template-no-vote-left-behind .give-submit:focus,
+.page-template-template-no-vote .give-submit:focus,
 .page-template-template-living-room .give-submit:active:focus,
 .page-template-template-impact-labs .give-submit:active:focus,
-.page-template-template-no-vote-left-behind .give-submit:active:focus,
+.page-template-template-no-vote .give-submit:active:focus,
 .page-template-template-living-room .give-submit.active:focus,
 .page-template-template-impact-labs .give-submit.active:focus,
-.page-template-template-no-vote-left-behind .give-submit.active:focus,
+.page-template-template-no-vote .give-submit.active:focus,
 .page-template-template-living-room .give-submit.focus,
 .page-template-template-impact-labs .give-submit.focus,
-.page-template-template-no-vote-left-behind .give-submit.focus,
+.page-template-template-no-vote .give-submit.focus,
 .page-template-template-living-room .give-submit:active.focus,
 .page-template-template-impact-labs .give-submit:active.focus,
-.page-template-template-no-vote-left-behind .give-submit:active.focus,
+.page-template-template-no-vote .give-submit:active.focus,
 .page-template-template-living-room .give-submit.active.focus,
 .page-template-template-impact-labs .give-submit.active.focus,
-.page-template-template-no-vote-left-behind .give-submit.active.focus {
+.page-template-template-no-vote .give-submit.active.focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 .page-template-template-living-room .give-submit:hover,
 .page-template-template-impact-labs .give-submit:hover,
-.page-template-template-no-vote-left-behind .give-submit:hover,
+.page-template-template-no-vote .give-submit:hover,
 .page-template-template-living-room .give-submit:focus,
 .page-template-template-impact-labs .give-submit:focus,
-.page-template-template-no-vote-left-behind .give-submit:focus,
+.page-template-template-no-vote .give-submit:focus,
 .page-template-template-living-room .give-submit.focus,
 .page-template-template-impact-labs .give-submit.focus,
-.page-template-template-no-vote-left-behind .give-submit.focus {
+.page-template-template-no-vote .give-submit.focus {
   color: #333;
   text-decoration: none;
 }
 .page-template-template-living-room .give-submit:active,
 .page-template-template-impact-labs .give-submit:active,
-.page-template-template-no-vote-left-behind .give-submit:active,
+.page-template-template-no-vote .give-submit:active,
 .page-template-template-living-room .give-submit.active,
 .page-template-template-impact-labs .give-submit.active,
-.page-template-template-no-vote-left-behind .give-submit.active {
+.page-template-template-no-vote .give-submit.active {
   outline: 0;
   background-image: none;
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 .page-template-template-living-room .give-submit.disabled,
 .page-template-template-impact-labs .give-submit.disabled,
-.page-template-template-no-vote-left-behind .give-submit.disabled,
+.page-template-template-no-vote .give-submit.disabled,
 .page-template-template-living-room .give-submit[disabled],
 .page-template-template-impact-labs .give-submit[disabled],
-.page-template-template-no-vote-left-behind .give-submit[disabled],
+.page-template-template-no-vote .give-submit[disabled],
 fieldset[disabled] .page-template-template-living-room .give-submit,
 fieldset[disabled] .page-template-template-impact-labs .give-submit,
-fieldset[disabled] .page-template-template-no-vote-left-behind .give-submit {
+fieldset[disabled] .page-template-template-no-vote .give-submit {
   cursor: not-allowed;
   pointer-events: none;
   opacity: 0.65;
@@ -16149,108 +16149,108 @@ fieldset[disabled] .page-template-template-no-vote-left-behind .give-submit {
 }
 .page-template-template-living-room .give-submit:hover,
 .page-template-template-impact-labs .give-submit:hover,
-.page-template-template-no-vote-left-behind .give-submit:hover,
+.page-template-template-no-vote .give-submit:hover,
 .page-template-template-living-room .give-submit:focus,
 .page-template-template-impact-labs .give-submit:focus,
-.page-template-template-no-vote-left-behind .give-submit:focus,
+.page-template-template-no-vote .give-submit:focus,
 .page-template-template-living-room .give-submit.focus,
 .page-template-template-impact-labs .give-submit.focus,
-.page-template-template-no-vote-left-behind .give-submit.focus,
+.page-template-template-no-vote .give-submit.focus,
 .page-template-template-living-room .give-submit:active,
 .page-template-template-impact-labs .give-submit:active,
-.page-template-template-no-vote-left-behind .give-submit:active,
+.page-template-template-no-vote .give-submit:active,
 .page-template-template-living-room .give-submit.active,
 .page-template-template-impact-labs .give-submit.active,
-.page-template-template-no-vote-left-behind .give-submit.active,
+.page-template-template-no-vote .give-submit.active,
 .open > .dropdown-toggle.page-template-template-living-room .give-submit,
 .open > .dropdown-toggle.page-template-template-impact-labs .give-submit,
-.open > .dropdown-toggle.page-template-template-no-vote-left-behind .give-submit {
+.open > .dropdown-toggle.page-template-template-no-vote .give-submit {
   color: #fff;
   background-color: #cc8e00;
   border-color: #a87500;
 }
 .page-template-template-living-room .give-submit:active,
 .page-template-template-impact-labs .give-submit:active,
-.page-template-template-no-vote-left-behind .give-submit:active,
+.page-template-template-no-vote .give-submit:active,
 .page-template-template-living-room .give-submit.active,
 .page-template-template-impact-labs .give-submit.active,
-.page-template-template-no-vote-left-behind .give-submit.active,
+.page-template-template-no-vote .give-submit.active,
 .open > .dropdown-toggle.page-template-template-living-room .give-submit,
 .open > .dropdown-toggle.page-template-template-impact-labs .give-submit,
-.open > .dropdown-toggle.page-template-template-no-vote-left-behind .give-submit {
+.open > .dropdown-toggle.page-template-template-no-vote .give-submit {
   background-image: none;
 }
 .page-template-template-living-room .give-submit.disabled,
 .page-template-template-impact-labs .give-submit.disabled,
-.page-template-template-no-vote-left-behind .give-submit.disabled,
+.page-template-template-no-vote .give-submit.disabled,
 .page-template-template-living-room .give-submit[disabled],
 .page-template-template-impact-labs .give-submit[disabled],
-.page-template-template-no-vote-left-behind .give-submit[disabled],
+.page-template-template-no-vote .give-submit[disabled],
 fieldset[disabled] .page-template-template-living-room .give-submit,
 fieldset[disabled] .page-template-template-impact-labs .give-submit,
-fieldset[disabled] .page-template-template-no-vote-left-behind .give-submit,
+fieldset[disabled] .page-template-template-no-vote .give-submit,
 .page-template-template-living-room .give-submit.disabled:hover,
 .page-template-template-impact-labs .give-submit.disabled:hover,
-.page-template-template-no-vote-left-behind .give-submit.disabled:hover,
+.page-template-template-no-vote .give-submit.disabled:hover,
 .page-template-template-living-room .give-submit[disabled]:hover,
 .page-template-template-impact-labs .give-submit[disabled]:hover,
-.page-template-template-no-vote-left-behind .give-submit[disabled]:hover,
+.page-template-template-no-vote .give-submit[disabled]:hover,
 fieldset[disabled] .page-template-template-living-room .give-submit:hover,
 fieldset[disabled] .page-template-template-impact-labs .give-submit:hover,
-fieldset[disabled] .page-template-template-no-vote-left-behind .give-submit:hover,
+fieldset[disabled] .page-template-template-no-vote .give-submit:hover,
 .page-template-template-living-room .give-submit.disabled:focus,
 .page-template-template-impact-labs .give-submit.disabled:focus,
-.page-template-template-no-vote-left-behind .give-submit.disabled:focus,
+.page-template-template-no-vote .give-submit.disabled:focus,
 .page-template-template-living-room .give-submit[disabled]:focus,
 .page-template-template-impact-labs .give-submit[disabled]:focus,
-.page-template-template-no-vote-left-behind .give-submit[disabled]:focus,
+.page-template-template-no-vote .give-submit[disabled]:focus,
 fieldset[disabled] .page-template-template-living-room .give-submit:focus,
 fieldset[disabled] .page-template-template-impact-labs .give-submit:focus,
-fieldset[disabled] .page-template-template-no-vote-left-behind .give-submit:focus,
+fieldset[disabled] .page-template-template-no-vote .give-submit:focus,
 .page-template-template-living-room .give-submit.disabled.focus,
 .page-template-template-impact-labs .give-submit.disabled.focus,
-.page-template-template-no-vote-left-behind .give-submit.disabled.focus,
+.page-template-template-no-vote .give-submit.disabled.focus,
 .page-template-template-living-room .give-submit[disabled].focus,
 .page-template-template-impact-labs .give-submit[disabled].focus,
-.page-template-template-no-vote-left-behind .give-submit[disabled].focus,
+.page-template-template-no-vote .give-submit[disabled].focus,
 fieldset[disabled] .page-template-template-living-room .give-submit.focus,
 fieldset[disabled] .page-template-template-impact-labs .give-submit.focus,
-fieldset[disabled] .page-template-template-no-vote-left-behind .give-submit.focus,
+fieldset[disabled] .page-template-template-no-vote .give-submit.focus,
 .page-template-template-living-room .give-submit.disabled:active,
 .page-template-template-impact-labs .give-submit.disabled:active,
-.page-template-template-no-vote-left-behind .give-submit.disabled:active,
+.page-template-template-no-vote .give-submit.disabled:active,
 .page-template-template-living-room .give-submit[disabled]:active,
 .page-template-template-impact-labs .give-submit[disabled]:active,
-.page-template-template-no-vote-left-behind .give-submit[disabled]:active,
+.page-template-template-no-vote .give-submit[disabled]:active,
 fieldset[disabled] .page-template-template-living-room .give-submit:active,
 fieldset[disabled] .page-template-template-impact-labs .give-submit:active,
-fieldset[disabled] .page-template-template-no-vote-left-behind .give-submit:active,
+fieldset[disabled] .page-template-template-no-vote .give-submit:active,
 .page-template-template-living-room .give-submit.disabled.active,
 .page-template-template-impact-labs .give-submit.disabled.active,
-.page-template-template-no-vote-left-behind .give-submit.disabled.active,
+.page-template-template-no-vote .give-submit.disabled.active,
 .page-template-template-living-room .give-submit[disabled].active,
 .page-template-template-impact-labs .give-submit[disabled].active,
-.page-template-template-no-vote-left-behind .give-submit[disabled].active,
+.page-template-template-no-vote .give-submit[disabled].active,
 fieldset[disabled] .page-template-template-living-room .give-submit.active,
 fieldset[disabled] .page-template-template-impact-labs .give-submit.active,
-fieldset[disabled] .page-template-template-no-vote-left-behind .give-submit.active {
+fieldset[disabled] .page-template-template-no-vote .give-submit.active {
   background-color: #FFB100;
   border-color: #e69f00;
 }
 .page-template-template-living-room .give-submit .badge,
 .page-template-template-impact-labs .give-submit .badge,
-.page-template-template-no-vote-left-behind .give-submit .badge {
+.page-template-template-no-vote .give-submit .badge {
   color: #FFB100;
   background-color: #fff;
 }
 .page-template-template-living-room .give-submit:hover,
 .page-template-template-impact-labs .give-submit:hover,
-.page-template-template-no-vote-left-behind .give-submit:hover {
+.page-template-template-no-vote .give-submit:hover {
   background: #FF9D00;
 }
 .page-template-template-living-room .give-donation-level-btn,
 .page-template-template-impact-labs .give-donation-level-btn,
-.page-template-template-no-vote-left-behind .give-donation-level-btn {
+.page-template-template-no-vote .give-donation-level-btn {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -16275,57 +16275,57 @@ fieldset[disabled] .page-template-template-no-vote-left-behind .give-submit.acti
 }
 .page-template-template-living-room .give-donation-level-btn:focus,
 .page-template-template-impact-labs .give-donation-level-btn:focus,
-.page-template-template-no-vote-left-behind .give-donation-level-btn:focus,
+.page-template-template-no-vote .give-donation-level-btn:focus,
 .page-template-template-living-room .give-donation-level-btn:active:focus,
 .page-template-template-impact-labs .give-donation-level-btn:active:focus,
-.page-template-template-no-vote-left-behind .give-donation-level-btn:active:focus,
+.page-template-template-no-vote .give-donation-level-btn:active:focus,
 .page-template-template-living-room .give-donation-level-btn.active:focus,
 .page-template-template-impact-labs .give-donation-level-btn.active:focus,
-.page-template-template-no-vote-left-behind .give-donation-level-btn.active:focus,
+.page-template-template-no-vote .give-donation-level-btn.active:focus,
 .page-template-template-living-room .give-donation-level-btn.focus,
 .page-template-template-impact-labs .give-donation-level-btn.focus,
-.page-template-template-no-vote-left-behind .give-donation-level-btn.focus,
+.page-template-template-no-vote .give-donation-level-btn.focus,
 .page-template-template-living-room .give-donation-level-btn:active.focus,
 .page-template-template-impact-labs .give-donation-level-btn:active.focus,
-.page-template-template-no-vote-left-behind .give-donation-level-btn:active.focus,
+.page-template-template-no-vote .give-donation-level-btn:active.focus,
 .page-template-template-living-room .give-donation-level-btn.active.focus,
 .page-template-template-impact-labs .give-donation-level-btn.active.focus,
-.page-template-template-no-vote-left-behind .give-donation-level-btn.active.focus {
+.page-template-template-no-vote .give-donation-level-btn.active.focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 .page-template-template-living-room .give-donation-level-btn:hover,
 .page-template-template-impact-labs .give-donation-level-btn:hover,
-.page-template-template-no-vote-left-behind .give-donation-level-btn:hover,
+.page-template-template-no-vote .give-donation-level-btn:hover,
 .page-template-template-living-room .give-donation-level-btn:focus,
 .page-template-template-impact-labs .give-donation-level-btn:focus,
-.page-template-template-no-vote-left-behind .give-donation-level-btn:focus,
+.page-template-template-no-vote .give-donation-level-btn:focus,
 .page-template-template-living-room .give-donation-level-btn.focus,
 .page-template-template-impact-labs .give-donation-level-btn.focus,
-.page-template-template-no-vote-left-behind .give-donation-level-btn.focus {
+.page-template-template-no-vote .give-donation-level-btn.focus {
   color: #333;
   text-decoration: none;
 }
 .page-template-template-living-room .give-donation-level-btn:active,
 .page-template-template-impact-labs .give-donation-level-btn:active,
-.page-template-template-no-vote-left-behind .give-donation-level-btn:active,
+.page-template-template-no-vote .give-donation-level-btn:active,
 .page-template-template-living-room .give-donation-level-btn.active,
 .page-template-template-impact-labs .give-donation-level-btn.active,
-.page-template-template-no-vote-left-behind .give-donation-level-btn.active {
+.page-template-template-no-vote .give-donation-level-btn.active {
   outline: 0;
   background-image: none;
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 .page-template-template-living-room .give-donation-level-btn.disabled,
 .page-template-template-impact-labs .give-donation-level-btn.disabled,
-.page-template-template-no-vote-left-behind .give-donation-level-btn.disabled,
+.page-template-template-no-vote .give-donation-level-btn.disabled,
 .page-template-template-living-room .give-donation-level-btn[disabled],
 .page-template-template-impact-labs .give-donation-level-btn[disabled],
-.page-template-template-no-vote-left-behind .give-donation-level-btn[disabled],
+.page-template-template-no-vote .give-donation-level-btn[disabled],
 fieldset[disabled] .page-template-template-living-room .give-donation-level-btn,
 fieldset[disabled] .page-template-template-impact-labs .give-donation-level-btn,
-fieldset[disabled] .page-template-template-no-vote-left-behind .give-donation-level-btn {
+fieldset[disabled] .page-template-template-no-vote .give-donation-level-btn {
   cursor: not-allowed;
   pointer-events: none;
   opacity: 0.65;
@@ -16334,7 +16334,7 @@ fieldset[disabled] .page-template-template-no-vote-left-behind .give-donation-le
 }
 .page-template-template-living-room .give-donation-level-btn:hover,
 .page-template-template-impact-labs .give-donation-level-btn:hover,
-.page-template-template-no-vote-left-behind .give-donation-level-btn:hover {
+.page-template-template-no-vote .give-donation-level-btn:hover {
   background: transparent;
   color: #004256;
   border-color: #004256;
