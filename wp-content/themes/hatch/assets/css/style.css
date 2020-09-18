@@ -10591,7 +10591,8 @@ textarea.page-template-template-login .mp_wrapper textarea {
 .page-big-sky-advisory-board .advisory-board-posts,
 .page-nextgen-advisory-board .advisory-board-posts,
 .page-impact-labs-team .advisory-board-posts,
-.page-impact-labs-pitch-panel .advisory-board-posts {
+.page-impact-labs-pitch-panel .advisory-board-posts,
+.page-no-votes-left-behind-featured-guests .advisory-board-posts {
   margin-top: 30px;
 }
 .page-advisory-board .advisory-board-posts.exec-board,
@@ -10599,7 +10600,8 @@ textarea.page-template-template-login .mp_wrapper textarea {
 .page-big-sky-advisory-board .advisory-board-posts.exec-board,
 .page-nextgen-advisory-board .advisory-board-posts.exec-board,
 .page-impact-labs-team .advisory-board-posts.exec-board,
-.page-impact-labs-pitch-panel .advisory-board-posts.exec-board {
+.page-impact-labs-pitch-panel .advisory-board-posts.exec-board,
+.page-no-votes-left-behind-featured-guests .advisory-board-posts.exec-board {
   padding-bottom: 30px;
   border-bottom: 2px solid #E6E6E6;
 }
@@ -10608,7 +10610,8 @@ textarea.page-template-template-login .mp_wrapper textarea {
 .page-big-sky-advisory-board .board-member,
 .page-nextgen-advisory-board .board-member,
 .page-impact-labs-team .board-member,
-.page-impact-labs-pitch-panel .board-member {
+.page-impact-labs-pitch-panel .board-member,
+.page-no-votes-left-behind-featured-guests .board-member {
   margin-bottom: 30px;
   background: #f2f2f2;
   padding: 15px;
@@ -10618,7 +10621,8 @@ textarea.page-template-template-login .mp_wrapper textarea {
 .page-big-sky-advisory-board .board-member:last-child,
 .page-nextgen-advisory-board .board-member:last-child,
 .page-impact-labs-team .board-member:last-child,
-.page-impact-labs-pitch-panel .board-member:last-child {
+.page-impact-labs-pitch-panel .board-member:last-child,
+.page-no-votes-left-behind-featured-guests .board-member:last-child {
   margin-bottom: 0;
 }
 .page-advisory-board .board-member img,
@@ -10626,7 +10630,8 @@ textarea.page-template-template-login .mp_wrapper textarea {
 .page-big-sky-advisory-board .board-member img,
 .page-nextgen-advisory-board .board-member img,
 .page-impact-labs-team .board-member img,
-.page-impact-labs-pitch-panel .board-member img {
+.page-impact-labs-pitch-panel .board-member img,
+.page-no-votes-left-behind-featured-guests .board-member img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -10636,7 +10641,8 @@ textarea.page-template-template-login .mp_wrapper textarea {
 .page-big-sky-advisory-board .board-member .board-member-name,
 .page-nextgen-advisory-board .board-member .board-member-name,
 .page-impact-labs-team .board-member .board-member-name,
-.page-impact-labs-pitch-panel .board-member .board-member-name {
+.page-impact-labs-pitch-panel .board-member .board-member-name,
+.page-no-votes-left-behind-featured-guests .board-member .board-member-name {
   font-size: 18px;
 }
 .page-advisory-board .board-member p,
@@ -10644,7 +10650,8 @@ textarea.page-template-template-login .mp_wrapper textarea {
 .page-big-sky-advisory-board .board-member p,
 .page-nextgen-advisory-board .board-member p,
 .page-impact-labs-team .board-member p,
-.page-impact-labs-pitch-panel .board-member p {
+.page-impact-labs-pitch-panel .board-member p,
+.page-no-votes-left-behind-featured-guests .board-member p {
   margin-bottom: 0;
 }
 @media (max-width: 767px) {
@@ -10653,7 +10660,8 @@ textarea.page-template-template-login .mp_wrapper textarea {
   .page-big-sky-advisory-board .board-member img,
   .page-nextgen-advisory-board .board-member img,
   .page-impact-labs-team .board-member img,
-  .page-impact-labs-pitch-panel .board-member img {
+  .page-impact-labs-pitch-panel .board-member img,
+  .page-no-votes-left-behind-featured-guests .board-member img {
     max-width: 200px;
   }
 }
@@ -10663,7 +10671,8 @@ textarea.page-template-template-login .mp_wrapper textarea {
   .page-big-sky-advisory-board .board-member img,
   .page-nextgen-advisory-board .board-member img,
   .page-impact-labs-team .board-member img,
-  .page-impact-labs-pitch-panel .board-member img {
+  .page-impact-labs-pitch-panel .board-member img,
+  .page-no-votes-left-behind-featured-guests .board-member img {
     width: 100%;
     max-width: 80%;
     margin: 0 auto;
