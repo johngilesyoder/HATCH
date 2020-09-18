@@ -4783,6 +4783,14 @@
 		"oAP": "/template-membership.php",
 		"oF": 0
 		},
+	"/template-no-vote.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-no-vote.php",
+		"oF": 0
+		},
 	"/template-panama-registration-success.php": {
 		"cB": 0,
 		"ft": 8192,
