@@ -67,40 +67,6 @@ $supportSectionContent = get_field('support_section_content');
     </div>
   </section>
 
-  <section class="living-room-section calendar">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h2 class="section-title"><?php echo $calendarSectionTitle; ?></h2>
-          <div class="row">
-
-            <div class="col-md-12">
-              <?php echo $calendarSectionContent; ?>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="support" class="living-room-section support">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h2 class="section-title"><?php echo $supportSectionTitle; ?></h2>
-          <div class="row">
-
-            <div class="col-md-12">
-              <?php echo $supportSectionContent; ?>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
 </main>
 
 <?php get_footer(); ?>
