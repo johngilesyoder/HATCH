@@ -27,7 +27,7 @@ $supportSectionContent = get_field('support_section_content');
               </article>
             <?php endwhile; ?>
           <?php endif; ?>
-          <a href="https://www.eventbrite.com/e/119025248723/" class="btn btn-secondary btn-support">RSVP Now</a>
+          <a target="_blank" href="https://www.eventbrite.com/e/119025248723/" class="btn btn-secondary btn-support">RSVP Now</a>
         </div>
       </div>
     </div>
