@@ -1,0 +1,204 @@
+.page-template-template-nvlb {
+  .site-header {
+    margin: 0;
+  }
+  main {
+    padding-top: 0;
+  }
+  .nvlb-hero {
+    img {
+      width: 100%;
+    }
+  }
+  .nvlb-section {
+    padding: 40px 0;
+    @media (max-width: 767px) {
+      padding: 30px 0;
+    }
+    .section-title {
+      font-family: @font-family-tungsten;
+      text-transform: uppercase;
+      font-size: 60px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-align: center;
+      margin: 0 0 30px;
+      @media (max-width: 767px) {
+        margin: 0 0 30px;
+        font-size: 36px;
+      }
+    }
+  }
+  .resources {
+    .resources-wrapper {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      &:after {
+        content: "";
+        flex: auto;
+      }
+    }
+    .resource {
+      display: block;
+      width: 33%;
+      padding: 0 15px;
+      margin: 0 0 30px;
+      text-align: center;
+      color: @text-color;
+      text-decoration: none;
+      @media (max-width: 767px) {
+        width: 50%;
+      }
+      @media (max-width: 480px) {
+        width: 100%;
+      }
+      &:hover h3 {
+        color: @link-hover-color;
+      }
+      h3 {
+        margin: 0 0 10px;
+        font-size: 18px;
+        line-height: 1.25;
+        color: @link-color;
+        i {
+          font-size: 14px;
+          vertical-align: middle;
+        }
+      }
+      img {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 10px;
+        margin: 0 0 10px;
+      }
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.page-template-template-nvlb {
+  .give-wrap .give-card__title {
+    color: @link-color !important;
+  }
+  .give-form-wrap {
+    max-width: 600px;
+    margin: 0 auto;
+    input[type="text"],
+    input[type="email"],
+    select {
+      .form-control();
+    }
+    select {
+      display: inline-block;
+    }
+    input[type="text"] {
+      border-radius: 4px !important;
+    }
+    fieldset {
+      margin: 0 0 30px;
+    }
+    .give-recurring-donors-choice {
+      margin: 0 0 30px;
+    }
+  }
+  
+  .give-form-title {
+    display: none;
+  }
+  
+  #give-amount {
+    border-radius: 0 4px 4px 0 !important;
+  }
+  
+  #give-donation-level-radio-list {
+    & > {
+      li {
+        margin: 0 0 5px;
+        border: 1px solid @link-color;
+        border-radius: 4px;
+        margin-right: 10px !important;
+        margin-bottom: 15px !important;
+        padding: 7px 8px 2px !important;
+        line-height: 1em;
+        display: inline-block;
+        label {
+          font-weight: normal;
+          color: @link-color;
+          margin-left: 3px;
+          margin: 0 0 3px 5px !important;
+        }
+      }
+    }
+  }
+  
+  .give-gateway-option {
+    font-weight: normal;
+  }
+  
+  #give_secure_site_wrapper {
+    font-weight: normal;
+    margin: 15px 0 30px;
+    padding: 0;
+    span {
+      &:first-child {
+        display: none;
+      }
+      &:last-child {
+        .alert();
+        .alert-info();
+        font-weight: normal;
+        display: block;
+      }
+    }
+  }
+  
+  .give-submit {
+    .btn();
+    .btn-secondary();
+    font-size: 21px;
+    font-weight: 500;
+  }
+  .give-donation-level-btn {
+    .btn();
+    font-size: 14px;
+    background: transparent;
+    color: @link-color;
+    border: 2px solid @link-color;
+    &:hover {
+      background: transparent;
+      color: @link-hover-color;
+      border-color: @link-hover-color;
+    }
+  }
+}
+
+
+
+// Responsive: desktop to large desktop
+// --------------------------------------------------
+@media (min-width: 1200px) and (max-width: 1499px) {}
+
+// Responsive: Tablet to desktop
+// --------------------------------------------------
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Responsive: Tablet to desktop
+// --------------------------------------------------
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// Responsive: Landscape phone to desktop/tablet
+// --------------------------------------------------
+@media (max-width: 767px) {}
+
+// Responsive: Up to landscape phone
+// --------------------------------------------------
+@media (max-width: 480px) {}
+
+// Responsive: Up to portrait phone
+// --------------------------------------------------
+@media (max-width: 400px) {}

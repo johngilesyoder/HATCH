@@ -23510,3 +23510,394 @@ fieldset[disabled] .page-volunteer .gform_wrapper .gform_button.active {
 .page-template-template-resources .resources .resource p {
   margin: 0;
 }
+.page-template-template-nvlb .site-header {
+  margin: 0;
+}
+.page-template-template-nvlb main {
+  padding-top: 0;
+}
+.page-template-template-nvlb .nvlb-hero img {
+  width: 100%;
+}
+.page-template-template-nvlb .nvlb-section {
+  padding: 40px 0;
+}
+@media (max-width: 767px) {
+  .page-template-template-nvlb .nvlb-section {
+    padding: 30px 0;
+  }
+}
+.page-template-template-nvlb .nvlb-section .section-title {
+  font-family: 'Tungsten A', 'Tungsten B';
+  text-transform: uppercase;
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 0 0 30px;
+}
+@media (max-width: 767px) {
+  .page-template-template-nvlb .nvlb-section .section-title {
+    margin: 0 0 30px;
+    font-size: 36px;
+  }
+}
+.page-template-template-nvlb .resources .resources-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.page-template-template-nvlb .resources .resources-wrapper:after {
+  content: "";
+  flex: auto;
+}
+.page-template-template-nvlb .resources .resource {
+  display: block;
+  width: 33%;
+  padding: 0 15px;
+  margin: 0 0 30px;
+  text-align: center;
+  color: #222222;
+  text-decoration: none;
+}
+@media (max-width: 767px) {
+  .page-template-template-nvlb .resources .resource {
+    width: 50%;
+  }
+}
+@media (max-width: 480px) {
+  .page-template-template-nvlb .resources .resource {
+    width: 100%;
+  }
+}
+.page-template-template-nvlb .resources .resource:hover h3 {
+  color: #004256;
+}
+.page-template-template-nvlb .resources .resource h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  line-height: 1.25;
+  color: #007DA3;
+}
+.page-template-template-nvlb .resources .resource h3 i {
+  font-size: 14px;
+  vertical-align: middle;
+}
+.page-template-template-nvlb .resources .resource img {
+  height: 200px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 10px;
+  margin: 0 0 10px;
+}
+.page-template-template-nvlb .resources .resource p {
+  margin: 0;
+}
+.page-template-template-nvlb .give-wrap .give-card__title {
+  color: #007DA3 !important;
+}
+.page-template-template-nvlb .give-form-wrap {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.page-template-template-nvlb .give-form-wrap input[type="text"],
+.page-template-template-nvlb .give-form-wrap input[type="email"],
+.page-template-template-nvlb .give-form-wrap select {
+  display: block;
+  width: 100%;
+  height: 35px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.page-template-template-nvlb .give-form-wrap input[type="text"]:focus,
+.page-template-template-nvlb .give-form-wrap input[type="email"]:focus,
+.page-template-template-nvlb .give-form-wrap select:focus {
+  border-color: #66afe9;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.page-template-template-nvlb .give-form-wrap input[type="text"]::-moz-placeholder,
+.page-template-template-nvlb .give-form-wrap input[type="email"]::-moz-placeholder,
+.page-template-template-nvlb .give-form-wrap select::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.page-template-template-nvlb .give-form-wrap input[type="text"]:-ms-input-placeholder,
+.page-template-template-nvlb .give-form-wrap input[type="email"]:-ms-input-placeholder,
+.page-template-template-nvlb .give-form-wrap select:-ms-input-placeholder {
+  color: #999;
+}
+.page-template-template-nvlb .give-form-wrap input[type="text"]::-webkit-input-placeholder,
+.page-template-template-nvlb .give-form-wrap input[type="email"]::-webkit-input-placeholder,
+.page-template-template-nvlb .give-form-wrap select::-webkit-input-placeholder {
+  color: #999;
+}
+.page-template-template-nvlb .give-form-wrap input[type="text"][disabled],
+.page-template-template-nvlb .give-form-wrap input[type="email"][disabled],
+.page-template-template-nvlb .give-form-wrap select[disabled],
+.page-template-template-nvlb .give-form-wrap input[type="text"][readonly],
+.page-template-template-nvlb .give-form-wrap input[type="email"][readonly],
+.page-template-template-nvlb .give-form-wrap select[readonly],
+fieldset[disabled] .page-template-template-nvlb .give-form-wrap input[type="text"],
+fieldset[disabled] .page-template-template-nvlb .give-form-wrap input[type="email"],
+fieldset[disabled] .page-template-template-nvlb .give-form-wrap select {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+  opacity: 1;
+}
+textarea.page-template-template-nvlb .give-form-wrap input[type="text"],
+textarea.page-template-template-nvlb .give-form-wrap input[type="email"],
+textarea.page-template-template-nvlb .give-form-wrap select {
+  height: auto;
+}
+.page-template-template-nvlb .give-form-wrap select {
+  display: inline-block;
+}
+.page-template-template-nvlb .give-form-wrap input[type="text"] {
+  border-radius: 4px !important;
+}
+.page-template-template-nvlb .give-form-wrap fieldset {
+  margin: 0 0 30px;
+}
+.page-template-template-nvlb .give-form-wrap .give-recurring-donors-choice {
+  margin: 0 0 30px;
+}
+.page-template-template-nvlb .give-form-title {
+  display: none;
+}
+.page-template-template-nvlb #give-amount {
+  border-radius: 0 4px 4px 0 !important;
+}
+.page-template-template-nvlb #give-donation-level-radio-list li {
+  margin: 0 0 5px;
+  border: 1px solid #007DA3;
+  border-radius: 4px;
+  margin-right: 10px !important;
+  margin-bottom: 15px !important;
+  padding: 7px 8px 2px !important;
+  line-height: 1em;
+  display: inline-block;
+}
+.page-template-template-nvlb #give-donation-level-radio-list li label {
+  font-weight: normal;
+  color: #007DA3;
+  margin-left: 3px;
+  margin: 0 0 3px 5px !important;
+}
+.page-template-template-nvlb .give-gateway-option {
+  font-weight: normal;
+}
+.page-template-template-nvlb #give_secure_site_wrapper {
+  font-weight: normal;
+  margin: 15px 0 30px;
+  padding: 0;
+}
+.page-template-template-nvlb #give_secure_site_wrapper span:first-child {
+  display: none;
+}
+.page-template-template-nvlb #give_secure_site_wrapper span:last-child {
+  padding: 15px;
+  margin-bottom: 21px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #31708f;
+  font-weight: normal;
+  display: block;
+}
+.page-template-template-nvlb #give_secure_site_wrapper span:last-child h4 {
+  margin-top: 0;
+  color: inherit;
+}
+.page-template-template-nvlb #give_secure_site_wrapper span:last-child .alert-link {
+  font-weight: bold;
+}
+.page-template-template-nvlb #give_secure_site_wrapper span:last-child > p,
+.page-template-template-nvlb #give_secure_site_wrapper span:last-child > ul {
+  margin-bottom: 0;
+}
+.page-template-template-nvlb #give_secure_site_wrapper span:last-child > p + p {
+  margin-top: 5px;
+}
+.page-template-template-nvlb #give_secure_site_wrapper span:last-child ul {
+  margin-top: 10px;
+}
+.page-template-template-nvlb #give_secure_site_wrapper span:last-child strong {
+  font-weight: normal;
+}
+.page-template-template-nvlb #give_secure_site_wrapper span:last-child hr {
+  border-top-color: #a6e1ec;
+}
+.page-template-template-nvlb #give_secure_site_wrapper span:last-child .alert-link {
+  color: #245269;
+}
+.page-template-template-nvlb .give-submit {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #fff;
+  background-color: #FFB100;
+  border-color: #e69f00;
+  font-size: 21px;
+  font-weight: 500;
+}
+.page-template-template-nvlb .give-submit:focus,
+.page-template-template-nvlb .give-submit:active:focus,
+.page-template-template-nvlb .give-submit.active:focus,
+.page-template-template-nvlb .give-submit.focus,
+.page-template-template-nvlb .give-submit:active.focus,
+.page-template-template-nvlb .give-submit.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.page-template-template-nvlb .give-submit:hover,
+.page-template-template-nvlb .give-submit:focus,
+.page-template-template-nvlb .give-submit.focus {
+  color: #333;
+  text-decoration: none;
+}
+.page-template-template-nvlb .give-submit:active,
+.page-template-template-nvlb .give-submit.active {
+  outline: 0;
+  background-image: none;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.page-template-template-nvlb .give-submit.disabled,
+.page-template-template-nvlb .give-submit[disabled],
+fieldset[disabled] .page-template-template-nvlb .give-submit {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  box-shadow: none;
+}
+.page-template-template-nvlb .give-submit:hover,
+.page-template-template-nvlb .give-submit:focus,
+.page-template-template-nvlb .give-submit.focus,
+.page-template-template-nvlb .give-submit:active,
+.page-template-template-nvlb .give-submit.active,
+.open > .dropdown-toggle.page-template-template-nvlb .give-submit {
+  color: #fff;
+  background-color: #cc8e00;
+  border-color: #a87500;
+}
+.page-template-template-nvlb .give-submit:active,
+.page-template-template-nvlb .give-submit.active,
+.open > .dropdown-toggle.page-template-template-nvlb .give-submit {
+  background-image: none;
+}
+.page-template-template-nvlb .give-submit.disabled,
+.page-template-template-nvlb .give-submit[disabled],
+fieldset[disabled] .page-template-template-nvlb .give-submit,
+.page-template-template-nvlb .give-submit.disabled:hover,
+.page-template-template-nvlb .give-submit[disabled]:hover,
+fieldset[disabled] .page-template-template-nvlb .give-submit:hover,
+.page-template-template-nvlb .give-submit.disabled:focus,
+.page-template-template-nvlb .give-submit[disabled]:focus,
+fieldset[disabled] .page-template-template-nvlb .give-submit:focus,
+.page-template-template-nvlb .give-submit.disabled.focus,
+.page-template-template-nvlb .give-submit[disabled].focus,
+fieldset[disabled] .page-template-template-nvlb .give-submit.focus,
+.page-template-template-nvlb .give-submit.disabled:active,
+.page-template-template-nvlb .give-submit[disabled]:active,
+fieldset[disabled] .page-template-template-nvlb .give-submit:active,
+.page-template-template-nvlb .give-submit.disabled.active,
+.page-template-template-nvlb .give-submit[disabled].active,
+fieldset[disabled] .page-template-template-nvlb .give-submit.active {
+  background-color: #FFB100;
+  border-color: #e69f00;
+}
+.page-template-template-nvlb .give-submit .badge {
+  color: #FFB100;
+  background-color: #fff;
+}
+.page-template-template-nvlb .give-submit:hover {
+  background: #FF9D00;
+}
+.page-template-template-nvlb .give-donation-level-btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  line-height: 1.5;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 14px;
+  background: transparent;
+  color: #007DA3;
+  border: 2px solid #007DA3;
+}
+.page-template-template-nvlb .give-donation-level-btn:focus,
+.page-template-template-nvlb .give-donation-level-btn:active:focus,
+.page-template-template-nvlb .give-donation-level-btn.active:focus,
+.page-template-template-nvlb .give-donation-level-btn.focus,
+.page-template-template-nvlb .give-donation-level-btn:active.focus,
+.page-template-template-nvlb .give-donation-level-btn.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.page-template-template-nvlb .give-donation-level-btn:hover,
+.page-template-template-nvlb .give-donation-level-btn:focus,
+.page-template-template-nvlb .give-donation-level-btn.focus {
+  color: #333;
+  text-decoration: none;
+}
+.page-template-template-nvlb .give-donation-level-btn:active,
+.page-template-template-nvlb .give-donation-level-btn.active {
+  outline: 0;
+  background-image: none;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.page-template-template-nvlb .give-donation-level-btn.disabled,
+.page-template-template-nvlb .give-donation-level-btn[disabled],
+fieldset[disabled] .page-template-template-nvlb .give-donation-level-btn {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  box-shadow: none;
+}
+.page-template-template-nvlb .give-donation-level-btn:hover {
+  background: transparent;
+  color: #004256;
+  border-color: #004256;
+}

@@ -926,6 +926,50 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/assets/img/nvlb-header.jpg": {
+		"ft": 16384,
+		"iS": 75481,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/nvlb-header.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/img/nvlb-tile-1.jpg": {
+		"ft": 16384,
+		"iS": 52087,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/nvlb-tile-1.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/img/nvlb-tile-2.jpg": {
+		"ft": 16384,
+		"iS": 73648,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/nvlb-tile-2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/img/nvlb-tile-3.jpg": {
+		"ft": 16384,
+		"iS": 41797,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/nvlb-tile-3.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/assets/img/partner-intel-2.png": {
 		"ft": 32768,
 		"iS": 29493,
@@ -3571,6 +3615,22 @@
 		"sI": 0,
 		"sU": 0
 		},
+	"/assets/less/pages/no-vote-left-behind.less": {
+		"aP": 0,
+		"bl": 0,
+		"eJ": 0,
+		"ft": 1,
+		"iI": 0,
+		"ma": 1,
+		"mS": 0,
+		"oA": 1,
+		"oAP": "/assets/less/pages/no-vote-left-behind.css",
+		"oF": 0,
+		"oS": 0,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 0
+		},
 	"/assets/less/pages/our-partners.less": {
 		"aP": 0,
 		"bl": 0,
@@ -4797,6 +4857,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/template-no-vote.php",
+		"oF": 0
+		},
+	"/template-nvlb.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/template-nvlb.php",
 		"oF": 0
 		},
 	"/template-panama-registration-success.php": {
