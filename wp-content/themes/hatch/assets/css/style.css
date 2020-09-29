@@ -23542,6 +23542,19 @@ fieldset[disabled] .page-volunteer .gform_wrapper .gform_button.active {
     font-size: 36px;
   }
 }
+.page-template-template-nvlb .invest {
+  text-align: center;
+}
+.page-template-template-nvlb .invest p {
+  font-size: 16px;
+}
+.page-template-template-nvlb .invest .btn-support {
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
 .page-template-template-nvlb .resources .resources-wrapper {
   display: flex;
   flex-flow: row wrap;
