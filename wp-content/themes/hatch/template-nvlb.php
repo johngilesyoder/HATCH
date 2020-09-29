@@ -6,6 +6,23 @@
     <img alt="No Vote Left Behind" src="<?php echo get_template_directory_uri(); ?>/assets/img/nvlb-header.jpg">
   </div>
 
+  <section class="nvlb-section invest">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+              <!-- article -->
+              <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                <?php the_content(); ?>
+              </article>
+            <?php endwhile; ?>
+          <?php endif; ?>
+          <a target="_blank" href="https://www.eventbrite.com/e/119025248723/" class="btn btn-secondary btn-support">RSVP Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="nvlb-section resources">
     <div class="container">
       <div class="row">
