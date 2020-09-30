@@ -17,7 +17,7 @@
               </article>
             <?php endwhile; ?>
           <?php endif; ?>
-          <a target="_blank" href="https://www.eventbrite.com/e/119025248723/" class="btn btn-secondary btn-support">RSVP Now</a>
+          <a target="_blank" href="https://youtu.be/xZbEpFEqW7U" class="btn btn-secondary btn-support">Watch Now</a>
         </div>
       </div>
     </div>
