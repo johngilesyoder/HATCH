@@ -1,6 +1,6 @@
 <?php /* Template Name: Apply Portal */ get_header(); ?>
 	<main role="main">
-		<div class="page-banner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/banner-apply.jpg');background-position: 50% 50%;">
+    <div class="page-banner" style="background-image: url('<?php the_post_thumbnail_url(); ?>');background-position: 50% 50%;">
 			<div class="page-title">
 				<div class="container">
 					<h1><?php the_title(); ?></h1>
