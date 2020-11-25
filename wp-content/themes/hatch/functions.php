@@ -199,7 +199,7 @@ function html5blank_conditional_scripts()
 {
     if ( is_front_page() ) {
 
-        wp_register_script('home', get_template_directory_uri() . '/dist/asset/js/home.js', array(), null, true ); // Home scripts
+        wp_register_script('home', get_template_directory_uri() . '/dist/asset/js/home.js', array(), '1.0.1', true ); // Home scripts
 
         // Create array to pass to the localization script (below)
         $translation_array = array(
@@ -249,7 +249,7 @@ function html5blank_conditional_scripts()
 
     if ( is_singular( 'reunion' ) ) {
 
-      wp_register_script('reunion', get_template_directory_uri() . '/dist/asset/js/reunion.js', array(), '1.0.0' ); // registration
+      wp_register_script('reunion', get_template_directory_uri() . '/dist/asset/js/reunion.js', array(), '1.0.1' ); // registration
       wp_enqueue_script('reunion'); // Enqueue it!
 
     }
