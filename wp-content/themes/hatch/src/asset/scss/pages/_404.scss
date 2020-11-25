@@ -9,17 +9,17 @@
     margin-bottom: 0;
     font-weight: 400;
     line-height: 1em;
-    font-family: @font-family-tungsten;
-    color: @brand-primary;
+    font-family: $font-family-tungsten;
+    color: $brand-primary;
   }
   h2 {
     line-height: 1em;
-    font-family: @font-family-klavika-medium;
+    font-family: $font-family-klavika-medium;
     text-transform: uppercase;
     letter-spacing: .02em;
     font-size: 21px;
     margin: 0 0 50px;
-    color: @brand-primary;
+    color: $brand-primary;
   }
   // Logo
   .hatch-logo {
@@ -27,9 +27,9 @@
     text-align: center;
     padding-top: 35px;
     display: block;
-    color: @brand-secondary;
+    color: $brand-secondary;
     &:hover {
-      color: @brand-secondary;
+      color: $brand-secondary;
       text-decoration: none;
     }
   }

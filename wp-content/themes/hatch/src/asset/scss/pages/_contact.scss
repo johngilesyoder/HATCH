@@ -5,7 +5,7 @@
   h2 {
     font-size: 30px;
     font-weight: normal;
-    font-family: @font-family-klavika-medium;
+    font-family: $font-family-klavika-medium;
     margin-top: 0;
     margin-bottom: 30px;
     letter-spacing: -.02em;
@@ -13,21 +13,15 @@
   }
 
   .contact-left {
-    .make-md-column(4);
+    
   }
   .contact-right {
-    .make-md-column(8);
-    .make-lg-column(7);
-    .make-lg-column-offset(1);
+    
   }
   .support-link {
-    .make-sm-column(6);
-    .make-md-column(12);
     margin-bottom: 50px;
   }
   .general-inquiry {
-    .make-sm-column(6);
-    .make-md-column(12);
     margin-bottom: 50px;
     address,
     .contact-phone {
@@ -43,8 +37,7 @@
   }
 
   .connect {
-    .make-sm-column(6);
-    .make-md-column(12);
+    
     .social-link {
       margin-right: 15px;
     }
