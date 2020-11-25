@@ -1,0 +1,241 @@
+// site-header.less
+// -----------------------------------------------------------------
+
+.site-header {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  .navbar-brand {
+    padding-left: 0;
+    .site-logo {
+      @extend .hatch-logo;
+      font-size: 60px;
+      display: block;
+      line-height: .7em;
+    }
+    .site-logo-date {
+      font-family: 'Archer SSm A', 'Archer SSm B';
+      font-weight: 500;
+      font-style: italic;
+      font-size: 14px;
+      color: #BBBBBB;
+
+    }
+  }
+  .navbar-collapse {
+    .navbar-nav {
+      & > li {
+        & > a {
+          font-weight: 400;
+          font-size: 18px;
+          padding-left: 15px;
+          padding-right: 15px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          font-family: $font-family-tungsten;
+          font-size: 24px;
+          text-transform: uppercase;
+          font-weight: 600;
+          letter-spacing: .02em;
+          color: $body-color;
+        }
+      }
+    }
+  }
+}
+
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .site-header {
+    .navbar-collapse {
+      .navbar-nav {
+        & > li {
+          &.dropdown {
+            a {
+              padding: 9px 9px;
+            }
+          }
+          & > a {
+            padding-left: 9px;
+            padding-right: 9px;
+            font-size: 21px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .site-header {
+    //min-height: 75px;
+    .container {
+      width: 100%;
+    }
+    .navbar-toggle {
+      margin-top: 20.5px;
+      margin-bottom: 20.5px;
+    }
+    .navbar-brand {
+      padding-left: 0;
+      .site-logo {
+        font-size: 45px;
+      }
+      .site-logo-date {
+        font-size: 13px;
+      }
+    }
+    .navbar-collapse {
+      padding-top: 0;
+      .navbar-nav {
+        & > li {
+          &.dropdown {
+            a {
+              border: 0;
+              border-radius: 0;
+            }
+            .dropdown-menu {
+              border-color: transparent;
+              border-radius: 0;
+              a {
+                color: $link-color;
+                padding-left: 30px;
+                font-family: $font-family-tungsten;
+                font-size: 21px;
+                color: $body-color;
+                &:hover,
+                &:focus {
+                  background-color: #f2f2f2;
+                }
+              }
+            }
+            &.open > a {
+              border-bottom: 0;
+              z-index: 0;
+            }
+          }
+          &.current > a,
+          &.current_page_ancestor > a {
+            & > span {
+              border-bottom: 0;
+            }
+          }
+          & > a {
+            font-size: 21px;
+            &:hover,
+            &:focus {
+              background-color: #f2f2f2;
+            }
+            & > span {
+              padding-bottom: 0;
+              &:hover {
+                border-bottom: 0;
+              }
+            }
+          }
+          .dropdown-menu {
+            box-shadow: none;
+            padding-top: 0;
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+
+  .site-header {
+    min-height: 75px;
+    margin-bottom: 0;
+    .navbar-brand {
+      padding-left: 0;
+      .site-logo {
+        font-size: 45px;
+      }
+      .site-logo-date {
+        font-size: 13px;
+        color: #999
+      }
+    }
+    .navbar-collapse {
+      padding-top: 0;
+      .navbar-nav {
+        & > li {
+          &:nth-child(6) > a {
+            text-transform: none;
+          }
+          &.dropdown {
+            a {
+              border: 0;
+              border-radius: 0;
+            }
+            .dropdown-menu {
+              border-color: transparent;
+              border-radius: 0;
+              a {
+                color: $link-color;
+                padding-left: 30px;
+                font-family: $font-family-tungsten;
+                font-size: 21px;
+                color: $body-color;
+                &:hover,
+                &:focus {
+                  background-color: #f2f2f2;
+                }
+              }
+            }
+            &.open > a {
+              border-bottom: 0;
+              z-index: 0;
+            }
+          }
+          &.current > a,
+          &.current_page_ancestor > a {
+            & > span {
+              border-bottom: 0;
+            }
+          }
+          & > a {
+            font-size: 21px;
+            &:hover,
+            &:focus {
+              background-color: #f2f2f2;
+            }
+            & > span {
+              padding-bottom: 0;
+              &:hover {
+                border-bottom: 0;
+              }
+            }
+          }
+          .dropdown-menu {
+            box-shadow: none;
+            padding-top: 0;
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {}

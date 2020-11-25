@@ -1,0 +1,13 @@
+// buttons.less
+// -----------------------------------------------------------------
+
+.btn-strip {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.btn-secondary {
+  @include button-variant(#FFB100, darken(#FFB100, 10%));
+  color: #fff;
+}

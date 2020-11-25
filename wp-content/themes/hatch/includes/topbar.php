@@ -4,7 +4,7 @@
     <a href="/apply" class="btn btn-secondary btn-apply">Apply Now</a>
     <a href="/membership/" class="btn btn-secondary btn-volunteer">Join</a>
     <!-- <a href="/volunteer" class="btn btn-secondary btn-volunteer">Volunteer</a> -->
-    <!-- <a href="https://filmfreeway.com/festival/HATCHExperience" class="btn btn-secondary btn-filmfreeway">Submit with <img src="<?php echo get_template_directory_uri(); ?>/assets/img/btn-filmfreeway.svg"></a> -->
+    <!-- <a href="https://filmfreeway.com/festival/HATCHExperience" class="btn btn-secondary btn-filmfreeway">Submit with <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/btn-filmfreeway.svg"></a> -->
   </div>
 </div>
 <!-- <div class="topbar topbar-apply topbar-panama" style="">

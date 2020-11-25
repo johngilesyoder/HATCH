@@ -8,7 +8,7 @@ $photo_gallery_id = get_field('photo_gallery_id');
 <!-- HERO =================== -->
 <!-- ======================== -->
 <header class="registration-hero">
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/euro-hero.jpg">
+  <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/registration/euro-hero.jpg">
 </header>
 
 <!-- REGISTRATION CONTENT === -->
@@ -95,7 +95,7 @@ $photo_gallery_id = get_field('photo_gallery_id');
               <div class="quote-statement">
                 <p>“HATCH is something you can’t really put into words because there doesn’t seem to be an adequate way to verbally describe something that is so genuinely life changing for everyone there — It truly is. The people that are curated are brilliant, smart, talented, and giving. HATCH is beyond a doubt the best thing I have ever experienced. It’s changed how I do business — and how I live life.”</p>
               </div>
-              <cite>&mdash;&nbsp; <span class="cite-person"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/grace-davis.png"> Grace Davis</span> <span class="cite-organization">INTEL</span></cite>
+              <cite>&mdash;&nbsp; <span class="cite-person"><img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/registration/grace-davis.png"> Grace Davis</span> <span class="cite-organization">INTEL</span></cite>
             </div>
           </div>
         </div>
@@ -111,32 +111,32 @@ $photo_gallery_id = get_field('photo_gallery_id');
           <h3>A Sampling of <span class="hatch-logo">HATCH</span> Alumni ...</h3>
           <div class="alumni-wrapper">
             <div class="alumnus">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/alumni-thaller.png">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/registration/alumni-thaller.png">
               <span class="alumnus-name">Michelle Thaller</span>
               <span class="alumnus-title">Nasa Scientist</span>
             </div>
             <div class="alumnus">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/alumni-hardy.png">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/registration/alumni-hardy.png">
               <span class="alumnus-name">John Hardy</span>
               <span class="alumnus-title">Founder, Greenschool Bali</span>
             </div>
             <div class="alumnus">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/alumni-altringer.png">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/registration/alumni-altringer.png">
               <span class="alumnus-name">Dr. Beth Altringer</span>
               <span class="alumnus-title">Lead, Desirabilty Lab, Harvard</span>
             </div>
             <div class="alumnus">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/alumni-gruber.png">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/registration/alumni-gruber.png">
               <span class="alumnus-name">Tom Gruber</span>
               <span class="alumnus-title">Inventor, Siri, Apple</span>
             </div>
             <div class="alumnus">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/alumni-bridges.png">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/registration/alumni-bridges.png">
               <span class="alumnus-name">Jeff Bridges</span>
               <span class="alumnus-title">Oscar-winning actor</span>
             </div>
             <div class="alumnus">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/alumni-earle.png">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/registration/alumni-earle.png">
               <span class="alumnus-name">Sylvia Earle</span>
               <span class="alumnus-title">Oceanographer, National Geographic explorer-in-residence</span>
             </div>
@@ -148,12 +148,12 @@ $photo_gallery_id = get_field('photo_gallery_id');
 </div>
 
   <div class="section-the-camp">
-    <div class="the-camp-hero" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/registration/the-camp-horizontal.jpg')"></div>
+    <div class="the-camp-hero" style="background-image:url('<?php echo get_template_directory_uri(); ?>/dist/asset/img/registration/the-camp-horizontal.jpg')"></div>
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
           <h3 class="camp-title">
-            <a target="_blank" href="http://thecamp.fr"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/logo-the-camp-color.png"></a>
+            <a target="_blank" href="http://thecamp.fr"><img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/registration/logo-the-camp-color.png"></a>
             <span>Aix-en-Provence, France</span>
           </h3>
           <p>
@@ -191,7 +191,7 @@ $photo_gallery_id = get_field('photo_gallery_id');
               restoring peace and prosperity. They address the root causes that unite us
               in an effort to create positive change for both people and planet.
             </p>
-            <img class="sdp" src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/sustainable-development-goals.png">
+            <img class="sdp" src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/registration/sustainable-development-goals.png">
           </div>
         </div>
       </div>

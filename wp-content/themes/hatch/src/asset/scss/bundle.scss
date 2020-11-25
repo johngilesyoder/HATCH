@@ -1,0 +1,90 @@
+/*
+Theme Name: HATCH
+Description: Theme for HATCH Website
+Version: 2.0.0
+Author: @johngilesyoder
+Author URI: http://www.twitter.com/johngilesyoder;
+Tags:
+*/
+
+//* { -webkit-font-smoothing: antialiased; }
+
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Variable overrides
+@import "./utilities/custom";
+
+// Vendor
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+@import "vendor/flickity";
+
+// Utilities
+@import "utilities/fonts";
+@import "utilities/buttons";
+@import "utilities/mixins";
+@import "utilities/wordpress-core";
+
+// Components
+@import "components/cms-content";
+@import "components/forms";
+@import "components/partners-block";
+@import "components/registration-success";
+@import "components/topbar";
+@import "components/what-is-hatch";
+
+// Layout
+// @import "layout/adventure";
+// @import "layout/blog";
+// @import "layout/event";
+@import "layout/page";
+@import "layout/patterns";
+// @import "layout/post";
+// @import "layout/reunion";
+// @import "layout/sidebar";
+@import "layout/site-footer";
+@import "layout/site-header";
+
+// Pages
+// @import "pages/404";
+// @import "pages/account";
+// @import "pages/login";
+// @import "pages/advisory-board";
+// @import "pages/apply";
+// @import "pages/apply-portal";
+// @import "pages/attendees";
+// @import "pages/blog-roll";
+// @import "pages/category";
+// @import "pages/contact";
+// @import "pages/contribute";
+// @import "pages/donate";
+// @import "pages/donation-matching";
+@import "pages/experience";
+// @import "pages/groundbreakers";
+// @import "pages/h360-form";
+// @import "pages/hatch-alumni";
+// @import "pages/hatch-membership";
+// @import "pages/hatchback";
+// @import "pages/impact-lab-projects";
+// @import "pages/better-world";
+@import "pages/home";
+// @import "pages/membership";
+// @import "pages/living-room";
+// @import "pages/our-partners";
+// @import "pages/registration";
+// @import "pages/registration-europe";
+// @import "pages/registration-mexico";
+// @import "pages/experience-europe";
+// @import "pages/search";
+// @import "pages/single";
+// @import "pages/single-story";
+// @import "pages/single-impact-lab-project";
+// @import "pages/survey";
+// @import "pages/becauseofhatch-survey";
+// @import "pages/labs-voting";
+// @import "pages/volunteer";
+// @import "pages/resources";
+// @import "pages/no-vote-left-behind";

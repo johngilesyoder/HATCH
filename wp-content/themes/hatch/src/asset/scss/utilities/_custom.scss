@@ -1,0 +1,94 @@
+// Spacing
+$desktop-lg-spacing: 80px;
+$desktop-spacing:    60px;
+$tablet-lg-spacing:  60px;
+$tablet-spacing:     40px;
+$mobile-spacing:     30px;
+
+
+// Colors
+$gray-100: #F0F1F2;
+// $gray-200: #EBEBEB;
+// $gray-300: #E3E3E3;
+// $gray-400: #D4D4D4;
+$gray-500: #B8B8B8;
+// $gray-600: #737678;
+// $gray-700: #4D4D4D;
+// $gray-800: #363636;
+// $gray-900: #242424;
+
+$brand-primary:         #007DA3;
+$brand-secondary:       #FFB100;
+$brand-success:         #5cb85c;
+$brand-info:            #5bc0de;
+$brand-warning:         #f0ad4e;
+$brand-danger:          #d9534f;
+
+$gray-bg:               #F0F2F2;
+$gray-bg-hover:         #E6E8E8;
+
+$gray-light:                  $gray-100;
+$gray:                        #24333D;
+$gray-dark:                   #141B22;
+
+$primary:                     #007DA3;
+// $primary-inverted:            #19A87D;
+// $secondary:                   #8C6932;
+// $secondary-inverted:          #D9A44E;
+// $tertiary:                    #3C5470;
+
+$green:                       #5cb85c;
+// $orange:                      #E67335;
+$blue:                        #007DA3;
+// $blue-highlight:              #376AA3;
+
+$blue-light:                  #5bc0de;
+
+$body-bg:                     #fff;
+$body-color:                  $gray;
+$headings-color:              $gray-dark;
+
+$border-color:              #e6e6e6;
+
+$yiq-text-dark:               $gray-dark;
+
+
+// Fonts
+$font-family-serif:           Georgia, "Times New Roman", Times, serif;
+$font-family-sans-serif:      'Gotham Rounded', 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', "Helvetica Neue", Arial, sans-serif;
+$font-family-tungsten:        'Tungsten', 'Tungsten A', 'Tungsten B';
+$font-family-archer:          'Archer', 'Archer SSm A', 'Archer SSm B';
+$font-family-klavika-bold:    klavika-bold, "Helvetica Neue", Arial, sans-serif;
+$font-family-klavika-medium:  klavika-medium, "Helvetica Neue", Arial, sans-serif;
+$font-family-klavika-light:   klavika-light, "Helvetica Neue", Arial, sans-serif;
+$font-family-base:            $font-family-sans-serif;
+
+$font-size-base:              1rem;
+$font-size-12:                ($font-size-base * 0.6666);
+$font-size-13:                ($font-size-base * 0.7222);
+$font-size-14:                ($font-size-base * 0.7778);
+$font-size-15:                ($font-size-base * 0.8333);
+$font-size-16:                ($font-size-base * 0.8889);
+$font-size-21:                ($font-size-base * 1.1667);
+$font-size-24:                ($font-size-base * 1.3333);
+$font-size-27:                ($font-size-base * 1.5);
+$font-size-30:                ($font-size-base * 1.6666);
+$font-size-36:                ($font-size-base * 2);
+$font-size-42:                ($font-size-base * 2.3333);
+$font-size-display:           ($font-size-base * 3.1666);
+$font-size-display-md:        $font-size-42;
+$font-size-display-sm:        $font-size-36;
+$font-size-display-xs:        $font-size-30;
+
+$headings-font-family:        $font-family-sans-serif;
+$headings-font-weight:        600;
+
+// Forms
+$input-placeholder-color:     $gray-500;
+
+// Buttons
+// $btn-border-radius:           0;
+// $btn-border-radius-lg:        0;
+// $btn-border-radius-sm:        0;
+
+$btn-font-weight:             500;

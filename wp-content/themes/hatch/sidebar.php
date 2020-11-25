@@ -19,9 +19,9 @@
   </div>
   <div class="sidebar-footer-social">
     <div class="sidebar-footer-social-links">
-      <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-blog-footer-twitter.svg"></a>
-      <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-blog-footer-facebook.svg"></a>
-      <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-blog-footer-instagram.svg"></a>
+      <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/icon-blog-footer-twitter.svg"></a>
+      <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/icon-blog-footer-facebook.svg"></a>
+      <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/icon-blog-footer-instagram.svg"></a>
     </div>
     <a href="mailto:hatchinfo@hatchexperience.org" class="sidebar-footer-email">hatchinfo@hatchexperience.org</a>
   </div>

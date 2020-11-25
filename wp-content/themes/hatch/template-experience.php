@@ -49,10 +49,10 @@
   		</div>
   		<aside class="section-aside hard-to-explain">
   			<div class="row">
-  				<div class="section-aside-title">
+  				<div class="section-aside-title col-md-3">
 	  				<h3>It's hard to explain</h3>
 	  			</div>
-	  			<div class="section-aside-content">
+	  			<div class="section-aside-content col-md-9">
 	  				<div class="section-aside-content-wrapper">
 			  			<div class="quote-block">
 			  				<div class="quote-statement">
@@ -71,12 +71,12 @@
   		<h2 class="section-title">Why does <span class="hatch-logo">HATCH</span> exist?</h2>
   		<div class="why-blocks">
   			<div class="why-block">
-  				<img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/assets/img/experience/why-block-1.jpg">
+  				<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/experience/why-block-1.jpg">
   				<h3>Reversing the Creativity Crisis</h3>
   				<p>Creativity is the magic ingredient in building a bright future. HATCH is driven to infuse every member of the HATCH community by: uniting disruptors and mavericks, cross-pollinating diverse people and ideas, and creating experiences that activate the creator inside each and every person. &nbsp;<a href="/about/reversing-the-creativity-crisis">Learn more about the Creativity Crisis</a></p>
   			</div>
   			<div class="why-block">
-  				<img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/assets/img/experience/why-block-2.jpg">
+  				<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/experience/why-block-2.jpg">
   				<h3>360&deg; Mentorship</h3>
   				<p>Mentoring is a Hatch cornerstone. HATCH is built around meaningful relationships. What began as top-down mentorship has evolved into a ‘360’ mentorship approach; bottom-up and peer to peer. We encourage — if not expect — all HATCH community members to mentor, share, and challenge one another. &nbsp;<a href="/mentorship/360-mentorship">Learn more about 360° Mentorships</a></p>
   			</div>
@@ -109,7 +109,7 @@
   		<h2 class="section-title">You will be <span class="hatch-logo">changed</span>.</h2>
   		<p class="who-summary">Each year, the HATCH group is diverse and includes artists, inventors, award-winning authors, grammy-winning musicians, filmmakers, technologists, CEOs, social impact change makers, designers, and more.</p>
   		<div class="testimonial">
-  			<img class="testimonial-photo" src="<?php echo get_template_directory_uri(); ?>/assets/img/experience/testimonial-rahi.png">
+  			<img class="testimonial-photo" src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/experience/testimonial-rahi.png">
   			<div class="quote-block">
   				<div class="quote-statement">
   					<p>“Imagine gathering up a hundred innovators, artists, makers, creators, educators, risk-takers, influencers, and mavericks... people who want to shake the world by its ankles. And are destined to.</p>
@@ -119,7 +119,7 @@
   			</div>
   		</div>
   		<div class="testimonial">
-  			<img class="testimonial-photo" src="<?php echo get_template_directory_uri(); ?>/assets/img/experience/testimonial-anne.png">
+  			<img class="testimonial-photo" src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/experience/testimonial-anne.png">
   			<div class="quote-block">
   				<div class="quote-statement">
   					<p>“I have been to the world’s top conferences and retreats, but I have never been surrounded, by people - and an environment so powerful as HATCH. I am re-HATCHed”</p>
@@ -128,7 +128,7 @@
   			</div>
   		</div>
   		<div class="testimonial">
-  			<img class="testimonial-photo" src="<?php echo get_template_directory_uri(); ?>/assets/img/experience/testimonial-travis.png">
+  			<img class="testimonial-photo" src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/experience/testimonial-travis.png">
   			<div class="quote-block">
   				<div class="quote-statement">
   					<p>”This meeting of visionaries is the most real life example of the adage "come as a stranger, leave as a friend" that I have been involved in - a family is formed, and through the influence of others, one’s path becomes more meaningful.”</p>
@@ -137,7 +137,7 @@
   			</div>
   		</div>
   		<div class="testimonial">
-  			<img class="testimonial-photo" src="<?php echo get_template_directory_uri(); ?>/assets/img/experience/testimonial-lighter.jpg">
+  			<img class="testimonial-photo" src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/experience/testimonial-lighter.jpg">
   			<div class="quote-block">
   				<div class="quote-statement">
   					<p>“Quite simply, HATCH makes us more dangerous.  The companies that send their best and brightest to HATCH dramatically benefit from them returning refueled, re-energized, on the forefront of what’s next, and full of new collaboration opportunities.  HATCH makes us more valuable to our work, ourselves, and the world.”</p>
@@ -156,10 +156,10 @@
   		</div>
   		<!-- <aside class="section-aside off-the-grid">
   			<div class="row">
-  				<div class="section-aside-title">
+  				<div class="section-aside-title col-md-3">
 	  				<h3>Moonlight Basin</h3>
 	  			</div>
-	  			<div class="section-aside-content">
+	  			<div class="section-aside-content col-md-9">
 	  				<div class="section-aside-content-wrapper">
 			  			<p>
                 Moonlight Basin is the original Founding sponsor of HATCH.  Fourteen years later, it’s come full circle, as the magic of Moonlight will be host to HATCH 2018.</p>
@@ -170,8 +170,8 @@
 			  		</div>
 		  		</div>
   		</aside> -->
-  		<img class="bubble bubble-1" src="<?php echo get_template_directory_uri(); ?>/assets/img/experience/where-bubble-1.jpg">
-  		<img class="bubble bubble-2" src="<?php echo get_template_directory_uri(); ?>/assets/img/experience/where-bubble-2.jpg">
+  		<img class="bubble bubble-1" src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/experience/where-bubble-1.jpg">
+  		<img class="bubble bubble-2" src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/experience/where-bubble-2.jpg">
   	</div>
   </section>
 

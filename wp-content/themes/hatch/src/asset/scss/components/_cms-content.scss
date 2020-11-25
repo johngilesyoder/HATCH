@@ -1,0 +1,61 @@
+// cms-content.scss
+// -----------------------------------------------------------------
+
+.hentry {
+  h2 {
+    font-size: $font-size-24;
+  }
+  h3 {
+    font-size: $font-size-21;
+  }
+  h4 {
+    font-size: 18px;
+    margin-top: 30px;
+    line-height: 1.5;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  img {
+    max-width: 100%;
+  }
+
+}
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .hentry {
+    h4 {
+      font-size: 16px;
+    }
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {
+
+  .hentry {
+    img {
+      width: 100%;
+    }
+    h4 {
+      font-size: 14px;
+    }
+  }
+
+}

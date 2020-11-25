@@ -2,17 +2,17 @@
 				<div class="footer-main">
 	      	<div class="container">
 	      		<div class="row">
-		      		<div class="footer-connect">
+		      		<div class="footer-connect col-lg-3">
 		      			<span class="hatch-logo">HATCH</span>
 		      			<div class="footer-social-links">
-		      				<a href="http://twitter.com/HatchExperience"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-footer-twitter.svg"></a>
-		      				<a href="http://www.facebook.com/hatchfestival"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-footer-facebook.svg"></a>
-		      				<a href="http://instagram.com/hatchexperience/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-footer-instagram.svg"></a>
+		      				<a href="http://twitter.com/HatchExperience"><img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/icon-footer-twitter.svg"></a>
+		      				<a href="http://www.facebook.com/hatchfestival"><img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/icon-footer-facebook.svg"></a>
+		      				<a href="http://instagram.com/hatchexperience/"><img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/icon-footer-instagram.svg"></a>
 		      			</div>
 		      			<a href="mailto:info@hatchexperience.org" class="footer-email"><span class="long-email">info@hatchexperience.org</span><span class="short-email">Email us</span></a>
-		      			<a class="rss-feed" href="<?php bloginfo('rss2_url'); ?>" class="rss-feed"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-rss.svg">RSS feed</a>
+		      			<a class="rss-feed" href="<?php bloginfo('rss2_url'); ?>" class="rss-feed"><img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/icon-rss.svg">RSS feed</a>
 		      		</div>
-		      		<div class="footer-links">
+		      		<div class="footer-links col-lg-9">
 		      			<nav class="links-column">
 		      				<?php footer_links_1(); ?>
 		      			</nav>
@@ -36,7 +36,7 @@
           		</div>
           		<div class="col-md-4">
           			<div class="built-by">
-          			  <a target="_blank" href="https://hx.ai"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/built-by.svg"></a>
+          			  <a target="_blank" href="https://hx.ai"><img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/built-by.svg"></a>
           			</div>
           		</div>
           	</div>

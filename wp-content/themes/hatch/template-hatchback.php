@@ -5,11 +5,11 @@
   <div class="hatchback-banner">
     <div class="container">
       <div class="banner-left">
-        <h1><img src="<?php echo get_template_directory_uri(); ?>/assets/img/hatchback/hatchback-logo.svg" alt="HATCHBack"></h1>
+        <h1><img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/hatchback/hatchback-logo.svg" alt="HATCHBack"></h1>
         <span class="hashtag">#BecauseOfHatch</span>
       </div>
       <div class="banner-right">
-        <img class="hatchback-badge" src="<?php echo get_template_directory_uri(); ?>/assets/img/hatchback/badge-five-percent.png" alt="5% HATCHBack">
+        <img class="hatchback-badge" src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/hatchback/badge-five-percent.png" alt="5% HATCHBack">
       </div>
     </div>
   </div>
@@ -17,7 +17,7 @@
   <div class="container">
     <div class="hatchback-intro">
       <div class="intro-left">
-        <div class="hero-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/hatchback/hatchback-feature-img.png');"></div>
+        <div class="hero-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/dist/asset/img/hatchback/hatchback-feature-img.png');"></div>
       </div>
       <div class="intro-right">
         <h2>Redefining a better future #becauseofhatch.</h2>
@@ -31,7 +31,7 @@
     </div>
     <div class="hatchback-stories-donation">
       <div class="stories">
-        <h2 class="stories-title"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/hatchback/stories-title.svg" alt="Amazing things happen when HATCHers give back. Story time…"></h2>
+        <h2 class="stories-title"><img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/hatchback/stories-title.svg" alt="Amazing things happen when HATCHers give back. Story time…"></h2>
 
         <?php query_posts( 'post_type=hatchback-story&posts_per_page=-1' ); ?>
         <?php
@@ -61,7 +61,7 @@
           <h3>Other ways to give back...</h3>
           <a href="/partners/support-contribute/" class="btn btn-donation">Conventional HATCH donation</a>
           <span class="or">Or</span>
-          <a href="https://www.patreon.com/HATCH" class="btn btn-patreon"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/hatchback/logo-patreon.png" alt=""> Become a patron</a>
+          <a href="https://www.patreon.com/HATCH" class="btn btn-patreon"><img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/hatchback/logo-patreon.png" alt=""> Become a patron</a>
           <p>
             <em><strong>Patreon</strong> is the world's largest crowdfunding site for organizations. It allows HATCH to obtain operational funding on a recurring basis. Consider becoming a patron if you’ve benefited from HATCH.</em>
           </p>

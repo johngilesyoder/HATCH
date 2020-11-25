@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 	<main role="main">
-		<div class="page-banner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/banner-partners.jpg');background-position: 50% 25%;">
+		<div class="page-banner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/dist/asset/img/banner-partners.jpg');background-position: 50% 25%;">
 			<div class="page-title">
 				<div class="container">
 					<h1><?php the_title(); ?></h1>
@@ -11,10 +11,10 @@
 		<div class="container">
 			<div class="row">
 				<?php if($post->post_parent): ?>
-				<div class="page-content">
-					<span class="parent-page"><?php echo get_the_title($post->post_parent);?><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-parent-chevron.svg"></span>
+				<div class="page-content col-md-9 order-last">
+					<span class="parent-page"><?php echo get_the_title($post->post_parent);?><img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/icon-parent-chevron.svg"></span>
 				<?php else: ?>
-				<div class="page-content page-full">
+				<div class="page-content page-full col-md-13">
 				<?php endif; ?>
 
 					<?php if (have_posts()): while (have_posts()) : the_post(); ?>
@@ -27,7 +27,7 @@
 				      <h3 class="partners-title">Hosting Partner</h3>
 				      <div class="partner-logos">
 				        <div class="partner">
-				          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/partner-mountainsky.gif">
+				          <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/partner-mountainsky.gif">
 				        </div>
 				      </div>
 				    </div>
@@ -35,7 +35,7 @@
 				      <h3 class="partners-title">Innovation Partner</h3>
 				      <div class="partner-logos">
 				        <a href="/partners/kauffman-foundation-hatch/" class="partner partner-intel">
-				          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/partner-kauffman.png">
+				          <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/partner-kauffman.png">
 				        </a>
 				      </div>
 				    </div>
@@ -186,7 +186,7 @@
 				  $titlenamer = get_the_title($post->ID);
 				  }
 				  if ($children) : ?>
-				  <div class="page-sidebar">
+				  <div class="page-sidebar col-md-3 order-first">
 					  <h2><?php echo $titlenamer; ?></h2>
 					  <ul>
 					  	<?php echo $children; ?>

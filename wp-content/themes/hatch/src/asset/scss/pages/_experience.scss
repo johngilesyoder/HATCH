@@ -1,0 +1,810 @@
+// experience.less
+// -----------------------------------------------------------------
+
+.page-template-template-experience {
+  .site-header {
+    margin-bottom: -101px;
+    width: 100%;
+    border-top: 0;
+    background: transparent;
+    border-bottom-color: transparent;
+    z-index: 10;
+    .navbar-brand {
+      .site-logo-date {
+        color: #fff;
+      }
+    }
+    .navbar-collapse {
+      .navbar-nav {
+        & > li {
+          &.dropdown.open > a {
+            background: #fff;
+            color: #444;
+            border-color: #fff;
+          }
+          &.current a {
+            color: #fff;
+          }
+          & > a {
+            color: #fff;
+          }
+        }
+        .dropdown-menu {
+          border-color: #fff;
+          background: #fff;
+          a {
+            color: #444;
+            &:hover {
+              background: #e6e6e6;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .section-block {
+    padding: 75px 0;
+    .section-title {
+      font-size: 60px;
+      font-family: $font-family-klavika-medium;
+      color: #fff;
+      text-align: center;
+      margin: 0 0 55px;
+    }
+    .section-aside {
+      .section-aside-title {
+        h3 {
+          font-family: $font-family-klavika-medium;
+          color: $brand-secondary;
+          font-size: 60px;
+          margin: 0;
+          line-height: .9em;
+        }
+      }
+      .section-aside-content {
+        .section-aside-content-wrapper {
+          padding-left: 20px;
+          border-left: 6px solid $brand-secondary;
+        }
+      }
+    }
+  }
+
+  .quote-block {
+    .quote-statement {
+      font-family: $font-family-archer;
+      font-style: italic;
+      line-height: 1.6em;
+    }
+    cite {
+      font-style: normal;
+      font-weight: 300;
+      .cite-person {
+        color: $brand-secondary;
+      }
+      .cite-organization {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .conference-apply {
+    .hero-title {
+      margin-bottom: 40px;
+      text-shadow: 0 1px 20px #000;
+      display: block;
+      width: 633px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px 15px 30px;
+    }
+    .hero-logo {
+      font-size: 150px;
+      margin: 0 0 18px;
+      line-height: 1em;
+      margin-bottom: 0;
+      sup {
+        color: #fff;
+        font-size: 75px;
+        position: relative;
+        top: -50px;
+        left: 3px;
+      }
+    }
+    .hero-date-location {
+      display: block;
+      font-family: $font-family-archer;
+      font-style: italic;
+      font-size: 24px;
+      margin: 0 0 10px;
+      &:last-child {
+        margin: 0;
+      }
+      a {
+        font-family: $font-family-sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        color: lighten($link-color, 20%);
+        margin-left: 5px;
+      }
+    }
+    .btn-apply {
+      border-radius: 11px;
+      font-size: 21px;
+      font-weight: 300;
+      color: #fff;
+      height: 55px;
+      line-height: 55px;
+      padding: 0 25px;
+      @include gradient-y(#0CC4ED, #006699, 0%, 100%);
+      box-shadow: 0 2px 35px 23px rgba(0,0,0,.75);
+      border: 0;
+      strong {
+        font-weight: 600;
+      }
+      &:hover {
+        @include gradient-y(#0BB9E0, #005E8C, 0%, 100%);
+      }
+    }
+  }
+
+  .section-hero {
+    color: #fff;
+    height: 815px;
+    background-color: #111;
+    background-image: url('../img/experience/section-bg-hero.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    border-bottom: 16px solid #000;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    .hero-content-wrapper {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+    }
+    .conference-apply {
+      .hero-title {
+        background-image: url('../img/experience/hero-shadow.png');
+        background-size: cover;
+        background-position: 50% 50%;
+      }
+    }
+  }
+
+  .section-what {
+    color: #fff;
+    background-color: #111;
+    background-image: url('../img/experience/section-bg-what.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    .what-video {
+      text-align: center;
+      margin-bottom: 60px;
+      .what-video-wrapper {
+        background: $brand-secondary;
+        padding: 10px;
+        border-radius: 8px;
+        display: inline-block;
+      }
+      iframe {
+        float: left;
+      }
+    }
+    .what-summary {
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 300;
+      margin-bottom: 60px;
+      a {
+        color: #00B0E6;
+      }
+    }
+    .hard-to-explain {
+      .quote-block {
+        .quote-statement {
+          font-size: 18px;
+        }
+        cite {
+          font-size: 18px;
+          .cite-person {
+            font-size: 24px;
+          }
+          .cite-organization {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .section-why {
+    color: #fff;
+    background-color: #111;
+    background-image: url('../img/experience/section-bg-why.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    .why-blocks {
+      margin-bottom: 80px;
+    }
+    .why-block {
+      display: block;
+      float: left;
+      background: rgba(0,0,0,.7);
+      width: 48.50877193%;
+      padding: 15px;
+      &:first-child {
+        margin-right: 1.49122807%;
+      }
+      h3 {
+        font-size: 30px;
+        font-family: $font-family-klavika-medium;
+        color: $brand-secondary;
+      }
+      p {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 0;
+        font-weight: 300;
+      }
+      a {
+        color: #00B0E6;
+      }
+    }
+    .because-of-hatch {
+      text-align: center;
+      .because-of-hatch-title {
+        color: #fff;
+        background: $brand-secondary;
+        font-size: 50px;
+        font-family: $font-family-klavika-medium;
+        display: inline-block;
+        border-radius: 8px;
+        padding: 10px 40px 5px;
+        margin: 0 0 40px;
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: -20px;
+          left: 60px;
+          display: block;
+          width: 31px;
+          height: 20px;
+          background-image: url('../img/experience/caret-because-of-hatch.svg');
+          background-size: cover;
+        }
+      }
+      .item {
+        height: 36px;
+      }
+      .item p {
+        font-size: 24px;
+        margin: 0;
+      }
+    }
+  }
+
+  .section-who {
+    color: #fff;
+    background-color: #111;
+    background-image: url('../img/experience/section-bg-who.png');
+    background-size: 128px;
+    .section-title {
+      margin-bottom: 15px;
+    }
+    .who-summary {
+      margin: 0 0 75px;
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.6em;
+    }
+    .testimonial {
+      margin-bottom: 40px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .testimonial-photo {
+        width: 132px;
+        border-radius: 50%;
+        border: 6px solid $brand-secondary;
+        float: left;
+      }
+      .quote-block {
+        padding-left: 160px;
+        padding-top: 15px;
+        .quote-statement {
+          font-size: 16px;
+        }
+        cite {
+          font-size: 18px;
+          .cite-person {
+            font-size: 24px;
+          }
+          .cite-organization {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .section-where {
+    color: #fff;
+    background-color: #111;
+    background-image: url('../img/experience/section-bg-where.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    .container {
+      position: relative;
+    }
+    .where-summary {
+      font-size: 18px;
+      margin-bottom: 60px;
+      width: 870px;
+      strong {
+        color: $brand-secondary;
+      }
+    }
+    .off-the-grid {
+      .section-aside-title {
+        width: 230px;
+        h3 {
+          font-size: 45px;
+        }
+      }
+      .section-aside-content {
+        width: 610px;
+        font-size: 18px;
+        font-weight: 300;
+      }
+    }
+    .bubble {
+      border-radius: 50%;
+      border: 6px solid $brand-secondary;
+      position: absolute;
+      top: 0;
+    }
+    .bubble-1 {
+      width: 270px;
+      height: 270px;
+      top: 125px;
+      right: -25px;
+    }
+    .bubble-2 {
+      width: 243px;
+      height: 243px;
+      top: 330px;
+      right: 40px;
+    }
+  }
+
+  .section-bottom {
+    padding-top: 100px;
+    color: #fff;
+    background-color: #111;
+    background-image: url('../img/experience/section-bg-who.png');
+    background-size: 128px;
+    .conference-apply {
+      text-align: center;
+      margin-bottom: 100px;
+      .btn-apply {
+        box-shadow: 0 2px 35px 23px rgba(0,0,0,.06);
+      }
+    }
+    .section-partners {
+      padding: 0;
+      .section-header {
+        margin-bottom: 30px;
+        .section-title {
+          font-family: $font-family-klavika-medium;
+          font-size: 28px;
+          color: $brand-secondary;
+          text-transform: uppercase;
+          margin: 0;
+          display: inline-block;
+        }
+        .section-header-links {
+          display: inline;
+        }
+        a {
+          margin-left: 20px;
+          color: #00B0E6;
+          img {
+            margin-left: 8px;
+          }
+        }
+      }
+      .innovation-partner-wrapper {
+        border-radius: 5px;
+      }
+      .partners-column {
+        .partner-logo {
+          background: rgba(255,255,255,.7);
+        }
+      }
+    }
+  }
+}
+
+
+// Media Queries
+// --------------------------------------------------
+
+// Large desktop and up
+@media (min-width: 1200px) {}
+
+// Desktop to large desktop
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .page-template-template-experience {
+    .section-why {
+      .because-of-hatch {
+        .item {
+          height: 72px;
+        }
+      }
+    }
+    .section-where {
+      .bubble {
+        display: none;
+      }
+    }
+  }
+
+}
+
+// Tablet to desktop
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .page-template-template-experience {
+    .site-header {
+      margin-bottom: 0;
+      background-color: #000;
+      .navbar-toggle {
+        border-color: rgba(255,255,255,.3);
+        &:hover {
+          background: rgba(255,255,255,.3);
+        }
+        .icon-bar {
+          background-color: #fff;
+        }
+      }
+      .navbar-brand {
+        .site-logo-date {
+          color: #777;
+        }
+      }
+      .navbar-collapse {
+        border-color: transparent;
+        border-bottom: 3px solid $brand-secondary;
+        .navbar-nav > li > {
+          a:hover,
+          a:focus {
+            background-color: rgba(255,255,255,.2);
+          }
+        }
+      }
+    }
+    .section-block {
+      padding: 50px 0;
+      .section-title {
+        font-size: 50px;
+        margin: 0 0 35px;
+      }
+      .section-aside {
+        .section-aside-title {
+          h3 {
+            font-size: 36px;
+            margin: 0 0 15px;
+          }
+        }
+        .section-aside-content {
+          .section-aside-content-wrapper {
+            padding-left: 15px;
+            border-left: 3px solid $brand-secondary;
+          }
+        }
+      }
+    }
+    .section-what {
+      .what-video {
+        margin-bottom: 30px;
+        .what-video-wrapper {
+          padding: 5px;
+          display: inline-block;
+          width: 100%;
+          iframe {
+            width: 100%;
+            height: 350px;
+          }
+        }
+        iframe {
+          float: left;
+        }
+      }
+    }
+    .section-why {
+      .because-of-hatch {
+        .item {
+          height: 72px;
+        }
+      }
+    }
+    .section-where {
+      .where-summary {
+        font-size: 18px;
+        margin-bottom: 60px;
+        width: auto;
+      }
+      .off-the-grid {
+        .section-aside-title {
+          width: 230px;
+        }
+        .section-aside-content {
+          width: 100%;
+          font-size: 18px;
+          font-weight: 300;
+        }
+      }
+      .bubble {
+        display: none;
+      }
+    }
+  }
+
+}
+
+// Up to tablet
+@media (max-width: 767px) {
+
+  .page-template-template-experience {
+    .site-header {
+      margin-bottom: 0;
+      background-color: #000;
+      .navbar-toggle {
+        border-color: rgba(255,255,255,.3);
+        &:hover {
+          background: rgba(255,255,255,.3);
+        }
+        .icon-bar {
+          background-color: #fff;
+        }
+      }
+      .navbar-brand {
+        .site-logo-date {
+          color: #777;
+        }
+      }
+      .navbar-collapse {
+        border-color: transparent;
+        border-bottom: 3px solid $brand-secondary;
+        .navbar-nav > li > {
+          a:hover,
+          a:focus {
+            background-color: rgba(255,255,255,.2);
+          }
+        }
+      }
+    }
+
+
+    .section-block {
+      padding: 50px 0;
+      .section-title {
+        font-size: 50px;
+        margin: 0 0 35px;
+      }
+      .section-aside {
+        .section-aside-title {
+          h3 {
+            font-size: 36px;
+            margin: 0 0 15px;
+          }
+        }
+        .section-aside-content {
+          .section-aside-content-wrapper {
+            padding-left: 15px;
+            border-left: 3px solid $brand-secondary;
+          }
+        }
+      }
+    }
+
+    .conference-apply {
+      .hero-title {
+        margin-bottom: 30px;
+        padding: 20px 15px 30px;
+        width: 400px;
+      }
+      .hero-logo {
+        font-size: 75px;
+        margin: 0 0 18px;
+        line-height: 1em;
+        sup {
+          color: #fff;
+          font-size: 28px;
+          top: -30px;
+        }
+      }
+      .hero-date-location {
+        font-size: 18px;
+        margin: 0 0 10px;
+        &:last-child {
+          margin: 0;
+        }
+      }
+      .btn-apply {
+        font-size: 18px;
+      }
+    }
+
+    .section-hero {
+      height: 525px;
+      border-bottom: 8px solid #000;
+      padding-top: 0;
+    }
+
+    .section-what {
+      .what-video {
+        margin-bottom: 30px;
+        .what-video-wrapper {
+          padding: 5px;
+          display: inline-block;
+          width: 100%;
+          iframe {
+            width: 100%;
+            height: 250px;
+          }
+        }
+        iframe {
+          float: left;
+        }
+      }
+      .what-summary {
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 30px;
+        a {
+          color: #00B0E6;
+        }
+      }
+      .hard-to-explain {
+        .quote-block {
+          .quote-statement {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .section-why {
+      .why-blocks {
+        margin-bottom: 50px;
+      }
+      .why-block {
+        float: none;
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 15px;
+        &:first-child {
+          margin-right: 0;
+        }
+        .img-responsive {
+          width: 100%;
+        }
+      }
+      .because-of-hatch {
+        text-align: center;
+        .because-of-hatch-title {
+          font-size: 24px;
+          padding: 10px 40px 10px;
+          margin: 0 0 40px;
+        }
+        .item {
+          height: 54px;
+        }
+        .item p {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .section-who {
+      .who-summary {
+        margin: 0 0 50px;
+      }
+      .testimonial {
+        margin-bottom: 70px;
+        text-align: center;
+        .testimonial-photo {
+          width: 150px;
+          float: none;
+          margin: 0 0 10px;
+        }
+        .quote-block {
+          padding-left: 0;
+          padding-top: 15px;
+          text-align: left;
+          .quote-statement {
+            font-size: 16px;
+          }
+          cite {
+            font-size: 18px;
+            .cite-person {
+              font-size: 24px;
+            }
+            .cite-organization {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+
+    .section-where {
+      .where-summary {
+        font-size: 18px;
+        margin-bottom: 30px;
+        width: 100%;
+        strong {
+          color: $brand-secondary;
+        }
+      }
+      .off-the-grid {
+        .section-aside-title {
+          width: 230px;
+        }
+        .section-aside-content {
+          width: 100%;
+          font-size: 18px;
+          font-weight: 300;
+        }
+      }
+      .bubble {
+        display: none;
+      }
+    }
+
+    .section-bottom {
+      padding-top: 50px;
+      .conference-apply {
+        margin-bottom: 50px;
+      }
+      .section-partners {
+        padding: 0;
+        .section-header {
+          .section-header-links {
+            display: block;
+          }
+          a {
+            margin-left: 0;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// Up to landscape phone
+@media (max-width: 480px) {
+
+  .page-template-template-experience {
+    .conference-apply {
+      .hero-title {
+        width: 100%;
+      }
+    }
+    .because-of-hatch {
+      .item {
+        height: 81px;
+      }
+    }
+  }
+
+}

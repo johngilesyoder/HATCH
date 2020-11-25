@@ -3,7 +3,7 @@
 <div class="container container-blog">
   <div class="blog-roll-wrapper">
     <div class="category-title">
-      <h1><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-category.svg"><?php _e( '', 'html5blank' ); single_cat_title(); ?></h1>
+      <h1><img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/icon-category.svg"><?php _e( '', 'html5blank' ); single_cat_title(); ?></h1>
     </div>
     <main role="main">
 

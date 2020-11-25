@@ -18,8 +18,8 @@
     <![endif]-->
     
 		<link href="//www.google-analytics.com" rel="dns-prefetch">
-    <link href="<?php echo get_template_directory_uri(); ?>/assets/icons/favicon.png" rel="shortcut icon">
-    <link href="<?php echo get_template_directory_uri(); ?>/assets/icons/touch.png" rel="apple-touch-icon-precomposed">
+    <link href="<?php echo get_template_directory_uri(); ?>/dist/asset/icons/favicon.png" rel="shortcut icon">
+    <link href="<?php echo get_template_directory_uri(); ?>/dist/asset/icons/touch.png" rel="apple-touch-icon-precomposed">
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,25 +45,18 @@
     <!-- Topbar -->
     <?php get_template_part( 'includes/topbar' ); ?>
 
-      <nav class="site-header navbar navbar-default">
-        <div class="container">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="<?php echo home_url(); ?>">
-              <span class="site-logo">HATCH</span>
-              <!-- <span class="site-logo-date">Sep 14-18, 2016</span> -->
-            </a>
-          </div>
+    <!-- Header menu -->
+    <nav class="site-header navbar navbar-expand-xl navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="<?php echo home_url(); ?>">
+          <span class="site-logo">HATCH</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <?php primary_nav(); ?>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-      </nav>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <?php primary_nav(); ?>
+        </div>
+      </div>
+    </nav>

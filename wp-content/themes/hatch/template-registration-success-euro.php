@@ -9,7 +9,7 @@
 
             <!-- article -->
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-              <h1 class="success-title"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-registration-success.svg">Success. You are awesome!</h1>
+              <h1 class="success-title"><img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/icon-registration-success.svg">Success. You are awesome!</h1>
               <div class="success-body">
                 <?php the_content(); ?>
               </div>

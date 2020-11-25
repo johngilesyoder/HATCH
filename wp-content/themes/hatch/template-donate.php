@@ -5,10 +5,10 @@
 		<div class="container">
 			<div class="row">
 				<?php if($post->post_parent): ?>
-				<div class="page-content">
-					<span class="parent-page"><?php echo get_the_title($post->post_parent);?><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-parent-chevron.svg"></span>
+				<div class="page-content col-md-9 order-last">
+					<span class="parent-page"><?php echo get_the_title($post->post_parent);?><img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/icon-parent-chevron.svg"></span>
 				<?php else: ?>
-				<div class="page-content page-full">
+				<div class="page-content page-full col-md-13">
 				<?php endif; ?>
 				<div class="page-title">
 					<h1><?php the_title(); ?></h1>
@@ -39,7 +39,7 @@
 				  $titlenamer = get_the_title($post->ID);
 				  }
 				  if ($children) : ?>
-				  <div class="page-sidebar">
+				  <div class="page-sidebar col-md-3 order-first">
 					  <h2><?php echo $titlenamer; ?></h2>
 					  <ul>
 					  	<?php echo $children; ?>

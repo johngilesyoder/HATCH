@@ -1,0 +1,38 @@
+// Media queries
+// --------------------------------------------------
+
+@mixin tiny {
+  @media (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet-lg {
+  @media (min-width: 768px) and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 992px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin desktop-lg {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}

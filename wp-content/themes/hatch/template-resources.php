@@ -7,7 +7,7 @@
 
 		<div class="container">
 			<div class="row">
-				<div class="page-content page-full">
+				<div class="page-content page-full col-md-13">
           <div class="page-title">
             <h1><?php the_title(); ?></h1>
           </div>

@@ -7,7 +7,7 @@ $photo_gallery_id = get_field('photo_gallery_id');
 
 <!-- HERO =================== -->
 <!-- ======================== -->
-<header class="registration-hero" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/registration/hero-mexico.png');">
+<header class="registration-hero" style="background-image:url('<?php echo get_template_directory_uri(); ?>/dist/asset/img/registration/hero-mexico.png');">
   <div class="form-title">
     <span class="site-logo"><em>HATCH</em> Mexico 2020 Registration</span>
     <span class="site-logo-date"><?php the_field('event_date'); ?> &bull; <?php the_field('event_location'); ?></span>
@@ -56,7 +56,7 @@ $photo_gallery_id = get_field('photo_gallery_id');
               <div class="quote-statement">
                 <p>“HATCH is something you can’t really put into words because there doesn’t seem to be an adequate way to verbally describe something that is so genuinely life changing for everyone there — It truly is. The people that are curated are brilliant, smart, talented, and giving. HATCH is beyond a doubt the best thing I have ever experienced. It’s changed how I do business — and how I live life.”</p>
               </div>
-              <cite>&mdash;&nbsp; <span class="cite-person"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/grace-davis.png"> Grace Davis</span> <span class="cite-organization">INTEL</span></cite>
+              <cite>&mdash;&nbsp; <span class="cite-person"><img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/registration/grace-davis.png"> Grace Davis</span> <span class="cite-organization">INTEL</span></cite>
             </div>
           </div>
         </div>
@@ -75,32 +75,32 @@ $photo_gallery_id = get_field('photo_gallery_id');
       <h3>The <span class="hatch-logo">HATCH</span> Network Alumni includes ...</h3>
       <div class="alumni-wrapper">
         <div class="alumnus">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/alumni-thaller.png">
+          <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/registration/alumni-thaller.png">
           <span class="alumnus-name">Michelle Thaller</span>
           <span class="alumnus-title">Nasa Scientist</span>
         </div>
         <div class="alumnus">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/alumni-hardy.png">
+          <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/registration/alumni-hardy.png">
           <span class="alumnus-name">John Hardy</span>
           <span class="alumnus-title">Founder, Greenschool Bali</span>
         </div>
         <div class="alumnus">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/alumni-altringer.png">
+          <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/registration/alumni-altringer.png">
           <span class="alumnus-name">Dr. Beth Altringer</span>
           <span class="alumnus-title">Lead, Desirabilty Lab, Harvard</span>
         </div>
         <div class="alumnus">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/alumni-gruber.png">
+          <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/registration/alumni-gruber.png">
           <span class="alumnus-name">Tom Gruber</span>
           <span class="alumnus-title">Inventor, Siri, Apple</span>
         </div>
         <div class="alumnus">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/alumni-bridges.png">
+          <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/registration/alumni-bridges.png">
           <span class="alumnus-name">Jeff Bridges</span>
           <span class="alumnus-title">Oscar-winning actor</span>
         </div>
         <div class="alumnus">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/registration/alumni-kuhr.png">
+          <img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/registration/alumni-kuhr.png">
           <span class="alumnus-name">Barbara Kuhr</span>
           <span class="alumnus-title">Co-founder, WIRED mag</span>
         </div>

@@ -8,7 +8,7 @@
 			<h2 class="post-title">
 				<?php if ( get_post_meta( get_the_ID(), 'l_url', true ) ) {?>
 			    <a target="_blank" href="<?php echo get_post_meta( get_the_ID(), 'l_url', true ); ?>">
-			    	<?php the_title(); ?><img class="icon-external-link" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-external-link.svg">
+			    	<?php the_title(); ?><img class="icon-external-link" src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/icon-external-link.svg">
 			    </a>
 				<?php } else {?>
 					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">

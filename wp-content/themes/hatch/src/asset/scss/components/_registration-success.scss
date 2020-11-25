@@ -1,0 +1,128 @@
+// registration-success.less
+// -----------------------------------------------------------------
+
+.page-template-template-registration-success,
+.page-template-template-registration-success-euro,
+.page-template-template-hasbro-registration-success,
+.page-template-template-panama-registration-success {
+  background-image: url('../img/registration/success-bg.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  .hatch-logo {
+    font-size: 36px;
+    margin: 40px auto;
+    display: block;
+    text-align: center;
+  }
+  .message-wrapper {
+    padding: 0;
+    box-shadow: 0 2px 14px 10px rgba(0,0,0,.2), 0 1px 4px rgba(0,0,0,.06);
+  }
+  .success-title {
+    background: #DFF0D8;
+    border-bottom: 1px solid #D6E9C6;
+    color: #3C763D;
+    margin: 0;
+    text-align: center;
+    padding: 35px 15px;
+    font-size: 36px;
+    font-weight: normal;
+    font-family: $font-family-klavika-bold;
+    border-radius: 20px 20px 0 0;
+    img {
+      margin-right: 13px;
+      vertical-align: middle;
+      position: relative;
+      top: -3px;
+    }
+  }
+  .euro-payment {
+    padding: 30px;
+    background: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 30px;
+    .btn {
+      font-size: 24px;
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+  }
+  .success-body {
+    padding: 25px 30px;
+    border-radius: 0 0 20px 20px;
+    background: #fff;
+    font-size: 18px;
+    hr {
+      margin: 40px 0;
+    }
+  }
+  .form-footer {
+    color: #B3B3B3;
+    text-align: center;
+    margin: 60px 0;
+    a {
+      color: lighten($link-color,15%);
+    }
+  }
+}
+
+// Responsive: desktop to large desktop
+// --------------------------------------------------
+@media (min-width: 1200px) and (max-width: 1499px) {}
+
+// Responsive: Tablet to desktop
+// --------------------------------------------------
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Responsive: Tablet to desktop
+// --------------------------------------------------
+@media (min-width: 768px) and (max-width: 991px) {}
+
+// Responsive: Landscape phone to desktop/tablet
+// --------------------------------------------------
+@media (max-width: 767px) {
+
+  .page-template-template-registration-success,
+  .page-template-template-registration-success-euro,
+  .page-template-template-hasbro-registration-success,
+  .page-template-template-panama-registration-success {
+    .hatch-logo {
+      margin: 30px auto;
+    }
+    .success-title {
+      padding: 15px;
+      font-size: 24px;
+      font-weight: normal;
+      font-family: $font-family-klavika-bold;
+      border-radius: 20px 20px 0 0;
+      img {
+        margin-right: 8px;
+        height: 20px;
+      }
+    }
+    .success-body {
+      padding: 15px;
+      font-size: 16px;
+      hr {
+        margin: 15px 0;
+      }
+    }
+    .form-footer {
+      margin: 30px 0;
+    }
+  }
+
+}
+
+// Responsive: Up to landscape phone
+// --------------------------------------------------
+@media (max-width: 480px) {}
+
+// Responsive: Up to portrait phone
+// --------------------------------------------------
+@media (max-width: 400px) {}

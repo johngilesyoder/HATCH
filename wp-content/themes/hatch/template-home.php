@@ -57,13 +57,13 @@
         <h2 class="section-title">HATCH <?php the_field('current_hatch_big_sky_year', 'option'); ?></h2>
       </div>
       <div class="row">
-        <div class="conference-photo">
+        <div class="conference-photo col-md-6">
           <div class="conference-photo-wrapper">
-            <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/assets/img/conference-photo.jpg">
+            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/conference-photo.jpg">
             <span class="conference-photo-title">OFF THE GRID // ON THE GRID</span>
           </div>
         </div>
-        <div class="conference-info">
+        <div class="conference-info col-md-6">
           <h3 class="hatch-logo conference-title">HATCH<span><?php the_field('current_hatch_big_sky_year', 'option'); ?></span></h3>
           <?php if( have_rows('hatch_event', 'option') ): ?>
             
@@ -100,9 +100,9 @@
         <h2 class="section-title">Programs</h2>
       </div>
       <div class="row">
-        <div class="mentorship-block">
+        <div class="mentorship-block col-md-6">
           <div class="block-wrapper">
-            <a href="/hatching-a-better-world/" class="mentorship-block-img" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/homepage-habw.jpg');">
+            <a href="/hatching-a-better-world/" class="mentorship-block-img" style="background-image:url('<?php echo get_template_directory_uri(); ?>/dist/asset/img/homepage-habw.jpg');">
               <h3 class="mentorship-block-title gradient">
                 <span>HATCH a Better World</span>
               </h3>
@@ -110,9 +110,9 @@
             <p>The HATCH network consists of world-shapers that mentor and mutually invest in one another. The HATCH A Better World program is designed to foster and support projects, initiatives, and collaborations from within the HATCH network.This program serves as the amplifier for creative solutions for good. <a href="/hatching-a-better-world/">Learn More</a></p>
           </div>
         </div>
-        <div class="mentorship-block">
+        <div class="mentorship-block col-md-6">
           <div class="block-wrapper">
-            <a href="/nextgen-2/" class="mentorship-block-img" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/homepage-nextgen.jpg');">
+            <a href="/nextgen-2/" class="mentorship-block-img" style="background-image:url('<?php echo get_template_directory_uri(); ?>/dist/asset/img/homepage-nextgen.jpg');">
               <h3 class="mentorship-block-title gradient">
                 <span>NextGen</span>
               </h3>
@@ -122,44 +122,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Upcoming Hatchings -->
-    <!-- <section class="section-block section-hatchings">
-      <div class="section-header">
-        <h2 class="section-title">Upcoming (&amp; Past) Hatchings</h2>
-        <div class="section-header-links">
-          <a href="/events/">View Calendar<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-link-chevron.svg"></a>
-        </div>
-      </div>
-      <div class="row">
-        <?php
-        // Ensure the global $post variable is in scope
-        global $post;
-
-        // Retrieve the next 5 upcoming events
-        $events = tribe_get_events( array(
-            'posts_per_page' => 3
-        ) );
-
-        // Loop through the events: set up each one as
-        // the current post then use template tags to
-        // display the title and content
-        foreach ( $events as $post ) {
-          setup_postdata( $post );
-      ?>
-
-      <a href="<?php the_permalink(); ?>" class="hatching-block">
-        <div class="block-wrapper">
-          <div class="hatching-block-img" style="background-image:url('<?php echo hatch_tribe_event_featured_image(); ?>');"></div>
-          <h1 class="hatching-title"><?php the_title(); ?></h1>
-          <span class="hatching-date"><?php echo tribe_get_start_date(); ?></span>
-          <span class="hatching-location"><?php echo tribe_get_city(); ?>, <?php echo tribe_get_stateprovince(); ?></span>
-        </div>
-      </a>
-
-      <?php } ?>
-      </div>
-    </section> -->
 
     <!-- Partners -->
     <?php get_template_part( 'includes/partners-block' ); ?>

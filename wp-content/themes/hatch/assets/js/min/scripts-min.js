@@ -1,1 +1,0 @@
-!function($,e,t){$(function(){"use strict";window.setInterval(function(){var e=new Date,t=new Date("Sep 29, 2018 23:59:59");e.getTime()>t.getTime()?$(".topbar-apply").hide():e.getTime()<t.getTime()&&$(".topbar-apply").show()},0)})}(jQuery,this);

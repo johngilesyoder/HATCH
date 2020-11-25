@@ -35,9 +35,9 @@
             </div>
             <div class="connect">
               <h2>Connect</h2>
-              <a class="social-link" href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-footer-twitter.svg"></a>
-              <a class="social-link" href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-footer-facebook.svg"></a>
-              <a class="social-link" href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-footer-instagram.svg"></a>
+              <a class="social-link" href="#"><img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/icon-footer-twitter.svg"></a>
+              <a class="social-link" href="#"><img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/icon-footer-facebook.svg"></a>
+              <a class="social-link" href="#"><img src="<?php echo get_template_directory_uri(); ?>/dist/asset/img/icon-footer-instagram.svg"></a>
             </div>
           </div>
         </div>
