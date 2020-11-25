@@ -3,7 +3,7 @@
   .form-header {
     padding: 30px 15px;
     margin: 0 0 30px;
-    background: @text-color;
+    background: $body-color;
     color: #fff;
     p {
       color: #fff;
@@ -15,7 +15,7 @@
       margin: 0 0 30px;
     }
     .site-logo {
-      .hatch-logo();
+      @extend .hatch-logo;
       font-size: 60px;
       display: inline;
       line-height: .85em;
@@ -64,7 +64,7 @@
 
   // SUBMIT BUTTON
   .submit-wrapper {
-    background: @text-color;
+    background: $body-color;
     color: #fff;
     padding: 30px 0;
   }
@@ -77,13 +77,13 @@
     .gform_wrapper {
       margin: 0;
       max-width: 100%;
-      background: @text-color;
+      background: $body-color;
       .validation_message {
-        color: @state-danger-text;
+        color: $brand-danger;
       }
       div.validation_error {
-        .alert();
-        .alert-danger();
+        @extend .alert;
+        @extend .alert-danger;
         font-weight: normal;
         margin-top: 25px;
       }
@@ -94,8 +94,8 @@
     text-align: center;
   }
   .gform_button {
-    .btn();
-    .btn-secondary();
+    @extend .btn;
+    @extend .btn-secondary;
     height: 70px;
     line-height: 70px;
     font-size: 24px !important;
@@ -157,7 +157,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        #gradient > .vertical(rgba(0,0,0,0), rgba(0,0,0,.8));
+        @include gradient-y(rgba(0,0,0,0), rgba(0,0,0,.8), 0%, 100%);
         z-index: 1;
       }
       .header-content {
@@ -175,7 +175,7 @@
           font-size: 42px;
           line-height: 1;
           font-weight: 700;
-          font-family: @font-family-tungsten;
+          font-family: $font-family-tungsten;
           text-transform: uppercase;
         }
       }
@@ -190,7 +190,7 @@
         list-style-type: none;
         li {
           display: inline-block;
-          background: rgba(@brand-primary, 20%);
+          background: rgba($brand-primary, 20%);
           border-radius: 300px;
           padding: 2px 10px;
           margin: 0 10px 10px 0;
@@ -207,7 +207,7 @@
         list-style-type: none;
         li {
           display: inline-block;
-          background: rgba(@brand-primary, 20%);
+          background: rgba($brand-primary, 20%);
           border-radius: 300px;
           padding: 2px 10px;
           margin: 0 10px 10px 0;
@@ -228,22 +228,22 @@
       background: #fff;
       margin: auto -30px -30px;
       padding: 30px;
-      border-top: 1px solid @border-color;
+      border-top: 1px solid $border-color;
       display: flex;
       align-items: center;
       justify-content: space-between;
       .upvoting {
         button {
-          color: @link-color;
+          color: $link-color;
           &.is-selected {
-            background: @brand-success;
+            background: $brand-success;
             color: #fff;
             &:hover {
               color: #fff;
             }
           }
           &:hover {
-            color: @link-hover-color;
+            color: $link-hover-color;
           }
           i {
             font-size: 16px;
@@ -254,16 +254,16 @@
       }
       .participate-button {
         button {
-          color: @link-color;
+          color: $link-color;
           &.is-selected {
-            background: @brand-success;
+            background: $brand-success;
             color: #fff;
             &:hover {
               color: #fff;
             }
           }
           &:hover {
-            color: @link-hover-color;
+            color: $link-hover-color;
           }
         }
       }

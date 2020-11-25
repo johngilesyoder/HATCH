@@ -36,7 +36,7 @@
     text-align: center;
   }
   .gform_button {
-    .btn();
+    @extend .btn;
     background-color: #3966BF;
     height: 50px;
     line-height: 50px;

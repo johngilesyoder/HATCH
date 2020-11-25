@@ -86,10 +86,10 @@ $photo_gallery_id = get_field('photo_gallery_id');
   <aside class="section-aside hard-to-explain">
     <div class="container">
       <div class="row">
-        <div class="section-aside-title">
+        <div class="section-aside-title col-md-3">
           <h3>It's hard to explain</h3>
         </div>
-        <div class="section-aside-content">
+        <div class="section-aside-content col-md-9">
           <div class="section-aside-content-wrapper">
             <div class="quote-block">
               <div class="quote-statement">

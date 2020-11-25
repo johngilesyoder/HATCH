@@ -7,7 +7,7 @@
       background: #f2f2f2;
       strong {
         color: #F7862F;
-        font-family: @font-family-tungsten;
+        font-family: $font-family-tungsten;
         font-size: 30px;
         font-style: normal;
         margin-right: 15px;
@@ -63,7 +63,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        #gradient > .vertical(rgba(0,0,0,0), rgba(0,0,0,.8));
+        @include gradient-y(rgba(0,0,0,0), rgba(0,0,0,.8), 0, 100%);
         z-index: 1;
       }
       .header-content {
@@ -85,7 +85,7 @@
           font-size: 60px;
           line-height: 1;
           font-weight: 700;
-          font-family: @font-family-tungsten;
+          font-family: $font-family-tungsten;
           text-transform: uppercase;
         }
       }
@@ -100,7 +100,7 @@
         list-style-type: none;
         li {
           display: inline-block;
-          background: rgba(@brand-primary, 20%);
+          background: rgba($brand-primary, 20%);
           border-radius: 300px;
           padding: 2px 10px;
           margin: 0 10px 10px 0;
@@ -135,15 +135,15 @@
       background: #fff;
       margin: 0 -30px -30px;
       padding: 30px;
-      border-top: 1px solid @border-color;
+      border-top: 1px solid $border-color;
       .btn {
-        color: @link-color;
+        color: $link-color;
         display: block;
         text-transform: uppercase;
         font-size: 18px;
         font-weight: 700;
         &:hover {
-          color: @link-hover-color;
+          color: $link-hover-color;
         }
       }
     }

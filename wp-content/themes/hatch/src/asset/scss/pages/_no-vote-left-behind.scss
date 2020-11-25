@@ -16,7 +16,7 @@
       padding: 30px 0;
     }
     .section-title {
-      font-family: @font-family-tungsten;
+      font-family: $font-family-tungsten;
       text-transform: uppercase;
       font-size: 60px;
       font-weight: 600;
@@ -58,7 +58,7 @@
       padding: 0 15px;
       margin: 0 0 30px;
       text-align: center;
-      color: @text-color;
+      color: $body-color;
       text-decoration: none;
       @media (max-width: 767px) {
         width: 50%;
@@ -67,13 +67,13 @@
         width: 100%;
       }
       &:hover h3 {
-        color: @link-hover-color;
+        color: $link-hover-color;
       }
       h3 {
         margin: 0 0 10px;
         font-size: 18px;
         line-height: 1.25;
-        color: @link-color;
+        color: $link-color;
         i {
           font-size: 14px;
           vertical-align: middle;
@@ -96,7 +96,7 @@
 
 .page-template-template-nvlb {
   .give-wrap .give-card__title {
-    color: @link-color !important;
+    color: $link-color !important;
   }
   .give-form-wrap {
     max-width: 600px;
@@ -104,7 +104,7 @@
     input[type="text"],
     input[type="email"],
     select {
-      .form-control();
+      @extend .form-control;
     }
     select {
       display: inline-block;
@@ -132,7 +132,7 @@
     & > {
       li {
         margin: 0 0 5px;
-        border: 1px solid @link-color;
+        border: 1px solid $link-color;
         border-radius: 4px;
         margin-right: 10px !important;
         margin-bottom: 15px !important;
@@ -141,7 +141,7 @@
         display: inline-block;
         label {
           font-weight: normal;
-          color: @link-color;
+          color: $link-color;
           margin-left: 3px;
           margin: 0 0 3px 5px !important;
         }
@@ -162,8 +162,8 @@
         display: none;
       }
       &:last-child {
-        .alert();
-        .alert-info();
+        @extend .alert;
+        @extend .alert-info;
         font-weight: normal;
         display: block;
       }
@@ -171,21 +171,21 @@
   }
   
   .give-submit {
-    .btn();
-    .btn-secondary();
+    @extend .btn;
+    @extend .btn-secondary;
     font-size: 21px;
     font-weight: 500;
   }
   .give-donation-level-btn {
-    .btn();
+    @extend .btn;
     font-size: 14px;
     background: transparent;
-    color: @link-color;
-    border: 2px solid @link-color;
+    color: $link-color;
+    border: 2px solid $link-color;
     &:hover {
       background: transparent;
-      color: @link-hover-color;
-      border-color: @link-hover-color;
+      color: $link-hover-color;
+      border-color: $link-hover-color;
     }
   }
 }

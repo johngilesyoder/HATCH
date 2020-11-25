@@ -10,7 +10,7 @@
     input[type="email"],
     input[type="url"],
     input[type="number"] {
-      .form-control();
+      @extend .form-control;
       height: 40px;
       font-size: 14px !important;
       padding: 6px 12px !important;
@@ -22,7 +22,7 @@
       display: none;
     }
     select {
-      .form-control();
+      @extend .form-control;
       height: 40px;
     }
     .gf_progressbar_wrapper {
@@ -32,21 +32,21 @@
       background-image: none;
       line-height: 1em;
       border: 0;
-      .progress();
+      @extend .progress;
       .gf_progressbar_percentage {
         background-image: none;
-        .progress-bar();
+        @extend .progress-bar;
         span {
           display: none;
         }
       }
     }
     .validation_message {
-      color: @state-danger-text;
+      color: $brand-danger;
     }
     div.validation_error {
-      .alert();
-      .alert-danger();
+      @extend .alert;
+      @extend .alert-danger;
       font-weight: normal;
       margin-top: 25px;
     }
@@ -58,10 +58,10 @@
       }
     }
     li.gfield.gfield_error {
-      background-color: @state-danger-bg;
-      border-top-color: @state-danger-border;
+      background-color: darken($brand-danger, 30%);
+      border-top-color: darken($brand-danger, 30%);
       .gfield_label {
-        color: @state-danger-text;
+        color: $brand-danger;
       }
       &.gfield_contains_required {
         padding-left: 10px;
@@ -69,10 +69,10 @@
         margin-top: 0;
         margin-bottom: 25px !important;
         div.gfield_description {
-          font-family: @font-family-serif;
+          font-family: $font-family-serif;
           font-style: italic;
           font-weight: normal;
-          color: @state-danger-text;
+          color: $brand-danger;
         }
       }
     }
@@ -100,18 +100,18 @@
       }
     }
     textarea {
-      .form-control();
+      @extend .form-control;
       padding: 6px 12px !important;
     }
     &.gf_browser_chrome ul.gform_fields li.gfield input[type=radio] {
       margin-left: .1em !important;
     }
     .gfield {
-      .form-group();
+      @extend .form-group;
       margin-bottom: 25px;
     }
     li.gfield_error div.ginput_complex.ginput_container label {
-      color: @state-danger-text;
+      color: $brand-danger;
     }
     .gfield_error .ginput_complex {
       .ginput_left {
@@ -159,7 +159,7 @@
       }
     }
     .gfield_required {
-      color: @brand-danger;
+      color: $brand-danger;
     }
     .gfield_time_hour,
     .gfield_time_minute {
@@ -173,8 +173,8 @@
       width: 100%;
     }
     .gform_button {
-      .btn();
-      .btn-secondary();
+      @extend .btn;
+      @extend .btn-secondary;
       height: 50px;
       line-height: 50px;
       font-size: 18px;

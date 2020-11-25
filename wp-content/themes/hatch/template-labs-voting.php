@@ -131,10 +131,10 @@
                 </div>
                 <div class="voting">
                   <div class="upvoting">
-                    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+                    <button class="btn btn-light" data-project-title="Water For Life" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
                   </div>
                   <div class="participate-button">
-                    <button class="btn btn-default" data-project-title="Water For Life" data-type="btn-participate">Participate</button>
+                    <button class="btn btn-light" data-project-title="Water For Life" data-type="btn-participate">Participate</button>
                   </div>
                 </div>
               </div>
@@ -181,10 +181,10 @@
                 </div>
                 <div class="voting">
                   <div class="upvoting">
-                    <button class="btn btn-default" data-project-title="Space Jam" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+                    <button class="btn btn-light" data-project-title="Space Jam" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
                   </div>
                   <div class="participate-button">
-                    <button class="btn btn-default" data-project-title="Space Jam" data-type="btn-participate">Participate</button>
+                    <button class="btn btn-light" data-project-title="Space Jam" data-type="btn-participate">Participate</button>
                   </div>
                 </div>
               </div>
@@ -231,10 +231,10 @@
                 </div>
                 <div class="voting">
                   <div class="upvoting">
-                    <button class="btn btn-default" data-project-title="Book Of Mormon" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+                    <button class="btn btn-light" data-project-title="Book Of Mormon" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
                   </div>
                   <div class="participate-button">
-                    <button class="btn btn-default" data-project-title="Book Of Mormon" data-type="btn-participate">Participate</button>
+                    <button class="btn btn-light" data-project-title="Book Of Mormon" data-type="btn-participate">Participate</button>
                   </div>
                 </div>
               </div>
@@ -281,10 +281,10 @@
                 </div>
                 <div class="voting">
                   <div class="upvoting">
-                    <button class="btn btn-default" data-project-title="Always Sunny" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+                    <button class="btn btn-light" data-project-title="Always Sunny" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
                   </div>
                   <div class="participate-button">
-                    <button class="btn btn-default" data-project-title="Always Sunny" data-type="btn-participate">Participate</button>
+                    <button class="btn btn-light" data-project-title="Always Sunny" data-type="btn-participate">Participate</button>
                   </div>
                 </div>
               </div> -->

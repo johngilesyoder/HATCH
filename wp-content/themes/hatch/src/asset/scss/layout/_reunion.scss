@@ -24,7 +24,7 @@
         display: inline-block;
       }
       .cta-date {
-        font-family: @font-family-archer;
+        font-family: $font-family-archer;
         font-size: 16px;
       }
     }
@@ -69,14 +69,14 @@
       z-index: 100;
       .hero-title {
         margin: 0;
-        font-family: @font-family-tungsten;
+        font-family: $font-family-tungsten;
         font-size: 100px;
         color: #fff;
       }
       .hero-date {
         display: block;
         font-size: 30px;
-        font-family: @font-family-archer;
+        font-family: $font-family-archer;
         color: #fff;
         margin: 0 0 30px;
         font-weight: 700;
@@ -108,7 +108,7 @@
       text-align: center;
       margin: 0 0 60px;
       font-size: 80px;
-      font-family: @font-family-tungsten;
+      font-family: $font-family-tungsten;
       text-transform: uppercase;
       display: flex;
       align-items: center;
@@ -146,7 +146,7 @@
     .hotel {
       margin: 0 0 60px;
       .hotel-title {
-        font-family: @font-family-tungsten;
+        font-family: $font-family-tungsten;
         text-transform: uppercase;
         font-size: 36px;
       }
@@ -168,10 +168,10 @@
       align-items: center;
     }
     .btn-view-schedule {
-      color: @link-color;
+      color: $link-color;
       font-weight: 500;
       &:hover {
-        color: @link-hover-color;
+        color: $link-hover-color;
       }
     }
   }
@@ -179,13 +179,13 @@
   .reunion-planning-team {
     margin: 0;
     padding: 90px 0;
-    background: @text-color;
+    background: $body-color;
     color: #fff;
     .planning-team-title {
       text-align: center;
       margin: 0 0 60px;
       font-size: 80px;
-      font-family: @font-family-tungsten;
+      font-family: $font-family-tungsten;
       text-transform: uppercase;
       display: flex;
       align-items: center;
@@ -250,7 +250,7 @@
       text-align: center;
       margin: 0 0 60px;
       font-size: 80px;
-      font-family: @font-family-tungsten;
+      font-family: $font-family-tungsten;
       text-transform: uppercase;
       display: flex;
       align-items: center;
@@ -262,10 +262,10 @@
       }
     }
     .btn-view-schedule {
-      color: @link-color;
+      color: $link-color;
       font-weight: 500;
       &:hover {
-        color: @link-hover-color;
+        color: $link-hover-color;
       }
     }
   }
@@ -277,7 +277,7 @@
       text-align: center;
       margin: 0 0 60px;
       font-size: 80px;
-      font-family: @font-family-tungsten;
+      font-family: $font-family-tungsten;
       text-transform: uppercase;
       display: flex;
       align-items: center;
@@ -299,7 +299,7 @@
       text-align: center;
       margin: 0 0 60px;
       font-size: 80px;
-      font-family: @font-family-tungsten;
+      font-family: $font-family-tungsten;
       text-transform: uppercase;
       display: flex;
       align-items: center;
@@ -315,7 +315,7 @@
       .number {
         font-size: 36px;
         line-height: 1;
-        font-family: @font-family-tungsten;
+        font-family: $font-family-tungsten;
         border: 2px dotted #fff;
         height: 45px;
         width: 45px;
@@ -343,7 +343,7 @@
     padding: 90px 30px;
     background: #f2f2f2;
     .sponsorship-content {
-      border: 4px solid @text-color;
+      border: 4px solid $body-color;
       padding: 30px;
       text-align: center;
     }
@@ -355,7 +355,7 @@
       text-align: center;
       margin: 0 0 60px;
       font-size: 80px;
-      font-family: @font-family-tungsten;
+      font-family: $font-family-tungsten;
       text-transform: uppercase;
       display: flex;
       align-items: center;
@@ -371,7 +371,7 @@
     .date-break {
       th {
         background: #f2f2f2;
-        font-family: @font-family-archer;
+        font-family: $font-family-archer;
       }
     }
     .activity {
@@ -419,7 +419,7 @@
         .btn-secondary {
           font-weight: 500;
           background: transparent;
-          color: @link-color;
+          color: $link-color;
           padding: 0;
           border: 0;
         }
@@ -484,7 +484,7 @@
       .hotel {
         margin: 0 0 50px;
         .hotel-title {
-          font-family: @font-family-tungsten;
+          font-family: $font-family-tungsten;
           text-transform: uppercase;
           font-size: 36px;
         }
@@ -504,10 +504,10 @@
         font-size: 30px;
       }
       .btn-view-schedule {
-        color: @link-color;
+        color: $link-color;
         font-weight: 500;
         &:hover {
-          color: @link-hover-color;
+          color: $link-hover-color;
         }
       }
     }
@@ -575,7 +575,7 @@
     .reunion-sponsorship {
       padding: 50px 15px;
       .sponsorship-content {
-        border: 4px solid @text-color;
+        border: 4px solid $body-color;
         padding: 15px;
         text-align: center;
       }
@@ -610,7 +610,7 @@
         .btn-secondary {
           font-weight: 500;
           background: transparent;
-          color: @link-color;
+          color: $link-color;
           padding: 0;
           border: 0;
         }
@@ -675,7 +675,7 @@
       .hotel {
         margin: 0 0 30px;
         .hotel-title {
-          font-family: @font-family-tungsten;
+          font-family: $font-family-tungsten;
           text-transform: uppercase;
           font-size: 36px;
         }
@@ -695,10 +695,10 @@
         font-size: 30px;
       }
       .btn-view-schedule {
-        color: @link-color;
+        color: $link-color;
         font-weight: 500;
         &:hover {
-          color: @link-hover-color;
+          color: $link-hover-color;
         }
       }
     }
@@ -766,7 +766,7 @@
     .reunion-sponsorship {
       padding: 30px 15px;
       .sponsorship-content {
-        border: 4px solid @text-color;
+        border: 4px solid $body-color;
         padding: 15px;
         text-align: center;
       }

@@ -2,8 +2,8 @@
 // -----------------------------------------------------------------
 
 .blog-sidebar {
-  border-left: 1px solid @border-color;
-  border-right: 1px solid @border-color;
+  border-left: 1px solid $border-color;
+  border-right: 1px solid $border-color;
   height: 100%;
   position: absolute;
   top: 0;
@@ -15,7 +15,7 @@
     width: 100%;
     padding: 0 15px;
     h3 {
-      font-family: @font-family-tungsten;
+      font-family: $font-family-tungsten;
       font-size: 21px;
       letter-spacing: .02em;
       margin: 0 0 20px;
@@ -23,7 +23,7 @@
   }
   .widget_text {
     text-align: center;
-    border-bottom: 1px solid @border-color;
+    border-bottom: 1px solid $border-color;
     font-size: 13px;
     line-height: 21px;
     padding: 27px 15px;
@@ -44,7 +44,7 @@
       width: 100%;
       position: relative;
       .search-input {
-        border: 1px solid @border-color;
+        border: 1px solid $border-color;
         height: 37px;
         padding: 0 15px 0 38px;
         border-radius: 19px;
@@ -71,7 +71,7 @@
   .widget_categories {
     padding: 0 15px 27px;
     h3 {
-      font-family: @font-family-tungsten;
+      font-family: $font-family-tungsten;
       font-size: 21px;
       letter-spacing: .02em;
       text-transform: uppercase;
@@ -88,7 +88,7 @@
           font-size: 13px;
           text-transform: lowercase;
           font-weight: 500;
-          border: 1px solid @link-color;
+          border: 1px solid $link-color;
           height: 24px;
           line-height: 24px;
           border-radius: 12px;
@@ -97,9 +97,9 @@
           padding-right: 10px;
           text-decoration: none;
           &:hover {
-            background: @link-color;
+            background: $link-color;
             color: #fff;
-            border-color: @link-color;
+            border-color: $link-color;
           }
         }
       }
@@ -126,7 +126,7 @@
       &:after {
         content: '';
         height: 1px;
-        background: @border-color;
+        background: $border-color;
         width: 100%;
         position: absolute;
         top: 50%;
@@ -134,7 +134,7 @@
         right: 0;
       }
       .hatch-logo {
-        color: @border-color;
+        color: $border-color;
         font-size: 24px;
         background: #fff;
         padding: 0 15px;
@@ -178,7 +178,7 @@
       font-size: 13px;
       text-transform: lowercase;
       font-weight: 500;
-      border: 1px solid @link-color;
+      border: 1px solid $link-color;
       height: 24px;
       line-height: 24px;
       border-radius: 12px;
@@ -187,9 +187,9 @@
       padding-right: 10px;
       text-decoration: none;
       &:hover {
-        background: @link-color;
+        background: $link-color;
         color: #fff;
-        border-color: @link-color;
+        border-color: $link-color;
       }
     }
   }

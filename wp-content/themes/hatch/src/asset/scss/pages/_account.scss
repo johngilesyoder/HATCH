@@ -38,7 +38,7 @@
       z-index: 10;
       h1 {
         font-size: 60px;
-        font-family: @font-family-tungsten;
+        font-family: $font-family-tungsten;
         margin: 0;
         text-transform: uppercase;
         @media (max-width: 767px) {
@@ -75,25 +75,25 @@
       }
       .mepr-active-nav-tab {
         a {
-          background: @link-color;
+          background: $link-color;
           color: #fff;
         }
       }
     }
     .mepr-account-row-action {
-      .btn();
-      .btn-secondary();
+      @extend .btn;
+      @extend .btn-secondary;
       font-weight: 700;
       margin-bottom: 5px;
     }
     .mepr-submit {
-      .btn();
-      .btn-primary();
+      @extend .btn;
+      @extend .btn-primary;
       font-weight: 700;
     }
     input[type="text"],
     textarea {
-      .form-control();
+      @extend .form-control;
     }
     .mepr-account-table {
       // .table();

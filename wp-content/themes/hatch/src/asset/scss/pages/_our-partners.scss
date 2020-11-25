@@ -14,14 +14,14 @@
   }
 
   .partners {
-    .clearfix();
+    @extend .clearfix;
     margin-bottom: 30px;
   }
   .partners-title {
     font-size: 16px;
     margin: 3px 0 20px;
     font-weight: 500;
-    border-bottom: 1px solid @border-color;
+    border-bottom: 1px solid $border-color;
     padding-bottom: 10px;
   }
   .partner {
@@ -35,7 +35,7 @@
     padding: 15px;
     height: 175px;
     line-height: 145px;
-    .clearfix();
+    @extend .clearfix;
     .partner-content {
       position: relative;
       top: 50%;
@@ -75,7 +75,7 @@
 
   .partners-friends {
     ul {
-      .list-unstyled();
+      @extend .list-unstyled;
       font-style: italic;
       li {
         background: #f5f5f5;

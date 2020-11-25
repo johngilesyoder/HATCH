@@ -54,10 +54,10 @@ Standardized tests create a one-size-fits-all, leading to results that cause to 
 </div></div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="I'm not a number; I'm a student." data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-light" data-project-title="I'm not a number; I'm a student." data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="I'm not a number; I'm a student." data-type="btn-participate">Participate</button>
+    <button class="btn btn-light" data-project-title="I'm not a number; I'm a student." data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -108,10 +108,10 @@ Digitalize part of the process, by building a web platform to facilitate the int
 </div></div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="Future Food Living Labs" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-light" data-project-title="Future Food Living Labs" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="Future Food Living Labs" data-type="btn-participate">Participate</button>
+    <button class="btn btn-light" data-project-title="Future Food Living Labs" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -169,10 +169,10 @@ This link (4 mins) will give you feel for it / copy and paste - https://www.yout
 </div></div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="Peace in 10,000 Hands" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-light" data-project-title="Peace in 10,000 Hands" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="Peace in 10,000 Hands" data-type="btn-participate">Participate</button>
+    <button class="btn btn-light" data-project-title="Peace in 10,000 Hands" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -216,10 +216,10 @@ This link (4 mins) will give you feel for it / copy and paste - https://www.yout
 </div></div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="Creating a globally-scaled mentor program" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-light" data-project-title="Creating a globally-scaled mentor program" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="Creating a globally-scaled mentor program" data-type="btn-participate">Participate</button>
+    <button class="btn btn-light" data-project-title="Creating a globally-scaled mentor program" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -274,10 +274,10 @@ This link (4 mins) will give you feel for it / copy and paste - https://www.yout
 </div></div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="Which SDG Targets are the most important to solve first?" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-light" data-project-title="Which SDG Targets are the most important to solve first?" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="Which SDG Targets are the most important to solve first?" data-type="btn-participate">Participate</button>
+    <button class="btn btn-light" data-project-title="Which SDG Targets are the most important to solve first?" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -350,10 +350,10 @@ Funding for satellite mission flying a hyperspectral imaging payload coupled wit
 </div></div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="Using Satellite Imagery, Machine Learning and Unique Datasets to Solve Complex Global Problems" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-light" data-project-title="Using Satellite Imagery, Machine Learning and Unique Datasets to Solve Complex Global Problems" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="Using Satellite Imagery, Machine Learning and Unique Datasets to Solve Complex Global Problems" data-type="btn-participate">Participate</button>
+    <button class="btn btn-light" data-project-title="Using Satellite Imagery, Machine Learning and Unique Datasets to Solve Complex Global Problems" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -404,10 +404,10 @@ Funding for satellite mission flying a hyperspectral imaging payload coupled wit
 </div></div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="SDG Impact Accelerator" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-light" data-project-title="SDG Impact Accelerator" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="SDG Impact Accelerator" data-type="btn-participate">Participate</button>
+    <button class="btn btn-light" data-project-title="SDG Impact Accelerator" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -447,10 +447,10 @@ Funding for satellite mission flying a hyperspectral imaging payload coupled wit
 </div></div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="The next mile of corporate sustainability" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-light" data-project-title="The next mile of corporate sustainability" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="The next mile of corporate sustainability" data-type="btn-participate">Participate</button>
+    <button class="btn btn-light" data-project-title="The next mile of corporate sustainability" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -492,10 +492,10 @@ My students often have lofty goals as they begin to identify local and global is
 </div></div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="Creating Sustainable Build Projects Within Middle and High School Design Classes While Repurposing Old Materials" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-light" data-project-title="Creating Sustainable Build Projects Within Middle and High School Design Classes While Repurposing Old Materials" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="Creating Sustainable Build Projects Within Middle and High School Design Classes While Repurposing Old Materials" data-type="btn-participate">Participate</button>
+    <button class="btn btn-light" data-project-title="Creating Sustainable Build Projects Within Middle and High School Design Classes While Repurposing Old Materials" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -558,10 +558,10 @@ Twenty-eight MSP live productions have taken place thus far at UC-Berkeley, UC-S
 </div></div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="The Men's Story Project" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-light" data-project-title="The Men's Story Project" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="The Men's Story Project" data-type="btn-participate">Participate</button>
+    <button class="btn btn-light" data-project-title="The Men's Story Project" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -615,10 +615,10 @@ Need funding for start ups to devote their teams to the R & D.</p>
 </div></div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="Bioengineering the new plastic film" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-light" data-project-title="Bioengineering the new plastic film" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="Bioengineering the new plastic film" data-type="btn-participate">Participate</button>
+    <button class="btn btn-light" data-project-title="Bioengineering the new plastic film" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -673,10 +673,10 @@ R & D around software/hardware/tech development (we've been at this for 2.5 year
 </div></div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="TEAL Tag" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-light" data-project-title="TEAL Tag" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="TEAL Tag" data-type="btn-participate">Participate</button>
+    <button class="btn btn-light" data-project-title="TEAL Tag" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -736,10 +736,10 @@ We would benefit from assistance in clarifying our narrative and ensuring our vi
 </div></div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="The Bridge Faith Initiative" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-light" data-project-title="The Bridge Faith Initiative" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="The Bridge Faith Initiative" data-type="btn-participate">Participate</button>
+    <button class="btn btn-light" data-project-title="The Bridge Faith Initiative" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -783,10 +783,10 @@ Solving this problem would have a huge impact not only for our little school, bu
 </div></div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="Success Beyond School" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-light" data-project-title="Success Beyond School" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="Success Beyond School" data-type="btn-participate">Participate</button>
+    <button class="btn btn-light" data-project-title="Success Beyond School" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -830,10 +830,10 @@ For a year, we have been operating in the jails.  Since the beginning, the suppo
 </div></div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="Mama YOUniverse" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-light" data-project-title="Mama YOUniverse" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="Mama YOUniverse" data-type="btn-participate">Participate</button>
+    <button class="btn btn-light" data-project-title="Mama YOUniverse" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -899,10 +899,10 @@ The Social Good Club is working to accelerate the progress by simplifying the Su
 </div></div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="The Social Good Club" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-light" data-project-title="The Social Good Club" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="The Social Good Club" data-type="btn-participate">Participate</button>
+    <button class="btn btn-light" data-project-title="The Social Good Club" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -938,10 +938,10 @@ The Social Good Club is working to accelerate the progress by simplifying the Su
 </div></div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="End Game for Ocean Plastics" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-light" data-project-title="End Game for Ocean Plastics" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="End Game for Ocean Plastics" data-type="btn-participate">Participate</button>
+    <button class="btn btn-light" data-project-title="End Game for Ocean Plastics" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -984,10 +984,10 @@ The Social Good Club is working to accelerate the progress by simplifying the Su
 </div></div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="The Wonder Barn" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-light" data-project-title="The Wonder Barn" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="The Wonder Barn" data-type="btn-participate">Participate</button>
+    <button class="btn btn-light" data-project-title="The Wonder Barn" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -1034,10 +1034,10 @@ Beyond 2020, we look to expand our mission, supporting others in their efforts t
 </div></div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="Women's Skydiving Network Pro Team (WSN Pro Team)" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-light" data-project-title="Women's Skydiving Network Pro Team (WSN Pro Team)" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="Women's Skydiving Network Pro Team (WSN Pro Team)" data-type="btn-participate">Participate</button>
+    <button class="btn btn-light" data-project-title="Women's Skydiving Network Pro Team (WSN Pro Team)" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div><div class="lab">
@@ -1075,10 +1075,10 @@ Once alley-oop is more established with this initial product, we will expand bot
 </div></div>
 <div class="voting">
   <div class="upvoting">
-    <button class="btn btn-default" data-project-title="alley-oop" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
+    <button class="btn btn-light" data-project-title="alley-oop" data-type="btn-upvote"><i class="material-icons">thumb_up</i> Upvote this Lab</button>
   </div>
   <div class="participate-button">
-    <button class="btn btn-default" data-project-title="alley-oop" data-type="btn-participate">Participate</button>
+    <button class="btn btn-light" data-project-title="alley-oop" data-type="btn-participate">Participate</button>
   </div>
 </div>
 </div>

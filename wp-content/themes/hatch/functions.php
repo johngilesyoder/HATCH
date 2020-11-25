@@ -259,7 +259,7 @@ function html5blank_conditional_scripts()
 // Load styles
 function html5blank_styles()
 {
-    wp_register_style('styles', get_template_directory_uri() . '/dist/asset/css/bundle.css', array(), '1.2', 'all');
+    wp_register_style('styles', get_template_directory_uri() . '/dist/asset/css/bundle.css', array(), '1.3', 'all');
     wp_enqueue_style('styles'); // Enqueue it!
 
     wp_register_style('cloud-typography', 'https://cloud.typography.com/7252954/638486/css/fonts.css', array(), null, false);

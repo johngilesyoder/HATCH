@@ -10,4 +10,7 @@
 .btn-secondary {
   @include button-variant(#FFB100, darken(#FFB100, 10%));
   color: #fff;
+  &:hover {
+    color: #fff;
+  }
 }

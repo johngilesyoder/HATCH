@@ -22,9 +22,9 @@
         position: relative;
       }
       .search-term {
-        font-family: @font-family-archer;
+        font-family: $font-family-archer;
         font-style: italic;
-        color: @brand-primary;
+        color: $brand-primary;
         font-weight: 600;
       }
     }

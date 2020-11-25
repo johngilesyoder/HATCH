@@ -35,14 +35,15 @@
       }
     }
     .size-full {
-      .img-responsive();
+      max-width: 100%;
+      height: auto;
     }
   }
   .post.type-post,
   .type-tribe_events,
   .hatchback-story {
     margin-bottom: 50px;
-    border-bottom: 1px solid @border-color;
+    border-bottom: 1px solid $border-color;
     padding-bottom: 50px;
     .post-title {
       margin: 0 0 12px;
@@ -58,14 +59,15 @@
       }
     }
     .post-meta {
-      font-family: @font-family-archer;
+      font-family: $font-family-archer;
       font-weight: 600;
       font-style: italic;
       font-size: 13px;
       margin-bottom: 20px;
     }
     .wp-post-image {
-      .img-responsive();
+      max-width: 100%;
+      height: auto;
       margin-bottom: 30px;
     }
     .post-excerpt {
@@ -84,15 +86,15 @@
       }
     }
     .btn-continue {
-      color: @link-color;
+      color: $link-color;
       border-radius: 36px;
       line-height: 36px;
       padding: 0 20px;
       border-radius: 18px;
       border-color: #d9d9d9;
       &:hover {
-        background: @link-color;
-        border-color: @link-color;
+        background: $link-color;
+        border-color: $link-color;
         color: #fff;
       }
     }
@@ -155,7 +157,8 @@
         }
       }
       .wp-post-image {
-        .img-responsive();
+        max-width: 100%;
+height: auto;
         margin-bottom: 15px;
       }
       .post-content {
@@ -206,7 +209,8 @@
         }
       }
       .wp-post-image {
-        .img-responsive();
+        max-width: 100%;
+height: auto;
         margin-bottom: 15px;
       }
       .post-content {

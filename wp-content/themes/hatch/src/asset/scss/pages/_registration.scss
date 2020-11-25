@@ -23,7 +23,7 @@
       vertical-align: top;
     }
     .site-logo {
-      .hatch-logo();
+      @extend .hatch-logo;
       font-size: 33px;
       display: block;
       line-height: .85em;
@@ -31,7 +31,7 @@
       margin: 0 0 5px;
       em {
         font-style: normal;
-        color: @brand-secondary;
+        color: $brand-secondary;
       }
     }
     .site-logo-date {
@@ -61,7 +61,7 @@
     text-transform: uppercase;
     padding: 15px 80px;
     border-radius: 10px;
-    #gradient > .vertical(#FFC000, #FFA100);
+    @include gradient-y(#FFC000, #FFA100, 0%, 100%);
     &.is--toggled {
       display: none;
     }
@@ -115,24 +115,22 @@
     .section-aside {
       margin: 0 0 80px;
       .section-aside-title {
-        .make-md-column(3);
         h3 {
-          font-family: @font-family-klavika-medium;
+          font-family: $font-family-klavika-medium;
           font-size: 60px;
           margin: 0;
           line-height: .9em;
         }
       }
       .section-aside-content {
-        .make-md-column(9);
         .section-aside-content-wrapper {
           padding-left: 20px;
-          border-left: 6px solid @brand-secondary;
+          border-left: 6px solid $brand-secondary;
         }
       }
       .quote-block {
         .quote-statement {
-          font-family: @font-family-archer;
+          font-family: $font-family-archer;
           font-style: italic;
           line-height: 1.5em;
           font-size: 18px;
@@ -237,7 +235,7 @@
       input[type="email"],
       input[type="url"],
       input[type="number"] {
-        .form-control();
+        @extend .form-control;
         height: 40px;
         font-size: 14px !important;
         padding: 6px 12px !important;
@@ -249,7 +247,7 @@
         display: none;
       }
       select {
-        .form-control();
+        @extend .form-control;
         height: 40px;
       }
       .gf_progressbar_wrapper {
@@ -269,11 +267,11 @@
       //   }
       // }
       .validation_message {
-        color: @state-danger-text;
+        color: $brand-danger;
       }
       div.validation_error {
-        .alert();
-        .alert-danger();
+        @extend .alert;
+        @extend .alert-danger;
         font-weight: normal;
         margin-top: 25px;
       }
@@ -285,10 +283,10 @@
         }
       }
       li.gfield.gfield_error {
-        background-color: @state-danger-bg;
-        border-top-color: @state-danger-border;
+        background-color: lighten($brand-danger, 30%);
+        border-top-color: darken($brand-danger, 30%);
         .gfield_label {
-          color: @state-danger-text;
+          color: $brand-danger;
         }
         &.gfield_contains_required {
           padding-left: 10px;
@@ -296,10 +294,10 @@
           margin-top: 0;
           margin-bottom: 25px !important;
           div.gfield_description {
-            font-family: @font-family-serif;
+            font-family: $font-family-serif;
             font-style: italic;
             font-weight: normal;
-            color: @state-danger-text;
+            color: $brand-danger;
           }
         }
       }
@@ -327,7 +325,7 @@
         }
       }
       textarea {
-        .form-control();
+        @extend .form-control;
         padding: 6px 12px !important;
         height: 100px;
         resize: auto;
@@ -336,11 +334,11 @@
         margin-left: .1em !important;
       }
       .gfield {
-        .form-group();
+        @extend .form-group;
         margin-bottom: 25px;
       }
       li.gfield_error div.ginput_complex.ginput_container label {
-        color: @state-danger-text;
+        color: $brand-danger;
       }
       .gfield_error .ginput_complex {
         .ginput_left {
@@ -389,7 +387,7 @@
         }
       }
       .gfield_required {
-        color: @brand-danger;
+        color: $brand-danger;
       }
       .gfield_time_hour,
       .gfield_time_minute {
@@ -411,25 +409,25 @@
       }
       .gform_next_button,
       .gform_previous_button {
-        .btn();
+        @extend .btn;
         height: 50px;
         line-height: 50px;
         font-size: 18px;
         font-weight: 500;
         padding: 0 65px;
         margin-top: 30px;
-        color: @link-color;
-        border-color: @link-color;
+        color: $link-color;
+        border-color: $link-color;
         background: #fff;
         width: 100%;
         &:hover {
-          background: @link-color;
+          background: $link-color;
           color: #fff;
         }
       }
       .gform_previous_button {
-        .btn();
-        .btn-link();
+        @extend .btn;
+        @extend .btn-link;
         width: auto;
         margin-bottom: 0 !important;
         margin-top: 10px;
@@ -437,8 +435,8 @@
         padding: 0;
       }
       .gform_button {
-        .btn();
-        .btn-secondary();
+        @extend .btn;
+        @extend .btn-secondary;
         height: 50px;
         line-height: 50px;
         font-size: 18px;
@@ -452,8 +450,8 @@
         display: inline-block !important;
       }
       #gf_coupon_button {
-        .btn();
-        .btn-default();
+        @extend .btn;
+        @extend .btn-light;
       }
     }
   }
@@ -513,7 +511,7 @@
         .section-aside-content {
           .section-aside-content-wrapper {
             padding-left: 15px;
-            border-left: 3px solid @brand-secondary;
+            border-left: 3px solid $brand-secondary;
           }
         }
       }
@@ -569,7 +567,7 @@
         .section-aside-content {
           .section-aside-content-wrapper {
             padding-left: 15px;
-            border-left: 3px solid @brand-secondary;
+            border-left: 3px solid $brand-secondary;
           }
         }
         .quote-block {

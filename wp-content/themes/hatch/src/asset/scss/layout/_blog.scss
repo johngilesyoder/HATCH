@@ -14,7 +14,7 @@
     background: #f2f2f2;
     strong {
       color: #F7862F;
-      font-family: @font-family-tungsten;
+      font-family: $font-family-tungsten;
       font-size: 30px;
       font-style: normal;
       display: block;
@@ -68,11 +68,11 @@
 
   .blog-pagination {
     padding-bottom: 50px;
-    .clearfix();
+    @extend .clearfix;
   }
   .nav-previous,
   .nav-next {
-    font-family: @font-family-tungsten;
+    font-family: $font-family-tungsten;
     text-transform: uppercase;
     font-size: 24px;
     letter-spacing: .01em;
@@ -150,7 +150,7 @@
       }
     }
     .blog-sidebar-wrapper {
-      border-top: 4px solid @brand-secondary;
+      border-top: 4px solid $brand-secondary;
       position: static;
       top: auto;
       width: auto;
@@ -208,7 +208,7 @@
       }
     }
     .blog-sidebar-wrapper {
-      border-top: 4px solid @brand-secondary;
+      border-top: 4px solid $brand-secondary;
       position: static;
       top: auto;
       width: auto;

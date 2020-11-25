@@ -3,13 +3,13 @@
 
 .page-template-template-registration-europe {
   .section-title {
-    font-family: @font-family-klavika-light;
+    font-family: $font-family-klavika-light;
     font-size: 50px;
     margin: 0 0 80px;
     text-align: center;
   }
   .yellow {
-    color: @brand-secondary;
+    color: $brand-secondary;
   }
   .blue {
     color: #006ff4;
@@ -51,7 +51,7 @@
     width: 400px;
     display: block;
     margin: 80px auto 0;
-    #gradient > .vertical(darken(desaturate(#FFC000, 15%), 5%), darken(desaturate(#FFA100, 15%), 5%));
+    @include gradient-y(darken(desaturate(#FFC000, 15%), 5%), darken(desaturate(#FFA100, 15%), 5%), 5%, 100%);
     &:hover {
       background-color: darken(desaturate(#FFA100, 15%), 5%);
       background-image: none;
@@ -102,24 +102,22 @@
     .section-aside {
       margin: 0 0 80px;
       .section-aside-title {
-        .make-md-column(3);
         h3 {
-          font-family: @font-family-klavika-medium;
+          font-family: $font-family-klavika-medium;
           font-size: 60px;
           margin: 0;
           line-height: .9em;
         }
       }
       .section-aside-content {
-        .make-md-column(9);
         .section-aside-content-wrapper {
           padding-left: 20px;
-          border-left: 6px solid @brand-secondary;
+          border-left: 6px solid $brand-secondary;
         }
       }
       .quote-block {
         .quote-statement {
-          font-family: @font-family-archer;
+          font-family: $font-family-archer;
           font-style: italic;
           line-height: 1.5em;
           font-size: 18px;
@@ -235,7 +233,7 @@
         margin: 0 0 10px;
       }
       .learn-more {
-        background: fade(@brand-secondary, 10%);
+        background: fade($brand-secondary, 10%);
         padding: 10px 15px;
         border-radius: 5px;
         margin: 30px 0 0;
@@ -274,7 +272,7 @@
         border-bottom: 1px solid rgba(255,255,255,.5);
         h3 {
           color: #fff;
-          background: @brand-primary;
+          background: $brand-primary;
           padding: 10px 15px;
           margin: 0 0 30px;
           position: relative;
@@ -300,7 +298,7 @@
             height: 12px;
             width: 12px;
             border-radius: 50%;
-            background: @brand-secondary;
+            background: $brand-secondary;
             display: block;
             flex-shrink: 0;
             margin-right: 15px;
@@ -353,7 +351,7 @@
       input[type="email"],
       input[type="url"],
       input[type="number"] {
-        .form-control();
+        @extend .form-control;
         height: 40px;
         font-size: 14px !important;
         padding: 6px 12px !important;
@@ -365,7 +363,7 @@
         display: none;
       }
       select {
-        .form-control();
+        @extend .form-control;
         height: 40px;
       }
       .gf_progressbar_wrapper {
@@ -385,11 +383,11 @@
       //   }
       // }
       .validation_message {
-        color: @state-danger-text;
+        color: $brand-danger;
       }
       div.validation_error {
-        .alert();
-        .alert-danger();
+        @extend .alert;
+        @extend .alert-danger;
         font-weight: normal;
         margin-top: 25px;
       }
@@ -401,10 +399,10 @@
         }
       }
       li.gfield.gfield_error {
-        background-color: @state-danger-bg;
-        border-top-color: @state-danger-border;
+        background-color: lighten($brand-danger, 30%);
+        border-top-color: darken($brand-danger, 30%);
         .gfield_label {
-          color: @state-danger-text;
+          color: $brand-danger;
         }
         &.gfield_contains_required {
           padding-left: 10px;
@@ -412,10 +410,10 @@
           margin-top: 0;
           margin-bottom: 25px !important;
           div.gfield_description {
-            font-family: @font-family-serif;
+            font-family: $font-family-serif;
             font-style: italic;
             font-weight: normal;
-            color: @state-danger-text;
+            color: $brand-danger;
           }
         }
       }
@@ -443,7 +441,7 @@
         }
       }
       textarea {
-        .form-control();
+        @extend .form-control;
         padding: 6px 12px !important;
         height: 100px;
         resize: auto;
@@ -452,11 +450,11 @@
         margin-left: .1em !important;
       }
       .gfield {
-        .form-group();
+        @extend .form-group;
         margin-bottom: 25px;
       }
       li.gfield_error div.ginput_complex.ginput_container label {
-        color: @state-danger-text;
+        color: $brand-danger;
       }
       .gfield_error .ginput_complex {
         .ginput_left {
@@ -505,7 +503,7 @@
         }
       }
       .gfield_required {
-        color: @brand-danger;
+        color: $brand-danger;
       }
       .gfield_time_hour,
       .gfield_time_minute {
@@ -527,25 +525,25 @@
       }
       .gform_next_button,
       .gform_previous_button {
-        .btn();
+        @extend .btn;
         height: 50px;
         line-height: 50px;
         font-size: 18px;
         font-weight: 500;
         padding: 0 65px;
         margin-top: 30px;
-        color: @link-color;
-        border-color: @link-color;
+        color: $link-color;
+        border-color: $link-color;
         background: #fff;
         width: 100%;
         &:hover {
-          background: @link-color;
+          background: $link-color;
           color: #fff;
         }
       }
       .gform_previous_button {
-        .btn();
-        .btn-link();
+        @extend .btn;
+        @extend .btn-link;
         width: auto;
         margin-bottom: 0 !important;
         margin-top: 10px;
@@ -553,8 +551,8 @@
         padding: 0;
       }
       .gform_button {
-        .btn();
-        .btn-secondary();
+        @extend .btn;
+        @extend .btn-secondary;
         height: 50px;
         line-height: 50px;
         font-size: 18px;
@@ -568,8 +566,8 @@
         display: inline-block !important;
       }
       #gf_coupon_button {
-        .btn();
-        .btn-default();
+        @extend .btn;
+        @extend .btn-light;
       }
     }
   }
@@ -633,7 +631,7 @@
         .section-aside-content {
           .section-aside-content-wrapper {
             padding-left: 15px;
-            border-left: 3px solid @brand-secondary;
+            border-left: 3px solid $brand-secondary;
           }
         }
       }
@@ -707,7 +705,7 @@
         margin: 0 0 30px;
         .section-aside-title {
           h3 {
-            font-family: @font-family-sans-serif;
+            font-family: $font-family-sans-serif;
             font-size: 24px;
             font-weight: 700;
             margin: 0 0 15px;

@@ -86,6 +86,6 @@
   </div>
 
   <div class="action">
-    <a href="<?php the_permalink(); ?>" class="btn btn-default">Find out more</a>
+    <a href="<?php the_permalink(); ?>" class="btn btn-light">Find out more</a>
   </div>
 </div>

@@ -14,7 +14,7 @@
     background-repeat: no-repeat;
     .page-title {
       margin: 0;
-      #gradient > .vertical(rgba(0,0,0,.0001), rgba(0,0,0,1), 40%, 100%);
+      @include gradient-y(rgba(0,0,0,0001), rgba(0,0,0,1), 40%, 100%);
       .container {
         position: relative;
         height: 200px;
@@ -32,15 +32,11 @@
   }
 
   .page-content {
-    border-left: 1px solid @border-color;
-    .make-md-column(9);
-    .make-md-column-push(3);
+    border-left: 1px solid $border-color;
     padding-left: 30px;
     &.page-full {
       border-left: 0;
       padding-left: 15px;
-      .make-md-column(12);
-      .make-md-column-push(0);
     }
   }
 
@@ -63,7 +59,7 @@
     h1 {
       font-weight: 300;
       margin: 0;
-      font-family: @font-family-klavika-medium;
+      font-family: $font-family-klavika-medium;
     }
   }
 
@@ -109,7 +105,7 @@
       background-repeat: no-repeat;
       .page-title {
         margin: 0;
-        #gradient > .vertical(rgba(0,0,0,.0001), rgba(0,0,0,1), 40%, 100%);
+        @include gradient-y(rgba(0,0,0,0001), rgba(0,0,0,1), 40%, 100%);
         .container {
           position: relative;
           height: 200px;

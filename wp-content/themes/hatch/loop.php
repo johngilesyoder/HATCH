@@ -34,9 +34,9 @@
 			</div>
 
 			<?php if ( get_post_meta( get_the_ID(), 'l_url', true ) ) {?>
-				<a target="_blank" href="<?php echo get_post_meta( get_the_ID(), 'l_url', true ); ?>" class="btn btn-default btn-continue">Visit link &nbsp;&rarr;</a>
+				<a target="_blank" href="<?php echo get_post_meta( get_the_ID(), 'l_url', true ); ?>" class="btn btn-light btn-continue">Visit link &nbsp;&rarr;</a>
 			<?php } else {?>
-				<a href="<?php the_permalink(); ?>" class="btn btn-default btn-continue">Continue reading &nbsp;&rarr;</a>
+				<a href="<?php the_permalink(); ?>" class="btn btn-light btn-continue">Continue reading &nbsp;&rarr;</a>
 			<?php }?>
 
 			<?php if ( in_category( 'becauseofhatch' ) ) {?>

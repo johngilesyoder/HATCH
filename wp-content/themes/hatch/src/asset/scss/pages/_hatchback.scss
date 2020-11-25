@@ -10,7 +10,7 @@
     color: #fff;
     padding: 40px 0;
     margin-top: -50px;
-    .clearfix();
+    @extend .clearfix;
     .banner-left {
       float: left;
       width: 75%;
@@ -45,7 +45,7 @@
     }
   }
   .hatchback-intro {
-    .clearfix();
+    @extend .clearfix;
     .intro-left {
       float: left;
       width: 50%;
@@ -76,7 +76,7 @@
     }
   }
   .hatchback-stories-donation {
-    .clearfix();
+    @extend .clearfix;
     .stories {
       float: left;
       width: 50%;
@@ -156,7 +156,7 @@
       font-weight: 500;
     }
     .btn-donation {
-      .btn-primary();
+      @extend .btn-primary;
     }
     .btn-patreon {
       background: #E6461A;
@@ -181,7 +181,7 @@
     input[type="email"],
     input[type="tel"],
     select {
-      .form-control();
+      @extend .form-control;
     }
     select {
       display: inline-block;
@@ -257,7 +257,7 @@
     & > {
       li {
         margin: 0 0 5px;
-        border: 1px solid @link-color;
+        border: 1px solid $link-color;
         border-radius: 4px;
         margin-right: 10px;
         margin-bottom: 15px;
@@ -266,7 +266,7 @@
         display: inline-block;
         label {
           font-weight: 500;
-          color: @link-color;
+          color: $link-color;
           margin-left: 3px;
         }
       }
@@ -278,8 +278,8 @@
   }
 
   #give_secure_site_wrapper {
-    .alert();
-    .alert-info();
+    @extend .alert;
+    @extend .alert-info;
     font-weight: 400;
     margin: 15px 0 30px;
     background-color: #d8d8d8;
@@ -321,8 +321,8 @@
   }
 
   .give-btn {
-    .btn();
-    .btn-secondary();
+    @extend .btn;
+    @extend .btn-secondary;
     font-size: 24px;
     font-weight: 500;
     height: 65px;

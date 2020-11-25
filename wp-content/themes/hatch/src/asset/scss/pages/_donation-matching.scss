@@ -7,7 +7,7 @@
     input[type="text"],
     input[type="email"],
     select {
-      .form-control();
+      @extend .form-control;
     }
     select {
       display: inline-block;
@@ -29,7 +29,7 @@
     & > {
       li {
         margin: 0 0 5px;
-        border: 1px solid @link-color;
+        border: 1px solid $link-color;
         border-radius: 4px;
         margin-right: 10px;
         margin-bottom: 15px;
@@ -38,7 +38,7 @@
         display: inline-block;
         label {
           font-weight: normal;
-          color: @link-color;
+          color: $link-color;
           margin-left: 3px;
         }
       }
@@ -58,8 +58,8 @@
         display: none;
       }
       &:last-child {
-        .alert();
-        .alert-info();
+        @extend .alert;
+        @extend .alert-info;
         font-weight: normal;
         display: block;
       }
@@ -67,15 +67,15 @@
   }
 
   .give-btn {
-    .btn();
-    .btn-secondary();
+    @extend .btn;
+    @extend .btn-secondary;
     font-size: 21px;
     font-weight: 500;
   }
 
   .alert-matching {
-    .alert-warning();
-    .clearfix();
+    @extend .alert-warning;
+    @extend .clearfix;
     margin: 30px 0 40px;
     strong {
       font-weight: 700;
