@@ -44,21 +44,21 @@ function html5blank_conditional_scripts()
 
   if (is_page_template('template-registration.php') || is_page_template('template-registration-europe.php')) {
 
-    wp_register_script('registration', get_template_directory_uri() . '/dist/asset/js/registration.js', array(), '1.0.1'); // registration
+    wp_register_script('registration', get_template_directory_uri() . '/dist/asset/js/registration-min.js', array(), '1.0.1'); // registration
     wp_enqueue_script('registration'); // Enqueue it!
 
   }
 
   if (is_page_template('template-becauseofhatchsurvey.php')) {
 
-    wp_register_script('becauseofhatch-survey', get_template_directory_uri() . '/dist/asset/js/becauseofhatch-survey.js', array(), '1.2.2');
+    wp_register_script('becauseofhatch-survey', get_template_directory_uri() . '/dist/asset/js/becauseofhatch-survey-min.js', array(), '1.2.2');
     wp_enqueue_script('becauseofhatch-survey'); // Enqueue it!
 
   }
 
   if (is_page_template('template-labs-voting.php')) {
 
-    wp_register_script('labs-voting', get_template_directory_uri() . '/dist/asset/js/labs-voting.js', array(), '1.0.4');
+    wp_register_script('labs-voting', get_template_directory_uri() . '/dist/asset/js/labs-voting-min.js', array(), '1.0.4');
     wp_enqueue_script('labs-voting'); // Enqueue it!
 
     wp_register_script('read-more', get_template_directory_uri() . '/src/asset/js/lib/readmore.min.js', array(), '1.0.0');
@@ -68,7 +68,7 @@ function html5blank_conditional_scripts()
 
   if (is_page_template('template-hatching-a-better-world.php')) {
 
-    wp_register_script('hatching-better-world', get_template_directory_uri() . '/dist/asset/js/hatching-better-world.js', array(), '1.0.4');
+    wp_register_script('hatching-better-world', get_template_directory_uri() . '/dist/asset/js/hatching-better-world-min.js', array(), '1.0.4');
     wp_enqueue_script('hatching-better-world'); // Enqueue it!
 
     wp_register_script('read-more', get_template_directory_uri() . '/src/asset/js/lib/readmore.min.js', array(), '1.0.0');
@@ -78,7 +78,7 @@ function html5blank_conditional_scripts()
 
   if (is_singular('reunion')) {
 
-    wp_register_script('reunion', get_template_directory_uri() . '/dist/asset/js/reunion.js', array(), '1.0.1'); // registration
+    wp_register_script('reunion', get_template_directory_uri() . '/dist/asset/js/reunion-min.js', array(), '1.0.1'); // registration
     wp_enqueue_script('reunion'); // Enqueue it!
 
   }
