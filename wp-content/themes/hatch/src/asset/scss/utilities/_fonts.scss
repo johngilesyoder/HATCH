@@ -1,35 +1,111 @@
+// Klavika
 @font-face {
-  font-family: 'klavika-bold';
-  src: url('../fonts/klavika-bold.eot');
-  src: url('../fonts/klavika-bold.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/klavika-bold.woff2') format('woff2'),
-       url('../fonts/klavika-bold.woff') format('woff'),
-       url('../fonts/klavika-bold.ttf') format('truetype'),
-       url('../fonts/klavika-bold.svg#../fonts/klavikabold') format('svg');
-  font-weight: normal;
+  font-family: 'Klavika';
+  src: url('../fonts/klavika-light.woff2') format('woff2'),
+      url('../fonts/klavika-light.woff') format('woff');
+  font-weight: 300;
   font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Klavika';
+  src: url('../fonts/klavika-medium.woff2') format('woff2'),
+      url('../fonts/klavika-medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Klavika';
+  src: url('../fonts/klavika-bold.woff2') format('woff2'),
+      url('../fonts/klavika-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
+// Archer
 @font-face {
-  font-family: 'klavika-medium';
-  src: url('../fonts/klavika-medium.eot');
-  src: url('../fonts/klavika-medium.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/klavika-medium.woff2') format('woff2'),
-       url('../fonts/klavika-medium.woff') format('woff'),
-       url('../fonts/klavika-medium.ttf') format('truetype'),
-       url('../fonts/klavika-medium.svg#../fonts/klavikamedium') format('svg');
+  font-family: 'Archer';
+  src: url('../fonts/Archer-BoldItalic.woff2') format('woff2'),
+      url('../fonts/Archer-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Archer';
+  src: url('../fonts/Archer-SemiboldItalic.woff2') format('woff2'),
+      url('../fonts/Archer-SemiboldItalic.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Archer';
+  src: url('../fonts/Archer-BookItalic.woff2') format('woff2'),
+      url('../fonts/Archer-BookItalic.woff') format('woff');
   font-weight: normal;
-  font-style: normal;
+  font-style: italic;
+  font-display: swap;
 }
 
+// Gotham Rounded
 @font-face {
-  font-family: 'klavika-light';
-  src: url('../fonts/klavika-light.eot');
-  src: url('../fonts/klavika-light.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/klavika-light.woff2') format('woff2'),
-       url('../fonts/klavika-light.woff') format('woff'),
-       url('../fonts/klavika-light.ttf') format('truetype'),
-       url('../fonts/klavika-light.svg#../fonts/klavikalight') format('svg');
+  font-family: 'Gotham Rounded';
+  src: url('../fonts/GothamRounded-Medium.woff2') format('woff2'),
+      url('../fonts/GothamRounded-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gotham Rounded';
+  src: url('../fonts/GothamRounded-BookItalic.woff2') format('woff2'),
+      url('../fonts/GothamRounded-BookItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gotham Rounded';
+  src: url('../fonts/GothamRounded-Book.woff2') format('woff2'),
+      url('../fonts/GothamRounded-Book.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gotham Rounded';
+  src: url('../fonts/GothamRounded-Bold.woff2') format('woff2'),
+      url('../fonts/GothamRounded-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gotham Rounded';
+  src: url('../fonts/GothamRounded-Light.woff2') format('woff2'),
+      url('../fonts/GothamRounded-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Tungsten
+@font-face {
+  font-family: 'Tungsten';
+  src: url('../fonts/Tungsten-Semibold.woff2') format('woff2'),
+      url('../fonts/Tungsten-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Tungsten';
+  src: url('../fonts/Tungsten-Medium.woff2') format('woff2'),
+      url('../fonts/Tungsten-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }

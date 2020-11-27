@@ -93,7 +93,8 @@
         h3 {
           background: $body-color;
           color: #fff;
-          font-family: $font-family-klavika-medium;
+          font-family: $font-family-klavika;
+          font-weight: 500;
           text-transform: uppercase;
           display: inline-block;
           padding: 4px 12px;
@@ -113,7 +114,8 @@
     .section-header {
       margin-bottom: 30px;
       .section-title {
-        font-family: $font-family-klavika-medium;
+        font-family: $font-family-klavika;
+        font-weight: 500;
         font-size: 28px;
         color: $brand-secondary;
         text-transform: uppercase;
@@ -360,7 +362,8 @@
           h3 {
             background: $body-color;
             color: #fff;
-            font-family: $font-family-klavika-medium;
+            font-family: $font-family-klavika;
+            font-weight: 500;
             text-transform: uppercase;
             display: inline-block;
             padding: 4px 12px;
@@ -545,7 +548,8 @@
       .section-header {
         margin-bottom: 20px;
         .section-title {
-          font-family: $font-family-klavika-medium;
+          font-family: $font-family-klavika;
+          font-weight: 500;
           font-size: 28px;
           color: $brand-secondary;
           text-transform: uppercase;

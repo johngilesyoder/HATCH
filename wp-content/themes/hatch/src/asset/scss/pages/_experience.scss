@@ -44,7 +44,8 @@
     padding: 75px 0;
     .section-title {
       font-size: 60px;
-      font-family: $font-family-klavika-medium;
+      font-family: $font-family-klavika;
+      font-weight: 500;
       color: #fff;
       text-align: center;
       margin: 0 0 55px;
@@ -52,7 +53,8 @@
     .section-aside {
       .section-aside-title {
         h3 {
-          font-family: $font-family-klavika-medium;
+          font-family: $font-family-klavika;
+          font-weight: 500;
           color: $brand-secondary;
           font-size: 60px;
           margin: 0;
@@ -239,7 +241,8 @@
       }
       h3 {
         font-size: 30px;
-        font-family: $font-family-klavika-medium;
+        font-family: $font-family-klavika;
+        font-weight: 500;
         color: $brand-secondary;
       }
       p {
@@ -258,7 +261,8 @@
         color: #fff;
         background: $brand-secondary;
         font-size: 50px;
-        font-family: $font-family-klavika-medium;
+        font-family: $font-family-klavika;
+        font-weight: 500;
         display: inline-block;
         border-radius: 8px;
         padding: 10px 40px 5px;
@@ -398,7 +402,8 @@
       .section-header {
         margin-bottom: 30px;
         .section-title {
-          font-family: $font-family-klavika-medium;
+          font-family: $font-family-klavika;
+          font-weight: 500;
           font-size: 28px;
           color: $brand-secondary;
           text-transform: uppercase;

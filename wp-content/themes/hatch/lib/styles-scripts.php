@@ -87,11 +87,8 @@ function html5blank_conditional_scripts()
 // Load global styles
 function html5blank_styles() {
   if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
-    wp_register_style('styles', get_template_directory_uri() . '/dist/asset/css/bundle.css', array(), '1.3', 'all');
+    wp_register_style('styles', get_template_directory_uri() . '/dist/asset/css/bundle.css', array(), '1.5', 'all');
     wp_enqueue_style('styles'); // Enqueue it!
-
-    wp_register_style('cloud-typography', 'https://cloud.typography.com/7252954/638486/css/fonts.css', array(), null, false);
-    wp_enqueue_style('cloud-typography'); // Enqueue it!
 
     wp_register_style('materialIcons', 'https://fonts.googleapis.com/icon?family=Material+Icons', array(), '1.0', 'all');
     wp_enqueue_style('materialIcons'); // Enqueue it!
