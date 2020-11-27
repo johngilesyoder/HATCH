@@ -1,14 +1,22 @@
-// topbar.less
-// -----------------------------------------------------------------
-
 .topbar {
   height: 36px;
   background: $brand-primary;
   color: #fff;
+  @include tablet-lg {
+    display: none !important;
+  }
+  @include tablet {
+    display: none !important;
+  }
   p {
     margin: 0;
     float: left;
     line-height: 36px;
+    span {
+      @include desktop {
+        display: none;
+      }
+    }
   }
   .btn {
     margin-left: 5px;
@@ -68,49 +76,3 @@
     }
   }
 }
-
-.topbar-apply {
-
-}
-
-
-
-// Media Queries
-// --------------------------------------------------
-
-// Large desktop and up
-@media (min-width: 1200px) {}
-
-// Desktop to large desktop
-@media (min-width: 992px) and (max-width: 1199px) {
-
-  .topbar {
-    p {
-      span {
-        display: none;
-      }
-    }
-  }
-
-}
-
-// Tablet to desktop
-@media (min-width: 768px) and (max-width: 991px) {
-
-  .topbar {
-    display: none !important;
-  }
-
-}
-
-// Up to tablet
-@media (max-width: 767px) {
-
-  .topbar {
-    display: none !important;
-  }
-
-}
-
-// Up to landscape phone
-@media (max-width: 480px) {}

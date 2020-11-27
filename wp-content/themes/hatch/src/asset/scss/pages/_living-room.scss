@@ -1,6 +1,3 @@
-// hatch-membership.less
-// -----------------------------------------------------------------
-
 .page-template-template-living-room,
 .page-template-template-impact-labs,
 .page-template-template-no-vote,
@@ -267,29 +264,3 @@
     }
   }
 }
-
-
-
-// Responsive: desktop to large desktop
-// --------------------------------------------------
-@media (min-width: 1200px) and (max-width: 1499px) {}
-
-// Responsive: Tablet to desktop
-// --------------------------------------------------
-@media (min-width: 992px) and (max-width: 1199px) {}
-
-// Responsive: Tablet to desktop
-// --------------------------------------------------
-@media (min-width: 768px) and (max-width: 991px) {}
-
-// Responsive: Landscape phone to desktop/tablet
-// --------------------------------------------------
-@media (max-width: 767px) {}
-
-// Responsive: Up to landscape phone
-// --------------------------------------------------
-@media (max-width: 480px) {}
-
-// Responsive: Up to portrait phone
-// --------------------------------------------------
-@media (max-width: 400px) {}

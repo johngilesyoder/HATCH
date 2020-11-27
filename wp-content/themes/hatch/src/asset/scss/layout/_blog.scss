@@ -1,6 +1,3 @@
-// blog.less
-// -----------------------------------------------------------------
-
 .blog-format,
 .blog-format body {
   height: 100%;
@@ -85,12 +82,6 @@
   }
 
 }
-
-// Media Queries
-// --------------------------------------------------
-
-// Large desktop and up
-@media (min-width: 1200px) {}
 
 // Desktop to large desktop
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -226,6 +217,3 @@
   }
 
 }
-
-// Up to landscape phone
-@media (max-width: 480px) {}

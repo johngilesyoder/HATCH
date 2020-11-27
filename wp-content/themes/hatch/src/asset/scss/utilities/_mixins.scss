@@ -1,6 +1,3 @@
-// Media queries
-// --------------------------------------------------
-
 @mixin tiny {
   @media (max-width: 320px) {
     @content;

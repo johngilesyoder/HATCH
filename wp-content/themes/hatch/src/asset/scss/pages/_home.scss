@@ -1,15 +1,10 @@
-// home.less
-// -----------------------------------------------------------------
-
 .page-template-template-home {
   .site-header {
     margin-bottom: 0;
   }
-
   #mc_embed_signup form {
     padding: 0;
   }
-
   .posts-hero {
     margin-bottom: 60px;
     padding: 30px;
@@ -284,12 +279,8 @@
   }
 }
 
-
 // Media Queries
-// --------------------------------------------------
-
-// Large desktop and up
-@media (min-width: 1200px) {}
+// -------------------------------------------------
 
 // Desktop to large desktop
 @media (min-width: 992px) and (max-width: 1199px) {

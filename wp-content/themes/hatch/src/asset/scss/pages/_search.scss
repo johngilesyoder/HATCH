@@ -1,7 +1,12 @@
-// search.less
-// -----------------------------------------------------------------
-
 .search {
+  .site-header {
+    @include tablet-lg {
+      margin-bottom: 0;
+    }
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
   .search-title {
     border-bottom: 1px solid #e6e6e6;
     margin-bottom: 30px;
@@ -10,11 +15,29 @@
     padding-left: 1015px;
     margin-left: -1000px;
     background: #fafafa;
+    @include tablet-lg {
+      margin-bottom: 15px;
+      padding: 10px 15px;
+      width: auto;
+      margin: 0 -15px 30px;
+    }
+    @include tablet {
+      margin-bottom: 15px;
+      padding: 10px 15px;
+      width: auto;
+      margin: 0 -15px 30px;
+    }
     h1 {
       font-size: 24px;
       line-height: 1.5em;
       font-style: normal;
       margin: 0;
+      @include tablet-lg {
+        font-size: 16px;
+      }
+      @include tablet {
+        font-size: 16px;
+      }
       img {
         margin-right: 15px;
         vertical-align: middle;
@@ -33,71 +56,12 @@
   .blog-roll-wrapper {
     main {
       padding-top: 110px;
-    }
-  }
-}
-
-
-// Media Queries
-// --------------------------------------------------
-
-// Large desktop and up
-@media (min-width: 1200px) {}
-
-// Desktop to large desktop
-@media (min-width: 992px) and (max-width: 1199px) {}
-
-// Tablet to desktop
-@media (min-width: 768px) and (max-width: 991px) {
-
-  .search {
-    .site-header {
-      margin-bottom: 0;
-    }
-    .search-title {
-      margin-bottom: 15px;
-      padding: 10px 15px;
-      width: auto;
-      margin: 0 -15px 30px;
-      h1 {
-        font-size: 16px;
+      @include tablet-lg {
+        padding-top: 0;
       }
-    }
-
-    .blog-roll-wrapper {
-      main {
+      @include tablet {
         padding-top: 0;
       }
     }
   }
-  
 }
-
-// Up to tablet
-@media (max-width: 767px) {
-
-  .search {
-    .site-header {
-      margin-bottom: 0;
-    }
-    .search-title {
-      margin-bottom: 15px;
-      padding: 10px 15px;
-      width: auto;
-      margin: 0 -15px 30px;
-      h1 {
-        font-size: 16px;
-      }
-    }
-
-    .blog-roll-wrapper {
-      main {
-        padding-top: 0;
-      }
-    }
-  }
-
-}
-
-// Up to landscape phone
-@media (max-width: 480px) {}

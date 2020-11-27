@@ -12,6 +12,7 @@ import del from 'del';
 import webpack from 'webpack-stream';
 import named from 'vinyl-named';
 import browserSync from 'browser-sync';
+import minify from 'gulp-minify';
 
 const server = browserSync.create();
 const PRODUCTION = yargs.argv.prod;
@@ -53,7 +54,7 @@ export const styles = () => {
   return gulp.src(paths.styles.src)
     .pipe(gulpif(!PRODUCTION, sourcemaps.init()))
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulpif(PRODUCTION, cleanCSS()))
+    .pipe(gulpif(!PRODUCTION, cleanCSS()))
     .pipe(gulpif(!PRODUCTION, sourcemaps.write()))
     .pipe(gulp.dest(paths.styles.dest))
     .pipe(server.stream());
@@ -99,6 +100,7 @@ export const scripts = () => {
       devtool: !PRODUCTION ? 'inline-source-map' : false,
       mode: PRODUCTION ? 'production' : 'development'
     }))
+    .pipe(minify())
     .pipe(gulp.dest(paths.scripts.dest));
 }
 

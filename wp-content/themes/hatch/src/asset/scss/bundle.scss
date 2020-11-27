@@ -19,7 +19,7 @@ Tags:
 @import "./utilities/custom";
 
 // Vendor
-@import "node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "vendor/flickity";
 
 // Utilities
@@ -37,12 +37,10 @@ Tags:
 @import "components/what-is-hatch";
 
 // Layout
-@import "layout/adventure";
 @import "layout/blog";
 @import "layout/page";
 @import "layout/patterns";
 @import "layout/post";
-@import "layout/reunion";
 @import "layout/sidebar";
 @import "layout/site-footer";
 @import "layout/site-header";
@@ -55,18 +53,14 @@ Tags:
 @import "pages/apply";
 @import "pages/apply-portal";
 @import "pages/attendees";
-@import "pages/blog-roll";
 @import "pages/category";
 @import "pages/contact";
 @import "pages/contribute";
 @import "pages/donate";
-@import "pages/donation-matching";
 @import "pages/experience";
 @import "pages/groundbreakers";
-@import "pages/h360-form";
 @import "pages/hatch-alumni";
 @import "pages/hatch-membership";
-@import "pages/hatchback";
 @import "pages/impact-lab-projects";
 @import "pages/better-world";
 @import "pages/home";
@@ -74,16 +68,24 @@ Tags:
 @import "pages/living-room";
 @import "pages/our-partners";
 @import "pages/registration";
-@import "pages/registration-europe";
-@import "pages/registration-mexico";
-@import "pages/experience-europe";
 @import "pages/search";
 @import "pages/single";
 @import "pages/single-story";
 @import "pages/single-impact-lab-project";
-@import "pages/survey";
-@import "pages/becauseofhatch-survey";
 @import "pages/labs-voting";
 @import "pages/volunteer";
 @import "pages/resources";
 @import "pages/no-vote-left-behind";
+
+
+
+// @import "layout/adventure";
+// @import "layout/reunion";
+// @import "pages/donation-matching";
+// @import "pages/h360-form";
+// @import "pages/hatchback";
+// @import "pages/registration-europe";
+// @import "pages/registration-mexico";
+// @import "pages/experience-europe";
+// @import "pages/survey";
+// @import "pages/becauseofhatch-survey";

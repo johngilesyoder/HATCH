@@ -1,10 +1,4 @@
-// registration-success.less
-// -----------------------------------------------------------------
-
-.page-template-template-registration-success,
-.page-template-template-registration-success-euro,
-.page-template-template-hasbro-registration-success,
-.page-template-template-panama-registration-success {
+.page-template-template-registration-success {
   background-image: url('../img/registration/success-bg.jpg');
   background-size: cover;
   background-position: 50% 50%;
@@ -71,26 +65,11 @@
   }
 }
 
-// Responsive: desktop to large desktop
-// --------------------------------------------------
-@media (min-width: 1200px) and (max-width: 1499px) {}
-
-// Responsive: Tablet to desktop
-// --------------------------------------------------
-@media (min-width: 992px) and (max-width: 1199px) {}
-
-// Responsive: Tablet to desktop
-// --------------------------------------------------
-@media (min-width: 768px) and (max-width: 991px) {}
-
 // Responsive: Landscape phone to desktop/tablet
 // --------------------------------------------------
 @media (max-width: 767px) {
 
-  .page-template-template-registration-success,
-  .page-template-template-registration-success-euro,
-  .page-template-template-hasbro-registration-success,
-  .page-template-template-panama-registration-success {
+  .page-template-template-registration-success {
     .hatch-logo {
       margin: 30px auto;
     }
@@ -118,11 +97,3 @@
   }
 
 }
-
-// Responsive: Up to landscape phone
-// --------------------------------------------------
-@media (max-width: 480px) {}
-
-// Responsive: Up to portrait phone
-// --------------------------------------------------
-@media (max-width: 400px) {}

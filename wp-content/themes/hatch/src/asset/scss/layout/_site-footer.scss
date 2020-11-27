@@ -1,110 +1,96 @@
-// site-footer.less
-// -----------------------------------------------------------------
 
-.site-footer {
-  .footer-main {
-    border-top: 4px solid $brand-secondary;
-    padding: 40px 0;
-    .footer-connect {
-      text-align: center;
-      .hatch-logo {
-        font-size: 32px;
-        margin-bottom: 25px;
-        display: block;
-      }
-      .rss-feed {
-        display: block;
-        margin-top: 10px;
-        img {
-          margin-right: 8px;
-        }
-      }
-      .footer-social-links {
-        margin-bottom: 15px;
-        a {
-          margin-right: 15px;
-          &:last-child {
-            margin-right: 0;
-          }
-        }
-      }
-      .footer-email {
-        .short-email {
-          display: none;
-        }
-      }
+.footer-main {
+  border-top: 4px solid $brand-secondary;
+  padding: 40px 0;
+  .footer-connect {
+    text-align: center;
+    .hatch-logo {
+      font-size: 32px;
+      margin-bottom: 25px;
+      display: block;
     }
-    .footer-links {
-      border-left: 1px solid $border-color;
-      .links-column {
-        width: 33%;
-        padding: 0 30px;
-        float: left;
-        .links-header {
-          font-size: 16px;
-          font-weight: 700;
-          margin: 0;
-          line-height: 24px;
-        }
-        ul {
-          padding: 0;
-          margin: 0;
-          list-style-type: none;
-          li {
-            a {
-              line-height: 24px;
-            }
-          }
-        }
-      }
-    }
-  }
-  .footer-bottom {
-    background: $gray-bg;
-    color: #999999;
-    font-size: 13px;
-    padding: 20px 0;
-  }
-  .footer-company {
-  }
-  .built-by {
-    text-align: right;
-    a {
-      display: inline-block;
-      opacity: .4;
-      transition: opacity 150ms;
-      margin-top: 5px;
-      &:hover {
-        opacity: .8;
-      }
+    .rss-feed {
+      display: block;
+      margin-top: 10px;
       img {
-        height: 18px;
+        margin-right: 8px;
+      }
+    }
+    .footer-social-links {
+      margin-bottom: 15px;
+      a {
+        margin-right: 15px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+    .footer-email {
+      .short-email {
+        display: none;
+      }
+    }
+  }
+  .footer-links {
+    border-left: 1px solid $border-color;
+    .links-column {
+      width: 33%;
+      padding: 0 30px;
+      float: left;
+      .links-header {
+        font-size: 16px;
+        font-weight: 700;
+        margin: 0;
+        line-height: 24px;
+      }
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        li {
+          a {
+            line-height: 24px;
+          }
+        }
       }
     }
   }
 }
-
-
-
-// Media Queries
-// --------------------------------------------------
-
-// Large desktop and up
-@media (min-width: 1200px) {}
+.footer-bottom {
+  background: $gray-bg;
+  color: #999999;
+  font-size: 13px;
+  padding: 20px 0;
+}
+.footer-company {
+}
+.built-by {
+  text-align: right;
+  a {
+    display: inline-block;
+    opacity: .4;
+    transition: opacity 150ms;
+    margin-top: 5px;
+    &:hover {
+      opacity: .8;
+    }
+    img {
+      height: 18px;
+    }
+  }
+}
 
 // Desktop to large desktop
 @media (min-width: 992px) and (max-width: 1199px) {
 
-  .site-footer {
-    .footer-main {
-      .footer-connect {
-        .footer-email {
-          .short-email {
-            display: block;
-          }
-          .long-email {
-            display: none;
-          }
+  .footer-main {
+    .footer-connect {
+      .footer-email {
+        .short-email {
+          display: block;
+        }
+        .long-email {
+          display: none;
         }
       }
     }
@@ -115,7 +101,6 @@
 // Tablet to desktop
 @media (min-width: 768px) and (max-width: 991px) {
 
-  .site-footer {
     .footer-main {
       padding: 30px 0 40px;
       .footer-connect {
@@ -163,14 +148,12 @@
         }
       }
     }
-  }
 
 }
 
 // Up to tablet
 @media (max-width: 767px) {
 
-  .site-footer {
     .footer-main {
       padding: 30px 0;
       .footer-connect {
@@ -218,14 +201,12 @@
         }
       }
     }
-  }
 
 }
 
 // Up to landscape phone
 @media (max-width: 480px) {
 
-  .site-footer {
     .footer-main {
       padding: 30px 0 20px;
       .footer-connect {
@@ -264,6 +245,5 @@
         margin-bottom: 15px;
       }
     }
-  }
 
 }
