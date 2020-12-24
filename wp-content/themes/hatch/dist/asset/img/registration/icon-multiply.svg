@@ -1,1 +1,12 @@
-<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M7.942 7.47l6.44-6.441.236-.236.472.472-.236.236-6.44 6.44 6.213 6.214.236.236-.472.472-.236-.236-6.213-6.213-6.214 6.213-.236.236-.472-.472.236-.236L7.47 7.942 1.03 1.5l-.236-.236.472-.472.236.236 6.44 6.44z" stroke="#FFF" fill="none" stroke-linecap="square"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Registration-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-746.000000, -3378.000000)" stroke-linecap="square">
+        <g id="Group-15" transform="translate(735.000000, 3366.000000)" stroke="#FFFFFF">
+            <path d="M18.9415265,19.4694245 L25.3820068,13.0289442 L25.6180578,12.7928932 L26.0901599,13.2649953 L25.8541088,13.5010463 L19.4136286,19.9415265 L25.6268419,26.1547398 L25.8628929,26.3907909 L25.3907909,26.8628929 L25.1547398,26.6268419 L18.9415265,20.4136286 L12.7283133,26.6268419 L12.4922622,26.8628929 L12.0201602,26.3907909 L12.2562112,26.1547398 L18.4694245,19.9415265 L12.0289442,13.5010463 L11.7928932,13.2649953 L12.2649953,12.7928932 L12.5010463,13.0289442 L18.9415265,19.4694245 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>
